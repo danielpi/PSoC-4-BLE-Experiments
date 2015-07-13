@@ -1,0 +1,512 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		E61B21671B4E512A002E3C30 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E61B21661B4E512A002E3C30 /* AppDelegate.swift */; };
+		E61B21691B4E512A002E3C30 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E61B21681B4E512A002E3C30 /* ViewController.swift */; };
+		E61B216B1B4E512A002E3C30 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E61B216A1B4E512A002E3C30 /* Assets.xcassets */; };
+		E61B216E1B4E512A002E3C30 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E61B216C1B4E512A002E3C30 /* Main.storyboard */; };
+		E61B21791B4E512A002E3C30 /* FindMeBLETests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E61B21781B4E512A002E3C30 /* FindMeBLETests.swift */; };
+		E61B21841B4E512A002E3C30 /* FindMeBLEUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E61B21831B4E512A002E3C30 /* FindMeBLEUITests.swift */; };
+		E68763291B533AD800BF3ED4 /* BLEPeripheralTableCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E68763281B533AD800BF3ED4 /* BLEPeripheralTableCellView.swift */; };
+		E68AA4261B4E51C500DE637A /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = E68AA4251B4E51C500DE637A /* README.md */; };
+		E68AA4281B4F65C200DE637A /* BLEPeripheralTableCellView.xib in Resources */ = {isa = PBXBuildFile; fileRef = E68AA4271B4F65C200DE637A /* BLEPeripheralTableCellView.xib */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		E61B21751B4E512A002E3C30 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E61B215B1B4E5129002E3C30 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E61B21621B4E512A002E3C30;
+			remoteInfo = FindMeBLE;
+		};
+		E61B21801B4E512A002E3C30 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E61B215B1B4E5129002E3C30 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E61B21621B4E512A002E3C30;
+			remoteInfo = FindMeBLE;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		E61B21631B4E512A002E3C30 /* FindMeBLE.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FindMeBLE.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		E61B21661B4E512A002E3C30 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		E61B21681B4E512A002E3C30 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		E61B216A1B4E512A002E3C30 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		E61B216D1B4E512A002E3C30 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		E61B216F1B4E512A002E3C30 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E61B21741B4E512A002E3C30 /* FindMeBLETests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FindMeBLETests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		E61B21781B4E512A002E3C30 /* FindMeBLETests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindMeBLETests.swift; sourceTree = "<group>"; };
+		E61B217A1B4E512A002E3C30 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E61B217F1B4E512A002E3C30 /* FindMeBLEUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FindMeBLEUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		E61B21831B4E512A002E3C30 /* FindMeBLEUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindMeBLEUITests.swift; sourceTree = "<group>"; };
+		E61B21851B4E512B002E3C30 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E68763281B533AD800BF3ED4 /* BLEPeripheralTableCellView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BLEPeripheralTableCellView.swift; sourceTree = "<group>"; };
+		E68AA4251B4E51C500DE637A /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		E68AA4271B4F65C200DE637A /* BLEPeripheralTableCellView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BLEPeripheralTableCellView.xib; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		E61B21601B4E512A002E3C30 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E61B21711B4E512A002E3C30 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E61B217C1B4E512A002E3C30 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		E61B215A1B4E5129002E3C30 = {
+			isa = PBXGroup;
+			children = (
+				E61B21651B4E512A002E3C30 /* FindMeBLE */,
+				E61B21771B4E512A002E3C30 /* FindMeBLETests */,
+				E61B21821B4E512A002E3C30 /* FindMeBLEUITests */,
+				E61B21641B4E512A002E3C30 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		E61B21641B4E512A002E3C30 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				E61B21631B4E512A002E3C30 /* FindMeBLE.app */,
+				E61B21741B4E512A002E3C30 /* FindMeBLETests.xctest */,
+				E61B217F1B4E512A002E3C30 /* FindMeBLEUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		E61B21651B4E512A002E3C30 /* FindMeBLE */ = {
+			isa = PBXGroup;
+			children = (
+				E61B21661B4E512A002E3C30 /* AppDelegate.swift */,
+				E61B21681B4E512A002E3C30 /* ViewController.swift */,
+				E68AA4271B4F65C200DE637A /* BLEPeripheralTableCellView.xib */,
+				E68763281B533AD800BF3ED4 /* BLEPeripheralTableCellView.swift */,
+				E61B216A1B4E512A002E3C30 /* Assets.xcassets */,
+				E61B216C1B4E512A002E3C30 /* Main.storyboard */,
+				E61B216F1B4E512A002E3C30 /* Info.plist */,
+				E68AA4251B4E51C500DE637A /* README.md */,
+			);
+			path = FindMeBLE;
+			sourceTree = "<group>";
+		};
+		E61B21771B4E512A002E3C30 /* FindMeBLETests */ = {
+			isa = PBXGroup;
+			children = (
+				E61B21781B4E512A002E3C30 /* FindMeBLETests.swift */,
+				E61B217A1B4E512A002E3C30 /* Info.plist */,
+			);
+			path = FindMeBLETests;
+			sourceTree = "<group>";
+		};
+		E61B21821B4E512A002E3C30 /* FindMeBLEUITests */ = {
+			isa = PBXGroup;
+			children = (
+				E61B21831B4E512A002E3C30 /* FindMeBLEUITests.swift */,
+				E61B21851B4E512B002E3C30 /* Info.plist */,
+			);
+			path = FindMeBLEUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		E61B21621B4E512A002E3C30 /* FindMeBLE */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E61B21881B4E512B002E3C30 /* Build configuration list for PBXNativeTarget "FindMeBLE" */;
+			buildPhases = (
+				E61B215F1B4E512A002E3C30 /* Sources */,
+				E61B21601B4E512A002E3C30 /* Frameworks */,
+				E61B21611B4E512A002E3C30 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = FindMeBLE;
+			productName = FindMeBLE;
+			productReference = E61B21631B4E512A002E3C30 /* FindMeBLE.app */;
+			productType = "com.apple.product-type.application";
+		};
+		E61B21731B4E512A002E3C30 /* FindMeBLETests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E61B218B1B4E512B002E3C30 /* Build configuration list for PBXNativeTarget "FindMeBLETests" */;
+			buildPhases = (
+				E61B21701B4E512A002E3C30 /* Sources */,
+				E61B21711B4E512A002E3C30 /* Frameworks */,
+				E61B21721B4E512A002E3C30 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				E61B21761B4E512A002E3C30 /* PBXTargetDependency */,
+			);
+			name = FindMeBLETests;
+			productName = FindMeBLETests;
+			productReference = E61B21741B4E512A002E3C30 /* FindMeBLETests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		E61B217E1B4E512A002E3C30 /* FindMeBLEUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E61B218E1B4E512B002E3C30 /* Build configuration list for PBXNativeTarget "FindMeBLEUITests" */;
+			buildPhases = (
+				E61B217B1B4E512A002E3C30 /* Sources */,
+				E61B217C1B4E512A002E3C30 /* Frameworks */,
+				E61B217D1B4E512A002E3C30 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				E61B21811B4E512A002E3C30 /* PBXTargetDependency */,
+			);
+			name = FindMeBLEUITests;
+			productName = FindMeBLEUITests;
+			productReference = E61B217F1B4E512A002E3C30 /* FindMeBLEUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		E61B215B1B4E5129002E3C30 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0700;
+				ORGANIZATIONNAME = "Electronic Innovations";
+				TargetAttributes = {
+					E61B21621B4E512A002E3C30 = {
+						CreatedOnToolsVersion = 7.0;
+					};
+					E61B21731B4E512A002E3C30 = {
+						CreatedOnToolsVersion = 7.0;
+						TestTargetID = E61B21621B4E512A002E3C30;
+					};
+					E61B217E1B4E512A002E3C30 = {
+						CreatedOnToolsVersion = 7.0;
+						TestTargetID = E61B21621B4E512A002E3C30;
+					};
+				};
+			};
+			buildConfigurationList = E61B215E1B4E5129002E3C30 /* Build configuration list for PBXProject "FindMeBLE" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = E61B215A1B4E5129002E3C30;
+			productRefGroup = E61B21641B4E512A002E3C30 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				E61B21621B4E512A002E3C30 /* FindMeBLE */,
+				E61B21731B4E512A002E3C30 /* FindMeBLETests */,
+				E61B217E1B4E512A002E3C30 /* FindMeBLEUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		E61B21611B4E512A002E3C30 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E61B216B1B4E512A002E3C30 /* Assets.xcassets in Resources */,
+				E68AA4281B4F65C200DE637A /* BLEPeripheralTableCellView.xib in Resources */,
+				E61B216E1B4E512A002E3C30 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E61B21721B4E512A002E3C30 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E61B217D1B4E512A002E3C30 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		E61B215F1B4E512A002E3C30 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E68AA4261B4E51C500DE637A /* README.md in Sources */,
+				E61B21691B4E512A002E3C30 /* ViewController.swift in Sources */,
+				E68763291B533AD800BF3ED4 /* BLEPeripheralTableCellView.swift in Sources */,
+				E61B21671B4E512A002E3C30 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E61B21701B4E512A002E3C30 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E61B21791B4E512A002E3C30 /* FindMeBLETests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E61B217B1B4E512A002E3C30 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E61B21841B4E512A002E3C30 /* FindMeBLEUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		E61B21761B4E512A002E3C30 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E61B21621B4E512A002E3C30 /* FindMeBLE */;
+			targetProxy = E61B21751B4E512A002E3C30 /* PBXContainerItemProxy */;
+		};
+		E61B21811B4E512A002E3C30 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E61B21621B4E512A002E3C30 /* FindMeBLE */;
+			targetProxy = E61B21801B4E512A002E3C30 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		E61B216C1B4E512A002E3C30 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E61B216D1B4E512A002E3C30 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		E61B21861B4E512B002E3C30 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		E61B21871B4E512B002E3C30 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		E61B21891B4E512B002E3C30 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = FindMeBLE/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = au.com.electronicinnovations.FindMeBLE;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		E61B218A1B4E512B002E3C30 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = FindMeBLE/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = au.com.electronicinnovations.FindMeBLE;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		E61B218C1B4E512B002E3C30 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = FindMeBLETests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = au.com.electronicinnovations.FindMeBLETests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FindMeBLE.app/Contents/MacOS/FindMeBLE";
+			};
+			name = Debug;
+		};
+		E61B218D1B4E512B002E3C30 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = FindMeBLETests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = au.com.electronicinnovations.FindMeBLETests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FindMeBLE.app/Contents/MacOS/FindMeBLE";
+			};
+			name = Release;
+		};
+		E61B218F1B4E512B002E3C30 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = FindMeBLEUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = au.com.electronicinnovations.FindMeBLEUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = FindMeBLE;
+				USES_XCTRUNNER = YES;
+			};
+			name = Debug;
+		};
+		E61B21901B4E512B002E3C30 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = FindMeBLEUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = au.com.electronicinnovations.FindMeBLEUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = FindMeBLE;
+				USES_XCTRUNNER = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		E61B215E1B4E5129002E3C30 /* Build configuration list for PBXProject "FindMeBLE" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E61B21861B4E512B002E3C30 /* Debug */,
+				E61B21871B4E512B002E3C30 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E61B21881B4E512B002E3C30 /* Build configuration list for PBXNativeTarget "FindMeBLE" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E61B21891B4E512B002E3C30 /* Debug */,
+				E61B218A1B4E512B002E3C30 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E61B218B1B4E512B002E3C30 /* Build configuration list for PBXNativeTarget "FindMeBLETests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E61B218C1B4E512B002E3C30 /* Debug */,
+				E61B218D1B4E512B002E3C30 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E61B218E1B4E512B002E3C30 /* Build configuration list for PBXNativeTarget "FindMeBLEUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E61B218F1B4E512B002E3C30 /* Debug */,
+				E61B21901B4E512B002E3C30 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = E61B215B1B4E5129002E3C30 /* Project object */;
+}
