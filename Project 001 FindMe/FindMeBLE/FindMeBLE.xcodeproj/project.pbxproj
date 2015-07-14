@@ -13,6 +13,7 @@
 		E61B216E1B4E512A002E3C30 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E61B216C1B4E512A002E3C30 /* Main.storyboard */; };
 		E61B21791B4E512A002E3C30 /* FindMeBLETests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E61B21781B4E512A002E3C30 /* FindMeBLETests.swift */; };
 		E61B21841B4E512A002E3C30 /* FindMeBLEUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E61B21831B4E512A002E3C30 /* FindMeBLEUITests.swift */; };
+		E68255F11B5521C000AAA99D /* EmptyTableCellView.xib in Resources */ = {isa = PBXBuildFile; fileRef = E68255F01B5521C000AAA99D /* EmptyTableCellView.xib */; };
 		E68763291B533AD800BF3ED4 /* BLEPeripheralTableCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E68763281B533AD800BF3ED4 /* BLEPeripheralTableCellView.swift */; };
 		E68AA4261B4E51C500DE637A /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = E68AA4251B4E51C500DE637A /* README.md */; };
 		E68AA4281B4F65C200DE637A /* BLEPeripheralTableCellView.xib in Resources */ = {isa = PBXBuildFile; fileRef = E68AA4271B4F65C200DE637A /* BLEPeripheralTableCellView.xib */; };
@@ -48,6 +49,7 @@
 		E61B217F1B4E512A002E3C30 /* FindMeBLEUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FindMeBLEUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E61B21831B4E512A002E3C30 /* FindMeBLEUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindMeBLEUITests.swift; sourceTree = "<group>"; };
 		E61B21851B4E512B002E3C30 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E68255F01B5521C000AAA99D /* EmptyTableCellView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EmptyTableCellView.xib; sourceTree = "<group>"; };
 		E68763281B533AD800BF3ED4 /* BLEPeripheralTableCellView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BLEPeripheralTableCellView.swift; sourceTree = "<group>"; };
 		E68AA4251B4E51C500DE637A /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		E68AA4271B4F65C200DE637A /* BLEPeripheralTableCellView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BLEPeripheralTableCellView.xib; sourceTree = "<group>"; };
@@ -103,8 +105,7 @@
 			children = (
 				E61B21661B4E512A002E3C30 /* AppDelegate.swift */,
 				E61B21681B4E512A002E3C30 /* ViewController.swift */,
-				E68AA4271B4F65C200DE637A /* BLEPeripheralTableCellView.xib */,
-				E68763281B533AD800BF3ED4 /* BLEPeripheralTableCellView.swift */,
+				E68255F21B55234700AAA99D /* TableCellViews */,
 				E61B216A1B4E512A002E3C30 /* Assets.xcassets */,
 				E61B216C1B4E512A002E3C30 /* Main.storyboard */,
 				E61B216F1B4E512A002E3C30 /* Info.plist */,
@@ -129,6 +130,16 @@
 				E61B21851B4E512B002E3C30 /* Info.plist */,
 			);
 			path = FindMeBLEUITests;
+			sourceTree = "<group>";
+		};
+		E68255F21B55234700AAA99D /* TableCellViews */ = {
+			isa = PBXGroup;
+			children = (
+				E68255F01B5521C000AAA99D /* EmptyTableCellView.xib */,
+				E68AA4271B4F65C200DE637A /* BLEPeripheralTableCellView.xib */,
+				E68763281B533AD800BF3ED4 /* BLEPeripheralTableCellView.swift */,
+			);
+			name = TableCellViews;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -235,6 +246,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E61B216B1B4E512A002E3C30 /* Assets.xcassets in Resources */,
+				E68255F11B5521C000AAA99D /* EmptyTableCellView.xib in Resources */,
 				E68AA4281B4F65C200DE637A /* BLEPeripheralTableCellView.xib in Resources */,
 				E61B216E1B4E512A002E3C30 /* Main.storyboard in Resources */,
 			);

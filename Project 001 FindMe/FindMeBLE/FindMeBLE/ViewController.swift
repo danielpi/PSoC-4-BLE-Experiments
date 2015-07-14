@@ -12,7 +12,10 @@ import IOBluetooth
 
 class ViewController: NSViewController {
     
+    var appDelegate: AppDelegate!
+    
     @IBOutlet weak var tableView: NSTableView!
+    @IBOutlet weak var refreshButton: NSButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,6 +23,10 @@ class ViewController: NSViewController {
         // Do any additional setup after loading the view.
         let nib = NSNib(nibNamed: "BLEPeripheralTableCellView", bundle: NSBundle.mainBundle())
         tableView.registerNib(nib!, forIdentifier: "BLEPeripheralTableCellView")
+        let emptyCell = NSNib(nibNamed: "EmptyTableCellView", bundle: NSBundle.mainBundle())
+        tableView.registerNib(emptyCell, forIdentifier: "EmptyTableCellView")
+        
+        appDelegate = NSApplication.sharedApplication().delegate as! AppDelegate
     }
 
     override var representedObject: AnyObject? {
@@ -30,6 +37,21 @@ class ViewController: NSViewController {
             
             
         }
+    }
+    
+    @IBAction func refresh(sender: NSButton) {
+        print("refresh")
+        self.tableView.reloadData()
+    }
+    
+    func reloadData() {
+        dispatch_async(dispatch_get_main_queue(),{
+            self.tableView.reloadData()
+        })
+    }
+    
+    func printSomething() {
+        print("Something")
     }
 
 }
@@ -53,22 +75,14 @@ extension ViewController:  NSTableViewDelegate, NSTableViewDataSource {
     }
     
     func tableView(tableView: NSTableView, viewForTableColumn tableColumn: NSTableColumn?, row: Int) -> NSView? {
-        let appDelegate = NSApplication.sharedApplication().delegate as! AppDelegate // If we don't have an appdelegate we should crash.
+        //let appDelegate = NSApplication.sharedApplication().delegate as! AppDelegate // If we don't have an appdelegate we should crash.
         
         let peripherals = appDelegate.retrieveConnectedPeripherals()
-        
-        let cell = tableView.makeViewWithIdentifier("BLEPeripheralTableCellView", owner: self) as! BLEPeripheralTableCellView
-        
-        print("\(cell)")
-        print("\(peripherals)")
-        
         if peripherals.count < 1 {
-            cell.name.stringValue = "None"
-            cell.rssi.stringValue = "RSSI: --db"
-            cell.connectButton.stringValue = "Connect"
-            cell.connectButton.enabled = false
-            cell.alertButton.hidden = true
+            let cell = tableView.makeViewWithIdentifier("EmptyTableCellView", owner: self)
+            return cell
         } else {
+            let cell = tableView.makeViewWithIdentifier("BLEPeripheralTableCellView", owner: self) as! BLEPeripheralTableCellView
             let item: CBPeripheral = peripherals[row]
             
             if let n = item.name {
@@ -79,9 +93,9 @@ extension ViewController:  NSTableViewDelegate, NSTableViewDataSource {
             
             cell.connectButton.stringValue = "Connect"
             cell.connectButton.enabled = true
+            
+            return cell
         }
-        
-        return cell
     }
 }
 

@@ -11,12 +11,23 @@ import IOBluetooth
 
 @NSApplicationMain
 class AppDelegate: NSObject, NSApplicationDelegate {
+    
+    var viewController: ViewController!
+    
     let immediateAlertUUID = CBUUID(string:"0x1802")
     var bleManager = CBCentralManager(delegate: nil, queue: nil, options: nil) //CBCentralManager(delegate: self, queue: dispatch_get_main_queue())
     
     func applicationDidFinishLaunching(aNotification: NSNotification) {
         // Insert code here to initialize your application
         bleManager.delegate = self
+        
+        //var myWindow: NSWindow? = nil
+        //let storyboard = NSStoryboard(name: "Main",bundle: nil)
+        //viewController = storyboard.instantiateControllerWithIdentifier("ViewController") as! ViewController
+        //viewController.printSomething()
+        //myWindow = controller.window
+        //myWindow?.makeKeyAndOrderFront(self)
+        
         
         bleManager.scanForPeripheralsWithServices([immediateAlertUUID], options: nil)
     }
@@ -37,6 +48,7 @@ extension AppDelegate: CBCentralManagerDelegate {
     
     func centralManager(central: CBCentralManager, didDiscoverPeripheral peripheral: CBPeripheral, advertisementData: [String : AnyObject], RSSI: NSNumber) {
         print("\(peripheral) RSSI:\(RSSI) Data:\(advertisementData)")
+        self.viewController.reloadData()
     }
     
     // Methods for interogating the bluetooth manager
