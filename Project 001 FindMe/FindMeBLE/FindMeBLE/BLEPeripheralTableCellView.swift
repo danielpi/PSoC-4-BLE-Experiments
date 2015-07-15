@@ -7,12 +7,21 @@
 //
 
 import Cocoa
+import IOBluetooth
 
 class BLEPeripheralTableCellView: NSView {
-
+    
+    var viewController: ViewController?
+    var peripheral: CBPeripheral?
+    
     @IBOutlet weak var name: NSTextField!
     @IBOutlet weak var rssi: NSTextField!
-    @IBOutlet weak var connectButton: NSButton!
     @IBOutlet weak var alertButton: NSButton!
     
+    @IBAction func soundTheAlarm(sender: AnyObject) {
+        if let vc = viewController,
+           let  p = peripheral {
+            vc.soundTheAlarm(p)
+        }
+    }
 }

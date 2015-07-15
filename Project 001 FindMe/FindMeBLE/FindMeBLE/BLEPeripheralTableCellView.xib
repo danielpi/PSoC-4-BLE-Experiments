@@ -11,13 +11,6 @@
             <rect key="frame" x="0.0" y="0.0" width="320" height="80"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
             <subviews>
-                <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="TXb-Kj-RpB">
-                    <rect key="frame" x="196" y="35" width="110" height="32"/>
-                    <buttonCell key="cell" type="push" title="Disconnect" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="Gkx-Lg-uNp">
-                        <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                        <font key="font" metaFont="system"/>
-                    </buttonCell>
-                </button>
                 <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2He-7V-ioZ">
                     <rect key="frame" x="18" y="42" width="206" height="20"/>
                     <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="BLE Device Name" id="BVs-da-W8k">
@@ -35,16 +28,46 @@
                     </textFieldCell>
                 </textField>
                 <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xxM-Ku-JCQ">
-                    <rect key="frame" x="159" y="4" width="147" height="32"/>
+                    <rect key="frame" x="159" y="23" width="147" height="32"/>
                     <buttonCell key="cell" type="push" title="Sound the Alarm!" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="wvA-uh-Fjk">
                         <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                         <font key="font" metaFont="system"/>
                     </buttonCell>
                 </button>
+                <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="aaM-Lk-F0u">
+                    <rect key="frame" x="159" y="23" width="147" height="32"/>
+                    <buttonCell key="cell" type="push" title="Sound the Alarm!" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="A9c-qm-Mhm">
+                        <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                        <font key="font" metaFont="system"/>
+                    </buttonCell>
+                </button>
+                <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="l3I-sG-7Gi">
+                    <rect key="frame" x="159" y="23" width="147" height="32"/>
+                    <buttonCell key="cell" type="push" title="Sound the Alarm!" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="Ush-2H-zS2">
+                        <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                        <font key="font" metaFont="system"/>
+                    </buttonCell>
+                </button>
+                <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="CDw-4u-tRP">
+                    <rect key="frame" x="159" y="23" width="147" height="32"/>
+                    <buttonCell key="cell" type="push" title="Sound the Alarm!" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="J55-Gy-Vv2">
+                        <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                        <font key="font" metaFont="system"/>
+                    </buttonCell>
+                </button>
+                <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cuA-TI-yVq">
+                    <rect key="frame" x="159" y="23" width="147" height="32"/>
+                    <buttonCell key="cell" type="push" title="Sound the Alarm!" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="mcA-Fg-Kru">
+                        <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                        <font key="font" metaFont="system"/>
+                    </buttonCell>
+                    <connections>
+                        <action selector="soundTheAlarm:" target="c22-O7-iKe" id="jQx-g9-A2v"/>
+                    </connections>
+                </button>
             </subviews>
             <connections>
                 <outlet property="alertButton" destination="xxM-Ku-JCQ" id="qfW-Ox-6ux"/>
-                <outlet property="connectButton" destination="TXb-Kj-RpB" id="bph-1c-9UO"/>
                 <outlet property="name" destination="2He-7V-ioZ" id="e7B-2W-qs9"/>
                 <outlet property="rssi" destination="YKD-C3-atp" id="1J4-8a-1Od"/>
             </connections>

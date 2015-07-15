@@ -9,13 +9,28 @@
 import Cocoa
 import IOBluetooth
 
+struct AdvertisingData {
+    let timestamp: NSDate
+    let rssi: Int
+    let data: [String : AnyObject]
+}
+
+class DiscoveredPeripheral {
+    let peripheral: CBPeripheral
+    var advertisingData: [AdvertisingData] = []
+    init(peripheral: CBPeripheral) {
+        self.peripheral = peripheral
+    }
+}
 
 class ViewController: NSViewController {
     
-    var appDelegate: AppDelegate!
-    
     @IBOutlet weak var tableView: NSTableView!
-    @IBOutlet weak var refreshButton: NSButton!
+    
+    let immediateAlertUUID = CBUUID(string:"0x1802")
+    var bleManager = CBCentralManager(delegate: nil, queue: nil, options: nil)
+    
+    var discoveredPeripherals: [DiscoveredPeripheral] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,7 +41,8 @@ class ViewController: NSViewController {
         let emptyCell = NSNib(nibNamed: "EmptyTableCellView", bundle: NSBundle.mainBundle())
         tableView.registerNib(emptyCell, forIdentifier: "EmptyTableCellView")
         
-        appDelegate = NSApplication.sharedApplication().delegate as! AppDelegate
+        bleManager.delegate = self
+        bleManager.scanForPeripheralsWithServices([immediateAlertUUID], options: nil)
     }
 
     override var representedObject: AnyObject? {
@@ -39,19 +55,9 @@ class ViewController: NSViewController {
         }
     }
     
-    @IBAction func refresh(sender: NSButton) {
-        print("refresh")
-        self.tableView.reloadData()
-    }
-    
-    func reloadData() {
-        dispatch_async(dispatch_get_main_queue(),{
-            self.tableView.reloadData()
-        })
-    }
-    
-    func printSomething() {
-        print("Something")
+    func soundTheAlarm(peripheral: CBPeripheral) {
+        print("The alarm")
+        bleManager.connectPeripheral(peripheral, options: nil)
     }
 
 }
@@ -59,15 +65,11 @@ class ViewController: NSViewController {
 extension ViewController:  NSTableViewDelegate, NSTableViewDataSource {
     
     func numberOfRowsInTableView(tableView: NSTableView) -> Int {
-        let appDelegate = NSApplication.sharedApplication().delegate as! AppDelegate // If we don't have an appdelegate we should crash.
-        
-        let peripherals = appDelegate.retrieveConnectedPeripherals()
-        
-        if peripherals.count < 1 {
+        if discoveredPeripherals.count < 1 {
             return 1
         }
         
-        return peripherals.count
+        return discoveredPeripherals.count
     }
     
     func tableView(tableView: NSTableView, heightOfRow row: Int) -> CGFloat {
@@ -75,27 +77,64 @@ extension ViewController:  NSTableViewDelegate, NSTableViewDataSource {
     }
     
     func tableView(tableView: NSTableView, viewForTableColumn tableColumn: NSTableColumn?, row: Int) -> NSView? {
-        //let appDelegate = NSApplication.sharedApplication().delegate as! AppDelegate // If we don't have an appdelegate we should crash.
         
-        let peripherals = appDelegate.retrieveConnectedPeripherals()
-        if peripherals.count < 1 {
+        if discoveredPeripherals.count < 1 {
             let cell = tableView.makeViewWithIdentifier("EmptyTableCellView", owner: self)
             return cell
         } else {
             let cell = tableView.makeViewWithIdentifier("BLEPeripheralTableCellView", owner: self) as! BLEPeripheralTableCellView
-            let item: CBPeripheral = peripherals[row]
+            cell.viewController = self
             
-            if let n = item.name {
+            let item = discoveredPeripherals[row]
+            
+            cell.peripheral = item.peripheral
+            
+            if let n = item.peripheral.name {
                 cell.name.stringValue = n
             } else {
                 cell.name.stringValue = "Unknown"
             }
             
-            cell.connectButton.stringValue = "Connect"
-            cell.connectButton.enabled = true
+            if let recentData = item.advertisingData.last {
+                cell.rssi.stringValue = "RSSI: \(recentData.rssi)db"
+            } else {
+                cell.rssi.stringValue = ""
+            }
+            
             
             return cell
         }
+    }
+}
+
+extension ViewController: CBCentralManagerDelegate {
+    
+    func centralManagerDidUpdateState(central: CBCentralManager) {
+        print("\(central)")
+    }
+    
+    func centralManager(central: CBCentralManager, didDiscoverPeripheral peripheral: CBPeripheral, advertisementData: [String : AnyObject], RSSI: NSNumber) {
+        
+        let ad = AdvertisingData(timestamp: NSDate(), rssi: RSSI.integerValue, data: advertisementData)
+        let matching = discoveredPeripherals.filter() { $0.peripheral == peripheral }
+        
+        switch matching.count {
+        case 0:
+            let a = DiscoveredPeripheral(peripheral: peripheral)
+            a.advertisingData.append(ad)
+            discoveredPeripherals.append(a)
+        case 1:
+            let a = matching[0]
+            a.advertisingData.append(ad)
+        default:
+            fatalError("discoveredPeripherals has duplicate records")
+        }
+        
+        tableView.reloadData()
+    }
+    
+    func centralManager(central: CBCentralManager, didConnectPeripheral peripheral: CBPeripheral) {
+        print("Did connect \(peripheral)")
     }
 }
 

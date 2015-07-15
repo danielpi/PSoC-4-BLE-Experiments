@@ -673,13 +673,13 @@
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
                             <scrollView autohidesScrollers="YES" horizontalLineScroll="82" horizontalPageScroll="10" verticalLineScroll="82" verticalPageScroll="10" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yAF-7I-NyI">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="284"/>
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="317"/>
                                 <clipView key="contentView" id="bsp-WE-YBV">
-                                    <rect key="frame" x="1" y="1" width="318" height="282"/>
+                                    <rect key="frame" x="1" y="1" width="318" height="315"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
                                         <tableView verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnAutoresizingStyle="lastColumnOnly" columnReordering="NO" columnSelection="YES" columnResizing="NO" multipleSelection="NO" autosaveColumns="NO" rowHeight="80" viewBased="YES" id="AUW-ZH-vw5">
-                                            <rect key="frame" x="0.0" y="0.0" width="318" height="282"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="318" height="315"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <size key="intercellSpacing" width="3" height="2"/>
                                             <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
@@ -727,34 +727,15 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                 </scroller>
                             </scrollView>
-                            <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="aXf-z1-8NG">
-                                <rect key="frame" x="229" y="283" width="88" height="32"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="76" id="HsF-ml-OSh"/>
-                                    <constraint firstAttribute="height" constant="21" id="fnY-vJ-lkz"/>
-                                </constraints>
-                                <buttonCell key="cell" type="push" title="Refresh" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="Afu-t0-fn4">
-                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                                    <font key="font" metaFont="system"/>
-                                </buttonCell>
-                                <connections>
-                                    <action selector="refresh:" target="XfG-lQ-9wD" id="1Hy-NQ-56C"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <constraints>
-                            <constraint firstAttribute="trailing" secondItem="aXf-z1-8NG" secondAttribute="trailing" constant="9" id="9lL-F8-oxO"/>
-                            <constraint firstItem="yAF-7I-NyI" firstAttribute="top" secondItem="aXf-z1-8NG" secondAttribute="bottom" constant="6" id="9s1-jT-1dQ"/>
-                            <constraint firstItem="aXf-z1-8NG" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" constant="235" id="VSA-GR-sdh"/>
-                            <constraint firstItem="yAF-7I-NyI" firstAttribute="top" secondItem="m2S-Jp-Qdl" secondAttribute="top" constant="33" id="fFy-1t-3LU"/>
+                            <constraint firstItem="yAF-7I-NyI" firstAttribute="top" secondItem="m2S-Jp-Qdl" secondAttribute="top" id="fFy-1t-3LU"/>
                             <constraint firstItem="yAF-7I-NyI" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" id="gPK-15-GoP"/>
-                            <constraint firstItem="aXf-z1-8NG" firstAttribute="top" secondItem="m2S-Jp-Qdl" secondAttribute="top" constant="6" id="irf-mB-Mob"/>
                             <constraint firstAttribute="trailing" secondItem="yAF-7I-NyI" secondAttribute="trailing" id="rXT-dC-m68"/>
                             <constraint firstAttribute="bottom" secondItem="yAF-7I-NyI" secondAttribute="bottom" id="vrG-k6-iAy"/>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="refreshButton" destination="aXf-z1-8NG" id="dLh-wK-VmA"/>
                         <outlet property="tableView" destination="AUW-ZH-vw5" id="V21-rl-4bd"/>
                     </connections>
                 </viewController>
