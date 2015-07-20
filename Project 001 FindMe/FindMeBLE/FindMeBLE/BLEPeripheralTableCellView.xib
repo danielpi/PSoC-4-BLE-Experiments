@@ -12,62 +12,50 @@
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
             <subviews>
                 <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2He-7V-ioZ">
-                    <rect key="frame" x="18" y="42" width="206" height="20"/>
+                    <rect key="frame" x="9" y="48" width="173" height="20"/>
                     <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="BLE Device Name" id="BVs-da-W8k">
                         <font key="font" size="16" name="Geneva"/>
                         <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                         <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                     </textFieldCell>
                 </textField>
+                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6d5-5P-uCm">
+                    <rect key="frame" x="186" y="37" width="76" height="20"/>
+                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Alert Level:" id="BpC-Jb-0P2">
+                        <font key="font" size="13" name="Geneva"/>
+                        <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
+                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Ifm-oa-bNq">
+                    <rect key="frame" x="9" y="25" width="125" height="20"/>
+                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="UUID49182930" id="MNL-Mj-gcX">
+                        <font key="font" size="13" name="Geneva"/>
+                        <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
                 <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="YKD-C3-atp">
-                    <rect key="frame" x="18" y="13" width="93" height="17"/>
+                    <rect key="frame" x="9" y="8" width="93" height="17"/>
                     <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="RSSI: -65db" id="N19-Cx-J2u">
                         <font key="font" size="13" name="Geneva"/>
                         <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                         <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                     </textFieldCell>
                 </textField>
-                <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xxM-Ku-JCQ">
-                    <rect key="frame" x="159" y="23" width="147" height="32"/>
-                    <buttonCell key="cell" type="push" title="Sound the Alarm!" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="wvA-uh-Fjk">
-                        <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                <segmentedControl verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="R69-DK-emQ">
+                    <rect key="frame" x="138" y="14" width="173" height="24"/>
+                    <segmentedCell key="cell" borderStyle="border" alignment="left" style="rounded" trackingMode="selectOne" id="BUn-HJ-Hu5">
                         <font key="font" metaFont="system"/>
-                    </buttonCell>
-                </button>
-                <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="aaM-Lk-F0u">
-                    <rect key="frame" x="159" y="23" width="147" height="32"/>
-                    <buttonCell key="cell" type="push" title="Sound the Alarm!" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="A9c-qm-Mhm">
-                        <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                        <font key="font" metaFont="system"/>
-                    </buttonCell>
-                </button>
-                <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="l3I-sG-7Gi">
-                    <rect key="frame" x="159" y="23" width="147" height="32"/>
-                    <buttonCell key="cell" type="push" title="Sound the Alarm!" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="Ush-2H-zS2">
-                        <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                        <font key="font" metaFont="system"/>
-                    </buttonCell>
-                </button>
-                <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="CDw-4u-tRP">
-                    <rect key="frame" x="159" y="23" width="147" height="32"/>
-                    <buttonCell key="cell" type="push" title="Sound the Alarm!" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="J55-Gy-Vv2">
-                        <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                        <font key="font" metaFont="system"/>
-                    </buttonCell>
-                </button>
-                <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cuA-TI-yVq">
-                    <rect key="frame" x="159" y="23" width="147" height="32"/>
-                    <buttonCell key="cell" type="push" title="Sound the Alarm!" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="mcA-Fg-Kru">
-                        <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                        <font key="font" metaFont="system"/>
-                    </buttonCell>
-                    <connections>
-                        <action selector="soundTheAlarm:" target="c22-O7-iKe" id="jQx-g9-A2v"/>
-                    </connections>
-                </button>
+                        <segments>
+                            <segment label="None" width="55"/>
+                            <segment label="Mild" width="55" selected="YES" tag="1"/>
+                            <segment label="High" width="55"/>
+                        </segments>
+                    </segmentedCell>
+                </segmentedControl>
             </subviews>
             <connections>
-                <outlet property="alertButton" destination="xxM-Ku-JCQ" id="qfW-Ox-6ux"/>
                 <outlet property="name" destination="2He-7V-ioZ" id="e7B-2W-qs9"/>
                 <outlet property="rssi" destination="YKD-C3-atp" id="1J4-8a-1Od"/>
             </connections>

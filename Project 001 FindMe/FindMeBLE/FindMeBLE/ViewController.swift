@@ -11,13 +11,19 @@ import IOBluetooth
 
 struct AdvertisingData {
     let timestamp: NSDate
-    let rssi: Int
     let data: [String : AnyObject]
+}
+
+struct RSSIRecord {
+    let timestamp: NSDate
+    let rssi: Int
 }
 
 class DiscoveredPeripheral {
     let peripheral: CBPeripheral
     var advertisingData: [AdvertisingData] = []
+    var rssiHistory: [RSSIRecord] = []
+    var alarm: Bool = false
     init(peripheral: CBPeripheral) {
         self.peripheral = peripheral
     }
@@ -33,6 +39,8 @@ class ViewController: NSViewController {
     var bleManager = CBCentralManager(delegate: nil, queue: nil, options: nil)
     
     var discoveredPeripherals: [DiscoveredPeripheral] = []
+    
+    var poller: NSTimer? = nil
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -52,8 +60,6 @@ class ViewController: NSViewController {
         // Update the view, if already loaded.
             //CBCentralManager *manager;
             //CBPeripheral *peripheral;
-            
-            
         }
     }
     
@@ -97,12 +103,13 @@ extension ViewController:  NSTableViewDelegate, NSTableViewDataSource {
                 cell.name.stringValue = "Unknown"
             }
             
-            if let recentData = item.advertisingData.last {
-                cell.rssi.stringValue = "RSSI: \(recentData.rssi)db"
+            if let rssiValue = item.rssiHistory.last {
+                cell.rssi.stringValue = "RSSI: \(rssiValue.rssi)db"
             } else {
                 cell.rssi.stringValue = ""
             }
             
+            cell.alertButton.stringValue = item.alarm ? "Cancel" : "Sound the alarm!"
             
             return cell
         }
@@ -123,6 +130,7 @@ extension ViewController: CBCentralManagerDelegate {
             print("CoreBluetooth BLE state is unauthorized")
         case .PoweredOff:
             print("CoreBluetooth BLE hardware is powered off")
+            //let storyBoard = NSStoryboard(name: "Main", bundle: nil) as NSStoryboard
         case .PoweredOn:
             print("CoreBluetooth BLE hardware is powered on and ready")
         }
@@ -131,8 +139,10 @@ extension ViewController: CBCentralManagerDelegate {
     
     func centralManager(central: CBCentralManager, didDiscoverPeripheral peripheral: CBPeripheral, advertisementData: [String : AnyObject], RSSI: NSNumber) {
         
-        let ad = AdvertisingData(timestamp: NSDate(), rssi: RSSI.integerValue, data: advertisementData)
-        let localName = advertisementData[CBAdvertisementDataLocalNameKey]
+        let timestamp = NSDate()
+        let ad = AdvertisingData(timestamp: timestamp, data: advertisementData)
+        let rssiRecord = RSSIRecord(timestamp: timestamp, rssi: RSSI.integerValue)
+        //let localName = advertisementData[CBAdvertisementDataLocalNameKey]
         
         let matching = discoveredPeripherals.filter() { $0.peripheral == peripheral }
         
@@ -140,10 +150,12 @@ extension ViewController: CBCentralManagerDelegate {
         case 0:
             let a = DiscoveredPeripheral(peripheral: peripheral)
             a.advertisingData.append(ad)
+            a.rssiHistory.append(rssiRecord)
             discoveredPeripherals.append(a)
         case 1:
             let a = matching[0]
             a.advertisingData.append(ad)
+            a.rssiHistory.append(rssiRecord)
         default:
             fatalError("discoveredPeripherals has duplicate records")
         }
@@ -160,11 +172,23 @@ extension ViewController: CBCentralManagerDelegate {
             print("Connected to peripheral with ID \(peripheral.identifier)")
         }
         peripheral.discoverServices(nil)
-        peripheral.readRSSI()
+        
+        poller = NSTimer.scheduledTimerWithTimeInterval(1.0, target: self, selector: Selector("pollConnectedPeripheral:"), userInfo: peripheral, repeats: true)
+        //peripheral.readRSSI()
+    }
+    
+    func pollConnectedPeripheral(timer: NSTimer) {
+        if timer.valid {
+            let peripheral = timer.userInfo as! CBPeripheral
+            peripheral.readRSSI()
+        }
     }
     
     func centralManager(central: CBCentralManager, didDisconnectPeripheral peripheral: CBPeripheral, error: NSError?) {
         peripheral.delegate = nil
+        if let p = self.poller {
+            p.invalidate()
+        }
         
         if let name = peripheral.name {
             print("Connected to peripheral named \(name)")
@@ -175,6 +199,9 @@ extension ViewController: CBCentralManagerDelegate {
     
     func centralManager(central: CBCentralManager, didFailToConnectPeripheral peripheral: CBPeripheral, error: NSError?) {
         print("Did fail to connect \(peripheral)")
+        if let p = self.poller {
+            p.invalidate()
+        }
     }
     
     
@@ -191,11 +218,6 @@ extension ViewController: CBPeripheralDelegate {
         }
     }
     
-    func peripheral(peripheral: CBPeripheral, didDiscoverIncludedServicesForService service: CBService, error: NSError?) {
-        print("discovered service: \(service)")
-        
-    }
-    
     func peripheral(peripheral: CBPeripheral, didDiscoverCharacteristicsForService service: CBService, error: NSError?) {
         if let characteristics = service.characteristics {
             
@@ -206,7 +228,7 @@ extension ViewController: CBPeripheralDelegate {
                     print("Characteristic is for alertLevel")
                     service.peripheral.setNotifyValue(true, forCharacteristic: characteristic)
                     service.peripheral.readValueForCharacteristic(characteristic)
-                    var alertLevel = 0
+                    var alertLevel = 1
                     service.peripheral.writeValue(NSData(bytes: &alertLevel, length: 1), forCharacteristic: characteristic, type: CBCharacteristicWriteType.WithResponse)
                 }
                 
@@ -218,28 +240,28 @@ extension ViewController: CBPeripheralDelegate {
         }
     }
     
-    func peripheral(peripheral: CBPeripheral, didDiscoverDescriptorsForCharacteristic characteristic: CBCharacteristic, error: NSError?) {
-        if let descriptors = characteristic.descriptors {
-            for descriptor in descriptors {
-                print("        \(descriptor)")
-            }
-        }
-    }
-    
-    func peripheral(peripheral: CBPeripheral, didUpdateValueForCharacteristic characteristic: CBCharacteristic, error: NSError?) {
-        if let data = characteristic.value {
-            print("\(characteristic) updated its value to \(data)")
-        } else {
-            print("\(characteristic) updated its value to nil")
-        }
-    }
-    
-    func peripheral(peripheral: CBPeripheral, didUpdateValueForDescriptor descriptor: CBDescriptor, error: NSError?) {
-         print("\(peripheral)")
-    }
     
     func peripheralDidUpdateRSSI(peripheral: CBPeripheral, error: NSError?) {
         print("\(peripheral.RSSI)")
+        
+        if let rssi = peripheral.RSSI {
+            let rssiRecord = RSSIRecord(timestamp: NSDate(), rssi: rssi.integerValue)
+            let matching = discoveredPeripherals.filter() { $0.peripheral == peripheral }
+            
+            switch matching.count {
+            case 0:
+                let a = DiscoveredPeripheral(peripheral: peripheral)
+                a.rssiHistory.append(rssiRecord)
+                discoveredPeripherals.append(a)
+            case 1:
+                let a = matching[0]
+                a.rssiHistory.append(rssiRecord)
+            default:
+                fatalError("discoveredPeripherals has duplicate records")
+            }
+            
+            tableView.reloadData()
+        }
     }
     
 }
