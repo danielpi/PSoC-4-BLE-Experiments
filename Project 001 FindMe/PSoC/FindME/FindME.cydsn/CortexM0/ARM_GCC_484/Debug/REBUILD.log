@@ -1,0 +1,61 @@
+--------------- Rebuild Started: 08/19/2015 14:44:29 Project: FindME, Configuration: ARM GCC 4.8.4 Debug ---------------
+Deleting file ".\FindME.rpt"
+cydsfit.exe -.appdatapath "C:\Users\danielpi\AppData\Local\Cypress Semiconductor\PSoC Creator\3.2" -.fdsnotice -.fdswarpdepfile=warp_dependencies.txt -.fdselabdepfile=elab_dependencies.txt -.fdsbldfile=generated_files.txt -p "Y:\repos\PSoC-4-BLE-Experiments\Project 001 FindMe\PSoc\FindME\FindME.cydsn\FindME.cyprj" -d CY8C4247LQI-BL483 -s "Y:\repos\PSoC-4-BLE-Experiments\Project 001 FindMe\PSoc\FindME\FindME.cydsn\Generated_Source\PSoC4" -- -yv2 -q10 -ygs -o2 -v3 -.fftcfgtype=LE
+Elaborating Design...
+HDL Generation ...
+Synthesis ...
+Place and Route ...
+Tech mapping ...
+Analog Placement ...
+Analog Routing ...
+Analog Code Generation ...
+Digital Placement ...
+Digital Routing ...
+Bitstream Generation ...
+Static timing analysis ...
+API Generation ...
+Dependency Generation ...
+Clean Temporary Files ...
+arm-none-eabi-gcc.exe -mcpu=cortex-m0 -mthumb -Wno-main -I. -IGenerated_Source\PSoC4 -Wa,-alh=.\CortexM0\ARM_GCC_484\Debug/main.lst -g -D DEBUG -Wall -ffunction-sections -Og -c .\main.c -o .\CortexM0\ARM_GCC_484\Debug\main.o
+.\main.c: In function 'main':
+.\main.c:38:5: warning: implicit declaration of function 'PWM_Start' [-Wimplicit-function-declaration]
+     PWM_Start();
+     ^
+.\main.c: In function 'HandleAlertLEDs':
+.\main.c:81:13: warning: implicit declaration of function 'PWM_WriteCompare' [-Wimplicit-function-declaration]
+             PWM_WriteCompare(NO_ALERT_COMPARE);
+             ^
+arm-none-eabi-gcc.exe -mcpu=cortex-m0 -mthumb -Wno-main -I. -IGenerated_Source\PSoC4 -Wa,-alh=.\CortexM0\ARM_GCC_484\Debug/cyfitter_cfg.lst -g -D DEBUG -Wall -ffunction-sections -Og -c .\Generated_Source\PSoC4\cyfitter_cfg.c -o .\CortexM0\ARM_GCC_484\Debug\cyfitter_cfg.o
+arm-none-eabi-gcc.exe -mcpu=cortex-m0 -mthumb -Wno-main -I. -IGenerated_Source\PSoC4 -Wa,-alh=.\CortexM0\ARM_GCC_484\Debug/cymetadata.lst -g -D DEBUG -Wall -ffunction-sections -Og -c .\Generated_Source\PSoC4\cymetadata.c -o .\CortexM0\ARM_GCC_484\Debug\cymetadata.o
+arm-none-eabi-gcc.exe -mcpu=cortex-m0 -mthumb -Wno-main -I. -IGenerated_Source\PSoC4 -Wa,-alh=.\CortexM0\ARM_GCC_484\Debug/BLE.lst -g -D DEBUG -Wall -ffunction-sections -Og -c .\Generated_Source\PSoC4\BLE.c -o .\CortexM0\ARM_GCC_484\Debug\BLE.o
+arm-none-eabi-gcc.exe -mcpu=cortex-m0 -mthumb -Wno-main -I. -IGenerated_Source\PSoC4 -Wa,-alh=.\CortexM0\ARM_GCC_484\Debug/BLE_gatt.lst -g -D DEBUG -Wall -ffunction-sections -Og -c .\Generated_Source\PSoC4\BLE_gatt.c -o .\CortexM0\ARM_GCC_484\Debug\BLE_gatt.o
+arm-none-eabi-gcc.exe -mcpu=cortex-m0 -mthumb -Wno-main -I. -IGenerated_Source\PSoC4 -Wa,-alh=.\CortexM0\ARM_GCC_484\Debug/BLE_ias.lst -g -D DEBUG -Wall -ffunction-sections -Og -c .\Generated_Source\PSoC4\BLE_ias.c -o .\CortexM0\ARM_GCC_484\Debug\BLE_ias.o
+arm-none-eabi-gcc.exe -mcpu=cortex-m0 -mthumb -Wno-main -I. -IGenerated_Source\PSoC4 -Wa,-alh=.\CortexM0\ARM_GCC_484\Debug/BLE_eventHandler.lst -g -D DEBUG -Wall -ffunction-sections -Og -c .\Generated_Source\PSoC4\BLE_eventHandler.c -o .\CortexM0\ARM_GCC_484\Debug\BLE_eventHandler.o
+arm-none-eabi-gcc.exe -mcpu=cortex-m0 -mthumb -Wno-main -I. -IGenerated_Source\PSoC4 -Wa,-alh=.\CortexM0\ARM_GCC_484\Debug/BLE_HAL_INT.lst -g -D DEBUG -Wall -ffunction-sections -Og -c .\Generated_Source\PSoC4\BLE_HAL_INT.c -o .\CortexM0\ARM_GCC_484\Debug\BLE_HAL_INT.o
+arm-none-eabi-gcc.exe -mcpu=cortex-m0 -mthumb -Wno-main -I. -IGenerated_Source\PSoC4 -Wa,-alh=.\CortexM0\ARM_GCC_484\Debug/BLE_HAL_PVT.lst -g -D DEBUG -Wall -ffunction-sections -Og -c .\Generated_Source\PSoC4\BLE_HAL_PVT.c -o .\CortexM0\ARM_GCC_484\Debug\BLE_HAL_PVT.o
+arm-none-eabi-gcc.exe -mcpu=cortex-m0 -mthumb -Wno-main -I. -IGenerated_Source\PSoC4 -Wa,-alh=.\CortexM0\ARM_GCC_484\Debug/Advertising_LED.lst -g -D DEBUG -Wall -ffunction-sections -Og -c .\Generated_Source\PSoC4\Advertising_LED.c -o .\CortexM0\ARM_GCC_484\Debug\Advertising_LED.o
+arm-none-eabi-gcc.exe -mcpu=cortex-m0 -mthumb -Wno-main -I. -IGenerated_Source\PSoC4 -Wa,-alh=.\CortexM0\ARM_GCC_484\Debug/Disconnect_LED.lst -g -D DEBUG -Wall -ffunction-sections -Og -c .\Generated_Source\PSoC4\Disconnect_LED.c -o .\CortexM0\ARM_GCC_484\Debug\Disconnect_LED.o
+arm-none-eabi-gcc.exe -mcpu=cortex-m0 -mthumb -Wno-main -I. -IGenerated_Source\PSoC4 -Wa,-alh=.\CortexM0\ARM_GCC_484\Debug/Alert_LED.lst -g -D DEBUG -Wall -ffunction-sections -Og -c .\Generated_Source\PSoC4\Alert_LED.c -o .\CortexM0\ARM_GCC_484\Debug\Alert_LED.o
+arm-none-eabi-gcc.exe -mcpu=cortex-m0 -mthumb -Wno-main -I. -IGenerated_Source\PSoC4 -Wa,-alh=.\CortexM0\ARM_GCC_484\Debug/BLE_bless_isr.lst -g -D DEBUG -Wall -ffunction-sections -Og -c .\Generated_Source\PSoC4\BLE_bless_isr.c -o .\CortexM0\ARM_GCC_484\Debug\BLE_bless_isr.o
+arm-none-eabi-gcc.exe -mcpu=cortex-m0 -mthumb -Wno-main -I. -IGenerated_Source\PSoC4 -Wa,-alh=.\CortexM0\ARM_GCC_484\Debug/Cm0Start.lst -g -D DEBUG -Wall -ffunction-sections -Og -c .\Generated_Source\PSoC4\Cm0Start.c -o .\CortexM0\ARM_GCC_484\Debug\Cm0Start.o
+arm-none-eabi-as.exe -mcpu=cortex-m0 -mthumb -I. -IGenerated_Source\PSoC4 -alh=.\CortexM0\ARM_GCC_484\Debug/CyBootAsmGnu.lst -g -W -o .\CortexM0\ARM_GCC_484\Debug\CyBootAsmGnu.o .\Generated_Source\PSoC4\CyBootAsmGnu.s
+arm-none-eabi-gcc.exe -mcpu=cortex-m0 -mthumb -Wno-main -I. -IGenerated_Source\PSoC4 -Wa,-alh=.\CortexM0\ARM_GCC_484\Debug/CyFlash.lst -g -D DEBUG -Wall -ffunction-sections -Og -c .\Generated_Source\PSoC4\CyFlash.c -o .\CortexM0\ARM_GCC_484\Debug\CyFlash.o
+arm-none-eabi-gcc.exe -mcpu=cortex-m0 -mthumb -Wno-main -I. -IGenerated_Source\PSoC4 -Wa,-alh=.\CortexM0\ARM_GCC_484\Debug/CyLib.lst -g -D DEBUG -Wall -ffunction-sections -Og -c .\Generated_Source\PSoC4\CyLib.c -o .\CortexM0\ARM_GCC_484\Debug\CyLib.o
+arm-none-eabi-gcc.exe -mcpu=cortex-m0 -mthumb -Wno-main -I. -IGenerated_Source\PSoC4 -Wa,-alh=.\CortexM0\ARM_GCC_484\Debug/cyPm.lst -g -D DEBUG -Wall -ffunction-sections -Og -c .\Generated_Source\PSoC4\cyPm.c -o .\CortexM0\ARM_GCC_484\Debug\cyPm.o
+arm-none-eabi-gcc.exe -mcpu=cortex-m0 -mthumb -Wno-main -I. -IGenerated_Source\PSoC4 -Wa,-alh=.\CortexM0\ARM_GCC_484\Debug/cyutils.lst -g -D DEBUG -Wall -ffunction-sections -Og -c .\Generated_Source\PSoC4\cyutils.c -o .\CortexM0\ARM_GCC_484\Debug\cyutils.o
+arm-none-eabi-gcc.exe -mcpu=cortex-m0 -mthumb -Wno-main -I. -IGenerated_Source\PSoC4 -Wa,-alh=.\CortexM0\ARM_GCC_484\Debug/CyLFClk.lst -g -D DEBUG -Wall -ffunction-sections -Og -c .\Generated_Source\PSoC4\CyLFClk.c -o .\CortexM0\ARM_GCC_484\Debug\CyLFClk.o
+arm-none-eabi-gcc.exe -mcpu=cortex-m0 -mthumb -Wno-main -I. -IGenerated_Source\PSoC4 -Wa,-alh=.\CortexM0\ARM_GCC_484\Debug/PWM_1.lst -g -D DEBUG -Wall -ffunction-sections -Og -c .\Generated_Source\PSoC4\PWM_1.c -o .\CortexM0\ARM_GCC_484\Debug\PWM_1.o
+arm-none-eabi-gcc.exe -mcpu=cortex-m0 -mthumb -Wno-main -I. -IGenerated_Source\PSoC4 -Wa,-alh=.\CortexM0\ARM_GCC_484\Debug/PWM_1_PM.lst -g -D DEBUG -Wall -ffunction-sections -Og -c .\Generated_Source\PSoC4\PWM_1_PM.c -o .\CortexM0\ARM_GCC_484\Debug\PWM_1_PM.o
+arm-none-eabi-gcc.exe -mcpu=cortex-m0 -mthumb -Wno-main -I. -IGenerated_Source\PSoC4 -Wa,-alh=.\CortexM0\ARM_GCC_484\Debug/Clock_1.lst -g -D DEBUG -Wall -ffunction-sections -Og -c .\Generated_Source\PSoC4\Clock_1.c -o .\CortexM0\ARM_GCC_484\Debug\Clock_1.o
+arm-none-eabi-ar.exe -rs .\CortexM0\ARM_GCC_484\Debug\FindME.a .\CortexM0\ARM_GCC_484\Debug\cyfitter_cfg.o .\CortexM0\ARM_GCC_484\Debug\BLE.o .\CortexM0\ARM_GCC_484\Debug\BLE_gatt.o .\CortexM0\ARM_GCC_484\Debug\BLE_ias.o .\CortexM0\ARM_GCC_484\Debug\BLE_eventHandler.o .\CortexM0\ARM_GCC_484\Debug\BLE_HAL_INT.o .\CortexM0\ARM_GCC_484\Debug\BLE_HAL_PVT.o .\CortexM0\ARM_GCC_484\Debug\Advertising_LED.o .\CortexM0\ARM_GCC_484\Debug\Disconnect_LED.o .\CortexM0\ARM_GCC_484\Debug\Alert_LED.o .\CortexM0\ARM_GCC_484\Debug\BLE_bless_isr.o .\CortexM0\ARM_GCC_484\Debug\CyBootAsmGnu.o .\CortexM0\ARM_GCC_484\Debug\CyFlash.o .\CortexM0\ARM_GCC_484\Debug\CyLib.o .\CortexM0\ARM_GCC_484\Debug\cyPm.o .\CortexM0\ARM_GCC_484\Debug\cyutils.o .\CortexM0\ARM_GCC_484\Debug\CyLFClk.o .\CortexM0\ARM_GCC_484\Debug\PWM_1.o .\CortexM0\ARM_GCC_484\Debug\PWM_1_PM.o .\CortexM0\ARM_GCC_484\Debug\Clock_1.o
+arm-none-eabi-ar.exe: creating .\CortexM0\ARM_GCC_484\Debug\FindME.a
+arm-none-eabi-gcc.exe -Wl,--start-group -o .\CortexM0\ARM_GCC_484\Debug\FindME.elf .\CortexM0\ARM_GCC_484\Debug\main.o .\CortexM0\ARM_GCC_484\Debug\cymetadata.o .\CortexM0\ARM_GCC_484\Debug\Cm0Start.o .\CortexM0\ARM_GCC_484\Debug\FindME.a "C:\Program Files (x86)\Cypress\PSoC Creator\3.2\PSoC Creator\psoc\content\cycomponentlibrary\CyComponentLibrary.cylib\BLE_v2_0\Library\gccCyBLEStack_BLE_SOC_PERIPHERAL.a" "C:\Program Files (x86)\Cypress\PSoC Creator\3.2\PSoC Creator\psoc\content\cycomponentlibrary\CyComponentLibrary.cylib\CortexM0\ARM_GCC_484\Debug\CyComponentLibrary.a" -mcpu=cortex-m0 -mthumb -g -ffunction-sections -Og -Wl,-Map,.\CortexM0\ARM_GCC_484\Debug/FindME.map -T Generated_Source\PSoC4\cm0gcc.ld -specs=nano.specs -Wl,--gc-sections -Wl,--end-group
+.\CortexM0\ARM_GCC_484\Debug\main.o: In function `main':
+Y:\repos\PSoC-4-BLE-Experiments\Project 001 FindMe\PSoc\FindME\FindME.cydsn/.\main.c:38: undefined reference to `PWM_Start'
+.\CortexM0\ARM_GCC_484\Debug\main.o: In function `HandleAlertLEDs':
+Y:\repos\PSoC-4-BLE-Experiments\Project 001 FindMe\PSoc\FindME\FindME.cydsn/.\main.c:81: undefined reference to `PWM_WriteCompare'
+Y:\repos\PSoC-4-BLE-Experiments\Project 001 FindMe\PSoc\FindME\FindME.cydsn/.\main.c:85: undefined reference to `PWM_WriteCompare'
+Y:\repos\PSoC-4-BLE-Experiments\Project 001 FindMe\PSoc\FindME\FindME.cydsn/.\main.c:89: undefined reference to `PWM_WriteCompare'
+collect2.exe: error: ld returned 1 exit status
+The command 'arm-none-eabi-gcc.exe' failed with exit code '1'.
+--------------- Rebuild Failed: 08/19/2015 14:45:01 ---------------
