@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\danielpi\AppData\Local\Temp\cca0S25h.s 			page 1
+ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccHqkv6c.s 			page 1
 
 
    1              		.cpu cortex-m0
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\danielpi\AppData\Local\Temp\cca0S25h.s 			page 1
   31:.\Generated_Source\PSoC4/CyLFClk.c ****                                         CY_SYS_WDT_COUNTER1_INT |\
   32:.\Generated_Source\PSoC4/CyLFClk.c ****                                         CY_SYS_WDT_COUNTER2_INT;
   33:.\Generated_Source\PSoC4/CyLFClk.c **** 
-ARM GAS  C:\Users\danielpi\AppData\Local\Temp\cca0S25h.s 			page 2
+ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccHqkv6c.s 			page 2
 
 
   34:.\Generated_Source\PSoC4/CyLFClk.c ****     static const uint32 counterIntMaskTbl[CY_WDT_NUM_OF_WDT] = {CY_SYS_WDT_COUNTER0_INT,
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\danielpi\AppData\Local\Temp\cca0S25h.s 			page 1
   88:.\Generated_Source\PSoC4/CyLFClk.c **** *  PSoC 4100 / PSoC 4200: Note that ILO is required for WDT's operation.
   89:.\Generated_Source\PSoC4/CyLFClk.c **** *  ILO is required for WDT operation.
   90:.\Generated_Source\PSoC4/CyLFClk.c **** *
-ARM GAS  C:\Users\danielpi\AppData\Local\Temp\cca0S25h.s 			page 3
+ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccHqkv6c.s 			page 3
 
 
   91:.\Generated_Source\PSoC4/CyLFClk.c **** *  PSoC 4100-BL / PSoC 4200-BL and PSoC 4100M / PSoC 4200M:
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\danielpi\AppData\Local\Temp\cca0S25h.s 			page 1
  145:.\Generated_Source\PSoC4/CyLFClk.c ****     *  1 if ILO is enabled, and 0 if ILO is disabled.
  146:.\Generated_Source\PSoC4/CyLFClk.c ****     *
  147:.\Generated_Source\PSoC4/CyLFClk.c ****     *******************************************************************************/
-ARM GAS  C:\Users\danielpi\AppData\Local\Temp\cca0S25h.s 			page 4
+ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccHqkv6c.s 			page 4
 
 
  148:.\Generated_Source\PSoC4/CyLFClk.c ****     static uint32 CySysClkIloEnabled(void)
@@ -238,7 +238,7 @@ ARM GAS  C:\Users\danielpi\AppData\Local\Temp\cca0S25h.s 			page 1
  172:.\Generated_Source\PSoC4/CyLFClk.c **** *   CY_SYS_CLK_LFCLK_SRC_WCO    Low Frequency Watch Crystal Oscillator (WCO)
  173:.\Generated_Source\PSoC4/CyLFClk.c **** *
  174:.\Generated_Source\PSoC4/CyLFClk.c **** *******************************************************************************/
-ARM GAS  C:\Users\danielpi\AppData\Local\Temp\cca0S25h.s 			page 5
+ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccHqkv6c.s 			page 5
 
 
  175:.\Generated_Source\PSoC4/CyLFClk.c **** #if (CY_IP_WCO)
@@ -298,7 +298,7 @@ ARM GAS  C:\Users\danielpi\AppData\Local\Temp\cca0S25h.s 			page 1
  204:.\Generated_Source\PSoC4/CyLFClk.c **** * Parameters:
  205:.\Generated_Source\PSoC4/CyLFClk.c **** *  source: One of the available LFCLK sources.
  206:.\Generated_Source\PSoC4/CyLFClk.c **** *   CY_SYS_CLK_LFCLK_SRC_ILO    Internal Low Frequency (32 kHz) Oscillator (ILO)
-ARM GAS  C:\Users\danielpi\AppData\Local\Temp\cca0S25h.s 			page 6
+ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccHqkv6c.s 			page 6
 
 
  207:.\Generated_Source\PSoC4/CyLFClk.c **** *   CY_SYS_CLK_LFCLK_SRC_WCO    Low Frequency Watch Crystal Oscillator (WCO)
@@ -358,7 +358,7 @@ ARM GAS  C:\Users\danielpi\AppData\Local\Temp\cca0S25h.s 			page 1
  261:.\Generated_Source\PSoC4/CyLFClk.c ****     *  The CySysClkWcoSetPowerMode() function configures the WCO power mode.
  262:.\Generated_Source\PSoC4/CyLFClk.c ****     *
  263:.\Generated_Source\PSoC4/CyLFClk.c ****     * Parameters:
-ARM GAS  C:\Users\danielpi\AppData\Local\Temp\cca0S25h.s 			page 7
+ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccHqkv6c.s 			page 7
 
 
  264:.\Generated_Source\PSoC4/CyLFClk.c ****     *  None.
@@ -418,7 +418,7 @@ ARM GAS  C:\Users\danielpi\AppData\Local\Temp\cca0S25h.s 			page 1
  318:.\Generated_Source\PSoC4/CyLFClk.c ****     * Summary:
  319:.\Generated_Source\PSoC4/CyLFClk.c ****     *  Reports the WCO enable state.
  320:.\Generated_Source\PSoC4/CyLFClk.c ****     *
-ARM GAS  C:\Users\danielpi\AppData\Local\Temp\cca0S25h.s 			page 8
+ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccHqkv6c.s 			page 8
 
 
  321:.\Generated_Source\PSoC4/CyLFClk.c ****     * Parameters:
@@ -478,7 +478,7 @@ ARM GAS  C:\Users\danielpi\AppData\Local\Temp\cca0S25h.s 			page 1
  375:.\Generated_Source\PSoC4/CyLFClk.c ****         default:
  376:.\Generated_Source\PSoC4/CyLFClk.c ****             CYASSERT(0u != 0u);
  377:.\Generated_Source\PSoC4/CyLFClk.c ****             break;
-ARM GAS  C:\Users\danielpi\AppData\Local\Temp\cca0S25h.s 			page 9
+ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccHqkv6c.s 			page 9
 
 
  378:.\Generated_Source\PSoC4/CyLFClk.c ****         }
@@ -538,7 +538,7 @@ ARM GAS  C:\Users\danielpi\AppData\Local\Temp\cca0S25h.s 			page 1
  432:.\Generated_Source\PSoC4/CyLFClk.c ****     *
  433:.\Generated_Source\PSoC4/CyLFClk.c ****     *******************************************************************************/
  434:.\Generated_Source\PSoC4/CyLFClk.c ****     static uint32 CySysWdtLocked(void)
-ARM GAS  C:\Users\danielpi\AppData\Local\Temp\cca0S25h.s 			page 10
+ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccHqkv6c.s 			page 10
 
 
  435:.\Generated_Source\PSoC4/CyLFClk.c ****     {
@@ -598,7 +598,7 @@ ARM GAS  C:\Users\danielpi\AppData\Local\Temp\cca0S25h.s 			page 1
  127 0010 04010B40 		.word	1074462980
  128              		.cfi_endproc
  129              	.LFE2:
-ARM GAS  C:\Users\danielpi\AppData\Local\Temp\cca0S25h.s 			page 11
+ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccHqkv6c.s 			page 11
 
 
  130              		.size	CySysClkIloStart, .-CySysClkIloStart
@@ -658,7 +658,7 @@ ARM GAS  C:\Users\danielpi\AppData\Local\Temp\cca0S25h.s 			page 1
   36:.\Generated_Source\PSoC4/CyLFClk.h **** #if (CY_IP_WCO)
   37:.\Generated_Source\PSoC4/CyLFClk.h ****     void   CySysClkWcoStart(void);
   38:.\Generated_Source\PSoC4/CyLFClk.h ****     void   CySysClkWcoStop(void);
-ARM GAS  C:\Users\danielpi\AppData\Local\Temp\cca0S25h.s 			page 12
+ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccHqkv6c.s 			page 12
 
 
   39:.\Generated_Source\PSoC4/CyLFClk.h ****     uint32 CySysClkWcoSetPowerMode(uint32 mode);
@@ -718,7 +718,7 @@ ARM GAS  C:\Users\danielpi\AppData\Local\Temp\cca0S25h.s 			page 1
   93:.\Generated_Source\PSoC4/CyLFClk.h **** 
   94:.\Generated_Source\PSoC4/CyLFClk.h **** 
   95:.\Generated_Source\PSoC4/CyLFClk.h **** /***************************************
-ARM GAS  C:\Users\danielpi\AppData\Local\Temp\cca0S25h.s 			page 13
+ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccHqkv6c.s 			page 13
 
 
   96:.\Generated_Source\PSoC4/CyLFClk.h **** * API Constants
@@ -778,7 +778,7 @@ ARM GAS  C:\Users\danielpi\AppData\Local\Temp\cca0S25h.s 			page 1
  150:.\Generated_Source\PSoC4/CyLFClk.h **** /*******************************************************************************
  151:.\Generated_Source\PSoC4/CyLFClk.h **** * WDT API Constants
  152:.\Generated_Source\PSoC4/CyLFClk.h **** *******************************************************************************/
-ARM GAS  C:\Users\danielpi\AppData\Local\Temp\cca0S25h.s 			page 14
+ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccHqkv6c.s 			page 14
 
 
  153:.\Generated_Source\PSoC4/CyLFClk.h **** #if(CY_IP_SRSSV2)
@@ -838,7 +838,7 @@ ARM GAS  C:\Users\danielpi\AppData\Local\Temp\cca0S25h.s 			page 1
  207:.\Generated_Source\PSoC4/CyLFClk.h ****         #define CY_SYS_WDT_3LFCLK_DELAY_US      ((uint16)(201u))
  208:.\Generated_Source\PSoC4/CyLFClk.h ****     #endif /* (CY_PSOC4_4100 || CY_PSOC4_4200) */
  209:.\Generated_Source\PSoC4/CyLFClk.h **** 
-ARM GAS  C:\Users\danielpi\AppData\Local\Temp\cca0S25h.s 			page 15
+ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccHqkv6c.s 			page 15
 
 
  210:.\Generated_Source\PSoC4/CyLFClk.h ****     #if (CY_PSOC4_4000)
@@ -898,7 +898,7 @@ ARM GAS  C:\Users\danielpi\AppData\Local\Temp\cca0S25h.s 			page 1
  264:.\Generated_Source\PSoC4/CyLFClk.h ****         #define CY_SYS_CLK_WCO_STATUS_PTR               ( (reg32 *) CYREG_BLE_BLESS_WCO_STATUS)
  265:.\Generated_Source\PSoC4/CyLFClk.h **** 
  266:.\Generated_Source\PSoC4/CyLFClk.h ****         /* WCO Configuration Register */
-ARM GAS  C:\Users\danielpi\AppData\Local\Temp\cca0S25h.s 			page 16
+ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccHqkv6c.s 			page 16
 
 
  267:.\Generated_Source\PSoC4/CyLFClk.h ****         #define CY_SYS_CLK_WCO_CONFIG_REG               (*(reg32 *) CYREG_BLE_BLESS_WCO_CONFIG)
@@ -958,7 +958,7 @@ ARM GAS  C:\Users\danielpi\AppData\Local\Temp\cca0S25h.s 			page 1
  321:.\Generated_Source\PSoC4/CyLFClk.h ****     #define CY_SYS_SRSS_INTR_MASK_REG           (*(reg32 *) CYREG_SRSS_INTR_MASK)
  322:.\Generated_Source\PSoC4/CyLFClk.h ****     #define CY_SYS_SRSS_INTR_MASK_PTR           ( (reg32 *) CYREG_SRSS_INTR_MASK)
  323:.\Generated_Source\PSoC4/CyLFClk.h **** #endif  /* (CY_IP_SRSSV2) */
-ARM GAS  C:\Users\danielpi\AppData\Local\Temp\cca0S25h.s 			page 17
+ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccHqkv6c.s 			page 17
 
 
  324:.\Generated_Source\PSoC4/CyLFClk.h **** 
@@ -1018,7 +1018,7 @@ ARM GAS  C:\Users\danielpi\AppData\Local\Temp\cca0S25h.s 			page 1
  169              		.loc 2 355 0
  170 0022 1068     		ldr	r0, [r2]
  171 0024 0724     		mov	r4, #7
-ARM GAS  C:\Users\danielpi\AppData\Local\Temp\cca0S25h.s 			page 18
+ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccHqkv6c.s 			page 18
 
 
  172 0026 A043     		bic	r0, r4
@@ -1078,7 +1078,7 @@ ARM GAS  C:\Users\danielpi\AppData\Local\Temp\cca0S25h.s 			page 1
  218              		@ sp needed
  219 000e 7047     		bx	lr
  220              	.L24:
-ARM GAS  C:\Users\danielpi\AppData\Local\Temp\cca0S25h.s 			page 19
+ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccHqkv6c.s 			page 19
 
 
  221              		.align	2
@@ -1138,7 +1138,7 @@ ARM GAS  C:\Users\danielpi\AppData\Local\Temp\cca0S25h.s 			page 1
  270 0022 1968     		ldr	r1, [r3]
  271 0024 0220     		mov	r0, #2
  272 0026 8143     		bic	r1, r0
-ARM GAS  C:\Users\danielpi\AppData\Local\Temp\cca0S25h.s 			page 20
+ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccHqkv6c.s 			page 20
 
 
  273 0028 1960     		str	r1, [r3]
@@ -1198,7 +1198,7 @@ ARM GAS  C:\Users\danielpi\AppData\Local\Temp\cca0S25h.s 			page 1
  380:.\Generated_Source\PSoC4/CyLFClk.h ****             CY_SYS_CLK_WCO_CONFIG_REG &= ((uint32)~CY_SYS_CLK_WCO_CONFIG_LPM_AUTO);
  299              		.loc 2 380 0
  300 0044 0D4B     		ldr	r3, .L31
-ARM GAS  C:\Users\danielpi\AppData\Local\Temp\cca0S25h.s 			page 21
+ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccHqkv6c.s 			page 21
 
 
  301              	.LVL6:
@@ -1258,7 +1258,7 @@ ARM GAS  C:\Users\danielpi\AppData\Local\Temp\cca0S25h.s 			page 1
  342              	.LVL9:
  343 0078 38BD     		pop	{r3, r4, r5, pc}
  344              	.L32:
-ARM GAS  C:\Users\danielpi\AppData\Local\Temp\cca0S25h.s 			page 22
+ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccHqkv6c.s 			page 22
 
 
  345 007a C046     		.align	2
@@ -1318,7 +1318,7 @@ ARM GAS  C:\Users\danielpi\AppData\Local\Temp\cca0S25h.s 			page 1
  394              		.type	CySysWdtUnlock, %function
  395              	CySysWdtUnlock:
  396              	.LFB13:
-ARM GAS  C:\Users\danielpi\AppData\Local\Temp\cca0S25h.s 			page 23
+ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccHqkv6c.s 			page 23
 
 
  439:.\Generated_Source\PSoC4/CyLFClk.c **** 
@@ -1378,7 +1378,7 @@ ARM GAS  C:\Users\danielpi\AppData\Local\Temp\cca0S25h.s 			page 1
  422              		.loc 1 467 0
  423 0022 FFF7FEFF 		bl	CyExitCriticalSection
  424              	.LVL13:
-ARM GAS  C:\Users\danielpi\AppData\Local\Temp\cca0S25h.s 			page 24
+ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccHqkv6c.s 			page 24
 
 
  468:.\Generated_Source\PSoC4/CyLFClk.c ****     }
@@ -1438,7 +1438,7 @@ ARM GAS  C:\Users\danielpi\AppData\Local\Temp\cca0S25h.s 			page 1
  495:.\Generated_Source\PSoC4/CyLFClk.c ****         CYASSERT(counterNum < CY_SYS_WDT_COUNTERS_MAX);
  452              		.loc 1 495 0
  453 0004 022C     		cmp	r4, #2
-ARM GAS  C:\Users\danielpi\AppData\Local\Temp\cca0S25h.s 			page 25
+ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccHqkv6c.s 			page 25
 
 
  454 0006 02D9     		bls	.L40
@@ -1498,7 +1498,7 @@ ARM GAS  C:\Users\danielpi\AppData\Local\Temp\cca0S25h.s 			page 1
  516:.\Generated_Source\PSoC4/CyLFClk.c ****     *        CY_SYS_WDT_MODE_INT_RESET  Generate an interrupt.  Generate a reset on
  517:.\Generated_Source\PSoC4/CyLFClk.c ****     *                                   the 3rd non-handled interrupt.
  518:.\Generated_Source\PSoC4/CyLFClk.c ****     *                                   (valid for counter 0 and 1 only)
-ARM GAS  C:\Users\danielpi\AppData\Local\Temp\cca0S25h.s 			page 26
+ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccHqkv6c.s 			page 26
 
 
  519:.\Generated_Source\PSoC4/CyLFClk.c ****     * Return:
@@ -1558,7 +1558,7 @@ ARM GAS  C:\Users\danielpi\AppData\Local\Temp\cca0S25h.s 			page 1
  522 0024 A040     		lsl	r0, r0, r4
  537:.\Generated_Source\PSoC4/CyLFClk.c ****             configRegValue = CY_SYS_WDT_CONFIG_REG &
  523              		.loc 1 537 0
-ARM GAS  C:\Users\danielpi\AppData\Local\Temp\cca0S25h.s 			page 27
+ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccHqkv6c.s 			page 27
 
 
  524 0026 8143     		bic	r1, r0
@@ -1618,7 +1618,7 @@ ARM GAS  C:\Users\danielpi\AppData\Local\Temp\cca0S25h.s 			page 1
  563:.\Generated_Source\PSoC4/CyLFClk.c ****     }
  564:.\Generated_Source\PSoC4/CyLFClk.c **** 
  565:.\Generated_Source\PSoC4/CyLFClk.c **** 
-ARM GAS  C:\Users\danielpi\AppData\Local\Temp\cca0S25h.s 			page 28
+ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccHqkv6c.s 			page 28
 
 
  566:.\Generated_Source\PSoC4/CyLFClk.c ****     /*******************************************************************************
@@ -1678,7 +1678,7 @@ ARM GAS  C:\Users\danielpi\AppData\Local\Temp\cca0S25h.s 			page 1
  620:.\Generated_Source\PSoC4/CyLFClk.c ****     * Parameters:
  621:.\Generated_Source\PSoC4/CyLFClk.c ****     *   counterNum: Valid range [0-1].  The number of the WDT counter.  The match values are
  622:.\Generated_Source\PSoC4/CyLFClk.c ****     *               not supported by counter 2.
-ARM GAS  C:\Users\danielpi\AppData\Local\Temp\cca0S25h.s 			page 29
+ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccHqkv6c.s 			page 29
 
 
  623:.\Generated_Source\PSoC4/CyLFClk.c ****     *
@@ -1738,7 +1738,7 @@ ARM GAS  C:\Users\danielpi\AppData\Local\Temp\cca0S25h.s 			page 1
  677:.\Generated_Source\PSoC4/CyLFClk.c ****             CySysClkIloStart();
  678:.\Generated_Source\PSoC4/CyLFClk.c ****         #endif /* (!CY_IP_WCO) */
  679:.\Generated_Source\PSoC4/CyLFClk.c **** 
-ARM GAS  C:\Users\danielpi\AppData\Local\Temp\cca0S25h.s 			page 30
+ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccHqkv6c.s 			page 30
 
 
  680:.\Generated_Source\PSoC4/CyLFClk.c ****         CY_SYS_WDT_CONTROL_REG |= counterMask;
@@ -1798,7 +1798,7 @@ ARM GAS  C:\Users\danielpi\AppData\Local\Temp\cca0S25h.s 			page 1
  734:.\Generated_Source\PSoC4/CyLFClk.c ****             {
  735:.\Generated_Source\PSoC4/CyLFClk.c ****                 while (0u != CySysWdtGetEnabledStatus(CY_SYS_WDT_COUNTER0))
  736:.\Generated_Source\PSoC4/CyLFClk.c ****                 {
-ARM GAS  C:\Users\danielpi\AppData\Local\Temp\cca0S25h.s 			page 31
+ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccHqkv6c.s 			page 31
 
 
  737:.\Generated_Source\PSoC4/CyLFClk.c ****                     /* Wait for changes to come into effect */
@@ -1858,7 +1858,7 @@ ARM GAS  C:\Users\danielpi\AppData\Local\Temp\cca0S25h.s 			page 1
  791:.\Generated_Source\PSoC4/CyLFClk.c ****     *
  792:.\Generated_Source\PSoC4/CyLFClk.c ****     *******************************************************************************/
  793:.\Generated_Source\PSoC4/CyLFClk.c ****     void CySysWdtSetCascade(uint32 cascadeMask)
-ARM GAS  C:\Users\danielpi\AppData\Local\Temp\cca0S25h.s 			page 32
+ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccHqkv6c.s 			page 32
 
 
  794:.\Generated_Source\PSoC4/CyLFClk.c ****     {
@@ -1918,7 +1918,7 @@ ARM GAS  C:\Users\danielpi\AppData\Local\Temp\cca0S25h.s 			page 1
  848:.\Generated_Source\PSoC4/CyLFClk.c ****     *  match:
  849:.\Generated_Source\PSoC4/CyLFClk.c ****     *   Valid range [0-65535]. The value to be used to match against the counter.
  850:.\Generated_Source\PSoC4/CyLFClk.c ****     *
-ARM GAS  C:\Users\danielpi\AppData\Local\Temp\cca0S25h.s 			page 33
+ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccHqkv6c.s 			page 33
 
 
  851:.\Generated_Source\PSoC4/CyLFClk.c ****     * Return:
@@ -1978,7 +1978,7 @@ ARM GAS  C:\Users\danielpi\AppData\Local\Temp\cca0S25h.s 			page 1
  905:.\Generated_Source\PSoC4/CyLFClk.c ****             configRegValue = CY_SYS_WDT_CONFIG_REG;
  906:.\Generated_Source\PSoC4/CyLFClk.c ****             configRegValue &= (uint32)(~((uint32)(CY_SYS_WDT_CONFIG_BITS2_MASK << CY_SYS_WDT_CONFIG
  907:.\Generated_Source\PSoC4/CyLFClk.c ****             configRegValue |= ((bits & CY_SYS_WDT_CONFIG_BITS2_MASK) << CY_SYS_WDT_CONFIG_BITS2_POS
-ARM GAS  C:\Users\danielpi\AppData\Local\Temp\cca0S25h.s 			page 34
+ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccHqkv6c.s 			page 34
 
 
  908:.\Generated_Source\PSoC4/CyLFClk.c ****             CY_SYS_WDT_CONFIG_REG = configRegValue;
@@ -2038,7 +2038,7 @@ ARM GAS  C:\Users\danielpi\AppData\Local\Temp\cca0S25h.s 			page 1
  962:.\Generated_Source\PSoC4/CyLFClk.c ****     *  Reads the current WDT counter value.
  963:.\Generated_Source\PSoC4/CyLFClk.c ****     *
  964:.\Generated_Source\PSoC4/CyLFClk.c ****     * Parameters:
-ARM GAS  C:\Users\danielpi\AppData\Local\Temp\cca0S25h.s 			page 35
+ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccHqkv6c.s 			page 35
 
 
  965:.\Generated_Source\PSoC4/CyLFClk.c ****     *  counterNum: Valid range [0-2].  The number of the WDT counter.
@@ -2098,7 +2098,7 @@ ARM GAS  C:\Users\danielpi\AppData\Local\Temp\cca0S25h.s 			page 1
 1019:.\Generated_Source\PSoC4/CyLFClk.c ****     *
 1020:.\Generated_Source\PSoC4/CyLFClk.c ****     *******************************************************************************/
 1021:.\Generated_Source\PSoC4/CyLFClk.c ****     uint32 CySysWdtGetInterruptSource(void)
-ARM GAS  C:\Users\danielpi\AppData\Local\Temp\cca0S25h.s 			page 36
+ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccHqkv6c.s 			page 36
 
 
 1022:.\Generated_Source\PSoC4/CyLFClk.c ****     {
@@ -2158,7 +2158,7 @@ ARM GAS  C:\Users\danielpi\AppData\Local\Temp\cca0S25h.s 			page 1
 1076:.\Generated_Source\PSoC4/CyLFClk.c **** 
 1077:.\Generated_Source\PSoC4/CyLFClk.c ****         CY_SYS_WDT_CONTROL_REG = counterMask | (CY_SYS_WDT_CONTROL_REG & ~(CY_SYS_WDT_COUNTER0_INT 
 1078:.\Generated_Source\PSoC4/CyLFClk.c ****                                                                            CY_SYS_WDT_COUNTER1_INT 
-ARM GAS  C:\Users\danielpi\AppData\Local\Temp\cca0S25h.s 			page 37
+ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccHqkv6c.s 			page 37
 
 
 1079:.\Generated_Source\PSoC4/CyLFClk.c ****                                                                            CY_SYS_WDT_COUNTER2_INT)
@@ -2218,7 +2218,7 @@ ARM GAS  C:\Users\danielpi\AppData\Local\Temp\cca0S25h.s 			page 1
 1133:.\Generated_Source\PSoC4/CyLFClk.c ****     ********************************************************************************
 1134:.\Generated_Source\PSoC4/CyLFClk.c ****     *
 1135:.\Generated_Source\PSoC4/CyLFClk.c ****     * Summary:
-ARM GAS  C:\Users\danielpi\AppData\Local\Temp\cca0S25h.s 			page 38
+ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccHqkv6c.s 			page 38
 
 
 1136:.\Generated_Source\PSoC4/CyLFClk.c ****     *  Sets the ISR callback function for the particular WDT counter.
@@ -2278,7 +2278,7 @@ ARM GAS  C:\Users\danielpi\AppData\Local\Temp\cca0S25h.s 			page 1
 1190:.\Generated_Source\PSoC4/CyLFClk.c ****         {
 1191:.\Generated_Source\PSoC4/CyLFClk.c ****             CYASSERT(0u != 0u);
 1192:.\Generated_Source\PSoC4/CyLFClk.c ****         }
-ARM GAS  C:\Users\danielpi\AppData\Local\Temp\cca0S25h.s 			page 39
+ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccHqkv6c.s 			page 39
 
 
 1193:.\Generated_Source\PSoC4/CyLFClk.c **** 
@@ -2338,7 +2338,7 @@ ARM GAS  C:\Users\danielpi\AppData\Local\Temp\cca0S25h.s 			page 1
 1247:.\Generated_Source\PSoC4/CyLFClk.c ****     /*******************************************************************************
 1248:.\Generated_Source\PSoC4/CyLFClk.c ****     * Function Name: CySysWdtIsr
 1249:.\Generated_Source\PSoC4/CyLFClk.c ****     ********************************************************************************
-ARM GAS  C:\Users\danielpi\AppData\Local\Temp\cca0S25h.s 			page 40
+ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccHqkv6c.s 			page 40
 
 
 1250:.\Generated_Source\PSoC4/CyLFClk.c ****     *
@@ -2398,7 +2398,7 @@ ARM GAS  C:\Users\danielpi\AppData\Local\Temp\cca0S25h.s 			page 1
 1304:.\Generated_Source\PSoC4/CyLFClk.c ****             if(0u != (CY_SYS_WDT_COUNTER2_INT & wdtIsrMask))
 1305:.\Generated_Source\PSoC4/CyLFClk.c ****             {
 1306:.\Generated_Source\PSoC4/CyLFClk.c ****                 if(cySysWdtCallback[CY_SYS_WDT_COUNTER2] != (void *) 0)
-ARM GAS  C:\Users\danielpi\AppData\Local\Temp\cca0S25h.s 			page 41
+ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccHqkv6c.s 			page 41
 
 
 1307:.\Generated_Source\PSoC4/CyLFClk.c ****                 {
@@ -2458,7 +2458,7 @@ ARM GAS  C:\Users\danielpi\AppData\Local\Temp\cca0S25h.s 			page 1
 1361:.\Generated_Source\PSoC4/CyLFClk.c ****     *
 1362:.\Generated_Source\PSoC4/CyLFClk.c ****     * Return:
 1363:.\Generated_Source\PSoC4/CyLFClk.c ****     *  None
-ARM GAS  C:\Users\danielpi\AppData\Local\Temp\cca0S25h.s 			page 42
+ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccHqkv6c.s 			page 42
 
 
 1364:.\Generated_Source\PSoC4/CyLFClk.c ****     *
@@ -2518,7 +2518,7 @@ ARM GAS  C:\Users\danielpi\AppData\Local\Temp\cca0S25h.s 			page 1
 1418:.\Generated_Source\PSoC4/CyLFClk.c ****     *
 1419:.\Generated_Source\PSoC4/CyLFClk.c ****     *  - Through the CySysWdtSetMode() function. Call it with the appropriate "mode"
 1420:.\Generated_Source\PSoC4/CyLFClk.c ****     *    parameter for the used WDT counter.
-ARM GAS  C:\Users\danielpi\AppData\Local\Temp\cca0S25h.s 			page 43
+ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccHqkv6c.s 			page 43
 
 
 1421:.\Generated_Source\PSoC4/CyLFClk.c ****     *
@@ -2578,7 +2578,7 @@ ARM GAS  C:\Users\danielpi\AppData\Local\Temp\cca0S25h.s 			page 1
 1475:.\Generated_Source\PSoC4/CyLFClk.c ****         {
 1476:.\Generated_Source\PSoC4/CyLFClk.c ****             CYASSERT(0u != 0u);
 1477:.\Generated_Source\PSoC4/CyLFClk.c ****         }
-ARM GAS  C:\Users\danielpi\AppData\Local\Temp\cca0S25h.s 			page 44
+ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccHqkv6c.s 			page 44
 
 
 1478:.\Generated_Source\PSoC4/CyLFClk.c ****     }
@@ -2638,7 +2638,7 @@ ARM GAS  C:\Users\danielpi\AppData\Local\Temp\cca0S25h.s 			page 1
 1532:.\Generated_Source\PSoC4/CyLFClk.c ****             }
 1533:.\Generated_Source\PSoC4/CyLFClk.c ****         }
 1534:.\Generated_Source\PSoC4/CyLFClk.c ****         else
-ARM GAS  C:\Users\danielpi\AppData\Local\Temp\cca0S25h.s 			page 45
+ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccHqkv6c.s 			page 45
 
 
 1535:.\Generated_Source\PSoC4/CyLFClk.c ****         {
@@ -2698,7 +2698,7 @@ ARM GAS  C:\Users\danielpi\AppData\Local\Temp\cca0S25h.s 			page 1
 1589:.\Generated_Source\PSoC4/CyLFClk.c ****         else /* All WDT counters are disabled */
 1590:.\Generated_Source\PSoC4/CyLFClk.c ****         {
 1591:.\Generated_Source\PSoC4/CyLFClk.c ****             /* Configure WDT counter # 0 */
-ARM GAS  C:\Users\danielpi\AppData\Local\Temp\cca0S25h.s 			page 46
+ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccHqkv6c.s 			page 46
 
 
 1592:.\Generated_Source\PSoC4/CyLFClk.c ****             lfclkPosedgeWdtCounter0Enabled = 1u;
@@ -2758,7 +2758,7 @@ ARM GAS  C:\Users\danielpi\AppData\Local\Temp\cca0S25h.s 			page 1
 1635:.\Generated_Source\PSoC4/CyLFClk.c ****             /* Restore counter # 0 configuration and force its shutdown */
 1636:.\Generated_Source\PSoC4/CyLFClk.c ****             CY_SYS_WDT_CONTROL_REG &= (uint32)(~CY_SYS_WDT_COUNTER0_MASK);
  565              		.loc 1 1636 0
-ARM GAS  C:\Users\danielpi\AppData\Local\Temp\cca0S25h.s 			page 47
+ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccHqkv6c.s 			page 47
 
 
  566 000a 074B     		ldr	r3, .L50+4
@@ -2818,7 +2818,7 @@ ARM GAS  C:\Users\danielpi\AppData\Local\Temp\cca0S25h.s 			page 1
  613              		@ sp needed
  614 000e 7047     		bx	lr
  615              	.L54:
-ARM GAS  C:\Users\danielpi\AppData\Local\Temp\cca0S25h.s 			page 48
+ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccHqkv6c.s 			page 48
 
 
  616              		.align	2
@@ -2878,7 +2878,7 @@ ARM GAS  C:\Users\danielpi\AppData\Local\Temp\cca0S25h.s 			page 1
  664 0024 A140     		lsl	r1, r1, r4
  602:.\Generated_Source\PSoC4/CyLFClk.c ****             configRegValue = CY_SYS_WDT_CONFIG_REG &
  665              		.loc 1 602 0
-ARM GAS  C:\Users\danielpi\AppData\Local\Temp\cca0S25h.s 			page 49
+ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccHqkv6c.s 			page 49
 
 
  666 0026 8A43     		bic	r2, r1
@@ -2938,7 +2938,7 @@ ARM GAS  C:\Users\danielpi\AppData\Local\Temp\cca0S25h.s 			page 1
  713              		.loc 1 633 0 is_stmt 1
  714 000e 044B     		ldr	r3, .L62
  715 0010 1868     		ldr	r0, [r3]
-ARM GAS  C:\Users\danielpi\AppData\Local\Temp\cca0S25h.s 			page 50
+ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccHqkv6c.s 			page 50
 
 
  634:.\Generated_Source\PSoC4/CyLFClk.c ****                         ((counterNum * CY_SYS_WDT_CNT_SHIFT) + CY_SYS_WDT_CNT_MATCH_CLR_SHIFT)) & 0
@@ -2998,7 +2998,7 @@ ARM GAS  C:\Users\danielpi\AppData\Local\Temp\cca0S25h.s 			page 1
  763              	.LVL45:
  764 0016 0028     		cmp	r0, #0
  765 0018 FAD0     		beq	.L73
-ARM GAS  C:\Users\danielpi\AppData\Local\Temp\cca0S25h.s 			page 51
+ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccHqkv6c.s 			page 51
 
 
  766              	.L65:
@@ -3058,7 +3058,7 @@ ARM GAS  C:\Users\danielpi\AppData\Local\Temp\cca0S25h.s 			page 1
  814              		.cfi_offset 14, -4
  815 0002 041C     		mov	r4, r0
  729:.\Generated_Source\PSoC4/CyLFClk.c ****         if (0uL == CySysWdtLocked())
-ARM GAS  C:\Users\danielpi\AppData\Local\Temp\cca0S25h.s 			page 52
+ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccHqkv6c.s 			page 52
 
 
  816              		.loc 1 729 0
@@ -3118,7 +3118,7 @@ ARM GAS  C:\Users\danielpi\AppData\Local\Temp\cca0S25h.s 			page 1
  862 003e 10BD     		pop	{r4, pc}
  863              	.L93:
  864              		.align	2
-ARM GAS  C:\Users\danielpi\AppData\Local\Temp\cca0S25h.s 			page 53
+ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccHqkv6c.s 			page 53
 
 
  865              	.L92:
@@ -3178,7 +3178,7 @@ ARM GAS  C:\Users\danielpi\AppData\Local\Temp\cca0S25h.s 			page 1
  911 0020 1968     		ldr	r1, [r3]
  912              	.LVL61:
  805:.\Generated_Source\PSoC4/CyLFClk.c ****             configRegValue &= ((uint32)(~(CY_SYS_WDT_CASCADE_01|CY_SYS_WDT_CASCADE_12)));
-ARM GAS  C:\Users\danielpi\AppData\Local\Temp\cca0S25h.s 			page 54
+ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccHqkv6c.s 			page 54
 
 
  913              		.loc 1 805 0
@@ -3238,7 +3238,7 @@ ARM GAS  C:\Users\danielpi\AppData\Local\Temp\cca0S25h.s 			page 1
  961              		.size	CySysWdtGetCascade, .-CySysWdtGetCascade
  962              		.section	.text.CySysWdtSetMatch,"ax",%progbits
  963              		.align	2
-ARM GAS  C:\Users\danielpi\AppData\Local\Temp\cca0S25h.s 			page 55
+ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccHqkv6c.s 			page 55
 
 
  964              		.global	CySysWdtSetMatch
@@ -3298,7 +3298,7 @@ ARM GAS  C:\Users\danielpi\AppData\Local\Temp\cca0S25h.s 			page 1
  1011 002a A140     		lsl	r1, r1, r4
  1012 002c 8A43     		bic	r2, r1
  1013              	.LVL72:
-ARM GAS  C:\Users\danielpi\AppData\Local\Temp\cca0S25h.s 			page 56
+ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccHqkv6c.s 			page 56
 
 
  867:.\Generated_Source\PSoC4/CyLFClk.c ****         CY_SYS_WDT_MATCH_REG = (regValue | (match << (counterNum * CY_SYS_WDT_CNT_MATCH_SHIFT)));
@@ -3358,7 +3358,7 @@ ARM GAS  C:\Users\danielpi\AppData\Local\Temp\cca0S25h.s 			page 1
  903:.\Generated_Source\PSoC4/CyLFClk.c ****         if (0u == CySysWdtGetEnabledStatus(CY_SYS_WDT_COUNTER2))
  1062              		.loc 1 903 0
  1063 0004 0220     		mov	r0, #2
-ARM GAS  C:\Users\danielpi\AppData\Local\Temp\cca0S25h.s 			page 57
+ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccHqkv6c.s 			page 57
 
 
  1064              	.LVL76:
@@ -3418,7 +3418,7 @@ ARM GAS  C:\Users\danielpi\AppData\Local\Temp\cca0S25h.s 			page 1
  1111 0002 1868     		ldr	r0, [r3]
  1112 0004 C000     		lsl	r0, r0, #3
  1113 0006 C00E     		lsr	r0, r0, #27
-ARM GAS  C:\Users\danielpi\AppData\Local\Temp\cca0S25h.s 			page 58
+ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccHqkv6c.s 			page 58
 
 
  930:.\Generated_Source\PSoC4/CyLFClk.c ****     }
@@ -3478,7 +3478,7 @@ ARM GAS  C:\Users\danielpi\AppData\Local\Temp\cca0S25h.s 			page 1
  1162              	.L118:
  1163 001c 08020B40 		.word	1074463240
  1164              		.cfi_endproc
-ARM GAS  C:\Users\danielpi\AppData\Local\Temp\cca0S25h.s 			page 59
+ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccHqkv6c.s 			page 59
 
 
  1165              	.LFE26:
@@ -3538,7 +3538,7 @@ ARM GAS  C:\Users\danielpi\AppData\Local\Temp\cca0S25h.s 			page 1
  990:.\Generated_Source\PSoC4/CyLFClk.c ****                 regValue = CY_SYS_WDT_CTRHIGH_REG;
  1213              		.loc 1 990 0
  1214 0022 054B     		ldr	r3, .L127+4
-ARM GAS  C:\Users\danielpi\AppData\Local\Temp\cca0S25h.s 			page 60
+ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccHqkv6c.s 			page 60
 
 
  1215 0024 1868     		ldr	r0, [r3]
@@ -3598,7 +3598,7 @@ ARM GAS  C:\Users\danielpi\AppData\Local\Temp\cca0S25h.s 			page 1
  1262              		.loc 1 1579 0
  1263 000c 0022     		mov	r2, #0
  1264 000e 184B     		ldr	r3, .L136
-ARM GAS  C:\Users\danielpi\AppData\Local\Temp\cca0S25h.s 			page 61
+ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccHqkv6c.s 			page 61
 
 
  1265 0010 9A60     		str	r2, [r3, #8]
@@ -3658,7 +3658,7 @@ ARM GAS  C:\Users\danielpi\AppData\Local\Temp\cca0S25h.s 			page 1
  1310 0052 0120     		mov	r0, #1
  1311 0054 FFF7FEFF 		bl	CySysWdtEnable
  1312              	.LVL105:
-ARM GAS  C:\Users\danielpi\AppData\Local\Temp\cca0S25h.s 			page 62
+ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccHqkv6c.s 			page 62
 
 
  1313              	.L131:
@@ -3718,7 +3718,7 @@ ARM GAS  C:\Users\danielpi\AppData\Local\Temp\cca0S25h.s 			page 1
  104:.\Generated_Source\PSoC4/CyLFClk.c ****             if (0u != CySysClkIloEnabled())
  1361              		.loc 1 104 0
  1362 000a FFF7FEFF 		bl	CySysClkIloEnabled
-ARM GAS  C:\Users\danielpi\AppData\Local\Temp\cca0S25h.s 			page 63
+ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccHqkv6c.s 			page 63
 
 
  1363              	.LVL112:
@@ -3778,7 +3778,7 @@ ARM GAS  C:\Users\danielpi\AppData\Local\Temp\cca0S25h.s 			page 1
  1409              		.cfi_endproc
  1410              	.LFE3:
  1411              		.size	CySysClkIloStop, .-CySysClkIloStop
-ARM GAS  C:\Users\danielpi\AppData\Local\Temp\cca0S25h.s 			page 64
+ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccHqkv6c.s 			page 64
 
 
  1412              		.section	.text.CySysClkSetLfclkSource,"ax",%progbits
@@ -3838,7 +3838,7 @@ ARM GAS  C:\Users\danielpi\AppData\Local\Temp\cca0S25h.s 			page 1
  240:.\Generated_Source\PSoC4/CyLFClk.c ****             CyExitCriticalSection(interruptState);
  1458              		.loc 1 240 0
  1459 002a 281C     		mov	r0, r5
-ARM GAS  C:\Users\danielpi\AppData\Local\Temp\cca0S25h.s 			page 65
+ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccHqkv6c.s 			page 65
 
 
  1460 002c FFF7FEFF 		bl	CyExitCriticalSection
@@ -3898,7 +3898,7 @@ ARM GAS  C:\Users\danielpi\AppData\Local\Temp\cca0S25h.s 			page 1
  1507              		.loc 1 302 0
  1508 0020 084B     		ldr	r3, .L150
  1509 0022 1A68     		ldr	r2, [r3]
-ARM GAS  C:\Users\danielpi\AppData\Local\Temp\cca0S25h.s 			page 66
+ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccHqkv6c.s 			page 66
 
 
  1510 0024 5200     		lsl	r2, r2, #1
@@ -3958,7 +3958,7 @@ ARM GAS  C:\Users\danielpi\AppData\Local\Temp\cca0S25h.s 			page 1
  1557 0008 7047     		bx	lr
  1558              	.L154:
  1559 000a C046     		.align	2
-ARM GAS  C:\Users\danielpi\AppData\Local\Temp\cca0S25h.s 			page 67
+ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccHqkv6c.s 			page 67
 
 
  1560              	.L153:
@@ -4018,7 +4018,7 @@ ARM GAS  C:\Users\danielpi\AppData\Local\Temp\cca0S25h.s 			page 1
  1607              		.loc 1 1073 0
  1608 001c 084B     		ldr	r3, .L159
  1609 001e 1D40     		and	r5, r3
-ARM GAS  C:\Users\danielpi\AppData\Local\Temp\cca0S25h.s 			page 68
+ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccHqkv6c.s 			page 68
 
 
  1610              	.LVL144:
@@ -4078,7 +4078,7 @@ ARM GAS  C:\Users\danielpi\AppData\Local\Temp\cca0S25h.s 			page 1
  1656              		.loc 1 1122 0
  1657 0000 054B     		ldr	r3, .L164
  1658 0002 1A68     		ldr	r2, [r3]
-ARM GAS  C:\Users\danielpi\AppData\Local\Temp\cca0S25h.s 			page 69
+ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccHqkv6c.s 			page 69
 
 
  1659 0004 0549     		ldr	r1, .L164+4
@@ -4138,7 +4138,7 @@ ARM GAS  C:\Users\danielpi\AppData\Local\Temp\cca0S25h.s 			page 1
  1707 000c D868     		ldr	r0, [r3, #12]
  1708              	.LVL154:
 1155:.\Generated_Source\PSoC4/CyLFClk.c ****             cySysWdtCallback[counterNum] = function;
-ARM GAS  C:\Users\danielpi\AppData\Local\Temp\cca0S25h.s 			page 70
+ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccHqkv6c.s 			page 70
 
 
  1709              		.loc 1 1155 0
@@ -4198,7 +4198,7 @@ ARM GAS  C:\Users\danielpi\AppData\Local\Temp\cca0S25h.s 			page 1
  1757 000c C068     		ldr	r0, [r0, #12]
  1758              	.LVL162:
  1759 000e 03E0     		b	.L173
-ARM GAS  C:\Users\danielpi\AppData\Local\Temp\cca0S25h.s 			page 71
+ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccHqkv6c.s 			page 71
 
 
  1760              	.LVL163:
@@ -4258,7 +4258,7 @@ ARM GAS  C:\Users\danielpi\AppData\Local\Temp\cca0S25h.s 			page 1
 1214:.\Generated_Source\PSoC4/CyLFClk.c ****             wdtIsrMask |= counterIntMaskTbl[counterNum];
  1808              		.loc 1 1214 0
  1809 0014 064B     		ldr	r3, .L179+8
-ARM GAS  C:\Users\danielpi\AppData\Local\Temp\cca0S25h.s 			page 72
+ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccHqkv6c.s 			page 72
 
 
  1810 0016 1968     		ldr	r1, [r3]
@@ -4318,7 +4318,7 @@ ARM GAS  C:\Users\danielpi\AppData\Local\Temp\cca0S25h.s 			page 1
  1859 0010 8A43     		bic	r2, r1
  1860 0012 1A60     		str	r2, [r3]
  1861 0014 02E0     		b	.L181
-ARM GAS  C:\Users\danielpi\AppData\Local\Temp\cca0S25h.s 			page 73
+ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccHqkv6c.s 			page 73
 
 
  1862              	.LVL174:
@@ -4378,7 +4378,7 @@ ARM GAS  C:\Users\danielpi\AppData\Local\Temp\cca0S25h.s 			page 1
  1910 001a 1F49     		ldr	r1, .L193+4
  1911 001c 0868     		ldr	r0, [r1]
  1912 001e A043     		bic	r0, r4
-ARM GAS  C:\Users\danielpi\AppData\Local\Temp\cca0S25h.s 			page 74
+ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccHqkv6c.s 			page 74
 
 
  1913 0020 0860     		str	r0, [r1]
@@ -4438,7 +4438,7 @@ ARM GAS  C:\Users\danielpi\AppData\Local\Temp\cca0S25h.s 			page 1
  1958 0062 002B     		cmp	r3, #0
  1959 0064 00D0     		beq	.L190
 1296:.\Generated_Source\PSoC4/CyLFClk.c ****                     (void)(cySysWdtCallback[CY_SYS_WDT_COUNTER1])();
-ARM GAS  C:\Users\danielpi\AppData\Local\Temp\cca0S25h.s 			page 75
+ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccHqkv6c.s 			page 75
 
 
  1960              		.loc 1 1296 0
@@ -4498,7 +4498,7 @@ ARM GAS  C:\Users\danielpi\AppData\Local\Temp\cca0S25h.s 			page 1
  2007              		.size	CySysWdtIsr, .-CySysWdtIsr
  2008              		.section	.text.CySysTimerDelayUntilMatch,"ax",%progbits
  2009              		.align	2
-ARM GAS  C:\Users\danielpi\AppData\Local\Temp\cca0S25h.s 			page 76
+ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccHqkv6c.s 			page 76
 
 
  2010              		.global	CySysTimerDelayUntilMatch
@@ -4558,7 +4558,7 @@ ARM GAS  C:\Users\danielpi\AppData\Local\Temp\cca0S25h.s 			page 1
  2056              		.loc 1 1463 0 discriminator 1
  2057 002e A842     		cmp	r0, r5
  2058 0030 FAD3     		bcc	.L201
-ARM GAS  C:\Users\danielpi\AppData\Local\Temp\cca0S25h.s 			page 77
+ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccHqkv6c.s 			page 77
 
 
  2059 0032 12E0     		b	.L195
@@ -4618,7 +4618,7 @@ ARM GAS  C:\Users\danielpi\AppData\Local\Temp\cca0S25h.s 			page 1
  2107              		.align	2
  2108              		.global	CySysTimerDelay
  2109              		.code	16
-ARM GAS  C:\Users\danielpi\AppData\Local\Temp\cca0S25h.s 			page 78
+ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccHqkv6c.s 			page 78
 
 
  2110              		.thumb_func
@@ -4678,7 +4678,7 @@ ARM GAS  C:\Users\danielpi\AppData\Local\Temp\cca0S25h.s 			page 1
  2157              	.LVL202:
  2158              	.L207:
 1387:.\Generated_Source\PSoC4/CyLFClk.c ****     }
-ARM GAS  C:\Users\danielpi\AppData\Local\Temp\cca0S25h.s 			page 79
+ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccHqkv6c.s 			page 79
 
 
  2159              		.loc 1 1387 0
@@ -4738,7 +4738,7 @@ ARM GAS  C:\Users\danielpi\AppData\Local\Temp\cca0S25h.s 			page 1
  2207 0020 0820     		mov	r0, #8
  2208 0022 FFF7FEFF 		bl	CySysWdtResetCounters
  2209              	.LVL209:
-ARM GAS  C:\Users\danielpi\AppData\Local\Temp\cca0S25h.s 			page 80
+ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccHqkv6c.s 			page 80
 
 
 1511:.\Generated_Source\PSoC4/CyLFClk.c ****                 CySysWdtClearInterrupt(CY_SYS_WDT_COUNTER0_MASK);
@@ -4798,7 +4798,7 @@ ARM GAS  C:\Users\danielpi\AppData\Local\Temp\cca0S25h.s 			page 1
  2256              		.section	.rodata
  2257              		.align	2
  2258              		.set	.LANCHOR1,. + 0
-ARM GAS  C:\Users\danielpi\AppData\Local\Temp\cca0S25h.s 			page 81
+ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccHqkv6c.s 			page 81
 
 
  2259              		.type	counterIntMaskTbl, %object
@@ -4852,13 +4852,13 @@ ARM GAS  C:\Users\danielpi\AppData\Local\Temp\cca0S25h.s 			page 1
  2305 000b 01       		.uleb128 0x1
  2306 000c CC000000 		.4byte	.LASF93
  2307 0010 01       		.byte	0x1
- 2308 0011 01040000 		.4byte	.LASF94
- 2309 0015 69060000 		.4byte	.LASF95
+ 2308 0011 06040000 		.4byte	.LASF94
+ 2309 0015 E5050000 		.4byte	.LASF95
  2310 0019 00000000 		.4byte	.Ldebug_ranges0+0
  2311 001d 00000000 		.4byte	0
  2312 0021 00000000 		.4byte	.Ldebug_line0
  2313 0025 02       		.uleb128 0x2
-ARM GAS  C:\Users\danielpi\AppData\Local\Temp\cca0S25h.s 			page 82
+ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccHqkv6c.s 			page 82
 
 
  2314 0026 01       		.byte	0x1
@@ -4867,15 +4867,15 @@ ARM GAS  C:\Users\danielpi\AppData\Local\Temp\cca0S25h.s 			page 1
  2317 002c 02       		.uleb128 0x2
  2318 002d 01       		.byte	0x1
  2319 002e 08       		.byte	0x8
- 2320 002f 15050000 		.4byte	.LASF1
+ 2320 002f 1A050000 		.4byte	.LASF1
  2321 0033 02       		.uleb128 0x2
  2322 0034 02       		.byte	0x2
  2323 0035 05       		.byte	0x5
- 2324 0036 47050000 		.4byte	.LASF2
+ 2324 0036 4C050000 		.4byte	.LASF2
  2325 003a 02       		.uleb128 0x2
  2326 003b 02       		.byte	0x2
  2327 003c 07       		.byte	0x7
- 2328 003d 86030000 		.4byte	.LASF3
+ 2328 003d 8B030000 		.4byte	.LASF3
  2329 0041 02       		.uleb128 0x2
  2330 0042 04       		.byte	0x4
  2331 0043 05       		.byte	0x5
@@ -4883,7 +4883,7 @@ ARM GAS  C:\Users\danielpi\AppData\Local\Temp\cca0S25h.s 			page 1
  2333 0048 02       		.uleb128 0x2
  2334 0049 04       		.byte	0x4
  2335 004a 07       		.byte	0x7
- 2336 004b 25030000 		.4byte	.LASF5
+ 2336 004b 2A030000 		.4byte	.LASF5
  2337 004f 02       		.uleb128 0x2
  2338 0050 08       		.byte	0x8
  2339 0051 05       		.byte	0x5
@@ -4899,7 +4899,7 @@ ARM GAS  C:\Users\danielpi\AppData\Local\Temp\cca0S25h.s 			page 1
  2349 0064 02       		.uleb128 0x2
  2350 0065 04       		.byte	0x4
  2351 0066 07       		.byte	0x7
- 2352 0067 EA020000 		.4byte	.LASF8
+ 2352 0067 EF020000 		.4byte	.LASF8
  2353 006b 04       		.uleb128 0x4
  2354 006c 09020000 		.4byte	.LASF9
  2355 0070 03       		.byte	0x3
@@ -4918,10 +4918,10 @@ ARM GAS  C:\Users\danielpi\AppData\Local\Temp\cca0S25h.s 			page 1
  2368 008c 02       		.uleb128 0x2
  2369 008d 04       		.byte	0x4
  2370 008e 04       		.byte	0x4
-ARM GAS  C:\Users\danielpi\AppData\Local\Temp\cca0S25h.s 			page 83
+ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccHqkv6c.s 			page 83
 
 
- 2371 008f CF040000 		.4byte	.LASF12
+ 2371 008f D4040000 		.4byte	.LASF12
  2372 0093 02       		.uleb128 0x2
  2373 0094 08       		.byte	0x8
  2374 0095 04       		.byte	0x4
@@ -4929,9 +4929,9 @@ ARM GAS  C:\Users\danielpi\AppData\Local\Temp\cca0S25h.s 			page 1
  2376 009a 02       		.uleb128 0x2
  2377 009b 01       		.byte	0x1
  2378 009c 08       		.byte	0x8
- 2379 009d DB050000 		.4byte	.LASF14
+ 2379 009d E0050000 		.4byte	.LASF14
  2380 00a1 05       		.uleb128 0x5
- 2381 00a2 24040000 		.4byte	.LASF15
+ 2381 00a2 29040000 		.4byte	.LASF15
  2382 00a6 03       		.byte	0x3
  2383 00a7 5F01     		.2byte	0x15f
  2384 00a9 AD000000 		.4byte	0xad
@@ -4947,7 +4947,7 @@ ARM GAS  C:\Users\danielpi\AppData\Local\Temp\cca0S25h.s 			page 1
  2394 00bc 16       		.byte	0x16
  2395 00bd CE000000 		.4byte	0xce
  2396 00c1 0A       		.uleb128 0xa
- 2397 00c2 90040000 		.4byte	.LASF16
+ 2397 00c2 95040000 		.4byte	.LASF16
  2398 00c6 00       		.sleb128 0
  2399 00c7 0A       		.uleb128 0xa
  2400 00c8 01070000 		.4byte	.LASF17
@@ -4966,9 +4966,9 @@ ARM GAS  C:\Users\danielpi\AppData\Local\Temp\cca0S25h.s 			page 1
  2413 00e4 02       		.uleb128 0x2
  2414 00e5 04       		.byte	0x4
  2415 00e6 07       		.byte	0x7
- 2416 00e7 51040000 		.4byte	.LASF20
+ 2416 00e7 56040000 		.4byte	.LASF20
  2417 00eb 0B       		.uleb128 0xb
- 2418 00ec 6B050000 		.4byte	.LASF21
+ 2418 00ec 70050000 		.4byte	.LASF21
  2419 00f0 01       		.byte	0x1
  2420 00f1 94       		.byte	0x94
  2421 00f2 81000000 		.4byte	0x81
@@ -4978,7 +4978,7 @@ ARM GAS  C:\Users\danielpi\AppData\Local\Temp\cca0S25h.s 			page 1
  2425 00ff 9C       		.byte	0x9c
  2426 0100 0C       		.uleb128 0xc
  2427 0101 B5000000 		.4byte	.LASF96
-ARM GAS  C:\Users\danielpi\AppData\Local\Temp\cca0S25h.s 			page 84
+ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccHqkv6c.s 			page 84
 
 
  2428 0105 01       		.byte	0x1
@@ -4998,7 +4998,7 @@ ARM GAS  C:\Users\danielpi\AppData\Local\Temp\cca0S25h.s 			page 1
  2442 0125 50       		.byte	0x50
  2443 0126 00       		.byte	0
  2444 0127 0E       		.uleb128 0xe
- 2445 0128 FF040000 		.4byte	.LASF22
+ 2445 0128 04050000 		.4byte	.LASF22
  2446 012c 01       		.byte	0x1
  2447 012d B201     		.2byte	0x1b2
  2448 012f 81000000 		.4byte	0x81
@@ -5007,7 +5007,7 @@ ARM GAS  C:\Users\danielpi\AppData\Local\Temp\cca0S25h.s 			page 1
  2451 013b 01       		.uleb128 0x1
  2452 013c 9C       		.byte	0x9c
  2453 013d 0F       		.uleb128 0xf
- 2454 013e DB030000 		.4byte	.LASF97
+ 2454 013e E0030000 		.4byte	.LASF97
  2455 0142 01       		.byte	0x1
  2456 0143 41       		.byte	0x41
  2457 0144 00000000 		.4byte	.LFB2
@@ -5020,7 +5020,7 @@ ARM GAS  C:\Users\danielpi\AppData\Local\Temp\cca0S25h.s 			page 1
  2464 0154 5801     		.2byte	0x158
  2465 0156 03       		.byte	0x3
  2466 0157 11       		.uleb128 0x11
- 2467 0158 44060000 		.4byte	.LASF27
+ 2467 0158 90060000 		.4byte	.LASF27
  2468 015c 01       		.byte	0x1
  2469 015d 0E01     		.2byte	0x10e
  2470 015f 00000000 		.4byte	.LFB7
@@ -5038,7 +5038,7 @@ ARM GAS  C:\Users\danielpi\AppData\Local\Temp\cca0S25h.s 			page 1
  2482 017e 13       		.uleb128 0x13
  2483 017f 5F010000 		.4byte	.LASF47
  2484 0183 01       		.byte	0x1
-ARM GAS  C:\Users\danielpi\AppData\Local\Temp\cca0S25h.s 			page 85
+ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccHqkv6c.s 			page 85
 
 
  2485 0184 4801     		.2byte	0x148
@@ -5053,7 +5053,7 @@ ARM GAS  C:\Users\danielpi\AppData\Local\Temp\cca0S25h.s 			page 1
  2494 019a 7901     		.2byte	0x179
  2495 019c 03       		.byte	0x3
  2496 019d 14       		.uleb128 0x14
- 2497 019e A9050000 		.4byte	.LASF31
+ 2497 019e AE050000 		.4byte	.LASF31
  2498 01a2 01       		.byte	0x1
  2499 01a3 6501     		.2byte	0x165
  2500 01a5 81000000 		.4byte	0x81
@@ -5063,13 +5063,13 @@ ARM GAS  C:\Users\danielpi\AppData\Local\Temp\cca0S25h.s 			page 1
  2504 01b2 9C       		.byte	0x9c
  2505 01b3 07020000 		.4byte	0x207
  2506 01b7 15       		.uleb128 0x15
- 2507 01b8 E0050000 		.4byte	.LASF33
+ 2507 01b8 D2020000 		.4byte	.LASF33
  2508 01bc 01       		.byte	0x1
  2509 01bd 6501     		.2byte	0x165
  2510 01bf 81000000 		.4byte	0x81
  2511 01c3 00000000 		.4byte	.LLST0
  2512 01c7 16       		.uleb128 0x16
- 2513 01c8 62060000 		.4byte	.LASF26
+ 2513 01c8 AE060000 		.4byte	.LASF26
  2514 01cc 01       		.byte	0x1
  2515 01cd 6701     		.2byte	0x167
  2516 01cf 81000000 		.4byte	0x81
@@ -5098,7 +5098,7 @@ ARM GAS  C:\Users\danielpi\AppData\Local\Temp\cca0S25h.s 			page 1
  2539 0206 00       		.byte	0
  2540 0207 11       		.uleb128 0x11
  2541 0208 B1010000 		.4byte	.LASF28
-ARM GAS  C:\Users\danielpi\AppData\Local\Temp\cca0S25h.s 			page 86
+ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccHqkv6c.s 			page 86
 
 
  2542 020c 01       		.byte	0x1
@@ -5109,7 +5109,7 @@ ARM GAS  C:\Users\danielpi\AppData\Local\Temp\cca0S25h.s 			page 1
  2547 0218 9C       		.byte	0x9c
  2548 0219 40020000 		.4byte	0x240
  2549 021d 16       		.uleb128 0x16
- 2550 021e 37030000 		.4byte	.LASF29
+ 2550 021e 3C030000 		.4byte	.LASF29
  2551 0222 01       		.byte	0x1
  2552 0223 9A01     		.2byte	0x19a
  2553 0225 6B000000 		.4byte	0x6b
@@ -5131,7 +5131,7 @@ ARM GAS  C:\Users\danielpi\AppData\Local\Temp\cca0S25h.s 			page 1
  2569 0251 9C       		.byte	0x9c
  2570 0252 79020000 		.4byte	0x279
  2571 0256 16       		.uleb128 0x16
- 2572 0257 37030000 		.4byte	.LASF29
+ 2572 0257 3C030000 		.4byte	.LASF29
  2573 025b 01       		.byte	0x1
  2574 025c C901     		.2byte	0x1c9
  2575 025e 6B000000 		.4byte	0x6b
@@ -5144,7 +5144,7 @@ ARM GAS  C:\Users\danielpi\AppData\Local\Temp\cca0S25h.s 			page 1
  2582 0274 BD0D0000 		.4byte	0xdbd
  2583 0278 00       		.byte	0
  2584 0279 14       		.uleb128 0x14
- 2585 027a 99030000 		.4byte	.LASF32
+ 2585 027a 9E030000 		.4byte	.LASF32
  2586 027e 01       		.byte	0x1
  2587 027f ED01     		.2byte	0x1ed
  2588 0281 81000000 		.4byte	0x81
@@ -5158,7 +5158,7 @@ ARM GAS  C:\Users\danielpi\AppData\Local\Temp\cca0S25h.s 			page 1
  2596 0298 01       		.byte	0x1
  2597 0299 ED01     		.2byte	0x1ed
  2598 029b 81000000 		.4byte	0x81
-ARM GAS  C:\Users\danielpi\AppData\Local\Temp\cca0S25h.s 			page 87
+ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccHqkv6c.s 			page 87
 
 
  2599 029f A2000000 		.4byte	.LLST4
@@ -5188,7 +5188,7 @@ ARM GAS  C:\Users\danielpi\AppData\Local\Temp\cca0S25h.s 			page 1
  2623 02d1 81000000 		.4byte	0x81
  2624 02d5 CE000000 		.4byte	.LLST5
  2625 02d9 15       		.uleb128 0x15
- 2626 02da E0050000 		.4byte	.LASF33
+ 2626 02da D2020000 		.4byte	.LASF33
  2627 02de 01       		.byte	0x1
  2628 02df 1102     		.2byte	0x211
  2629 02e1 81000000 		.4byte	0x81
@@ -5218,13 +5218,13 @@ ARM GAS  C:\Users\danielpi\AppData\Local\Temp\cca0S25h.s 			page 1
  2653 0318 02       		.uleb128 0x2
  2654 0319 74       		.byte	0x74
  2655 031a 00       		.sleb128 0
-ARM GAS  C:\Users\danielpi\AppData\Local\Temp\cca0S25h.s 			page 88
+ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccHqkv6c.s 			page 88
 
 
  2656 031b 00       		.byte	0
  2657 031c 00       		.byte	0
  2658 031d 1B       		.uleb128 0x1b
- 2659 031e 51030000 		.4byte	.LASF57
+ 2659 031e 56030000 		.4byte	.LASF57
  2660 0322 01       		.byte	0x1
  2661 0323 5F06     		.2byte	0x65f
  2662 0325 00000000 		.4byte	.LFB40
@@ -5243,7 +5243,7 @@ ARM GAS  C:\Users\danielpi\AppData\Local\Temp\cca0S25h.s 			page 1
  2675 0341 00       		.byte	0
  2676 0342 00       		.byte	0
  2677 0343 14       		.uleb128 0x14
- 2678 0344 34060000 		.4byte	.LASF37
+ 2678 0344 80060000 		.4byte	.LASF37
  2679 0348 01       		.byte	0x1
  2680 0349 3002     		.2byte	0x230
  2681 034b 81000000 		.4byte	0x81
@@ -5260,7 +5260,7 @@ ARM GAS  C:\Users\danielpi\AppData\Local\Temp\cca0S25h.s 			page 1
  2692 0369 44010000 		.4byte	.LLST8
  2693 036d 00       		.byte	0
  2694 036e 11       		.uleb128 0x11
- 2695 036f 09060000 		.4byte	.LASF38
+ 2695 036f 55060000 		.4byte	.LASF38
  2696 0373 01       		.byte	0x1
  2697 0374 5102     		.2byte	0x251
  2698 0376 00000000 		.4byte	.LFB17
@@ -5278,7 +5278,7 @@ ARM GAS  C:\Users\danielpi\AppData\Local\Temp\cca0S25h.s 			page 1
  2710 0395 0F020000 		.4byte	.LASF39
  2711 0399 01       		.byte	0x1
  2712 039a 5102     		.2byte	0x251
-ARM GAS  C:\Users\danielpi\AppData\Local\Temp\cca0S25h.s 			page 89
+ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccHqkv6c.s 			page 89
 
 
  2713 039c 81000000 		.4byte	0x81
@@ -5311,7 +5311,7 @@ ARM GAS  C:\Users\danielpi\AppData\Local\Temp\cca0S25h.s 			page 1
  2740 03d6 00       		.byte	0
  2741 03d7 00       		.byte	0
  2742 03d8 14       		.uleb128 0x14
- 2743 03d9 D2020000 		.4byte	.LASF40
+ 2743 03d9 D7020000 		.4byte	.LASF40
  2744 03dd 01       		.byte	0x1
  2745 03de 7402     		.2byte	0x274
  2746 03e0 81000000 		.4byte	0x81
@@ -5338,7 +5338,7 @@ ARM GAS  C:\Users\danielpi\AppData\Local\Temp\cca0S25h.s 			page 1
  2767 0411 00       		.byte	0
  2768 0412 11       		.uleb128 0x11
  2769 0413 9A020000 		.4byte	.LASF41
-ARM GAS  C:\Users\danielpi\AppData\Local\Temp\cca0S25h.s 			page 90
+ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccHqkv6c.s 			page 90
 
 
  2770 0417 01       		.byte	0x1
@@ -5385,7 +5385,7 @@ ARM GAS  C:\Users\danielpi\AppData\Local\Temp\cca0S25h.s 			page 1
  2811 046c 00       		.byte	0
  2812 046d 00       		.byte	0
  2813 046e 11       		.uleb128 0x11
- 2814 046f 5B050000 		.4byte	.LASF43
+ 2814 046f 60050000 		.4byte	.LASF43
  2815 0473 01       		.byte	0x1
  2816 0474 D702     		.2byte	0x2d7
  2817 0476 00000000 		.4byte	.LFB20
@@ -5398,7 +5398,7 @@ ARM GAS  C:\Users\danielpi\AppData\Local\Temp\cca0S25h.s 			page 1
  2824 0489 01       		.byte	0x1
  2825 048a D702     		.2byte	0x2d7
  2826 048c 81000000 		.4byte	0x81
-ARM GAS  C:\Users\danielpi\AppData\Local\Temp\cca0S25h.s 			page 91
+ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccHqkv6c.s 			page 91
 
 
  2827 0490 33020000 		.4byte	.LLST14
@@ -5436,7 +5436,7 @@ ARM GAS  C:\Users\danielpi\AppData\Local\Temp\cca0S25h.s 			page 1
  2859 04d1 00       		.byte	0
  2860 04d2 00       		.byte	0
  2861 04d3 11       		.uleb128 0x11
- 2862 04d4 21060000 		.4byte	.LASF44
+ 2862 04d4 6D060000 		.4byte	.LASF44
  2863 04d8 01       		.byte	0x1
  2864 04d9 1903     		.2byte	0x319
  2865 04db 00000000 		.4byte	.LFB21
@@ -5458,7 +5458,7 @@ ARM GAS  C:\Users\danielpi\AppData\Local\Temp\cca0S25h.s 			page 1
  2881 0505 8B020000 		.4byte	.LLST16
  2882 0509 16       		.uleb128 0x16
  2883 050a 7A020000 		.4byte	.LASF46
-ARM GAS  C:\Users\danielpi\AppData\Local\Temp\cca0S25h.s 			page 92
+ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccHqkv6c.s 			page 92
 
 
  2884 050e 01       		.byte	0x1
@@ -5518,12 +5518,12 @@ ARM GAS  C:\Users\danielpi\AppData\Local\Temp\cca0S25h.s 			page 1
  2938 0580 01       		.byte	0x1
  2939 0581 5703     		.2byte	0x357
  2940 0583 81000000 		.4byte	0x81
-ARM GAS  C:\Users\danielpi\AppData\Local\Temp\cca0S25h.s 			page 93
+ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccHqkv6c.s 			page 93
 
 
  2941 0587 C7020000 		.4byte	.LLST18
  2942 058b 15       		.uleb128 0x15
- 2943 058c 8A040000 		.4byte	.LASF50
+ 2943 058c 8F040000 		.4byte	.LASF50
  2944 0590 01       		.byte	0x1
  2945 0591 5703     		.2byte	0x357
  2946 0593 81000000 		.4byte	0x81
@@ -5552,7 +5552,7 @@ ARM GAS  C:\Users\danielpi\AppData\Local\Temp\cca0S25h.s 			page 1
  2969 05cc CE0D0000 		.4byte	0xdce
  2970 05d0 00       		.byte	0
  2971 05d1 11       		.uleb128 0x11
- 2972 05d2 EC030000 		.4byte	.LASF52
+ 2972 05d2 F1030000 		.4byte	.LASF52
  2973 05d6 01       		.byte	0x1
  2974 05d7 8303     		.2byte	0x383
  2975 05d9 00000000 		.4byte	.LFB24
@@ -5578,7 +5578,7 @@ ARM GAS  C:\Users\danielpi\AppData\Local\Temp\cca0S25h.s 			page 1
  2995 0610 18       		.uleb128 0x18
  2996 0611 01       		.uleb128 0x1
  2997 0612 50       		.byte	0x50
-ARM GAS  C:\Users\danielpi\AppData\Local\Temp\cca0S25h.s 			page 94
+ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccHqkv6c.s 			page 94
 
 
  2998 0613 01       		.uleb128 0x1
@@ -5595,7 +5595,7 @@ ARM GAS  C:\Users\danielpi\AppData\Local\Temp\cca0S25h.s 			page 1
  3009 062b 01       		.uleb128 0x1
  3010 062c 9C       		.byte	0x9c
  3011 062d 14       		.uleb128 0x14
- 3012 062e 5A040000 		.4byte	.LASF55
+ 3012 062e 5F040000 		.4byte	.LASF55
  3013 0632 01       		.byte	0x1
  3014 0633 B403     		.2byte	0x3b4
  3015 0635 81000000 		.4byte	0x81
@@ -5621,7 +5621,7 @@ ARM GAS  C:\Users\danielpi\AppData\Local\Temp\cca0S25h.s 			page 1
  3035 0665 00       		.byte	0
  3036 0666 00       		.byte	0
  3037 0667 14       		.uleb128 0x14
- 3038 0668 E5050000 		.4byte	.LASF56
+ 3038 0668 31060000 		.4byte	.LASF56
  3039 066c 01       		.byte	0x1
  3040 066d CC03     		.2byte	0x3cc
  3041 066f 81000000 		.4byte	0x81
@@ -5638,7 +5638,7 @@ ARM GAS  C:\Users\danielpi\AppData\Local\Temp\cca0S25h.s 			page 1
  3052 068d B3030000 		.4byte	.LLST24
  3053 0691 16       		.uleb128 0x16
  3054 0692 00020000 		.4byte	.LASF51
-ARM GAS  C:\Users\danielpi\AppData\Local\Temp\cca0S25h.s 			page 95
+ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccHqkv6c.s 			page 95
 
 
  3055 0696 01       		.byte	0x1
@@ -5665,13 +5665,13 @@ ARM GAS  C:\Users\danielpi\AppData\Local\Temp\cca0S25h.s 			page 1
  3076 06c2 9C       		.byte	0x9c
  3077 06c3 73070000 		.4byte	0x773
  3078 06c7 16       		.uleb128 0x16
- 3079 06c8 0E030000 		.4byte	.LASF59
+ 3079 06c8 13030000 		.4byte	.LASF59
  3080 06cc 01       		.byte	0x1
  3081 06cd 2606     		.2byte	0x626
  3082 06cf 81000000 		.4byte	0x81
  3083 06d3 83040000 		.4byte	.LLST26
  3084 06d7 1C       		.uleb128 0x1c
- 3085 06d8 23050000 		.4byte	.LASF60
+ 3085 06d8 28050000 		.4byte	.LASF60
  3086 06dc 01       		.byte	0x1
  3087 06dd 2706     		.2byte	0x627
  3088 06df 81000000 		.4byte	0x81
@@ -5698,7 +5698,7 @@ ARM GAS  C:\Users\danielpi\AppData\Local\Temp\cca0S25h.s 			page 1
  3109 070c 01       		.uleb128 0x1
  3110 070d 31       		.byte	0x31
  3111 070e 00       		.byte	0
-ARM GAS  C:\Users\danielpi\AppData\Local\Temp\cca0S25h.s 			page 96
+ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccHqkv6c.s 			page 96
 
 
  3112 070f 1A       		.uleb128 0x1a
@@ -5758,7 +5758,7 @@ ARM GAS  C:\Users\danielpi\AppData\Local\Temp\cca0S25h.s 			page 1
  3166 0778 01       		.byte	0x1
  3167 0779 60       		.byte	0x60
  3168 077a 00000000 		.4byte	.LFB3
-ARM GAS  C:\Users\danielpi\AppData\Local\Temp\cca0S25h.s 			page 97
+ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccHqkv6c.s 			page 97
 
 
  3169 077e 4C000000 		.4byte	.LFE3-.LFB3
@@ -5766,7 +5766,7 @@ ARM GAS  C:\Users\danielpi\AppData\Local\Temp\cca0S25h.s 			page 1
  3171 0783 9C       		.byte	0x9c
  3172 0784 DE070000 		.4byte	0x7de
  3173 0788 1E       		.uleb128 0x1e
- 3174 0789 37030000 		.4byte	.LASF29
+ 3174 0789 3C030000 		.4byte	.LASF29
  3175 078d 01       		.byte	0x1
  3176 078e 63       		.byte	0x63
  3177 078f 6B000000 		.4byte	0x6b
@@ -5801,7 +5801,7 @@ ARM GAS  C:\Users\danielpi\AppData\Local\Temp\cca0S25h.s 			page 1
  3206 07dc 00       		.byte	0
  3207 07dd 00       		.byte	0
  3208 07de 1D       		.uleb128 0x1d
- 3209 07df F7020000 		.4byte	.LASF62
+ 3209 07df FC020000 		.4byte	.LASF62
  3210 07e3 01       		.byte	0x1
  3211 07e4 E1       		.byte	0xe1
  3212 07e5 00000000 		.4byte	.LFB6
@@ -5810,15 +5810,15 @@ ARM GAS  C:\Users\danielpi\AppData\Local\Temp\cca0S25h.s 			page 1
  3215 07ee 9C       		.byte	0x9c
  3216 07ef 46080000 		.4byte	0x846
  3217 07f3 1F       		.uleb128 0x1f
- 3218 07f4 4A040000 		.4byte	.LASF63
+ 3218 07f4 4F040000 		.4byte	.LASF63
  3219 07f8 01       		.byte	0x1
  3220 07f9 E1       		.byte	0xe1
  3221 07fa 81000000 		.4byte	0x81
  3222 07fe BF040000 		.4byte	.LLST28
  3223 0802 1E       		.uleb128 0x1e
- 3224 0803 37030000 		.4byte	.LASF29
+ 3224 0803 3C030000 		.4byte	.LASF29
  3225 0807 01       		.byte	0x1
-ARM GAS  C:\Users\danielpi\AppData\Local\Temp\cca0S25h.s 			page 98
+ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccHqkv6c.s 			page 98
 
 
  3226 0808 E3       		.byte	0xe3
@@ -5848,7 +5848,7 @@ ARM GAS  C:\Users\danielpi\AppData\Local\Temp\cca0S25h.s 			page 1
  3250 0844 00       		.byte	0
  3251 0845 00       		.byte	0
  3252 0846 11       		.uleb128 0x11
- 3253 0847 99050000 		.4byte	.LASF64
+ 3253 0847 9E050000 		.4byte	.LASF64
  3254 084b 01       		.byte	0x1
  3255 084c 2301     		.2byte	0x123
  3256 084e 00000000 		.4byte	.LFB8
@@ -5857,7 +5857,7 @@ ARM GAS  C:\Users\danielpi\AppData\Local\Temp\cca0S25h.s 			page 1
  3259 0857 9C       		.byte	0x9c
  3260 0858 AA080000 		.4byte	0x8aa
  3261 085c 16       		.uleb128 0x16
- 3262 085d 37030000 		.4byte	.LASF29
+ 3262 085d 3C030000 		.4byte	.LASF29
  3263 0861 01       		.byte	0x1
  3264 0862 2501     		.2byte	0x125
  3265 0864 6B000000 		.4byte	0x6b
@@ -5878,7 +5878,7 @@ ARM GAS  C:\Users\danielpi\AppData\Local\Temp\cca0S25h.s 			page 1
  3280 0891 2E000000 		.4byte	.LVL133
  3281 0895 1D030000 		.4byte	0x31d
  3282 0899 17       		.uleb128 0x17
-ARM GAS  C:\Users\danielpi\AppData\Local\Temp\cca0S25h.s 			page 99
+ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccHqkv6c.s 			page 99
 
 
  3283 089a 34000000 		.4byte	.LVL134
@@ -5892,7 +5892,7 @@ ARM GAS  C:\Users\danielpi\AppData\Local\Temp\cca0S25h.s 			page 1
  3291 08a8 00       		.byte	0
  3292 08a9 00       		.byte	0
  3293 08aa 13       		.uleb128 0x13
- 3294 08ab 7E050000 		.4byte	.LASF65
+ 3294 08ab 83050000 		.4byte	.LASF65
  3295 08af 01       		.byte	0x1
  3296 08b0 FD03     		.2byte	0x3fd
  3297 08b2 81000000 		.4byte	0x81
@@ -5901,7 +5901,7 @@ ARM GAS  C:\Users\danielpi\AppData\Local\Temp\cca0S25h.s 			page 1
  3300 08be 01       		.uleb128 0x1
  3301 08bf 9C       		.byte	0x9c
  3302 08c0 11       		.uleb128 0x11
- 3303 08c1 B8040000 		.4byte	.LASF66
+ 3303 08c1 BD040000 		.4byte	.LASF66
  3304 08c5 01       		.byte	0x1
  3305 08c6 1F04     		.2byte	0x41f
  3306 08c8 00000000 		.4byte	.LFB29
@@ -5916,13 +5916,13 @@ ARM GAS  C:\Users\danielpi\AppData\Local\Temp\cca0S25h.s 			page 1
  3315 08de 81000000 		.4byte	0x81
  3316 08e2 27050000 		.4byte	.LLST31
  3317 08e6 16       		.uleb128 0x16
- 3318 08e7 37030000 		.4byte	.LASF29
+ 3318 08e7 3C030000 		.4byte	.LASF29
  3319 08eb 01       		.byte	0x1
  3320 08ec 2104     		.2byte	0x421
  3321 08ee 6B000000 		.4byte	0x6b
  3322 08f2 59050000 		.4byte	.LLST32
  3323 08f6 16       		.uleb128 0x16
- 3324 08f7 55060000 		.4byte	.LASF67
+ 3324 08f7 A1060000 		.4byte	.LASF67
  3325 08fb 01       		.byte	0x1
  3326 08fc 2204     		.2byte	0x422
  3327 08fe 81000000 		.4byte	0x81
@@ -5938,7 +5938,7 @@ ARM GAS  C:\Users\danielpi\AppData\Local\Temp\cca0S25h.s 			page 1
  3337 091d 40020000 		.4byte	0x240
  3338 0921 19       		.uleb128 0x19
  3339 0922 36000000 		.4byte	.LVL146
-ARM GAS  C:\Users\danielpi\AppData\Local\Temp\cca0S25h.s 			page 100
+ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccHqkv6c.s 			page 100
 
 
  3340 0926 07020000 		.4byte	0x207
@@ -5954,7 +5954,7 @@ ARM GAS  C:\Users\danielpi\AppData\Local\Temp\cca0S25h.s 			page 1
  3350 0939 00       		.byte	0
  3351 093a 00       		.byte	0
  3352 093b 11       		.uleb128 0x11
- 3353 093c A2040000 		.4byte	.LASF68
+ 3353 093c A7040000 		.4byte	.LASF68
  3354 0940 01       		.byte	0x1
  3355 0941 5F04     		.2byte	0x45f
  3356 0943 00000000 		.4byte	.LFB30
@@ -5998,7 +5998,7 @@ ARM GAS  C:\Users\danielpi\AppData\Local\Temp\cca0S25h.s 			page 1
  3394 09a4 D9000000 		.4byte	0xd9
  3395 09a8 12060000 		.4byte	.LLST37
  3396 09ac 17       		.uleb128 0x17
-ARM GAS  C:\Users\danielpi\AppData\Local\Temp\cca0S25h.s 			page 101
+ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccHqkv6c.s 			page 101
 
 
  3397 09ad 18000000 		.4byte	.LVL157
@@ -6011,7 +6011,7 @@ ARM GAS  C:\Users\danielpi\AppData\Local\Temp\cca0S25h.s 			page 1
  3404 09ba 00       		.byte	0
  3405 09bb 00       		.byte	0
  3406 09bc 14       		.uleb128 0x14
- 3407 09bd B2030000 		.4byte	.LASF73
+ 3407 09bd B7030000 		.4byte	.LASF73
  3408 09c1 01       		.byte	0x1
  3409 09c2 9D04     		.2byte	0x49d
  3410 09c4 D9000000 		.4byte	0xd9
@@ -6027,7 +6027,7 @@ ARM GAS  C:\Users\danielpi\AppData\Local\Temp\cca0S25h.s 			page 1
  3420 09de 81000000 		.4byte	0x81
  3421 09e2 48060000 		.4byte	.LLST38
  3422 09e6 16       		.uleb128 0x16
- 3423 09e7 19030000 		.4byte	.LASF74
+ 3423 09e7 1E030000 		.4byte	.LASF74
  3424 09eb 01       		.byte	0x1
  3425 09ec 9F04     		.2byte	0x49f
  3426 09ee D9000000 		.4byte	0xd9
@@ -6043,7 +6043,7 @@ ARM GAS  C:\Users\danielpi\AppData\Local\Temp\cca0S25h.s 			page 1
  3436 0a04 00       		.byte	0
  3437 0a05 00       		.byte	0
  3438 0a06 11       		.uleb128 0x11
- 3439 0a07 6D030000 		.4byte	.LASF75
+ 3439 0a07 72030000 		.4byte	.LASF75
  3440 0a0b 01       		.byte	0x1
  3441 0a0c B904     		.2byte	0x4b9
  3442 0a0e 00000000 		.4byte	.LFB33
@@ -6058,7 +6058,7 @@ ARM GAS  C:\Users\danielpi\AppData\Local\Temp\cca0S25h.s 			page 1
  3451 0a24 81000000 		.4byte	0x81
  3452 0a28 B8060000 		.4byte	.LLST40
  3453 0a2c 17       		.uleb128 0x17
-ARM GAS  C:\Users\danielpi\AppData\Local\Temp\cca0S25h.s 			page 102
+ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccHqkv6c.s 			page 102
 
 
  3454 0a2d 24000000 		.4byte	.LVL171
@@ -6071,7 +6071,7 @@ ARM GAS  C:\Users\danielpi\AppData\Local\Temp\cca0S25h.s 			page 1
  3461 0a3a 00       		.byte	0
  3462 0a3b 00       		.byte	0
  3463 0a3c 11       		.uleb128 0x11
- 3464 0a3d C1050000 		.4byte	.LASF76
+ 3464 0a3d C6050000 		.4byte	.LASF76
  3465 0a41 01       		.byte	0x1
  3466 0a42 D204     		.2byte	0x4d2
  3467 0a44 00000000 		.4byte	.LFB34
@@ -6096,7 +6096,7 @@ ARM GAS  C:\Users\danielpi\AppData\Local\Temp\cca0S25h.s 			page 1
  3486 0a70 00       		.byte	0
  3487 0a71 00       		.byte	0
  3488 0a72 20       		.uleb128 0x20
- 3489 0a73 CF030000 		.4byte	.LASF77
+ 3489 0a73 D4030000 		.4byte	.LASF77
  3490 0a77 01       		.byte	0x1
  3491 0a78 F804     		.2byte	0x4f8
  3492 0a7a 00000000 		.4byte	.LFB35
@@ -6118,7 +6118,7 @@ ARM GAS  C:\Users\danielpi\AppData\Local\Temp\cca0S25h.s 			page 1
  3508 0a9c 70000000 		.4byte	.LVL180
  3509 0aa0 C0080000 		.4byte	0x8c0
  3510 0aa4 B00A0000 		.4byte	0xab0
-ARM GAS  C:\Users\danielpi\AppData\Local\Temp\cca0S25h.s 			page 103
+ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccHqkv6c.s 			page 103
 
 
  3511 0aa8 18       		.uleb128 0x18
@@ -6141,7 +6141,7 @@ ARM GAS  C:\Users\danielpi\AppData\Local\Temp\cca0S25h.s 			page 1
  3528 0ac0 00       		.byte	0
  3529 0ac1 00       		.byte	0
  3530 0ac2 11       		.uleb128 0x11
- 3531 0ac3 D5040000 		.4byte	.LASF78
+ 3531 0ac3 DA040000 		.4byte	.LASF78
  3532 0ac7 01       		.byte	0x1
  3533 0ac8 A705     		.2byte	0x5a7
  3534 0aca 00000000 		.4byte	.LFB37
@@ -6156,19 +6156,19 @@ ARM GAS  C:\Users\danielpi\AppData\Local\Temp\cca0S25h.s 			page 1
  3543 0ae0 81000000 		.4byte	0x81
  3544 0ae4 2C070000 		.4byte	.LLST42
  3545 0ae8 15       		.uleb128 0x15
- 3546 0ae9 51050000 		.4byte	.LASF79
+ 3546 0ae9 56050000 		.4byte	.LASF79
  3547 0aed 01       		.byte	0x1
  3548 0aee A705     		.2byte	0x5a7
  3549 0af0 CE000000 		.4byte	0xce
  3550 0af4 58070000 		.4byte	.LLST43
  3551 0af8 15       		.uleb128 0x15
- 3552 0af9 8A040000 		.4byte	.LASF50
+ 3552 0af9 8F040000 		.4byte	.LASF50
  3553 0afd 01       		.byte	0x1
  3554 0afe A705     		.2byte	0x5a7
  3555 0b00 81000000 		.4byte	0x81
  3556 0b04 79070000 		.4byte	.LLST44
  3557 0b08 16       		.uleb128 0x16
- 3558 0b09 41040000 		.4byte	.LASF80
+ 3558 0b09 46040000 		.4byte	.LASF80
  3559 0b0d 01       		.byte	0x1
  3560 0b0e A905     		.2byte	0x5a9
  3561 0b10 81000000 		.4byte	0x81
@@ -6178,7 +6178,7 @@ ARM GAS  C:\Users\danielpi\AppData\Local\Temp\cca0S25h.s 			page 1
  3565 0b1d D8030000 		.4byte	0x3d8
  3566 0b21 2C0B0000 		.4byte	0xb2c
  3567 0b25 18       		.uleb128 0x18
-ARM GAS  C:\Users\danielpi\AppData\Local\Temp\cca0S25h.s 			page 104
+ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccHqkv6c.s 			page 104
 
 
  3568 0b26 01       		.uleb128 0x1
@@ -6237,8 +6237,8 @@ ARM GAS  C:\Users\danielpi\AppData\Local\Temp\cca0S25h.s 			page 1
  3621 0b7c 00       		.byte	0
  3622 0b7d 00       		.byte	0
  3623 0b7e 11       		.uleb128 0x11
- 3624 0b7f EF040000 		.4byte	.LASF81
-ARM GAS  C:\Users\danielpi\AppData\Local\Temp\cca0S25h.s 			page 105
+ 3624 0b7f F4040000 		.4byte	.LASF81
+ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccHqkv6c.s 			page 105
 
 
  3625 0b83 01       		.byte	0x1
@@ -6255,13 +6255,13 @@ ARM GAS  C:\Users\danielpi\AppData\Local\Temp\cca0S25h.s 			page 1
  3636 0b9c 81000000 		.4byte	0x81
  3637 0ba0 E2070000 		.4byte	.LLST46
  3638 0ba4 15       		.uleb128 0x15
- 3639 0ba5 51050000 		.4byte	.LASF79
+ 3639 0ba5 56050000 		.4byte	.LASF79
  3640 0ba9 01       		.byte	0x1
  3641 0baa 5B05     		.2byte	0x55b
  3642 0bac CE000000 		.4byte	0xce
  3643 0bb0 0E080000 		.4byte	.LLST47
  3644 0bb4 15       		.uleb128 0x15
- 3645 0bb5 41050000 		.4byte	.LASF82
+ 3645 0bb5 46050000 		.4byte	.LASF82
  3646 0bb9 01       		.byte	0x1
  3647 0bba 5B05     		.2byte	0x55b
  3648 0bbc 81000000 		.4byte	0x81
@@ -6273,7 +6273,7 @@ ARM GAS  C:\Users\danielpi\AppData\Local\Temp\cca0S25h.s 			page 1
  3654 0bcc 81000000 		.4byte	0x81
  3655 0bd0 5B080000 		.4byte	.LLST49
  3656 0bd4 16       		.uleb128 0x16
- 3657 0bd5 46030000 		.4byte	.LASF83
+ 3657 0bd5 4B030000 		.4byte	.LASF83
  3658 0bd9 01       		.byte	0x1
  3659 0bda 5E05     		.2byte	0x55e
  3660 0bdc 81000000 		.4byte	0x81
@@ -6298,7 +6298,7 @@ ARM GAS  C:\Users\danielpi\AppData\Local\Temp\cca0S25h.s 			page 1
  3679 0c07 50       		.byte	0x50
  3680 0c08 02       		.uleb128 0x2
  3681 0c09 74       		.byte	0x74
-ARM GAS  C:\Users\danielpi\AppData\Local\Temp\cca0S25h.s 			page 106
+ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccHqkv6c.s 			page 106
 
 
  3682 0c0a 00       		.sleb128 0
@@ -6358,7 +6358,7 @@ ARM GAS  C:\Users\danielpi\AppData\Local\Temp\cca0S25h.s 			page 1
  3736 0c6f 00       		.byte	0
  3737 0c70 1A       		.uleb128 0x1a
  3738 0c71 14000000 		.4byte	.LVL207
-ARM GAS  C:\Users\danielpi\AppData\Local\Temp\cca0S25h.s 			page 107
+ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccHqkv6c.s 			page 107
 
 
  3739 0c75 C0080000 		.4byte	0x8c0
@@ -6418,7 +6418,7 @@ ARM GAS  C:\Users\danielpi\AppData\Local\Temp\cca0S25h.s 			page 1
  3793 0cdc 4A000000 		.4byte	.LVL214
  3794 0ce0 43030000 		.4byte	0x343
  3795 0ce4 EF0C0000 		.4byte	0xcef
-ARM GAS  C:\Users\danielpi\AppData\Local\Temp\cca0S25h.s 			page 108
+ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccHqkv6c.s 			page 108
 
 
  3796 0ce8 18       		.uleb128 0x18
@@ -6451,7 +6451,7 @@ ARM GAS  C:\Users\danielpi\AppData\Local\Temp\cca0S25h.s 			page 1
  3823 0d14 00       		.byte	0
  3824 0d15 00       		.byte	0
  3825 0d16 0D       		.uleb128 0xd
- 3826 0d17 6B040000 		.4byte	.LASF85
+ 3826 0d17 70040000 		.4byte	.LASF85
  3827 0d1b 01       		.byte	0x1
  3828 0d1c 1A       		.byte	0x1a
  3829 0d1d 81000000 		.4byte	0x81
@@ -6467,7 +6467,7 @@ ARM GAS  C:\Users\danielpi\AppData\Local\Temp\cca0S25h.s 			page 1
  3839 0d33 03       		.byte	0x3
  3840 0d34 04000000 		.4byte	lfclkPosedgeWdtCounter0Mode
  3841 0d38 0D       		.uleb128 0xd
- 3842 0d39 F6050000 		.4byte	.LASF87
+ 3842 0d39 42060000 		.4byte	.LASF87
  3843 0d3d 01       		.byte	0x1
  3844 0d3e 1D       		.byte	0x1d
  3845 0d3f AD000000 		.4byte	0xad
@@ -6478,7 +6478,7 @@ ARM GAS  C:\Users\danielpi\AppData\Local\Temp\cca0S25h.s 			page 1
  3850 0d4a 8F020000 		.4byte	.LASF88
  3851 0d4e 01       		.byte	0x1
  3852 0d4f 1E       		.byte	0x1e
-ARM GAS  C:\Users\danielpi\AppData\Local\Temp\cca0S25h.s 			page 109
+ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccHqkv6c.s 			page 109
 
 
  3853 0d50 AD000000 		.4byte	0xad
@@ -6518,7 +6518,7 @@ ARM GAS  C:\Users\danielpi\AppData\Local\Temp\cca0S25h.s 			page 1
  3887 0d9c 03       		.byte	0x3
  3888 0d9d 0C000000 		.4byte	cySysWdtCallback
  3889 0da1 24       		.uleb128 0x24
- 3890 0da2 0E050000 		.4byte	.LASF91
+ 3890 0da2 13050000 		.4byte	.LASF91
  3891 0da6 04       		.byte	0x4
  3892 0da7 60       		.byte	0x60
  3893 0da8 B20D0000 		.4byte	0xdb2
@@ -6526,7 +6526,7 @@ ARM GAS  C:\Users\danielpi\AppData\Local\Temp\cca0S25h.s 			page 1
  3895 0dad 6B000000 		.4byte	0x6b
  3896 0db1 00       		.byte	0
  3897 0db2 26       		.uleb128 0x26
- 3898 0db3 2A040000 		.4byte	.LASF98
+ 3898 0db3 2F040000 		.4byte	.LASF98
  3899 0db7 04       		.byte	0x4
  3900 0db8 5E       		.byte	0x5e
  3901 0db9 6B000000 		.4byte	0x6b
@@ -6538,7 +6538,7 @@ ARM GAS  C:\Users\danielpi\AppData\Local\Temp\cca0S25h.s 			page 1
  3907 0dc8 25       		.uleb128 0x25
  3908 0dc9 6B000000 		.4byte	0x6b
  3909 0dcd 00       		.byte	0
-ARM GAS  C:\Users\danielpi\AppData\Local\Temp\cca0S25h.s 			page 110
+ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccHqkv6c.s 			page 110
 
 
  3910 0dce 27       		.uleb128 0x27
@@ -6598,7 +6598,7 @@ ARM GAS  C:\Users\danielpi\AppData\Local\Temp\cca0S25h.s 			page 1
  3964 002c 03       		.uleb128 0x3
  3965 002d 0E       		.uleb128 0xe
  3966 002e 3A       		.uleb128 0x3a
-ARM GAS  C:\Users\danielpi\AppData\Local\Temp\cca0S25h.s 			page 111
+ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccHqkv6c.s 			page 111
 
 
  3967 002f 0B       		.uleb128 0xb
@@ -6658,7 +6658,7 @@ ARM GAS  C:\Users\danielpi\AppData\Local\Temp\cca0S25h.s 			page 1
  4021 0065 00       		.byte	0
  4022 0066 00       		.byte	0
  4023 0067 0A       		.uleb128 0xa
-ARM GAS  C:\Users\danielpi\AppData\Local\Temp\cca0S25h.s 			page 112
+ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccHqkv6c.s 			page 112
 
 
  4024 0068 28       		.uleb128 0x28
@@ -6718,7 +6718,7 @@ ARM GAS  C:\Users\danielpi\AppData\Local\Temp\cca0S25h.s 			page 1
  4078 00a0 00       		.byte	0
  4079 00a1 00       		.byte	0
  4080 00a2 0D       		.uleb128 0xd
-ARM GAS  C:\Users\danielpi\AppData\Local\Temp\cca0S25h.s 			page 113
+ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccHqkv6c.s 			page 113
 
 
  4081 00a3 34       		.uleb128 0x34
@@ -6778,7 +6778,7 @@ ARM GAS  C:\Users\danielpi\AppData\Local\Temp\cca0S25h.s 			page 1
  4135 00da 40       		.uleb128 0x40
  4136 00db 18       		.uleb128 0x18
  4137 00dc 9742     		.uleb128 0x2117
-ARM GAS  C:\Users\danielpi\AppData\Local\Temp\cca0S25h.s 			page 114
+ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccHqkv6c.s 			page 114
 
 
  4138 00de 19       		.uleb128 0x19
@@ -6838,7 +6838,7 @@ ARM GAS  C:\Users\danielpi\AppData\Local\Temp\cca0S25h.s 			page 1
  4192 0115 59       		.uleb128 0x59
  4193 0116 05       		.uleb128 0x5
  4194 0117 00       		.byte	0
-ARM GAS  C:\Users\danielpi\AppData\Local\Temp\cca0S25h.s 			page 115
+ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccHqkv6c.s 			page 115
 
 
  4195 0118 00       		.byte	0
@@ -6898,7 +6898,7 @@ ARM GAS  C:\Users\danielpi\AppData\Local\Temp\cca0S25h.s 			page 1
  4249 0150 05       		.uleb128 0x5
  4250 0151 00       		.byte	0
  4251 0152 03       		.uleb128 0x3
-ARM GAS  C:\Users\danielpi\AppData\Local\Temp\cca0S25h.s 			page 116
+ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccHqkv6c.s 			page 116
 
 
  4252 0153 0E       		.uleb128 0xe
@@ -6958,7 +6958,7 @@ ARM GAS  C:\Users\danielpi\AppData\Local\Temp\cca0S25h.s 			page 1
  4306 0190 898201   		.uleb128 0x4109
  4307 0193 01       		.byte	0x1
  4308 0194 11       		.uleb128 0x11
-ARM GAS  C:\Users\danielpi\AppData\Local\Temp\cca0S25h.s 			page 117
+ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccHqkv6c.s 			page 117
 
 
  4309 0195 01       		.uleb128 0x1
@@ -7018,7 +7018,7 @@ ARM GAS  C:\Users\danielpi\AppData\Local\Temp\cca0S25h.s 			page 1
  4363 01cc 3B       		.uleb128 0x3b
  4364 01cd 0B       		.uleb128 0xb
  4365 01ce 27       		.uleb128 0x27
-ARM GAS  C:\Users\danielpi\AppData\Local\Temp\cca0S25h.s 			page 118
+ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccHqkv6c.s 			page 118
 
 
  4366 01cf 19       		.uleb128 0x19
@@ -7078,7 +7078,7 @@ ARM GAS  C:\Users\danielpi\AppData\Local\Temp\cca0S25h.s 			page 1
  4420 0206 27       		.uleb128 0x27
  4421 0207 19       		.uleb128 0x19
  4422 0208 11       		.uleb128 0x11
-ARM GAS  C:\Users\danielpi\AppData\Local\Temp\cca0S25h.s 			page 119
+ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccHqkv6c.s 			page 119
 
 
  4423 0209 01       		.uleb128 0x1
@@ -7138,7 +7138,7 @@ ARM GAS  C:\Users\danielpi\AppData\Local\Temp\cca0S25h.s 			page 1
  4477 0240 00       		.byte	0
  4478 0241 25       		.uleb128 0x25
  4479 0242 05       		.uleb128 0x5
-ARM GAS  C:\Users\danielpi\AppData\Local\Temp\cca0S25h.s 			page 120
+ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccHqkv6c.s 			page 120
 
 
  4480 0243 00       		.byte	0
@@ -7198,7 +7198,7 @@ ARM GAS  C:\Users\danielpi\AppData\Local\Temp\cca0S25h.s 			page 1
  4534 001a 44000000 		.4byte	.LVL5
  4535 001e 0400     		.2byte	0x4
  4536 0020 F3       		.byte	0xf3
-ARM GAS  C:\Users\danielpi\AppData\Local\Temp\cca0S25h.s 			page 121
+ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccHqkv6c.s 			page 121
 
 
  4537 0021 01       		.uleb128 0x1
@@ -7258,7 +7258,7 @@ ARM GAS  C:\Users\danielpi\AppData\Local\Temp\cca0S25h.s 			page 1
  4591 00a6 0A000000 		.4byte	.LVL15
  4592 00aa 0100     		.2byte	0x1
  4593 00ac 50       		.byte	0x50
-ARM GAS  C:\Users\danielpi\AppData\Local\Temp\cca0S25h.s 			page 122
+ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccHqkv6c.s 			page 122
 
 
  4594 00ad 0A000000 		.4byte	.LVL15
@@ -7318,7 +7318,7 @@ ARM GAS  C:\Users\danielpi\AppData\Local\Temp\cca0S25h.s 			page 1
  4648 0131 30000000 		.4byte	.LVL24
  4649 0135 32000000 		.4byte	.LVL25
  4650 0139 0100     		.2byte	0x1
-ARM GAS  C:\Users\danielpi\AppData\Local\Temp\cca0S25h.s 			page 123
+ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccHqkv6c.s 			page 123
 
 
  4651 013b 54       		.byte	0x54
@@ -7378,7 +7378,7 @@ ARM GAS  C:\Users\danielpi\AppData\Local\Temp\cca0S25h.s 			page 1
  4705 01bd 28000000 		.4byte	.LVL35
  4706 01c1 2E000000 		.4byte	.LVL37
  4707 01c5 0100     		.2byte	0x1
-ARM GAS  C:\Users\danielpi\AppData\Local\Temp\cca0S25h.s 			page 124
+ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccHqkv6c.s 			page 124
 
 
  4708 01c7 52       		.byte	0x52
@@ -7438,7 +7438,7 @@ ARM GAS  C:\Users\danielpi\AppData\Local\Temp\cca0S25h.s 			page 1
  4762 0251 0400     		.2byte	0x4
  4763 0253 F3       		.byte	0xf3
  4764 0254 01       		.uleb128 0x1
-ARM GAS  C:\Users\danielpi\AppData\Local\Temp\cca0S25h.s 			page 125
+ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccHqkv6c.s 			page 125
 
 
  4765 0255 50       		.byte	0x50
@@ -7498,7 +7498,7 @@ ARM GAS  C:\Users\danielpi\AppData\Local\Temp\cca0S25h.s 			page 1
  4819 02e1 58000000 		.4byte	.LFE23
  4820 02e5 0400     		.2byte	0x4
  4821 02e7 F3       		.byte	0xf3
-ARM GAS  C:\Users\danielpi\AppData\Local\Temp\cca0S25h.s 			page 126
+ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccHqkv6c.s 			page 126
 
 
  4822 02e8 01       		.uleb128 0x1
@@ -7558,7 +7558,7 @@ ARM GAS  C:\Users\danielpi\AppData\Local\Temp\cca0S25h.s 			page 1
  4876 036d 1E000000 		.4byte	.LVL81
  4877 0371 0100     		.2byte	0x1
  4878 0373 52       		.byte	0x52
-ARM GAS  C:\Users\danielpi\AppData\Local\Temp\cca0S25h.s 			page 127
+ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccHqkv6c.s 			page 127
 
 
  4879 0374 1E000000 		.4byte	.LVL81
@@ -7618,7 +7618,7 @@ ARM GAS  C:\Users\danielpi\AppData\Local\Temp\cca0S25h.s 			page 1
  4933 03fa F3       		.byte	0xf3
  4934 03fb 01       		.uleb128 0x1
  4935 03fc 50       		.byte	0x50
-ARM GAS  C:\Users\danielpi\AppData\Local\Temp\cca0S25h.s 			page 128
+ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccHqkv6c.s 			page 128
 
 
  4936 03fd 9F       		.byte	0x9f
@@ -7678,7 +7678,7 @@ ARM GAS  C:\Users\danielpi\AppData\Local\Temp\cca0S25h.s 			page 1
  4990 0483 62000000 		.4byte	.LVL107
  4991 0487 64000000 		.4byte	.LVL108
  4992 048b 0100     		.2byte	0x1
-ARM GAS  C:\Users\danielpi\AppData\Local\Temp\cca0S25h.s 			page 129
+ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccHqkv6c.s 			page 129
 
 
  4993 048d 50       		.byte	0x50
@@ -7738,7 +7738,7 @@ ARM GAS  C:\Users\danielpi\AppData\Local\Temp\cca0S25h.s 			page 1
  5047 051c 0100     		.2byte	0x1
  5048 051e 54       		.byte	0x54
  5049 051f 00000000 		.4byte	0
-ARM GAS  C:\Users\danielpi\AppData\Local\Temp\cca0S25h.s 			page 130
+ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccHqkv6c.s 			page 130
 
 
  5050 0523 00000000 		.4byte	0
@@ -7798,7 +7798,7 @@ ARM GAS  C:\Users\danielpi\AppData\Local\Temp\cca0S25h.s 			page 1
  5104 05ac 01       		.uleb128 0x1
  5105 05ad 50       		.byte	0x50
  5106 05ae 9F       		.byte	0x9f
-ARM GAS  C:\Users\danielpi\AppData\Local\Temp\cca0S25h.s 			page 131
+ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccHqkv6c.s 			page 131
 
 
  5107 05af 00000000 		.4byte	0
@@ -7858,7 +7858,7 @@ ARM GAS  C:\Users\danielpi\AppData\Local\Temp\cca0S25h.s 			page 1
  5161 0633 30       		.byte	0x30
  5162 0634 9F       		.byte	0x9f
  5163 0635 1A000000 		.4byte	.LVL158
-ARM GAS  C:\Users\danielpi\AppData\Local\Temp\cca0S25h.s 			page 132
+ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccHqkv6c.s 			page 132
 
 
  5164 0639 20000000 		.4byte	.LFE31
@@ -7918,7 +7918,7 @@ ARM GAS  C:\Users\danielpi\AppData\Local\Temp\cca0S25h.s 			page 1
  5218 06c0 0100     		.2byte	0x1
  5219 06c2 50       		.byte	0x50
  5220 06c3 08000000 		.4byte	.LVL168
-ARM GAS  C:\Users\danielpi\AppData\Local\Temp\cca0S25h.s 			page 133
+ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccHqkv6c.s 			page 133
 
 
  5221 06c7 1E000000 		.4byte	.LVL169
@@ -7978,7 +7978,7 @@ ARM GAS  C:\Users\danielpi\AppData\Local\Temp\cca0S25h.s 			page 1
  5275 0746 6C000000 		.4byte	.LFE37
  5276 074a 0400     		.2byte	0x4
  5277 074c F3       		.byte	0xf3
-ARM GAS  C:\Users\danielpi\AppData\Local\Temp\cca0S25h.s 			page 134
+ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccHqkv6c.s 			page 134
 
 
  5278 074d 01       		.uleb128 0x1
@@ -8038,7 +8038,7 @@ ARM GAS  C:\Users\danielpi\AppData\Local\Temp\cca0S25h.s 			page 1
  5332 07d1 00       		.sleb128 0
  5333 07d2 32       		.byte	0x32
  5334 07d3 24       		.byte	0x24
-ARM GAS  C:\Users\danielpi\AppData\Local\Temp\cca0S25h.s 			page 135
+ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccHqkv6c.s 			page 135
 
 
  5335 07d4 03       		.byte	0x3
@@ -8098,7 +8098,7 @@ ARM GAS  C:\Users\danielpi\AppData\Local\Temp\cca0S25h.s 			page 1
  5389 0857 00000000 		.4byte	0
  5390              	.LLST49:
  5391 085b 20000000 		.4byte	.LVL198
-ARM GAS  C:\Users\danielpi\AppData\Local\Temp\cca0S25h.s 			page 136
+ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccHqkv6c.s 			page 136
 
 
  5392 085f 28000000 		.4byte	.LVL200
@@ -8158,7 +8158,7 @@ ARM GAS  C:\Users\danielpi\AppData\Local\Temp\cca0S25h.s 			page 1
  5446 0030 00000000 		.4byte	.LFB7
  5447 0034 40000000 		.4byte	.LFE7-.LFB7
  5448 0038 00000000 		.4byte	.LFB9
-ARM GAS  C:\Users\danielpi\AppData\Local\Temp\cca0S25h.s 			page 137
+ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccHqkv6c.s 			page 137
 
 
  5449 003c 14000000 		.4byte	.LFE9-.LFB9
@@ -8218,7 +8218,7 @@ ARM GAS  C:\Users\danielpi\AppData\Local\Temp\cca0S25h.s 			page 1
  5503 0114 20000000 		.4byte	.LFE32-.LFB32
  5504 0118 00000000 		.4byte	.LFB33
  5505 011c 34000000 		.4byte	.LFE33-.LFB33
-ARM GAS  C:\Users\danielpi\AppData\Local\Temp\cca0S25h.s 			page 138
+ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccHqkv6c.s 			page 138
 
 
  5506 0120 00000000 		.4byte	.LFB34
@@ -8278,7 +8278,7 @@ ARM GAS  C:\Users\danielpi\AppData\Local\Temp\cca0S25h.s 			page 1
  5560 00a0 00000000 		.4byte	.LFB24
  5561 00a4 2C000000 		.4byte	.LFE24
  5562 00a8 00000000 		.4byte	.LFB25
-ARM GAS  C:\Users\danielpi\AppData\Local\Temp\cca0S25h.s 			page 139
+ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccHqkv6c.s 			page 139
 
 
  5563 00ac 10000000 		.4byte	.LFE25
@@ -8338,7 +8338,7 @@ ARM GAS  C:\Users\danielpi\AppData\Local\Temp\cca0S25h.s 			page 1
  5608 001d 6C66636C 		.ascii	"lfclkSource\000"
  5608      6B536F75 
  5608      72636500 
-ARM GAS  C:\Users\danielpi\AppData\Local\Temp\cca0S25h.s 			page 140
+ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccHqkv6c.s 			page 140
 
 
  5609              	.LASF89:
@@ -8398,7 +8398,7 @@ ARM GAS  C:\Users\danielpi\AppData\Local\Temp\cca0S25h.s 			page 1
  5628      32303134 
  5628      30353236 
  5629 00ff 616E6368 		.ascii	"anch revision 211358] -mcpu=cortex-m0 -mthumb -g -O"
-ARM GAS  C:\Users\danielpi\AppData\Local\Temp\cca0S25h.s 			page 141
+ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccHqkv6c.s 			page 141
 
 
  5629      20726576 
@@ -8458,7 +8458,7 @@ ARM GAS  C:\Users\danielpi\AppData\Local\Temp\cca0S25h.s 			page 1
  5649              	.LASF18:
  5650 01d6 63795F73 		.ascii	"cy_sys_timer_delaytype_enum\000"
  5650      79735F74 
-ARM GAS  C:\Users\danielpi\AppData\Local\Temp\cca0S25h.s 			page 142
+ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccHqkv6c.s 			page 142
 
 
  5650      696D6572 
@@ -8518,7 +8518,7 @@ ARM GAS  C:\Users\danielpi\AppData\Local\Temp\cca0S25h.s 			page 1
  5676 027a 636F756E 		.ascii	"countersEnableStatus\000"
  5676      74657273 
  5676      456E6162 
-ARM GAS  C:\Users\danielpi\AppData\Local\Temp\cca0S25h.s 			page 143
+ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccHqkv6c.s 			page 143
 
 
  5676      6C655374 
@@ -8542,304 +8542,304 @@ ARM GAS  C:\Users\danielpi\AppData\Local\Temp\cca0S25h.s 			page 1
  5684 02c6 636F756E 		.ascii	"counterMask\000"
  5684      7465724D 
  5684      61736B00 
- 5685              	.LASF40:
- 5686 02d2 43795379 		.ascii	"CySysWdtGetClearOnMatch\000"
- 5686      73576474 
- 5686      47657443 
- 5686      6C656172 
- 5686      4F6E4D61 
- 5687              	.LASF8:
- 5688 02ea 756E7369 		.ascii	"unsigned int\000"
- 5688      676E6564 
- 5688      20696E74 
- 5688      00
- 5689              	.LASF62:
- 5690 02f7 43795379 		.ascii	"CySysClkSetLfclkSource\000"
- 5690      73436C6B 
- 5690      5365744C 
- 5690      66636C6B 
- 5690      536F7572 
- 5691              	.LASF59:
- 5692 030e 66697273 		.ascii	"firstCount\000"
- 5692      74436F75 
- 5692      6E7400
- 5693              	.LASF74:
- 5694 0319 72657443 		.ascii	"retCallback\000"
- 5694      616C6C62 
- 5694      61636B00 
- 5695              	.LASF5:
- 5696 0325 6C6F6E67 		.ascii	"long unsigned int\000"
- 5696      20756E73 
- 5696      69676E65 
- 5696      6420696E 
- 5696      7400
- 5697              	.LASF29:
- 5698 0337 696E7465 		.ascii	"interruptState\000"
- 5698      72727570 
- 5698      74537461 
- 5698      746500
-ARM GAS  C:\Users\danielpi\AppData\Local\Temp\cca0S25h.s 			page 144
+ 5685              	.LASF33:
+ 5686 02d2 6D6F6465 		.ascii	"mode\000"
+ 5686      00
+ 5687              	.LASF40:
+ 5688 02d7 43795379 		.ascii	"CySysWdtGetClearOnMatch\000"
+ 5688      73576474 
+ 5688      47657443 
+ 5688      6C656172 
+ 5688      4F6E4D61 
+ 5689              	.LASF8:
+ 5690 02ef 756E7369 		.ascii	"unsigned int\000"
+ 5690      676E6564 
+ 5690      20696E74 
+ 5690      00
+ 5691              	.LASF62:
+ 5692 02fc 43795379 		.ascii	"CySysClkSetLfclkSource\000"
+ 5692      73436C6B 
+ 5692      5365744C 
+ 5692      66636C6B 
+ 5692      536F7572 
+ 5693              	.LASF59:
+ 5694 0313 66697273 		.ascii	"firstCount\000"
+ 5694      74436F75 
+ 5694      6E7400
+ 5695              	.LASF74:
+ 5696 031e 72657443 		.ascii	"retCallback\000"
+ 5696      616C6C62 
+ 5696      61636B00 
+ 5697              	.LASF5:
+ 5698 032a 6C6F6E67 		.ascii	"long unsigned int\000"
+ 5698      20756E73 
+ 5698      69676E65 
+ 5698      6420696E 
+ 5698      7400
+ 5699              	.LASF29:
+ 5700 033c 696E7465 		.ascii	"interruptState\000"
+ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccHqkv6c.s 			page 144
 
 
- 5699              	.LASF83:
- 5700 0346 6D617463 		.ascii	"matchValue\000"
- 5700      6856616C 
- 5700      756500
- 5701              	.LASF57:
- 5702 0351 43795379 		.ascii	"CySysClkLfclkPosedgeRestore\000"
- 5702      73436C6B 
- 5702      4C66636C 
- 5702      6B506F73 
- 5702      65646765 
- 5703              	.LASF75:
- 5704 036d 43795379 		.ascii	"CySysWdtEnableCounterIsr\000"
- 5704      73576474 
- 5704      456E6162 
- 5704      6C65436F 
- 5704      756E7465 
- 5705              	.LASF3:
- 5706 0386 73686F72 		.ascii	"short unsigned int\000"
- 5706      7420756E 
- 5706      7369676E 
- 5706      65642069 
- 5706      6E7400
- 5707              	.LASF32:
- 5708 0399 43795379 		.ascii	"CySysWdtGetEnabledStatus\000"
- 5708      73576474 
- 5708      47657445 
- 5708      6E61626C 
- 5708      65645374 
- 5709              	.LASF73:
- 5710 03b2 43795379 		.ascii	"CySysWdtGetInterruptCallback\000"
+ 5700      72727570 
+ 5700      74537461 
+ 5700      746500
+ 5701              	.LASF83:
+ 5702 034b 6D617463 		.ascii	"matchValue\000"
+ 5702      6856616C 
+ 5702      756500
+ 5703              	.LASF57:
+ 5704 0356 43795379 		.ascii	"CySysClkLfclkPosedgeRestore\000"
+ 5704      73436C6B 
+ 5704      4C66636C 
+ 5704      6B506F73 
+ 5704      65646765 
+ 5705              	.LASF75:
+ 5706 0372 43795379 		.ascii	"CySysWdtEnableCounterIsr\000"
+ 5706      73576474 
+ 5706      456E6162 
+ 5706      6C65436F 
+ 5706      756E7465 
+ 5707              	.LASF3:
+ 5708 038b 73686F72 		.ascii	"short unsigned int\000"
+ 5708      7420756E 
+ 5708      7369676E 
+ 5708      65642069 
+ 5708      6E7400
+ 5709              	.LASF32:
+ 5710 039e 43795379 		.ascii	"CySysWdtGetEnabledStatus\000"
  5710      73576474 
- 5710      47657449 
- 5710      6E746572 
- 5710      72757074 
- 5711              	.LASF77:
- 5712 03cf 43795379 		.ascii	"CySysWdtIsr\000"
+ 5710      47657445 
+ 5710      6E61626C 
+ 5710      65645374 
+ 5711              	.LASF73:
+ 5712 03b7 43795379 		.ascii	"CySysWdtGetInterruptCallback\000"
  5712      73576474 
- 5712      49737200 
- 5713              	.LASF97:
- 5714 03db 43795379 		.ascii	"CySysClkIloStart\000"
- 5714      73436C6B 
- 5714      496C6F53 
- 5714      74617274 
- 5714      00
- 5715              	.LASF52:
- 5716 03ec 43795379 		.ascii	"CySysWdtSetToggleBit\000"
- 5716      73576474 
- 5716      53657454 
- 5716      6F67676C 
- 5716      65426974 
- 5717              	.LASF94:
- 5718 0401 2E5C4765 		.ascii	".\\Generated_Source\\PSoC4\\CyLFClk.c\000"
- 5718      6E657261 
- 5718      7465645F 
- 5718      536F7572 
- 5718      63655C50 
- 5719              	.LASF15:
-ARM GAS  C:\Users\danielpi\AppData\Local\Temp\cca0S25h.s 			page 145
+ 5712      47657449 
+ 5712      6E746572 
+ 5712      72757074 
+ 5713              	.LASF77:
+ 5714 03d4 43795379 		.ascii	"CySysWdtIsr\000"
+ 5714      73576474 
+ 5714      49737200 
+ 5715              	.LASF97:
+ 5716 03e0 43795379 		.ascii	"CySysClkIloStart\000"
+ 5716      73436C6B 
+ 5716      496C6F53 
+ 5716      74617274 
+ 5716      00
+ 5717              	.LASF52:
+ 5718 03f1 43795379 		.ascii	"CySysWdtSetToggleBit\000"
+ 5718      73576474 
+ 5718      53657454 
+ 5718      6F67676C 
+ 5718      65426974 
+ 5719              	.LASF94:
+ 5720 0406 2E5C4765 		.ascii	".\\Generated_Source\\PSoC4\\CyLFClk.c\000"
+ 5720      6E657261 
+ 5720      7465645F 
+ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccHqkv6c.s 			page 145
 
 
- 5720 0424 72656733 		.ascii	"reg32\000"
- 5720      3200
- 5721              	.LASF98:
- 5722 042a 4379456E 		.ascii	"CyEnterCriticalSection\000"
- 5722      74657243 
- 5722      72697469 
- 5722      63616C53 
- 5722      65637469 
- 5723              	.LASF80:
- 5724 0441 746D7056 		.ascii	"tmpValue\000"
- 5724      616C7565 
- 5724      00
- 5725              	.LASF63:
- 5726 044a 736F7572 		.ascii	"source\000"
- 5726      636500
- 5727              	.LASF20:
- 5728 0451 73697A65 		.ascii	"sizetype\000"
- 5728      74797065 
- 5728      00
- 5729              	.LASF55:
- 5730 045a 43795379 		.ascii	"CySysWdtGetMatch\000"
- 5730      73576474 
- 5730      4765744D 
- 5730      61746368 
+ 5720      536F7572 
+ 5720      63655C50 
+ 5721              	.LASF15:
+ 5722 0429 72656733 		.ascii	"reg32\000"
+ 5722      3200
+ 5723              	.LASF98:
+ 5724 042f 4379456E 		.ascii	"CyEnterCriticalSection\000"
+ 5724      74657243 
+ 5724      72697469 
+ 5724      63616C53 
+ 5724      65637469 
+ 5725              	.LASF80:
+ 5726 0446 746D7056 		.ascii	"tmpValue\000"
+ 5726      616C7565 
+ 5726      00
+ 5727              	.LASF63:
+ 5728 044f 736F7572 		.ascii	"source\000"
+ 5728      636500
+ 5729              	.LASF20:
+ 5730 0456 73697A65 		.ascii	"sizetype\000"
+ 5730      74797065 
  5730      00
- 5731              	.LASF85:
- 5732 046b 6C66636C 		.ascii	"lfclkPosedgeWdtCounter0Enabled\000"
- 5732      6B506F73 
- 5732      65646765 
- 5732      57647443 
- 5732      6F756E74 
- 5733              	.LASF50:
- 5734 048a 6D617463 		.ascii	"match\000"
- 5734      6800
- 5735              	.LASF16:
- 5736 0490 43595F53 		.ascii	"CY_SYS_TIMER_WAIT\000"
- 5736      59535F54 
- 5736      494D4552 
- 5736      5F574149 
- 5736      5400
- 5737              	.LASF68:
- 5738 04a2 43795379 		.ascii	"CySysWdtResetCounters\000"
- 5738      73576474 
- 5738      52657365 
- 5738      74436F75 
- 5738      6E746572 
- 5739              	.LASF66:
- 5740 04b8 43795379 		.ascii	"CySysWdtClearInterrupt\000"
+ 5731              	.LASF55:
+ 5732 045f 43795379 		.ascii	"CySysWdtGetMatch\000"
+ 5732      73576474 
+ 5732      4765744D 
+ 5732      61746368 
+ 5732      00
+ 5733              	.LASF85:
+ 5734 0470 6C66636C 		.ascii	"lfclkPosedgeWdtCounter0Enabled\000"
+ 5734      6B506F73 
+ 5734      65646765 
+ 5734      57647443 
+ 5734      6F756E74 
+ 5735              	.LASF50:
+ 5736 048f 6D617463 		.ascii	"match\000"
+ 5736      6800
+ 5737              	.LASF16:
+ 5738 0495 43595F53 		.ascii	"CY_SYS_TIMER_WAIT\000"
+ 5738      59535F54 
+ 5738      494D4552 
+ 5738      5F574149 
+ 5738      5400
+ 5739              	.LASF68:
+ 5740 04a7 43795379 		.ascii	"CySysWdtResetCounters\000"
  5740      73576474 
- 5740      436C6561 
- 5740      72496E74 
- 5740      65727275 
- 5741              	.LASF12:
- 5742 04cf 666C6F61 		.ascii	"float\000"
- 5742      7400
- 5743              	.LASF78:
- 5744 04d5 43795379 		.ascii	"CySysTimerDelayUntilMatch\000"
-ARM GAS  C:\Users\danielpi\AppData\Local\Temp\cca0S25h.s 			page 146
+ 5740      52657365 
+ 5740      74436F75 
+ 5740      6E746572 
+ 5741              	.LASF66:
+ 5742 04bd 43795379 		.ascii	"CySysWdtClearInterrupt\000"
+ 5742      73576474 
+ 5742      436C6561 
+ 5742      72496E74 
+ 5742      65727275 
+ 5743              	.LASF12:
+ 5744 04d4 666C6F61 		.ascii	"float\000"
+ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccHqkv6c.s 			page 146
 
 
- 5744      7354696D 
- 5744      65724465 
- 5744      6C617955 
- 5744      6E74696C 
- 5745              	.LASF81:
- 5746 04ef 43795379 		.ascii	"CySysTimerDelay\000"
+ 5744      7400
+ 5745              	.LASF78:
+ 5746 04da 43795379 		.ascii	"CySysTimerDelayUntilMatch\000"
  5746      7354696D 
  5746      65724465 
- 5746      6C617900 
- 5747              	.LASF22:
- 5748 04ff 43795379 		.ascii	"CySysWdtLocked\000"
- 5748      73576474 
- 5748      4C6F636B 
- 5748      656400
- 5749              	.LASF91:
- 5750 050e 43794861 		.ascii	"CyHalt\000"
- 5750      6C7400
- 5751              	.LASF1:
- 5752 0515 756E7369 		.ascii	"unsigned char\000"
- 5752      676E6564 
- 5752      20636861 
- 5752      7200
- 5753              	.LASF60:
- 5754 0523 6C66636C 		.ascii	"lfclkPosedgeEnabledWdtCounter\000"
- 5754      6B506F73 
- 5754      65646765 
- 5754      456E6162 
- 5754      6C656457 
- 5755              	.LASF82:
- 5756 0541 64656C61 		.ascii	"delay\000"
- 5756      7900
- 5757              	.LASF2:
- 5758 0547 73686F72 		.ascii	"short int\000"
- 5758      7420696E 
- 5758      7400
- 5759              	.LASF79:
- 5760 0551 64656C61 		.ascii	"delayType\000"
- 5760      79547970 
- 5760      6500
- 5761              	.LASF43:
- 5762 055b 43795379 		.ascii	"CySysWdtDisable\000"
- 5762      73576474 
- 5762      44697361 
- 5762      626C6500 
- 5763              	.LASF21:
- 5764 056b 43795379 		.ascii	"CySysClkIloEnabled\000"
- 5764      73436C6B 
- 5764      496C6F45 
- 5764      6E61626C 
- 5764      656400
- 5765              	.LASF65:
- 5766 057e 43795379 		.ascii	"CySysWdtGetInterruptSource\000"
- 5766      73576474 
- 5766      47657449 
- 5766      6E746572 
- 5766      72757074 
- 5767              	.LASF64:
-ARM GAS  C:\Users\danielpi\AppData\Local\Temp\cca0S25h.s 			page 147
+ 5746      6C617955 
+ 5746      6E74696C 
+ 5747              	.LASF81:
+ 5748 04f4 43795379 		.ascii	"CySysTimerDelay\000"
+ 5748      7354696D 
+ 5748      65724465 
+ 5748      6C617900 
+ 5749              	.LASF22:
+ 5750 0504 43795379 		.ascii	"CySysWdtLocked\000"
+ 5750      73576474 
+ 5750      4C6F636B 
+ 5750      656400
+ 5751              	.LASF91:
+ 5752 0513 43794861 		.ascii	"CyHalt\000"
+ 5752      6C7400
+ 5753              	.LASF1:
+ 5754 051a 756E7369 		.ascii	"unsigned char\000"
+ 5754      676E6564 
+ 5754      20636861 
+ 5754      7200
+ 5755              	.LASF60:
+ 5756 0528 6C66636C 		.ascii	"lfclkPosedgeEnabledWdtCounter\000"
+ 5756      6B506F73 
+ 5756      65646765 
+ 5756      456E6162 
+ 5756      6C656457 
+ 5757              	.LASF82:
+ 5758 0546 64656C61 		.ascii	"delay\000"
+ 5758      7900
+ 5759              	.LASF2:
+ 5760 054c 73686F72 		.ascii	"short int\000"
+ 5760      7420696E 
+ 5760      7400
+ 5761              	.LASF79:
+ 5762 0556 64656C61 		.ascii	"delayType\000"
+ 5762      79547970 
+ 5762      6500
+ 5763              	.LASF43:
+ 5764 0560 43795379 		.ascii	"CySysWdtDisable\000"
+ 5764      73576474 
+ 5764      44697361 
+ 5764      626C6500 
+ 5765              	.LASF21:
+ 5766 0570 43795379 		.ascii	"CySysClkIloEnabled\000"
+ 5766      73436C6B 
+ 5766      496C6F45 
+ 5766      6E61626C 
+ 5766      656400
+ 5767              	.LASF65:
+ 5768 0583 43795379 		.ascii	"CySysWdtGetInterruptSource\000"
+ 5768      73576474 
+ 5768      47657449 
+ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccHqkv6c.s 			page 147
 
 
- 5768 0599 43795379 		.ascii	"CySysClkWcoStop\000"
- 5768      73436C6B 
- 5768      57636F53 
- 5768      746F7000 
- 5769              	.LASF31:
- 5770 05a9 43795379 		.ascii	"CySysClkWcoSetPowerMode\000"
+ 5768      6E746572 
+ 5768      72757074 
+ 5769              	.LASF64:
+ 5770 059e 43795379 		.ascii	"CySysClkWcoStop\000"
  5770      73436C6B 
  5770      57636F53 
- 5770      6574506F 
- 5770      7765724D 
- 5771              	.LASF76:
- 5772 05c1 43795379 		.ascii	"CySysWdtDisableCounterIsr\000"
- 5772      73576474 
- 5772      44697361 
- 5772      626C6543 
- 5772      6F756E74 
- 5773              	.LASF14:
- 5774 05db 63686172 		.ascii	"char\000"
- 5774      00
- 5775              	.LASF33:
- 5776 05e0 6D6F6465 		.ascii	"mode\000"
+ 5770      746F7000 
+ 5771              	.LASF31:
+ 5772 05ae 43795379 		.ascii	"CySysClkWcoSetPowerMode\000"
+ 5772      73436C6B 
+ 5772      57636F53 
+ 5772      6574506F 
+ 5772      7765724D 
+ 5773              	.LASF76:
+ 5774 05c6 43795379 		.ascii	"CySysWdtDisableCounterIsr\000"
+ 5774      73576474 
+ 5774      44697361 
+ 5774      626C6543 
+ 5774      6F756E74 
+ 5775              	.LASF14:
+ 5776 05e0 63686172 		.ascii	"char\000"
  5776      00
- 5777              	.LASF56:
- 5778 05e5 43795379 		.ascii	"CySysWdtGetCount\000"
- 5778      73576474 
- 5778      47657443 
- 5778      6F756E74 
- 5778      00
- 5779              	.LASF87:
- 5780 05f6 64697361 		.ascii	"disableServicedIsr\000"
- 5780      626C6553 
- 5780      65727669 
- 5780      63656449 
- 5780      737200
- 5781              	.LASF38:
- 5782 0609 43795379 		.ascii	"CySysWdtSetClearOnMatch\000"
- 5782      73576474 
- 5782      53657443 
- 5782      6C656172 
- 5782      4F6E4D61 
- 5783              	.LASF44:
- 5784 0621 43795379 		.ascii	"CySysWdtSetCascade\000"
- 5784      73576474 
- 5784      53657443 
- 5784      61736361 
- 5784      646500
- 5785              	.LASF37:
- 5786 0634 43795379 		.ascii	"CySysWdtGetMode\000"
- 5786      73576474 
- 5786      4765744D 
- 5786      6F646500 
- 5787              	.LASF27:
- 5788 0644 43795379 		.ascii	"CySysClkWcoStart\000"
- 5788      73436C6B 
- 5788      57636F53 
- 5788      74617274 
- 5788      00
-ARM GAS  C:\Users\danielpi\AppData\Local\Temp\cca0S25h.s 			page 148
+ 5777              	.LASF95:
+ 5778 05e5 593A5C72 		.ascii	"Y:\\repos\\PSoC-4-BLE-Experiments\\Project 001 Find"
+ 5778      65706F73 
+ 5778      5C50536F 
+ 5778      432D342D 
+ 5778      424C452D 
+ 5779 0615 4D655C50 		.ascii	"Me\\PSoC\\FindME\\FindME.cydsn\000"
+ 5779      536F435C 
+ 5779      46696E64 
+ 5779      4D455C46 
+ 5779      696E644D 
+ 5780              	.LASF56:
+ 5781 0631 43795379 		.ascii	"CySysWdtGetCount\000"
+ 5781      73576474 
+ 5781      47657443 
+ 5781      6F756E74 
+ 5781      00
+ 5782              	.LASF87:
+ 5783 0642 64697361 		.ascii	"disableServicedIsr\000"
+ 5783      626C6553 
+ 5783      65727669 
+ 5783      63656449 
+ 5783      737200
+ 5784              	.LASF38:
+ 5785 0655 43795379 		.ascii	"CySysWdtSetClearOnMatch\000"
+ 5785      73576474 
+ 5785      53657443 
+ 5785      6C656172 
+ 5785      4F6E4D61 
+ 5786              	.LASF44:
+ 5787 066d 43795379 		.ascii	"CySysWdtSetCascade\000"
+ 5787      73576474 
+ 5787      53657443 
+ 5787      61736361 
+ 5787      646500
+ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccHqkv6c.s 			page 148
 
 
- 5789              	.LASF67:
- 5790 0655 7764744C 		.ascii	"wdtLockState\000"
- 5790      6F636B53 
- 5790      74617465 
- 5790      00
- 5791              	.LASF26:
- 5792 0662 73746174 		.ascii	"status\000"
- 5792      757300
- 5793              	.LASF95:
- 5794 0669 593A5C72 		.ascii	"Y:\\repos\\PSoC-4-BLE-Experiments\\Project 001 Find"
- 5794      65706F73 
- 5794      5C50536F 
- 5794      432D342D 
- 5794      424C452D 
- 5795 0699 4D655C50 		.ascii	"Me\\PSoc\\FindME\\FindME.cydsn\000"
- 5795      536F635C 
- 5795      46696E64 
- 5795      4D455C46 
- 5795      696E644D 
+ 5788              	.LASF37:
+ 5789 0680 43795379 		.ascii	"CySysWdtGetMode\000"
+ 5789      73576474 
+ 5789      4765744D 
+ 5789      6F646500 
+ 5790              	.LASF27:
+ 5791 0690 43795379 		.ascii	"CySysClkWcoStart\000"
+ 5791      73436C6B 
+ 5791      57636F53 
+ 5791      74617274 
+ 5791      00
+ 5792              	.LASF67:
+ 5793 06a1 7764744C 		.ascii	"wdtLockState\000"
+ 5793      6F636B53 
+ 5793      74617465 
+ 5793      00
+ 5794              	.LASF26:
+ 5795 06ae 73746174 		.ascii	"status\000"
+ 5795      757300
  5796              	.LASF36:
  5797 06b5 636F6E66 		.ascii	"configRegValue\000"
  5797      69675265 

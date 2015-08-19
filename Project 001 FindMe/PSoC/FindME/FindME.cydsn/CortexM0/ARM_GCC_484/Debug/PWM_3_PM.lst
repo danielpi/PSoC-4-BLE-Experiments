@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\danielpi\AppData\Local\Temp\cchSegIo.s 			page 1
+ARM GAS  C:\Users\danielpi\AppData\Local\Temp\cclSAj06.s 			page 1
 
 
    1              		.cpu cortex-m0
@@ -13,112 +13,112 @@ ARM GAS  C:\Users\danielpi\AppData\Local\Temp\cchSegIo.s 			page 1
   10              		.eabi_attribute 34, 0
   11              		.eabi_attribute 18, 4
   12              		.code	16
-  13              		.file	"PWM_1_PM.c"
+  13              		.file	"PWM_3_PM.c"
   14              		.text
   15              	.Ltext0:
   16              		.cfi_sections	.debug_frame
-  17              		.section	.text.PWM_1_SaveConfig,"ax",%progbits
+  17              		.section	.text.PWM_3_SaveConfig,"ax",%progbits
   18              		.align	2
-  19              		.global	PWM_1_SaveConfig
+  19              		.global	PWM_3_SaveConfig
   20              		.code	16
   21              		.thumb_func
-  22              		.type	PWM_1_SaveConfig, %function
-  23              	PWM_1_SaveConfig:
+  22              		.type	PWM_3_SaveConfig, %function
+  23              	PWM_3_SaveConfig:
   24              	.LFB2:
-  25              		.file 1 ".\\Generated_Source\\PSoC4\\PWM_1_PM.c"
-   1:.\Generated_Source\PSoC4/PWM_1_PM.c **** /*******************************************************************************
-   2:.\Generated_Source\PSoC4/PWM_1_PM.c **** * File Name: PWM_1_PM.c
-   3:.\Generated_Source\PSoC4/PWM_1_PM.c **** * Version 2.0
-   4:.\Generated_Source\PSoC4/PWM_1_PM.c **** *
-   5:.\Generated_Source\PSoC4/PWM_1_PM.c **** * Description:
-   6:.\Generated_Source\PSoC4/PWM_1_PM.c **** *  This file contains the setup, control, and status commands to support
-   7:.\Generated_Source\PSoC4/PWM_1_PM.c **** *  the component operations in the low power mode.
-   8:.\Generated_Source\PSoC4/PWM_1_PM.c **** *
-   9:.\Generated_Source\PSoC4/PWM_1_PM.c **** * Note:
-  10:.\Generated_Source\PSoC4/PWM_1_PM.c **** *  None
-  11:.\Generated_Source\PSoC4/PWM_1_PM.c **** *
-  12:.\Generated_Source\PSoC4/PWM_1_PM.c **** ********************************************************************************
-  13:.\Generated_Source\PSoC4/PWM_1_PM.c **** * Copyright 2013-2014, Cypress Semiconductor Corporation.  All rights reserved.
-  14:.\Generated_Source\PSoC4/PWM_1_PM.c **** * You may use this file only in accordance with the license, terms, conditions,
-  15:.\Generated_Source\PSoC4/PWM_1_PM.c **** * disclaimers, and limitations in the end user license agreement accompanying
-  16:.\Generated_Source\PSoC4/PWM_1_PM.c **** * the software package with which this file was provided.
-  17:.\Generated_Source\PSoC4/PWM_1_PM.c **** *******************************************************************************/
-  18:.\Generated_Source\PSoC4/PWM_1_PM.c **** 
-  19:.\Generated_Source\PSoC4/PWM_1_PM.c **** #include "PWM_1.h"
-  20:.\Generated_Source\PSoC4/PWM_1_PM.c **** 
-  21:.\Generated_Source\PSoC4/PWM_1_PM.c **** static PWM_1_BACKUP_STRUCT PWM_1_backup;
-  22:.\Generated_Source\PSoC4/PWM_1_PM.c **** 
-  23:.\Generated_Source\PSoC4/PWM_1_PM.c **** 
-  24:.\Generated_Source\PSoC4/PWM_1_PM.c **** /*******************************************************************************
-  25:.\Generated_Source\PSoC4/PWM_1_PM.c **** * Function Name: PWM_1_SaveConfig
-  26:.\Generated_Source\PSoC4/PWM_1_PM.c **** ********************************************************************************
-  27:.\Generated_Source\PSoC4/PWM_1_PM.c **** *
-  28:.\Generated_Source\PSoC4/PWM_1_PM.c **** * Summary:
-  29:.\Generated_Source\PSoC4/PWM_1_PM.c **** *  All configuration registers are retention. Nothing to save here.
-  30:.\Generated_Source\PSoC4/PWM_1_PM.c **** *
-  31:.\Generated_Source\PSoC4/PWM_1_PM.c **** * Parameters:
-  32:.\Generated_Source\PSoC4/PWM_1_PM.c **** *  None
-ARM GAS  C:\Users\danielpi\AppData\Local\Temp\cchSegIo.s 			page 2
+  25              		.file 1 ".\\Generated_Source\\PSoC4\\PWM_3_PM.c"
+   1:.\Generated_Source\PSoC4/PWM_3_PM.c **** /*******************************************************************************
+   2:.\Generated_Source\PSoC4/PWM_3_PM.c **** * File Name: PWM_3_PM.c
+   3:.\Generated_Source\PSoC4/PWM_3_PM.c **** * Version 2.0
+   4:.\Generated_Source\PSoC4/PWM_3_PM.c **** *
+   5:.\Generated_Source\PSoC4/PWM_3_PM.c **** * Description:
+   6:.\Generated_Source\PSoC4/PWM_3_PM.c **** *  This file contains the setup, control, and status commands to support
+   7:.\Generated_Source\PSoC4/PWM_3_PM.c **** *  the component operations in the low power mode.
+   8:.\Generated_Source\PSoC4/PWM_3_PM.c **** *
+   9:.\Generated_Source\PSoC4/PWM_3_PM.c **** * Note:
+  10:.\Generated_Source\PSoC4/PWM_3_PM.c **** *  None
+  11:.\Generated_Source\PSoC4/PWM_3_PM.c **** *
+  12:.\Generated_Source\PSoC4/PWM_3_PM.c **** ********************************************************************************
+  13:.\Generated_Source\PSoC4/PWM_3_PM.c **** * Copyright 2013-2014, Cypress Semiconductor Corporation.  All rights reserved.
+  14:.\Generated_Source\PSoC4/PWM_3_PM.c **** * You may use this file only in accordance with the license, terms, conditions,
+  15:.\Generated_Source\PSoC4/PWM_3_PM.c **** * disclaimers, and limitations in the end user license agreement accompanying
+  16:.\Generated_Source\PSoC4/PWM_3_PM.c **** * the software package with which this file was provided.
+  17:.\Generated_Source\PSoC4/PWM_3_PM.c **** *******************************************************************************/
+  18:.\Generated_Source\PSoC4/PWM_3_PM.c **** 
+  19:.\Generated_Source\PSoC4/PWM_3_PM.c **** #include "PWM_3.h"
+  20:.\Generated_Source\PSoC4/PWM_3_PM.c **** 
+  21:.\Generated_Source\PSoC4/PWM_3_PM.c **** static PWM_3_BACKUP_STRUCT PWM_3_backup;
+  22:.\Generated_Source\PSoC4/PWM_3_PM.c **** 
+  23:.\Generated_Source\PSoC4/PWM_3_PM.c **** 
+  24:.\Generated_Source\PSoC4/PWM_3_PM.c **** /*******************************************************************************
+  25:.\Generated_Source\PSoC4/PWM_3_PM.c **** * Function Name: PWM_3_SaveConfig
+  26:.\Generated_Source\PSoC4/PWM_3_PM.c **** ********************************************************************************
+  27:.\Generated_Source\PSoC4/PWM_3_PM.c **** *
+  28:.\Generated_Source\PSoC4/PWM_3_PM.c **** * Summary:
+  29:.\Generated_Source\PSoC4/PWM_3_PM.c **** *  All configuration registers are retention. Nothing to save here.
+  30:.\Generated_Source\PSoC4/PWM_3_PM.c **** *
+  31:.\Generated_Source\PSoC4/PWM_3_PM.c **** * Parameters:
+  32:.\Generated_Source\PSoC4/PWM_3_PM.c **** *  None
+ARM GAS  C:\Users\danielpi\AppData\Local\Temp\cclSAj06.s 			page 2
 
 
-  33:.\Generated_Source\PSoC4/PWM_1_PM.c **** *
-  34:.\Generated_Source\PSoC4/PWM_1_PM.c **** * Return:
-  35:.\Generated_Source\PSoC4/PWM_1_PM.c **** *  None
-  36:.\Generated_Source\PSoC4/PWM_1_PM.c **** *
-  37:.\Generated_Source\PSoC4/PWM_1_PM.c **** *******************************************************************************/
-  38:.\Generated_Source\PSoC4/PWM_1_PM.c **** void PWM_1_SaveConfig(void)
-  39:.\Generated_Source\PSoC4/PWM_1_PM.c **** {
+  33:.\Generated_Source\PSoC4/PWM_3_PM.c **** *
+  34:.\Generated_Source\PSoC4/PWM_3_PM.c **** * Return:
+  35:.\Generated_Source\PSoC4/PWM_3_PM.c **** *  None
+  36:.\Generated_Source\PSoC4/PWM_3_PM.c **** *
+  37:.\Generated_Source\PSoC4/PWM_3_PM.c **** *******************************************************************************/
+  38:.\Generated_Source\PSoC4/PWM_3_PM.c **** void PWM_3_SaveConfig(void)
+  39:.\Generated_Source\PSoC4/PWM_3_PM.c **** {
   26              		.loc 1 39 0
   27              		.cfi_startproc
-  40:.\Generated_Source\PSoC4/PWM_1_PM.c **** 
-  41:.\Generated_Source\PSoC4/PWM_1_PM.c **** }
+  40:.\Generated_Source\PSoC4/PWM_3_PM.c **** 
+  41:.\Generated_Source\PSoC4/PWM_3_PM.c **** }
   28              		.loc 1 41 0
   29              		@ sp needed
   30 0000 7047     		bx	lr
   31              		.cfi_endproc
   32              	.LFE2:
-  33              		.size	PWM_1_SaveConfig, .-PWM_1_SaveConfig
-  34 0002 C046     		.section	.text.PWM_1_Sleep,"ax",%progbits
+  33              		.size	PWM_3_SaveConfig, .-PWM_3_SaveConfig
+  34 0002 C046     		.section	.text.PWM_3_Sleep,"ax",%progbits
   35              		.align	2
-  36              		.global	PWM_1_Sleep
+  36              		.global	PWM_3_Sleep
   37              		.code	16
   38              		.thumb_func
-  39              		.type	PWM_1_Sleep, %function
-  40              	PWM_1_Sleep:
+  39              		.type	PWM_3_Sleep, %function
+  40              	PWM_3_Sleep:
   41              	.LFB3:
-  42:.\Generated_Source\PSoC4/PWM_1_PM.c **** 
-  43:.\Generated_Source\PSoC4/PWM_1_PM.c **** 
-  44:.\Generated_Source\PSoC4/PWM_1_PM.c **** /*******************************************************************************
-  45:.\Generated_Source\PSoC4/PWM_1_PM.c **** * Function Name: PWM_1_Sleep
-  46:.\Generated_Source\PSoC4/PWM_1_PM.c **** ********************************************************************************
-  47:.\Generated_Source\PSoC4/PWM_1_PM.c **** *
-  48:.\Generated_Source\PSoC4/PWM_1_PM.c **** * Summary:
-  49:.\Generated_Source\PSoC4/PWM_1_PM.c **** *  Stops the component operation and saves the user configuration.
-  50:.\Generated_Source\PSoC4/PWM_1_PM.c **** *
-  51:.\Generated_Source\PSoC4/PWM_1_PM.c **** * Parameters:
-  52:.\Generated_Source\PSoC4/PWM_1_PM.c **** *  None
-  53:.\Generated_Source\PSoC4/PWM_1_PM.c **** *
-  54:.\Generated_Source\PSoC4/PWM_1_PM.c **** * Return:
-  55:.\Generated_Source\PSoC4/PWM_1_PM.c **** *  None
-  56:.\Generated_Source\PSoC4/PWM_1_PM.c **** *
-  57:.\Generated_Source\PSoC4/PWM_1_PM.c **** *******************************************************************************/
-  58:.\Generated_Source\PSoC4/PWM_1_PM.c **** void PWM_1_Sleep(void)
-  59:.\Generated_Source\PSoC4/PWM_1_PM.c **** {
+  42:.\Generated_Source\PSoC4/PWM_3_PM.c **** 
+  43:.\Generated_Source\PSoC4/PWM_3_PM.c **** 
+  44:.\Generated_Source\PSoC4/PWM_3_PM.c **** /*******************************************************************************
+  45:.\Generated_Source\PSoC4/PWM_3_PM.c **** * Function Name: PWM_3_Sleep
+  46:.\Generated_Source\PSoC4/PWM_3_PM.c **** ********************************************************************************
+  47:.\Generated_Source\PSoC4/PWM_3_PM.c **** *
+  48:.\Generated_Source\PSoC4/PWM_3_PM.c **** * Summary:
+  49:.\Generated_Source\PSoC4/PWM_3_PM.c **** *  Stops the component operation and saves the user configuration.
+  50:.\Generated_Source\PSoC4/PWM_3_PM.c **** *
+  51:.\Generated_Source\PSoC4/PWM_3_PM.c **** * Parameters:
+  52:.\Generated_Source\PSoC4/PWM_3_PM.c **** *  None
+  53:.\Generated_Source\PSoC4/PWM_3_PM.c **** *
+  54:.\Generated_Source\PSoC4/PWM_3_PM.c **** * Return:
+  55:.\Generated_Source\PSoC4/PWM_3_PM.c **** *  None
+  56:.\Generated_Source\PSoC4/PWM_3_PM.c **** *
+  57:.\Generated_Source\PSoC4/PWM_3_PM.c **** *******************************************************************************/
+  58:.\Generated_Source\PSoC4/PWM_3_PM.c **** void PWM_3_Sleep(void)
+  59:.\Generated_Source\PSoC4/PWM_3_PM.c **** {
   42              		.loc 1 59 0
   43              		.cfi_startproc
   44 0000 08B5     		push	{r3, lr}
   45              		.cfi_def_cfa_offset 8
   46              		.cfi_offset 3, -8
   47              		.cfi_offset 14, -4
-  60:.\Generated_Source\PSoC4/PWM_1_PM.c ****     if(0u != (PWM_1_BLOCK_CONTROL_REG & PWM_1_MASK))
+  60:.\Generated_Source\PSoC4/PWM_3_PM.c ****     if(0u != (PWM_3_BLOCK_CONTROL_REG & PWM_3_MASK))
   48              		.loc 1 60 0
   49 0002 074B     		ldr	r3, .L5
   50 0004 1B68     		ldr	r3, [r3]
-  51 0006 9A07     		lsl	r2, r3, #30
+  51 0006 5A07     		lsl	r2, r3, #29
   52 0008 03D5     		bpl	.L3
-  61:.\Generated_Source\PSoC4/PWM_1_PM.c ****     {
-  62:.\Generated_Source\PSoC4/PWM_1_PM.c ****         PWM_1_backup.enableState = 1u;
-ARM GAS  C:\Users\danielpi\AppData\Local\Temp\cchSegIo.s 			page 3
+  61:.\Generated_Source\PSoC4/PWM_3_PM.c ****     {
+  62:.\Generated_Source\PSoC4/PWM_3_PM.c ****         PWM_3_backup.enableState = 1u;
+ARM GAS  C:\Users\danielpi\AppData\Local\Temp\cclSAj06.s 			page 3
 
 
   53              		.loc 1 62 0
@@ -127,23 +127,23 @@ ARM GAS  C:\Users\danielpi\AppData\Local\Temp\cchSegIo.s 			page 1
   56 000e 1A70     		strb	r2, [r3]
   57 0010 02E0     		b	.L4
   58              	.L3:
-  63:.\Generated_Source\PSoC4/PWM_1_PM.c ****     }
-  64:.\Generated_Source\PSoC4/PWM_1_PM.c ****     else
-  65:.\Generated_Source\PSoC4/PWM_1_PM.c ****     {
-  66:.\Generated_Source\PSoC4/PWM_1_PM.c ****         PWM_1_backup.enableState = 0u;
+  63:.\Generated_Source\PSoC4/PWM_3_PM.c ****     }
+  64:.\Generated_Source\PSoC4/PWM_3_PM.c ****     else
+  65:.\Generated_Source\PSoC4/PWM_3_PM.c ****     {
+  66:.\Generated_Source\PSoC4/PWM_3_PM.c ****         PWM_3_backup.enableState = 0u;
   59              		.loc 1 66 0
   60 0012 0022     		mov	r2, #0
   61 0014 034B     		ldr	r3, .L5+4
   62 0016 1A70     		strb	r2, [r3]
   63              	.L4:
-  67:.\Generated_Source\PSoC4/PWM_1_PM.c ****     }
-  68:.\Generated_Source\PSoC4/PWM_1_PM.c **** 
-  69:.\Generated_Source\PSoC4/PWM_1_PM.c ****     PWM_1_Stop();
+  67:.\Generated_Source\PSoC4/PWM_3_PM.c ****     }
+  68:.\Generated_Source\PSoC4/PWM_3_PM.c **** 
+  69:.\Generated_Source\PSoC4/PWM_3_PM.c ****     PWM_3_Stop();
   64              		.loc 1 69 0
-  65 0018 FFF7FEFF 		bl	PWM_1_Stop
+  65 0018 FFF7FEFF 		bl	PWM_3_Stop
   66              	.LVL0:
-  70:.\Generated_Source\PSoC4/PWM_1_PM.c ****     PWM_1_SaveConfig();
-  71:.\Generated_Source\PSoC4/PWM_1_PM.c **** }
+  70:.\Generated_Source\PSoC4/PWM_3_PM.c ****     PWM_3_SaveConfig();
+  71:.\Generated_Source\PSoC4/PWM_3_PM.c **** }
   67              		.loc 1 71 0
   68              		@ sp needed
   69 001c 08BD     		pop	{r3, pc}
@@ -154,97 +154,97 @@ ARM GAS  C:\Users\danielpi\AppData\Local\Temp\cchSegIo.s 			page 1
   74 0024 00000000 		.word	.LANCHOR0
   75              		.cfi_endproc
   76              	.LFE3:
-  77              		.size	PWM_1_Sleep, .-PWM_1_Sleep
-  78              		.section	.text.PWM_1_RestoreConfig,"ax",%progbits
+  77              		.size	PWM_3_Sleep, .-PWM_3_Sleep
+  78              		.section	.text.PWM_3_RestoreConfig,"ax",%progbits
   79              		.align	2
-  80              		.global	PWM_1_RestoreConfig
+  80              		.global	PWM_3_RestoreConfig
   81              		.code	16
   82              		.thumb_func
-  83              		.type	PWM_1_RestoreConfig, %function
-  84              	PWM_1_RestoreConfig:
+  83              		.type	PWM_3_RestoreConfig, %function
+  84              	PWM_3_RestoreConfig:
   85              	.LFB4:
-  72:.\Generated_Source\PSoC4/PWM_1_PM.c **** 
-  73:.\Generated_Source\PSoC4/PWM_1_PM.c **** 
-  74:.\Generated_Source\PSoC4/PWM_1_PM.c **** /*******************************************************************************
-  75:.\Generated_Source\PSoC4/PWM_1_PM.c **** * Function Name: PWM_1_RestoreConfig
-  76:.\Generated_Source\PSoC4/PWM_1_PM.c **** ********************************************************************************
-  77:.\Generated_Source\PSoC4/PWM_1_PM.c **** *
-  78:.\Generated_Source\PSoC4/PWM_1_PM.c **** * Summary:
-  79:.\Generated_Source\PSoC4/PWM_1_PM.c **** *  All configuration registers are retention. Nothing to restore here.
-  80:.\Generated_Source\PSoC4/PWM_1_PM.c **** *
-  81:.\Generated_Source\PSoC4/PWM_1_PM.c **** * Parameters:
-  82:.\Generated_Source\PSoC4/PWM_1_PM.c **** *  None
-  83:.\Generated_Source\PSoC4/PWM_1_PM.c **** *
-  84:.\Generated_Source\PSoC4/PWM_1_PM.c **** * Return:
-  85:.\Generated_Source\PSoC4/PWM_1_PM.c **** *  None
-  86:.\Generated_Source\PSoC4/PWM_1_PM.c **** *
-ARM GAS  C:\Users\danielpi\AppData\Local\Temp\cchSegIo.s 			page 4
+  72:.\Generated_Source\PSoC4/PWM_3_PM.c **** 
+  73:.\Generated_Source\PSoC4/PWM_3_PM.c **** 
+  74:.\Generated_Source\PSoC4/PWM_3_PM.c **** /*******************************************************************************
+  75:.\Generated_Source\PSoC4/PWM_3_PM.c **** * Function Name: PWM_3_RestoreConfig
+  76:.\Generated_Source\PSoC4/PWM_3_PM.c **** ********************************************************************************
+  77:.\Generated_Source\PSoC4/PWM_3_PM.c **** *
+  78:.\Generated_Source\PSoC4/PWM_3_PM.c **** * Summary:
+  79:.\Generated_Source\PSoC4/PWM_3_PM.c **** *  All configuration registers are retention. Nothing to restore here.
+  80:.\Generated_Source\PSoC4/PWM_3_PM.c **** *
+  81:.\Generated_Source\PSoC4/PWM_3_PM.c **** * Parameters:
+  82:.\Generated_Source\PSoC4/PWM_3_PM.c **** *  None
+  83:.\Generated_Source\PSoC4/PWM_3_PM.c **** *
+  84:.\Generated_Source\PSoC4/PWM_3_PM.c **** * Return:
+  85:.\Generated_Source\PSoC4/PWM_3_PM.c **** *  None
+  86:.\Generated_Source\PSoC4/PWM_3_PM.c **** *
+ARM GAS  C:\Users\danielpi\AppData\Local\Temp\cclSAj06.s 			page 4
 
 
-  87:.\Generated_Source\PSoC4/PWM_1_PM.c **** *******************************************************************************/
-  88:.\Generated_Source\PSoC4/PWM_1_PM.c **** void PWM_1_RestoreConfig(void)
-  89:.\Generated_Source\PSoC4/PWM_1_PM.c **** {
+  87:.\Generated_Source\PSoC4/PWM_3_PM.c **** *******************************************************************************/
+  88:.\Generated_Source\PSoC4/PWM_3_PM.c **** void PWM_3_RestoreConfig(void)
+  89:.\Generated_Source\PSoC4/PWM_3_PM.c **** {
   86              		.loc 1 89 0
   87              		.cfi_startproc
-  90:.\Generated_Source\PSoC4/PWM_1_PM.c **** 
-  91:.\Generated_Source\PSoC4/PWM_1_PM.c **** }
+  90:.\Generated_Source\PSoC4/PWM_3_PM.c **** 
+  91:.\Generated_Source\PSoC4/PWM_3_PM.c **** }
   88              		.loc 1 91 0
   89              		@ sp needed
   90 0000 7047     		bx	lr
   91              		.cfi_endproc
   92              	.LFE4:
-  93              		.size	PWM_1_RestoreConfig, .-PWM_1_RestoreConfig
-  94 0002 C046     		.section	.text.PWM_1_Wakeup,"ax",%progbits
+  93              		.size	PWM_3_RestoreConfig, .-PWM_3_RestoreConfig
+  94 0002 C046     		.section	.text.PWM_3_Wakeup,"ax",%progbits
   95              		.align	2
-  96              		.global	PWM_1_Wakeup
+  96              		.global	PWM_3_Wakeup
   97              		.code	16
   98              		.thumb_func
-  99              		.type	PWM_1_Wakeup, %function
- 100              	PWM_1_Wakeup:
+  99              		.type	PWM_3_Wakeup, %function
+ 100              	PWM_3_Wakeup:
  101              	.LFB5:
-  92:.\Generated_Source\PSoC4/PWM_1_PM.c **** 
-  93:.\Generated_Source\PSoC4/PWM_1_PM.c **** 
-  94:.\Generated_Source\PSoC4/PWM_1_PM.c **** /*******************************************************************************
-  95:.\Generated_Source\PSoC4/PWM_1_PM.c **** * Function Name: PWM_1_Wakeup
-  96:.\Generated_Source\PSoC4/PWM_1_PM.c **** ********************************************************************************
-  97:.\Generated_Source\PSoC4/PWM_1_PM.c **** *
-  98:.\Generated_Source\PSoC4/PWM_1_PM.c **** * Summary:
-  99:.\Generated_Source\PSoC4/PWM_1_PM.c **** *  Restores the user configuration and restores the enable state.
- 100:.\Generated_Source\PSoC4/PWM_1_PM.c **** *
- 101:.\Generated_Source\PSoC4/PWM_1_PM.c **** * Parameters:
- 102:.\Generated_Source\PSoC4/PWM_1_PM.c **** *  None
- 103:.\Generated_Source\PSoC4/PWM_1_PM.c **** *
- 104:.\Generated_Source\PSoC4/PWM_1_PM.c **** * Return:
- 105:.\Generated_Source\PSoC4/PWM_1_PM.c **** *  None
- 106:.\Generated_Source\PSoC4/PWM_1_PM.c **** *
- 107:.\Generated_Source\PSoC4/PWM_1_PM.c **** *******************************************************************************/
- 108:.\Generated_Source\PSoC4/PWM_1_PM.c **** void PWM_1_Wakeup(void)
- 109:.\Generated_Source\PSoC4/PWM_1_PM.c **** {
+  92:.\Generated_Source\PSoC4/PWM_3_PM.c **** 
+  93:.\Generated_Source\PSoC4/PWM_3_PM.c **** 
+  94:.\Generated_Source\PSoC4/PWM_3_PM.c **** /*******************************************************************************
+  95:.\Generated_Source\PSoC4/PWM_3_PM.c **** * Function Name: PWM_3_Wakeup
+  96:.\Generated_Source\PSoC4/PWM_3_PM.c **** ********************************************************************************
+  97:.\Generated_Source\PSoC4/PWM_3_PM.c **** *
+  98:.\Generated_Source\PSoC4/PWM_3_PM.c **** * Summary:
+  99:.\Generated_Source\PSoC4/PWM_3_PM.c **** *  Restores the user configuration and restores the enable state.
+ 100:.\Generated_Source\PSoC4/PWM_3_PM.c **** *
+ 101:.\Generated_Source\PSoC4/PWM_3_PM.c **** * Parameters:
+ 102:.\Generated_Source\PSoC4/PWM_3_PM.c **** *  None
+ 103:.\Generated_Source\PSoC4/PWM_3_PM.c **** *
+ 104:.\Generated_Source\PSoC4/PWM_3_PM.c **** * Return:
+ 105:.\Generated_Source\PSoC4/PWM_3_PM.c **** *  None
+ 106:.\Generated_Source\PSoC4/PWM_3_PM.c **** *
+ 107:.\Generated_Source\PSoC4/PWM_3_PM.c **** *******************************************************************************/
+ 108:.\Generated_Source\PSoC4/PWM_3_PM.c **** void PWM_3_Wakeup(void)
+ 109:.\Generated_Source\PSoC4/PWM_3_PM.c **** {
  102              		.loc 1 109 0
  103              		.cfi_startproc
  104 0000 08B5     		push	{r3, lr}
  105              		.cfi_def_cfa_offset 8
  106              		.cfi_offset 3, -8
  107              		.cfi_offset 14, -4
- 110:.\Generated_Source\PSoC4/PWM_1_PM.c ****     PWM_1_RestoreConfig();
- 111:.\Generated_Source\PSoC4/PWM_1_PM.c **** 
- 112:.\Generated_Source\PSoC4/PWM_1_PM.c ****     if(0u != PWM_1_backup.enableState)
+ 110:.\Generated_Source\PSoC4/PWM_3_PM.c ****     PWM_3_RestoreConfig();
+ 111:.\Generated_Source\PSoC4/PWM_3_PM.c **** 
+ 112:.\Generated_Source\PSoC4/PWM_3_PM.c ****     if(0u != PWM_3_backup.enableState)
  108              		.loc 1 112 0
  109 0002 034B     		ldr	r3, .L10
  110 0004 1B78     		ldrb	r3, [r3]
  111 0006 002B     		cmp	r3, #0
  112 0008 01D0     		beq	.L8
- 113:.\Generated_Source\PSoC4/PWM_1_PM.c ****     {
- 114:.\Generated_Source\PSoC4/PWM_1_PM.c ****         PWM_1_Enable();
+ 113:.\Generated_Source\PSoC4/PWM_3_PM.c ****     {
+ 114:.\Generated_Source\PSoC4/PWM_3_PM.c ****         PWM_3_Enable();
  113              		.loc 1 114 0
- 114 000a FFF7FEFF 		bl	PWM_1_Enable
-ARM GAS  C:\Users\danielpi\AppData\Local\Temp\cchSegIo.s 			page 5
+ 114 000a FFF7FEFF 		bl	PWM_3_Enable
+ARM GAS  C:\Users\danielpi\AppData\Local\Temp\cclSAj06.s 			page 5
 
 
  115              	.LVL1:
  116              	.L8:
- 115:.\Generated_Source\PSoC4/PWM_1_PM.c ****     }
- 116:.\Generated_Source\PSoC4/PWM_1_PM.c **** }
+ 115:.\Generated_Source\PSoC4/PWM_3_PM.c ****     }
+ 116:.\Generated_Source\PSoC4/PWM_3_PM.c **** }
  117              		.loc 1 116 0
  118              		@ sp needed
  119 000e 08BD     		pop	{r3, pc}
@@ -254,18 +254,18 @@ ARM GAS  C:\Users\danielpi\AppData\Local\Temp\cchSegIo.s 			page 1
  123 0010 00000000 		.word	.LANCHOR0
  124              		.cfi_endproc
  125              	.LFE5:
- 126              		.size	PWM_1_Wakeup, .-PWM_1_Wakeup
+ 126              		.size	PWM_3_Wakeup, .-PWM_3_Wakeup
  127              		.bss
  128              		.align	2
  129              		.set	.LANCHOR0,. + 0
- 130              		.type	PWM_1_backup, %object
- 131              		.size	PWM_1_backup, 1
- 132              	PWM_1_backup:
+ 130              		.type	PWM_3_backup, %object
+ 131              		.size	PWM_3_backup, 1
+ 132              	PWM_3_backup:
  133 0000 00       		.space	1
  134 0001 000000   		.text
  135              	.Letext0:
  136              		.file 2 ".\\Generated_Source\\PSoC4\\cytypes.h"
- 137              		.file 3 ".\\Generated_Source\\PSoC4\\PWM_1.h"
+ 137              		.file 3 ".\\Generated_Source\\PSoC4\\PWM_3.h"
  138              		.section	.debug_info,"",%progbits
  139              	.Ldebug_info0:
  140 0000 4C010000 		.4byte	0x14c
@@ -273,40 +273,40 @@ ARM GAS  C:\Users\danielpi\AppData\Local\Temp\cchSegIo.s 			page 1
  142 0006 00000000 		.4byte	.Ldebug_abbrev0
  143 000a 04       		.byte	0x4
  144 000b 01       		.uleb128 0x1
- 145 000c 9C010000 		.4byte	.LASF23
+ 145 000c 84010000 		.4byte	.LASF23
  146 0010 01       		.byte	0x1
- 147 0011 C6000000 		.4byte	.LASF24
- 148 0015 6D000000 		.4byte	.LASF25
+ 147 0011 84000000 		.4byte	.LASF24
+ 148 0015 D8000000 		.4byte	.LASF25
  149 0019 00000000 		.4byte	.Ldebug_ranges0+0
  150 001d 00000000 		.4byte	0
  151 0021 00000000 		.4byte	.Ldebug_line0
  152 0025 02       		.uleb128 0x2
  153 0026 01       		.byte	0x1
  154 0027 06       		.byte	0x6
- 155 0028 67010000 		.4byte	.LASF0
+ 155 0028 3D010000 		.4byte	.LASF0
  156 002c 02       		.uleb128 0x2
  157 002d 01       		.byte	0x1
  158 002e 08       		.byte	0x8
- 159 002f FE000000 		.4byte	.LASF1
+ 159 002f A8000000 		.4byte	.LASF1
  160 0033 02       		.uleb128 0x2
  161 0034 02       		.byte	0x2
  162 0035 05       		.byte	0x5
- 163 0036 92010000 		.4byte	.LASF2
+ 163 0036 5C010000 		.4byte	.LASF2
  164 003a 02       		.uleb128 0x2
  165 003b 02       		.byte	0x2
  166 003c 07       		.byte	0x7
- 167 003d 54010000 		.4byte	.LASF3
+ 167 003d 2A010000 		.4byte	.LASF3
  168 0041 02       		.uleb128 0x2
  169 0042 04       		.byte	0x4
-ARM GAS  C:\Users\danielpi\AppData\Local\Temp\cchSegIo.s 			page 6
+ARM GAS  C:\Users\danielpi\AppData\Local\Temp\cclSAj06.s 			page 6
 
 
  170 0043 05       		.byte	0x5
- 171 0044 11010000 		.4byte	.LASF4
+ 171 0044 BB000000 		.4byte	.LASF4
  172 0048 02       		.uleb128 0x2
  173 0049 04       		.byte	0x4
  174 004a 07       		.byte	0x7
- 175 004b 44000000 		.4byte	.LASF5
+ 175 004b 4F000000 		.4byte	.LASF5
  176 004f 02       		.uleb128 0x2
  177 0050 08       		.byte	0x8
  178 0051 05       		.byte	0x5
@@ -314,7 +314,7 @@ ARM GAS  C:\Users\danielpi\AppData\Local\Temp\cchSegIo.s 			page 1
  180 0056 02       		.uleb128 0x2
  181 0057 08       		.byte	0x8
  182 0058 07       		.byte	0x7
- 183 0059 56000000 		.4byte	.LASF7
+ 183 0059 61000000 		.4byte	.LASF7
  184 005d 03       		.uleb128 0x3
  185 005e 04       		.byte	0x4
  186 005f 05       		.byte	0x5
@@ -322,9 +322,9 @@ ARM GAS  C:\Users\danielpi\AppData\Local\Temp\cchSegIo.s 			page 1
  188 0064 02       		.uleb128 0x2
  189 0065 04       		.byte	0x4
  190 0066 07       		.byte	0x7
- 191 0067 20000000 		.4byte	.LASF8
+ 191 0067 49010000 		.4byte	.LASF8
  192 006b 04       		.uleb128 0x4
- 193 006c 3E000000 		.4byte	.LASF9
+ 193 006c 49000000 		.4byte	.LASF9
  194 0070 02       		.byte	0x2
  195 0071 B3       		.byte	0xb3
  196 0072 2C000000 		.4byte	0x2c
@@ -336,17 +336,17 @@ ARM GAS  C:\Users\danielpi\AppData\Local\Temp\cchSegIo.s 			page 1
  202 0081 02       		.uleb128 0x2
  203 0082 04       		.byte	0x4
  204 0083 04       		.byte	0x4
- 205 0084 80010000 		.4byte	.LASF11
+ 205 0084 56010000 		.4byte	.LASF11
  206 0088 02       		.uleb128 0x2
  207 0089 08       		.byte	0x8
  208 008a 04       		.byte	0x4
- 209 008b 3A010000 		.4byte	.LASF12
+ 209 008b D1000000 		.4byte	.LASF12
  210 008f 02       		.uleb128 0x2
  211 0090 01       		.byte	0x1
  212 0091 08       		.byte	0x8
- 213 0092 0C010000 		.4byte	.LASF13
+ 213 0092 B6000000 		.4byte	.LASF13
  214 0096 05       		.uleb128 0x5
- 215 0097 41010000 		.4byte	.LASF14
+ 215 0097 24010000 		.4byte	.LASF14
  216 009b 02       		.byte	0x2
  217 009c 5F01     		.2byte	0x15f
  218 009e A2000000 		.4byte	0xa2
@@ -355,29 +355,29 @@ ARM GAS  C:\Users\danielpi\AppData\Local\Temp\cchSegIo.s 			page 1
  221 00a7 02       		.uleb128 0x2
  222 00a8 04       		.byte	0x4
  223 00a9 07       		.byte	0x7
- 224 00aa 18020000 		.4byte	.LASF15
+ 224 00aa 00020000 		.4byte	.LASF15
  225 00ae 07       		.uleb128 0x7
  226 00af 01       		.byte	0x1
-ARM GAS  C:\Users\danielpi\AppData\Local\Temp\cchSegIo.s 			page 7
+ARM GAS  C:\Users\danielpi\AppData\Local\Temp\cclSAj06.s 			page 7
 
 
  227 00b0 03       		.byte	0x3
  228 00b1 21       		.byte	0x21
  229 00b2 C3000000 		.4byte	0xc3
  230 00b6 08       		.uleb128 0x8
- 231 00b7 2E010000 		.4byte	.LASF26
+ 231 00b7 15000000 		.4byte	.LASF26
  232 00bb 03       		.byte	0x3
  233 00bc 23       		.byte	0x23
  234 00bd 6B000000 		.4byte	0x6b
  235 00c1 00       		.byte	0
  236 00c2 00       		.byte	0
  237 00c3 04       		.uleb128 0x4
- 238 00c4 1A010000 		.4byte	.LASF16
+ 238 00c4 35000000 		.4byte	.LASF16
  239 00c8 03       		.byte	0x3
  240 00c9 24       		.byte	0x24
  241 00ca AE000000 		.4byte	0xae
  242 00ce 09       		.uleb128 0x9
- 243 00cf 2D000000 		.4byte	.LASF17
+ 243 00cf 66010000 		.4byte	.LASF17
  244 00d3 01       		.byte	0x1
  245 00d4 26       		.byte	0x26
  246 00d5 00000000 		.4byte	.LFB2
@@ -385,7 +385,7 @@ ARM GAS  C:\Users\danielpi\AppData\Local\Temp\cchSegIo.s 			page 1
  248 00dd 01       		.uleb128 0x1
  249 00de 9C       		.byte	0x9c
  250 00df 0A       		.uleb128 0xa
- 251 00e0 86010000 		.4byte	.LASF19
+ 251 00e0 78000000 		.4byte	.LASF19
  252 00e4 01       		.byte	0x1
  253 00e5 3A       		.byte	0x3a
  254 00e6 00000000 		.4byte	.LFB3
@@ -398,7 +398,7 @@ ARM GAS  C:\Users\danielpi\AppData\Local\Temp\cchSegIo.s 			page 1
  261 00f9 3F010000 		.4byte	0x13f
  262 00fd 00       		.byte	0
  263 00fe 09       		.uleb128 0x9
- 264 00ff EA000000 		.4byte	.LASF18
+ 264 00ff 21000000 		.4byte	.LASF18
  265 0103 01       		.byte	0x1
  266 0104 58       		.byte	0x58
  267 0105 00000000 		.4byte	.LFB4
@@ -406,7 +406,7 @@ ARM GAS  C:\Users\danielpi\AppData\Local\Temp\cchSegIo.s 			page 1
  269 010d 01       		.uleb128 0x1
  270 010e 9C       		.byte	0x9c
  271 010f 0A       		.uleb128 0xa
- 272 0110 73010000 		.4byte	.LASF20
+ 272 0110 77010000 		.4byte	.LASF20
  273 0114 01       		.byte	0x1
  274 0115 6C       		.byte	0x6c
  275 0116 00000000 		.4byte	.LFB5
@@ -418,23 +418,23 @@ ARM GAS  C:\Users\danielpi\AppData\Local\Temp\cchSegIo.s 			page 1
  281 0125 0E000000 		.4byte	.LVL1
  282 0129 47010000 		.4byte	0x147
  283 012d 00       		.byte	0
-ARM GAS  C:\Users\danielpi\AppData\Local\Temp\cchSegIo.s 			page 8
+ARM GAS  C:\Users\danielpi\AppData\Local\Temp\cclSAj06.s 			page 8
 
 
  284 012e 0C       		.uleb128 0xc
- 285 012f B9000000 		.4byte	.LASF27
+ 285 012f C4000000 		.4byte	.LASF27
  286 0133 01       		.byte	0x1
  287 0134 15       		.byte	0x15
  288 0135 C3000000 		.4byte	0xc3
  289 0139 05       		.uleb128 0x5
  290 013a 03       		.byte	0x3
- 291 013b 00000000 		.4byte	PWM_1_backup
+ 291 013b 00000000 		.4byte	PWM_3_backup
  292 013f 0D       		.uleb128 0xd
- 293 0140 15000000 		.4byte	.LASF21
+ 293 0140 16020000 		.4byte	.LASF21
  294 0144 03       		.byte	0x3
  295 0145 3201     		.2byte	0x132
  296 0147 0D       		.uleb128 0xd
- 297 0148 47010000 		.4byte	.LASF22
+ 297 0148 09020000 		.4byte	.LASF22
  298 014c 03       		.byte	0x3
  299 014d 3001     		.2byte	0x130
  300 014f 00       		.byte	0
@@ -478,7 +478,7 @@ ARM GAS  C:\Users\danielpi\AppData\Local\Temp\cchSegIo.s 			page 1
  338 0023 3E       		.uleb128 0x3e
  339 0024 0B       		.uleb128 0xb
  340 0025 03       		.uleb128 0x3
-ARM GAS  C:\Users\danielpi\AppData\Local\Temp\cchSegIo.s 			page 9
+ARM GAS  C:\Users\danielpi\AppData\Local\Temp\cclSAj06.s 			page 9
 
 
  341 0026 08       		.uleb128 0x8
@@ -538,7 +538,7 @@ ARM GAS  C:\Users\danielpi\AppData\Local\Temp\cchSegIo.s 			page 1
  395 005c 3A       		.uleb128 0x3a
  396 005d 0B       		.uleb128 0xb
  397 005e 3B       		.uleb128 0x3b
-ARM GAS  C:\Users\danielpi\AppData\Local\Temp\cchSegIo.s 			page 10
+ARM GAS  C:\Users\danielpi\AppData\Local\Temp\cclSAj06.s 			page 10
 
 
  398 005f 0B       		.uleb128 0xb
@@ -598,7 +598,7 @@ ARM GAS  C:\Users\danielpi\AppData\Local\Temp\cchSegIo.s 			page 1
  452 0097 00       		.byte	0
  453 0098 0B       		.uleb128 0xb
  454 0099 898201   		.uleb128 0x4109
-ARM GAS  C:\Users\danielpi\AppData\Local\Temp\cchSegIo.s 			page 11
+ARM GAS  C:\Users\danielpi\AppData\Local\Temp\cclSAj06.s 			page 11
 
 
  455 009c 00       		.byte	0
@@ -658,7 +658,7 @@ ARM GAS  C:\Users\danielpi\AppData\Local\Temp\cchSegIo.s 			page 1
  509 0028 00000000 		.4byte	.LFB5
  510 002c 14000000 		.4byte	.LFE5-.LFB5
  511 0030 00000000 		.4byte	0
-ARM GAS  C:\Users\danielpi\AppData\Local\Temp\cchSegIo.s 			page 12
+ARM GAS  C:\Users\danielpi\AppData\Local\Temp\cclSAj06.s 			page 12
 
 
  512 0034 00000000 		.4byte	0
@@ -689,147 +689,147 @@ ARM GAS  C:\Users\danielpi\AppData\Local\Temp\cchSegIo.s 			page 1
  530              	.LASF10:
  531 000e 75696E74 		.ascii	"uint32\000"
  531      333200
- 532              	.LASF21:
- 533 0015 50574D5F 		.ascii	"PWM_1_Stop\000"
- 533      315F5374 
- 533      6F7000
- 534              	.LASF8:
- 535 0020 756E7369 		.ascii	"unsigned int\000"
- 535      676E6564 
- 535      20696E74 
- 535      00
- 536              	.LASF17:
- 537 002d 50574D5F 		.ascii	"PWM_1_SaveConfig\000"
- 537      315F5361 
- 537      7665436F 
- 537      6E666967 
- 537      00
+ 532              	.LASF26:
+ 533 0015 656E6162 		.ascii	"enableState\000"
+ 533      6C655374 
+ 533      61746500 
+ 534              	.LASF18:
+ 535 0021 50574D5F 		.ascii	"PWM_3_RestoreConfig\000"
+ 535      335F5265 
+ 535      73746F72 
+ 535      65436F6E 
+ 535      66696700 
+ 536              	.LASF16:
+ 537 0035 50574D5F 		.ascii	"PWM_3_BACKUP_STRUCT\000"
+ 537      335F4241 
+ 537      434B5550 
+ 537      5F535452 
+ 537      55435400 
  538              	.LASF9:
- 539 003e 75696E74 		.ascii	"uint8\000"
+ 539 0049 75696E74 		.ascii	"uint8\000"
  539      3800
  540              	.LASF5:
- 541 0044 6C6F6E67 		.ascii	"long unsigned int\000"
+ 541 004f 6C6F6E67 		.ascii	"long unsigned int\000"
  541      20756E73 
  541      69676E65 
  541      6420696E 
  541      7400
  542              	.LASF7:
- 543 0056 6C6F6E67 		.ascii	"long long unsigned int\000"
+ 543 0061 6C6F6E67 		.ascii	"long long unsigned int\000"
  543      206C6F6E 
  543      6720756E 
+ARM GAS  C:\Users\danielpi\AppData\Local\Temp\cclSAj06.s 			page 13
+
+
  543      7369676E 
-ARM GAS  C:\Users\danielpi\AppData\Local\Temp\cchSegIo.s 			page 13
-
-
  543      65642069 
- 544              	.LASF25:
- 545 006d 593A5C72 		.ascii	"Y:\\repos\\PSoC-4-BLE-Experiments\\Project 001 Find"
- 545      65706F73 
- 545      5C50536F 
- 545      432D342D 
- 545      424C452D 
- 546 009d 4D655C50 		.ascii	"Me\\PSoC\\FindME\\FindME.cydsn\000"
- 546      536F435C 
- 546      46696E64 
- 546      4D455C46 
- 546      696E644D 
- 547              	.LASF27:
- 548 00b9 50574D5F 		.ascii	"PWM_1_backup\000"
- 548      315F6261 
- 548      636B7570 
- 548      00
- 549              	.LASF24:
- 550 00c6 2E5C4765 		.ascii	".\\Generated_Source\\PSoC4\\PWM_1_PM.c\000"
- 550      6E657261 
- 550      7465645F 
- 550      536F7572 
- 550      63655C50 
- 551              	.LASF18:
- 552 00ea 50574D5F 		.ascii	"PWM_1_RestoreConfig\000"
- 552      315F5265 
- 552      73746F72 
- 552      65436F6E 
- 552      66696700 
- 553              	.LASF1:
- 554 00fe 756E7369 		.ascii	"unsigned char\000"
- 554      676E6564 
- 554      20636861 
- 554      7200
- 555              	.LASF13:
- 556 010c 63686172 		.ascii	"char\000"
- 556      00
- 557              	.LASF4:
- 558 0111 6C6F6E67 		.ascii	"long int\000"
- 558      20696E74 
- 558      00
- 559              	.LASF16:
- 560 011a 50574D5F 		.ascii	"PWM_1_BACKUP_STRUCT\000"
- 560      315F4241 
- 560      434B5550 
- 560      5F535452 
- 560      55435400 
- 561              	.LASF26:
- 562 012e 656E6162 		.ascii	"enableState\000"
- 562      6C655374 
- 562      61746500 
- 563              	.LASF12:
- 564 013a 646F7562 		.ascii	"double\000"
- 564      6C6500
- 565              	.LASF14:
- 566 0141 72656733 		.ascii	"reg32\000"
- 566      3200
-ARM GAS  C:\Users\danielpi\AppData\Local\Temp\cchSegIo.s 			page 14
+ 544              	.LASF19:
+ 545 0078 50574D5F 		.ascii	"PWM_3_Sleep\000"
+ 545      335F536C 
+ 545      65657000 
+ 546              	.LASF24:
+ 547 0084 2E5C4765 		.ascii	".\\Generated_Source\\PSoC4\\PWM_3_PM.c\000"
+ 547      6E657261 
+ 547      7465645F 
+ 547      536F7572 
+ 547      63655C50 
+ 548              	.LASF1:
+ 549 00a8 756E7369 		.ascii	"unsigned char\000"
+ 549      676E6564 
+ 549      20636861 
+ 549      7200
+ 550              	.LASF13:
+ 551 00b6 63686172 		.ascii	"char\000"
+ 551      00
+ 552              	.LASF4:
+ 553 00bb 6C6F6E67 		.ascii	"long int\000"
+ 553      20696E74 
+ 553      00
+ 554              	.LASF27:
+ 555 00c4 50574D5F 		.ascii	"PWM_3_backup\000"
+ 555      335F6261 
+ 555      636B7570 
+ 555      00
+ 556              	.LASF12:
+ 557 00d1 646F7562 		.ascii	"double\000"
+ 557      6C6500
+ 558              	.LASF25:
+ 559 00d8 593A5C72 		.ascii	"Y:\\repos\\PSoC-4-BLE-Experiments\\Project 001 Find"
+ 559      65706F73 
+ 559      5C50536F 
+ 559      432D342D 
+ 559      424C452D 
+ 560 0108 4D655C50 		.ascii	"Me\\PSoC\\FindME\\FindME.cydsn\000"
+ 560      536F435C 
+ 560      46696E64 
+ 560      4D455C46 
+ 560      696E644D 
+ 561              	.LASF14:
+ 562 0124 72656733 		.ascii	"reg32\000"
+ 562      3200
+ 563              	.LASF3:
+ 564 012a 73686F72 		.ascii	"short unsigned int\000"
+ 564      7420756E 
+ 564      7369676E 
+ 564      65642069 
+ 564      6E7400
+ 565              	.LASF0:
+ 566 013d 7369676E 		.ascii	"signed char\000"
+ 566      65642063 
+ 566      68617200 
+ 567              	.LASF8:
+ARM GAS  C:\Users\danielpi\AppData\Local\Temp\cclSAj06.s 			page 14
 
 
- 567              	.LASF22:
- 568 0147 50574D5F 		.ascii	"PWM_1_Enable\000"
- 568      315F456E 
- 568      61626C65 
+ 568 0149 756E7369 		.ascii	"unsigned int\000"
+ 568      676E6564 
+ 568      20696E74 
  568      00
- 569              	.LASF3:
- 570 0154 73686F72 		.ascii	"short unsigned int\000"
- 570      7420756E 
- 570      7369676E 
- 570      65642069 
- 570      6E7400
- 571              	.LASF0:
- 572 0167 7369676E 		.ascii	"signed char\000"
- 572      65642063 
- 572      68617200 
- 573              	.LASF20:
- 574 0173 50574D5F 		.ascii	"PWM_1_Wakeup\000"
- 574      315F5761 
- 574      6B657570 
+ 569              	.LASF11:
+ 570 0156 666C6F61 		.ascii	"float\000"
+ 570      7400
+ 571              	.LASF2:
+ 572 015c 73686F72 		.ascii	"short int\000"
+ 572      7420696E 
+ 572      7400
+ 573              	.LASF17:
+ 574 0166 50574D5F 		.ascii	"PWM_3_SaveConfig\000"
+ 574      335F5361 
+ 574      7665436F 
+ 574      6E666967 
  574      00
- 575              	.LASF11:
- 576 0180 666C6F61 		.ascii	"float\000"
- 576      7400
- 577              	.LASF19:
- 578 0186 50574D5F 		.ascii	"PWM_1_Sleep\000"
- 578      315F536C 
- 578      65657000 
- 579              	.LASF2:
- 580 0192 73686F72 		.ascii	"short int\000"
- 580      7420696E 
- 580      7400
- 581              	.LASF23:
- 582 019c 474E5520 		.ascii	"GNU C 4.8.4 20140526 (release) [ARM/embedded-4_8-br"
- 582      4320342E 
- 582      382E3420 
- 582      32303134 
- 582      30353236 
- 583 01cf 616E6368 		.ascii	"anch revision 211358] -mcpu=cortex-m0 -mthumb -g -O"
- 583      20726576 
- 583      6973696F 
- 583      6E203231 
- 583      31333538 
- 584 0202 67202D66 		.ascii	"g -ffunction-sections\000"
- 584      66756E63 
- 584      74696F6E 
- 584      2D736563 
- 584      74696F6E 
- 585              	.LASF15:
- 586 0218 73697A65 		.ascii	"sizetype\000"
- 586      74797065 
- 586      00
+ 575              	.LASF20:
+ 576 0177 50574D5F 		.ascii	"PWM_3_Wakeup\000"
+ 576      335F5761 
+ 576      6B657570 
+ 576      00
+ 577              	.LASF23:
+ 578 0184 474E5520 		.ascii	"GNU C 4.8.4 20140526 (release) [ARM/embedded-4_8-br"
+ 578      4320342E 
+ 578      382E3420 
+ 578      32303134 
+ 578      30353236 
+ 579 01b7 616E6368 		.ascii	"anch revision 211358] -mcpu=cortex-m0 -mthumb -g -O"
+ 579      20726576 
+ 579      6973696F 
+ 579      6E203231 
+ 579      31333538 
+ 580 01ea 67202D66 		.ascii	"g -ffunction-sections\000"
+ 580      66756E63 
+ 580      74696F6E 
+ 580      2D736563 
+ 580      74696F6E 
+ 581              	.LASF15:
+ 582 0200 73697A65 		.ascii	"sizetype\000"
+ 582      74797065 
+ 582      00
+ 583              	.LASF22:
+ 584 0209 50574D5F 		.ascii	"PWM_3_Enable\000"
+ 584      335F456E 
+ 584      61626C65 
+ 584      00
+ 585              	.LASF21:
+ 586 0216 50574D5F 		.ascii	"PWM_3_Stop\000"
+ 586      335F5374 
+ 586      6F7000
  587              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 4.8.4 20140526 (release) [ARM/embedded-4_8-br

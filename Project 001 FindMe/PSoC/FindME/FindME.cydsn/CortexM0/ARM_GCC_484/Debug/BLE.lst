@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccLzzdCU.s 			page 1
+ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccMdDZbh.s 			page 1
 
 
    1              		.cpu cortex-m0
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccLzzdCU.s 			page 1
   31:.\Generated_Source\PSoC4/BLE.c **** ##Global Variables
   32:.\Generated_Source\PSoC4/BLE.c **** ***************************************/
   33:.\Generated_Source\PSoC4/BLE.c **** 
-ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccLzzdCU.s 			page 2
+ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccMdDZbh.s 			page 2
 
 
   34:.\Generated_Source\PSoC4/BLE.c **** /* Indicates whether the BLE has been initialized. The variable is initialized to
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccLzzdCU.s 			page 1
   88:.\Generated_Source\PSoC4/BLE.c **** {
   89:.\Generated_Source\PSoC4/BLE.c ****     0x02u,      /* uint8 discMode */
   90:.\Generated_Source\PSoC4/BLE.c ****     &cyBle_discoveryParam,
-ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccLzzdCU.s 			page 3
+ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccMdDZbh.s 			page 3
 
 
   91:.\Generated_Source\PSoC4/BLE.c ****     &cyBle_discoveryData,
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccLzzdCU.s 			page 1
  145:.\Generated_Source\PSoC4/BLE.c ****     #if(CYBLE_GAP_ROLE_PERIPHERAL || CYBLE_GAP_ROLE_BROADCASTER) 
  146:.\Generated_Source\PSoC4/BLE.c ****         cyBle_advertisingIntervalType = CYBLE_ADVERTISING_FAST; 
  147:.\Generated_Source\PSoC4/BLE.c ****     #endif /* (CYBLE_GAP_ROLE_PERIPHERAL || CYBLE_GAP_ROLE_BROADCASTER)  */
-ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccLzzdCU.s 			page 4
+ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccMdDZbh.s 			page 4
 
 
  148:.\Generated_Source\PSoC4/BLE.c ****     #if(CYBLE_GAP_ROLE_CENTRAL || CYBLE_GAP_ROLE_OBSERVER)
@@ -238,7 +238,7 @@ ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccLzzdCU.s 			page 1
  202:.\Generated_Source\PSoC4/BLE.c ****     
  203:.\Generated_Source\PSoC4/BLE.c ****     #ifdef CYBLE_BAS
  204:.\Generated_Source\PSoC4/BLE.c ****         CyBle_BasInit();
-ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccLzzdCU.s 			page 5
+ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccMdDZbh.s 			page 5
 
 
  205:.\Generated_Source\PSoC4/BLE.c ****     #endif /* CYBLE_BAS */
@@ -298,7 +298,7 @@ ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccLzzdCU.s 			page 1
  259:.\Generated_Source\PSoC4/BLE.c ****     #ifdef CYBLE_IAS
  260:.\Generated_Source\PSoC4/BLE.c ****         CyBle_IasInit();
  261:.\Generated_Source\PSoC4/BLE.c ****     #endif /* CYBLE_IAS */
-ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccLzzdCU.s 			page 6
+ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccMdDZbh.s 			page 6
 
 
  262:.\Generated_Source\PSoC4/BLE.c **** 
@@ -358,7 +358,7 @@ ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccLzzdCU.s 			page 1
  316:.\Generated_Source\PSoC4/BLE.c **** 
  317:.\Generated_Source\PSoC4/BLE.c ****  Calling this function results in the generation of CYBLE_EVT_STACK_ON event
  318:.\Generated_Source\PSoC4/BLE.c ****  on successful initialization of the BLE Stack.
-ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccLzzdCU.s 			page 7
+ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccMdDZbh.s 			page 7
 
 
  319:.\Generated_Source\PSoC4/BLE.c **** 
@@ -418,7 +418,7 @@ ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccLzzdCU.s 			page 1
  373:.\Generated_Source\PSoC4/BLE.c ****     
  374:.\Generated_Source\PSoC4/BLE.c ****         apiResult = CyBle_StackInit(&CyBle_EventHandler, cyBle_stackMemoryRam, CYBLE_STACK_RAM_SIZE
  375:.\Generated_Source\PSoC4/BLE.c ****             dataBuff, CYBLE_STACK_BUF_COUNT);
-ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccLzzdCU.s 			page 8
+ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccMdDZbh.s 			page 8
 
 
  376:.\Generated_Source\PSoC4/BLE.c ****     #else
@@ -478,7 +478,7 @@ ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccLzzdCU.s 			page 1
  430:.\Generated_Source\PSoC4/BLE.c **** 
  431:.\Generated_Source\PSoC4/BLE.c **** Summary:
  432:.\Generated_Source\PSoC4/BLE.c ****  This function writes the new bonding data from RAM to the dedicated Flash 
-ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccLzzdCU.s 			page 9
+ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccMdDZbh.s 			page 9
 
 
  433:.\Generated_Source\PSoC4/BLE.c ****  location as defined by the component. It performs data comparing between RAM
@@ -538,7 +538,7 @@ ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccLzzdCU.s 			page 1
  487:.\Generated_Source\PSoC4/BLE.c ****         apiResult = CyBle_StoreAppData(cyBle_attValuesCCCD, cyBle_attValuesCCCDFlashMemory[cyBle_co
  488:.\Generated_Source\PSoC4/BLE.c ****                                        CYBLE_GATT_DB_CCCD_COUNT, isForceWrite);
  489:.\Generated_Source\PSoC4/BLE.c ****         if(apiResult == CYBLE_ERROR_OK)
-ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccLzzdCU.s 			page 10
+ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccMdDZbh.s 			page 10
 
 
  490:.\Generated_Source\PSoC4/BLE.c ****         {
@@ -598,7 +598,7 @@ ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccLzzdCU.s 			page 1
  544:.\Generated_Source\PSoC4/BLE.c ****      <table>
  545:.\Generated_Source\PSoC4/BLE.c ****       Errors codes                        Description
  546:.\Generated_Source\PSoC4/BLE.c ****       ------------                        -----------
-ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccLzzdCU.s 			page 11
+ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccMdDZbh.s 			page 11
 
 
  547:.\Generated_Source\PSoC4/BLE.c ****       CYBLE_ERROR_OK                      On successful operation.
@@ -658,7 +658,7 @@ ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccLzzdCU.s 			page 1
  601:.\Generated_Source\PSoC4/BLE.c ****       This function can be used to exit from discovery mode. After the execution 
  602:.\Generated_Source\PSoC4/BLE.c ****       of this function, there will no longer be any advertisements. On stopping 
  603:.\Generated_Source\PSoC4/BLE.c ****       advertising, GAP Peripheral receives CYBLE_EVT_GAPP_ADVERTISEMENT_START_STOP
-ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccLzzdCU.s 			page 12
+ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccMdDZbh.s 			page 12
 
 
  604:.\Generated_Source\PSoC4/BLE.c ****       event. It is expected that the application layer tracks the function call 
@@ -718,7 +718,7 @@ ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccLzzdCU.s 			page 1
  658:.\Generated_Source\PSoC4/BLE.c ****             #endif /* CYBLE_SCN_PKT_INDEX_BLUETOOTH_DEVICE_ADDRESS */    
  659:.\Generated_Source\PSoC4/BLE.c ****         }
  660:.\Generated_Source\PSoC4/BLE.c ****         
-ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccLzzdCU.s 			page 13
+ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccMdDZbh.s 			page 13
 
 
  661:.\Generated_Source\PSoC4/BLE.c ****         if(destBuffer != NULL)
@@ -778,7 +778,7 @@ ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccLzzdCU.s 			page 1
  715:.\Generated_Source\PSoC4/BLE.c ****                                      CYBLE_EVT_GAPC_SCAN_PROGRESS_RESULT. This 
  716:.\Generated_Source\PSoC4/BLE.c ****                                      procedure requires the scanType sub-parameter
  717:.\Generated_Source\PSoC4/BLE.c ****                                      to be active scanning.
-ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccLzzdCU.s 			page 14
+ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccMdDZbh.s 			page 14
 
 
  718:.\Generated_Source\PSoC4/BLE.c ****       
@@ -838,7 +838,7 @@ ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccLzzdCU.s 			page 1
  772:.\Generated_Source\PSoC4/BLE.c ****                 cyBle_discoveryInfo.scanWindow = CYBLE_SLOW_SCAN_WINDOW;
  773:.\Generated_Source\PSoC4/BLE.c ****             }       
  774:.\Generated_Source\PSoC4/BLE.c ****             else /* Do not update scanning intervals */
-ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccLzzdCU.s 			page 15
+ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccMdDZbh.s 			page 15
 
 
  775:.\Generated_Source\PSoC4/BLE.c ****             {
@@ -898,7 +898,7 @@ ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccLzzdCU.s 			page 1
  829:.\Generated_Source\PSoC4/BLE.c ****     Summary:
  830:.\Generated_Source\PSoC4/BLE.c ****      This function is used to send a connection request to the remote device with
  831:.\Generated_Source\PSoC4/BLE.c ****      the connection parameters set in the component customizer. This function needs
-ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccLzzdCU.s 			page 16
+ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccMdDZbh.s 			page 16
 
 
  832:.\Generated_Source\PSoC4/BLE.c ****      to be called only once after the target device is discovered by 
@@ -958,7 +958,7 @@ ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccLzzdCU.s 			page 1
  886:.\Generated_Source\PSoC4/BLE.c ****             cyBle_connectionParameters.peerAddrType = address -> type;
  887:.\Generated_Source\PSoC4/BLE.c ****             apiResult = CyBle_GapcInitConnection(&cyBle_connectionParameters);
  888:.\Generated_Source\PSoC4/BLE.c ****             
-ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccLzzdCU.s 			page 17
+ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccMdDZbh.s 			page 17
 
 
  889:.\Generated_Source\PSoC4/BLE.c ****             if(CYBLE_ERROR_OK == apiResult)
@@ -1018,7 +1018,7 @@ ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccLzzdCU.s 			page 1
  943:.\Generated_Source\PSoC4/BLE.c ****         }
  944:.\Generated_Source\PSoC4/BLE.c ****         return (apiResult);
  945:.\Generated_Source\PSoC4/BLE.c ****     }    
-ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccLzzdCU.s 			page 18
+ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccMdDZbh.s 			page 18
 
 
  946:.\Generated_Source\PSoC4/BLE.c **** 
@@ -1078,7 +1078,7 @@ ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccLzzdCU.s 			page 1
   40              		.loc 1 984 0
   41 0006 1B49     		ldr	r1, .L16
   42              	.LVL3:
-ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccLzzdCU.s 			page 19
+ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccMdDZbh.s 			page 19
 
 
   43 0008 CE7F     		ldrb	r6, [r1, #31]
@@ -1138,7 +1138,7 @@ ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccLzzdCU.s 			page 1
   72 0024 DBB2     		uxtb	r3, r3
   73              	.LVL11:
 1001:.\Generated_Source\PSoC4/BLE.c ****                     if((CYBLE_SHORT_LOCAL_NAME == destBuffer[byteCounter]) || 
-ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccLzzdCU.s 			page 20
+ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccMdDZbh.s 			page 20
 
 
   74              		.loc 1 1001 0
@@ -1198,7 +1198,7 @@ ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccLzzdCU.s 			page 1
 1025:.\Generated_Source\PSoC4/BLE.c ****                 /* Increment byte counter to point to start of the local Name string */
 1026:.\Generated_Source\PSoC4/BLE.c ****                 byteCounter++;
  106              		.loc 1 1026 0
-ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccLzzdCU.s 			page 21
+ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccMdDZbh.s 			page 21
 
 
  107 0046 0133     		add	r3, r3, #1
@@ -1258,7 +1258,7 @@ ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccLzzdCU.s 			page 1
  145              		.loc 1 1038 0 discriminator 1
  146 006a 0023     		mov	r3, #0
  147              	.LVL28:
-ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccLzzdCU.s 			page 22
+ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccMdDZbh.s 			page 22
 
 
  148              	.L15:
@@ -1318,7 +1318,7 @@ ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccLzzdCU.s 			page 1
  195              	.LFB2:
  141:.\Generated_Source\PSoC4/BLE.c **** {
  196              		.loc 1 141 0
-ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccLzzdCU.s 			page 23
+ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccMdDZbh.s 			page 23
 
 
  197              		.cfi_startproc
@@ -1378,7 +1378,7 @@ ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccLzzdCU.s 			page 1
  244              		.cfi_offset 4, -8
  245              		.cfi_offset 14, -4
  246 0002 88B0     		sub	sp, sp, #32
-ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccLzzdCU.s 			page 24
+ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccMdDZbh.s 			page 24
 
 
  247              		.cfi_def_cfa_offset 40
@@ -1438,7 +1438,7 @@ ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccLzzdCU.s 			page 1
  292 0044 1A70     		strb	r2, [r3]
  392:.\Generated_Source\PSoC4/BLE.c ****             apiResult = CyBle_GattsDbRegister(cyBle_gattDB, CYBLE_GATT_DB_INDEX_COUNT, CYBLE_GATT_D
  293              		.loc 1 392 0
-ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccLzzdCU.s 			page 25
+ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccMdDZbh.s 			page 25
 
 
  294 0046 0A48     		ldr	r0, .L27+24
@@ -1498,7 +1498,7 @@ ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccLzzdCU.s 			page 1
  343              		.loc 1 420 0
  344 0006 0022     		mov	r2, #0
  345 0008 014B     		ldr	r3, .L30
-ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccLzzdCU.s 			page 26
+ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccMdDZbh.s 			page 26
 
 
  346 000a 1A70     		strb	r2, [r3]
@@ -1558,7 +1558,7 @@ ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccLzzdCU.s 			page 1
  393 0020 02D4     		bmi	.L37
  394 0022 02E0     		b	.L33
  395              	.LVL47:
-ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccLzzdCU.s 			page 27
+ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccMdDZbh.s 			page 27
 
 
  396              	.L36:
@@ -1618,7 +1618,7 @@ ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccLzzdCU.s 			page 1
  439              		.loc 1 491 0
  440 0056 034B     		ldr	r3, .L38
  441 0058 1978     		ldrb	r1, [r3]
-ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccLzzdCU.s 			page 28
+ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccMdDZbh.s 			page 28
 
 
  442 005a 0222     		mov	r2, #2
@@ -1678,7 +1678,7 @@ ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccLzzdCU.s 			page 1
  490 0018 0BD1     		bne	.L42
  566:.\Generated_Source\PSoC4/BLE.c ****                 cyBle_discoveryModeInfo.advTo = CYBLE_FAST_ADV_TIMEOUT;
  491              		.loc 1 566 0
-ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccLzzdCU.s 			page 29
+ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccMdDZbh.s 			page 29
 
 
  492 001a 1A4B     		ldr	r3, .L47+8
@@ -1738,7 +1738,7 @@ ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccLzzdCU.s 			page 1
  537 005c 0028     		cmp	r0, #0
  538 005e 0CD1     		bne	.L41
  584:.\Generated_Source\PSoC4/BLE.c ****                 cyBle_eventHandlerFlag |= CYBLE_START_FLAG;
-ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccLzzdCU.s 			page 30
+ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccMdDZbh.s 			page 30
 
 
  539              		.loc 1 584 0
@@ -1798,7 +1798,7 @@ ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccLzzdCU.s 			page 1
  589 0000 08B5     		push	{r3, lr}
  590              		.cfi_def_cfa_offset 8
  591              		.cfi_offset 3, -8
-ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccLzzdCU.s 			page 31
+ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccMdDZbh.s 			page 31
 
 
  592              		.cfi_offset 14, -4
@@ -1858,7 +1858,7 @@ ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccLzzdCU.s 			page 1
 1047:.\Generated_Source\PSoC4/BLE.c ****     /******************************************************************************
 1048:.\Generated_Source\PSoC4/BLE.c ****     ##Function Name: CyBle_GapSetLocalName
 1049:.\Generated_Source\PSoC4/BLE.c ****     *******************************************************************************
-ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccLzzdCU.s 			page 32
+ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccMdDZbh.s 			page 32
 
 
 1050:.\Generated_Source\PSoC4/BLE.c ****     Summary:
@@ -1918,7 +1918,7 @@ ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccLzzdCU.s 			page 1
 1088:.\Generated_Source\PSoC4/BLE.c ****             /* First need to get the maximum length of the characteristic data in the GATT
 1089:.\Generated_Source\PSoC4/BLE.c ****                 database to make sure there is enough place for the data. The length
 1090:.\Generated_Source\PSoC4/BLE.c ****                 can't be longer than 248, so only the LSB of 16 bit of length is to
-ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccLzzdCU.s 			page 33
+ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccMdDZbh.s 			page 33
 
 
 1091:.\Generated_Source\PSoC4/BLE.c ****                 be used. */
@@ -1978,7 +1978,7 @@ ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccLzzdCU.s 			page 1
 1110:.\Generated_Source\PSoC4/BLE.c ****                 CyBle_ChangeAdLocalName(name, 0u);
  686              		.loc 1 1110 0
  687 002e 201C     		mov	r0, r4
-ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccLzzdCU.s 			page 34
+ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccMdDZbh.s 			page 34
 
 
  688              	.LVL74:
@@ -2038,7 +2038,7 @@ ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccLzzdCU.s 			page 1
 1126:.\Generated_Source\PSoC4/BLE.c ****  
 1127:.\Generated_Source\PSoC4/BLE.c ****     Summary:
 1128:.\Generated_Source\PSoC4/BLE.c ****      This API is used to read the local device name - a Characteristic of the 
-ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccLzzdCU.s 			page 35
+ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccMdDZbh.s 			page 35
 
 
 1129:.\Generated_Source\PSoC4/BLE.c ****      GAP Service.
@@ -2098,7 +2098,7 @@ ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccLzzdCU.s 			page 1
 1167:.\Generated_Source\PSoC4/BLE.c ****             charLen = (uint8)CYBLE_GATT_DB_ATTR_GET_ATTR_GEN_LEN(CYBLE_GAP_DEVICE_NAME_INDEX + 1u);
  742              		.loc 1 1167 0
  743 000c 1978     		ldrb	r1, [r3]
-ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccLzzdCU.s 			page 36
+ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccMdDZbh.s 			page 36
 
 
  744              	.LVL84:
@@ -2158,7 +2158,7 @@ ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccLzzdCU.s 			page 1
 1182:.\Generated_Source\PSoC4/BLE.c ****         
 1183:.\Generated_Source\PSoC4/BLE.c ****         return(apiResult);
 1184:.\Generated_Source\PSoC4/BLE.c ****     }
-ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccLzzdCU.s 			page 37
+ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccMdDZbh.s 			page 37
 
 
  781              		.loc 1 1184 0
@@ -2218,7 +2218,7 @@ ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccLzzdCU.s 			page 1
  813              		.size	CyBle_Get16ByPtr, .-CyBle_Get16ByPtr
  814 000a C046     		.section	.text.CyBle_Set16ByPtr,"ax",%progbits
  815              		.align	2
-ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccLzzdCU.s 			page 38
+ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccMdDZbh.s 			page 38
 
 
  816              		.global	CyBle_Set16ByPtr
@@ -2278,7 +2278,7 @@ ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccLzzdCU.s 			page 1
  848              		.align	2
  849              		.set	.LANCHOR2,. + 0
  850              	.LC0:
-ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccLzzdCU.s 			page 39
+ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccMdDZbh.s 			page 39
 
 
  851 0000 1B00     		.short	27
@@ -2338,7 +2338,7 @@ ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccLzzdCU.s 			page 1
  905 001e 00       		.byte	0
  906 001f 07       		.byte	7
  907              		.type	cyBle_scanRspData, %object
-ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccLzzdCU.s 			page 40
+ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccMdDZbh.s 			page 40
 
 
  908              		.size	cyBle_scanRspData, 32
@@ -2398,7 +2398,7 @@ ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccLzzdCU.s 			page 1
  962 005b 50       		.byte	80
  963 005c A0       		.byte	-96
  964 005d 00       		.byte	0
-ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccLzzdCU.s 			page 41
+ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccMdDZbh.s 			page 41
 
 
  965 005e 00       		.byte	0
@@ -2448,7 +2448,7 @@ ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccLzzdCU.s 			page 1
  1009 000c 33020000 		.4byte	.LASF212
  1010 0010 01       		.byte	0x1
  1011 0011 B9000000 		.4byte	.LASF213
- 1012 0015 00110000 		.4byte	.LASF214
+ 1012 0015 120F0000 		.4byte	.LASF214
  1013 0019 00000000 		.4byte	.Ldebug_ranges0+0
  1014 001d 00000000 		.4byte	0
  1015 0021 00000000 		.4byte	.Ldebug_line0
@@ -2458,19 +2458,19 @@ ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccLzzdCU.s 			page 1
  1019 0028 39040000 		.4byte	.LASF0
  1020 002c 02       		.uleb128 0x2
  1021 002d 01       		.byte	0x1
-ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccLzzdCU.s 			page 42
+ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccMdDZbh.s 			page 42
 
 
  1022 002e 08       		.byte	0x8
- 1023 002f 430D0000 		.4byte	.LASF1
+ 1023 002f 270D0000 		.4byte	.LASF1
  1024 0033 02       		.uleb128 0x2
  1025 0034 02       		.byte	0x2
  1026 0035 05       		.byte	0x5
- 1027 0036 7B0D0000 		.4byte	.LASF2
+ 1027 0036 5F0D0000 		.4byte	.LASF2
  1028 003a 02       		.uleb128 0x2
  1029 003b 02       		.byte	0x2
  1030 003c 07       		.byte	0x7
- 1031 003d 47100000 		.4byte	.LASF3
+ 1031 003d 55100000 		.4byte	.LASF3
  1032 0041 02       		.uleb128 0x2
  1033 0042 04       		.byte	0x4
  1034 0043 05       		.byte	0x5
@@ -2478,7 +2478,7 @@ ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccLzzdCU.s 			page 1
  1036 0048 02       		.uleb128 0x2
  1037 0049 04       		.byte	0x4
  1038 004a 07       		.byte	0x7
- 1039 004b 26080000 		.4byte	.LASF5
+ 1039 004b 20080000 		.4byte	.LASF5
  1040 004f 02       		.uleb128 0x2
  1041 0050 08       		.byte	0x8
  1042 0051 05       		.byte	0x5
@@ -2486,7 +2486,7 @@ ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccLzzdCU.s 			page 1
  1044 0056 02       		.uleb128 0x2
  1045 0057 08       		.byte	0x8
  1046 0058 07       		.byte	0x7
- 1047 0059 79070000 		.4byte	.LASF7
+ 1047 0059 73070000 		.4byte	.LASF7
  1048 005d 03       		.uleb128 0x3
  1049 005e 04       		.byte	0x4
  1050 005f 05       		.byte	0x5
@@ -2494,14 +2494,14 @@ ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccLzzdCU.s 			page 1
  1052 0064 02       		.uleb128 0x2
  1053 0065 04       		.byte	0x4
  1054 0066 07       		.byte	0x7
- 1055 0067 680F0000 		.4byte	.LASF8
+ 1055 0067 760F0000 		.4byte	.LASF8
  1056 006b 04       		.uleb128 0x4
  1057 006c EA050000 		.4byte	.LASF9
  1058 0070 02       		.byte	0x2
  1059 0071 B3       		.byte	0xb3
  1060 0072 2C000000 		.4byte	0x2c
  1061 0076 04       		.uleb128 0x4
- 1062 0077 510D0000 		.4byte	.LASF10
+ 1062 0077 350D0000 		.4byte	.LASF10
  1063 007b 02       		.byte	0x2
  1064 007c B4       		.byte	0xb4
  1065 007d 3A000000 		.4byte	0x3a
@@ -2513,29 +2513,29 @@ ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccLzzdCU.s 			page 1
  1071 008c 02       		.uleb128 0x2
  1072 008d 04       		.byte	0x4
  1073 008e 04       		.byte	0x4
- 1074 008f 8F0C0000 		.4byte	.LASF12
+ 1074 008f 730C0000 		.4byte	.LASF12
  1075 0093 02       		.uleb128 0x2
  1076 0094 08       		.byte	0x8
  1077 0095 04       		.byte	0x4
  1078 0096 41060000 		.4byte	.LASF13
-ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccLzzdCU.s 			page 43
+ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccMdDZbh.s 			page 43
 
 
  1079 009a 04       		.uleb128 0x4
- 1080 009b CE0F0000 		.4byte	.LASF14
+ 1080 009b DC0F0000 		.4byte	.LASF14
  1081 009f 02       		.byte	0x2
  1082 00a0 C4       		.byte	0xc4
  1083 00a1 A5000000 		.4byte	0xa5
  1084 00a5 02       		.uleb128 0x2
  1085 00a6 01       		.byte	0x1
  1086 00a7 08       		.byte	0x8
- 1087 00a8 000F0000 		.4byte	.LASF15
+ 1087 00a8 E40E0000 		.4byte	.LASF15
  1088 00ac 05       		.uleb128 0x5
  1089 00ad 6B000000 		.4byte	0x6b
  1090 00b1 02       		.uleb128 0x2
  1091 00b2 04       		.byte	0x4
  1092 00b3 07       		.byte	0x7
- 1093 00b4 390B0000 		.4byte	.LASF16
+ 1093 00b4 1D0B0000 		.4byte	.LASF16
  1094 00b8 06       		.uleb128 0x6
  1095 00b9 04       		.byte	0x4
  1096 00ba 04       		.uleb128 0x4
@@ -2559,7 +2559,7 @@ ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccLzzdCU.s 			page 1
  1114 00de 7A       		.byte	0x7a
  1115 00df 60020000 		.4byte	0x260
  1116 00e3 0B       		.uleb128 0xb
- 1117 00e4 03090000 		.4byte	.LASF18
+ 1117 00e4 FD080000 		.4byte	.LASF18
  1118 00e8 00       		.sleb128 0
  1119 00e9 0B       		.uleb128 0xb
  1120 00ea 5A040000 		.4byte	.LASF19
@@ -2568,7 +2568,7 @@ ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccLzzdCU.s 			page 1
  1123 00f0 FC010000 		.4byte	.LASF20
  1124 00f4 02       		.sleb128 2
  1125 00f5 0B       		.uleb128 0xb
- 1126 00f6 2E100000 		.4byte	.LASF21
+ 1126 00f6 3C100000 		.4byte	.LASF21
  1127 00fa 03       		.sleb128 3
  1128 00fb 0B       		.uleb128 0xb
  1129 00fc F7020000 		.4byte	.LASF22
@@ -2577,8 +2577,8 @@ ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccLzzdCU.s 			page 1
  1132 0102 23000000 		.4byte	.LASF23
  1133 0106 05       		.sleb128 5
  1134 0107 0B       		.uleb128 0xb
- 1135 0108 870A0000 		.4byte	.LASF24
-ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccLzzdCU.s 			page 44
+ 1135 0108 6B0A0000 		.4byte	.LASF24
+ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccMdDZbh.s 			page 44
 
 
  1136 010c 20       		.sleb128 32
@@ -2586,25 +2586,25 @@ ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccLzzdCU.s 			page 1
  1138 010e CD040000 		.4byte	.LASF25
  1139 0112 21       		.sleb128 33
  1140 0113 0B       		.uleb128 0xb
- 1141 0114 46090000 		.4byte	.LASF26
+ 1141 0114 40090000 		.4byte	.LASF26
  1142 0118 22       		.sleb128 34
  1143 0119 0B       		.uleb128 0xb
- 1144 011a 060A0000 		.4byte	.LASF27
+ 1144 011a 000A0000 		.4byte	.LASF27
  1145 011e 23       		.sleb128 35
  1146 011f 0B       		.uleb128 0xb
- 1147 0120 AC0B0000 		.4byte	.LASF28
+ 1147 0120 900B0000 		.4byte	.LASF28
  1148 0124 24       		.sleb128 36
  1149 0125 0B       		.uleb128 0xb
- 1150 0126 670B0000 		.4byte	.LASF29
+ 1150 0126 4B0B0000 		.4byte	.LASF29
  1151 012a 25       		.sleb128 37
  1152 012b 0B       		.uleb128 0xb
  1153 012c 81050000 		.4byte	.LASF30
  1154 0130 26       		.sleb128 38
  1155 0131 0B       		.uleb128 0xb
- 1156 0132 6A090000 		.4byte	.LASF31
+ 1156 0132 64090000 		.4byte	.LASF31
  1157 0136 27       		.sleb128 39
  1158 0137 0B       		.uleb128 0xb
- 1159 0138 2E0F0000 		.4byte	.LASF32
+ 1159 0138 79100000 		.4byte	.LASF32
  1160 013c 28       		.sleb128 40
  1161 013d 0B       		.uleb128 0xb
  1162 013e B9030000 		.4byte	.LASF33
@@ -2622,7 +2622,7 @@ ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccLzzdCU.s 			page 1
  1174 0156 E1060000 		.4byte	.LASF37
  1175 015a C000     		.sleb128 64
  1176 015c 0B       		.uleb128 0xb
- 1177 015d 320A0000 		.4byte	.LASF38
+ 1177 015d 260A0000 		.4byte	.LASF38
  1178 0161 C100     		.sleb128 65
  1179 0163 0B       		.uleb128 0xb
  1180 0164 1B130000 		.4byte	.LASF39
@@ -2631,19 +2631,19 @@ ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccLzzdCU.s 			page 1
  1183 016b CC050000 		.4byte	.LASF40
  1184 016f C300     		.sleb128 67
  1185 0171 0B       		.uleb128 0xb
- 1186 0172 68080000 		.4byte	.LASF41
+ 1186 0172 62080000 		.4byte	.LASF41
  1187 0176 C400     		.sleb128 68
  1188 0178 0B       		.uleb128 0xb
- 1189 0179 680C0000 		.4byte	.LASF42
+ 1189 0179 4C0C0000 		.4byte	.LASF42
  1190 017d C500     		.sleb128 69
  1191 017f 0B       		.uleb128 0xb
- 1192 0180 000B0000 		.4byte	.LASF43
-ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccLzzdCU.s 			page 45
+ 1192 0180 E40A0000 		.4byte	.LASF43
+ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccMdDZbh.s 			page 45
 
 
  1193 0184 C600     		.sleb128 70
  1194 0186 0B       		.uleb128 0xb
- 1195 0187 1A090000 		.4byte	.LASF44
+ 1195 0187 14090000 		.4byte	.LASF44
  1196 018b C700     		.sleb128 71
  1197 018d 0B       		.uleb128 0xb
  1198 018e 49120000 		.4byte	.LASF45
@@ -2652,22 +2652,22 @@ ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccLzzdCU.s 			page 1
  1201 0195 EF040000 		.4byte	.LASF46
  1202 0199 C900     		.sleb128 73
  1203 019b 0B       		.uleb128 0xb
- 1204 019c 84110000 		.4byte	.LASF47
+ 1204 019c 79110000 		.4byte	.LASF47
  1205 01a0 CA00     		.sleb128 74
  1206 01a2 0B       		.uleb128 0xb
  1207 01a3 6F010000 		.4byte	.LASF48
  1208 01a7 CB00     		.sleb128 75
  1209 01a9 0B       		.uleb128 0xb
- 1210 01aa 4E080000 		.4byte	.LASF49
+ 1210 01aa 48080000 		.4byte	.LASF49
  1211 01ae CC00     		.sleb128 76
  1212 01b0 0B       		.uleb128 0xb
- 1213 01b1 920B0000 		.4byte	.LASF50
+ 1213 01b1 760B0000 		.4byte	.LASF50
  1214 01b5 CD00     		.sleb128 77
  1215 01b7 0B       		.uleb128 0xb
  1216 01b8 32050000 		.4byte	.LASF51
  1217 01bc CE00     		.sleb128 78
  1218 01be 0B       		.uleb128 0xb
- 1219 01bf 1D0E0000 		.4byte	.LASF52
+ 1219 01bf 010E0000 		.4byte	.LASF52
  1220 01c3 CF00     		.sleb128 79
  1221 01c5 0B       		.uleb128 0xb
  1222 01c6 8E010000 		.4byte	.LASF53
@@ -2676,40 +2676,40 @@ ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccLzzdCU.s 			page 1
  1225 01cd 03060000 		.4byte	.LASF54
  1226 01d1 D100     		.sleb128 81
  1227 01d3 0B       		.uleb128 0xb
- 1228 01d4 F00B0000 		.4byte	.LASF55
+ 1228 01d4 D40B0000 		.4byte	.LASF55
  1229 01d8 D200     		.sleb128 82
  1230 01da 0B       		.uleb128 0xb
- 1231 01db 850D0000 		.4byte	.LASF56
+ 1231 01db 690D0000 		.4byte	.LASF56
  1232 01df D300     		.sleb128 83
  1233 01e1 0B       		.uleb128 0xb
- 1234 01e2 B40E0000 		.4byte	.LASF57
+ 1234 01e2 980E0000 		.4byte	.LASF57
  1235 01e6 D400     		.sleb128 84
  1236 01e8 0B       		.uleb128 0xb
- 1237 01e9 86080000 		.4byte	.LASF58
+ 1237 01e9 80080000 		.4byte	.LASF58
  1238 01ed D500     		.sleb128 85
  1239 01ef 0B       		.uleb128 0xb
- 1240 01f0 96070000 		.4byte	.LASF59
+ 1240 01f0 90070000 		.4byte	.LASF59
  1241 01f4 D600     		.sleb128 86
  1242 01f6 0B       		.uleb128 0xb
- 1243 01f7 820F0000 		.4byte	.LASF60
+ 1243 01f7 900F0000 		.4byte	.LASF60
  1244 01fb D700     		.sleb128 87
  1245 01fd 0B       		.uleb128 0xb
  1246 01fe FB060000 		.4byte	.LASF61
  1247 0202 F000     		.sleb128 112
  1248 0204 0B       		.uleb128 0xb
  1249 0205 DB120000 		.4byte	.LASF62
-ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccLzzdCU.s 			page 46
+ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccMdDZbh.s 			page 46
 
 
  1250 0209 F100     		.sleb128 113
  1251 020b 0B       		.uleb128 0xb
- 1252 020c 6B0A0000 		.4byte	.LASF63
+ 1252 020c 4F0A0000 		.4byte	.LASF63
  1253 0210 F200     		.sleb128 114
  1254 0212 0B       		.uleb128 0xb
- 1255 0213 E20A0000 		.4byte	.LASF64
+ 1255 0213 C60A0000 		.4byte	.LASF64
  1256 0217 F300     		.sleb128 115
  1257 0219 0B       		.uleb128 0xb
- 1258 021a 4A0C0000 		.4byte	.LASF65
+ 1258 021a 2E0C0000 		.4byte	.LASF65
  1259 021e F400     		.sleb128 116
  1260 0220 0B       		.uleb128 0xb
  1261 0221 48060000 		.4byte	.LASF66
@@ -2733,7 +2733,7 @@ ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccLzzdCU.s 			page 1
  1279 024b B2120000 		.4byte	.LASF72
  1280 024f FA01     		.sleb128 250
  1281 0251 0B       		.uleb128 0xb
- 1282 0252 C20D0000 		.4byte	.LASF73
+ 1282 0252 A60D0000 		.4byte	.LASF73
  1283 0256 FB01     		.sleb128 251
  1284 0258 0B       		.uleb128 0xb
  1285 0259 C4060000 		.4byte	.LASF74
@@ -2751,37 +2751,37 @@ ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccLzzdCU.s 			page 1
  1297 0270 72060000 		.4byte	.LASF76
  1298 0274 01       		.sleb128 1
  1299 0275 0B       		.uleb128 0xb
- 1300 0276 6B100000 		.4byte	.LASF77
+ 1300 0276 9B100000 		.4byte	.LASF77
  1301 027a 02       		.sleb128 2
  1302 027b 0B       		.uleb128 0xb
  1303 027c 86000000 		.4byte	.LASF78
  1304 0280 03       		.sleb128 3
  1305 0281 0B       		.uleb128 0xb
  1306 0282 D4020000 		.4byte	.LASF79
-ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccLzzdCU.s 			page 47
+ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccMdDZbh.s 			page 47
 
 
  1307 0286 04       		.sleb128 4
  1308 0287 0B       		.uleb128 0xb
- 1309 0288 B8070000 		.4byte	.LASF80
+ 1309 0288 B2070000 		.4byte	.LASF80
  1310 028c 05       		.sleb128 5
  1311 028d 0B       		.uleb128 0xb
- 1312 028e E60D0000 		.4byte	.LASF81
+ 1312 028e CA0D0000 		.4byte	.LASF81
  1313 0292 06       		.sleb128 6
  1314 0293 0B       		.uleb128 0xb
  1315 0294 8F040000 		.4byte	.LASF82
  1316 0298 07       		.sleb128 7
  1317 0299 0B       		.uleb128 0xb
- 1318 029a D50E0000 		.4byte	.LASF83
+ 1318 029a B90E0000 		.4byte	.LASF83
  1319 029e 08       		.sleb128 8
  1320 029f 0B       		.uleb128 0xb
  1321 02a0 70120000 		.4byte	.LASF84
  1322 02a4 09       		.sleb128 9
  1323 02a5 0B       		.uleb128 0xb
- 1324 02a6 130D0000 		.4byte	.LASF85
+ 1324 02a6 F70C0000 		.4byte	.LASF85
  1325 02aa 0A       		.sleb128 10
  1326 02ab 0B       		.uleb128 0xb
- 1327 02ac 050F0000 		.4byte	.LASF86
+ 1327 02ac E90E0000 		.4byte	.LASF86
  1328 02b0 0B       		.sleb128 11
  1329 02b1 0B       		.uleb128 0xb
  1330 02b2 7E030000 		.4byte	.LASF87
@@ -2790,13 +2790,13 @@ ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccLzzdCU.s 			page 1
  1333 02b8 AF020000 		.4byte	.LASF88
  1334 02bc 0D       		.sleb128 13
  1335 02bd 0B       		.uleb128 0xb
- 1336 02be FD070000 		.4byte	.LASF89
+ 1336 02be F7070000 		.4byte	.LASF89
  1337 02c2 0E       		.sleb128 14
  1338 02c3 0B       		.uleb128 0xb
- 1339 02c4 FF110000 		.4byte	.LASF90
+ 1339 02c4 F4110000 		.4byte	.LASF90
  1340 02c8 0F       		.sleb128 15
  1341 02c9 0B       		.uleb128 0xb
- 1342 02ca F90F0000 		.4byte	.LASF91
+ 1342 02ca 07100000 		.4byte	.LASF91
  1343 02ce 10       		.sleb128 16
  1344 02cf 0B       		.uleb128 0xb
  1345 02d0 95030000 		.4byte	.LASF92
@@ -2811,32 +2811,32 @@ ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccLzzdCU.s 			page 1
  1354 02e2 6D040000 		.4byte	.LASF95
  1355 02e6 27       		.sleb128 39
  1356 02e7 0B       		.uleb128 0xb
- 1357 02e8 D40F0000 		.4byte	.LASF96
+ 1357 02e8 E20F0000 		.4byte	.LASF96
  1358 02ec 28       		.sleb128 40
  1359 02ed 0B       		.uleb128 0xb
- 1360 02ee E3110000 		.4byte	.LASF97
+ 1360 02ee D8110000 		.4byte	.LASF97
  1361 02f2 29       		.sleb128 41
  1362 02f3 0B       		.uleb128 0xb
- 1363 02f4 D20A0000 		.4byte	.LASF98
-ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccLzzdCU.s 			page 48
+ 1363 02f4 B60A0000 		.4byte	.LASF98
+ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccMdDZbh.s 			page 48
 
 
  1364 02f8 FF01     		.sleb128 255
  1365 02fa 0B       		.uleb128 0xb
- 1366 02fb EA080000 		.4byte	.LASF99
+ 1366 02fb E4080000 		.4byte	.LASF99
  1367 02ff 8002     		.sleb128 256
  1368 0301 0B       		.uleb128 0xb
- 1369 0302 110C0000 		.4byte	.LASF100
+ 1369 0302 F50B0000 		.4byte	.LASF100
  1370 0306 8102     		.sleb128 257
  1371 0308 0B       		.uleb128 0xb
- 1372 0309 580D0000 		.4byte	.LASF101
+ 1372 0309 3C0D0000 		.4byte	.LASF101
  1373 030d 8202     		.sleb128 258
  1374 030f 0B       		.uleb128 0xb
  1375 0310 08050000 		.4byte	.LASF102
  1376 0314 8302     		.sleb128 259
  1377 0316 00       		.byte	0
  1378 0317 0D       		.uleb128 0xd
- 1379 0318 D20B0000 		.4byte	.LASF103
+ 1379 0318 B60B0000 		.4byte	.LASF103
  1380 031c 03       		.byte	0x3
  1381 031d 2F02     		.2byte	0x22f
  1382 031f 60020000 		.4byte	0x260
@@ -2876,16 +2876,16 @@ ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccLzzdCU.s 			page 1
  1416 0366 B702     		.2byte	0x2b7
  1417 0368 87030000 		.4byte	0x387
  1418 036c 0F       		.uleb128 0xf
- 1419 036d AB0F0000 		.4byte	.LASF107
+ 1419 036d B90F0000 		.4byte	.LASF107
  1420 0371 03       		.byte	0x3
-ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccLzzdCU.s 			page 49
+ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccMdDZbh.s 			page 49
 
 
  1421 0372 B902     		.2byte	0x2b9
  1422 0374 76000000 		.4byte	0x76
  1423 0378 00       		.byte	0
  1424 0379 0F       		.uleb128 0xf
- 1425 037a DE080000 		.4byte	.LASF108
+ 1425 037a D8080000 		.4byte	.LASF108
  1426 037e 03       		.byte	0x3
  1427 037f BA02     		.2byte	0x2ba
  1428 0381 6B000000 		.4byte	0x6b
@@ -2911,14 +2911,14 @@ ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccLzzdCU.s 			page 1
  1448 03a8 C2010000 		.4byte	.LASF112
  1449 03ac 02       		.sleb128 2
  1450 03ad 0B       		.uleb128 0xb
- 1451 03ae 5A110000 		.4byte	.LASF113
+ 1451 03ae 4F110000 		.4byte	.LASF113
  1452 03b2 03       		.sleb128 3
  1453 03b3 0B       		.uleb128 0xb
- 1454 03b4 470E0000 		.4byte	.LASF114
+ 1454 03b4 2B0E0000 		.4byte	.LASF114
  1455 03b8 04       		.sleb128 4
  1456 03b9 00       		.byte	0
  1457 03ba 04       		.uleb128 0x4
- 1458 03bb 68070000 		.4byte	.LASF115
+ 1458 03bb 30110000 		.4byte	.LASF115
  1459 03bf 04       		.byte	0x4
  1460 03c0 9A       		.byte	0x9a
  1461 03c1 93030000 		.4byte	0x393
@@ -2928,7 +2928,7 @@ ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccLzzdCU.s 			page 1
  1465 03c8 6801     		.2byte	0x168
  1466 03ca 37040000 		.4byte	0x437
  1467 03ce 0F       		.uleb128 0xf
- 1468 03cf 3C0E0000 		.4byte	.LASF116
+ 1468 03cf 200E0000 		.4byte	.LASF116
  1469 03d3 04       		.byte	0x4
  1470 03d4 6E01     		.2byte	0x16e
  1471 03d6 76000000 		.4byte	0x76
@@ -2938,7 +2938,7 @@ ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccLzzdCU.s 			page 1
  1475 03e0 04       		.byte	0x4
  1476 03e1 7401     		.2byte	0x174
  1477 03e3 76000000 		.4byte	0x76
-ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccLzzdCU.s 			page 50
+ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccMdDZbh.s 			page 50
 
 
  1478 03e7 02       		.byte	0x2
@@ -2949,13 +2949,13 @@ ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccLzzdCU.s 			page 1
  1483 03f0 BA030000 		.4byte	0x3ba
  1484 03f4 04       		.byte	0x4
  1485 03f5 0F       		.uleb128 0xf
- 1486 03f6 5B0B0000 		.4byte	.LASF119
+ 1486 03f6 3F0B0000 		.4byte	.LASF119
  1487 03fa 04       		.byte	0x4
  1488 03fb 8301     		.2byte	0x183
  1489 03fd 6B000000 		.4byte	0x6b
  1490 0401 05       		.byte	0x5
  1491 0402 0F       		.uleb128 0xf
- 1492 0403 040D0000 		.4byte	.LASF120
+ 1492 0403 E80C0000 		.4byte	.LASF120
  1493 0407 04       		.byte	0x4
  1494 0408 8A01     		.2byte	0x18a
  1495 040a 6B000000 		.4byte	0x6b
@@ -2980,7 +2980,7 @@ ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccLzzdCU.s 			page 1
  1514 0435 0E       		.byte	0xe
  1515 0436 00       		.byte	0
  1516 0437 0D       		.uleb128 0xd
- 1517 0438 B60F0000 		.4byte	.LASF124
+ 1517 0438 C40F0000 		.4byte	.LASF124
  1518 043c 04       		.byte	0x4
  1519 043d A601     		.2byte	0x1a6
  1520 043f C5030000 		.4byte	0x3c5
@@ -2990,15 +2990,15 @@ ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccLzzdCU.s 			page 1
  1524 0446 A901     		.2byte	0x1a9
  1525 0448 67040000 		.4byte	0x467
  1526 044c 0F       		.uleb128 0xf
- 1527 044d 720E0000 		.4byte	.LASF125
+ 1527 044d 560E0000 		.4byte	.LASF125
  1528 0451 04       		.byte	0x4
  1529 0452 AC01     		.2byte	0x1ac
  1530 0454 67040000 		.4byte	0x467
  1531 0458 00       		.byte	0
  1532 0459 0F       		.uleb128 0xf
- 1533 045a 3E120000 		.4byte	.LASF126
+ 1533 045a 68070000 		.4byte	.LASF126
  1534 045e 04       		.byte	0x4
-ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccLzzdCU.s 			page 51
+ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccMdDZbh.s 			page 51
 
 
  1535 045f AF01     		.2byte	0x1af
@@ -3013,7 +3013,7 @@ ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccLzzdCU.s 			page 1
  1544 0475 1E       		.byte	0x1e
  1545 0476 00       		.byte	0
  1546 0477 0D       		.uleb128 0xd
- 1547 0478 C7080000 		.4byte	.LASF127
+ 1547 0478 C1080000 		.4byte	.LASF127
  1548 047c 04       		.byte	0x4
  1549 047d B101     		.2byte	0x1b1
  1550 047f 43040000 		.4byte	0x443
@@ -3029,7 +3029,7 @@ ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccLzzdCU.s 			page 1
  1560 0494 67040000 		.4byte	0x467
  1561 0498 00       		.byte	0
  1562 0499 0F       		.uleb128 0xf
- 1563 049a BC090000 		.4byte	.LASF129
+ 1563 049a B6090000 		.4byte	.LASF129
  1564 049e 04       		.byte	0x4
  1565 049f BB01     		.2byte	0x1bb
  1566 04a1 6B000000 		.4byte	0x6b
@@ -3052,16 +3052,16 @@ ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccLzzdCU.s 			page 1
  1583 04c4 6B000000 		.4byte	0x6b
  1584 04c8 00       		.byte	0
  1585 04c9 0F       		.uleb128 0xf
- 1586 04ca F7100000 		.4byte	.LASF132
+ 1586 04ca 27110000 		.4byte	.LASF132
  1587 04ce 04       		.byte	0x4
  1588 04cf CB01     		.2byte	0x1cb
  1589 04d1 FE040000 		.4byte	0x4fe
  1590 04d5 04       		.byte	0x4
  1591 04d6 0F       		.uleb128 0xf
-ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccLzzdCU.s 			page 52
+ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccMdDZbh.s 			page 52
 
 
- 1592 04d7 720E0000 		.4byte	.LASF125
+ 1592 04d7 560E0000 		.4byte	.LASF125
  1593 04db 04       		.byte	0x4
  1594 04dc CD01     		.2byte	0x1cd
  1595 04de 04050000 		.4byte	0x504
@@ -3089,7 +3089,7 @@ ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccLzzdCU.s 			page 1
  1617 050b 04       		.byte	0x4
  1618 050c A7040000 		.4byte	0x4a7
  1619 0510 0D       		.uleb128 0xd
- 1620 0511 DB100000 		.4byte	.LASF134
+ 1620 0511 0B110000 		.4byte	.LASF134
  1621 0515 04       		.byte	0x4
  1622 0516 DB01     		.2byte	0x1db
  1623 0518 B3040000 		.4byte	0x4b3
@@ -3108,7 +3108,7 @@ ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccLzzdCU.s 			page 1
  1636 0533 6B000000 		.4byte	0x6b
  1637 0537 00       		.byte	0
  1638 0538 0F       		.uleb128 0xf
- 1639 0539 2C0A0000 		.4byte	.LASF136
+ 1639 0539 410A0000 		.4byte	.LASF136
  1640 053d 05       		.byte	0x5
  1641 053e 7201     		.2byte	0x172
  1642 0540 6B000000 		.4byte	0x6b
@@ -3118,7 +3118,7 @@ ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccLzzdCU.s 			page 1
  1646 0547 72000000 		.4byte	.LASF137
  1647 054b 05       		.byte	0x5
  1648 054c 7401     		.2byte	0x174
-ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccLzzdCU.s 			page 53
+ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccMdDZbh.s 			page 53
 
 
  1649 054e 22050000 		.4byte	0x522
@@ -3128,20 +3128,20 @@ ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccLzzdCU.s 			page 1
  1653 0555 BC       		.byte	0xbc
  1654 0556 73050000 		.4byte	0x573
  1655 055a 13       		.uleb128 0x13
- 1656 055b ED090000 		.4byte	.LASF138
+ 1656 055b E7090000 		.4byte	.LASF138
  1657 055f 06       		.byte	0x6
  1658 0560 BF       		.byte	0xbf
  1659 0561 76000000 		.4byte	0x76
  1660 0565 00       		.byte	0
  1661 0566 13       		.uleb128 0x13
- 1662 0567 3C0C0000 		.4byte	.LASF139
+ 1662 0567 200C0000 		.4byte	.LASF139
  1663 056b 06       		.byte	0x6
  1664 056c C4       		.byte	0xc4
  1665 056d B8000000 		.4byte	0xb8
  1666 0571 04       		.byte	0x4
  1667 0572 00       		.byte	0
  1668 0573 04       		.uleb128 0x4
- 1669 0574 B1100000 		.4byte	.LASF140
+ 1669 0574 E1100000 		.4byte	.LASF140
  1670 0578 06       		.byte	0x6
  1671 0579 C6       		.byte	0xc6
  1672 057a 52050000 		.4byte	0x552
@@ -3151,13 +3151,13 @@ ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccLzzdCU.s 			page 1
  1676 0581 C9       		.byte	0xc9
  1677 0582 9F050000 		.4byte	0x59f
  1678 0586 13       		.uleb128 0x13
- 1679 0587 89090000 		.4byte	.LASF141
+ 1679 0587 83090000 		.4byte	.LASF141
  1680 058b 06       		.byte	0x6
  1681 058c CC       		.byte	0xcc
  1682 058d 76000000 		.4byte	0x76
  1683 0591 00       		.byte	0
  1684 0592 13       		.uleb128 0x13
- 1685 0593 A2110000 		.4byte	.LASF142
+ 1685 0593 97110000 		.4byte	.LASF142
  1686 0597 06       		.byte	0x6
  1687 0598 D1       		.byte	0xd1
  1688 0599 9F050000 		.4byte	0x59f
@@ -3177,15 +3177,15 @@ ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccLzzdCU.s 			page 1
  1702 05b3 D6       		.byte	0xd6
  1703 05b4 CF050000 		.4byte	0x5cf
  1704 05b8 15       		.uleb128 0x15
- 1705 05b9 AF080000 		.4byte	.LASF144
-ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccLzzdCU.s 			page 54
+ 1705 05b9 A9080000 		.4byte	.LASF144
+ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccMdDZbh.s 			page 54
 
 
  1706 05bd 06       		.byte	0x6
  1707 05be DD       		.byte	0xdd
  1708 05bf A5050000 		.4byte	0x5a5
  1709 05c3 15       		.uleb128 0x15
- 1710 05c4 2F0C0000 		.4byte	.LASF145
+ 1710 05c4 130C0000 		.4byte	.LASF145
  1711 05c8 06       		.byte	0x6
  1712 05c9 E0       		.byte	0xe0
  1713 05ca 76000000 		.4byte	0x76
@@ -3219,26 +3219,26 @@ ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccLzzdCU.s 			page 1
  1741 0601 81000000 		.4byte	0x81
  1742 0605 04       		.byte	0x4
  1743 0606 13       		.uleb128 0x13
- 1744 0607 750F0000 		.4byte	.LASF150
+ 1744 0607 830F0000 		.4byte	.LASF150
  1745 060b 06       		.byte	0x6
  1746 060c FB       		.byte	0xfb
  1747 060d 76000000 		.4byte	0x76
  1748 0611 08       		.byte	0x8
  1749 0612 0F       		.uleb128 0xf
- 1750 0613 3A0D0000 		.4byte	.LASF151
+ 1750 0613 1E0D0000 		.4byte	.LASF151
  1751 0617 06       		.byte	0x6
  1752 0618 0401     		.2byte	0x104
  1753 061a CF050000 		.4byte	0x5cf
  1754 061e 0C       		.byte	0xc
  1755 061f 00       		.byte	0
  1756 0620 0D       		.uleb128 0xd
- 1757 0621 5A100000 		.4byte	.LASF152
+ 1757 0621 68100000 		.4byte	.LASF152
  1758 0625 06       		.byte	0x6
  1759 0626 0501     		.2byte	0x105
  1760 0628 DA050000 		.4byte	0x5da
  1761 062c 0D       		.uleb128 0xd
- 1762 062d A0100000 		.4byte	.LASF153
-ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccLzzdCU.s 			page 55
+ 1762 062d D0100000 		.4byte	.LASF153
+ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccMdDZbh.s 			page 55
 
 
  1763 0631 07       		.byte	0x7
@@ -3263,10 +3263,10 @@ ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccLzzdCU.s 			page 1
  1782 0658 3F000000 		.4byte	.LASF154
  1783 065c 00       		.sleb128 0
  1784 065d 0B       		.uleb128 0xb
- 1785 065e 420B0000 		.4byte	.LASF155
+ 1785 065e 260B0000 		.4byte	.LASF155
  1786 0662 01       		.sleb128 1
  1787 0663 0B       		.uleb128 0xb
- 1788 0664 4D0A0000 		.4byte	.LASF156
+ 1788 0664 33120000 		.4byte	.LASF156
  1789 0668 02       		.sleb128 2
  1790 0669 0B       		.uleb128 0xb
  1791 066a 13040000 		.4byte	.LASF157
@@ -3276,12 +3276,12 @@ ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccLzzdCU.s 			page 1
  1795 0674 04       		.sleb128 4
  1796 0675 00       		.byte	0
  1797 0676 0D       		.uleb128 0xd
- 1798 0677 4C110000 		.4byte	.LASF159
+ 1798 0677 41110000 		.4byte	.LASF159
  1799 067b 08       		.byte	0x8
  1800 067c 2707     		.2byte	0x727
  1801 067e 4E060000 		.4byte	0x64e
  1802 0682 16       		.uleb128 0x16
- 1803 0683 9C0E0000 		.4byte	.LASF215
+ 1803 0683 800E0000 		.4byte	.LASF215
  1804 0687 01       		.byte	0x1
  1805 0688 CC03     		.2byte	0x3cc
  1806 068a 00000000 		.4byte	.LFB10
@@ -3290,15 +3290,15 @@ ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccLzzdCU.s 			page 1
  1809 0693 9C       		.byte	0x9c
  1810 0694 15070000 		.4byte	0x715
  1811 0698 17       		.uleb128 0x17
- 1812 0699 AA080000 		.4byte	.LASF160
+ 1812 0699 A4080000 		.4byte	.LASF160
  1813 069d 01       		.byte	0x1
  1814 069e CC03     		.2byte	0x3cc
  1815 06a0 15070000 		.4byte	0x715
  1816 06a4 01       		.uleb128 0x1
  1817 06a5 50       		.byte	0x50
  1818 06a6 18       		.uleb128 0x18
- 1819 06a7 2A0C0000 		.4byte	.LASF161
-ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccLzzdCU.s 			page 56
+ 1819 06a7 0E0C0000 		.4byte	.LASF161
+ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccMdDZbh.s 			page 56
 
 
  1820 06ab 01       		.byte	0x1
@@ -3312,19 +3312,19 @@ ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccLzzdCU.s 			page 1
  1828 06bc 6B000000 		.4byte	0x6b
  1829 06c0 3A000000 		.4byte	.LLST1
  1830 06c4 1A       		.uleb128 0x1a
- 1831 06c5 E10D0000 		.4byte	.LASF162
+ 1831 06c5 C50D0000 		.4byte	.LASF162
  1832 06c9 01       		.byte	0x1
  1833 06ca CF03     		.2byte	0x3cf
  1834 06cc 6B000000 		.4byte	0x6b
  1835 06d0 88000000 		.4byte	.LLST2
  1836 06d4 1A       		.uleb128 0x1a
- 1837 06d5 250F0000 		.4byte	.LASF163
+ 1837 06d5 090F0000 		.4byte	.LASF163
  1838 06d9 01       		.byte	0x1
  1839 06da D003     		.2byte	0x3d0
  1840 06dc 6B000000 		.4byte	0x6b
  1841 06e0 A7000000 		.4byte	.LLST3
  1842 06e4 1A       		.uleb128 0x1a
- 1843 06e5 CF100000 		.4byte	.LASF164
+ 1843 06e5 FF100000 		.4byte	.LASF164
  1844 06e9 01       		.byte	0x1
  1845 06ea D103     		.2byte	0x3d1
  1846 06ec 6B000000 		.4byte	0x6b
@@ -3336,7 +3336,7 @@ ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccLzzdCU.s 			page 1
  1852 06fc 1C050000 		.4byte	0x51c
  1853 0700 6C010000 		.4byte	.LLST5
  1854 0704 1A       		.uleb128 0x1a
- 1855 0705 B3110000 		.4byte	.LASF166
+ 1855 0705 A8110000 		.4byte	.LASF166
  1856 0709 01       		.byte	0x1
  1857 070a D303     		.2byte	0x3d3
  1858 070c 6B000000 		.4byte	0x6b
@@ -3348,7 +3348,7 @@ ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccLzzdCU.s 			page 1
  1864 071b 1B       		.uleb128 0x1b
  1865 071c 9A000000 		.4byte	0x9a
  1866 0720 1C       		.uleb128 0x1c
- 1867 0721 EB070000 		.4byte	.LASF167
+ 1867 0721 E5070000 		.4byte	.LASF167
  1868 0725 01       		.byte	0x1
  1869 0726 C0       		.byte	0xc0
  1870 0727 00000000 		.4byte	.LFB3
@@ -3358,7 +3358,7 @@ ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccLzzdCU.s 			page 1
  1874 0731 3F070000 		.4byte	0x73f
  1875 0735 1D       		.uleb128 0x1d
  1876 0736 06000000 		.4byte	.LVL31
-ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccLzzdCU.s 			page 57
+ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccMdDZbh.s 			page 57
 
 
  1877 073a 450C0000 		.4byte	0xc45
@@ -3377,7 +3377,7 @@ ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccLzzdCU.s 			page 1
  1890 0759 20070000 		.4byte	0x720
  1891 075d 00       		.byte	0
  1892 075e 1E       		.uleb128 0x1e
- 1893 075f CB090000 		.4byte	.LASF173
+ 1893 075f C5090000 		.4byte	.LASF173
  1894 0763 01       		.byte	0x1
  1895 0764 5E01     		.2byte	0x15e
  1896 0766 17030000 		.4byte	0x317
@@ -3387,13 +3387,13 @@ ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccLzzdCU.s 			page 1
  1900 0773 9C       		.byte	0x9c
  1901 0774 1F080000 		.4byte	0x81f
  1902 0778 18       		.uleb128 0x18
- 1903 0779 2D0D0000 		.4byte	.LASF169
+ 1903 0779 110D0000 		.4byte	.LASF169
  1904 077d 01       		.byte	0x1
  1905 077e 5E01     		.2byte	0x15e
  1906 0780 2C060000 		.4byte	0x62c
  1907 0784 BE010000 		.4byte	.LLST7
  1908 0788 1A       		.uleb128 0x1a
- 1909 0789 C80B0000 		.4byte	.LASF170
+ 1909 0789 AC0B0000 		.4byte	.LASF170
  1910 078d 01       		.byte	0x1
  1911 078e 6001     		.2byte	0x160
  1912 0790 17030000 		.4byte	0x317
@@ -3403,7 +3403,7 @@ ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccLzzdCU.s 			page 1
  1916 079d 36000000 		.4byte	.LBE2-.LBB2
  1917 07a1 15080000 		.4byte	0x815
  1918 07a5 20       		.uleb128 0x20
- 1919 07a6 BE080000 		.4byte	.LASF171
+ 1919 07a6 B8080000 		.4byte	.LASF171
  1920 07aa 01       		.byte	0x1
  1921 07ab 6C01     		.2byte	0x16c
  1922 07ad 1F080000 		.4byte	0x81f
@@ -3418,7 +3418,7 @@ ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccLzzdCU.s 			page 1
  1931 07c2 01       		.uleb128 0x1
  1932 07c3 52       		.byte	0x52
  1933 07c4 01       		.uleb128 0x1
-ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccLzzdCU.s 			page 58
+ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccMdDZbh.s 			page 58
 
 
  1934 07c5 48       		.byte	0x48
@@ -3478,7 +3478,7 @@ ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccLzzdCU.s 			page 1
  1988 0811 01       		.uleb128 0x1
  1989 0812 3E       		.byte	0x3e
  1990 0813 00       		.byte	0
-ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccLzzdCU.s 			page 59
+ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccMdDZbh.s 			page 59
 
 
  1991 0814 00       		.byte	0
@@ -3494,7 +3494,7 @@ ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccLzzdCU.s 			page 1
  2001 082d 05       		.byte	0x5
  2002 082e 00       		.byte	0
  2003 082f 24       		.uleb128 0x24
- 2004 0830 E50B0000 		.4byte	.LASF172
+ 2004 0830 C90B0000 		.4byte	.LASF172
  2005 0834 01       		.byte	0x1
  2006 0835 A101     		.2byte	0x1a1
  2007 0837 00000000 		.4byte	.LFB5
@@ -3507,7 +3507,7 @@ ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccLzzdCU.s 			page 1
  2014 084a CB0C0000 		.4byte	0xccb
  2015 084e 00       		.byte	0
  2016 084f 1E       		.uleb128 0x1e
- 2017 0850 89100000 		.4byte	.LASF174
+ 2017 0850 B9100000 		.4byte	.LASF174
  2018 0854 01       		.byte	0x1
  2019 0855 CF01     		.2byte	0x1cf
  2020 0857 17030000 		.4byte	0x317
@@ -3523,7 +3523,7 @@ ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccLzzdCU.s 			page 1
  2030 0871 6B000000 		.4byte	0x6b
  2031 0875 2B020000 		.4byte	.LLST9
  2032 0879 1A       		.uleb128 0x1a
- 2033 087a C80B0000 		.4byte	.LASF170
+ 2033 087a AC0B0000 		.4byte	.LASF170
  2034 087e 01       		.byte	0x1
  2035 087f D101     		.2byte	0x1d1
  2036 0881 17030000 		.4byte	0x317
@@ -3538,7 +3538,7 @@ ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccLzzdCU.s 			page 1
  2045 0899 02       		.uleb128 0x2
  2046 089a 74       		.byte	0x74
  2047 089b 00       		.sleb128 0
-ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccLzzdCU.s 			page 60
+ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccMdDZbh.s 			page 60
 
 
  2048 089c 00       		.byte	0
@@ -3559,7 +3559,7 @@ ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccLzzdCU.s 			page 1
  2063 08b1 00       		.byte	0
  2064 08b2 00       		.byte	0
  2065 08b3 1E       		.uleb128 0x1e
- 2066 08b4 E70C0000 		.4byte	.LASF176
+ 2066 08b4 CB0C0000 		.4byte	.LASF176
  2067 08b8 01       		.byte	0x1
  2068 08b9 2A02     		.2byte	0x22a
  2069 08bb 17030000 		.4byte	0x317
@@ -3569,13 +3569,13 @@ ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccLzzdCU.s 			page 1
  2073 08c8 9C       		.byte	0x9c
  2074 08c9 01090000 		.4byte	0x901
  2075 08cd 18       		.uleb128 0x18
- 2076 08ce 500F0000 		.4byte	.LASF177
+ 2076 08ce 5E0F0000 		.4byte	.LASF177
  2077 08d2 01       		.byte	0x1
  2078 08d3 2A02     		.2byte	0x22a
  2079 08d5 6B000000 		.4byte	0x6b
  2080 08d9 A6020000 		.4byte	.LLST11
  2081 08dd 1A       		.uleb128 0x1a
- 2082 08de C80B0000 		.4byte	.LASF170
+ 2082 08de AC0B0000 		.4byte	.LASF170
  2083 08e2 01       		.byte	0x1
  2084 08e3 2C02     		.2byte	0x22c
  2085 08e5 17030000 		.4byte	0x317
@@ -3598,7 +3598,7 @@ ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccLzzdCU.s 			page 1
  2102 0909 00000000 		.4byte	.LFB8
  2103 090d 18000000 		.4byte	.LFE8-.LFB8
  2104 0911 01       		.uleb128 0x1
-ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccLzzdCU.s 			page 61
+ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccMdDZbh.s 			page 61
 
 
  2105 0912 9C       		.byte	0x9c
@@ -3608,7 +3608,7 @@ ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccLzzdCU.s 			page 1
  2109 091c 280D0000 		.4byte	0xd28
  2110 0920 00       		.byte	0
  2111 0921 24       		.uleb128 0x24
- 2112 0922 A60D0000 		.4byte	.LASF179
+ 2112 0922 8A0D0000 		.4byte	.LASF179
  2113 0926 01       		.byte	0x1
  2114 0927 8302     		.2byte	0x283
  2115 0929 00000000 		.4byte	.LFB9
@@ -3624,7 +3624,7 @@ ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccLzzdCU.s 			page 1
  2125 0943 01       		.uleb128 0x1
  2126 0944 50       		.byte	0x50
  2127 0945 17       		.uleb128 0x17
- 2128 0946 2A0C0000 		.4byte	.LASF161
+ 2128 0946 0E0C0000 		.4byte	.LASF161
  2129 094a 01       		.byte	0x1
  2130 094b 8302     		.2byte	0x283
  2131 094d 6B000000 		.4byte	0x6b
@@ -3658,16 +3658,16 @@ ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccLzzdCU.s 			page 1
  2159 098b 9C       		.byte	0x9c
  2160 098c 0D0A0000 		.4byte	0xa0d
  2161 0990 18       		.uleb128 0x18
-ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccLzzdCU.s 			page 62
+ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccMdDZbh.s 			page 62
 
 
- 2162 0991 AA080000 		.4byte	.LASF160
+ 2162 0991 A4080000 		.4byte	.LASF160
  2163 0995 01       		.byte	0x1
  2164 0996 3404     		.2byte	0x434
  2165 0998 15070000 		.4byte	0x715
  2166 099c 3C030000 		.4byte	.LLST13
  2167 09a0 1A       		.uleb128 0x1a
- 2168 09a1 C80B0000 		.4byte	.LASF170
+ 2168 09a1 AC0B0000 		.4byte	.LASF170
  2169 09a5 01       		.byte	0x1
  2170 09a6 3604     		.2byte	0x436
  2171 09a8 17030000 		.4byte	0x317
@@ -3685,7 +3685,7 @@ ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccLzzdCU.s 			page 1
  2183 09c6 0D0A0000 		.4byte	0xa0d
  2184 09ca D4030000 		.4byte	.LLST16
  2185 09ce 1A       		.uleb128 0x1a
- 2186 09cf 630A0000 		.4byte	.LASF181
+ 2186 09cf 470A0000 		.4byte	.LASF181
  2187 09d3 01       		.byte	0x1
  2188 09d4 3904     		.2byte	0x439
  2189 09d6 6B000000 		.4byte	0x6b
@@ -3718,7 +3718,7 @@ ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccLzzdCU.s 			page 1
  2216 0a06 01       		.uleb128 0x1
  2217 0a07 50       		.byte	0x50
  2218 0a08 02       		.uleb128 0x2
-ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccLzzdCU.s 			page 63
+ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccMdDZbh.s 			page 63
 
 
  2219 0a09 74       		.byte	0x74
@@ -3729,7 +3729,7 @@ ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccLzzdCU.s 			page 1
  2224 0a0e 04       		.byte	0x4
  2225 0a0f 9A000000 		.4byte	0x9a
  2226 0a13 1E       		.uleb128 0x1e
- 2227 0a14 D7090000 		.4byte	.LASF182
+ 2227 0a14 D1090000 		.4byte	.LASF182
  2228 0a18 01       		.byte	0x1
  2229 0a19 7F04     		.2byte	0x47f
  2230 0a1b 17030000 		.4byte	0x317
@@ -3739,19 +3739,19 @@ ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccLzzdCU.s 			page 1
  2234 0a28 9C       		.byte	0x9c
  2235 0a29 7C0A0000 		.4byte	0xa7c
  2236 0a2d 18       		.uleb128 0x18
- 2237 0a2e AA080000 		.4byte	.LASF160
+ 2237 0a2e A4080000 		.4byte	.LASF160
  2238 0a32 01       		.byte	0x1
  2239 0a33 7F04     		.2byte	0x47f
  2240 0a35 0D0A0000 		.4byte	0xa0d
  2241 0a39 FA030000 		.4byte	.LLST18
  2242 0a3d 1A       		.uleb128 0x1a
- 2243 0a3e C80B0000 		.4byte	.LASF170
+ 2243 0a3e AC0B0000 		.4byte	.LASF170
  2244 0a42 01       		.byte	0x1
  2245 0a43 8104     		.2byte	0x481
  2246 0a45 17030000 		.4byte	0x317
  2247 0a49 34040000 		.4byte	.LLST19
  2248 0a4d 1A       		.uleb128 0x1a
- 2249 0a4e 630A0000 		.4byte	.LASF181
+ 2249 0a4e 470A0000 		.4byte	.LASF181
  2250 0a52 01       		.byte	0x1
  2251 0a53 8204     		.2byte	0x482
  2252 0a55 6B000000 		.4byte	0x6b
@@ -3778,7 +3778,7 @@ ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccLzzdCU.s 			page 1
  2273 0a8c 0A000000 		.4byte	.LFE13-.LFB13
  2274 0a90 01       		.uleb128 0x1
  2275 0a91 9C       		.byte	0x9c
-ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccLzzdCU.s 			page 64
+ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccMdDZbh.s 			page 64
 
 
  2276 0a92 A70A0000 		.4byte	0xaa7
@@ -3795,7 +3795,7 @@ ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccLzzdCU.s 			page 1
  2287 0aad 1B       		.uleb128 0x1b
  2288 0aae 6B000000 		.4byte	0x6b
  2289 0ab2 24       		.uleb128 0x24
- 2290 0ab3 97090000 		.4byte	.LASF184
+ 2290 0ab3 91090000 		.4byte	.LASF184
  2291 0ab7 01       		.byte	0x1
  2292 0ab8 C804     		.2byte	0x4c8
  2293 0aba 00000000 		.4byte	.LFB14
@@ -3811,14 +3811,14 @@ ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccLzzdCU.s 			page 1
  2303 0ad4 01       		.uleb128 0x1
  2304 0ad5 50       		.byte	0x50
  2305 0ad6 18       		.uleb128 0x18
- 2306 0ad7 90070000 		.4byte	.LASF185
+ 2306 0ad7 8A070000 		.4byte	.LASF185
  2307 0adb 01       		.byte	0x1
  2308 0adc C804     		.2byte	0x4c8
  2309 0ade 76000000 		.4byte	0x76
  2310 0ae2 DD040000 		.4byte	.LLST24
  2311 0ae6 00       		.byte	0
  2312 0ae7 29       		.uleb128 0x29
- 2313 0ae8 890E0000 		.4byte	.LASF186
+ 2313 0ae8 6D0E0000 		.4byte	.LASF186
  2314 0aec 01       		.byte	0x1
  2315 0aed 7A       		.byte	0x7a
  2316 0aee 2C060000 		.4byte	0x62c
@@ -3826,7 +3826,7 @@ ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccLzzdCU.s 			page 1
  2318 0af3 03       		.byte	0x3
  2319 0af4 00000000 		.4byte	CyBle_ApplCallback
  2320 0af8 29       		.uleb128 0x29
- 2321 0af9 38090000 		.4byte	.LASF187
+ 2321 0af9 32090000 		.4byte	.LASF187
  2322 0afd 01       		.byte	0x1
  2323 0afe 29       		.byte	0x29
  2324 0aff 6B000000 		.4byte	0x6b
@@ -3838,7 +3838,7 @@ ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccLzzdCU.s 			page 1
  2330 0b0e 1A0B0000 		.4byte	0xb1a
  2331 0b12 2A       		.uleb128 0x2a
  2332 0b13 B1000000 		.4byte	0xb1
-ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccLzzdCU.s 			page 65
+ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccMdDZbh.s 			page 65
 
 
  2333 0b17 5F0A     		.2byte	0xa5f
@@ -3852,12 +3852,12 @@ ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccLzzdCU.s 			page 1
  2341 0b26 03       		.byte	0x3
  2342 0b27 00000000 		.4byte	cyBle_stackMemoryRam
  2343 0b2b 2B       		.uleb128 0x2b
- 2344 0b2c AB0A0000 		.4byte	.LASF189
+ 2344 0b2c 8F0A0000 		.4byte	.LASF189
  2345 0b30 07       		.byte	0x7
  2346 0b31 9801     		.2byte	0x198
  2347 0b33 AC000000 		.4byte	0xac
  2348 0b37 29       		.uleb128 0x29
- 2349 0b38 BD110000 		.4byte	.LASF190
+ 2349 0b38 B2110000 		.4byte	.LASF190
  2350 0b3c 01       		.byte	0x1
  2351 0b3d 7B       		.byte	0x7b
  2352 0b3e 57030000 		.4byte	0x357
@@ -3865,7 +3865,7 @@ ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccLzzdCU.s 			page 1
  2354 0b43 03       		.byte	0x3
  2355 0b44 00000000 		.4byte	cyBle_deviceAddress
  2356 0b48 29       		.uleb128 0x29
- 2357 0b49 24120000 		.4byte	.LASF191
+ 2357 0b49 19120000 		.4byte	.LASF191
  2358 0b4d 01       		.byte	0x1
  2359 0b4e 7C       		.byte	0x7c
  2360 0b4f 590B0000 		.4byte	0xb59
@@ -3876,7 +3876,7 @@ ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccLzzdCU.s 			page 1
  2365 0b5a 04       		.byte	0x4
  2366 0b5b 57030000 		.4byte	0x357
  2367 0b5f 29       		.uleb128 0x29
- 2368 0b60 D6070000 		.4byte	.LASF192
+ 2368 0b60 D0070000 		.4byte	.LASF192
  2369 0b64 01       		.byte	0x1
  2370 0b65 32       		.byte	0x32
  2371 0b66 37040000 		.4byte	0x437
@@ -3884,7 +3884,7 @@ ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccLzzdCU.s 			page 1
  2373 0b6b 03       		.byte	0x3
  2374 0b6c 00000000 		.4byte	cyBle_discoveryParam
  2375 0b70 29       		.uleb128 0x29
- 2376 0b71 A8090000 		.4byte	.LASF193
+ 2376 0b71 A2090000 		.4byte	.LASF193
  2377 0b75 01       		.byte	0x1
  2378 0b76 3E       		.byte	0x3e
  2379 0b77 77040000 		.4byte	0x477
@@ -3892,18 +3892,18 @@ ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccLzzdCU.s 			page 1
  2381 0b7c 03       		.byte	0x3
  2382 0b7d 00000000 		.4byte	cyBle_discoveryData
  2383 0b81 29       		.uleb128 0x29
- 2384 0b82 D1110000 		.4byte	.LASF194
+ 2384 0b82 C6110000 		.4byte	.LASF194
  2385 0b86 01       		.byte	0x1
  2386 0b87 47       		.byte	0x47
  2387 0b88 A7040000 		.4byte	0x4a7
  2388 0b8c 05       		.uleb128 0x5
  2389 0b8d 03       		.byte	0x3
-ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccLzzdCU.s 			page 66
+ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccMdDZbh.s 			page 66
 
 
  2390 0b8e 00000000 		.4byte	cyBle_scanRspData
  2391 0b92 29       		.uleb128 0x29
- 2392 0b93 210B0000 		.4byte	.LASF195
+ 2392 0b93 050B0000 		.4byte	.LASF195
  2393 0b97 01       		.byte	0x1
  2394 0b98 57       		.byte	0x57
  2395 0b99 10050000 		.4byte	0x510
@@ -3911,7 +3911,7 @@ ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccLzzdCU.s 			page 1
  2397 0b9e 03       		.byte	0x3
  2398 0b9f 00000000 		.4byte	cyBle_discoveryModeInfo
  2399 0ba3 29       		.uleb128 0x29
- 2400 0ba4 950C0000 		.4byte	.LASF196
+ 2400 0ba4 790C0000 		.4byte	.LASF196
  2401 0ba8 01       		.byte	0x1
  2402 0ba9 76       		.byte	0x76
  2403 0baa 6B000000 		.4byte	0x6b
@@ -3926,7 +3926,7 @@ ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccLzzdCU.s 			page 1
  2412 0bc2 0D       		.byte	0xd
  2413 0bc3 00       		.byte	0
  2414 0bc4 2C       		.uleb128 0x2c
- 2415 0bc5 F30E0000 		.4byte	.LASF197
+ 2415 0bc5 D70E0000 		.4byte	.LASF197
  2416 0bc9 09       		.byte	0x9
  2417 0bca BA       		.byte	0xba
  2418 0bcb CF0B0000 		.4byte	0xbcf
@@ -3958,19 +3958,19 @@ ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccLzzdCU.s 			page 1
  2444 0c06 70130000 		.4byte	.LASF199
  2445 0c0a 09       		.byte	0x9
  2446 0c0b BF       		.byte	0xbf
-ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccLzzdCU.s 			page 67
+ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccMdDZbh.s 			page 67
 
 
  2447 0c0c 100C0000 		.4byte	0xc10
  2448 0c10 1B       		.uleb128 0x1b
  2449 0c11 EF0B0000 		.4byte	0xbef
  2450 0c15 2B       		.uleb128 0x2b
- 2451 0c16 FA090000 		.4byte	.LASF200
+ 2451 0c16 F4090000 		.4byte	.LASF200
  2452 0c1a 08       		.byte	0x8
  2453 0c1b 0009     		.2byte	0x900
  2454 0c1d 76060000 		.4byte	0x676
  2455 0c21 2B       		.uleb128 0x2b
- 2456 0c22 810B0000 		.4byte	.LASF201
+ 2456 0c22 650B0000 		.4byte	.LASF201
  2457 0c26 08       		.byte	0x8
  2458 0c27 0109     		.2byte	0x901
  2459 0c29 46050000 		.4byte	0x546
@@ -3980,7 +3980,7 @@ ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccLzzdCU.s 			page 1
  2463 0c33 0209     		.2byte	0x902
  2464 0c35 AC000000 		.4byte	0xac
  2465 0c39 2B       		.uleb128 0x2b
- 2466 0c3a AD0C0000 		.4byte	.LASF203
+ 2466 0c3a 910C0000 		.4byte	.LASF203
  2467 0c3e 08       		.byte	0x8
  2468 0c3f 0509     		.2byte	0x905
  2469 0c41 6B000000 		.4byte	0x6b
@@ -3989,7 +3989,7 @@ ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccLzzdCU.s 			page 1
  2472 0c4a 0A       		.byte	0xa
  2473 0c4b 5A       		.byte	0x5a
  2474 0c4c 2E       		.uleb128 0x2e
- 2475 0c4d 27100000 		.4byte	.LASF216
+ 2475 0c4d 35100000 		.4byte	.LASF216
  2476 0c51 B8000000 		.4byte	0xb8
  2477 0c55 690C0000 		.4byte	0xc69
  2478 0c59 09       		.uleb128 0x9
@@ -4004,7 +4004,7 @@ ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccLzzdCU.s 			page 1
  2487 0c6b 6F0C0000 		.4byte	0xc6f
  2488 0c6f 2F       		.uleb128 0x2f
  2489 0c70 30       		.uleb128 0x30
- 2490 0c71 C20A0000 		.4byte	.LASF204
+ 2490 0c71 A60A0000 		.4byte	.LASF204
  2491 0c75 03       		.byte	0x3
  2492 0c76 2903     		.2byte	0x329
  2493 0c78 17030000 		.4byte	0x317
@@ -4018,7 +4018,7 @@ ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccLzzdCU.s 			page 1
  2501 0c8f 09       		.uleb128 0x9
  2502 0c90 9A0C0000 		.4byte	0xc9a
  2503 0c94 09       		.uleb128 0x9
-ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccLzzdCU.s 			page 68
+ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccMdDZbh.s 			page 68
 
 
  2504 0c95 6B000000 		.4byte	0x6b
@@ -4027,7 +4027,7 @@ ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccLzzdCU.s 			page 1
  2507 0c9b 04       		.byte	0x4
  2508 0c9c 87030000 		.4byte	0x387
  2509 0ca0 30       		.uleb128 0x30
- 2510 0ca1 38080000 		.4byte	.LASF205
+ 2510 0ca1 32080000 		.4byte	.LASF205
  2511 0ca5 06       		.byte	0x6
  2512 0ca6 3E01     		.2byte	0x13e
  2513 0ca8 17030000 		.4byte	0x317
@@ -4045,7 +4045,7 @@ ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccLzzdCU.s 			page 1
  2525 0cc6 1B       		.uleb128 0x1b
  2526 0cc7 20060000 		.4byte	0x620
  2527 0ccb 31       		.uleb128 0x31
- 2528 0ccc 7A0E0000 		.4byte	.LASF207
+ 2528 0ccc 5E0E0000 		.4byte	.LASF207
  2529 0cd0 03       		.byte	0x3
  2530 0cd1 4603     		.2byte	0x346
  2531 0cd3 32       		.uleb128 0x32
@@ -4073,12 +4073,12 @@ ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccLzzdCU.s 			page 1
  2553 0d07 6B000000 		.4byte	0x6b
  2554 0d0b 00       		.byte	0
  2555 0d0c 30       		.uleb128 0x30
- 2556 0d0d 000E0000 		.4byte	.LASF210
+ 2556 0d0d E40D0000 		.4byte	.LASF210
  2557 0d11 04       		.byte	0x4
  2558 0d12 D203     		.2byte	0x3d2
  2559 0d14 17030000 		.4byte	0x317
  2560 0d18 220D0000 		.4byte	0xd22
-ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccLzzdCU.s 			page 69
+ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccMdDZbh.s 			page 69
 
 
  2561 0d1c 09       		.uleb128 0x9
@@ -4088,7 +4088,7 @@ ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccLzzdCU.s 			page 1
  2565 0d23 04       		.byte	0x4
  2566 0d24 10050000 		.4byte	0x510
  2567 0d28 31       		.uleb128 0x31
- 2568 0d29 CB0C0000 		.4byte	.LASF211
+ 2568 0d29 AF0C0000 		.4byte	.LASF211
  2569 0d2d 04       		.byte	0x4
  2570 0d2e EA03     		.2byte	0x3ea
  2571 0d30 00       		.byte	0
@@ -4138,7 +4138,7 @@ ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccLzzdCU.s 			page 1
  2615 0029 04       		.uleb128 0x4
  2616 002a 16       		.uleb128 0x16
  2617 002b 00       		.byte	0
-ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccLzzdCU.s 			page 70
+ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccMdDZbh.s 			page 70
 
 
  2618 002c 03       		.uleb128 0x3
@@ -4198,7 +4198,7 @@ ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccLzzdCU.s 			page 1
  2672 0062 3A       		.uleb128 0x3a
  2673 0063 0B       		.uleb128 0xb
  2674 0064 3B       		.uleb128 0x3b
-ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccLzzdCU.s 			page 71
+ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccMdDZbh.s 			page 71
 
 
  2675 0065 0B       		.uleb128 0xb
@@ -4258,7 +4258,7 @@ ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccLzzdCU.s 			page 1
  2729 009b 0D       		.uleb128 0xd
  2730 009c 00       		.byte	0
  2731 009d 03       		.uleb128 0x3
-ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccLzzdCU.s 			page 72
+ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccMdDZbh.s 			page 72
 
 
  2732 009e 0E       		.uleb128 0xe
@@ -4318,7 +4318,7 @@ ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccLzzdCU.s 			page 1
  2786 00d4 0B       		.uleb128 0xb
  2787 00d5 00       		.byte	0
  2788 00d6 00       		.byte	0
-ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccLzzdCU.s 			page 73
+ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccMdDZbh.s 			page 73
 
 
  2789 00d7 14       		.uleb128 0x14
@@ -4378,7 +4378,7 @@ ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccLzzdCU.s 			page 1
  2843 010e 3A       		.uleb128 0x3a
  2844 010f 0B       		.uleb128 0xb
  2845 0110 3B       		.uleb128 0x3b
-ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccLzzdCU.s 			page 74
+ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccMdDZbh.s 			page 74
 
 
  2846 0111 05       		.uleb128 0x5
@@ -4438,7 +4438,7 @@ ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccLzzdCU.s 			page 1
  2900 0147 00       		.byte	0
  2901 0148 49       		.uleb128 0x49
  2902 0149 13       		.uleb128 0x13
-ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccLzzdCU.s 			page 75
+ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccMdDZbh.s 			page 75
 
 
  2903 014a 00       		.byte	0
@@ -4498,7 +4498,7 @@ ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccLzzdCU.s 			page 1
  2957 0183 06       		.uleb128 0x6
  2958 0184 40       		.uleb128 0x40
  2959 0185 18       		.uleb128 0x18
-ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccLzzdCU.s 			page 76
+ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccMdDZbh.s 			page 76
 
 
  2960 0186 9742     		.uleb128 0x2117
@@ -4558,7 +4558,7 @@ ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccLzzdCU.s 			page 1
  3014 01c4 01       		.byte	0x1
  3015 01c5 11       		.uleb128 0x11
  3016 01c6 01       		.uleb128 0x1
-ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccLzzdCU.s 			page 77
+ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccMdDZbh.s 			page 77
 
 
  3017 01c7 31       		.uleb128 0x31
@@ -4618,7 +4618,7 @@ ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccLzzdCU.s 			page 1
  3071 01fe 0B       		.uleb128 0xb
  3072 01ff 00       		.byte	0
  3073 0200 00       		.byte	0
-ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccLzzdCU.s 			page 78
+ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccMdDZbh.s 			page 78
 
 
  3074 0201 27       		.uleb128 0x27
@@ -4678,7 +4678,7 @@ ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccLzzdCU.s 			page 1
  3128 0237 00       		.byte	0
  3129 0238 00       		.byte	0
  3130 0239 2B       		.uleb128 0x2b
-ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccLzzdCU.s 			page 79
+ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccMdDZbh.s 			page 79
 
 
  3131 023a 34       		.uleb128 0x34
@@ -4738,7 +4738,7 @@ ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccLzzdCU.s 			page 1
  3185 0270 19       		.uleb128 0x19
  3186 0271 03       		.uleb128 0x3
  3187 0272 0E       		.uleb128 0xe
-ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccLzzdCU.s 			page 80
+ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccMdDZbh.s 			page 80
 
 
  3188 0273 27       		.uleb128 0x27
@@ -4798,7 +4798,7 @@ ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccLzzdCU.s 			page 1
  3242 02a9 00       		.byte	0
  3243 02aa 32       		.uleb128 0x32
  3244 02ab 2E       		.uleb128 0x2e
-ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccLzzdCU.s 			page 81
+ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccMdDZbh.s 			page 81
 
 
  3245 02ac 01       		.byte	0x1
@@ -4858,7 +4858,7 @@ ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccLzzdCU.s 			page 1
  3299 004d 0100     		.2byte	0x1
  3300 004f 52       		.byte	0x52
  3301 0050 52000000 		.4byte	.LVL22
-ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccLzzdCU.s 			page 82
+ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccMdDZbh.s 			page 82
 
 
  3302 0054 54000000 		.4byte	.LVL23
@@ -4918,7 +4918,7 @@ ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccLzzdCU.s 			page 1
  3356 00d7 71       		.byte	0x71
  3357 00d8 00       		.sleb128 0
  3358 00d9 73       		.byte	0x73
-ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccLzzdCU.s 			page 83
+ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccMdDZbh.s 			page 83
 
 
  3359 00da 00       		.sleb128 0
@@ -4978,7 +4978,7 @@ ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccLzzdCU.s 			page 1
  3413 0161 0100     		.2byte	0x1
  3414 0163 53       		.byte	0x53
  3415 0164 00000000 		.4byte	0
-ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccLzzdCU.s 			page 84
+ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccMdDZbh.s 			page 84
 
 
  3416 0168 00000000 		.4byte	0
@@ -5038,7 +5038,7 @@ ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccLzzdCU.s 			page 1
  3470 01f4 31       		.byte	0x31
  3471 01f5 9F       		.byte	0x9f
  3472 01f6 38000000 		.4byte	.LVL37
-ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccLzzdCU.s 			page 85
+ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccMdDZbh.s 			page 85
 
 
  3473 01fa 48000000 		.4byte	.LVL38
@@ -5098,7 +5098,7 @@ ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccLzzdCU.s 			page 1
  3527 0280 28000000 		.4byte	.LVL49
  3528 0284 0200     		.2byte	0x2
  3529 0286 30       		.byte	0x30
-ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccLzzdCU.s 			page 86
+ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccMdDZbh.s 			page 86
 
 
  3530 0287 9F       		.byte	0x9f
@@ -5158,7 +5158,7 @@ ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccLzzdCU.s 			page 1
  3584 0308 78000000 		.4byte	.LVL62
  3585 030c 8C000000 		.4byte	.LFE7
  3586 0310 0400     		.2byte	0x4
-ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccLzzdCU.s 			page 87
+ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccMdDZbh.s 			page 87
 
 
  3587 0312 F3       		.byte	0xf3
@@ -5218,7 +5218,7 @@ ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccLzzdCU.s 			page 1
  3641 0399 00000000 		.4byte	0
  3642              	.LLST15:
  3643 039d 10000000 		.4byte	.LVL69
-ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccLzzdCU.s 			page 88
+ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccMdDZbh.s 			page 88
 
 
  3644 03a1 14000000 		.4byte	.LVL70
@@ -5278,7 +5278,7 @@ ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccLzzdCU.s 			page 1
  3698 0429 01       		.uleb128 0x1
  3699 042a 50       		.byte	0x50
  3700 042b 9F       		.byte	0x9f
-ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccLzzdCU.s 			page 89
+ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccMdDZbh.s 			page 89
 
 
  3701 042c 00000000 		.4byte	0
@@ -5338,7 +5338,7 @@ ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccLzzdCU.s 			page 1
  3755 04b8 00000000 		.4byte	0
  3756              	.LLST23:
  3757 04bc 00000000 		.4byte	.LVL93
-ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccLzzdCU.s 			page 90
+ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccMdDZbh.s 			page 90
 
 
  3758 04c0 04000000 		.4byte	.LVL94
@@ -5398,7 +5398,7 @@ ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccLzzdCU.s 			page 1
  3812 0060 00000000 		.4byte	.LFB12
  3813 0064 34000000 		.4byte	.LFE12-.LFB12
  3814 0068 00000000 		.4byte	.LFB13
-ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccLzzdCU.s 			page 91
+ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccMdDZbh.s 			page 91
 
 
  3815 006c 0A000000 		.4byte	.LFE13-.LFB13
@@ -5458,7 +5458,7 @@ ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccLzzdCU.s 			page 1
  3857              	.LASF154:
  3858 003f 4359424C 		.ascii	"CYBLE_STATE_STOPPED\000"
  3858      455F5354 
-ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccLzzdCU.s 			page 92
+ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccMdDZbh.s 			page 92
 
 
  3858      4154455F 
@@ -5518,7 +5518,7 @@ ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccLzzdCU.s 			page 1
  3876      43544142 
  3877              	.LASF209:
  3878 015c 4379426C 		.ascii	"CyBle_StoreAppData\000"
-ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccLzzdCU.s 			page 93
+ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccMdDZbh.s 			page 93
 
 
  3878      655F5374 
@@ -5578,7 +5578,7 @@ ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccLzzdCU.s 			page 1
  3898 0233 474E5520 		.ascii	"GNU C 4.8.4 20140526 (release) [ARM/embedded-4_8-br"
  3898      4320342E 
  3898      382E3420 
-ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccLzzdCU.s 			page 94
+ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccMdDZbh.s 			page 94
 
 
  3898      32303134 
@@ -5638,7 +5638,7 @@ ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccLzzdCU.s 			page 1
  3916      505F4244 
  3916      5F414444 
  3916      525F5400 
-ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccLzzdCU.s 			page 95
+ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccMdDZbh.s 			page 95
 
 
  3917              	.LASF87:
@@ -5698,7 +5698,7 @@ ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccLzzdCU.s 			page 1
  3936      545F5354 
  3936      41434B5F 
  3936      4F4E00
-ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccLzzdCU.s 			page 96
+ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccMdDZbh.s 			page 96
 
 
  3937              	.LASF95:
@@ -5758,7 +5758,7 @@ ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccLzzdCU.s 			page 1
  3956      57524954 
  3957              	.LASF175:
  3958 0550 6973466F 		.ascii	"isForceWrite\000"
-ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccLzzdCU.s 			page 97
+ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccMdDZbh.s 			page 97
 
 
  3958      72636557 
@@ -5818,7 +5818,7 @@ ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccLzzdCU.s 			page 1
  3980 0641 646F7562 		.ascii	"double\000"
  3980      6C6500
  3981              	.LASF66:
-ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccLzzdCU.s 			page 98
+ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccMdDZbh.s 			page 98
 
 
  3982 0648 4359424C 		.ascii	"CYBLE_EVT_L2CAP_CBFC_DISCONN_IND\000"
@@ -5878,7 +5878,7 @@ ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccLzzdCU.s 			page 1
  4003              	.LASF130:
  4004 0721 4359424C 		.ascii	"CYBLE_GAPP_SCAN_RSP_DATA_T\000"
  4004      455F4741 
-ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccLzzdCU.s 			page 99
+ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccMdDZbh.s 			page 99
 
 
  4004      50505F53 
@@ -5893,722 +5893,722 @@ ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccLzzdCU.s 			page 1
  4007              	.LASF148:
  4008 0760 61747454 		.ascii	"attType\000"
  4008      79706500 
- 4009              	.LASF115:
- 4010 0768 4359424C 		.ascii	"CYBLE_GAPP_ADV_T\000"
- 4010      455F4741 
- 4010      50505F41 
- 4010      44565F54 
- 4010      00
+ 4009              	.LASF126:
+ 4010 0768 61647644 		.ascii	"advDataLen\000"
+ 4010      6174614C 
+ 4010      656E00
  4011              	.LASF7:
- 4012 0779 6C6F6E67 		.ascii	"long long unsigned int\000"
+ 4012 0773 6C6F6E67 		.ascii	"long long unsigned int\000"
  4012      206C6F6E 
  4012      6720756E 
  4012      7369676E 
  4012      65642069 
  4013              	.LASF185:
- 4014 0790 76616C75 		.ascii	"value\000"
+ 4014 078a 76616C75 		.ascii	"value\000"
  4014      6500
  4015              	.LASF59:
- 4016 0796 4359424C 		.ascii	"CYBLE_EVT_GATTC_STOP_CMD_COMPLETE\000"
+ 4016 0790 4359424C 		.ascii	"CYBLE_EVT_GATTC_STOP_CMD_COMPLETE\000"
  4016      455F4556 
  4016      545F4741 
  4016      5454435F 
  4016      53544F50 
  4017              	.LASF80:
- 4018 07b8 4359424C 		.ascii	"CYBLE_ERROR_OOB_NOT_AVAILABLE\000"
+ 4018 07b2 4359424C 		.ascii	"CYBLE_ERROR_OOB_NOT_AVAILABLE\000"
  4018      455F4552 
  4018      524F525F 
  4018      4F4F425F 
  4018      4E4F545F 
  4019              	.LASF192:
- 4020 07d6 6379426C 		.ascii	"cyBle_discoveryParam\000"
+ 4020 07d0 6379426C 		.ascii	"cyBle_discoveryParam\000"
  4020      655F6469 
  4020      73636F76 
  4020      65727950 
  4020      6172616D 
  4021              	.LASF167:
- 4022 07eb 4379426C 		.ascii	"CyBle_ServiceInit\000"
+ 4022 07e5 4379426C 		.ascii	"CyBle_ServiceInit\000"
  4022      655F5365 
  4022      72766963 
  4022      65496E69 
  4022      7400
  4023              	.LASF89:
- 4024 07fd 4359424C 		.ascii	"CYBLE_ERROR_L2CAP_PSM_ALREADY_REGISTERED\000"
+ 4024 07f7 4359424C 		.ascii	"CYBLE_ERROR_L2CAP_PSM_ALREADY_REGISTERED\000"
  4024      455F4552 
  4024      524F525F 
  4024      4C324341 
  4024      505F5053 
-ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccLzzdCU.s 			page 100
-
-
  4025              	.LASF5:
- 4026 0826 6C6F6E67 		.ascii	"long unsigned int\000"
+ 4026 0820 6C6F6E67 		.ascii	"long unsigned int\000"
+ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccMdDZbh.s 			page 100
+
+
  4026      20756E73 
  4026      69676E65 
  4026      6420696E 
  4026      7400
  4027              	.LASF205:
- 4028 0838 4379426C 		.ascii	"CyBle_GattsDbRegister\000"
+ 4028 0832 4379426C 		.ascii	"CyBle_GattsDbRegister\000"
  4028      655F4761 
  4028      74747344 
  4028      62526567 
  4028      69737465 
  4029              	.LASF49:
- 4030 084e 4359424C 		.ascii	"CYBLE_EVT_GATTS_WRITE_REQ\000"
+ 4030 0848 4359424C 		.ascii	"CYBLE_EVT_GATTS_WRITE_REQ\000"
  4030      455F4556 
  4030      545F4741 
  4030      5454535F 
  4030      57524954 
  4031              	.LASF41:
- 4032 0868 4359424C 		.ascii	"CYBLE_EVT_GATTC_XCHNG_MTU_RSP\000"
+ 4032 0862 4359424C 		.ascii	"CYBLE_EVT_GATTC_XCHNG_MTU_RSP\000"
  4032      455F4556 
  4032      545F4741 
  4032      5454435F 
  4032      5843484E 
  4033              	.LASF58:
- 4034 0886 4359424C 		.ascii	"CYBLE_EVT_GATTS_DATA_SIGNED_CMD_REQ\000"
+ 4034 0880 4359424C 		.ascii	"CYBLE_EVT_GATTS_DATA_SIGNED_CMD_REQ\000"
  4034      455F4556 
  4034      545F4741 
  4034      5454535F 
  4034      44415441 
  4035              	.LASF160:
- 4036 08aa 6E616D65 		.ascii	"name\000"
+ 4036 08a4 6E616D65 		.ascii	"name\000"
  4036      00
  4037              	.LASF144:
- 4038 08af 61747446 		.ascii	"attFormatValue\000"
+ 4038 08a9 61747446 		.ascii	"attFormatValue\000"
  4038      6F726D61 
  4038      7456616C 
  4038      756500
  4039              	.LASF171:
- 4040 08be 64617461 		.ascii	"dataBuff\000"
+ 4040 08b8 64617461 		.ascii	"dataBuff\000"
  4040      42756666 
  4040      00
  4041              	.LASF127:
- 4042 08c7 4359424C 		.ascii	"CYBLE_GAPP_DISC_DATA_T\000"
+ 4042 08c1 4359424C 		.ascii	"CYBLE_GAPP_DISC_DATA_T\000"
  4042      455F4741 
  4042      50505F44 
  4042      4953435F 
  4042      44415441 
  4043              	.LASF108:
- 4044 08de 62756666 		.ascii	"bufferUnits\000"
+ 4044 08d8 62756666 		.ascii	"bufferUnits\000"
  4044      6572556E 
  4044      69747300 
  4045              	.LASF99:
- 4046 08ea 4359424C 		.ascii	"CYBLE_ERROR_NTF_DISABLED\000"
+ 4046 08e4 4359424C 		.ascii	"CYBLE_ERROR_NTF_DISABLED\000"
  4046      455F4552 
  4046      524F525F 
  4046      4E54465F 
-ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccLzzdCU.s 			page 101
-
-
  4046      44495341 
  4047              	.LASF18:
- 4048 0903 4359424C 		.ascii	"CYBLE_EVT_HOST_INVALID\000"
+ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccMdDZbh.s 			page 101
+
+
+ 4048 08fd 4359424C 		.ascii	"CYBLE_EVT_HOST_INVALID\000"
  4048      455F4556 
  4048      545F484F 
  4048      53545F49 
  4048      4E56414C 
  4049              	.LASF44:
- 4050 091a 4359424C 		.ascii	"CYBLE_EVT_GATTC_FIND_INFO_RSP\000"
+ 4050 0914 4359424C 		.ascii	"CYBLE_EVT_GATTC_FIND_INFO_RSP\000"
  4050      455F4556 
  4050      545F4741 
  4050      5454435F 
  4050      46494E44 
  4051              	.LASF187:
- 4052 0938 6379426C 		.ascii	"cyBle_initVar\000"
+ 4052 0932 6379426C 		.ascii	"cyBle_initVar\000"
  4052      655F696E 
  4052      69745661 
  4052      7200
  4053              	.LASF26:
- 4054 0946 4359424C 		.ascii	"CYBLE_EVT_GAP_PASSKEY_ENTRY_REQUEST\000"
+ 4054 0940 4359424C 		.ascii	"CYBLE_EVT_GAP_PASSKEY_ENTRY_REQUEST\000"
  4054      455F4556 
  4054      545F4741 
  4054      505F5041 
  4054      53534B45 
  4055              	.LASF31:
- 4056 096a 4359424C 		.ascii	"CYBLE_EVT_GAP_DEVICE_CONNECTED\000"
+ 4056 0964 4359424C 		.ascii	"CYBLE_EVT_GAP_DEVICE_CONNECTED\000"
  4056      455F4556 
  4056      545F4741 
  4056      505F4445 
  4056      56494345 
  4057              	.LASF141:
- 4058 0989 6D617841 		.ascii	"maxAttrLength\000"
+ 4058 0983 6D617841 		.ascii	"maxAttrLength\000"
  4058      7474724C 
  4058      656E6774 
  4058      6800
  4059              	.LASF184:
- 4060 0997 4379426C 		.ascii	"CyBle_Set16ByPtr\000"
+ 4060 0991 4379426C 		.ascii	"CyBle_Set16ByPtr\000"
  4060      655F5365 
  4060      74313642 
  4060      79507472 
  4060      00
  4061              	.LASF193:
- 4062 09a8 6379426C 		.ascii	"cyBle_discoveryData\000"
+ 4062 09a2 6379426C 		.ascii	"cyBle_discoveryData\000"
  4062      655F6469 
  4062      73636F76 
  4062      65727944 
  4062      61746100 
  4063              	.LASF129:
- 4064 09bc 7363616E 		.ascii	"scanRspDataLen\000"
+ 4064 09b6 7363616E 		.ascii	"scanRspDataLen\000"
  4064      52737044 
  4064      6174614C 
  4064      656E00
  4065              	.LASF173:
- 4066 09cb 4379426C 		.ascii	"CyBle_Start\000"
+ 4066 09c5 4379426C 		.ascii	"CyBle_Start\000"
  4066      655F5374 
  4066      61727400 
  4067              	.LASF182:
-ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccLzzdCU.s 			page 102
-
-
- 4068 09d7 4379426C 		.ascii	"CyBle_GapGetLocalName\000"
+ 4068 09d1 4379426C 		.ascii	"CyBle_GapGetLocalName\000"
  4068      655F4761 
+ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccMdDZbh.s 			page 102
+
+
  4068      70476574 
  4068      4C6F6361 
  4068      6C4E616D 
  4069              	.LASF138:
- 4070 09ed 61637475 		.ascii	"actualLength\000"
+ 4070 09e7 61637475 		.ascii	"actualLength\000"
  4070      616C4C65 
  4070      6E677468 
  4070      00
  4071              	.LASF200:
- 4072 09fa 6379426C 		.ascii	"cyBle_state\000"
+ 4072 09f4 6379426C 		.ascii	"cyBle_state\000"
  4072      655F7374 
  4072      61746500 
  4073              	.LASF27:
- 4074 0a06 4359424C 		.ascii	"CYBLE_EVT_GAP_PASSKEY_DISPLAY_REQUEST\000"
+ 4074 0a00 4359424C 		.ascii	"CYBLE_EVT_GAP_PASSKEY_DISPLAY_REQUEST\000"
  4074      455F4556 
  4074      545F4741 
  4074      505F5041 
  4074      53534B45 
- 4075              	.LASF136:
- 4076 0a2c 61747449 		.ascii	"attId\000"
- 4076      6400
- 4077              	.LASF38:
- 4078 0a32 4359424C 		.ascii	"CYBLE_EVT_GATT_CONNECT_IND\000"
- 4078      455F4556 
- 4078      545F4741 
- 4078      54545F43 
- 4078      4F4E4E45 
- 4079              	.LASF156:
- 4080 0a4d 4359424C 		.ascii	"CYBLE_STATE_CONNECTED\000"
- 4080      455F5354 
- 4080      4154455F 
- 4080      434F4E4E 
- 4080      45435445 
- 4081              	.LASF181:
- 4082 0a63 63686172 		.ascii	"charLen\000"
- 4082      4C656E00 
- 4083              	.LASF63:
- 4084 0a6b 4359424C 		.ascii	"CYBLE_EVT_L2CAP_COMMAND_REJ\000"
+ 4075              	.LASF38:
+ 4076 0a26 4359424C 		.ascii	"CYBLE_EVT_GATT_CONNECT_IND\000"
+ 4076      455F4556 
+ 4076      545F4741 
+ 4076      54545F43 
+ 4076      4F4E4E45 
+ 4077              	.LASF136:
+ 4078 0a41 61747449 		.ascii	"attId\000"
+ 4078      6400
+ 4079              	.LASF181:
+ 4080 0a47 63686172 		.ascii	"charLen\000"
+ 4080      4C656E00 
+ 4081              	.LASF63:
+ 4082 0a4f 4359424C 		.ascii	"CYBLE_EVT_L2CAP_COMMAND_REJ\000"
+ 4082      455F4556 
+ 4082      545F4C32 
+ 4082      4341505F 
+ 4082      434F4D4D 
+ 4083              	.LASF24:
+ 4084 0a6b 4359424C 		.ascii	"CYBLE_EVT_GAPC_SCAN_PROGRESS_RESULT\000"
  4084      455F4556 
- 4084      545F4C32 
- 4084      4341505F 
- 4084      434F4D4D 
- 4085              	.LASF24:
- 4086 0a87 4359424C 		.ascii	"CYBLE_EVT_GAPC_SCAN_PROGRESS_RESULT\000"
- 4086      455F4556 
- 4086      545F4741 
- 4086      50435F53 
- 4086      43414E5F 
- 4087              	.LASF189:
- 4088 0aab 6379426C 		.ascii	"cyBle_eventHandlerFlag\000"
- 4088      655F6576 
- 4088      656E7448 
- 4088      616E646C 
- 4088      6572466C 
- 4089              	.LASF204:
-ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccLzzdCU.s 			page 103
+ 4084      545F4741 
+ 4084      50435F53 
+ 4084      43414E5F 
+ 4085              	.LASF189:
+ 4086 0a8f 6379426C 		.ascii	"cyBle_eventHandlerFlag\000"
+ 4086      655F6576 
+ 4086      656E7448 
+ 4086      616E646C 
+ 4086      6572466C 
+ 4087              	.LASF204:
+ 4088 0aa6 4379426C 		.ascii	"CyBle_StackInit\000"
+ 4088      655F5374 
+ 4088      61636B49 
+ 4088      6E697400 
+ 4089              	.LASF98:
+ 4090 0ab6 4359424C 		.ascii	"CYBLE_ERROR_MAX\000"
+ 4090      455F4552 
+ 4090      524F525F 
+ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccMdDZbh.s 			page 103
 
 
- 4090 0ac2 4379426C 		.ascii	"CyBle_StackInit\000"
- 4090      655F5374 
- 4090      61636B49 
- 4090      6E697400 
- 4091              	.LASF98:
- 4092 0ad2 4359424C 		.ascii	"CYBLE_ERROR_MAX\000"
- 4092      455F4552 
- 4092      524F525F 
- 4092      4D415800 
- 4093              	.LASF64:
- 4094 0ae2 4359424C 		.ascii	"CYBLE_EVT_L2CAP_CBFC_CONN_IND\000"
+ 4090      4D415800 
+ 4091              	.LASF64:
+ 4092 0ac6 4359424C 		.ascii	"CYBLE_EVT_L2CAP_CBFC_CONN_IND\000"
+ 4092      455F4556 
+ 4092      545F4C32 
+ 4092      4341505F 
+ 4092      43424643 
+ 4093              	.LASF43:
+ 4094 0ae4 4359424C 		.ascii	"CYBLE_EVT_GATTC_READ_BY_TYPE_RSP\000"
  4094      455F4556 
- 4094      545F4C32 
- 4094      4341505F 
- 4094      43424643 
- 4095              	.LASF43:
- 4096 0b00 4359424C 		.ascii	"CYBLE_EVT_GATTC_READ_BY_TYPE_RSP\000"
- 4096      455F4556 
- 4096      545F4741 
- 4096      5454435F 
- 4096      52454144 
- 4097              	.LASF195:
- 4098 0b21 6379426C 		.ascii	"cyBle_discoveryModeInfo\000"
- 4098      655F6469 
- 4098      73636F76 
- 4098      6572794D 
- 4098      6F646549 
- 4099              	.LASF16:
- 4100 0b39 73697A65 		.ascii	"sizetype\000"
- 4100      74797065 
- 4100      00
- 4101              	.LASF155:
- 4102 0b42 4359424C 		.ascii	"CYBLE_STATE_INITIALIZING\000"
- 4102      455F5354 
- 4102      4154455F 
- 4102      494E4954 
- 4102      49414C49 
- 4103              	.LASF119:
- 4104 0b5b 6F776E41 		.ascii	"ownAddrType\000"
- 4104      64647254 
- 4104      79706500 
- 4105              	.LASF29:
- 4106 0b67 4359424C 		.ascii	"CYBLE_EVT_GAP_AUTH_FAILED\000"
- 4106      455F4556 
- 4106      545F4741 
- 4106      505F4155 
- 4106      54485F46 
- 4107              	.LASF201:
- 4108 0b81 6379426C 		.ascii	"cyBle_connHandle\000"
- 4108      655F636F 
- 4108      6E6E4861 
- 4108      6E646C65 
- 4108      00
- 4109              	.LASF50:
- 4110 0b92 4359424C 		.ascii	"CYBLE_EVT_GATTC_WRITE_RSP\000"
+ 4094      545F4741 
+ 4094      5454435F 
+ 4094      52454144 
+ 4095              	.LASF195:
+ 4096 0b05 6379426C 		.ascii	"cyBle_discoveryModeInfo\000"
+ 4096      655F6469 
+ 4096      73636F76 
+ 4096      6572794D 
+ 4096      6F646549 
+ 4097              	.LASF16:
+ 4098 0b1d 73697A65 		.ascii	"sizetype\000"
+ 4098      74797065 
+ 4098      00
+ 4099              	.LASF155:
+ 4100 0b26 4359424C 		.ascii	"CYBLE_STATE_INITIALIZING\000"
+ 4100      455F5354 
+ 4100      4154455F 
+ 4100      494E4954 
+ 4100      49414C49 
+ 4101              	.LASF119:
+ 4102 0b3f 6F776E41 		.ascii	"ownAddrType\000"
+ 4102      64647254 
+ 4102      79706500 
+ 4103              	.LASF29:
+ 4104 0b4b 4359424C 		.ascii	"CYBLE_EVT_GAP_AUTH_FAILED\000"
+ 4104      455F4556 
+ 4104      545F4741 
+ 4104      505F4155 
+ 4104      54485F46 
+ 4105              	.LASF201:
+ 4106 0b65 6379426C 		.ascii	"cyBle_connHandle\000"
+ 4106      655F636F 
+ 4106      6E6E4861 
+ 4106      6E646C65 
+ 4106      00
+ 4107              	.LASF50:
+ 4108 0b76 4359424C 		.ascii	"CYBLE_EVT_GATTC_WRITE_RSP\000"
+ 4108      455F4556 
+ 4108      545F4741 
+ 4108      5454435F 
+ 4108      57524954 
+ 4109              	.LASF28:
+ 4110 0b90 4359424C 		.ascii	"CYBLE_EVT_GAP_AUTH_COMPLETE\000"
  4110      455F4556 
  4110      545F4741 
-ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccLzzdCU.s 			page 104
+ 4110      505F4155 
+ 4110      54485F43 
+ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccMdDZbh.s 			page 104
 
 
- 4110      5454435F 
- 4110      57524954 
- 4111              	.LASF28:
- 4112 0bac 4359424C 		.ascii	"CYBLE_EVT_GAP_AUTH_COMPLETE\000"
- 4112      455F4556 
- 4112      545F4741 
- 4112      505F4155 
- 4112      54485F43 
- 4113              	.LASF170:
- 4114 0bc8 61706952 		.ascii	"apiResult\000"
- 4114      6573756C 
- 4114      7400
- 4115              	.LASF103:
- 4116 0bd2 4359424C 		.ascii	"CYBLE_API_RESULT_T\000"
- 4116      455F4150 
- 4116      495F5245 
- 4116      53554C54 
- 4116      5F5400
- 4117              	.LASF172:
- 4118 0be5 4379426C 		.ascii	"CyBle_Stop\000"
- 4118      655F5374 
- 4118      6F7000
- 4119              	.LASF55:
- 4120 0bf0 4359424C 		.ascii	"CYBLE_EVT_GATTC_HANDLE_VALUE_NTF\000"
- 4120      455F4556 
- 4120      545F4741 
- 4120      5454435F 
- 4120      48414E44 
- 4121              	.LASF100:
- 4122 0c11 4359424C 		.ascii	"CYBLE_ERROR_IND_DISABLED\000"
- 4122      455F4552 
- 4122      524F525F 
- 4122      494E445F 
- 4122      44495341 
- 4123              	.LASF161:
- 4124 0c2a 64657374 		.ascii	"dest\000"
+ 4111              	.LASF170:
+ 4112 0bac 61706952 		.ascii	"apiResult\000"
+ 4112      6573756C 
+ 4112      7400
+ 4113              	.LASF103:
+ 4114 0bb6 4359424C 		.ascii	"CYBLE_API_RESULT_T\000"
+ 4114      455F4150 
+ 4114      495F5245 
+ 4114      53554C54 
+ 4114      5F5400
+ 4115              	.LASF172:
+ 4116 0bc9 4379426C 		.ascii	"CyBle_Stop\000"
+ 4116      655F5374 
+ 4116      6F7000
+ 4117              	.LASF55:
+ 4118 0bd4 4359424C 		.ascii	"CYBLE_EVT_GATTC_HANDLE_VALUE_NTF\000"
+ 4118      455F4556 
+ 4118      545F4741 
+ 4118      5454435F 
+ 4118      48414E44 
+ 4119              	.LASF100:
+ 4120 0bf5 4359424C 		.ascii	"CYBLE_ERROR_IND_DISABLED\000"
+ 4120      455F4552 
+ 4120      524F525F 
+ 4120      494E445F 
+ 4120      44495341 
+ 4121              	.LASF161:
+ 4122 0c0e 64657374 		.ascii	"dest\000"
+ 4122      00
+ 4123              	.LASF145:
+ 4124 0c13 61747456 		.ascii	"attValueUuid\000"
+ 4124      616C7565 
+ 4124      55756964 
  4124      00
- 4125              	.LASF145:
- 4126 0c2f 61747456 		.ascii	"attValueUuid\000"
- 4126      616C7565 
- 4126      55756964 
- 4126      00
- 4127              	.LASF139:
- 4128 0c3c 61747447 		.ascii	"attGenericVal\000"
- 4128      656E6572 
- 4128      69635661 
- 4128      6C00
- 4129              	.LASF65:
- 4130 0c4a 4359424C 		.ascii	"CYBLE_EVT_L2CAP_CBFC_CONN_CNF\000"
+ 4125              	.LASF139:
+ 4126 0c20 61747447 		.ascii	"attGenericVal\000"
+ 4126      656E6572 
+ 4126      69635661 
+ 4126      6C00
+ 4127              	.LASF65:
+ 4128 0c2e 4359424C 		.ascii	"CYBLE_EVT_L2CAP_CBFC_CONN_CNF\000"
+ 4128      455F4556 
+ 4128      545F4C32 
+ 4128      4341505F 
+ 4128      43424643 
+ 4129              	.LASF42:
+ 4130 0c4c 4359424C 		.ascii	"CYBLE_EVT_GATTC_READ_BY_GROUP_TYPE_RSP\000"
  4130      455F4556 
- 4130      545F4C32 
- 4130      4341505F 
- 4130      43424643 
- 4131              	.LASF42:
- 4132 0c68 4359424C 		.ascii	"CYBLE_EVT_GATTC_READ_BY_GROUP_TYPE_RSP\000"
- 4132      455F4556 
- 4132      545F4741 
-ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccLzzdCU.s 			page 105
+ 4130      545F4741 
+ 4130      5454435F 
+ 4130      52454144 
+ 4131              	.LASF12:
+ 4132 0c73 666C6F61 		.ascii	"float\000"
+ 4132      7400
+ 4133              	.LASF196:
+ 4134 0c79 6379426C 		.ascii	"cyBle_pendingFlashWrite\000"
+ 4134      655F7065 
+ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccMdDZbh.s 			page 105
 
 
- 4132      5454435F 
- 4132      52454144 
- 4133              	.LASF12:
- 4134 0c8f 666C6F61 		.ascii	"float\000"
- 4134      7400
- 4135              	.LASF196:
- 4136 0c95 6379426C 		.ascii	"cyBle_pendingFlashWrite\000"
- 4136      655F7065 
- 4136      6E64696E 
- 4136      67466C61 
- 4136      73685772 
- 4137              	.LASF203:
- 4138 0cad 6379426C 		.ascii	"cyBle_advertisingIntervalType\000"
- 4138      655F6164 
- 4138      76657274 
- 4138      6973696E 
- 4138      67496E74 
- 4139              	.LASF211:
- 4140 0ccb 4379426C 		.ascii	"CyBle_GappExitDiscoveryMode\000"
+ 4134      6E64696E 
+ 4134      67466C61 
+ 4134      73685772 
+ 4135              	.LASF203:
+ 4136 0c91 6379426C 		.ascii	"cyBle_advertisingIntervalType\000"
+ 4136      655F6164 
+ 4136      76657274 
+ 4136      6973696E 
+ 4136      67496E74 
+ 4137              	.LASF211:
+ 4138 0caf 4379426C 		.ascii	"CyBle_GappExitDiscoveryMode\000"
+ 4138      655F4761 
+ 4138      70704578 
+ 4138      69744469 
+ 4138      73636F76 
+ 4139              	.LASF176:
+ 4140 0ccb 4379426C 		.ascii	"CyBle_GappStartAdvertisement\000"
  4140      655F4761 
- 4140      70704578 
- 4140      69744469 
- 4140      73636F76 
- 4141              	.LASF176:
- 4142 0ce7 4379426C 		.ascii	"CyBle_GappStartAdvertisement\000"
- 4142      655F4761 
- 4142      70705374 
- 4142      61727441 
- 4142      64766572 
- 4143              	.LASF120:
- 4144 0d04 64697265 		.ascii	"directAddrType\000"
- 4144      63744164 
- 4144      64725479 
- 4144      706500
- 4145              	.LASF85:
- 4146 0d13 4359424C 		.ascii	"CYBLE_ERROR_TX_POWER_READ\000"
- 4146      455F4552 
- 4146      524F525F 
- 4146      54585F50 
- 4146      4F574552 
- 4147              	.LASF169:
- 4148 0d2d 63616C6C 		.ascii	"callbackFunc\000"
- 4148      6261636B 
- 4148      46756E63 
+ 4140      70705374 
+ 4140      61727441 
+ 4140      64766572 
+ 4141              	.LASF120:
+ 4142 0ce8 64697265 		.ascii	"directAddrType\000"
+ 4142      63744164 
+ 4142      64725479 
+ 4142      706500
+ 4143              	.LASF85:
+ 4144 0cf7 4359424C 		.ascii	"CYBLE_ERROR_TX_POWER_READ\000"
+ 4144      455F4552 
+ 4144      524F525F 
+ 4144      54585F50 
+ 4144      4F574552 
+ 4145              	.LASF169:
+ 4146 0d11 63616C6C 		.ascii	"callbackFunc\000"
+ 4146      6261636B 
+ 4146      46756E63 
+ 4146      00
+ 4147              	.LASF151:
+ 4148 0d1e 61747456 		.ascii	"attValue\000"
+ 4148      616C7565 
  4148      00
- 4149              	.LASF151:
- 4150 0d3a 61747456 		.ascii	"attValue\000"
- 4150      616C7565 
- 4150      00
- 4151              	.LASF1:
- 4152 0d43 756E7369 		.ascii	"unsigned char\000"
- 4152      676E6564 
- 4152      20636861 
- 4152      7200
- 4153              	.LASF10:
- 4154 0d51 75696E74 		.ascii	"uint16\000"
- 4154      313600
-ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccLzzdCU.s 			page 106
+ 4149              	.LASF1:
+ 4150 0d27 756E7369 		.ascii	"unsigned char\000"
+ 4150      676E6564 
+ 4150      20636861 
+ 4150      7200
+ 4151              	.LASF10:
+ 4152 0d35 75696E74 		.ascii	"uint16\000"
+ 4152      313600
+ 4153              	.LASF101:
+ 4154 0d3c 4359424C 		.ascii	"CYBLE_ERROR_CHAR_IS_NOT_DISCOVERED\000"
+ 4154      455F4552 
+ 4154      524F525F 
+ 4154      43484152 
+ 4154      5F49535F 
+ 4155              	.LASF2:
+ 4156 0d5f 73686F72 		.ascii	"short int\000"
+ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccMdDZbh.s 			page 106
 
 
- 4155              	.LASF101:
- 4156 0d58 4359424C 		.ascii	"CYBLE_ERROR_CHAR_IS_NOT_DISCOVERED\000"
- 4156      455F4552 
- 4156      524F525F 
- 4156      43484152 
- 4156      5F49535F 
- 4157              	.LASF2:
- 4158 0d7b 73686F72 		.ascii	"short int\000"
- 4158      7420696E 
- 4158      7400
- 4159              	.LASF56:
- 4160 0d85 4359424C 		.ascii	"CYBLE_EVT_GATTC_HANDLE_VALUE_IND\000"
- 4160      455F4556 
- 4160      545F4741 
- 4160      5454435F 
- 4160      48414E44 
- 4161              	.LASF179:
- 4162 0da6 4379426C 		.ascii	"CyBle_ChangeAdDeviceAddress\000"
- 4162      655F4368 
- 4162      616E6765 
- 4162      41644465 
- 4162      76696365 
- 4163              	.LASF73:
- 4164 0dc2 4359424C 		.ascii	"CYBLE_EVT_LE_PING_AUTH_TIMEOUT\000"
- 4164      455F4556 
- 4164      545F4C45 
- 4164      5F50494E 
- 4164      475F4155 
- 4165              	.LASF162:
- 4166 0de1 666C6167 		.ascii	"flag\000"
- 4166      00
- 4167              	.LASF81:
- 4168 0de6 4359424C 		.ascii	"CYBLE_ERROR_NO_CONNECTION\000"
- 4168      455F4552 
- 4168      524F525F 
- 4168      4E4F5F43 
- 4168      4F4E4E45 
- 4169              	.LASF210:
- 4170 0e00 4379426C 		.ascii	"CyBle_GappEnterDiscoveryMode\000"
- 4170      655F4761 
- 4170      7070456E 
- 4170      74657244 
- 4170      6973636F 
- 4171              	.LASF52:
- 4172 0e1d 4359424C 		.ascii	"CYBLE_EVT_GATTS_PREP_WRITE_REQ\000"
- 4172      455F4556 
- 4172      545F4741 
- 4172      5454535F 
- 4172      50524550 
- 4173              	.LASF116:
- 4174 0e3c 61647649 		.ascii	"advIntvMin\000"
- 4174      6E74764D 
- 4174      696E00
- 4175              	.LASF114:
- 4176 0e47 4359424C 		.ascii	"CYBLE_GAPP_CONNECTABLE_LOW_DC_DIRECTED_ADV\000"
- 4176      455F4741 
- 4176      50505F43 
-ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccLzzdCU.s 			page 107
+ 4156      7420696E 
+ 4156      7400
+ 4157              	.LASF56:
+ 4158 0d69 4359424C 		.ascii	"CYBLE_EVT_GATTC_HANDLE_VALUE_IND\000"
+ 4158      455F4556 
+ 4158      545F4741 
+ 4158      5454435F 
+ 4158      48414E44 
+ 4159              	.LASF179:
+ 4160 0d8a 4379426C 		.ascii	"CyBle_ChangeAdDeviceAddress\000"
+ 4160      655F4368 
+ 4160      616E6765 
+ 4160      41644465 
+ 4160      76696365 
+ 4161              	.LASF73:
+ 4162 0da6 4359424C 		.ascii	"CYBLE_EVT_LE_PING_AUTH_TIMEOUT\000"
+ 4162      455F4556 
+ 4162      545F4C45 
+ 4162      5F50494E 
+ 4162      475F4155 
+ 4163              	.LASF162:
+ 4164 0dc5 666C6167 		.ascii	"flag\000"
+ 4164      00
+ 4165              	.LASF81:
+ 4166 0dca 4359424C 		.ascii	"CYBLE_ERROR_NO_CONNECTION\000"
+ 4166      455F4552 
+ 4166      524F525F 
+ 4166      4E4F5F43 
+ 4166      4F4E4E45 
+ 4167              	.LASF210:
+ 4168 0de4 4379426C 		.ascii	"CyBle_GappEnterDiscoveryMode\000"
+ 4168      655F4761 
+ 4168      7070456E 
+ 4168      74657244 
+ 4168      6973636F 
+ 4169              	.LASF52:
+ 4170 0e01 4359424C 		.ascii	"CYBLE_EVT_GATTS_PREP_WRITE_REQ\000"
+ 4170      455F4556 
+ 4170      545F4741 
+ 4170      5454535F 
+ 4170      50524550 
+ 4171              	.LASF116:
+ 4172 0e20 61647649 		.ascii	"advIntvMin\000"
+ 4172      6E74764D 
+ 4172      696E00
+ 4173              	.LASF114:
+ 4174 0e2b 4359424C 		.ascii	"CYBLE_GAPP_CONNECTABLE_LOW_DC_DIRECTED_ADV\000"
+ 4174      455F4741 
+ 4174      50505F43 
+ 4174      4F4E4E45 
+ 4174      43544142 
+ 4175              	.LASF125:
+ 4176 0e56 61647644 		.ascii	"advData\000"
+ 4176      61746100 
+ 4177              	.LASF207:
+ 4178 0e5e 4379426C 		.ascii	"CyBle_Shutdown\000"
+ 4178      655F5368 
+ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccMdDZbh.s 			page 107
 
 
- 4176      4F4E4E45 
- 4176      43544142 
- 4177              	.LASF125:
- 4178 0e72 61647644 		.ascii	"advData\000"
- 4178      61746100 
- 4179              	.LASF207:
- 4180 0e7a 4379426C 		.ascii	"CyBle_Shutdown\000"
- 4180      655F5368 
- 4180      7574646F 
- 4180      776E00
- 4181              	.LASF186:
- 4182 0e89 4379426C 		.ascii	"CyBle_ApplCallback\000"
- 4182      655F4170 
- 4182      706C4361 
- 4182      6C6C6261 
- 4182      636B00
- 4183              	.LASF215:
- 4184 0e9c 4379426C 		.ascii	"CyBle_ChangeAdLocalName\000"
- 4184      655F4368 
- 4184      616E6765 
- 4184      41644C6F 
- 4184      63616C4E 
- 4185              	.LASF57:
- 4186 0eb4 4359424C 		.ascii	"CYBLE_EVT_GATTS_HANDLE_VALUE_CNF\000"
- 4186      455F4556 
- 4186      545F4741 
- 4186      5454535F 
- 4186      48414E44 
- 4187              	.LASF83:
- 4188 0ed5 4359424C 		.ascii	"CYBLE_ERROR_REPEATED_ATTEMPTS\000"
- 4188      455F4552 
- 4188      524F525F 
- 4188      52455045 
- 4188      41544544 
- 4189              	.LASF197:
- 4190 0ef3 6379426C 		.ascii	"cyBle_gattDB\000"
- 4190      655F6761 
- 4190      74744442 
+ 4178      7574646F 
+ 4178      776E00
+ 4179              	.LASF186:
+ 4180 0e6d 4379426C 		.ascii	"CyBle_ApplCallback\000"
+ 4180      655F4170 
+ 4180      706C4361 
+ 4180      6C6C6261 
+ 4180      636B00
+ 4181              	.LASF215:
+ 4182 0e80 4379426C 		.ascii	"CyBle_ChangeAdLocalName\000"
+ 4182      655F4368 
+ 4182      616E6765 
+ 4182      41644C6F 
+ 4182      63616C4E 
+ 4183              	.LASF57:
+ 4184 0e98 4359424C 		.ascii	"CYBLE_EVT_GATTS_HANDLE_VALUE_CNF\000"
+ 4184      455F4556 
+ 4184      545F4741 
+ 4184      5454535F 
+ 4184      48414E44 
+ 4185              	.LASF83:
+ 4186 0eb9 4359424C 		.ascii	"CYBLE_ERROR_REPEATED_ATTEMPTS\000"
+ 4186      455F4552 
+ 4186      524F525F 
+ 4186      52455045 
+ 4186      41544544 
+ 4187              	.LASF197:
+ 4188 0ed7 6379426C 		.ascii	"cyBle_gattDB\000"
+ 4188      655F6761 
+ 4188      74744442 
+ 4188      00
+ 4189              	.LASF15:
+ 4190 0ee4 63686172 		.ascii	"char\000"
  4190      00
- 4191              	.LASF15:
- 4192 0f00 63686172 		.ascii	"char\000"
- 4192      00
- 4193              	.LASF86:
- 4194 0f05 4359424C 		.ascii	"CYBLE_ERROR_BT_ON_NOT_COMPLETED\000"
- 4194      455F4552 
- 4194      524F525F 
- 4194      42545F4F 
- 4194      4E5F4E4F 
- 4195              	.LASF163:
- 4196 0f25 61644C65 		.ascii	"adLength\000"
- 4196      6E677468 
- 4196      00
- 4197              	.LASF32:
- 4198 0f2e 4359424C 		.ascii	"CYBLE_EVT_GAP_DEVICE_DISCONNECTED\000"
- 4198      455F4556 
- 4198      545F4741 
- 4198      505F4445 
-ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccLzzdCU.s 			page 108
+ 4191              	.LASF86:
+ 4192 0ee9 4359424C 		.ascii	"CYBLE_ERROR_BT_ON_NOT_COMPLETED\000"
+ 4192      455F4552 
+ 4192      524F525F 
+ 4192      42545F4F 
+ 4192      4E5F4E4F 
+ 4193              	.LASF163:
+ 4194 0f09 61644C65 		.ascii	"adLength\000"
+ 4194      6E677468 
+ 4194      00
+ 4195              	.LASF214:
+ 4196 0f12 593A5C72 		.ascii	"Y:\\repos\\PSoC-4-BLE-Experiments\\Project 001 Find"
+ 4196      65706F73 
+ 4196      5C50536F 
+ 4196      432D342D 
+ 4196      424C452D 
+ 4197 0f42 4D655C50 		.ascii	"Me\\PSoC\\FindME\\FindME.cydsn\000"
+ 4197      536F435C 
+ 4197      46696E64 
+ 4197      4D455C46 
+ 4197      696E644D 
+ 4198              	.LASF177:
+ 4199 0f5e 61647665 		.ascii	"advertisingIntervalType\000"
+ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccMdDZbh.s 			page 108
 
 
- 4198      56494345 
- 4199              	.LASF177:
- 4200 0f50 61647665 		.ascii	"advertisingIntervalType\000"
- 4200      72746973 
- 4200      696E6749 
- 4200      6E746572 
- 4200      76616C54 
- 4201              	.LASF8:
- 4202 0f68 756E7369 		.ascii	"unsigned int\000"
- 4202      676E6564 
- 4202      20696E74 
- 4202      00
- 4203              	.LASF150:
- 4204 0f75 61747445 		.ascii	"attEndHandle\000"
- 4204      6E644861 
- 4204      6E646C65 
- 4204      00
- 4205              	.LASF60:
- 4206 0f82 4359424C 		.ascii	"CYBLE_EVT_GATTS_READ_CHAR_VAL_ACCESS_REQ\000"
- 4206      455F4556 
- 4206      545F4741 
- 4206      5454535F 
- 4206      52454144 
- 4207              	.LASF107:
- 4208 0fab 62756666 		.ascii	"bufferSize\000"
- 4208      65725369 
- 4208      7A6500
- 4209              	.LASF124:
- 4210 0fb6 4359424C 		.ascii	"CYBLE_GAPP_DISC_PARAM_T\000"
- 4210      455F4741 
- 4210      50505F44 
- 4210      4953435F 
- 4210      50415241 
- 4211              	.LASF14:
- 4212 0fce 63686172 		.ascii	"char8\000"
- 4212      3800
- 4213              	.LASF96:
- 4214 0fd4 4359424C 		.ascii	"CYBLE_ERROR_FLASH_WRITE_NOT_PERMITED\000"
- 4214      455F4552 
- 4214      524F525F 
- 4214      464C4153 
- 4214      485F5752 
- 4215              	.LASF91:
- 4216 0ff9 4359424C 		.ascii	"CYBLE_ERROR_L2CAP_CONNECTION_ENTITY_NOT_FOUND\000"
- 4216      455F4552 
- 4216      524F525F 
- 4216      4C324341 
- 4216      505F434F 
- 4217              	.LASF216:
- 4218 1027 6D656D63 		.ascii	"memcpy\000"
- 4218      707900
- 4219              	.LASF21:
- 4220 102e 4359424C 		.ascii	"CYBLE_EVT_HARDWARE_ERROR\000"
- 4220      455F4556 
- 4220      545F4841 
- 4220      52445741 
- 4220      52455F45 
-ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccLzzdCU.s 			page 109
+ 4199      72746973 
+ 4199      696E6749 
+ 4199      6E746572 
+ 4199      76616C54 
+ 4200              	.LASF8:
+ 4201 0f76 756E7369 		.ascii	"unsigned int\000"
+ 4201      676E6564 
+ 4201      20696E74 
+ 4201      00
+ 4202              	.LASF150:
+ 4203 0f83 61747445 		.ascii	"attEndHandle\000"
+ 4203      6E644861 
+ 4203      6E646C65 
+ 4203      00
+ 4204              	.LASF60:
+ 4205 0f90 4359424C 		.ascii	"CYBLE_EVT_GATTS_READ_CHAR_VAL_ACCESS_REQ\000"
+ 4205      455F4556 
+ 4205      545F4741 
+ 4205      5454535F 
+ 4205      52454144 
+ 4206              	.LASF107:
+ 4207 0fb9 62756666 		.ascii	"bufferSize\000"
+ 4207      65725369 
+ 4207      7A6500
+ 4208              	.LASF124:
+ 4209 0fc4 4359424C 		.ascii	"CYBLE_GAPP_DISC_PARAM_T\000"
+ 4209      455F4741 
+ 4209      50505F44 
+ 4209      4953435F 
+ 4209      50415241 
+ 4210              	.LASF14:
+ 4211 0fdc 63686172 		.ascii	"char8\000"
+ 4211      3800
+ 4212              	.LASF96:
+ 4213 0fe2 4359424C 		.ascii	"CYBLE_ERROR_FLASH_WRITE_NOT_PERMITED\000"
+ 4213      455F4552 
+ 4213      524F525F 
+ 4213      464C4153 
+ 4213      485F5752 
+ 4214              	.LASF91:
+ 4215 1007 4359424C 		.ascii	"CYBLE_ERROR_L2CAP_CONNECTION_ENTITY_NOT_FOUND\000"
+ 4215      455F4552 
+ 4215      524F525F 
+ 4215      4C324341 
+ 4215      505F434F 
+ 4216              	.LASF216:
+ 4217 1035 6D656D63 		.ascii	"memcpy\000"
+ 4217      707900
+ 4218              	.LASF21:
+ 4219 103c 4359424C 		.ascii	"CYBLE_EVT_HARDWARE_ERROR\000"
+ 4219      455F4556 
+ 4219      545F4841 
+ 4219      52445741 
+ 4219      52455F45 
+ 4220              	.LASF3:
+ 4221 1055 73686F72 		.ascii	"short unsigned int\000"
+ 4221      7420756E 
+ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccMdDZbh.s 			page 109
 
 
- 4221              	.LASF3:
- 4222 1047 73686F72 		.ascii	"short unsigned int\000"
- 4222      7420756E 
- 4222      7369676E 
- 4222      65642069 
- 4222      6E7400
- 4223              	.LASF152:
- 4224 105a 4359424C 		.ascii	"CYBLE_GATTS_DB_T\000"
- 4224      455F4741 
- 4224      5454535F 
- 4224      44425F54 
- 4224      00
- 4225              	.LASF77:
- 4226 106b 4359424C 		.ascii	"CYBLE_ERROR_INVALID_OPERATION\000"
- 4226      455F4552 
- 4226      524F525F 
- 4226      494E5641 
- 4226      4C49445F 
- 4227              	.LASF174:
- 4228 1089 4379426C 		.ascii	"CyBle_StoreBondingData\000"
- 4228      655F5374 
- 4228      6F726542 
- 4228      6F6E6469 
- 4228      6E674461 
- 4229              	.LASF153:
- 4230 10a0 4359424C 		.ascii	"CYBLE_CALLBACK_T\000"
- 4230      455F4341 
- 4230      4C4C4241 
- 4230      434B5F54 
- 4230      00
- 4231              	.LASF140:
- 4232 10b1 4359424C 		.ascii	"CYBLE_GATTS_ATT_GEN_VAL_LEN_T\000"
- 4232      455F4741 
- 4232      5454535F 
- 4232      4154545F 
- 4232      47454E5F 
- 4233              	.LASF164:
- 4234 10cf 62797465 		.ascii	"byteCounter\000"
- 4234      436F756E 
- 4234      74657200 
- 4235              	.LASF134:
- 4236 10db 4359424C 		.ascii	"CYBLE_GAPP_DISC_MODE_INFO_T\000"
- 4236      455F4741 
- 4236      50505F44 
- 4236      4953435F 
- 4236      4D4F4445 
- 4237              	.LASF132:
- 4238 10f7 61647650 		.ascii	"advParam\000"
- 4238      6172616D 
- 4238      00
- 4239              	.LASF214:
- 4240 1100 593A5C72 		.ascii	"Y:\\repos\\PSoC-4-BLE-Experiments\\Project 001 Find"
- 4240      65706F73 
- 4240      5C50536F 
- 4240      432D342D 
- 4240      424C452D 
- 4241 1130 4D655C50 		.ascii	"Me\\PSoc\\FindME\\FindME.cydsn\000"
-ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccLzzdCU.s 			page 110
+ 4221      7369676E 
+ 4221      65642069 
+ 4221      6E7400
+ 4222              	.LASF152:
+ 4223 1068 4359424C 		.ascii	"CYBLE_GATTS_DB_T\000"
+ 4223      455F4741 
+ 4223      5454535F 
+ 4223      44425F54 
+ 4223      00
+ 4224              	.LASF32:
+ 4225 1079 4359424C 		.ascii	"CYBLE_EVT_GAP_DEVICE_DISCONNECTED\000"
+ 4225      455F4556 
+ 4225      545F4741 
+ 4225      505F4445 
+ 4225      56494345 
+ 4226              	.LASF77:
+ 4227 109b 4359424C 		.ascii	"CYBLE_ERROR_INVALID_OPERATION\000"
+ 4227      455F4552 
+ 4227      524F525F 
+ 4227      494E5641 
+ 4227      4C49445F 
+ 4228              	.LASF174:
+ 4229 10b9 4379426C 		.ascii	"CyBle_StoreBondingData\000"
+ 4229      655F5374 
+ 4229      6F726542 
+ 4229      6F6E6469 
+ 4229      6E674461 
+ 4230              	.LASF153:
+ 4231 10d0 4359424C 		.ascii	"CYBLE_CALLBACK_T\000"
+ 4231      455F4341 
+ 4231      4C4C4241 
+ 4231      434B5F54 
+ 4231      00
+ 4232              	.LASF140:
+ 4233 10e1 4359424C 		.ascii	"CYBLE_GATTS_ATT_GEN_VAL_LEN_T\000"
+ 4233      455F4741 
+ 4233      5454535F 
+ 4233      4154545F 
+ 4233      47454E5F 
+ 4234              	.LASF164:
+ 4235 10ff 62797465 		.ascii	"byteCounter\000"
+ 4235      436F756E 
+ 4235      74657200 
+ 4236              	.LASF134:
+ 4237 110b 4359424C 		.ascii	"CYBLE_GAPP_DISC_MODE_INFO_T\000"
+ 4237      455F4741 
+ 4237      50505F44 
+ 4237      4953435F 
+ 4237      4D4F4445 
+ 4238              	.LASF132:
+ 4239 1127 61647650 		.ascii	"advParam\000"
+ 4239      6172616D 
+ 4239      00
+ 4240              	.LASF115:
+ 4241 1130 4359424C 		.ascii	"CYBLE_GAPP_ADV_T\000"
+ 4241      455F4741 
+ 4241      50505F41 
+ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccMdDZbh.s 			page 110
 
 
- 4241      536F635C 
- 4241      46696E64 
- 4241      4D455C46 
- 4241      696E644D 
+ 4241      44565F54 
+ 4241      00
  4242              	.LASF159:
- 4243 114c 4359424C 		.ascii	"CYBLE_STATE_T\000"
+ 4243 1141 4359424C 		.ascii	"CYBLE_STATE_T\000"
  4243      455F5354 
  4243      4154455F 
  4243      5400
  4244              	.LASF113:
- 4245 115a 4359424C 		.ascii	"CYBLE_GAPP_NON_CONNECTABLE_UNDIRECTED_ADV\000"
+ 4245 114f 4359424C 		.ascii	"CYBLE_GAPP_NON_CONNECTABLE_UNDIRECTED_ADV\000"
  4245      455F4741 
  4245      50505F4E 
  4245      4F4E5F43 
  4245      4F4E4E45 
  4246              	.LASF47:
- 4247 1184 4359424C 		.ascii	"CYBLE_EVT_GATTC_READ_BLOB_RSP\000"
+ 4247 1179 4359424C 		.ascii	"CYBLE_EVT_GATTC_READ_BLOB_RSP\000"
  4247      455F4556 
  4247      545F4741 
  4247      5454435F 
  4247      52454144 
  4248              	.LASF142:
- 4249 11a2 61747447 		.ascii	"attGenericValLen\000"
+ 4249 1197 61747447 		.ascii	"attGenericValLen\000"
  4249      656E6572 
  4249      69635661 
  4249      6C4C656E 
  4249      00
  4250              	.LASF166:
- 4251 11b3 6D61784C 		.ascii	"maxLength\000"
+ 4251 11a8 6D61784C 		.ascii	"maxLength\000"
  4251      656E6774 
  4251      6800
  4252              	.LASF190:
- 4253 11bd 6379426C 		.ascii	"cyBle_deviceAddress\000"
+ 4253 11b2 6379426C 		.ascii	"cyBle_deviceAddress\000"
  4253      655F6465 
  4253      76696365 
  4253      41646472 
  4253      65737300 
  4254              	.LASF194:
- 4255 11d1 6379426C 		.ascii	"cyBle_scanRspData\000"
+ 4255 11c6 6379426C 		.ascii	"cyBle_scanRspData\000"
  4255      655F7363 
  4255      616E5273 
  4255      70446174 
  4255      6100
  4256              	.LASF97:
- 4257 11e3 4359424C 		.ascii	"CYBLE_ERROR_MIC_AUTH_FAILED\000"
+ 4257 11d8 4359424C 		.ascii	"CYBLE_ERROR_MIC_AUTH_FAILED\000"
  4257      455F4552 
  4257      524F525F 
  4257      4D49435F 
  4257      41555448 
  4258              	.LASF90:
- 4259 11ff 4359424C 		.ascii	"CYBLE_ERROR_L2CAP_PSM_NOT_REGISTERED\000"
+ 4259 11f4 4359424C 		.ascii	"CYBLE_ERROR_L2CAP_PSM_NOT_REGISTERED\000"
  4259      455F4552 
  4259      524F525F 
  4259      4C324341 
  4259      505F5053 
  4260              	.LASF191:
- 4261 1224 6379426C 		.ascii	"cyBle_sflashDeviceAddress\000"
-ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccLzzdCU.s 			page 111
-
-
+ 4261 1219 6379426C 		.ascii	"cyBle_sflashDeviceAddress\000"
  4261      655F7366 
  4261      6C617368 
+ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccMdDZbh.s 			page 111
+
+
  4261      44657669 
  4261      63654164 
- 4262              	.LASF126:
- 4263 123e 61647644 		.ascii	"advDataLen\000"
- 4263      6174614C 
- 4263      656E00
+ 4262              	.LASF156:
+ 4263 1233 4359424C 		.ascii	"CYBLE_STATE_CONNECTED\000"
+ 4263      455F5354 
+ 4263      4154455F 
+ 4263      434F4E4E 
+ 4263      45435445 
  4264              	.LASF45:
  4265 1249 4359424C 		.ascii	"CYBLE_EVT_GATTC_FIND_BY_TYPE_VALUE_RSP\000"
  4265      455F4556 
@@ -6658,7 +6658,7 @@ ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccLzzdCU.s 			page 1
  4281      6F00
  4282              	.LASF39:
  4283 131b 4359424C 		.ascii	"CYBLE_EVT_GATT_DISCONNECT_IND\000"
-ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccLzzdCU.s 			page 112
+ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccMdDZbh.s 			page 112
 
 
  4283      455F4556 
