@@ -228,7 +228,7 @@ extension ViewController: CBPeripheralDelegate {
                     print("Characteristic is for alertLevel")
                     service.peripheral.setNotifyValue(true, forCharacteristic: characteristic)
                     service.peripheral.readValueForCharacteristic(characteristic)
-                    var alertLevel = 1
+                    var alertLevel = 2
                     service.peripheral.writeValue(NSData(bytes: &alertLevel, length: 1), forCharacteristic: characteristic, type: CBCharacteristicWriteType.WithResponse)
                 }
                 
