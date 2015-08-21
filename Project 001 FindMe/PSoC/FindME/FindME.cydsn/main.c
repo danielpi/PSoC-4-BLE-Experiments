@@ -84,17 +84,17 @@ void HandleAlertLEDs(uint8 status) {
             PWM_2_WriteCompare(NO_ALERT_COMPARE);
             PWM_3_WriteCompare(NO_ALERT_COMPARE);
             break;
-
+            
         case MILD_ALERT:
-            PWM_1_WriteCompare(MILD_ALERT_COMPARE);
-            PWM_2_WriteCompare(MILD_ALERT_COMPARE);
-            PWM_3_WriteCompare(MILD_ALERT_COMPARE);
+            PWM_1_WriteCompare(203);
+            PWM_2_WriteCompare(192u);
+            PWM_3_WriteCompare(255u);
             break;
             
         case HIGH_ALERT:
-            PWM_1_WriteCompare(HIGH_ALERT_COMPARE);
-            PWM_2_WriteCompare(HIGH_ALERT_COMPARE);
-            PWM_3_WriteCompare(HIGH_ALERT_COMPARE);
+            PWM_1_WriteCompare(60u);
+            PWM_2_WriteCompare(20u);
+            PWM_3_WriteCompare(220u);
             break;                
     }
         
