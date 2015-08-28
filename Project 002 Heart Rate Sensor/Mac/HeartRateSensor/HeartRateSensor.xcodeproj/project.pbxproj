@@ -12,9 +12,6 @@
 		E65B147F1B8AD9030075C402 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E65B147E1B8AD9030075C402 /* Assets.xcassets */; };
 		E65B14821B8AD9030075C402 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E65B14801B8AD9030075C402 /* Main.storyboard */; };
 		E65B148D1B8AD9030075C402 /* HeartRateSensorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E65B148C1B8AD9030075C402 /* HeartRateSensorTests.swift */; };
-		E65B149A1B8AE9710075C402 /* BLEPeripheralTableCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E65B14971B8AE9710075C402 /* BLEPeripheralTableCellView.swift */; };
-		E65B149B1B8AE9710075C402 /* BLEPeripheralTableCellView.xib in Resources */ = {isa = PBXBuildFile; fileRef = E65B14981B8AE9710075C402 /* BLEPeripheralTableCellView.xib */; };
-		E65B149C1B8AE9710075C402 /* EmptyTableCellView.xib in Resources */ = {isa = PBXBuildFile; fileRef = E65B14991B8AE9710075C402 /* EmptyTableCellView.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,9 +34,6 @@
 		E65B14881B8AD9030075C402 /* HeartRateSensorTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HeartRateSensorTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E65B148C1B8AD9030075C402 /* HeartRateSensorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeartRateSensorTests.swift; sourceTree = "<group>"; };
 		E65B148E1B8AD9030075C402 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		E65B14971B8AE9710075C402 /* BLEPeripheralTableCellView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BLEPeripheralTableCellView.swift; sourceTree = "<group>"; };
-		E65B14981B8AE9710075C402 /* BLEPeripheralTableCellView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BLEPeripheralTableCellView.xib; sourceTree = "<group>"; };
-		E65B14991B8AE9710075C402 /* EmptyTableCellView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EmptyTableCellView.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,7 +79,6 @@
 				E65B147C1B8AD9030075C402 /* ViewController.swift */,
 				E65B147E1B8AD9030075C402 /* Assets.xcassets */,
 				E65B14801B8AD9030075C402 /* Main.storyboard */,
-				E65B149D1B8AE97D0075C402 /* Table Cells */,
 				E65B14831B8AD9030075C402 /* Info.plist */,
 			);
 			path = HeartRateSensor;
@@ -98,16 +91,6 @@
 				E65B148E1B8AD9030075C402 /* Info.plist */,
 			);
 			path = HeartRateSensorTests;
-			sourceTree = "<group>";
-		};
-		E65B149D1B8AE97D0075C402 /* Table Cells */ = {
-			isa = PBXGroup;
-			children = (
-				E65B14971B8AE9710075C402 /* BLEPeripheralTableCellView.swift */,
-				E65B14981B8AE9710075C402 /* BLEPeripheralTableCellView.xib */,
-				E65B14991B8AE9710075C402 /* EmptyTableCellView.xib */,
-			);
-			name = "Table Cells";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -191,8 +174,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				E65B147F1B8AD9030075C402 /* Assets.xcassets in Resources */,
-				E65B149C1B8AE9710075C402 /* EmptyTableCellView.xib in Resources */,
-				E65B149B1B8AE9710075C402 /* BLEPeripheralTableCellView.xib in Resources */,
 				E65B14821B8AD9030075C402 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -211,7 +192,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E65B149A1B8AE9710075C402 /* BLEPeripheralTableCellView.swift in Sources */,
 				E65B147D1B8AD9030075C402 /* ViewController.swift in Sources */,
 				E65B147B1B8AD9030075C402 /* AppDelegate.swift in Sources */,
 			);
@@ -396,6 +376,7 @@
 				E65B14931B8AD9030075C402 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		E65B14941B8AD9030075C402 /* Build configuration list for PBXNativeTarget "HeartRateSensorTests" */ = {
 			isa = XCConfigurationList;
@@ -404,6 +385,7 @@
 				E65B14961B8AD9030075C402 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
