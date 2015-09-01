@@ -31,6 +31,15 @@ class DiscoveredPeripheral {
     }
 }
 
+// Discover peripherals
+// Connect to peripheral
+// Discover services
+// Discover characteristics
+// Discover descriptors
+//
+
+
+
 class ViewController: NSViewController {
     
     @IBOutlet weak var peripheralSelectorMenu: NSPopUpButton!
@@ -38,7 +47,13 @@ class ViewController: NSViewController {
     @IBOutlet weak var heartRateUnitsLabel: NSTextField!
     
     
-    let heartRateUUID = CBUUID(string: "0x180D")
+    let heartRateServiceUUID = CBUUID(string: "0x180D")
+    
+    let heartRateMeasurementCharacteristicUUID = CBUUID(string: "0x2A37")
+    let heartRateControlPointCharacteristicUUID = CBUUID(string: "0x2A39")
+    let bodySensorLocationCharacteristicUUID = CBUUID(string: "0x2A38")
+    
+    
     var bleManager = CBCentralManager(delegate: nil, queue: nil, options: nil)
     
     var selectedPeripheral: DiscoveredPeripheral?
@@ -51,9 +66,10 @@ class ViewController: NSViewController {
 
         // Do any additional setup after loading the view
         self.updatePeripheralSelector()
+        heartRateLabel.stringValue = "___"
         
         bleManager.delegate = self
-        bleManager.scanForPeripheralsWithServices([heartRateUUID], options: nil)
+        bleManager.scanForPeripheralsWithServices([heartRateServiceUUID], options: nil)
     }
 
     override var representedObject: AnyObject? {
@@ -63,6 +79,7 @@ class ViewController: NSViewController {
     }
     
     @IBAction func peripheralSelectorAction(sender: AnyObject) {
+        print("peripheralSelectorAction")
         guard let selectedMenu = peripheralSelectorMenu.selectedItem else {
             peripheralSelectorMenu.selectItemAtIndex(0)
             return
@@ -70,7 +87,7 @@ class ViewController: NSViewController {
         
         let matched = discoveredPeripherals.filter{ $0.title == selectedMenu.title }
         if let selected = matched.first {
-            peripheralSelectorMenu.selectItemWithTitle(selected.title)
+            bleManager.connectPeripheral(selected.peripheral, options: nil)
         }
     }
     
@@ -152,7 +169,6 @@ extension ViewController: CBCentralManagerDelegate {
         peripheral.delegate = self
         peripheral.discoverServices(nil)
     }
-    
     func centralManager(central: CBCentralManager, didDisconnectPeripheral peripheral: CBPeripheral, error: NSError?) {
         peripheral.delegate = nil
     }
@@ -166,7 +182,8 @@ extension ViewController: CBPeripheralDelegate {
     func peripheral(peripheral: CBPeripheral, didDiscoverServices error: NSError?) {
         if let services = peripheral.services {
             for service in services {
-                peripheral.discoverCharacteristics(nil, forService: service)
+                print("Did discover service:\(service.UUID)")
+                peripheral.discoverCharacteristics([heartRateMeasurementCharacteristicUUID, bodySensorLocationCharacteristicUUID], forService: service)
             }
         }
     }
@@ -175,19 +192,53 @@ extension ViewController: CBPeripheralDelegate {
         if let characteristics = service.characteristics {
             
             for characteristic in characteristics {
+                print("Did discover characteristic: \(characteristic)")
                 
-                if characteristic.UUID == heartRateUUID {
+                service.peripheral.discoverDescriptorsForCharacteristic(characteristic)
+                
+                switch characteristic.UUID {
+                case heartRateMeasurementCharacteristicUUID:
                     service.peripheral.setNotifyValue(true, forCharacteristic: characteristic)
                     service.peripheral.readValueForCharacteristic(characteristic)
-                    var alertLevel = 2
-                    service.peripheral.writeValue(NSData(bytes: &alertLevel, length: 1), forCharacteristic: characteristic, type: CBCharacteristicWriteType.WithResponse)
+                case heartRateControlPointCharacteristicUUID:
+                    service.peripheral.readValueForCharacteristic(characteristic)
+                case bodySensorLocationCharacteristicUUID:
+                    service.peripheral.readValueForCharacteristic(characteristic)
+                default:
+                    print("Discovered \(characteristic)")
                 }
                 
                 peripheral.discoverDescriptorsForCharacteristic(characteristic)
-                
-                characteristic.isNotifying ? print("    \(characteristic.UUID) is Notifying") : print("    \(characteristic.UUID) is NOT Notifying")
-                print("      \(characteristic.properties)")
             }
         }
+    }
+    
+    func peripheral(peripheral: CBPeripheral, didDiscoverDescriptorsForCharacteristic characteristic: CBCharacteristic, error: NSError?) {
+        if let descriptors = characteristic.descriptors {
+            for descriptor in descriptors {
+                print("Descriptor \(descriptor)")
+            }
+        }
+    }
+    
+    func peripheral(peripheral: CBPeripheral, didUpdateValueForCharacteristic characteristic: CBCharacteristic, error: NSError?) {
+        switch characteristic.UUID {
+        case heartRateMeasurementCharacteristicUUID:
+            print("Heart Rate Measurement Characteristic")
+        default:
+            print("Not sure which characteristic")
+        }
+        if let dataBytes = characteristic.value {
+            let dataLength = dataBytes.length
+            var dataArray = [UInt8](count: dataLength, repeatedValue: 0)
+            dataBytes.getBytes(&dataArray, length: dataLength * sizeof(UInt8))
+            print("\(dataLength) bytes \(dataBytes), \(dataArray)")
+            if dataArray.count >= 2 {
+                print("Heart rate \(dataArray[1])")
+                heartRateLabel.stringValue = "\(dataArray[1])"
+            }
+        }
+        
+        //print("\(characteristic) updated value to \(value)")
     }
 }
