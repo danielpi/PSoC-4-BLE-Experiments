@@ -1,0 +1,20 @@
+--------------- Build Started: 09/12/2015 14:28:17 Project: Design01, Configuration: ARM GCC 4.8.4 Debug ---------------
+The code generation step is up to date.
+arm-none-eabi-gcc.exe -mcpu=cortex-m0 -mthumb -Wno-main -I. -IGenerated_Source\PSoC4 -Wa,-alh=.\CortexM0\ARM_GCC_484\Debug/main.lst -g -D DEBUG -Wall -ffunction-sections -Og -c .\main.c -o .\CortexM0\ARM_GCC_484\Debug\main.o
+.\main.c: In function 'StartAdvertisment':
+.\main.c:22:9: warning: implicit declaration of function 'printf' [-Wimplicit-function-declaration]
+         printf("CyBle_Start API error: %x \r\n", apiResult);
+         ^
+.\main.c:22:9: warning: incompatible implicit declaration of built-in function 'printf' [enabled by default]
+.\main.c: In function 'main':
+.\main.c:53:9: warning: incompatible implicit declaration of built-in function 'printf' [enabled by default]
+         printf("CyBle_Start API error: %x \r\n", apiResult);
+         ^
+arm-none-eabi-ar.exe -rs .\CortexM0\ARM_GCC_484\Debug\Design01.a .\CortexM0\ARM_GCC_484\Debug\cyfitter_cfg.o .\CortexM0\ARM_GCC_484\Debug\BLE_1_hrs.o .\CortexM0\ARM_GCC_484\Debug\BLE_1.o .\CortexM0\ARM_GCC_484\Debug\BLE_1_gatt.o .\CortexM0\ARM_GCC_484\Debug\BLE_1_eventHandler.o .\CortexM0\ARM_GCC_484\Debug\BLE_1_HAL_INT.o .\CortexM0\ARM_GCC_484\Debug\BLE_1_HAL_PVT.o .\CortexM0\ARM_GCC_484\Debug\BLE_1_dis.o .\CortexM0\ARM_GCC_484\Debug\Advertising_Led.o .\CortexM0\ARM_GCC_484\Debug\BLE_1_bless_isr.o .\CortexM0\ARM_GCC_484\Debug\CyBootAsmGnu.o .\CortexM0\ARM_GCC_484\Debug\CyFlash.o .\CortexM0\ARM_GCC_484\Debug\CyLib.o .\CortexM0\ARM_GCC_484\Debug\cyPm.o .\CortexM0\ARM_GCC_484\Debug\cyutils.o .\CortexM0\ARM_GCC_484\Debug\CyLFClk.o .\CortexM0\ARM_GCC_484\Debug\Error_Led.o
+arm-none-eabi-ar.exe: creating .\CortexM0\ARM_GCC_484\Debug\Design01.a
+arm-none-eabi-gcc.exe -Wl,--start-group -o .\CortexM0\ARM_GCC_484\Debug\Design01.elf .\CortexM0\ARM_GCC_484\Debug\main.o .\CortexM0\ARM_GCC_484\Debug\cymetadata.o .\CortexM0\ARM_GCC_484\Debug\Cm0Start.o .\CortexM0\ARM_GCC_484\Debug\Design01.a "C:\Program Files (x86)\Cypress\PSoC Creator\3.2\PSoC Creator\psoc\content\cycomponentlibrary\CyComponentLibrary.cylib\BLE_v2_10\Library\gccCyBLEStack_BLE_SOC_PERIPHERAL.a" "C:\Program Files (x86)\Cypress\PSoC Creator\3.2\PSoC Creator\psoc\content\cycomponentlibrary\CyComponentLibrary.cylib\CortexM0\ARM_GCC_484\Debug\CyComponentLibrary.a" -mcpu=cortex-m0 -mthumb -g -ffunction-sections -Og -Wl,-Map,.\CortexM0\ARM_GCC_484\Debug/Design01.map -T Generated_Source\PSoC4\cm0gcc.ld -specs=nano.specs -Wl,--gc-sections -Wl,--end-group
+cyelftool.exe -C "Y:\repos\PSoC-4-BLE-Experiments\Project 002 Heart Rate Sensor\PSoC\Design01\Design01.cydsn\CortexM0\ARM_GCC_484\Debug\Design01.elf" --flash_row_size 128 --flash_size 131072
+cyelftool.exe -S "Y:\repos\PSoC-4-BLE-Experiments\Project 002 Heart Rate Sensor\PSoC\Design01\Design01.cydsn\CortexM0\ARM_GCC_484\Debug\Design01.elf"
+Flash used: 75008 of 131072 bytes (57.2 %).
+SRAM used: 9980 of 16384 bytes (60.9 %). Stack: 2048 bytes. Heap: 128 bytes.
+--------------- Build Succeeded: 09/12/2015 14:28:20 ---------------

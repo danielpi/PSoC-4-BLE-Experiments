@@ -1,0 +1,59 @@
+--------------- Rebuild Started: 09/12/2015 13:49:31 Project: Design01, Configuration: ARM GCC 4.8.4 Debug ---------------
+Deleting file ".\CortexM0\ARM_GCC_484\Debug\main.o"
+Deleting file ".\CortexM0\ARM_GCC_484\Debug\cyfitter_cfg.o"
+Deleting file ".\CortexM0\ARM_GCC_484\Debug\cymetadata.o"
+Deleting file ".\CortexM0\ARM_GCC_484\Debug\BLE_1_hrs.o"
+Deleting file ".\CortexM0\ARM_GCC_484\Debug\BLE_1.o"
+Deleting file ".\CortexM0\ARM_GCC_484\Debug\BLE_1_gatt.o"
+Deleting file ".\CortexM0\ARM_GCC_484\Debug\BLE_1_eventHandler.o"
+Deleting file ".\CortexM0\ARM_GCC_484\Debug\BLE_1_HAL_INT.o"
+Deleting file ".\CortexM0\ARM_GCC_484\Debug\BLE_1_HAL_PVT.o"
+Deleting file ".\CortexM0\ARM_GCC_484\Debug\BLE_1_dis.o"
+Deleting file ".\CortexM0\ARM_GCC_484\Debug\Advertising_Led.o"
+Deleting file ".\CortexM0\ARM_GCC_484\Debug\BLE_1_bless_isr.o"
+Deleting file ".\CortexM0\ARM_GCC_484\Debug\Cm0Start.o"
+Deleting file ".\CortexM0\ARM_GCC_484\Debug\CyBootAsmGnu.o"
+Deleting file ".\CortexM0\ARM_GCC_484\Debug\CyFlash.o"
+Deleting file ".\CortexM0\ARM_GCC_484\Debug\CyLib.o"
+Deleting file ".\CortexM0\ARM_GCC_484\Debug\cyPm.o"
+Deleting file ".\CortexM0\ARM_GCC_484\Debug\cyutils.o"
+Deleting file ".\CortexM0\ARM_GCC_484\Debug\CyLFClk.o"
+Deleting file ".\CortexM0\ARM_GCC_484\Debug\Design01.hex"
+Deleting file ".\CortexM0\ARM_GCC_484\Debug\Design01.elf"
+Deleting file ".\CortexM0\ARM_GCC_484\Debug\Design01.map"
+Deleting file ".\Design01.cycdx"
+Deleting file ".\Design01.rpt"
+Deleting file ".\Design01_timing.html"
+Deleting file ".\CortexM0\ARM_GCC_484\Debug\.deps\C_FILE.P"
+Deleting file ".\CortexM0\ARM_GCC_484\Debug\.deps\ARM_C_FILE.P"
+Deleting file ".\CortexM0\ARM_GCC_484\Debug\.deps\GNU_ARM_ASM_FILE.P"
+cydsfit.exe -.appdatapath "C:\Users\danielpi\AppData\Local\Cypress Semiconductor\PSoC Creator\3.2" -.fdsnotice -.fdswarpdepfile=warp_dependencies.txt -.fdselabdepfile=elab_dependencies.txt -.fdsbldfile=generated_files.txt -p "Y:\repos\PSoC-4-BLE-Experiments\Project 002 Heart Rate Sensor\PSoC\Design01\Design01.cydsn\Design01.cyprj" -d CY8C4247LQI-BL483 -s "Y:\repos\PSoC-4-BLE-Experiments\Project 002 Heart Rate Sensor\PSoC\Design01\Design01.cydsn\Generated_Source\PSoC4" -- -yv2 -q10 -ygs -o2 -v3 -.fftcfgtype=LE
+Elaborating Design...
+HDL Generation ...
+Synthesis ...
+Place and Route ...
+Tech mapping ...
+Analog Placement ...
+Analog Routing ...
+Analog Code Generation ...
+Digital Placement ...
+Digital Routing ...
+Bitstream Generation ...
+Static timing analysis ...
+API Generation ...
+Dependency Generation ...
+Clean Temporary Files ...
+arm-none-eabi-gcc.exe -mcpu=cortex-m0 -mthumb -Wno-main -I. -IGenerated_Source\PSoC4 -Wa,-alh=.\CortexM0\ARM_GCC_484\Debug/main.lst -g -D DEBUG -Wall -ffunction-sections -Og -c .\main.c -o .\CortexM0\ARM_GCC_484\Debug\main.o
+.\main.c: In function 'bleCallBack':
+.\main.c:23:13: warning: implicit declaration of function 'StartAdvertisment' [-Wimplicit-function-declaration]
+             StartAdvertisment();
+             ^
+.\main.c: In function 'main':
+.\main.c:40:5: error: expected ';' before 'if'
+     if (apiResult != CYB_ERROR_OK) {
+     ^
+.\main.c:47:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+The command 'arm-none-eabi-gcc.exe' failed with exit code '1'.
+--------------- Rebuild Failed: 09/12/2015 13:49:52 ---------------

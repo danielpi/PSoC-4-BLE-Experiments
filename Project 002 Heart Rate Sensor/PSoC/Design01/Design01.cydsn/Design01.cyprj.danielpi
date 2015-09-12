@@ -1,0 +1,768 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CyXmlSerializer>
+<!--This file is machine generated and read. It is not intended to be edited by hand.-->
+<!--Due to this, there is no schema for this file.-->
+<CyGuid_7a7929f8-5e3b-4f86-a093-2d4ee6513111 type_name="CyDesigner.Common.ProjMgmt.Model.CyPrjMgmtProjectCustomData" version="1">
+<CyGuid_fdba8dfd-b15b-4469-9bbb-9e40c3e70997 type_name="CyDesigner.Common.Base.CyCustomData" version="2">
+<userData>
+<dataGuid v="47ec7058-2f43-4a2f-ae73-172624e235df">
+<CyGuid_47ec7058-2f43-4a2f-ae73-172624e235df type_name="CyDesigner.Common.ProjMgmt.Model.CyConfDepList" version="1">
+<name v="cmpl_deps">
+<CyGuid_f44455c5-3770-4452-b988-0a7a7ff46256 type_name="CyDesigner.Common.ProjMgmt.Model.CyConfigDependencies" version="1">
+<dependency_info name="c9323d49-d323-40b8-9b59-cc008d68a989@Debug@CortexM0" xml_contents_version="2">
+<CyGuid_1173175f-1b9b-4ad4-a065-754a48a27021 type_name="CyDesigner.Common.Base.CyFileDeps" version="1">
+<file name=".\CortexM0\ARM_GCC_484\Debug\main.o">
+<dep name=".\Generated_Source\PSoC4\Advertising_Led.h" />
+<dep name=".\Generated_Source\PSoC4\Advertising_Led_aliases.h" />
+<dep name=".\Generated_Source\PSoC4\BLE_1.h" />
+<dep name=".\Generated_Source\PSoC4\BLE_1_HAL_PVT.h" />
+<dep name=".\Generated_Source\PSoC4\BLE_1_STACK_PVT.h" />
+<dep name=".\Generated_Source\PSoC4\BLE_1_Stack.h" />
+<dep name=".\Generated_Source\PSoC4\BLE_1_StackGap.h" />
+<dep name=".\Generated_Source\PSoC4\BLE_1_StackGatt.h" />
+<dep name=".\Generated_Source\PSoC4\BLE_1_StackGattClient.h" />
+<dep name=".\Generated_Source\PSoC4\BLE_1_StackGattDb.h" />
+<dep name=".\Generated_Source\PSoC4\BLE_1_StackGattServer.h" />
+<dep name=".\Generated_Source\PSoC4\BLE_1_StackHostMain.h" />
+<dep name=".\Generated_Source\PSoC4\BLE_1_StackL2cap.h" />
+<dep name=".\Generated_Source\PSoC4\BLE_1_bless_isr.h" />
+<dep name=".\Generated_Source\PSoC4\BLE_1_dis.h" />
+<dep name=".\Generated_Source\PSoC4\BLE_1_eventHandler.h" />
+<dep name=".\Generated_Source\PSoC4\BLE_1_gatt.h" />
+<dep name=".\Generated_Source\PSoC4\BLE_1_hrs.h" />
+<dep name=".\Generated_Source\PSoC4\CyFlash.h" />
+<dep name=".\Generated_Source\PSoC4\CyLFClk.h" />
+<dep name=".\Generated_Source\PSoC4\CyLib.h" />
+<dep name=".\Generated_Source\PSoC4\Error_Led.h" />
+<dep name=".\Generated_Source\PSoC4\Error_Led_aliases.h" />
+<dep name=".\Generated_Source\PSoC4\core_cm0.h" />
+<dep name=".\Generated_Source\PSoC4\core_cm0_psoc4.h" />
+<dep name=".\Generated_Source\PSoC4\core_cmFunc.h" />
+<dep name=".\Generated_Source\PSoC4\core_cmInstr.h" />
+<dep name=".\Generated_Source\PSoC4\cyPm.h" />
+<dep name=".\Generated_Source\PSoC4\cydevice_trm.h" />
+<dep name=".\Generated_Source\PSoC4\cydisabledsheets.h" />
+<dep name=".\Generated_Source\PSoC4\cyfitter.h" />
+<dep name=".\Generated_Source\PSoC4\cyfitter_cfg.h" />
+<dep name=".\Generated_Source\PSoC4\cypins.h" />
+<dep name=".\Generated_Source\PSoC4\cytypes.h" />
+<dep name=".\Generated_Source\PSoC4\project.h" />
+<dep name=".\main.c" />
+</file>
+<file name=".\Generated_Source\PSoC4\Advertising_Led.h" />
+<file name=".\Generated_Source\PSoC4\Advertising_Led_aliases.h" />
+<file name=".\Generated_Source\PSoC4\BLE_1.h" />
+<file name=".\Generated_Source\PSoC4\BLE_1_HAL_PVT.h" />
+<file name=".\Generated_Source\PSoC4\BLE_1_STACK_PVT.h" />
+<file name=".\Generated_Source\PSoC4\BLE_1_Stack.h" />
+<file name=".\Generated_Source\PSoC4\BLE_1_StackGap.h" />
+<file name=".\Generated_Source\PSoC4\BLE_1_StackGatt.h" />
+<file name=".\Generated_Source\PSoC4\BLE_1_StackGattClient.h" />
+<file name=".\Generated_Source\PSoC4\BLE_1_StackGattDb.h" />
+<file name=".\Generated_Source\PSoC4\BLE_1_StackGattServer.h" />
+<file name=".\Generated_Source\PSoC4\BLE_1_StackHostMain.h" />
+<file name=".\Generated_Source\PSoC4\BLE_1_StackL2cap.h" />
+<file name=".\Generated_Source\PSoC4\BLE_1_bless_isr.h" />
+<file name=".\Generated_Source\PSoC4\BLE_1_dis.h" />
+<file name=".\Generated_Source\PSoC4\BLE_1_eventHandler.h" />
+<file name=".\Generated_Source\PSoC4\BLE_1_gatt.h" />
+<file name=".\Generated_Source\PSoC4\BLE_1_hrs.h" />
+<file name=".\Generated_Source\PSoC4\CyFlash.h" />
+<file name=".\Generated_Source\PSoC4\CyLFClk.h" />
+<file name=".\Generated_Source\PSoC4\CyLib.h" />
+<file name=".\Generated_Source\PSoC4\Error_Led.h" />
+<file name=".\Generated_Source\PSoC4\Error_Led_aliases.h" />
+<file name=".\Generated_Source\PSoC4\core_cm0.h" />
+<file name=".\Generated_Source\PSoC4\core_cm0_psoc4.h" />
+<file name=".\Generated_Source\PSoC4\core_cmFunc.h" />
+<file name=".\Generated_Source\PSoC4\core_cmInstr.h" />
+<file name=".\Generated_Source\PSoC4\cyPm.h" />
+<file name=".\Generated_Source\PSoC4\cydevice_trm.h" />
+<file name=".\Generated_Source\PSoC4\cydisabledsheets.h" />
+<file name=".\Generated_Source\PSoC4\cyfitter.h" />
+<file name=".\Generated_Source\PSoC4\cyfitter_cfg.h" />
+<file name=".\Generated_Source\PSoC4\cypins.h" />
+<file name=".\Generated_Source\PSoC4\cytypes.h" />
+<file name=".\Generated_Source\PSoC4\project.h" />
+<file name=".\main.c" />
+<file name=".\CortexM0\ARM_GCC_484\Debug\Advertising_Led.o">
+<dep name=".\Generated_Source\PSoC4\Advertising_Led.c" />
+<dep name=".\Generated_Source\PSoC4\Advertising_Led.h" />
+<dep name=".\Generated_Source\PSoC4\Advertising_Led_aliases.h" />
+<dep name=".\Generated_Source\PSoC4\cydevice_trm.h" />
+<dep name=".\Generated_Source\PSoC4\cyfitter.h" />
+<dep name=".\Generated_Source\PSoC4\cypins.h" />
+<dep name=".\Generated_Source\PSoC4\cytypes.h" />
+</file>
+<file name=".\Generated_Source\PSoC4\Advertising_Led.c" />
+<file name=".\CortexM0\ARM_GCC_484\Debug\BLE_1.o">
+<dep name=".\Generated_Source\PSoC4\BLE_1.c" />
+<dep name=".\Generated_Source\PSoC4\BLE_1.h" />
+<dep name=".\Generated_Source\PSoC4\BLE_1_HAL_PVT.h" />
+<dep name=".\Generated_Source\PSoC4\BLE_1_STACK_PVT.h" />
+<dep name=".\Generated_Source\PSoC4\BLE_1_Stack.h" />
+<dep name=".\Generated_Source\PSoC4\BLE_1_StackGap.h" />
+<dep name=".\Generated_Source\PSoC4\BLE_1_StackGatt.h" />
+<dep name=".\Generated_Source\PSoC4\BLE_1_StackGattClient.h" />
+<dep name=".\Generated_Source\PSoC4\BLE_1_StackGattDb.h" />
+<dep name=".\Generated_Source\PSoC4\BLE_1_StackGattServer.h" />
+<dep name=".\Generated_Source\PSoC4\BLE_1_StackHostMain.h" />
+<dep name=".\Generated_Source\PSoC4\BLE_1_StackL2cap.h" />
+<dep name=".\Generated_Source\PSoC4\BLE_1_bless_isr.h" />
+<dep name=".\Generated_Source\PSoC4\BLE_1_dis.h" />
+<dep name=".\Generated_Source\PSoC4\BLE_1_eventHandler.h" />
+<dep name=".\Generated_Source\PSoC4\BLE_1_gatt.h" />
+<dep name=".\Generated_Source\PSoC4\BLE_1_hrs.h" />
+<dep name=".\Generated_Source\PSoC4\CyFlash.h" />
+<dep name=".\Generated_Source\PSoC4\CyLFClk.h" />
+<dep name=".\Generated_Source\PSoC4\CyLib.h" />
+<dep name=".\Generated_Source\PSoC4\cydevice_trm.h" />
+<dep name=".\Generated_Source\PSoC4\cyfitter.h" />
+<dep name=".\Generated_Source\PSoC4\cytypes.h" />
+</file>
+<file name=".\Generated_Source\PSoC4\BLE_1.c" />
+<file name=".\CortexM0\ARM_GCC_484\Debug\BLE_1_HAL_INT.o">
+<dep name=".\Generated_Source\PSoC4\BLE_1.h" />
+<dep name=".\Generated_Source\PSoC4\BLE_1_HAL_INT.c" />
+<dep name=".\Generated_Source\PSoC4\BLE_1_HAL_PVT.h" />
+<dep name=".\Generated_Source\PSoC4\BLE_1_STACK_PVT.h" />
+<dep name=".\Generated_Source\PSoC4\BLE_1_Stack.h" />
+<dep name=".\Generated_Source\PSoC4\BLE_1_StackGap.h" />
+<dep name=".\Generated_Source\PSoC4\BLE_1_StackGatt.h" />
+<dep name=".\Generated_Source\PSoC4\BLE_1_StackGattClient.h" />
+<dep name=".\Generated_Source\PSoC4\BLE_1_StackGattDb.h" />
+<dep name=".\Generated_Source\PSoC4\BLE_1_StackGattServer.h" />
+<dep name=".\Generated_Source\PSoC4\BLE_1_StackHostMain.h" />
+<dep name=".\Generated_Source\PSoC4\BLE_1_StackL2cap.h" />
+<dep name=".\Generated_Source\PSoC4\BLE_1_bless_isr.h" />
+<dep name=".\Generated_Source\PSoC4\BLE_1_dis.h" />
+<dep name=".\Generated_Source\PSoC4\BLE_1_eventHandler.h" />
+<dep name=".\Generated_Source\PSoC4\BLE_1_gatt.h" />
+<dep name=".\Generated_Source\PSoC4\BLE_1_hrs.h" />
+<dep name=".\Generated_Source\PSoC4\CyFlash.h" />
+<dep name=".\Generated_Source\PSoC4\CyLFClk.h" />
+<dep name=".\Generated_Source\PSoC4\CyLib.h" />
+<dep name=".\Generated_Source\PSoC4\cydevice_trm.h" />
+<dep name=".\Generated_Source\PSoC4\cyfitter.h" />
+<dep name=".\Generated_Source\PSoC4\cytypes.h" />
+</file>
+<file name=".\Generated_Source\PSoC4\BLE_1_HAL_INT.c" />
+<file name=".\CortexM0\ARM_GCC_484\Debug\BLE_1_HAL_PVT.o">
+<dep name=".\Generated_Source\PSoC4\BLE_1.h" />
+<dep name=".\Generated_Source\PSoC4\BLE_1_HAL_PVT.c" />
+<dep name=".\Generated_Source\PSoC4\BLE_1_HAL_PVT.h" />
+<dep name=".\Generated_Source\PSoC4\BLE_1_STACK_PVT.h" />
+<dep name=".\Generated_Source\PSoC4\BLE_1_Stack.h" />
+<dep name=".\Generated_Source\PSoC4\BLE_1_StackGap.h" />
+<dep name=".\Generated_Source\PSoC4\BLE_1_StackGatt.h" />
+<dep name=".\Generated_Source\PSoC4\BLE_1_StackGattClient.h" />
+<dep name=".\Generated_Source\PSoC4\BLE_1_StackGattDb.h" />
+<dep name=".\Generated_Source\PSoC4\BLE_1_StackGattServer.h" />
+<dep name=".\Generated_Source\PSoC4\BLE_1_StackHostMain.h" />
+<dep name=".\Generated_Source\PSoC4\BLE_1_StackL2cap.h" />
+<dep name=".\Generated_Source\PSoC4\BLE_1_bless_isr.h" />
+<dep name=".\Generated_Source\PSoC4\BLE_1_dis.h" />
+<dep name=".\Generated_Source\PSoC4\BLE_1_eventHandler.h" />
+<dep name=".\Generated_Source\PSoC4\BLE_1_gatt.h" />
+<dep name=".\Generated_Source\PSoC4\BLE_1_hrs.h" />
+<dep name=".\Generated_Source\PSoC4\CyFlash.h" />
+<dep name=".\Generated_Source\PSoC4\CyLFClk.h" />
+<dep name=".\Generated_Source\PSoC4\CyLib.h" />
+<dep name=".\Generated_Source\PSoC4\cydevice_trm.h" />
+<dep name=".\Generated_Source\PSoC4\cyfitter.h" />
+<dep name=".\Generated_Source\PSoC4\cytypes.h" />
+</file>
+<file name=".\Generated_Source\PSoC4\BLE_1_HAL_PVT.c" />
+<file name=".\CortexM0\ARM_GCC_484\Debug\BLE_1_bless_isr.o">
+<dep name=".\Generated_Source\PSoC4\BLE_1_bless_isr.c" />
+<dep name=".\Generated_Source\PSoC4\BLE_1_bless_isr.h" />
+<dep name=".\Generated_Source\PSoC4\CyLFClk.h" />
+<dep name=".\Generated_Source\PSoC4\CyLib.h" />
+<dep name=".\Generated_Source\PSoC4\cydevice_trm.h" />
+<dep name=".\Generated_Source\PSoC4\cyfitter.h" />
+<dep name=".\Generated_Source\PSoC4\cytypes.h" />
+</file>
+<file name=".\Generated_Source\PSoC4\BLE_1_bless_isr.c" />
+<file name=".\CortexM0\ARM_GCC_484\Debug\BLE_1_dis.o">
+<dep name=".\Generated_Source\PSoC4\BLE_1.h" />
+<dep name=".\Generated_Source\PSoC4\BLE_1_Stack.h" />
+<dep name=".\Generated_Source\PSoC4\BLE_1_StackGap.h" />
+<dep name=".\Generated_Source\PSoC4\BLE_1_StackGatt.h" />
+<dep name=".\Generated_Source\PSoC4\BLE_1_StackGattClient.h" />
+<dep name=".\Generated_Source\PSoC4\BLE_1_StackGattDb.h" />
+<dep name=".\Generated_Source\PSoC4\BLE_1_StackGattServer.h" />
+<dep name=".\Generated_Source\PSoC4\BLE_1_StackHostMain.h" />
+<dep name=".\Generated_Source\PSoC4\BLE_1_StackL2cap.h" />
+<dep name=".\Generated_Source\PSoC4\BLE_1_dis.c" />
+<dep name=".\Generated_Source\PSoC4\BLE_1_dis.h" />
+<dep name=".\Generated_Source\PSoC4\BLE_1_eventHandler.h" />
+<dep name=".\Generated_Source\PSoC4\BLE_1_gatt.h" />
+<dep name=".\Generated_Source\PSoC4\BLE_1_hrs.h" />
+<dep name=".\Generated_Source\PSoC4\CyFlash.h" />
+<dep name=".\Generated_Source\PSoC4\CyLFClk.h" />
+<dep name=".\Generated_Source\PSoC4\CyLib.h" />
+<dep name=".\Generated_Source\PSoC4\cydevice_trm.h" />
+<dep name=".\Generated_Source\PSoC4\cyfitter.h" />
+<dep name=".\Generated_Source\PSoC4\cytypes.h" />
+</file>
+<file name=".\Generated_Source\PSoC4\BLE_1_dis.c" />
+<file name=".\CortexM0\ARM_GCC_484\Debug\BLE_1_eventHandler.o">
+<dep name=".\Generated_Source\PSoC4\BLE_1.h" />
+<dep name=".\Generated_Source\PSoC4\BLE_1_Stack.h" />
+<dep name=".\Generated_Source\PSoC4\BLE_1_StackGap.h" />
+<dep name=".\Generated_Source\PSoC4\BLE_1_StackGatt.h" />
+<dep name=".\Generated_Source\PSoC4\BLE_1_StackGattClient.h" />
+<dep name=".\Generated_Source\PSoC4\BLE_1_StackGattDb.h" />
+<dep name=".\Generated_Source\PSoC4\BLE_1_StackGattServer.h" />
+<dep name=".\Generated_Source\PSoC4\BLE_1_StackHostMain.h" />
+<dep name=".\Generated_Source\PSoC4\BLE_1_StackL2cap.h" />
+<dep name=".\Generated_Source\PSoC4\BLE_1_dis.h" />
+<dep name=".\Generated_Source\PSoC4\BLE_1_eventHandler.c" />
+<dep name=".\Generated_Source\PSoC4\BLE_1_eventHandler.h" />
+<dep name=".\Generated_Source\PSoC4\BLE_1_gatt.h" />
+<dep name=".\Generated_Source\PSoC4\BLE_1_hrs.h" />
+<dep name=".\Generated_Source\PSoC4\CyFlash.h" />
+<dep name=".\Generated_Source\PSoC4\CyLFClk.h" />
+<dep name=".\Generated_Source\PSoC4\CyLib.h" />
+<dep name=".\Generated_Source\PSoC4\cydevice_trm.h" />
+<dep name=".\Generated_Source\PSoC4\cyfitter.h" />
+<dep name=".\Generated_Source\PSoC4\cytypes.h" />
+</file>
+<file name=".\Generated_Source\PSoC4\BLE_1_eventHandler.c" />
+<file name=".\CortexM0\ARM_GCC_484\Debug\BLE_1_gatt.o">
+<dep name=".\Generated_Source\PSoC4\BLE_1.h" />
+<dep name=".\Generated_Source\PSoC4\BLE_1_Stack.h" />
+<dep name=".\Generated_Source\PSoC4\BLE_1_StackGap.h" />
+<dep name=".\Generated_Source\PSoC4\BLE_1_StackGatt.h" />
+<dep name=".\Generated_Source\PSoC4\BLE_1_StackGattClient.h" />
+<dep name=".\Generated_Source\PSoC4\BLE_1_StackGattDb.h" />
+<dep name=".\Generated_Source\PSoC4\BLE_1_StackGattServer.h" />
+<dep name=".\Generated_Source\PSoC4\BLE_1_StackHostMain.h" />
+<dep name=".\Generated_Source\PSoC4\BLE_1_StackL2cap.h" />
+<dep name=".\Generated_Source\PSoC4\BLE_1_dis.h" />
+<dep name=".\Generated_Source\PSoC4\BLE_1_eventHandler.h" />
+<dep name=".\Generated_Source\PSoC4\BLE_1_gatt.c" />
+<dep name=".\Generated_Source\PSoC4\BLE_1_gatt.h" />
+<dep name=".\Generated_Source\PSoC4\BLE_1_hrs.h" />
+<dep name=".\Generated_Source\PSoC4\CyFlash.h" />
+<dep name=".\Generated_Source\PSoC4\CyLFClk.h" />
+<dep name=".\Generated_Source\PSoC4\CyLib.h" />
+<dep name=".\Generated_Source\PSoC4\cydevice_trm.h" />
+<dep name=".\Generated_Source\PSoC4\cyfitter.h" />
+<dep name=".\Generated_Source\PSoC4\cytypes.h" />
+</file>
+<file name=".\Generated_Source\PSoC4\BLE_1_gatt.c" />
+<file name=".\CortexM0\ARM_GCC_484\Debug\BLE_1_hrs.o">
+<dep name=".\Generated_Source\PSoC4\BLE_1.h" />
+<dep name=".\Generated_Source\PSoC4\BLE_1_Stack.h" />
+<dep name=".\Generated_Source\PSoC4\BLE_1_StackGap.h" />
+<dep name=".\Generated_Source\PSoC4\BLE_1_StackGatt.h" />
+<dep name=".\Generated_Source\PSoC4\BLE_1_StackGattClient.h" />
+<dep name=".\Generated_Source\PSoC4\BLE_1_StackGattDb.h" />
+<dep name=".\Generated_Source\PSoC4\BLE_1_StackGattServer.h" />
+<dep name=".\Generated_Source\PSoC4\BLE_1_StackHostMain.h" />
+<dep name=".\Generated_Source\PSoC4\BLE_1_StackL2cap.h" />
+<dep name=".\Generated_Source\PSoC4\BLE_1_dis.h" />
+<dep name=".\Generated_Source\PSoC4\BLE_1_eventHandler.h" />
+<dep name=".\Generated_Source\PSoC4\BLE_1_gatt.h" />
+<dep name=".\Generated_Source\PSoC4\BLE_1_hrs.c" />
+<dep name=".\Generated_Source\PSoC4\BLE_1_hrs.h" />
+<dep name=".\Generated_Source\PSoC4\CyFlash.h" />
+<dep name=".\Generated_Source\PSoC4\CyLFClk.h" />
+<dep name=".\Generated_Source\PSoC4\CyLib.h" />
+<dep name=".\Generated_Source\PSoC4\cydevice_trm.h" />
+<dep name=".\Generated_Source\PSoC4\cyfitter.h" />
+<dep name=".\Generated_Source\PSoC4\cytypes.h" />
+</file>
+<file name=".\Generated_Source\PSoC4\BLE_1_hrs.c" />
+<file name=".\CortexM0\ARM_GCC_484\Debug\Cm0Start.o">
+<dep name=".\Generated_Source\PSoC4\Cm0Start.c" />
+<dep name=".\Generated_Source\PSoC4\CyLFClk.h" />
+<dep name=".\Generated_Source\PSoC4\CyLib.h" />
+<dep name=".\Generated_Source\PSoC4\cydevice_trm.h" />
+<dep name=".\Generated_Source\PSoC4\cyfitter.h" />
+<dep name=".\Generated_Source\PSoC4\cyfitter_cfg.h" />
+<dep name=".\Generated_Source\PSoC4\cytypes.h" />
+</file>
+<file name=".\Generated_Source\PSoC4\Cm0Start.c" />
+<file name=".\CortexM0\ARM_GCC_484\Debug\CyFlash.o">
+<dep name=".\Generated_Source\PSoC4\CyFlash.c" />
+<dep name=".\Generated_Source\PSoC4\CyFlash.h" />
+<dep name=".\Generated_Source\PSoC4\CyLFClk.h" />
+<dep name=".\Generated_Source\PSoC4\CyLib.h" />
+<dep name=".\Generated_Source\PSoC4\cydevice_trm.h" />
+<dep name=".\Generated_Source\PSoC4\cyfitter.h" />
+<dep name=".\Generated_Source\PSoC4\cytypes.h" />
+</file>
+<file name=".\Generated_Source\PSoC4\CyFlash.c" />
+<file name=".\CortexM0\ARM_GCC_484\Debug\CyLFClk.o">
+<dep name=".\Generated_Source\PSoC4\CyLFClk.c" />
+<dep name=".\Generated_Source\PSoC4\CyLFClk.h" />
+<dep name=".\Generated_Source\PSoC4\CyLib.h" />
+<dep name=".\Generated_Source\PSoC4\cydevice_trm.h" />
+<dep name=".\Generated_Source\PSoC4\cyfitter.h" />
+<dep name=".\Generated_Source\PSoC4\cytypes.h" />
+</file>
+<file name=".\Generated_Source\PSoC4\CyLFClk.c" />
+<file name=".\CortexM0\ARM_GCC_484\Debug\CyLib.o">
+<dep name=".\Generated_Source\PSoC4\CyFlash.h" />
+<dep name=".\Generated_Source\PSoC4\CyLFClk.h" />
+<dep name=".\Generated_Source\PSoC4\CyLib.c" />
+<dep name=".\Generated_Source\PSoC4\CyLib.h" />
+<dep name=".\Generated_Source\PSoC4\cydevice_trm.h" />
+<dep name=".\Generated_Source\PSoC4\cyfitter.h" />
+<dep name=".\Generated_Source\PSoC4\cytypes.h" />
+</file>
+<file name=".\Generated_Source\PSoC4\CyLib.c" />
+<file name=".\CortexM0\ARM_GCC_484\Debug\Error_Led.o">
+<dep name=".\Generated_Source\PSoC4\Error_Led.c" />
+<dep name=".\Generated_Source\PSoC4\Error_Led.h" />
+<dep name=".\Generated_Source\PSoC4\Error_Led_aliases.h" />
+<dep name=".\Generated_Source\PSoC4\cydevice_trm.h" />
+<dep name=".\Generated_Source\PSoC4\cyfitter.h" />
+<dep name=".\Generated_Source\PSoC4\cypins.h" />
+<dep name=".\Generated_Source\PSoC4\cytypes.h" />
+</file>
+<file name=".\Generated_Source\PSoC4\Error_Led.c" />
+<file name=".\CortexM0\ARM_GCC_484\Debug\cyPm.o">
+<dep name=".\Generated_Source\PSoC4\CyLFClk.h" />
+<dep name=".\Generated_Source\PSoC4\CyLib.h" />
+<dep name=".\Generated_Source\PSoC4\cyPm.c" />
+<dep name=".\Generated_Source\PSoC4\cyPm.h" />
+<dep name=".\Generated_Source\PSoC4\cydevice_trm.h" />
+<dep name=".\Generated_Source\PSoC4\cyfitter.h" />
+<dep name=".\Generated_Source\PSoC4\cytypes.h" />
+</file>
+<file name=".\Generated_Source\PSoC4\cyPm.c" />
+<file name=".\CortexM0\ARM_GCC_484\Debug\cyfitter_cfg.o">
+<dep name=".\Generated_Source\PSoC4\CyLFClk.h" />
+<dep name=".\Generated_Source\PSoC4\CyLib.h" />
+<dep name=".\Generated_Source\PSoC4\cydevice_trm.h" />
+<dep name=".\Generated_Source\PSoC4\cyfitter.h" />
+<dep name=".\Generated_Source\PSoC4\cyfitter_cfg.c" />
+<dep name=".\Generated_Source\PSoC4\cyfitter_cfg.h" />
+<dep name=".\Generated_Source\PSoC4\cytypes.h" />
+</file>
+<file name=".\Generated_Source\PSoC4\cyfitter_cfg.c" />
+<file name=".\CortexM0\ARM_GCC_484\Debug\cymetadata.o">
+<dep name=".\Generated_Source\PSoC4\cydevice_trm.h" />
+<dep name=".\Generated_Source\PSoC4\cyfitter.h" />
+<dep name=".\Generated_Source\PSoC4\cymetadata.c" />
+<dep name=".\Generated_Source\PSoC4\cytypes.h" />
+</file>
+<file name=".\Generated_Source\PSoC4\cymetadata.c" />
+<file name=".\CortexM0\ARM_GCC_484\Debug\cyutils.o">
+<dep name=".\Generated_Source\PSoC4\cydevice_trm.h" />
+<dep name=".\Generated_Source\PSoC4\cyfitter.h" />
+<dep name=".\Generated_Source\PSoC4\cytypes.h" />
+<dep name=".\Generated_Source\PSoC4\cyutils.c" />
+</file>
+<file name=".\Generated_Source\PSoC4\cyutils.c" />
+<file name=".\CortexM0\ARM_GCC_484\Debug\CyBootAsmGnu.o">
+<dep name=".\Generated_Source\PSoC4\CyBootAsmGnu.s" />
+<dep name=".\Generated_Source\PSoC4\cydevicegnu_trm.inc" />
+<dep name=".\Generated_Source\PSoC4\cyfittergnu.inc" />
+</file>
+<file name=".\Generated_Source\PSoC4\CyBootAsmGnu.s" />
+<file name=".\Generated_Source\PSoC4\cydevicegnu_trm.inc" />
+<file name=".\Generated_Source\PSoC4\cyfittergnu.inc" />
+</CyGuid_1173175f-1b9b-4ad4-a065-754a48a27021>
+</dependency_info>
+</CyGuid_f44455c5-3770-4452-b988-0a7a7ff46256>
+</name>
+<name v="link_deps">
+<CyGuid_f44455c5-3770-4452-b988-0a7a7ff46256 type_name="CyDesigner.Common.ProjMgmt.Model.CyConfigDependencies" version="1">
+<dependency_info name="c9323d49-d323-40b8-9b59-cc008d68a989@Debug@CortexM0" xml_contents_version="2">
+<CyGuid_1173175f-1b9b-4ad4-a065-754a48a27021 type_name="CyDesigner.Common.Base.CyFileDeps" version="1">
+<file name=".\CortexM0\ARM_GCC_484\Debug\Design01.hex">
+<dep name=".\CortexM0\ARM_GCC_484\Debug\main.o" />
+<dep name=".\CortexM0\ARM_GCC_484\Debug\cyfitter_cfg.o" />
+<dep name=".\CortexM0\ARM_GCC_484\Debug\cymetadata.o" />
+<dep name=".\CortexM0\ARM_GCC_484\Debug\BLE_1_hrs.o" />
+<dep name=".\CortexM0\ARM_GCC_484\Debug\BLE_1.o" />
+<dep name=".\CortexM0\ARM_GCC_484\Debug\BLE_1_gatt.o" />
+<dep name=".\CortexM0\ARM_GCC_484\Debug\BLE_1_eventHandler.o" />
+<dep name=".\CortexM0\ARM_GCC_484\Debug\BLE_1_HAL_INT.o" />
+<dep name=".\CortexM0\ARM_GCC_484\Debug\BLE_1_HAL_PVT.o" />
+<dep name=".\CortexM0\ARM_GCC_484\Debug\BLE_1_dis.o" />
+<dep name=".\CortexM0\ARM_GCC_484\Debug\Advertising_Led.o" />
+<dep name=".\CortexM0\ARM_GCC_484\Debug\BLE_1_bless_isr.o" />
+<dep name=".\CortexM0\ARM_GCC_484\Debug\Cm0Start.o" />
+<dep name=".\CortexM0\ARM_GCC_484\Debug\CyBootAsmGnu.o" />
+<dep name=".\CortexM0\ARM_GCC_484\Debug\CyFlash.o" />
+<dep name=".\CortexM0\ARM_GCC_484\Debug\CyLib.o" />
+<dep name=".\CortexM0\ARM_GCC_484\Debug\cyPm.o" />
+<dep name=".\CortexM0\ARM_GCC_484\Debug\cyutils.o" />
+<dep name=".\CortexM0\ARM_GCC_484\Debug\CyLFClk.o" />
+<dep name=".\CortexM0\ARM_GCC_484\Debug\Error_Led.o" />
+<dep name=".\CortexM0\ARM_GCC_484\Debug\Design01.a" />
+<dep name="${CyRoot}\psoc\content\cycomponentlibrary\CyComponentLibrary.cylib\CortexM0\ARM_GCC_484\Debug\CyComponentLibrary.a" />
+</file>
+</CyGuid_1173175f-1b9b-4ad4-a065-754a48a27021>
+</dependency_info>
+</CyGuid_f44455c5-3770-4452-b988-0a7a7ff46256>
+</name>
+</CyGuid_47ec7058-2f43-4a2f-ae73-172624e235df>
+</dataGuid>
+<dataGuid v="b0374e30-ce3a-47f2-ad85-821643292c68">
+<CyGuid_b0374e30-ce3a-47f2-ad85-821643292c68 type_name="CyDesigner.Common.ProjMgmt.Common.CyCmdLineData" version="2">
+<genericCmdLineData>
+<name v="c9323d49-d323-40b8-9b59-cc008d68a989@Debug@CortexM0">
+<name_val_pair name=".\main.c" v="-mcpu=cortex-m0 -mthumb -Wno-main -I. -IGenerated_Source\PSoC4 -Wa,-alh=${OutputDir}/${CompileFile}.lst -g -D DEBUG -Wall -ffunction-sections -Og" />
+<name_val_pair name=".\Generated_Source\PSoC4\cyfitter_cfg.c" v="-mcpu=cortex-m0 -mthumb -Wno-main -I. -IGenerated_Source\PSoC4 -Wa,-alh=${OutputDir}/${CompileFile}.lst -g -D DEBUG -Wall -ffunction-sections -Og" />
+<name_val_pair name=".\Generated_Source\PSoC4\cymetadata.c" v="-mcpu=cortex-m0 -mthumb -Wno-main -I. -IGenerated_Source\PSoC4 -Wa,-alh=${OutputDir}/${CompileFile}.lst -g -D DEBUG -Wall -ffunction-sections -Og" />
+<name_val_pair name=".\Generated_Source\PSoC4\BLE_1_hrs.c" v="-mcpu=cortex-m0 -mthumb -Wno-main -I. -IGenerated_Source\PSoC4 -Wa,-alh=${OutputDir}/${CompileFile}.lst -g -D DEBUG -Wall -ffunction-sections -Og" />
+<name_val_pair name=".\Generated_Source\PSoC4\BLE_1.c" v="-mcpu=cortex-m0 -mthumb -Wno-main -I. -IGenerated_Source\PSoC4 -Wa,-alh=${OutputDir}/${CompileFile}.lst -g -D DEBUG -Wall -ffunction-sections -Og" />
+<name_val_pair name=".\Generated_Source\PSoC4\BLE_1_gatt.c" v="-mcpu=cortex-m0 -mthumb -Wno-main -I. -IGenerated_Source\PSoC4 -Wa,-alh=${OutputDir}/${CompileFile}.lst -g -D DEBUG -Wall -ffunction-sections -Og" />
+<name_val_pair name=".\Generated_Source\PSoC4\BLE_1_eventHandler.c" v="-mcpu=cortex-m0 -mthumb -Wno-main -I. -IGenerated_Source\PSoC4 -Wa,-alh=${OutputDir}/${CompileFile}.lst -g -D DEBUG -Wall -ffunction-sections -Og" />
+<name_val_pair name=".\Generated_Source\PSoC4\BLE_1_HAL_INT.c" v="-mcpu=cortex-m0 -mthumb -Wno-main -I. -IGenerated_Source\PSoC4 -Wa,-alh=${OutputDir}/${CompileFile}.lst -g -D DEBUG -Wall -ffunction-sections -Og" />
+<name_val_pair name=".\Generated_Source\PSoC4\BLE_1_HAL_PVT.c" v="-mcpu=cortex-m0 -mthumb -Wno-main -I. -IGenerated_Source\PSoC4 -Wa,-alh=${OutputDir}/${CompileFile}.lst -g -D DEBUG -Wall -ffunction-sections -Og" />
+<name_val_pair name=".\Generated_Source\PSoC4\BLE_1_dis.c" v="-mcpu=cortex-m0 -mthumb -Wno-main -I. -IGenerated_Source\PSoC4 -Wa,-alh=${OutputDir}/${CompileFile}.lst -g -D DEBUG -Wall -ffunction-sections -Og" />
+<name_val_pair name=".\Generated_Source\PSoC4\Advertising_Led.c" v="-mcpu=cortex-m0 -mthumb -Wno-main -I. -IGenerated_Source\PSoC4 -Wa,-alh=${OutputDir}/${CompileFile}.lst -g -D DEBUG -Wall -ffunction-sections -Og" />
+<name_val_pair name=".\Generated_Source\PSoC4\BLE_1_bless_isr.c" v="-mcpu=cortex-m0 -mthumb -Wno-main -I. -IGenerated_Source\PSoC4 -Wa,-alh=${OutputDir}/${CompileFile}.lst -g -D DEBUG -Wall -ffunction-sections -Og" />
+<name_val_pair name=".\Generated_Source\PSoC4\Cm0Start.c" v="-mcpu=cortex-m0 -mthumb -Wno-main -I. -IGenerated_Source\PSoC4 -Wa,-alh=${OutputDir}/${CompileFile}.lst -g -D DEBUG -Wall -ffunction-sections -Og" />
+<name_val_pair name=".\Generated_Source\PSoC4\CyBootAsmGnu.s" v="-mcpu=cortex-m0 -mthumb -I. -IGenerated_Source\PSoC4 -alh=${OutputDir}/${CompileFile}.lst -g -W" />
+<name_val_pair name=".\Generated_Source\PSoC4\CyFlash.c" v="-mcpu=cortex-m0 -mthumb -Wno-main -I. -IGenerated_Source\PSoC4 -Wa,-alh=${OutputDir}/${CompileFile}.lst -g -D DEBUG -Wall -ffunction-sections -Og" />
+<name_val_pair name=".\Generated_Source\PSoC4\CyLib.c" v="-mcpu=cortex-m0 -mthumb -Wno-main -I. -IGenerated_Source\PSoC4 -Wa,-alh=${OutputDir}/${CompileFile}.lst -g -D DEBUG -Wall -ffunction-sections -Og" />
+<name_val_pair name=".\Generated_Source\PSoC4\cyPm.c" v="-mcpu=cortex-m0 -mthumb -Wno-main -I. -IGenerated_Source\PSoC4 -Wa,-alh=${OutputDir}/${CompileFile}.lst -g -D DEBUG -Wall -ffunction-sections -Og" />
+<name_val_pair name=".\Generated_Source\PSoC4\cyutils.c" v="-mcpu=cortex-m0 -mthumb -Wno-main -I. -IGenerated_Source\PSoC4 -Wa,-alh=${OutputDir}/${CompileFile}.lst -g -D DEBUG -Wall -ffunction-sections -Og" />
+<name_val_pair name=".\Generated_Source\PSoC4\CyLFClk.c" v="-mcpu=cortex-m0 -mthumb -Wno-main -I. -IGenerated_Source\PSoC4 -Wa,-alh=${OutputDir}/${CompileFile}.lst -g -D DEBUG -Wall -ffunction-sections -Og" />
+<name_val_pair name="Y:\repos\PSoC-4-BLE-Experiments\Project 002 Heart Rate Sensor\PSoC\Design01\Design01.cydsn\CortexM0\ARM_GCC_484\Debug\Design01.hex" v="-mcpu=cortex-m0 -mthumb -g -ffunction-sections -Og -Wl,-Map,${OutputDir}/${ProjectShortName}.map -T Generated_Source\PSoC4\cm0gcc.ld -specs=nano.specs -Wl,--gc-sections" />
+<name_val_pair name=".\Generated_Source\PSoC4\Error_Led.c" v="-mcpu=cortex-m0 -mthumb -Wno-main -I. -IGenerated_Source\PSoC4 -Wa,-alh=${OutputDir}/${CompileFile}.lst -g -D DEBUG -Wall -ffunction-sections -Og" />
+</name>
+</genericCmdLineData>
+<codeGenCmdLineTag v="-.appdatapath &quot;C:\Users\danielpi\AppData\Local\Cypress Semiconductor\PSoC Creator\3.2&quot; -.fdsnotice -.fdswarpdepfile=warp_dependencies.txt -.fdselabdepfile=elab_dependencies.txt -.fdsbldfile=generated_files.txt -p &quot;Y:\repos\PSoC-4-BLE-Experiments\Project 002 Heart Rate Sensor\PSoC\Design01\Design01.cydsn\Design01.cyprj&quot; -d CY8C4247LQI-BL483 -s &quot;Y:\repos\PSoC-4-BLE-Experiments\Project 002 Heart Rate Sensor\PSoC\Design01\Design01.cydsn\Generated_Source\PSoC4&quot; -- -yv2 -q10 -ygs -o2 -v3 -.fftcfgtype=LE" />
+</CyGuid_b0374e30-ce3a-47f2-ad85-821643292c68>
+</dataGuid>
+<dataGuid v="597c5b74-0c46-4204-8b7f-96f3570671dc">
+<CyGuid_597c5b74-0c46-4204-8b7f-96f3570671dc type_name="CyDesigner.Common.ProjMgmt.DeviceSelector.CyDeviceSelectorState" version="1">
+<name_val_pair name="Filter Options" v="Architecture:PSoC 4200 BLE;" />
+</CyGuid_597c5b74-0c46-4204-8b7f-96f3570671dc>
+</dataGuid>
+<dataGuid v="718b6b01-68ba-4a17-b632-d38dc61ebb3b">
+<CyGuid_718b6b01-68ba-4a17-b632-d38dc61ebb3b type_name="CyDesigner.Gde.Schematic.Symbolcatalog.CyComponentCatalogControl+CyCompCatalogData" version="1" tab="Cypress">
+<tree_states_tab_names />
+<tree_states />
+</CyGuid_718b6b01-68ba-4a17-b632-d38dc61ebb3b>
+</dataGuid>
+<dataGuid v="925cc1e1-309e-4e08-b0a1-09a83c35b157">
+<CyGuid_925cc1e1-309e-4e08-b0a1-09a83c35b157 type_name="CyDesigner.Common.ProjMgmt.Model.CyPrjMgmtProjectPSoCExe+CyCodeGenDepUserInfo" version="1">
+<deps_list>
+<v>.\TopDesign\TopDesign.cysch</v>
+<v>${CyRoot}\psoc\content\cycomponentlibrary\CyComponentLibrary.cylib\BLE_v2_10\BLE_v2_10.cysym</v>
+<v>${CyRoot}\psoc\content\cycomponentlibrary\CyComponentLibrary.cylib\BLE_v2_10\BLE_v2_10.chm</v>
+<v>${CyRoot}\psoc\content\cycomponentlibrary\CyComponentLibrary.cylib\BLE_v2_10\BLE_v2_10.dll</v>
+<v>${CyRoot}\psoc\content\cycomponentlibrary\CyComponentLibrary.cylib\BLE_v2_10\BLE_v2_10.cystate</v>
+<v>${CyRoot}\psoc\content\cycomponentlibrary\CyComponentLibrary.cylib\BLE_v2_10\API\BLE_gatt.h</v>
+<v>${CyRoot}\psoc\content\cycomponentlibrary\CyComponentLibrary.cylib\BLE_v2_10\API\BLE.h</v>
+<v>${CyRoot}\psoc\content\cycomponentlibrary\CyComponentLibrary.cylib\BLE_v2_10\API\BLE_hids.h</v>
+<v>${CyRoot}\psoc\content\cycomponentlibrary\CyComponentLibrary.cylib\BLE_v2_10\API\BLE_bas.h</v>
+<v>${CyRoot}\psoc\content\cycomponentlibrary\CyComponentLibrary.cylib\BLE_v2_10\API\BLE_bas.c</v>
+<v>${CyRoot}\psoc\content\cycomponentlibrary\CyComponentLibrary.cylib\BLE_v2_10\API\BLE_hrs.h</v>
+<v>${CyRoot}\psoc\content\cycomponentlibrary\CyComponentLibrary.cylib\BLE_v2_10\API\BLE_hrs.c</v>
+<v>${CyRoot}\psoc\content\cycomponentlibrary\CyComponentLibrary.cylib\BLE_v2_10\API\BLE_gls.h</v>
+<v>${CyRoot}\psoc\content\cycomponentlibrary\CyComponentLibrary.cylib\BLE_v2_10\API\BLE_gls.c</v>
+<v>${CyRoot}\psoc\content\cycomponentlibrary\CyComponentLibrary.cylib\BLE_v2_10\API\BLE.c</v>
+<v>${CyRoot}\psoc\content\cycomponentlibrary\CyComponentLibrary.cylib\BLE_v2_10\API\BLE_gatt.c</v>
+<v>${CyRoot}\psoc\content\cycomponentlibrary\CyComponentLibrary.cylib\BLE_v2_10\API\BLE_lls.c</v>
+<v>${CyRoot}\psoc\content\cycomponentlibrary\CyComponentLibrary.cylib\BLE_v2_10\API\BLE_lls.h</v>
+<v>${CyRoot}\psoc\content\cycomponentlibrary\CyComponentLibrary.cylib\BLE_v2_10\API\BLE_ias.c</v>
+<v>${CyRoot}\psoc\content\cycomponentlibrary\CyComponentLibrary.cylib\BLE_v2_10\API\BLE_ias.h</v>
+<v>${CyRoot}\psoc\content\cycomponentlibrary\CyComponentLibrary.cylib\BLE_v2_10\API\BLE_tps.h</v>
+<v>${CyRoot}\psoc\content\cycomponentlibrary\CyComponentLibrary.cylib\BLE_v2_10\API\BLE_tps.c</v>
+<v>${CyRoot}\psoc\content\cycomponentlibrary\CyComponentLibrary.cylib\BLE_v2_10\API\BLE_eventHandler.c</v>
+<v>${CyRoot}\psoc\content\cycomponentlibrary\CyComponentLibrary.cylib\BLE_v2_10\API\BLE_cts.c</v>
+<v>${CyRoot}\psoc\content\cycomponentlibrary\CyComponentLibrary.cylib\BLE_v2_10\API\BLE_cts.h</v>
+<v>${CyRoot}\psoc\content\cycomponentlibrary\CyComponentLibrary.cylib\BLE_v2_10\API\BLE_hids.c</v>
+<v>${CyRoot}\psoc\content\cycomponentlibrary\CyComponentLibrary.cylib\BLE_v2_10\API\BLE_HAL_INT.c</v>
+<v>${CyRoot}\psoc\content\cycomponentlibrary\CyComponentLibrary.cylib\BLE_v2_10\API\BLE_HAL_PVT.c</v>
+<v>${CyRoot}\psoc\content\cycomponentlibrary\CyComponentLibrary.cylib\BLE_v2_10\API\BLE_HAL_PVT.h</v>
+<v>${CyRoot}\psoc\content\cycomponentlibrary\CyComponentLibrary.cylib\BLE_v2_10\API\BLE_STACK_PVT.h</v>
+<v>${CyRoot}\psoc\content\cycomponentlibrary\CyComponentLibrary.cylib\BLE_v2_10\API\BLE_StackGap.h</v>
+<v>${CyRoot}\psoc\content\cycomponentlibrary\CyComponentLibrary.cylib\BLE_v2_10\API\BLE_StackGatt.h</v>
+<v>${CyRoot}\psoc\content\cycomponentlibrary\CyComponentLibrary.cylib\BLE_v2_10\API\BLE_StackGattDb.h</v>
+<v>${CyRoot}\psoc\content\cycomponentlibrary\CyComponentLibrary.cylib\BLE_v2_10\API\BLE_StackHostMain.h</v>
+<v>${CyRoot}\psoc\content\cycomponentlibrary\CyComponentLibrary.cylib\BLE_v2_10\API\BLE_StackL2cap.h</v>
+<v>${CyRoot}\psoc\content\cycomponentlibrary\CyComponentLibrary.cylib\BLE_v2_10\API\BLE_scps.c</v>
+<v>${CyRoot}\psoc\content\cycomponentlibrary\CyComponentLibrary.cylib\BLE_v2_10\API\BLE_scps.h</v>
+<v>${CyRoot}\psoc\content\cycomponentlibrary\CyComponentLibrary.cylib\BLE_v2_10\API\BLE_dis.c</v>
+<v>${CyRoot}\psoc\content\cycomponentlibrary\CyComponentLibrary.cylib\BLE_v2_10\API\BLE_dis.h</v>
+<v>${CyRoot}\psoc\content\cycomponentlibrary\CyComponentLibrary.cylib\BLE_v2_10\API\BLE_StackGattServer.h</v>
+<v>${CyRoot}\psoc\content\cycomponentlibrary\CyComponentLibrary.cylib\BLE_v2_10\API\BLE_StackGattClient.h</v>
+<v>${CyRoot}\psoc\content\cycomponentlibrary\CyComponentLibrary.cylib\BLE_v2_10\API\BLE_Stack.h</v>
+<v>${CyRoot}\psoc\content\cycomponentlibrary\CyComponentLibrary.cylib\BLE_v2_10\API\BLE_eventHandler.h</v>
+<v>${CyRoot}\psoc\content\cycomponentlibrary\CyComponentLibrary.cylib\BLE_v2_10\API\BLE_custom.h</v>
+<v>${CyRoot}\psoc\content\cycomponentlibrary\CyComponentLibrary.cylib\BLE_v2_10\API\BLE_custom.c</v>
+<v>${CyRoot}\psoc\content\cycomponentlibrary\CyComponentLibrary.cylib\BLE_v2_10\API\BLE_hts.c</v>
+<v>${CyRoot}\psoc\content\cycomponentlibrary\CyComponentLibrary.cylib\BLE_v2_10\API\BLE_bls.c</v>
+<v>${CyRoot}\psoc\content\cycomponentlibrary\CyComponentLibrary.cylib\BLE_v2_10\API\BLE_bls.h</v>
+<v>${CyRoot}\psoc\content\cycomponentlibrary\CyComponentLibrary.cylib\BLE_v2_10\API\BLE_hts.h</v>
+<v>${CyRoot}\psoc\content\cycomponentlibrary\CyComponentLibrary.cylib\BLE_v2_10\API\BLE_rscs.h</v>
+<v>${CyRoot}\psoc\content\cycomponentlibrary\CyComponentLibrary.cylib\BLE_v2_10\API\BLE_rscs.c</v>
+<v>${CyRoot}\psoc\content\cycomponentlibrary\CyComponentLibrary.cylib\BLE_v2_10\API\BLE_ans.c</v>
+<v>${CyRoot}\psoc\content\cycomponentlibrary\CyComponentLibrary.cylib\BLE_v2_10\API\BLE_ans.h</v>
+<v>${CyRoot}\psoc\content\cycomponentlibrary\CyComponentLibrary.cylib\BLE_v2_10\API\BLE_lns.c</v>
+<v>${CyRoot}\psoc\content\cycomponentlibrary\CyComponentLibrary.cylib\BLE_v2_10\API\BLE_pass.c</v>
+<v>${CyRoot}\psoc\content\cycomponentlibrary\CyComponentLibrary.cylib\BLE_v2_10\API\BLE_lns.h</v>
+<v>${CyRoot}\psoc\content\cycomponentlibrary\CyComponentLibrary.cylib\BLE_v2_10\API\BLE_pass.h</v>
+<v>${CyRoot}\psoc\content\cycomponentlibrary\CyComponentLibrary.cylib\BLE_v2_10\API\BLE_cps.c</v>
+<v>${CyRoot}\psoc\content\cycomponentlibrary\CyComponentLibrary.cylib\BLE_v2_10\API\BLE_cps.h</v>
+<v>${CyRoot}\psoc\content\cycomponentlibrary\CyComponentLibrary.cylib\BLE_v2_10\API\BLE_rtus.c</v>
+<v>${CyRoot}\psoc\content\cycomponentlibrary\CyComponentLibrary.cylib\BLE_v2_10\API\BLE_ndcs.c</v>
+<v>${CyRoot}\psoc\content\cycomponentlibrary\CyComponentLibrary.cylib\BLE_v2_10\API\BLE_rtus.h</v>
+<v>${CyRoot}\psoc\content\cycomponentlibrary\CyComponentLibrary.cylib\BLE_v2_10\API\BLE_ndcs.h</v>
+<v>${CyRoot}\psoc\content\cycomponentlibrary\CyComponentLibrary.cylib\BLE_v2_10\API\BLE_cscs.c</v>
+<v>${CyRoot}\psoc\content\cycomponentlibrary\CyComponentLibrary.cylib\BLE_v2_10\API\BLE_cscs.h</v>
+<v>${CyRoot}\psoc\content\cycomponentlibrary\CyComponentLibrary.cylib\BLE_v2_10\API\BLE_uds.c</v>
+<v>${CyRoot}\psoc\content\cycomponentlibrary\CyComponentLibrary.cylib\BLE_v2_10\API\BLE_uds.h</v>
+<v>${CyRoot}\psoc\content\cycomponentlibrary\CyComponentLibrary.cylib\BLE_v2_10\API\BLE_cgms.c</v>
+<v>${CyRoot}\psoc\content\cycomponentlibrary\CyComponentLibrary.cylib\BLE_v2_10\API\BLE_cgms.h</v>
+<v>${CyRoot}\psoc\content\cycomponentlibrary\CyComponentLibrary.cylib\BLE_v2_10\API\BLE_bts.c</v>
+<v>${CyRoot}\psoc\content\cycomponentlibrary\CyComponentLibrary.cylib\BLE_v2_10\API\BLE_bts.h</v>
+<v>${CyRoot}\psoc\content\cycomponentlibrary\CyComponentLibrary.cylib\BLE_v2_10\API\BLE_ess.c</v>
+<v>${CyRoot}\psoc\content\cycomponentlibrary\CyComponentLibrary.cylib\BLE_v2_10\API\BLE_ess.h</v>
+<v>${CyRoot}\psoc\content\cycomponentlibrary\CyComponentLibrary.cylib\BLE_v2_10\API\BLE_bms.c</v>
+<v>${CyRoot}\psoc\content\cycomponentlibrary\CyComponentLibrary.cylib\BLE_v2_10\API\BLE_bms.h</v>
+<v>${CyRoot}\psoc\content\cycomponentlibrary\CyComponentLibrary.cylib\BLE_v2_10\API\BLE_wss.c</v>
+<v>${CyRoot}\psoc\content\cycomponentlibrary\CyComponentLibrary.cylib\BLE_v2_10\API\BLE_wss.h</v>
+<v>${CyRoot}\psoc\content\cycomponentlibrary\CyComponentLibrary.cylib\BLE_v2_10\API\BLE_bcs.c</v>
+<v>${CyRoot}\psoc\content\cycomponentlibrary\CyComponentLibrary.cylib\BLE_v2_10\API\BLE_bcs.h</v>
+<v>${CyRoot}\psoc\content\cycomponentlibrary\CyComponentLibrary.cylib\BLE_v2_10\API\BLE_wpts.h</v>
+<v>${CyRoot}\psoc\content\cycomponentlibrary\CyComponentLibrary.cylib\BLE_v2_10\API\BLE_wpts.c</v>
+<v>${CyRoot}\psoc\content\cycomponentlibrary\CyComponentLibrary.cylib\BLE_v2_10\API\BLE_ancs.c</v>
+<v>${CyRoot}\psoc\content\cycomponentlibrary\CyComponentLibrary.cylib\BLE_v2_10\API\BLE_ancs.h</v>
+<v>${CyRoot}\psoc\content\cycomponentlibrary\CyComponentLibrary.cylib\BLE_v2_10\Library\mdkCyBLEStack_BLE_SOC_CENTRAL.a</v>
+<v>${CyRoot}\psoc\content\cycomponentlibrary\CyComponentLibrary.cylib\BLE_v2_10\Library\mdkCyBLEStack_BLE_SOC_CENTRAL_PERIPHERAL.a</v>
+<v>${CyRoot}\psoc\content\cycomponentlibrary\CyComponentLibrary.cylib\BLE_v2_10\Library\mdkCyBLEStack_BLE_SOC_PERIPHERAL.a</v>
+<v>${CyRoot}\psoc\content\cycomponentlibrary\CyComponentLibrary.cylib\BLE_v2_10\Library\mdkCyBLEStack_HCI_MODE_CENTRAL_PERIPHERAL.a</v>
+<v>${CyRoot}\psoc\content\cycomponentlibrary\CyComponentLibrary.cylib\BLE_v2_10\Library\gccCyBLEStack_BLE_SOC_CENTRAL.a</v>
+<v>${CyRoot}\psoc\content\cycomponentlibrary\CyComponentLibrary.cylib\BLE_v2_10\Library\gccCyBLEStack_BLE_SOC_CENTRAL_PERIPHERAL.a</v>
+<v>${CyRoot}\psoc\content\cycomponentlibrary\CyComponentLibrary.cylib\BLE_v2_10\Library\gccCyBLEStack_BLE_SOC_PERIPHERAL.a</v>
+<v>${CyRoot}\psoc\content\cycomponentlibrary\CyComponentLibrary.cylib\BLE_v2_10\Library\gccCyBLEStack_HCI_MODE_CENTRAL_PERIPHERAL.a</v>
+<v>${CyRoot}\psoc\content\cycomponentlibrary\CyComponentLibrary.cylib\BLE_v2_10\PSoC4\BLE_v2_10.cysch</v>
+<v>${CyRoot}\psoc\content\cyprimitives\CyPrimitives.cylib\cy_m0s8_ble_v1_0\cy_m0s8_ble_v1_0.cysym</v>
+<v>${CyRoot}\psoc\content\cyprimitives\CyPrimitives.cylib\cy_m0s8_ble_v1_0\PSoC4\cy_m0s8_ble_v1_0.cyprimitive</v>
+<v>${CyRoot}\psoc\content\cyprimitives\CyPrimitives.cylib\cy_isr_v1_70\cy_isr_v1_70.cysym</v>
+<v>${CyRoot}\psoc\content\cyprimitives\CyPrimitives.cylib\cy_isr_v1_70\cy_isr_v1_70.pdf</v>
+<v>${CyRoot}\psoc\content\cyprimitives\CyPrimitives.cylib\cy_isr_v1_70\cy_isr_v1_70.primitive</v>
+<v>${CyRoot}\psoc\content\cyprimitives\CyPrimitives.cylib\cy_isr_v1_70\cy_isr_v1_70.cystate</v>
+<v>${CyRoot}\psoc\content\cyprimitives\CyPrimitives.cylib\cy_isr_v1_70\Custom\custom.cs</v>
+<v>${CyRoot}\psoc\content\cyprimitives\CyPrimitives.cylib\cy_isr_v1_70\PSoC4\API\intc.c</v>
+<v>${CyRoot}\psoc\content\cyprimitives\CyPrimitives.cylib\cy_isr_v1_70\PSoC4\API\intc.h</v>
+<v>${CyRoot}\psoc\content\cyprimitives\CyPrimitives.cylib\cy_clock_v2_20\cy_clock_v2_20.cyprimitive</v>
+<v>${CyRoot}\psoc\content\cyprimitives\CyPrimitives.cylib\cy_clock_v2_20\cy_clock_v2_20.cysym</v>
+<v>${CyRoot}\psoc\content\cyprimitives\CyPrimitives.cylib\cy_clock_v2_20\cy_clock_v2_20.pdf</v>
+<v>${CyRoot}\psoc\content\cyprimitives\CyPrimitives.cylib\cy_clock_v2_20\cy_clock_v2_20.cystate</v>
+<v>${CyRoot}\psoc\content\cyprimitives\CyPrimitives.cylib\cy_clock_v2_20\PSoC4\API\clk.c</v>
+<v>${CyRoot}\psoc\content\cyprimitives\CyPrimitives.cylib\cy_clock_v2_20\PSoC4\API\clk.h</v>
+<v>${CyRoot}\psoc\content\cyprimitives\CyPrimitives.cylib\cy_clock_v2_20\Custom\custom.cs</v>
+<v>${CyRoot}\psoc\content\cyprimitives\CyPrimitives.cylib\or_v1_0\or_v1_0.cysym</v>
+<v>${CyRoot}\psoc\content\cyprimitives\CyPrimitives.cylib\or_v1_0\or_v1_0.pdf</v>
+<v>${CyRoot}\psoc\content\cyprimitives\CyPrimitives.cylib\or_v1_0\or_v1_0.v</v>
+<v>${CyRoot}\psoc\content\cyprimitives\CyPrimitives.cylib\or_v1_0\Custom\custom.cs</v>
+<v>${CyRoot}\psoc\content\cyprimitives\CyPrimitives.cylib\cy_constant_v1_0\cy_constant_v1_0.cysym</v>
+<v>${CyRoot}\psoc\content\cyprimitives\CyPrimitives.cylib\cy_constant_v1_0\cy_constant_v1_0.v</v>
+<v>${CyRoot}\psoc\content\cyprimitives\CyPrimitives.cylib\cy_constant_v1_0\cy_constant_v1_0.cystate</v>
+<v>${CyRoot}\psoc\content\cyprimitives\CyPrimitives.cylib\cy_constant_v1_0\cy_constant_v1_0.pdf</v>
+<v>${CyRoot}\psoc\content\cyprimitives\CyPrimitives.cylib\cy_constant_v1_0</v>
+<v>${CyRoot}\psoc\content\cyprimitives\CyPrimitives.cylib\cy_constant_v1_0\Custom\custom.cs</v>
+<v>${CyRoot}\psoc\content\default\CyAnnotationLibrary\CyAnnotationLibrary.cylib\LED_v1_0\LED_v1_0.cysym</v>
+<v>${CyRoot}\psoc\content\default\CyAnnotationLibrary\CyAnnotationLibrary.cylib\LED_v1_0\LED_v1_0.pdf</v>
+<v>${CyRoot}\psoc\content\cyprimitives\CyPrimitives.cylib\cy_pins_v2_10\cy_pins_v2_10.cysym</v>
+<v>${CyRoot}\psoc\content\cyprimitives\CyPrimitives.cylib\cy_pins_v2_10\cy_pins_v2_10.pdf</v>
+<v>${CyRoot}\psoc\content\cyprimitives\CyPrimitives.cylib\cy_pins_v2_10\cy_pins_v2_10.cystate</v>
+<v>${CyRoot}\psoc\content\cyprimitives\CyPrimitives.cylib\cy_pins_v2_10\cy_pins_v2_10.cyprimitive</v>
+<v>${CyRoot}\psoc\content\cyprimitives\CyPrimitives.cylib\cy_pins_v2_10</v>
+<v>${CyRoot}\psoc\content\cyprimitives\CyPrimitives.cylib\cy_pins_v2_10\Custom\custom.cs</v>
+<v>${CyRoot}\psoc\content\cyprimitives\CyPrimitives.cylib\cy_pins_v2_10\Custom\cyenums.cs</v>
+<v>${CyRoot}\psoc\content\cyprimitives\CyPrimitives.cylib\cy_pins_v2_10\Custom\cypinsdata.cs</v>
+<v>${CyRoot}\psoc\content\cyprimitives\CyPrimitives.cylib\cy_pins_v2_10\Custom\cypinpicture.cs</v>
+<v>${CyRoot}\psoc\content\cyprimitives\CyPrimitives.cylib\cy_pins_v2_10\Custom\cypinutils.cs</v>
+<v>${CyRoot}\psoc\content\cyprimitives\CyPrimitives.cylib\cy_pins_v2_10\Custom\cygeneralcontrol.cs</v>
+<v>${CyRoot}\psoc\content\cyprimitives\CyPrimitives.cylib\cy_pins_v2_10\Custom\cygeneralcontrol.Designer.cs</v>
+<v>${CyRoot}\psoc\content\cyprimitives\CyPrimitives.cylib\cy_pins_v2_10\Custom\cyinputcontrol.cs</v>
+<v>${CyRoot}\psoc\content\cyprimitives\CyPrimitives.cylib\cy_pins_v2_10\Custom\cyinputcontrol.Designer.cs</v>
+<v>${CyRoot}\psoc\content\cyprimitives\CyPrimitives.cylib\cy_pins_v2_10\Custom\cymappingcontrol.cs</v>
+<v>${CyRoot}\psoc\content\cyprimitives\CyPrimitives.cylib\cy_pins_v2_10\Custom\cymappingcontrol.Designer.cs</v>
+<v>${CyRoot}\psoc\content\cyprimitives\CyPrimitives.cylib\cy_pins_v2_10\Custom\cyoutputcontrol.cs</v>
+<v>${CyRoot}\psoc\content\cyprimitives\CyPrimitives.cylib\cy_pins_v2_10\Custom\cyoutputcontrol.Designer.cs</v>
+<v>${CyRoot}\psoc\content\cyprimitives\CyPrimitives.cylib\cy_pins_v2_10\Custom\cypinaliasdialog.cs</v>
+<v>${CyRoot}\psoc\content\cyprimitives\CyPrimitives.cylib\cy_pins_v2_10\Custom\cypinaliasdialog.Designer.cs</v>
+<v>${CyRoot}\psoc\content\cyprimitives\CyPrimitives.cylib\cy_pins_v2_10\Custom\cypinscontrol.cs</v>
+<v>${CyRoot}\psoc\content\cyprimitives\CyPrimitives.cylib\cy_pins_v2_10\Custom\cypinscontrol.Designer.cs</v>
+<v>${CyRoot}\psoc\content\cyprimitives\CyPrimitives.cylib\cy_pins_v2_10\Custom\cyporcontrol.cs</v>
+<v>${CyRoot}\psoc\content\cyprimitives\CyPrimitives.cylib\cy_pins_v2_10\Custom\cyporcontrol.Designer.cs</v>
+<v>${CyRoot}\psoc\content\cyprimitives\CyPrimitives.cylib\cy_pins_v2_10\Custom\Resource1.Designer.cs</v>
+<v>${CyRoot}\psoc\content\cyprimitives\CyPrimitives.cylib\cy_pins_v2_10\Custom\cyclockingcontrol.cs</v>
+<v>${CyRoot}\psoc\content\cyprimitives\CyPrimitives.cylib\cy_pins_v2_10\Custom\cyclockingcontrol.Designer.cs</v>
+<v>${CyRoot}\psoc\content\cyprimitives\CyPrimitives.cylib\cy_pins_v2_10\Custom\cygeneralcontrol.resx</v>
+<v>${CyRoot}\psoc\content\cyprimitives\CyPrimitives.cylib\cy_pins_v2_10\Custom\cyinputcontrol.resx</v>
+<v>${CyRoot}\psoc\content\cyprimitives\CyPrimitives.cylib\cy_pins_v2_10\Custom\cymappingcontrol.resx</v>
+<v>${CyRoot}\psoc\content\cyprimitives\CyPrimitives.cylib\cy_pins_v2_10\Custom\cyoutputcontrol.resx</v>
+<v>${CyRoot}\psoc\content\cyprimitives\CyPrimitives.cylib\cy_pins_v2_10\Custom\cypinaliasdialog.resx</v>
+<v>${CyRoot}\psoc\content\cyprimitives\CyPrimitives.cylib\cy_pins_v2_10\Custom\cypinscontrol.resx</v>
+<v>${CyRoot}\psoc\content\cyprimitives\CyPrimitives.cylib\cy_pins_v2_10\Custom\cyporcontrol.resx</v>
+<v>${CyRoot}\psoc\content\cyprimitives\CyPrimitives.cylib\cy_pins_v2_10\Custom\Resource1.resx</v>
+<v>${CyRoot}\psoc\content\cyprimitives\CyPrimitives.cylib\cy_pins_v2_10\Custom\cyclockingcontrol.resx</v>
+<v>${CyRoot}\psoc\content\cyprimitives\CyPrimitives.cylib\cy_pins_v2_10\PSoC4\API\pins.c</v>
+<v>${CyRoot}\psoc\content\cyprimitives\CyPrimitives.cylib\cy_pins_v2_10\PSoC4\API\pins.h</v>
+<v>${CyRoot}\psoc\content\cyprimitives\CyPrimitives.cylib\cy_pins_v2_10\PSoC4\API\aliases.h</v>
+<v>${CyRoot}\psoc\content\default\CyAnnotationLibrary\CyAnnotationLibrary.cylib\Resistor_v1_0\Resistor_v1_0.cysym</v>
+<v>${CyRoot}\psoc\content\default\CyAnnotationLibrary\CyAnnotationLibrary.cylib\Resistor_v1_0\Resistor_v1_0.pdf</v>
+<v>${CyRoot}\psoc\content\default\CyAnnotationLibrary\CyAnnotationLibrary.cylib\Power_v1_0\Power_v1_0.cysym</v>
+<v>${CyRoot}\psoc\content\default\CyAnnotationLibrary\CyAnnotationLibrary.cylib\Power_v1_0\Power_v1_0.pdf</v>
+<v>${CyRoot}\psoc\content\default\CyAnnotationLibrary\CyAnnotationLibrary.cylib\LED_v1_0\LED_v1_0.cysym</v>
+<v>${CyRoot}\psoc\content\default\CyAnnotationLibrary\CyAnnotationLibrary.cylib\LED_v1_0\LED_v1_0.pdf</v>
+<v>${CyRoot}\psoc\content\default\CyAnnotationLibrary\CyAnnotationLibrary.cylib\Resistor_v1_0\Resistor_v1_0.cysym</v>
+<v>${CyRoot}\psoc\content\default\CyAnnotationLibrary\CyAnnotationLibrary.cylib\Resistor_v1_0\Resistor_v1_0.pdf</v>
+<v>${CyRoot}\psoc\content\cyprimitives\CyPrimitives.cylib\cy_pins_v2_10\cy_pins_v2_10.cysym</v>
+<v>${CyRoot}\psoc\content\cyprimitives\CyPrimitives.cylib\cy_pins_v2_10\cy_pins_v2_10.pdf</v>
+<v>${CyRoot}\psoc\content\cyprimitives\CyPrimitives.cylib\cy_pins_v2_10\cy_pins_v2_10.cystate</v>
+<v>${CyRoot}\psoc\content\cyprimitives\CyPrimitives.cylib\cy_pins_v2_10\cy_pins_v2_10.cyprimitive</v>
+<v>${CyRoot}\psoc\content\cyprimitives\CyPrimitives.cylib\cy_pins_v2_10</v>
+<v>${CyRoot}\psoc\content\cyprimitives\CyPrimitives.cylib\cy_pins_v2_10\Custom\custom.cs</v>
+<v>${CyRoot}\psoc\content\cyprimitives\CyPrimitives.cylib\cy_pins_v2_10\Custom\cyenums.cs</v>
+<v>${CyRoot}\psoc\content\cyprimitives\CyPrimitives.cylib\cy_pins_v2_10\Custom\cypinsdata.cs</v>
+<v>${CyRoot}\psoc\content\cyprimitives\CyPrimitives.cylib\cy_pins_v2_10\Custom\cypinpicture.cs</v>
+<v>${CyRoot}\psoc\content\cyprimitives\CyPrimitives.cylib\cy_pins_v2_10\Custom\cypinutils.cs</v>
+<v>${CyRoot}\psoc\content\cyprimitives\CyPrimitives.cylib\cy_pins_v2_10\Custom\cygeneralcontrol.cs</v>
+<v>${CyRoot}\psoc\content\cyprimitives\CyPrimitives.cylib\cy_pins_v2_10\Custom\cygeneralcontrol.Designer.cs</v>
+<v>${CyRoot}\psoc\content\cyprimitives\CyPrimitives.cylib\cy_pins_v2_10\Custom\cyinputcontrol.cs</v>
+<v>${CyRoot}\psoc\content\cyprimitives\CyPrimitives.cylib\cy_pins_v2_10\Custom\cyinputcontrol.Designer.cs</v>
+<v>${CyRoot}\psoc\content\cyprimitives\CyPrimitives.cylib\cy_pins_v2_10\Custom\cymappingcontrol.cs</v>
+<v>${CyRoot}\psoc\content\cyprimitives\CyPrimitives.cylib\cy_pins_v2_10\Custom\cymappingcontrol.Designer.cs</v>
+<v>${CyRoot}\psoc\content\cyprimitives\CyPrimitives.cylib\cy_pins_v2_10\Custom\cyoutputcontrol.cs</v>
+<v>${CyRoot}\psoc\content\cyprimitives\CyPrimitives.cylib\cy_pins_v2_10\Custom\cyoutputcontrol.Designer.cs</v>
+<v>${CyRoot}\psoc\content\cyprimitives\CyPrimitives.cylib\cy_pins_v2_10\Custom\cypinaliasdialog.cs</v>
+<v>${CyRoot}\psoc\content\cyprimitives\CyPrimitives.cylib\cy_pins_v2_10\Custom\cypinaliasdialog.Designer.cs</v>
+<v>${CyRoot}\psoc\content\cyprimitives\CyPrimitives.cylib\cy_pins_v2_10\Custom\cypinscontrol.cs</v>
+<v>${CyRoot}\psoc\content\cyprimitives\CyPrimitives.cylib\cy_pins_v2_10\Custom\cypinscontrol.Designer.cs</v>
+<v>${CyRoot}\psoc\content\cyprimitives\CyPrimitives.cylib\cy_pins_v2_10\Custom\cyporcontrol.cs</v>
+<v>${CyRoot}\psoc\content\cyprimitives\CyPrimitives.cylib\cy_pins_v2_10\Custom\cyporcontrol.Designer.cs</v>
+<v>${CyRoot}\psoc\content\cyprimitives\CyPrimitives.cylib\cy_pins_v2_10\Custom\Resource1.Designer.cs</v>
+<v>${CyRoot}\psoc\content\cyprimitives\CyPrimitives.cylib\cy_pins_v2_10\Custom\cyclockingcontrol.cs</v>
+<v>${CyRoot}\psoc\content\cyprimitives\CyPrimitives.cylib\cy_pins_v2_10\Custom\cyclockingcontrol.Designer.cs</v>
+<v>${CyRoot}\psoc\content\cyprimitives\CyPrimitives.cylib\cy_pins_v2_10\Custom\cygeneralcontrol.resx</v>
+<v>${CyRoot}\psoc\content\cyprimitives\CyPrimitives.cylib\cy_pins_v2_10\Custom\cyinputcontrol.resx</v>
+<v>${CyRoot}\psoc\content\cyprimitives\CyPrimitives.cylib\cy_pins_v2_10\Custom\cymappingcontrol.resx</v>
+<v>${CyRoot}\psoc\content\cyprimitives\CyPrimitives.cylib\cy_pins_v2_10\Custom\cyoutputcontrol.resx</v>
+<v>${CyRoot}\psoc\content\cyprimitives\CyPrimitives.cylib\cy_pins_v2_10\Custom\cypinaliasdialog.resx</v>
+<v>${CyRoot}\psoc\content\cyprimitives\CyPrimitives.cylib\cy_pins_v2_10\Custom\cypinscontrol.resx</v>
+<v>${CyRoot}\psoc\content\cyprimitives\CyPrimitives.cylib\cy_pins_v2_10\Custom\cyporcontrol.resx</v>
+<v>${CyRoot}\psoc\content\cyprimitives\CyPrimitives.cylib\cy_pins_v2_10\Custom\Resource1.resx</v>
+<v>${CyRoot}\psoc\content\cyprimitives\CyPrimitives.cylib\cy_pins_v2_10\Custom\cyclockingcontrol.resx</v>
+<v>${CyRoot}\psoc\content\cyprimitives\CyPrimitives.cylib\cy_pins_v2_10\PSoC4\API\pins.c</v>
+<v>${CyRoot}\psoc\content\cyprimitives\CyPrimitives.cylib\cy_pins_v2_10\PSoC4\API\pins.h</v>
+<v>${CyRoot}\psoc\content\cyprimitives\CyPrimitives.cylib\cy_pins_v2_10\PSoC4\API\aliases.h</v>
+<v>.\Design01.cydwr</v>
+<v>${CyRoot}\psoc\content\cycomponentlibrary\CyComponentLibrary.cylib\cy_boot_v5_10\PSoC4\API\cm0gcc.ld</v>
+<v>${CyRoot}\psoc\content\cycomponentlibrary\CyComponentLibrary.cylib\cy_boot_v5_10\PSoC4\API\Cm0RealView.scat</v>
+<v>${CyRoot}\psoc\content\cycomponentlibrary\CyComponentLibrary.cylib\cy_boot_v5_10\PSoC4\API\Cm0Start.c</v>
+<v>${CyRoot}\psoc\content\cycomponentlibrary\CyComponentLibrary.cylib\cy_boot_v5_10\PSoC4\API\core_cm0.h</v>
+<v>${CyRoot}\psoc\content\cycomponentlibrary\CyComponentLibrary.cylib\cy_boot_v5_10\PSoC4\API\core_cm0_psoc4.h</v>
+<v>${CyRoot}\psoc\content\cycomponentlibrary\CyComponentLibrary.cylib\cy_boot_v5_10\PSoC4\API\CyBootAsmGnu.s</v>
+<v>${CyRoot}\psoc\content\cycomponentlibrary\CyComponentLibrary.cylib\cy_boot_v5_10\PSoC4\API\CyBootAsmRv.s</v>
+<v>${CyRoot}\psoc\content\cycomponentlibrary\CyComponentLibrary.cylib\cy_boot_v5_10\PSoC4\API\CyFlash.c</v>
+<v>${CyRoot}\psoc\content\cycomponentlibrary\CyComponentLibrary.cylib\cy_boot_v5_10\PSoC4\API\CyFlash.h</v>
+<v>${CyRoot}\psoc\content\cycomponentlibrary\CyComponentLibrary.cylib\cy_boot_v5_10\PSoC4\API\CyLib.c</v>
+<v>${CyRoot}\psoc\content\cycomponentlibrary\CyComponentLibrary.cylib\cy_boot_v5_10\PSoC4\API\CyLib.h</v>
+<v>${CyRoot}\psoc\content\cycomponentlibrary\CyComponentLibrary.cylib\cy_boot_v5_10\PSoC4\API\cyPm.c</v>
+<v>${CyRoot}\psoc\content\cycomponentlibrary\CyComponentLibrary.cylib\cy_boot_v5_10\PSoC4\API\cyPm.h</v>
+<v>${CyRoot}\psoc\content\cycomponentlibrary\CyComponentLibrary.cylib\cy_boot_v5_10\PSoC4\API\cytypes.h</v>
+<v>${CyRoot}\psoc\content\cycomponentlibrary\CyComponentLibrary.cylib\cy_boot_v5_10\PSoC4\API\cyutils.c</v>
+<v>${CyRoot}\psoc\content\cycomponentlibrary\CyComponentLibrary.cylib\cy_boot_v5_10\PSoC4\API\cypins.h</v>
+<v>${CyRoot}\psoc\content\cycomponentlibrary\CyComponentLibrary.cylib\cy_boot_v5_10\PSoC4\API\core_cmFunc.h</v>
+<v>${CyRoot}\psoc\content\cycomponentlibrary\CyComponentLibrary.cylib\cy_boot_v5_10\PSoC4\API\core_cmInstr.h</v>
+<v>${CyRoot}\psoc\content\cycomponentlibrary\CyComponentLibrary.cylib\cy_boot_v5_10\PSoC4\API\Cm0Iar.icf</v>
+<v>${CyRoot}\psoc\content\cycomponentlibrary\CyComponentLibrary.cylib\cy_boot_v5_10\PSoC4\API\CyBootAsmIar.s</v>
+</deps_list>
+<gen_list>
+<v>.\Generated_Source\PSoC4\cyfitter_cfg.h</v>
+<v>.\Generated_Source\PSoC4\cyfitter_cfg.c</v>
+<v>.\Generated_Source\PSoC4\protect.hex</v>
+<v>.\Generated_Source\PSoC4\cymetadata.c</v>
+<v>.\Generated_Source\PSoC4\cydevice_trm.h</v>
+<v>.\Generated_Source\PSoC4\cydevicegnu_trm.inc</v>
+<v>.\Generated_Source\PSoC4\cydevicerv_trm.inc</v>
+<v>.\Generated_Source\PSoC4\cydeviceiar_trm.inc</v>
+<v>.\Generated_Source\PSoC4\cyfittergnu.inc</v>
+<v>.\Generated_Source\PSoC4\cyfitterrv.inc</v>
+<v>.\Generated_Source\PSoC4\cyfitteriar.inc</v>
+<v>.\Generated_Source\PSoC4\cyfitter.h</v>
+<v>.\Generated_Source\PSoC4\cydisabledsheets.h</v>
+<v>.\Generated_Source\PSoC4\BLE_1_gatt.h</v>
+<v>.\Generated_Source\PSoC4\BLE_1.h</v>
+<v>.\Generated_Source\PSoC4\BLE_1_hrs.h</v>
+<v>.\Generated_Source\PSoC4\BLE_1_hrs.c</v>
+<v>.\Generated_Source\PSoC4\BLE_1.c</v>
+<v>.\Generated_Source\PSoC4\BLE_1_gatt.c</v>
+<v>.\Generated_Source\PSoC4\BLE_1_eventHandler.c</v>
+<v>.\Generated_Source\PSoC4\BLE_1_HAL_INT.c</v>
+<v>.\Generated_Source\PSoC4\BLE_1_HAL_PVT.c</v>
+<v>.\Generated_Source\PSoC4\BLE_1_HAL_PVT.h</v>
+<v>.\Generated_Source\PSoC4\BLE_1_STACK_PVT.h</v>
+<v>.\Generated_Source\PSoC4\BLE_1_StackGap.h</v>
+<v>.\Generated_Source\PSoC4\BLE_1_StackGatt.h</v>
+<v>.\Generated_Source\PSoC4\BLE_1_StackGattDb.h</v>
+<v>.\Generated_Source\PSoC4\BLE_1_StackHostMain.h</v>
+<v>.\Generated_Source\PSoC4\BLE_1_StackL2cap.h</v>
+<v>.\Generated_Source\PSoC4\BLE_1_dis.c</v>
+<v>.\Generated_Source\PSoC4\BLE_1_dis.h</v>
+<v>.\Generated_Source\PSoC4\BLE_1_StackGattServer.h</v>
+<v>.\Generated_Source\PSoC4\BLE_1_StackGattClient.h</v>
+<v>.\Generated_Source\PSoC4\BLE_1_Stack.h</v>
+<v>.\Generated_Source\PSoC4\BLE_1_eventHandler.h</v>
+<v>.\Generated_Source\PSoC4\Advertising_Led.c</v>
+<v>.\Generated_Source\PSoC4\Advertising_Led.h</v>
+<v>.\Generated_Source\PSoC4\Advertising_Led_aliases.h</v>
+<v>.\Generated_Source\PSoC4\BLE_1_bless_isr.c</v>
+<v>.\Generated_Source\PSoC4\BLE_1_bless_isr.h</v>
+<v>.\Generated_Source\PSoC4\cm0gcc.ld</v>
+<v>.\Generated_Source\PSoC4\Cm0RealView.scat</v>
+<v>.\Generated_Source\PSoC4\Cm0Start.c</v>
+<v>.\Generated_Source\PSoC4\core_cm0_psoc4.h</v>
+<v>.\Generated_Source\PSoC4\core_cm0.h</v>
+<v>.\Generated_Source\PSoC4\CyBootAsmGnu.s</v>
+<v>.\Generated_Source\PSoC4\CyBootAsmRv.s</v>
+<v>.\Generated_Source\PSoC4\CyFlash.c</v>
+<v>.\Generated_Source\PSoC4\CyFlash.h</v>
+<v>.\Generated_Source\PSoC4\CyLib.c</v>
+<v>.\Generated_Source\PSoC4\CyLib.h</v>
+<v>.\Generated_Source\PSoC4\cyPm.c</v>
+<v>.\Generated_Source\PSoC4\cyPm.h</v>
+<v>.\Generated_Source\PSoC4\cytypes.h</v>
+<v>.\Generated_Source\PSoC4\cyutils.c</v>
+<v>.\Generated_Source\PSoC4\cypins.h</v>
+<v>.\Generated_Source\PSoC4\core_cmFunc.h</v>
+<v>.\Generated_Source\PSoC4\core_cmInstr.h</v>
+<v>.\Generated_Source\PSoC4\Cm0Iar.icf</v>
+<v>.\Generated_Source\PSoC4\CyBootAsmIar.s</v>
+<v>.\Generated_Source\PSoC4\CyLFClk.c</v>
+<v>.\Generated_Source\PSoC4\CyLFClk.h</v>
+<v>.\Generated_Source\PSoC4\project.h</v>
+<v>.\Generated_Source\PSoC4\Error_Led.c</v>
+<v>.\Generated_Source\PSoC4\Error_Led.h</v>
+<v>.\Generated_Source\PSoC4\Error_Led_aliases.h</v>
+</gen_list>
+<warp_dep>
+<v>C:\Program Files (x86)\Cypress\PSoC Creator\3.2\PSoC Creator\warp\lib\ieee\work\stdlogic.vif</v>
+<v>C:\Program Files (x86)\Cypress\PSoC Creator\3.2\PSoC Creator\warp\lib\common\stdlogic\mod_genv.vif</v>
+<v>C:\Program Files (x86)\Cypress\PSoC Creator\3.2\PSoC Creator\psoc\content\cyprimitives\CyPrimitives.cylib\or_v1_0\or_v1_0.v</v>
+<v>C:\Program Files (x86)\Cypress\PSoC Creator\3.2\PSoC Creator\psoc\content\cyprimitives\CyPrimitives.cylib\cy_constant_v1_0\cy_constant_v1_0.v</v>
+<v>C:\Program Files (x86)\Cypress\PSoC Creator\3.2\PSoC Creator\warp\lib\common\stdlogic\rtlpkg.vif</v>
+</warp_dep>
+<deps_time v="130865054251096977" />
+<top_block v="TopDesign" />
+<last_generation v="0" />
+</CyGuid_925cc1e1-309e-4e08-b0a1-09a83c35b157>
+</dataGuid>
+<dataGuid v="769d31ea-68b1-4f0c-b90a-7c10a43ee563">
+<CyGuid_769d31ea-68b1-4f0c-b90a-7c10a43ee563 type_name="CyDesigner.Common.ProjMgmt.Model.CyLinkCustomData" version="1">
+<deps_time v="130865056992034827" />
+</CyGuid_769d31ea-68b1-4f0c-b90a-7c10a43ee563>
+</dataGuid>
+</userData>
+</CyGuid_fdba8dfd-b15b-4469-9bbb-9e40c3e70997>
+<properties />
+</CyGuid_7a7929f8-5e3b-4f86-a093-2d4ee6513111>
+</CyXmlSerializer>

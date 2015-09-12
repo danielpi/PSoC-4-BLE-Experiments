@@ -59,7 +59,6 @@ class ViewController: NSViewController {
     var selectedPeripheral: DiscoveredPeripheral?
     var discoveredPeripherals: [DiscoveredPeripheral] = []
     
-    //var poller: NSTimer? = nil
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -238,7 +237,5 @@ extension ViewController: CBPeripheralDelegate {
                 heartRateLabel.stringValue = "\(dataArray[1])"
             }
         }
-        
-        //print("\(characteristic) updated value to \(value)")
     }
 }

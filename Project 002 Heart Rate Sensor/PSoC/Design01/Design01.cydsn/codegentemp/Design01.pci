@@ -1,0 +1,14 @@
+# Design01
+# 2015-09-12 04:23:32Z
+
+# IO_6@[IOP=(0)][IoId=(6)] is reserved: SWDDebugEnabled
+dont_use_io iocell 0 6
+# IO_7@[IOP=(0)][IoId=(7)] is reserved: SWDDebugEnabled
+dont_use_io iocell 0 7
+# IO_0@[IOP=(6)][IoId=(0)] is reserved: KhzXtalEnabled
+dont_use_io iocell 6 0
+# IO_1@[IOP=(6)][IoId=(1)] is reserved: KhzXtalEnabled
+dont_use_io iocell 6 1
+set_io "Advertising_Led(0)" iocell 3 6
+set_location "ClockGenBlock" m0s8clockgenblockcell -1 -1 0
+set_io "Error_Led(0)" iocell 2 6
