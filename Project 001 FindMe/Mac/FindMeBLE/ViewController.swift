@@ -35,6 +35,7 @@ class ViewController: NSViewController {
     
     let immediateAlertUUID = CBUUID(string:"0x1802")
     let alertLevelUUID = CBUUID(string: "0x2A06")
+    let capSenseServiceUUID = CBUUID(string: "0xCAB5")
     
     var bleManager = CBCentralManager(delegate: nil, queue: nil, options: nil)
     
@@ -52,7 +53,7 @@ class ViewController: NSViewController {
         tableView.registerNib(emptyCell, forIdentifier: "EmptyTableCellView")
         
         bleManager.delegate = self
-        bleManager.scanForPeripheralsWithServices([immediateAlertUUID], options: nil)
+        bleManager.scanForPeripheralsWithServices([immediateAlertUUID,capSenseServiceUUID], options: nil)
     }
 
     override var representedObject: AnyObject? {
