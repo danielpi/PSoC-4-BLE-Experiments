@@ -15,6 +15,7 @@
 #define LED_OFF                     (1u)
 
 CYBLE_API_RESULT_T apiResult;
+CYBLE_HRS_HRM_T hrsHeartRate;
 
 /*
 On power up we need to start off the BLE service and start advertising the 

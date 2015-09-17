@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccHqRLl5.s 			page 1
+ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccQWbQeT.s 			page 1
 
 
    1              		.cpu cortex-m0
@@ -44,51 +44,59 @@ ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccHqRLl5.s 			page 1
   16:.\main.c      **** 
   17:.\main.c      **** CYBLE_API_RESULT_T apiResult;
   18:.\main.c      **** 
-  19:.\main.c      **** void StartAdvertisment() {
-  26              		.loc 1 19 0
+  19:.\main.c      **** /*
+  20:.\main.c      **** On power up we need to start off the BLE service and start advertising the 
+  21:.\main.c      **** heart rate service. A LED blink whenever advertising packets go out would
+  22:.\main.c      **** be good (at the right rate at anyrate).
+  23:.\main.c      **** 
+  24:.\main.c      **** */
+  25:.\main.c      **** 
+  26:.\main.c      **** 
+  27:.\main.c      **** void StartAdvertisment() {
+  26              		.loc 1 27 0
   27              		.cfi_startproc
   28 0000 08B5     		push	{r3, lr}
   29              		.cfi_def_cfa_offset 8
   30              		.cfi_offset 3, -8
+ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccQWbQeT.s 			page 2
+
+
   31              		.cfi_offset 14, -4
-  20:.\main.c      ****     apiResult = CyBle_GappStartAdvertisement(CYBLE_ADVERTISING_FAST);
-  32              		.loc 1 20 0
+  28:.\main.c      ****     apiResult = CyBle_GappStartAdvertisement(CYBLE_ADVERTISING_FAST);
+  32              		.loc 1 28 0
   33 0002 0020     		mov	r0, #0
   34 0004 FFF7FEFF 		bl	CyBle_GappStartAdvertisement
   35              	.LVL0:
   36 0008 011C     		mov	r1, r0
   37 000a 074B     		ldr	r3, .L4
-ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccHqRLl5.s 			page 2
-
-
   38 000c 1880     		strh	r0, [r3]
-  21:.\main.c      ****     if (apiResult != CYBLE_ERROR_OK) {
-  39              		.loc 1 21 0
+  29:.\main.c      ****     if (apiResult != CYBLE_ERROR_OK) {
+  39              		.loc 1 29 0
   40 000e 06D0     		beq	.L2
   41              	.LBB2:
-  22:.\main.c      ****         printf("CyBle_Start API error: %x \r\n", apiResult);
-  42              		.loc 1 22 0
+  30:.\main.c      ****         printf("CyBle_Start API error: %x \r\n", apiResult);
+  42              		.loc 1 30 0
   43 0010 0648     		ldr	r0, .L4+4
   44 0012 FFF7FEFF 		bl	printf
   45              	.LVL1:
-  23:.\main.c      ****         Error_Led_Write(LED_ON);
-  46              		.loc 1 23 0
+  31:.\main.c      ****         Error_Led_Write(LED_ON);
+  46              		.loc 1 31 0
   47 0016 0020     		mov	r0, #0
   48 0018 FFF7FEFF 		bl	Error_Led_Write
   49              	.LVL2:
   50              	.LBE2:
   51 001c 02E0     		b	.L1
   52              	.L2:
-  24:.\main.c      ****     } else {
-  25:.\main.c      ****         Advertising_Led_Write(LED_ON);
-  53              		.loc 1 25 0
+  32:.\main.c      ****     } else {
+  33:.\main.c      ****         Advertising_Led_Write(LED_ON);
+  53              		.loc 1 33 0
   54 001e 0020     		mov	r0, #0
   55 0020 FFF7FEFF 		bl	Advertising_Led_Write
   56              	.LVL3:
   57              	.L1:
-  26:.\main.c      ****     }
-  27:.\main.c      **** }
-  58              		.loc 1 27 0
+  34:.\main.c      ****     }
+  35:.\main.c      **** }
+  58              		.loc 1 35 0
   59              		@ sp needed
   60 0024 08BD     		pop	{r3, pc}
   61              	.L5:
@@ -107,20 +115,20 @@ ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccHqRLl5.s 			page 1
   74              		.type	bleCallBack, %function
   75              	bleCallBack:
   76              	.LFB36:
-  28:.\main.c      **** 
-  29:.\main.c      **** void bleCallBack(uint32 event, void* eventParam) {
-  77              		.loc 1 29 0
+  36:.\main.c      **** 
+  37:.\main.c      **** void bleCallBack(uint32 event, void* eventParam) {
+  77              		.loc 1 37 0
+ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccQWbQeT.s 			page 3
+
+
   78              		.cfi_startproc
   79              	.LVL4:
   80 0000 08B5     		push	{r3, lr}
   81              		.cfi_def_cfa_offset 8
   82              		.cfi_offset 3, -8
   83              		.cfi_offset 14, -4
-  30:.\main.c      ****     switch(event) {
-  84              		.loc 1 30 0
-ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccHqRLl5.s 			page 3
-
-
+  38:.\main.c      ****     switch(event) {
+  84              		.loc 1 38 0
   85 0002 2728     		cmp	r0, #39
   86 0004 06D0     		beq	.L8
   87 0006 2828     		cmp	r0, #40
@@ -128,31 +136,31 @@ ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccHqRLl5.s 			page 1
   89 000a 0128     		cmp	r0, #1
   90 000c 05D1     		bne	.L6
   91              	.L9:
-  31:.\main.c      ****         case CYBLE_EVT_STACK_ON:
-  32:.\main.c      ****         case CYBLE_EVT_GAP_DEVICE_DISCONNECTED:
-  33:.\main.c      ****             StartAdvertisment();
-  92              		.loc 1 33 0
+  39:.\main.c      ****         case CYBLE_EVT_STACK_ON:
+  40:.\main.c      ****         case CYBLE_EVT_GAP_DEVICE_DISCONNECTED:
+  41:.\main.c      ****             StartAdvertisment();
+  92              		.loc 1 41 0
   93 000e FFF7FEFF 		bl	StartAdvertisment
   94              	.LVL5:
-  34:.\main.c      ****             break;
-  95              		.loc 1 34 0
+  42:.\main.c      ****             break;
+  95              		.loc 1 42 0
   96 0012 02E0     		b	.L6
   97              	.LVL6:
   98              	.L8:
-  35:.\main.c      ****         case CYBLE_EVT_GAP_DEVICE_CONNECTED:
-  36:.\main.c      ****             Advertising_Led_Write(LED_OFF);
-  99              		.loc 1 36 0
+  43:.\main.c      ****         case CYBLE_EVT_GAP_DEVICE_CONNECTED:
+  44:.\main.c      ****             Advertising_Led_Write(LED_OFF);
+  99              		.loc 1 44 0
  100 0014 0120     		mov	r0, #1
  101              	.LVL7:
  102 0016 FFF7FEFF 		bl	Advertising_Led_Write
  103              	.LVL8:
  104              	.L6:
-  37:.\main.c      ****             break;
-  38:.\main.c      ****         default:
-  39:.\main.c      ****             break;
-  40:.\main.c      ****     }
-  41:.\main.c      **** }
- 105              		.loc 1 41 0
+  45:.\main.c      ****             break;
+  46:.\main.c      ****         default:
+  47:.\main.c      ****             break;
+  48:.\main.c      ****     }
+  49:.\main.c      **** }
+ 105              		.loc 1 49 0
  106              		@ sp needed
  107 001a 08BD     		pop	{r3, pc}
  108              		.cfi_endproc
@@ -166,70 +174,73 @@ ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccHqRLl5.s 			page 1
  116              		.type	main, %function
  117              	main:
  118              	.LFB37:
-  42:.\main.c      **** 
-  43:.\main.c      **** 
-  44:.\main.c      **** int main()
-  45:.\main.c      **** {
- 119              		.loc 1 45 0
+  50:.\main.c      **** 
+  51:.\main.c      **** 
+  52:.\main.c      **** int main()
+  53:.\main.c      **** {
+ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccQWbQeT.s 			page 4
+
+
+ 119              		.loc 1 53 0
  120              		.cfi_startproc
  121 0000 08B5     		push	{r3, lr}
  122              		.cfi_def_cfa_offset 8
  123              		.cfi_offset 3, -8
  124              		.cfi_offset 14, -4
-  46:.\main.c      ****     CyGlobalIntEnable; /* Enable global interrupts. */
- 125              		.loc 1 46 0
-ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccHqRLl5.s 			page 4
-
-
- 126              	@ 46 ".\main.c" 1
+  54:.\main.c      ****     CyGlobalIntEnable; /* Enable global interrupts. */
+ 125              		.loc 1 54 0
+ 126              	@ 54 ".\main.c" 1
  127 0002 62B6     		CPSIE   i
  128              	@ 0 "" 2
-  47:.\main.c      **** 
-  48:.\main.c      ****     /* Place your initialization/startup code here (e.g. MyInst_Start()) */
-  49:.\main.c      ****     Advertising_Led_Write(LED_OFF);
- 129              		.loc 1 49 0
+  55:.\main.c      **** 
+  56:.\main.c      ****     /* Place your initialization/startup code here (e.g. MyInst_Start()) */
+  57:.\main.c      ****     Advertising_Led_Write(LED_OFF);
+ 129              		.loc 1 57 0
  130              		.code	16
  131 0004 0120     		mov	r0, #1
  132 0006 FFF7FEFF 		bl	Advertising_Led_Write
  133              	.LVL9:
-  50:.\main.c      ****     Error_Led_Write(LED_OFF);
- 134              		.loc 1 50 0
+  58:.\main.c      ****     Error_Led_Write(LED_OFF);
+ 134              		.loc 1 58 0
  135 000a 0120     		mov	r0, #1
  136 000c FFF7FEFF 		bl	Error_Led_Write
  137              	.LVL10:
-  51:.\main.c      ****     apiResult = CyBle_Start(bleCallBack);
- 138              		.loc 1 51 0
+  59:.\main.c      ****     apiResult = CyBle_Start(bleCallBack);
+ 138              		.loc 1 59 0
  139 0010 0748     		ldr	r0, .L14
  140 0012 FFF7FEFF 		bl	CyBle_Start
  141              	.LVL11:
  142 0016 011C     		mov	r1, r0
  143 0018 064B     		ldr	r3, .L14+4
  144 001a 1880     		strh	r0, [r3]
-  52:.\main.c      ****     if (apiResult != CYBLE_ERROR_OK) {
- 145              		.loc 1 52 0
+  60:.\main.c      ****     if (apiResult != CYBLE_ERROR_OK) {
+ 145              		.loc 1 60 0
  146 001c 05D0     		beq	.L13
  147              	.LBB3:
-  53:.\main.c      ****         printf("CyBle_Start API error: %x \r\n", apiResult);
- 148              		.loc 1 53 0
+  61:.\main.c      ****         printf("CyBle_Start API error: %x \r\n", apiResult);
+ 148              		.loc 1 61 0
  149 001e 0648     		ldr	r0, .L14+8
  150 0020 FFF7FEFF 		bl	printf
  151              	.LVL12:
-  54:.\main.c      ****         Error_Led_Write(LED_ON);
- 152              		.loc 1 54 0
+  62:.\main.c      ****         Error_Led_Write(LED_ON);
+ 152              		.loc 1 62 0
  153 0024 0020     		mov	r0, #0
  154 0026 FFF7FEFF 		bl	Error_Led_Write
  155              	.LVL13:
  156              	.L13:
  157              	.LBE3:
-  55:.\main.c      ****     }
-  56:.\main.c      ****     for(;;)
-  57:.\main.c      ****     {
-  58:.\main.c      ****         /* Place your application code here. */
-  59:.\main.c      ****         CyBle_ProcessEvents();
- 158              		.loc 1 59 0 discriminator 1
+  63:.\main.c      ****     }
+  64:.\main.c      ****     for(;;)
+  65:.\main.c      ****     {
+  66:.\main.c      ****         /* Place your application code here. */
+  67:.\main.c      ****         CyBle_ProcessEvents();
+ 158              		.loc 1 67 0 discriminator 1
  159 002a FFF7FEFF 		bl	CyBle_ProcessEvents
  160              	.LVL14:
  161 002e FCE7     		b	.L13
+ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccQWbQeT.s 			page 5
+
+
  162              	.L15:
  163              		.align	2
  164              	.L14:
@@ -238,9 +249,6 @@ ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccHqRLl5.s 			page 1
  167 0038 00000000 		.word	.LC1
  168              		.cfi_endproc
  169              	.LFE37:
-ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccHqRLl5.s 			page 5
-
-
  170              		.size	main, .-main
  171              		.comm	apiResult,2,2
  172              		.section	.rodata.str1.4,"aMS",%progbits,1
@@ -290,6 +298,9 @@ ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccHqRLl5.s 			page 1
  212 003a 02       		.uleb128 0x2
  213 003b 02       		.byte	0x2
  214 003c 07       		.byte	0x7
+ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccQWbQeT.s 			page 6
+
+
  215 003d DF0B0000 		.4byte	.LASF3
  216 0041 02       		.uleb128 0x2
  217 0042 04       		.byte	0x4
@@ -298,9 +309,6 @@ ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccHqRLl5.s 			page 1
  220 0048 02       		.uleb128 0x2
  221 0049 04       		.byte	0x4
  222 004a 07       		.byte	0x7
-ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccHqRLl5.s 			page 6
-
-
  223 004b 7E050000 		.4byte	.LASF5
  224 004f 02       		.uleb128 0x2
  225 0050 08       		.byte	0x8
@@ -350,6 +358,9 @@ ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccHqRLl5.s 			page 1
  269 00a0 04       		.byte	0x4
  270 00a1 A5000000 		.4byte	0xa5
  271 00a5 07       		.uleb128 0x7
+ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccQWbQeT.s 			page 7
+
+
  272 00a6 8F000000 		.4byte	0x8f
  273 00aa 08       		.uleb128 0x8
  274 00ab 01       		.byte	0x1
@@ -358,9 +369,6 @@ ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccHqRLl5.s 			page 1
  277 00ae 2F020000 		.4byte	0x22f
  278 00b2 09       		.uleb128 0x9
  279 00b3 2F060000 		.4byte	.LASF15
-ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccHqRLl5.s 			page 7
-
-
  280 00b7 00       		.sleb128 0
  281 00b8 09       		.uleb128 0x9
  282 00b9 AA020000 		.4byte	.LASF16
@@ -410,6 +418,9 @@ ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccHqRLl5.s 			page 1
  326 0112 09       		.uleb128 0x9
  327 0113 9C000000 		.4byte	.LASF31
  328 0117 2A       		.sleb128 42
+ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccQWbQeT.s 			page 8
+
+
  329 0118 09       		.uleb128 0x9
  330 0119 1F020000 		.4byte	.LASF32
  331 011d 2B       		.sleb128 43
@@ -418,9 +429,6 @@ ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccHqRLl5.s 			page 1
  334 0123 2C       		.sleb128 44
  335 0124 09       		.uleb128 0x9
  336 0125 7B040000 		.4byte	.LASF34
-ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccHqRLl5.s 			page 8
-
-
  337 0129 C000     		.sleb128 64
  338 012b 09       		.uleb128 0x9
  339 012c EA060000 		.4byte	.LASF35
@@ -470,6 +478,9 @@ ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccHqRLl5.s 			page 1
  383 0194 09       		.uleb128 0x9
  384 0195 05010000 		.4byte	.LASF50
  385 0199 D000     		.sleb128 80
+ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccQWbQeT.s 			page 9
+
+
  386 019b 09       		.uleb128 0x9
  387 019c E5030000 		.4byte	.LASF51
  388 01a0 D100     		.sleb128 81
@@ -478,9 +489,6 @@ ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccHqRLl5.s 			page 1
  391 01a7 D200     		.sleb128 82
  392 01a9 09       		.uleb128 0x9
  393 01aa 74090000 		.4byte	.LASF53
-ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccHqRLl5.s 			page 9
-
-
  394 01ae D300     		.sleb128 83
  395 01b0 09       		.uleb128 0x9
  396 01b1 F1090000 		.4byte	.LASF54
@@ -530,6 +538,9 @@ ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccHqRLl5.s 			page 1
  440 0219 09       		.uleb128 0x9
  441 021a 3E020000 		.4byte	.LASF69
  442 021e FA01     		.sleb128 250
+ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccQWbQeT.s 			page 10
+
+
  443 0220 09       		.uleb128 0x9
  444 0221 36050000 		.4byte	.LASF70
  445 0225 FB01     		.sleb128 251
@@ -538,9 +549,6 @@ ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccHqRLl5.s 			page 1
  448 022c FF01     		.sleb128 255
  449 022e 00       		.byte	0
  450 022f 0A       		.uleb128 0xa
-ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccHqRLl5.s 			page 10
-
-
  451 0230 02       		.byte	0x2
  452 0231 03       		.byte	0x3
  453 0232 F401     		.2byte	0x1f4
@@ -590,6 +598,9 @@ ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccHqRLl5.s 			page 1
  497 028c 09       		.uleb128 0x9
  498 028d 55050000 		.4byte	.LASF86
  499 0291 0E       		.sleb128 14
+ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccQWbQeT.s 			page 11
+
+
  500 0292 09       		.uleb128 0x9
  501 0293 840C0000 		.4byte	.LASF87
  502 0297 0F       		.sleb128 15
@@ -598,9 +609,6 @@ ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccHqRLl5.s 			page 1
  505 029d 10       		.sleb128 16
  506 029e 09       		.uleb128 0x9
  507 029f EC050000 		.4byte	.LASF89
-ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccHqRLl5.s 			page 11
-
-
  508 02a3 11       		.sleb128 17
  509 02a4 09       		.uleb128 0x9
  510 02a5 BC030000 		.4byte	.LASF90
@@ -650,6 +658,9 @@ ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccHqRLl5.s 			page 1
  554 0305 14030000 		.4byte	0x314
  555 0309 0D       		.uleb128 0xd
  556 030a 76000000 		.4byte	0x76
+ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccQWbQeT.s 			page 12
+
+
  557 030e 0D       		.uleb128 0xd
  558 030f 9D000000 		.4byte	0x9d
  559 0313 00       		.byte	0
@@ -658,9 +669,6 @@ ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccHqRLl5.s 			page 1
  562 0316 05       		.byte	0x5
  563 0317 22       		.byte	0x22
  564 0318 35030000 		.4byte	0x335
-ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccHqRLl5.s 			page 12
-
-
  565 031c 09       		.uleb128 0x9
  566 031d CB070000 		.4byte	.LASF102
  567 0321 00       		.sleb128 0
@@ -710,17 +718,17 @@ ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccHqRLl5.s 			page 1
  611 0374 55090000 		.4byte	.LASF115
  612 0378 09       		.sleb128 9
  613 0379 00       		.byte	0
+ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccQWbQeT.s 			page 13
+
+
  614 037a 0E       		.uleb128 0xe
  615 037b 60080000 		.4byte	.LASF128
  616 037f 01       		.byte	0x1
- 617 0380 13       		.byte	0x13
+ 617 0380 1B       		.byte	0x1b
  618 0381 00000000 		.4byte	.LFB35
  619 0385 30000000 		.4byte	.LFE35-.LFB35
  620 0389 01       		.uleb128 0x1
  621 038a 9C       		.byte	0x9c
-ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccHqRLl5.s 			page 13
-
-
  622 038b FC030000 		.4byte	0x3fc
  623 038f 0F       		.uleb128 0xf
  624 0390 10000000 		.4byte	.LBB2
@@ -770,6 +778,9 @@ ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccHqRLl5.s 			page 1
  668 03ec 14       		.uleb128 0x14
  669 03ed 24000000 		.4byte	.LVL3
  670 03f1 40050000 		.4byte	0x540
+ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccQWbQeT.s 			page 14
+
+
  671 03f5 13       		.uleb128 0x13
  672 03f6 01       		.uleb128 0x1
  673 03f7 50       		.byte	0x50
@@ -778,12 +789,9 @@ ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccHqRLl5.s 			page 1
  676 03fa 00       		.byte	0
  677 03fb 00       		.byte	0
  678 03fc 15       		.uleb128 0x15
-ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccHqRLl5.s 			page 14
-
-
  679 03fd 95090000 		.4byte	.LASF118
  680 0401 01       		.byte	0x1
- 681 0402 1D       		.byte	0x1d
+ 681 0402 25       		.byte	0x25
  682 0403 00000000 		.4byte	.LFB36
  683 0407 1C000000 		.4byte	.LFE36-.LFB36
  684 040b 01       		.uleb128 0x1
@@ -792,13 +800,13 @@ ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccHqRLl5.s 			page 1
  687 0411 16       		.uleb128 0x16
  688 0412 10060000 		.4byte	.LASF116
  689 0416 01       		.byte	0x1
- 690 0417 1D       		.byte	0x1d
+ 690 0417 25       		.byte	0x25
  691 0418 76000000 		.4byte	0x76
  692 041c 00000000 		.4byte	.LLST0
  693 0420 16       		.uleb128 0x16
  694 0421 3F0C0000 		.4byte	.LASF117
  695 0425 01       		.byte	0x1
- 696 0426 1D       		.byte	0x1d
+ 696 0426 25       		.byte	0x25
  697 0427 9D000000 		.4byte	0x9d
  698 042b 3A000000 		.4byte	.LLST1
  699 042f 17       		.uleb128 0x17
@@ -817,7 +825,7 @@ ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccHqRLl5.s 			page 1
  712 0448 18       		.uleb128 0x18
  713 0449 500D0000 		.4byte	.LASF119
  714 044d 01       		.byte	0x1
- 715 044e 2C       		.byte	0x2c
+ 715 044e 34       		.byte	0x34
  716 044f 5D000000 		.4byte	0x5d
  717 0453 00000000 		.4byte	.LFB37
  718 0457 3C000000 		.4byte	.LFE37-.LFB37
@@ -830,6 +838,9 @@ ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccHqRLl5.s 			page 1
  725 046a AB040000 		.4byte	0x4ab
  726 046e 10       		.uleb128 0x10
  727 046f 3F010000 		.4byte	.LASF120
+ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccQWbQeT.s 			page 15
+
+
  728 0473 07       		.byte	0x7
  729 0474 00       		.byte	0
  730 0475 5D000000 		.4byte	0x5d
@@ -838,9 +849,6 @@ ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccHqRLl5.s 			page 1
  733 047e 9F000000 		.4byte	0x9f
  734 0482 11       		.uleb128 0x11
  735 0483 00       		.byte	0
-ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccHqRLl5.s 			page 15
-
-
  736 0484 12       		.uleb128 0x12
  737 0485 24000000 		.4byte	.LVL12
  738 0489 03050000 		.4byte	0x503
@@ -890,6 +898,9 @@ ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccHqRLl5.s 			page 1
  782 04df 01       		.uleb128 0x1
  783 04e0 50       		.byte	0x50
  784 04e1 05       		.uleb128 0x5
+ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccQWbQeT.s 			page 16
+
+
  785 04e2 03       		.byte	0x3
  786 04e3 00000000 		.4byte	bleCallBack
  787 04e7 00       		.byte	0
@@ -898,9 +909,6 @@ ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccHqRLl5.s 			page 1
  790 04ed 67050000 		.4byte	0x567
  791 04f1 00       		.byte	0
  792 04f2 19       		.uleb128 0x19
-ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccHqRLl5.s 			page 16
-
-
  793 04f3 09080000 		.4byte	.LASF129
  794 04f7 01       		.byte	0x1
  795 04f8 11       		.byte	0x11
@@ -950,6 +958,9 @@ ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccHqRLl5.s 			page 1
  839 0559 E6020000 		.4byte	0x2e6
  840 055d 67050000 		.4byte	0x567
  841 0561 0D       		.uleb128 0xd
+ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccQWbQeT.s 			page 17
+
+
  842 0562 F2020000 		.4byte	0x2f2
  843 0566 00       		.byte	0
  844 0567 1C       		.uleb128 0x1c
@@ -958,9 +969,6 @@ ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccHqRLl5.s 			page 1
  847 056d 6204     		.2byte	0x462
  848 056f 00       		.byte	0
  849              		.section	.debug_abbrev,"",%progbits
-ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccHqRLl5.s 			page 17
-
-
  850              	.Ldebug_abbrev0:
  851 0000 01       		.uleb128 0x1
  852 0001 11       		.uleb128 0x11
@@ -1010,6 +1018,9 @@ ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccHqRLl5.s 			page 1
  896 002d 0E       		.uleb128 0xe
  897 002e 3A       		.uleb128 0x3a
  898 002f 0B       		.uleb128 0xb
+ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccQWbQeT.s 			page 18
+
+
  899 0030 3B       		.uleb128 0x3b
  900 0031 0B       		.uleb128 0xb
  901 0032 49       		.uleb128 0x49
@@ -1018,9 +1029,6 @@ ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccHqRLl5.s 			page 1
  904 0035 00       		.byte	0
  905 0036 05       		.uleb128 0x5
  906 0037 0F       		.uleb128 0xf
-ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccHqRLl5.s 			page 18
-
-
  907 0038 00       		.byte	0
  908 0039 0B       		.uleb128 0xb
  909 003a 0B       		.uleb128 0xb
@@ -1070,6 +1078,9 @@ ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccHqRLl5.s 			page 1
  953 0066 0B       		.uleb128 0xb
  954 0067 0B       		.uleb128 0xb
  955 0068 3A       		.uleb128 0x3a
+ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccQWbQeT.s 			page 19
+
+
  956 0069 0B       		.uleb128 0xb
  957 006a 3B       		.uleb128 0x3b
  958 006b 05       		.uleb128 0x5
@@ -1078,9 +1089,6 @@ ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccHqRLl5.s 			page 1
  961 006e 00       		.byte	0
  962 006f 00       		.byte	0
  963 0070 0B       		.uleb128 0xb
-ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccHqRLl5.s 			page 19
-
-
  964 0071 16       		.uleb128 0x16
  965 0072 00       		.byte	0
  966 0073 03       		.uleb128 0x3
@@ -1130,6 +1138,9 @@ ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccHqRLl5.s 			page 1
  1010 00a0 19       		.uleb128 0x19
  1011 00a1 01       		.uleb128 0x1
  1012 00a2 13       		.uleb128 0x13
+ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccQWbQeT.s 			page 20
+
+
  1013 00a3 00       		.byte	0
  1014 00a4 00       		.byte	0
  1015 00a5 0F       		.uleb128 0xf
@@ -1138,9 +1149,6 @@ ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccHqRLl5.s 			page 1
  1018 00a8 11       		.uleb128 0x11
  1019 00a9 01       		.uleb128 0x1
  1020 00aa 12       		.uleb128 0x12
-ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccHqRLl5.s 			page 20
-
-
  1021 00ab 06       		.uleb128 0x6
  1022 00ac 01       		.uleb128 0x1
  1023 00ad 13       		.uleb128 0x13
@@ -1190,6 +1198,9 @@ ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccHqRLl5.s 			page 1
  1067 00dd 18       		.uleb128 0x18
  1068 00de 9142     		.uleb128 0x2111
  1069 00e0 18       		.uleb128 0x18
+ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccQWbQeT.s 			page 21
+
+
  1070 00e1 00       		.byte	0
  1071 00e2 00       		.byte	0
  1072 00e3 14       		.uleb128 0x14
@@ -1198,9 +1209,6 @@ ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccHqRLl5.s 			page 1
  1075 00e8 11       		.uleb128 0x11
  1076 00e9 01       		.uleb128 0x1
  1077 00ea 31       		.uleb128 0x31
-ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccHqRLl5.s 			page 21
-
-
  1078 00eb 13       		.uleb128 0x13
  1079 00ec 00       		.byte	0
  1080 00ed 00       		.byte	0
@@ -1250,6 +1258,9 @@ ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccHqRLl5.s 			page 1
  1124 011c 11       		.uleb128 0x11
  1125 011d 01       		.uleb128 0x1
  1126 011e 31       		.uleb128 0x31
+ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccQWbQeT.s 			page 22
+
+
  1127 011f 13       		.uleb128 0x13
  1128 0120 00       		.byte	0
  1129 0121 00       		.byte	0
@@ -1258,9 +1269,6 @@ ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccHqRLl5.s 			page 1
  1132 0124 01       		.byte	0x1
  1133 0125 3F       		.uleb128 0x3f
  1134 0126 19       		.uleb128 0x19
-ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccHqRLl5.s 			page 22
-
-
  1135 0127 03       		.uleb128 0x3
  1136 0128 0E       		.uleb128 0xe
  1137 0129 3A       		.uleb128 0x3a
@@ -1310,6 +1318,9 @@ ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccHqRLl5.s 			page 1
  1181 0156 3B       		.uleb128 0x3b
  1182 0157 0B       		.uleb128 0xb
  1183 0158 27       		.uleb128 0x27
+ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccQWbQeT.s 			page 23
+
+
  1184 0159 19       		.uleb128 0x19
  1185 015a 3C       		.uleb128 0x3c
  1186 015b 19       		.uleb128 0x19
@@ -1318,9 +1329,6 @@ ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccHqRLl5.s 			page 1
  1189 015e 00       		.byte	0
  1190 015f 00       		.byte	0
  1191 0160 1B       		.uleb128 0x1b
-ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccHqRLl5.s 			page 23
-
-
  1192 0161 2E       		.uleb128 0x2e
  1193 0162 01       		.byte	0x1
  1194 0163 3F       		.uleb128 0x3f
@@ -1370,6 +1378,9 @@ ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccHqRLl5.s 			page 1
  1238 000f 14000000 		.4byte	.LVL6
  1239 0013 0400     		.2byte	0x4
  1240 0015 F3       		.byte	0xf3
+ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccQWbQeT.s 			page 24
+
+
  1241 0016 01       		.uleb128 0x1
  1242 0017 50       		.byte	0x50
  1243 0018 9F       		.byte	0x9f
@@ -1378,9 +1389,6 @@ ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccHqRLl5.s 			page 1
  1246 0021 0100     		.2byte	0x1
  1247 0023 50       		.byte	0x50
  1248 0024 16000000 		.4byte	.LVL7
-ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccHqRLl5.s 			page 24
-
-
  1249 0028 1C000000 		.4byte	.LFE36
  1250 002c 0400     		.2byte	0x4
  1251 002e F3       		.byte	0xf3
@@ -1430,6 +1438,9 @@ ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccHqRLl5.s 			page 1
  1295 0024 3C000000 		.4byte	.LFE37-.LFB37
  1296 0028 00000000 		.4byte	0
  1297 002c 00000000 		.4byte	0
+ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccQWbQeT.s 			page 25
+
+
  1298              		.section	.debug_ranges,"",%progbits
  1299              	.Ldebug_ranges0:
  1300 0000 00000000 		.4byte	.LFB35
@@ -1438,9 +1449,6 @@ ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccHqRLl5.s 			page 1
  1303 000c 1C000000 		.4byte	.LFE36
  1304 0010 00000000 		.4byte	.LFB37
  1305 0014 3C000000 		.4byte	.LFE37
-ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccHqRLl5.s 			page 25
-
-
  1306 0018 00000000 		.4byte	0
  1307 001c 00000000 		.4byte	0
  1308              		.section	.debug_line,"",%progbits
@@ -1490,6 +1498,9 @@ ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccHqRLl5.s 			page 1
  1324 00c5 4359424C 		.ascii	"CYBLE_EVT_L2CAP_CBFC_DISCONN_CNF\000"
  1324      455F4556 
  1324      545F4C32 
+ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccQWbQeT.s 			page 26
+
+
  1324      4341505F 
  1324      43424643 
  1325              	.LASF45:
@@ -1498,9 +1509,6 @@ ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccHqRLl5.s 			page 1
  1326      545F4741 
  1326      5454435F 
  1326      52454144 
-ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccHqRLl5.s 			page 26
-
-
  1327              	.LASF50:
  1328 0105 4359424C 		.ascii	"CYBLE_EVT_GATTS_EXEC_WRITE_REQ\000"
  1328      455F4556 
@@ -1550,6 +1558,9 @@ ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccHqRLl5.s 			page 1
  1342      46464943 
  1343              	.LASF19:
  1344 020a 4359424C 		.ascii	"CYBLE_EVT_HCI_STATUS\000"
+ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccQWbQeT.s 			page 27
+
+
  1344      455F4556 
  1344      545F4843 
  1344      495F5354 
@@ -1558,9 +1569,6 @@ ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccHqRLl5.s 			page 1
  1346 021f 4359424C 		.ascii	"CYBLE_EVT_GAPC_SCAN_START_STOP\000"
  1346      455F4556 
  1346      545F4741 
-ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccHqRLl5.s 			page 27
-
-
  1346      50435F53 
  1346      43414E5F 
  1347              	.LASF69:
@@ -1610,6 +1618,9 @@ ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccHqRLl5.s 			page 1
  1362      45564943 
  1363              	.LASF22:
  1364 02fc 4359424C 		.ascii	"CYBLE_EVT_GAP_AUTH_REQ\000"
+ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccQWbQeT.s 			page 28
+
+
  1364      455F4556 
  1364      545F4741 
  1364      505F4155 
@@ -1618,9 +1629,6 @@ ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccHqRLl5.s 			page 1
  1366 0313 4359424C 		.ascii	"CYBLE_HRS_CHAR_COUNT\000"
  1366      455F4852 
  1366      535F4348 
-ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccHqRLl5.s 			page 28
-
-
  1366      41525F43 
  1366      4F554E54 
  1367              	.LASF104:
@@ -1670,6 +1678,9 @@ ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccHqRLl5.s 			page 1
  1384 03e5 4359424C 		.ascii	"CYBLE_EVT_GATTC_EXEC_WRITE_RSP\000"
  1384      455F4556 
  1384      545F4741 
+ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccQWbQeT.s 			page 29
+
+
  1384      5454435F 
  1384      45584543 
  1385              	.LASF12:
@@ -1678,9 +1689,6 @@ ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccHqRLl5.s 			page 1
  1387              	.LASF73:
  1388 040b 4359424C 		.ascii	"CYBLE_ERROR_INVALID_PARAMETER\000"
  1388      455F4552 
-ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccHqRLl5.s 			page 29
-
-
  1388      524F525F 
  1388      494E5641 
  1388      4C49445F 
@@ -1730,6 +1738,9 @@ ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccHqRLl5.s 			page 1
  1405              	.LASF7:
  1406 04df 6C6F6E67 		.ascii	"long long unsigned int\000"
  1406      206C6F6E 
+ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccQWbQeT.s 			page 30
+
+
  1406      6720756E 
  1406      7369676E 
  1406      65642069 
@@ -1738,9 +1749,6 @@ ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccHqRLl5.s 			page 1
  1408      455F4556 
  1408      545F4741 
  1408      5454435F 
-ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccHqRLl5.s 			page 30
-
-
  1408      53544F50 
  1409              	.LASF77:
  1410 0518 4359424C 		.ascii	"CYBLE_ERROR_OOB_NOT_AVAILABLE\000"
@@ -1790,6 +1798,9 @@ ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccHqRLl5.s 			page 1
  1424      524F525F 
  1424      4C324341 
  1424      505F4348 
+ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccQWbQeT.s 			page 31
+
+
  1425              	.LASF116:
  1426 0610 6576656E 		.ascii	"event\000"
  1426      7400
@@ -1798,9 +1809,6 @@ ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccHqRLl5.s 			page 1
  1428      455F4552 
  1428      524F525F 
  1428      4E54465F 
-ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccHqRLl5.s 			page 31
-
-
  1428      44495341 
  1429              	.LASF15:
  1430 062f 4359424C 		.ascii	"CYBLE_EVT_HOST_INVALID\000"
@@ -1850,6 +1858,9 @@ ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccHqRLl5.s 			page 1
  1444      4F4E4E45 
  1445              	.LASF60:
  1446 0705 4359424C 		.ascii	"CYBLE_EVT_L2CAP_COMMAND_REJ\000"
+ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccQWbQeT.s 			page 32
+
+
  1446      455F4556 
  1446      545F4C32 
  1446      4341505F 
@@ -1858,9 +1869,6 @@ ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccHqRLl5.s 			page 1
  1448 0721 4359424C 		.ascii	"CYBLE_EVT_GAPC_SCAN_PROGRESS_RESULT\000"
  1448      455F4556 
  1448      545F4741 
-ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccHqRLl5.s 			page 32
-
-
  1448      50435F53 
  1448      43414E5F 
  1449              	.LASF112:
@@ -1910,6 +1918,9 @@ ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccHqRLl5.s 			page 1
  1465              	.LASF25:
  1466 07ed 4359424C 		.ascii	"CYBLE_EVT_GAP_AUTH_COMPLETE\000"
  1466      455F4556 
+ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccQWbQeT.s 			page 33
+
+
  1466      545F4741 
  1466      505F4155 
  1466      54485F43 
@@ -1918,9 +1929,6 @@ ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccHqRLl5.s 			page 1
  1468      6573756C 
  1468      7400
  1469              	.LASF100:
-ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccHqRLl5.s 			page 33
-
-
  1470 0813 4359424C 		.ascii	"CYBLE_API_RESULT_T\000"
  1470      455F4150 
  1470      495F5245 
@@ -1970,6 +1978,9 @@ ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccHqRLl5.s 			page 1
  1486      655F4761 
  1486      70705374 
  1486      61727441 
+ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccQWbQeT.s 			page 34
+
+
  1486      64766572 
  1487              	.LASF108:
  1488 08f2 4359424C 		.ascii	"CYBLE_DIS_SERIAL_NUMBER\000"
@@ -1978,9 +1989,6 @@ ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccHqRLl5.s 			page 1
  1488      5249414C 
  1488      5F4E554D 
  1489              	.LASF82:
-ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccHqRLl5.s 			page 34
-
-
  1490 090a 4359424C 		.ascii	"CYBLE_ERROR_TX_POWER_READ\000"
  1490      455F4552 
  1490      524F525F 
@@ -2030,6 +2038,9 @@ ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccHqRLl5.s 			page 1
  1506      46545741 
  1506      52455F52 
  1507              	.LASF49:
+ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccQWbQeT.s 			page 35
+
+
  1508 09d2 4359424C 		.ascii	"CYBLE_EVT_GATTS_PREP_WRITE_REQ\000"
  1508      455F4556 
  1508      545F4741 
@@ -2038,9 +2049,6 @@ ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccHqRLl5.s 			page 1
  1509              	.LASF54:
  1510 09f1 4359424C 		.ascii	"CYBLE_EVT_GATTS_HANDLE_VALUE_CNF\000"
  1510      455F4556 
-ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccHqRLl5.s 			page 35
-
-
  1510      545F4741 
  1510      5454535F 
  1510      48414E44 
@@ -2090,6 +2098,9 @@ ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccHqRLl5.s 			page 1
  1527      455F4556 
  1527      545F4741 
  1527      505F4445 
+ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccQWbQeT.s 			page 36
+
+
  1527      56494345 
  1528              	.LASF8:
  1529 0b00 756E7369 		.ascii	"unsigned int\000"
@@ -2098,9 +2109,6 @@ ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccHqRLl5.s 			page 1
  1529      00
  1530              	.LASF57:
  1531 0b0d 4359424C 		.ascii	"CYBLE_EVT_GATTS_READ_CHAR_VAL_ACCESS_REQ\000"
-ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccHqRLl5.s 			page 36
-
-
  1531      455F4556 
  1531      545F4741 
  1531      5454535F 
@@ -2150,6 +2158,9 @@ ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccHqRLl5.s 			page 1
  1546              	.LASF101:
  1547 0c10 4359424C 		.ascii	"CYBLE_CALLBACK_T\000"
  1547      455F4341 
+ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccQWbQeT.s 			page 37
+
+
  1547      4C4C4241 
  1547      434B5F54 
  1547      00
@@ -2158,9 +2169,6 @@ ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccHqRLl5.s 			page 1
  1549      455F4556 
  1549      545F4741 
  1549      5454535F 
-ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccHqRLl5.s 			page 37
-
-
  1549      58434E48 
  1550              	.LASF117:
  1551 0c3f 6576656E 		.ascii	"eventParam\000"
@@ -2210,6 +2218,9 @@ ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccHqRLl5.s 			page 1
  1565      43424643 
  1566              	.LASF59:
  1567 0d2a 4359424C 		.ascii	"CYBLE_EVT_L2CAP_CONN_PARAM_UPDATE_RSP\000"
+ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccQWbQeT.s 			page 38
+
+
  1567      455F4556 
  1567      545F4C32 
  1567      4341505F 
@@ -2218,9 +2229,6 @@ ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccHqRLl5.s 			page 1
  1569 0d50 6D61696E 		.ascii	"main\000"
  1569      00
  1570              	.LASF106:
-ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccHqRLl5.s 			page 38
-
-
  1571 0d55 4359424C 		.ascii	"CYBLE_DIS_MANUFACTURER_NAME\000"
  1571      455F4449 
  1571      535F4D41 
