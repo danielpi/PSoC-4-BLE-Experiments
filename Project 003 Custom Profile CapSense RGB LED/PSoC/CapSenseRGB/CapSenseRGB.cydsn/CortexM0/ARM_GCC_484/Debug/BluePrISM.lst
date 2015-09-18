@@ -1,0 +1,1954 @@
+ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccy3JnXN.s 			page 1
+
+
+   1              		.cpu cortex-m0
+   2              		.fpu softvfp
+   3              		.eabi_attribute 20, 1
+   4              		.eabi_attribute 21, 1
+   5              		.eabi_attribute 23, 3
+   6              		.eabi_attribute 24, 1
+   7              		.eabi_attribute 25, 1
+   8              		.eabi_attribute 26, 1
+   9              		.eabi_attribute 30, 1
+  10              		.eabi_attribute 34, 0
+  11              		.eabi_attribute 18, 4
+  12              		.code	16
+  13              		.file	"BluePrISM.c"
+  14              		.text
+  15              	.Ltext0:
+  16              		.cfi_sections	.debug_frame
+  17              		.section	.text.BluePrISM_Enable,"ax",%progbits
+  18              		.align	2
+  19              		.global	BluePrISM_Enable
+  20              		.code	16
+  21              		.thumb_func
+  22              		.type	BluePrISM_Enable, %function
+  23              	BluePrISM_Enable:
+  24              	.LFB4:
+  25              		.file 1 ".\\Generated_Source\\PSoC4\\BluePrISM.c"
+   1:.\Generated_Source\PSoC4/BluePrISM.c **** /*******************************************************************************
+   2:.\Generated_Source\PSoC4/BluePrISM.c **** * File Name: BluePrISM.c
+   3:.\Generated_Source\PSoC4/BluePrISM.c **** * Version 2.20
+   4:.\Generated_Source\PSoC4/BluePrISM.c **** *
+   5:.\Generated_Source\PSoC4/BluePrISM.c **** * Description:
+   6:.\Generated_Source\PSoC4/BluePrISM.c **** *  This file provides the source code of the API for the PrISM Component.
+   7:.\Generated_Source\PSoC4/BluePrISM.c **** *
+   8:.\Generated_Source\PSoC4/BluePrISM.c **** * Note:
+   9:.\Generated_Source\PSoC4/BluePrISM.c **** *  The PRiSM Component consists of a 8, 16, 24, 32 - bit PrISM, it
+  10:.\Generated_Source\PSoC4/BluePrISM.c **** *  depends on length Polynomial value and user selected Seed Value. 
+  11:.\Generated_Source\PSoC4/BluePrISM.c **** *
+  12:.\Generated_Source\PSoC4/BluePrISM.c **** ********************************************************************************
+  13:.\Generated_Source\PSoC4/BluePrISM.c **** * Copyright 2008-2012, Cypress Semiconductor Corporation.  All rights reserved.
+  14:.\Generated_Source\PSoC4/BluePrISM.c **** * You may use this file only in accordance with the license, terms, conditions, 
+  15:.\Generated_Source\PSoC4/BluePrISM.c **** * disclaimers, and limitations in the end user license agreement accompanying 
+  16:.\Generated_Source\PSoC4/BluePrISM.c **** * the software package with which this file was provided.
+  17:.\Generated_Source\PSoC4/BluePrISM.c **** *******************************************************************************/
+  18:.\Generated_Source\PSoC4/BluePrISM.c **** 
+  19:.\Generated_Source\PSoC4/BluePrISM.c **** #include "BluePrISM.h"
+  20:.\Generated_Source\PSoC4/BluePrISM.c **** 
+  21:.\Generated_Source\PSoC4/BluePrISM.c **** 
+  22:.\Generated_Source\PSoC4/BluePrISM.c **** /***************************************
+  23:.\Generated_Source\PSoC4/BluePrISM.c **** * Local data allocation
+  24:.\Generated_Source\PSoC4/BluePrISM.c **** ***************************************/
+  25:.\Generated_Source\PSoC4/BluePrISM.c **** 
+  26:.\Generated_Source\PSoC4/BluePrISM.c **** uint8 BluePrISM_initVar = 0u;
+  27:.\Generated_Source\PSoC4/BluePrISM.c **** 
+  28:.\Generated_Source\PSoC4/BluePrISM.c **** 
+  29:.\Generated_Source\PSoC4/BluePrISM.c **** /*******************************************************************************
+  30:.\Generated_Source\PSoC4/BluePrISM.c **** * FUNCTION NAME:   BluePrISM_Start
+  31:.\Generated_Source\PSoC4/BluePrISM.c **** ********************************************************************************
+  32:.\Generated_Source\PSoC4/BluePrISM.c **** *
+ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccy3JnXN.s 			page 2
+
+
+  33:.\Generated_Source\PSoC4/BluePrISM.c **** * Summary:
+  34:.\Generated_Source\PSoC4/BluePrISM.c **** *  The start function sets Polynomial, Seed and Pulse Density registers provided
+  35:.\Generated_Source\PSoC4/BluePrISM.c **** *  by customizer. PrISM computation starts on rising edge of input clock.
+  36:.\Generated_Source\PSoC4/BluePrISM.c **** *
+  37:.\Generated_Source\PSoC4/BluePrISM.c **** * Parameters:  
+  38:.\Generated_Source\PSoC4/BluePrISM.c **** *  None.
+  39:.\Generated_Source\PSoC4/BluePrISM.c **** *
+  40:.\Generated_Source\PSoC4/BluePrISM.c **** * Return:  
+  41:.\Generated_Source\PSoC4/BluePrISM.c **** *  None.
+  42:.\Generated_Source\PSoC4/BluePrISM.c **** *
+  43:.\Generated_Source\PSoC4/BluePrISM.c **** * Global variables:
+  44:.\Generated_Source\PSoC4/BluePrISM.c **** *  The BluePrISM_initVar variable is used to indicate initial
+  45:.\Generated_Source\PSoC4/BluePrISM.c **** *  configuration of this component.  The variable is initialized to zero and
+  46:.\Generated_Source\PSoC4/BluePrISM.c **** *  set to 1 the first time BluePrISM_Start() is called. This allows for
+  47:.\Generated_Source\PSoC4/BluePrISM.c **** *  component initialization without re-initialization in all subsequent calls
+  48:.\Generated_Source\PSoC4/BluePrISM.c **** *  to the BluePrISM_Start() routine. 
+  49:.\Generated_Source\PSoC4/BluePrISM.c **** 
+  50:.\Generated_Source\PSoC4/BluePrISM.c **** * Reentrant:
+  51:.\Generated_Source\PSoC4/BluePrISM.c **** *  No.
+  52:.\Generated_Source\PSoC4/BluePrISM.c **** *
+  53:.\Generated_Source\PSoC4/BluePrISM.c **** *******************************************************************************/
+  54:.\Generated_Source\PSoC4/BluePrISM.c **** void BluePrISM_Start(void) 
+  55:.\Generated_Source\PSoC4/BluePrISM.c **** {
+  56:.\Generated_Source\PSoC4/BluePrISM.c ****     /* If not Initialized then initialize all required hardware and software */
+  57:.\Generated_Source\PSoC4/BluePrISM.c ****     if(BluePrISM_initVar == 0u)
+  58:.\Generated_Source\PSoC4/BluePrISM.c ****     {
+  59:.\Generated_Source\PSoC4/BluePrISM.c ****         BluePrISM_Init();
+  60:.\Generated_Source\PSoC4/BluePrISM.c ****         BluePrISM_initVar = 1u;
+  61:.\Generated_Source\PSoC4/BluePrISM.c ****     }
+  62:.\Generated_Source\PSoC4/BluePrISM.c ****     BluePrISM_Enable();
+  63:.\Generated_Source\PSoC4/BluePrISM.c **** }
+  64:.\Generated_Source\PSoC4/BluePrISM.c **** 
+  65:.\Generated_Source\PSoC4/BluePrISM.c **** 
+  66:.\Generated_Source\PSoC4/BluePrISM.c **** /*******************************************************************************
+  67:.\Generated_Source\PSoC4/BluePrISM.c **** * Function Name: BluePrISM_Init
+  68:.\Generated_Source\PSoC4/BluePrISM.c **** ********************************************************************************
+  69:.\Generated_Source\PSoC4/BluePrISM.c **** *
+  70:.\Generated_Source\PSoC4/BluePrISM.c **** * Summary:
+  71:.\Generated_Source\PSoC4/BluePrISM.c **** *  Initialize component's parameters to the parameters set by user in the 
+  72:.\Generated_Source\PSoC4/BluePrISM.c **** *  customizer of the component placed onto schematic. Usually called in 
+  73:.\Generated_Source\PSoC4/BluePrISM.c **** *  BluePrISM_Start().
+  74:.\Generated_Source\PSoC4/BluePrISM.c **** *
+  75:.\Generated_Source\PSoC4/BluePrISM.c **** * Parameters:  
+  76:.\Generated_Source\PSoC4/BluePrISM.c **** *  None.
+  77:.\Generated_Source\PSoC4/BluePrISM.c **** *
+  78:.\Generated_Source\PSoC4/BluePrISM.c **** * Return: 
+  79:.\Generated_Source\PSoC4/BluePrISM.c **** *  None.
+  80:.\Generated_Source\PSoC4/BluePrISM.c **** *
+  81:.\Generated_Source\PSoC4/BluePrISM.c **** *******************************************************************************/
+  82:.\Generated_Source\PSoC4/BluePrISM.c **** void BluePrISM_Init(void) 
+  83:.\Generated_Source\PSoC4/BluePrISM.c **** {
+  84:.\Generated_Source\PSoC4/BluePrISM.c ****     uint8 enableInterrupts;
+  85:.\Generated_Source\PSoC4/BluePrISM.c ****     
+  86:.\Generated_Source\PSoC4/BluePrISM.c ****     /* Writes Seed value, polynom value and density provided by customizer */
+  87:.\Generated_Source\PSoC4/BluePrISM.c ****     BluePrISM_WriteSeed(BluePrISM_SEED);
+  88:.\Generated_Source\PSoC4/BluePrISM.c ****     BluePrISM_WritePolynomial(BluePrISM_POLYNOM);
+  89:.\Generated_Source\PSoC4/BluePrISM.c ****     BluePrISM_WritePulse0(BluePrISM_DENSITY0);
+ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccy3JnXN.s 			page 3
+
+
+  90:.\Generated_Source\PSoC4/BluePrISM.c ****     BluePrISM_WritePulse1(BluePrISM_DENSITY1);
+  91:.\Generated_Source\PSoC4/BluePrISM.c ****     
+  92:.\Generated_Source\PSoC4/BluePrISM.c ****     enableInterrupts = CyEnterCriticalSection();
+  93:.\Generated_Source\PSoC4/BluePrISM.c ****     /* Set FIFO0_CLR bit to use FIFO0 as a simple one-byte buffer*/
+  94:.\Generated_Source\PSoC4/BluePrISM.c ****     CY_SET_REG8(BluePrISM_AUX_CONTROL_PTR, 
+  95:.\Generated_Source\PSoC4/BluePrISM.c ****                         CY_GET_REG8(BluePrISM_AUX_CONTROL_PTR) | BluePrISM_FIFO0_CLR);
+  96:.\Generated_Source\PSoC4/BluePrISM.c ****     CyExitCriticalSection(enableInterrupts);
+  97:.\Generated_Source\PSoC4/BluePrISM.c ****     
+  98:.\Generated_Source\PSoC4/BluePrISM.c ****     #if(!BluePrISM_PULSE_TYPE_HARDCODED)
+  99:.\Generated_Source\PSoC4/BluePrISM.c ****         /* Writes density type provided by customizer */
+ 100:.\Generated_Source\PSoC4/BluePrISM.c ****         #if(BluePrISM_GREATERTHAN_OR_EQUAL == BluePrISM_COMPARE0)
+ 101:.\Generated_Source\PSoC4/BluePrISM.c ****             BluePrISM_CONTROL_REG |= BluePrISM_CTRL_COMPARE_TYPE0_GREATER_THAN_OR_EQUAL;
+ 102:.\Generated_Source\PSoC4/BluePrISM.c ****         #else
+ 103:.\Generated_Source\PSoC4/BluePrISM.c ****             BluePrISM_CONTROL_REG &= (uint8)~BluePrISM_CTRL_COMPARE_TYPE0_GREATER_THAN_OR_EQUAL;
+ 104:.\Generated_Source\PSoC4/BluePrISM.c ****         #endif /* End BluePrISM_COMPARE0 */    
+ 105:.\Generated_Source\PSoC4/BluePrISM.c ****     
+ 106:.\Generated_Source\PSoC4/BluePrISM.c ****         #if(BluePrISM_GREATERTHAN_OR_EQUAL == BluePrISM_COMPARE1)
+ 107:.\Generated_Source\PSoC4/BluePrISM.c ****             BluePrISM_CONTROL_REG |= BluePrISM_CTRL_COMPARE_TYPE1_GREATER_THAN_OR_EQUAL;
+ 108:.\Generated_Source\PSoC4/BluePrISM.c ****         #else
+ 109:.\Generated_Source\PSoC4/BluePrISM.c ****             BluePrISM_CONTROL_REG &= (uint8)~BluePrISM_CTRL_COMPARE_TYPE1_GREATER_THAN_OR_EQUAL;
+ 110:.\Generated_Source\PSoC4/BluePrISM.c ****         #endif /* End BluePrISM_COMPARE1 */    
+ 111:.\Generated_Source\PSoC4/BluePrISM.c ****     #endif /* End BluePrISM_PULSE_TYPE_HARDCODED */
+ 112:.\Generated_Source\PSoC4/BluePrISM.c **** }
+ 113:.\Generated_Source\PSoC4/BluePrISM.c **** 
+ 114:.\Generated_Source\PSoC4/BluePrISM.c **** 
+ 115:.\Generated_Source\PSoC4/BluePrISM.c **** /*******************************************************************************
+ 116:.\Generated_Source\PSoC4/BluePrISM.c **** * Function Name: BluePrISM_Enable
+ 117:.\Generated_Source\PSoC4/BluePrISM.c **** ********************************************************************************
+ 118:.\Generated_Source\PSoC4/BluePrISM.c **** *  
+ 119:.\Generated_Source\PSoC4/BluePrISM.c **** * Summary: 
+ 120:.\Generated_Source\PSoC4/BluePrISM.c **** *  Enables the PrISM block operation
+ 121:.\Generated_Source\PSoC4/BluePrISM.c **** *
+ 122:.\Generated_Source\PSoC4/BluePrISM.c **** * Parameters:  
+ 123:.\Generated_Source\PSoC4/BluePrISM.c **** *  None.
+ 124:.\Generated_Source\PSoC4/BluePrISM.c **** *
+ 125:.\Generated_Source\PSoC4/BluePrISM.c **** * Return: 
+ 126:.\Generated_Source\PSoC4/BluePrISM.c **** *  None.
+ 127:.\Generated_Source\PSoC4/BluePrISM.c **** *
+ 128:.\Generated_Source\PSoC4/BluePrISM.c **** *******************************************************************************/
+ 129:.\Generated_Source\PSoC4/BluePrISM.c **** void BluePrISM_Enable(void) 
+ 130:.\Generated_Source\PSoC4/BluePrISM.c **** {
+  26              		.loc 1 130 0
+  27              		.cfi_startproc
+ 131:.\Generated_Source\PSoC4/BluePrISM.c ****     #if(!BluePrISM_PULSE_TYPE_HARDCODED)
+ 132:.\Generated_Source\PSoC4/BluePrISM.c ****         /* Enable the PrISM computation */
+ 133:.\Generated_Source\PSoC4/BluePrISM.c ****         BluePrISM_CONTROL_REG |= BluePrISM_CTRL_ENABLE;
+  28              		.loc 1 133 0
+  29 0000 024B     		ldr	r3, .L2
+  30 0002 1978     		ldrb	r1, [r3]
+  31 0004 0122     		mov	r2, #1
+  32 0006 0A43     		orr	r2, r1
+  33 0008 1A70     		strb	r2, [r3]
+ 134:.\Generated_Source\PSoC4/BluePrISM.c ****     #endif /* End BluePrISM_PULSE_TYPE_HARDCODED */
+ 135:.\Generated_Source\PSoC4/BluePrISM.c **** }
+  34              		.loc 1 135 0
+  35              		@ sp needed
+  36 000a 7047     		bx	lr
+ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccy3JnXN.s 			page 4
+
+
+  37              	.L3:
+  38              		.align	2
+  39              	.L2:
+  40 000c 72000F40 		.word	1074724978
+  41              		.cfi_endproc
+  42              	.LFE4:
+  43              		.size	BluePrISM_Enable, .-BluePrISM_Enable
+  44              		.section	.text.BluePrISM_Stop,"ax",%progbits
+  45              		.align	2
+  46              		.global	BluePrISM_Stop
+  47              		.code	16
+  48              		.thumb_func
+  49              		.type	BluePrISM_Stop, %function
+  50              	BluePrISM_Stop:
+  51              	.LFB5:
+ 136:.\Generated_Source\PSoC4/BluePrISM.c **** 
+ 137:.\Generated_Source\PSoC4/BluePrISM.c **** 
+ 138:.\Generated_Source\PSoC4/BluePrISM.c **** /*******************************************************************************
+ 139:.\Generated_Source\PSoC4/BluePrISM.c **** * FUNCTION NAME:   BluePrISM_Stop
+ 140:.\Generated_Source\PSoC4/BluePrISM.c **** ********************************************************************************
+ 141:.\Generated_Source\PSoC4/BluePrISM.c **** *
+ 142:.\Generated_Source\PSoC4/BluePrISM.c **** * Summary:
+ 143:.\Generated_Source\PSoC4/BluePrISM.c **** *  Stops PrISM computation. Outputs remain constant.
+ 144:.\Generated_Source\PSoC4/BluePrISM.c **** *
+ 145:.\Generated_Source\PSoC4/BluePrISM.c **** * Parameters:  
+ 146:.\Generated_Source\PSoC4/BluePrISM.c **** *  None.
+ 147:.\Generated_Source\PSoC4/BluePrISM.c **** *
+ 148:.\Generated_Source\PSoC4/BluePrISM.c **** * Return: 
+ 149:.\Generated_Source\PSoC4/BluePrISM.c **** *  None.
+ 150:.\Generated_Source\PSoC4/BluePrISM.c **** *
+ 151:.\Generated_Source\PSoC4/BluePrISM.c **** *******************************************************************************/
+ 152:.\Generated_Source\PSoC4/BluePrISM.c **** void BluePrISM_Stop(void) 
+ 153:.\Generated_Source\PSoC4/BluePrISM.c **** {
+  52              		.loc 1 153 0
+  53              		.cfi_startproc
+ 154:.\Generated_Source\PSoC4/BluePrISM.c ****     #if(!BluePrISM_PULSE_TYPE_HARDCODED)
+ 155:.\Generated_Source\PSoC4/BluePrISM.c ****         BluePrISM_CONTROL_REG &= (uint8)~BluePrISM_CTRL_ENABLE;
+  54              		.loc 1 155 0
+  55 0000 024B     		ldr	r3, .L5
+  56 0002 1A78     		ldrb	r2, [r3]
+  57 0004 0121     		mov	r1, #1
+  58 0006 8A43     		bic	r2, r1
+  59 0008 1A70     		strb	r2, [r3]
+ 156:.\Generated_Source\PSoC4/BluePrISM.c ****     #else
+ 157:.\Generated_Source\PSoC4/BluePrISM.c ****         /* PulseTypeHardoded option enabled - to stop PrISM use enable input */
+ 158:.\Generated_Source\PSoC4/BluePrISM.c ****     #endif /* End $INSTANCE_NAME`_PULSE_TYPE_HARDCODED */
+ 159:.\Generated_Source\PSoC4/BluePrISM.c **** }
+  60              		.loc 1 159 0
+  61              		@ sp needed
+  62 000a 7047     		bx	lr
+  63              	.L6:
+  64              		.align	2
+  65              	.L5:
+  66 000c 72000F40 		.word	1074724978
+  67              		.cfi_endproc
+  68              	.LFE5:
+  69              		.size	BluePrISM_Stop, .-BluePrISM_Stop
+ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccy3JnXN.s 			page 5
+
+
+  70              		.section	.text.BluePrISM_SetPulse0Mode,"ax",%progbits
+  71              		.align	2
+  72              		.global	BluePrISM_SetPulse0Mode
+  73              		.code	16
+  74              		.thumb_func
+  75              		.type	BluePrISM_SetPulse0Mode, %function
+  76              	BluePrISM_SetPulse0Mode:
+  77              	.LFB6:
+ 160:.\Generated_Source\PSoC4/BluePrISM.c **** 
+ 161:.\Generated_Source\PSoC4/BluePrISM.c **** #if(!BluePrISM_PULSE_TYPE_HARDCODED)
+ 162:.\Generated_Source\PSoC4/BluePrISM.c **** 
+ 163:.\Generated_Source\PSoC4/BluePrISM.c **** 
+ 164:.\Generated_Source\PSoC4/BluePrISM.c ****     /***************************************************************************
+ 165:.\Generated_Source\PSoC4/BluePrISM.c ****     * FUNCTION NAME:     BluePrISM_SetPulse0Mode
+ 166:.\Generated_Source\PSoC4/BluePrISM.c ****     ****************************************************************************
+ 167:.\Generated_Source\PSoC4/BluePrISM.c ****     *
+ 168:.\Generated_Source\PSoC4/BluePrISM.c ****     * Summary:
+ 169:.\Generated_Source\PSoC4/BluePrISM.c ****     *  Sets the pulse density type for Density0. Less than or Equal(<=) or 
+ 170:.\Generated_Source\PSoC4/BluePrISM.c ****     *  Greater than or Equal(>=).
+ 171:.\Generated_Source\PSoC4/BluePrISM.c ****     *
+ 172:.\Generated_Source\PSoC4/BluePrISM.c ****     * Parameters:
+ 173:.\Generated_Source\PSoC4/BluePrISM.c ****     *  pulse0Type: Selected pulse density type.
+ 174:.\Generated_Source\PSoC4/BluePrISM.c ****     *
+ 175:.\Generated_Source\PSoC4/BluePrISM.c ****     * Return:
+ 176:.\Generated_Source\PSoC4/BluePrISM.c ****     *  None.
+ 177:.\Generated_Source\PSoC4/BluePrISM.c ****     *
+ 178:.\Generated_Source\PSoC4/BluePrISM.c ****     ***************************************************************************/
+ 179:.\Generated_Source\PSoC4/BluePrISM.c ****     void BluePrISM_SetPulse0Mode(uint8 pulse0Type) 
+ 180:.\Generated_Source\PSoC4/BluePrISM.c ****     {
+  78              		.loc 1 180 0
+  79              		.cfi_startproc
+  80              	.LVL0:
+ 181:.\Generated_Source\PSoC4/BluePrISM.c ****         if(pulse0Type == BluePrISM_GREATERTHAN_OR_EQUAL)
+  81              		.loc 1 181 0
+  82 0000 0128     		cmp	r0, #1
+  83 0002 05D1     		bne	.L8
+ 182:.\Generated_Source\PSoC4/BluePrISM.c ****         {
+ 183:.\Generated_Source\PSoC4/BluePrISM.c ****             BluePrISM_CONTROL_REG |= BluePrISM_CTRL_COMPARE_TYPE0_GREATER_THAN_OR_EQUAL;
+  84              		.loc 1 183 0
+  85 0004 054B     		ldr	r3, .L10
+  86 0006 1978     		ldrb	r1, [r3]
+  87 0008 0222     		mov	r2, #2
+  88 000a 0A43     		orr	r2, r1
+  89 000c 1A70     		strb	r2, [r3]
+  90 000e 04E0     		b	.L7
+  91              	.L8:
+ 184:.\Generated_Source\PSoC4/BluePrISM.c ****         }
+ 185:.\Generated_Source\PSoC4/BluePrISM.c ****         else
+ 186:.\Generated_Source\PSoC4/BluePrISM.c ****         {
+ 187:.\Generated_Source\PSoC4/BluePrISM.c ****             BluePrISM_CONTROL_REG &= (uint8)~BluePrISM_CTRL_COMPARE_TYPE0_GREATER_THAN_OR_EQUAL;
+  92              		.loc 1 187 0
+  93 0010 024B     		ldr	r3, .L10
+  94 0012 1A78     		ldrb	r2, [r3]
+  95 0014 0221     		mov	r1, #2
+  96 0016 8A43     		bic	r2, r1
+  97 0018 1A70     		strb	r2, [r3]
+  98              	.L7:
+ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccy3JnXN.s 			page 6
+
+
+ 188:.\Generated_Source\PSoC4/BluePrISM.c ****         }
+ 189:.\Generated_Source\PSoC4/BluePrISM.c ****     }
+  99              		.loc 1 189 0
+ 100              		@ sp needed
+ 101 001a 7047     		bx	lr
+ 102              	.L11:
+ 103              		.align	2
+ 104              	.L10:
+ 105 001c 72000F40 		.word	1074724978
+ 106              		.cfi_endproc
+ 107              	.LFE6:
+ 108              		.size	BluePrISM_SetPulse0Mode, .-BluePrISM_SetPulse0Mode
+ 109              		.section	.text.BluePrISM_SetPulse1Mode,"ax",%progbits
+ 110              		.align	2
+ 111              		.global	BluePrISM_SetPulse1Mode
+ 112              		.code	16
+ 113              		.thumb_func
+ 114              		.type	BluePrISM_SetPulse1Mode, %function
+ 115              	BluePrISM_SetPulse1Mode:
+ 116              	.LFB7:
+ 190:.\Generated_Source\PSoC4/BluePrISM.c ****     
+ 191:.\Generated_Source\PSoC4/BluePrISM.c ****     
+ 192:.\Generated_Source\PSoC4/BluePrISM.c ****     /***************************************************************************
+ 193:.\Generated_Source\PSoC4/BluePrISM.c ****     * FUNCTION NAME:   BluePrISM_SetPulse1Mode
+ 194:.\Generated_Source\PSoC4/BluePrISM.c ****     ****************************************************************************
+ 195:.\Generated_Source\PSoC4/BluePrISM.c ****     *
+ 196:.\Generated_Source\PSoC4/BluePrISM.c ****     * Summary:
+ 197:.\Generated_Source\PSoC4/BluePrISM.c ****     *  Sets the pulse density type for Density1. Less than or Equal(<=) or 
+ 198:.\Generated_Source\PSoC4/BluePrISM.c ****     *  Greater than or Equal(>=).
+ 199:.\Generated_Source\PSoC4/BluePrISM.c ****     *
+ 200:.\Generated_Source\PSoC4/BluePrISM.c ****     * Parameters:  
+ 201:.\Generated_Source\PSoC4/BluePrISM.c ****     *  pulse1Type: Selected pulse density type.
+ 202:.\Generated_Source\PSoC4/BluePrISM.c ****     *
+ 203:.\Generated_Source\PSoC4/BluePrISM.c ****     * Return:
+ 204:.\Generated_Source\PSoC4/BluePrISM.c ****     *  None.
+ 205:.\Generated_Source\PSoC4/BluePrISM.c ****     *
+ 206:.\Generated_Source\PSoC4/BluePrISM.c ****     ***************************************************************************/
+ 207:.\Generated_Source\PSoC4/BluePrISM.c ****     void BluePrISM_SetPulse1Mode(uint8 pulse1Type) 
+ 208:.\Generated_Source\PSoC4/BluePrISM.c ****     {
+ 117              		.loc 1 208 0
+ 118              		.cfi_startproc
+ 119              	.LVL1:
+ 209:.\Generated_Source\PSoC4/BluePrISM.c ****         if(pulse1Type == BluePrISM_GREATERTHAN_OR_EQUAL)
+ 120              		.loc 1 209 0
+ 121 0000 0128     		cmp	r0, #1
+ 122 0002 05D1     		bne	.L13
+ 210:.\Generated_Source\PSoC4/BluePrISM.c ****         {
+ 211:.\Generated_Source\PSoC4/BluePrISM.c ****             BluePrISM_CONTROL_REG |= BluePrISM_CTRL_COMPARE_TYPE1_GREATER_THAN_OR_EQUAL;
+ 123              		.loc 1 211 0
+ 124 0004 054B     		ldr	r3, .L15
+ 125 0006 1978     		ldrb	r1, [r3]
+ 126 0008 0422     		mov	r2, #4
+ 127 000a 0A43     		orr	r2, r1
+ 128 000c 1A70     		strb	r2, [r3]
+ 129 000e 04E0     		b	.L12
+ 130              	.L13:
+ 212:.\Generated_Source\PSoC4/BluePrISM.c ****         }
+ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccy3JnXN.s 			page 7
+
+
+ 213:.\Generated_Source\PSoC4/BluePrISM.c ****         else
+ 214:.\Generated_Source\PSoC4/BluePrISM.c ****         {
+ 215:.\Generated_Source\PSoC4/BluePrISM.c ****             BluePrISM_CONTROL_REG &= (uint8)~BluePrISM_CTRL_COMPARE_TYPE1_GREATER_THAN_OR_EQUAL;
+ 131              		.loc 1 215 0
+ 132 0010 024B     		ldr	r3, .L15
+ 133 0012 1A78     		ldrb	r2, [r3]
+ 134 0014 0421     		mov	r1, #4
+ 135 0016 8A43     		bic	r2, r1
+ 136 0018 1A70     		strb	r2, [r3]
+ 137              	.L12:
+ 216:.\Generated_Source\PSoC4/BluePrISM.c ****         }
+ 217:.\Generated_Source\PSoC4/BluePrISM.c ****     }
+ 138              		.loc 1 217 0
+ 139              		@ sp needed
+ 140 001a 7047     		bx	lr
+ 141              	.L16:
+ 142              		.align	2
+ 143              	.L15:
+ 144 001c 72000F40 		.word	1074724978
+ 145              		.cfi_endproc
+ 146              	.LFE7:
+ 147              		.size	BluePrISM_SetPulse1Mode, .-BluePrISM_SetPulse1Mode
+ 148              		.section	.text.BluePrISM_ReadSeed,"ax",%progbits
+ 149              		.align	2
+ 150              		.global	BluePrISM_ReadSeed
+ 151              		.code	16
+ 152              		.thumb_func
+ 153              		.type	BluePrISM_ReadSeed, %function
+ 154              	BluePrISM_ReadSeed:
+ 155              	.LFB8:
+ 218:.\Generated_Source\PSoC4/BluePrISM.c **** 
+ 219:.\Generated_Source\PSoC4/BluePrISM.c **** #endif /* End BluePrISM_PULSE_TYPE_HARDCODED == 0 */
+ 220:.\Generated_Source\PSoC4/BluePrISM.c **** 
+ 221:.\Generated_Source\PSoC4/BluePrISM.c **** 
+ 222:.\Generated_Source\PSoC4/BluePrISM.c **** /*******************************************************************************
+ 223:.\Generated_Source\PSoC4/BluePrISM.c **** * FUNCTION NAME:   BluePrISM_ReadSeed
+ 224:.\Generated_Source\PSoC4/BluePrISM.c **** ********************************************************************************
+ 225:.\Generated_Source\PSoC4/BluePrISM.c **** *
+ 226:.\Generated_Source\PSoC4/BluePrISM.c **** * Summary:
+ 227:.\Generated_Source\PSoC4/BluePrISM.c **** *  Reads the PrISM Seed register.
+ 228:.\Generated_Source\PSoC4/BluePrISM.c **** *
+ 229:.\Generated_Source\PSoC4/BluePrISM.c **** * Parameters:
+ 230:.\Generated_Source\PSoC4/BluePrISM.c **** *  None.
+ 231:.\Generated_Source\PSoC4/BluePrISM.c **** *
+ 232:.\Generated_Source\PSoC4/BluePrISM.c **** * Return:
+ 233:.\Generated_Source\PSoC4/BluePrISM.c **** *  Current Period register value.
+ 234:.\Generated_Source\PSoC4/BluePrISM.c **** *
+ 235:.\Generated_Source\PSoC4/BluePrISM.c **** *******************************************************************************/
+ 236:.\Generated_Source\PSoC4/BluePrISM.c **** uint8 BluePrISM_ReadSeed(void) 
+ 237:.\Generated_Source\PSoC4/BluePrISM.c **** {
+ 156              		.loc 1 237 0
+ 157              		.cfi_startproc
+ 238:.\Generated_Source\PSoC4/BluePrISM.c ****     return( CY_GET_REG8(BluePrISM_SEED_PTR) );
+ 158              		.loc 1 238 0
+ 159 0000 014B     		ldr	r3, .L18
+ 160 0002 1878     		ldrb	r0, [r3]
+ 161 0004 C0B2     		uxtb	r0, r0
+ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccy3JnXN.s 			page 8
+
+
+ 239:.\Generated_Source\PSoC4/BluePrISM.c **** }
+ 162              		.loc 1 239 0
+ 163              		@ sp needed
+ 164 0006 7047     		bx	lr
+ 165              	.L19:
+ 166              		.align	2
+ 167              	.L18:
+ 168 0008 02000F40 		.word	1074724866
+ 169              		.cfi_endproc
+ 170              	.LFE8:
+ 171              		.size	BluePrISM_ReadSeed, .-BluePrISM_ReadSeed
+ 172              		.section	.text.BluePrISM_WriteSeed,"ax",%progbits
+ 173              		.align	2
+ 174              		.global	BluePrISM_WriteSeed
+ 175              		.code	16
+ 176              		.thumb_func
+ 177              		.type	BluePrISM_WriteSeed, %function
+ 178              	BluePrISM_WriteSeed:
+ 179              	.LFB9:
+ 240:.\Generated_Source\PSoC4/BluePrISM.c **** 
+ 241:.\Generated_Source\PSoC4/BluePrISM.c **** 
+ 242:.\Generated_Source\PSoC4/BluePrISM.c **** /*******************************************************************************
+ 243:.\Generated_Source\PSoC4/BluePrISM.c **** * FUNCTION NAME:   BluePrISM_WriteSeed
+ 244:.\Generated_Source\PSoC4/BluePrISM.c **** ********************************************************************************
+ 245:.\Generated_Source\PSoC4/BluePrISM.c **** *
+ 246:.\Generated_Source\PSoC4/BluePrISM.c **** * Summary:
+ 247:.\Generated_Source\PSoC4/BluePrISM.c **** *  Writes the PrISM Seed register with the start value.
+ 248:.\Generated_Source\PSoC4/BluePrISM.c **** *
+ 249:.\Generated_Source\PSoC4/BluePrISM.c **** * Parameters:
+ 250:.\Generated_Source\PSoC4/BluePrISM.c **** *  seed: Seed register value.
+ 251:.\Generated_Source\PSoC4/BluePrISM.c **** *
+ 252:.\Generated_Source\PSoC4/BluePrISM.c **** * Return:
+ 253:.\Generated_Source\PSoC4/BluePrISM.c **** *  None.
+ 254:.\Generated_Source\PSoC4/BluePrISM.c **** *
+ 255:.\Generated_Source\PSoC4/BluePrISM.c **** *******************************************************************************/
+ 256:.\Generated_Source\PSoC4/BluePrISM.c **** void BluePrISM_WriteSeed(uint8 seed) 
+ 257:.\Generated_Source\PSoC4/BluePrISM.c **** {
+ 180              		.loc 1 257 0
+ 181              		.cfi_startproc
+ 182              	.LVL2:
+ 258:.\Generated_Source\PSoC4/BluePrISM.c ****     if(seed != 0u)
+ 183              		.loc 1 258 0
+ 184 0000 0028     		cmp	r0, #0
+ 185 0002 03D0     		beq	.L20
+ 259:.\Generated_Source\PSoC4/BluePrISM.c ****     {
+ 260:.\Generated_Source\PSoC4/BluePrISM.c ****         CY_SET_REG8(BluePrISM_SEED_COPY_PTR, seed);
+ 186              		.loc 1 260 0
+ 187 0004 024B     		ldr	r3, .L22
+ 188 0006 1870     		strb	r0, [r3]
+ 261:.\Generated_Source\PSoC4/BluePrISM.c ****         CY_SET_REG8(BluePrISM_SEED_PTR, seed);
+ 189              		.loc 1 261 0
+ 190 0008 024B     		ldr	r3, .L22+4
+ 191 000a 1870     		strb	r0, [r3]
+ 192              	.L20:
+ 262:.\Generated_Source\PSoC4/BluePrISM.c ****     }
+ 263:.\Generated_Source\PSoC4/BluePrISM.c **** }
+ 193              		.loc 1 263 0
+ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccy3JnXN.s 			page 9
+
+
+ 194              		@ sp needed
+ 195 000c 7047     		bx	lr
+ 196              	.L23:
+ 197 000e C046     		.align	2
+ 198              	.L22:
+ 199 0010 42000F40 		.word	1074724930
+ 200 0014 02000F40 		.word	1074724866
+ 201              		.cfi_endproc
+ 202              	.LFE9:
+ 203              		.size	BluePrISM_WriteSeed, .-BluePrISM_WriteSeed
+ 204              		.section	.text.BluePrISM_ReadPolynomial,"ax",%progbits
+ 205              		.align	2
+ 206              		.global	BluePrISM_ReadPolynomial
+ 207              		.code	16
+ 208              		.thumb_func
+ 209              		.type	BluePrISM_ReadPolynomial, %function
+ 210              	BluePrISM_ReadPolynomial:
+ 211              	.LFB10:
+ 264:.\Generated_Source\PSoC4/BluePrISM.c **** 
+ 265:.\Generated_Source\PSoC4/BluePrISM.c **** 
+ 266:.\Generated_Source\PSoC4/BluePrISM.c **** /*******************************************************************************
+ 267:.\Generated_Source\PSoC4/BluePrISM.c **** * FUNCTION NAME:   BluePrISM_ReadPolynomial
+ 268:.\Generated_Source\PSoC4/BluePrISM.c **** ********************************************************************************
+ 269:.\Generated_Source\PSoC4/BluePrISM.c **** *
+ 270:.\Generated_Source\PSoC4/BluePrISM.c **** * Summary:
+ 271:.\Generated_Source\PSoC4/BluePrISM.c **** *  Reads the PrISM polynomial.
+ 272:.\Generated_Source\PSoC4/BluePrISM.c **** *
+ 273:.\Generated_Source\PSoC4/BluePrISM.c **** * Parameters:
+ 274:.\Generated_Source\PSoC4/BluePrISM.c **** *  None.
+ 275:.\Generated_Source\PSoC4/BluePrISM.c **** *
+ 276:.\Generated_Source\PSoC4/BluePrISM.c **** * Return:
+ 277:.\Generated_Source\PSoC4/BluePrISM.c **** *  PrISM polynomial.
+ 278:.\Generated_Source\PSoC4/BluePrISM.c **** *
+ 279:.\Generated_Source\PSoC4/BluePrISM.c **** *******************************************************************************/
+ 280:.\Generated_Source\PSoC4/BluePrISM.c **** uint8 BluePrISM_ReadPolynomial(void) 
+ 281:.\Generated_Source\PSoC4/BluePrISM.c **** {
+ 212              		.loc 1 281 0
+ 213              		.cfi_startproc
+ 282:.\Generated_Source\PSoC4/BluePrISM.c ****     return( CY_GET_REG8(BluePrISM_POLYNOM_PTR) );
+ 214              		.loc 1 282 0
+ 215 0000 014B     		ldr	r3, .L25
+ 216 0002 1878     		ldrb	r0, [r3]
+ 217 0004 C0B2     		uxtb	r0, r0
+ 283:.\Generated_Source\PSoC4/BluePrISM.c **** }
+ 218              		.loc 1 283 0
+ 219              		@ sp needed
+ 220 0006 7047     		bx	lr
+ 221              	.L26:
+ 222              		.align	2
+ 223              	.L25:
+ 224 0008 12000F40 		.word	1074724882
+ 225              		.cfi_endproc
+ 226              	.LFE10:
+ 227              		.size	BluePrISM_ReadPolynomial, .-BluePrISM_ReadPolynomial
+ 228              		.section	.text.BluePrISM_WritePolynomial,"ax",%progbits
+ 229              		.align	2
+ 230              		.global	BluePrISM_WritePolynomial
+ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccy3JnXN.s 			page 10
+
+
+ 231              		.code	16
+ 232              		.thumb_func
+ 233              		.type	BluePrISM_WritePolynomial, %function
+ 234              	BluePrISM_WritePolynomial:
+ 235              	.LFB11:
+ 284:.\Generated_Source\PSoC4/BluePrISM.c **** 
+ 285:.\Generated_Source\PSoC4/BluePrISM.c **** 
+ 286:.\Generated_Source\PSoC4/BluePrISM.c **** /*******************************************************************************
+ 287:.\Generated_Source\PSoC4/BluePrISM.c **** * FUNCTION NAME:   BluePrISM_WritePolynomial
+ 288:.\Generated_Source\PSoC4/BluePrISM.c **** ********************************************************************************
+ 289:.\Generated_Source\PSoC4/BluePrISM.c **** *
+ 290:.\Generated_Source\PSoC4/BluePrISM.c **** * Summary:
+ 291:.\Generated_Source\PSoC4/BluePrISM.c **** *  Writes the PrISM polynomial.
+ 292:.\Generated_Source\PSoC4/BluePrISM.c **** *
+ 293:.\Generated_Source\PSoC4/BluePrISM.c **** * Parameters:
+ 294:.\Generated_Source\PSoC4/BluePrISM.c **** *  polynomial: PrISM polynomial.
+ 295:.\Generated_Source\PSoC4/BluePrISM.c **** *
+ 296:.\Generated_Source\PSoC4/BluePrISM.c **** * Return:
+ 297:.\Generated_Source\PSoC4/BluePrISM.c **** *  None.
+ 298:.\Generated_Source\PSoC4/BluePrISM.c **** *
+ 299:.\Generated_Source\PSoC4/BluePrISM.c **** *******************************************************************************/
+ 300:.\Generated_Source\PSoC4/BluePrISM.c **** void BluePrISM_WritePolynomial(uint8 polynomial) \
+ 301:.\Generated_Source\PSoC4/BluePrISM.c ****                                                                 
+ 302:.\Generated_Source\PSoC4/BluePrISM.c **** {
+ 236              		.loc 1 302 0
+ 237              		.cfi_startproc
+ 238              	.LVL3:
+ 303:.\Generated_Source\PSoC4/BluePrISM.c ****     CY_SET_REG8(BluePrISM_POLYNOM_PTR, polynomial);
+ 239              		.loc 1 303 0
+ 240 0000 014B     		ldr	r3, .L28
+ 241 0002 1870     		strb	r0, [r3]
+ 304:.\Generated_Source\PSoC4/BluePrISM.c ****     
+ 305:.\Generated_Source\PSoC4/BluePrISM.c **** }
+ 242              		.loc 1 305 0
+ 243              		@ sp needed
+ 244 0004 7047     		bx	lr
+ 245              	.L29:
+ 246 0006 C046     		.align	2
+ 247              	.L28:
+ 248 0008 12000F40 		.word	1074724882
+ 249              		.cfi_endproc
+ 250              	.LFE11:
+ 251              		.size	BluePrISM_WritePolynomial, .-BluePrISM_WritePolynomial
+ 252              		.section	.text.BluePrISM_ReadPulse0,"ax",%progbits
+ 253              		.align	2
+ 254              		.global	BluePrISM_ReadPulse0
+ 255              		.code	16
+ 256              		.thumb_func
+ 257              		.type	BluePrISM_ReadPulse0, %function
+ 258              	BluePrISM_ReadPulse0:
+ 259              	.LFB12:
+ 306:.\Generated_Source\PSoC4/BluePrISM.c **** 
+ 307:.\Generated_Source\PSoC4/BluePrISM.c **** 
+ 308:.\Generated_Source\PSoC4/BluePrISM.c **** /*******************************************************************************
+ 309:.\Generated_Source\PSoC4/BluePrISM.c **** * FUNCTION NAME:   BluePrISM_ReadPulse0
+ 310:.\Generated_Source\PSoC4/BluePrISM.c **** ********************************************************************************
+ 311:.\Generated_Source\PSoC4/BluePrISM.c **** *
+ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccy3JnXN.s 			page 11
+
+
+ 312:.\Generated_Source\PSoC4/BluePrISM.c **** * Summary:
+ 313:.\Generated_Source\PSoC4/BluePrISM.c **** *  Reads the PrISM Pulse Density0 register.
+ 314:.\Generated_Source\PSoC4/BluePrISM.c **** *
+ 315:.\Generated_Source\PSoC4/BluePrISM.c **** * Parameters:
+ 316:.\Generated_Source\PSoC4/BluePrISM.c **** *  None.
+ 317:.\Generated_Source\PSoC4/BluePrISM.c **** *
+ 318:.\Generated_Source\PSoC4/BluePrISM.c **** * Return:
+ 319:.\Generated_Source\PSoC4/BluePrISM.c **** *  Pulse Density0 register value.
+ 320:.\Generated_Source\PSoC4/BluePrISM.c **** *
+ 321:.\Generated_Source\PSoC4/BluePrISM.c **** *******************************************************************************/
+ 322:.\Generated_Source\PSoC4/BluePrISM.c **** uint8 BluePrISM_ReadPulse0(void) 
+ 323:.\Generated_Source\PSoC4/BluePrISM.c **** {
+ 260              		.loc 1 323 0
+ 261              		.cfi_startproc
+ 324:.\Generated_Source\PSoC4/BluePrISM.c ****     return( CY_GET_REG8(BluePrISM_DENSITY0_PTR) );
+ 262              		.loc 1 324 0
+ 263 0000 014B     		ldr	r3, .L31
+ 264 0002 1878     		ldrb	r0, [r3]
+ 265 0004 C0B2     		uxtb	r0, r0
+ 325:.\Generated_Source\PSoC4/BluePrISM.c **** }
+ 266              		.loc 1 325 0
+ 267              		@ sp needed
+ 268 0006 7047     		bx	lr
+ 269              	.L32:
+ 270              		.align	2
+ 271              	.L31:
+ 272 0008 22000F40 		.word	1074724898
+ 273              		.cfi_endproc
+ 274              	.LFE12:
+ 275              		.size	BluePrISM_ReadPulse0, .-BluePrISM_ReadPulse0
+ 276              		.section	.text.BluePrISM_WritePulse0,"ax",%progbits
+ 277              		.align	2
+ 278              		.global	BluePrISM_WritePulse0
+ 279              		.code	16
+ 280              		.thumb_func
+ 281              		.type	BluePrISM_WritePulse0, %function
+ 282              	BluePrISM_WritePulse0:
+ 283              	.LFB13:
+ 326:.\Generated_Source\PSoC4/BluePrISM.c **** 
+ 327:.\Generated_Source\PSoC4/BluePrISM.c **** 
+ 328:.\Generated_Source\PSoC4/BluePrISM.c **** /*******************************************************************************
+ 329:.\Generated_Source\PSoC4/BluePrISM.c **** * FUNCTION NAME:   BluePrISM_WritePulse0
+ 330:.\Generated_Source\PSoC4/BluePrISM.c **** ********************************************************************************
+ 331:.\Generated_Source\PSoC4/BluePrISM.c **** *
+ 332:.\Generated_Source\PSoC4/BluePrISM.c **** * Summary:
+ 333:.\Generated_Source\PSoC4/BluePrISM.c **** *  Writes the PrISM Pulse Density0 register with the Pulse Density value.
+ 334:.\Generated_Source\PSoC4/BluePrISM.c **** *
+ 335:.\Generated_Source\PSoC4/BluePrISM.c **** * Parameters:
+ 336:.\Generated_Source\PSoC4/BluePrISM.c **** *  pulseDensity0: Pulse Density value.
+ 337:.\Generated_Source\PSoC4/BluePrISM.c **** *
+ 338:.\Generated_Source\PSoC4/BluePrISM.c **** * Return:
+ 339:.\Generated_Source\PSoC4/BluePrISM.c **** *  None.
+ 340:.\Generated_Source\PSoC4/BluePrISM.c **** *
+ 341:.\Generated_Source\PSoC4/BluePrISM.c **** *******************************************************************************/
+ 342:.\Generated_Source\PSoC4/BluePrISM.c **** void BluePrISM_WritePulse0(uint8 pulseDensity0) \
+ 343:.\Generated_Source\PSoC4/BluePrISM.c ****                                                                 
+ 344:.\Generated_Source\PSoC4/BluePrISM.c **** {
+ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccy3JnXN.s 			page 12
+
+
+ 284              		.loc 1 344 0
+ 285              		.cfi_startproc
+ 286              	.LVL4:
+ 345:.\Generated_Source\PSoC4/BluePrISM.c ****     CY_SET_REG8(BluePrISM_DENSITY0_PTR, pulseDensity0);
+ 287              		.loc 1 345 0
+ 288 0000 014B     		ldr	r3, .L34
+ 289 0002 1870     		strb	r0, [r3]
+ 346:.\Generated_Source\PSoC4/BluePrISM.c **** }
+ 290              		.loc 1 346 0
+ 291              		@ sp needed
+ 292 0004 7047     		bx	lr
+ 293              	.L35:
+ 294 0006 C046     		.align	2
+ 295              	.L34:
+ 296 0008 22000F40 		.word	1074724898
+ 297              		.cfi_endproc
+ 298              	.LFE13:
+ 299              		.size	BluePrISM_WritePulse0, .-BluePrISM_WritePulse0
+ 300              		.section	.text.BluePrISM_ReadPulse1,"ax",%progbits
+ 301              		.align	2
+ 302              		.global	BluePrISM_ReadPulse1
+ 303              		.code	16
+ 304              		.thumb_func
+ 305              		.type	BluePrISM_ReadPulse1, %function
+ 306              	BluePrISM_ReadPulse1:
+ 307              	.LFB14:
+ 347:.\Generated_Source\PSoC4/BluePrISM.c **** 
+ 348:.\Generated_Source\PSoC4/BluePrISM.c **** 
+ 349:.\Generated_Source\PSoC4/BluePrISM.c **** /*******************************************************************************
+ 350:.\Generated_Source\PSoC4/BluePrISM.c **** * FUNCTION NAME:   BluePrISM_ReadPulse1
+ 351:.\Generated_Source\PSoC4/BluePrISM.c **** ********************************************************************************
+ 352:.\Generated_Source\PSoC4/BluePrISM.c **** *
+ 353:.\Generated_Source\PSoC4/BluePrISM.c **** * Summary:
+ 354:.\Generated_Source\PSoC4/BluePrISM.c **** *  Reads the PrISM Pulse Density1 register.
+ 355:.\Generated_Source\PSoC4/BluePrISM.c **** *
+ 356:.\Generated_Source\PSoC4/BluePrISM.c **** * Parameters:
+ 357:.\Generated_Source\PSoC4/BluePrISM.c **** *  None.
+ 358:.\Generated_Source\PSoC4/BluePrISM.c **** *
+ 359:.\Generated_Source\PSoC4/BluePrISM.c **** * Return:
+ 360:.\Generated_Source\PSoC4/BluePrISM.c **** *  Pulse Density1 register value.
+ 361:.\Generated_Source\PSoC4/BluePrISM.c **** *
+ 362:.\Generated_Source\PSoC4/BluePrISM.c **** *******************************************************************************/
+ 363:.\Generated_Source\PSoC4/BluePrISM.c **** uint8 BluePrISM_ReadPulse1(void) 
+ 364:.\Generated_Source\PSoC4/BluePrISM.c **** {
+ 308              		.loc 1 364 0
+ 309              		.cfi_startproc
+ 365:.\Generated_Source\PSoC4/BluePrISM.c ****     return( CY_GET_REG8(BluePrISM_DENSITY1_PTR) );
+ 310              		.loc 1 365 0
+ 311 0000 014B     		ldr	r3, .L37
+ 312 0002 1878     		ldrb	r0, [r3]
+ 313 0004 C0B2     		uxtb	r0, r0
+ 366:.\Generated_Source\PSoC4/BluePrISM.c **** }
+ 314              		.loc 1 366 0
+ 315              		@ sp needed
+ 316 0006 7047     		bx	lr
+ 317              	.L38:
+ 318              		.align	2
+ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccy3JnXN.s 			page 13
+
+
+ 319              	.L37:
+ 320 0008 32000F40 		.word	1074724914
+ 321              		.cfi_endproc
+ 322              	.LFE14:
+ 323              		.size	BluePrISM_ReadPulse1, .-BluePrISM_ReadPulse1
+ 324              		.section	.text.BluePrISM_WritePulse1,"ax",%progbits
+ 325              		.align	2
+ 326              		.global	BluePrISM_WritePulse1
+ 327              		.code	16
+ 328              		.thumb_func
+ 329              		.type	BluePrISM_WritePulse1, %function
+ 330              	BluePrISM_WritePulse1:
+ 331              	.LFB15:
+ 367:.\Generated_Source\PSoC4/BluePrISM.c **** 
+ 368:.\Generated_Source\PSoC4/BluePrISM.c **** 
+ 369:.\Generated_Source\PSoC4/BluePrISM.c **** /*******************************************************************************
+ 370:.\Generated_Source\PSoC4/BluePrISM.c **** * FUNCTION NAME:   BluePrISM_WritePulse1
+ 371:.\Generated_Source\PSoC4/BluePrISM.c **** ********************************************************************************
+ 372:.\Generated_Source\PSoC4/BluePrISM.c **** *
+ 373:.\Generated_Source\PSoC4/BluePrISM.c **** * Summary:
+ 374:.\Generated_Source\PSoC4/BluePrISM.c **** *  Writes the PrISM Pulse Density1 register with the Pulse Density value.
+ 375:.\Generated_Source\PSoC4/BluePrISM.c **** *
+ 376:.\Generated_Source\PSoC4/BluePrISM.c **** * Parameters:
+ 377:.\Generated_Source\PSoC4/BluePrISM.c **** *  pulseDensity1: Pulse Density value.
+ 378:.\Generated_Source\PSoC4/BluePrISM.c **** *
+ 379:.\Generated_Source\PSoC4/BluePrISM.c **** * Return:
+ 380:.\Generated_Source\PSoC4/BluePrISM.c **** *  None.
+ 381:.\Generated_Source\PSoC4/BluePrISM.c **** *
+ 382:.\Generated_Source\PSoC4/BluePrISM.c **** *******************************************************************************/
+ 383:.\Generated_Source\PSoC4/BluePrISM.c **** void BluePrISM_WritePulse1(uint8 pulseDensity1) \
+ 384:.\Generated_Source\PSoC4/BluePrISM.c ****                                                                     
+ 385:.\Generated_Source\PSoC4/BluePrISM.c **** {
+ 332              		.loc 1 385 0
+ 333              		.cfi_startproc
+ 334              	.LVL5:
+ 386:.\Generated_Source\PSoC4/BluePrISM.c ****     CY_SET_REG8(BluePrISM_DENSITY1_PTR, pulseDensity1);
+ 335              		.loc 1 386 0
+ 336 0000 014B     		ldr	r3, .L40
+ 337 0002 1870     		strb	r0, [r3]
+ 387:.\Generated_Source\PSoC4/BluePrISM.c **** }
+ 338              		.loc 1 387 0
+ 339              		@ sp needed
+ 340 0004 7047     		bx	lr
+ 341              	.L41:
+ 342 0006 C046     		.align	2
+ 343              	.L40:
+ 344 0008 32000F40 		.word	1074724914
+ 345              		.cfi_endproc
+ 346              	.LFE15:
+ 347              		.size	BluePrISM_WritePulse1, .-BluePrISM_WritePulse1
+ 348              		.section	.text.BluePrISM_Init,"ax",%progbits
+ 349              		.align	2
+ 350              		.global	BluePrISM_Init
+ 351              		.code	16
+ 352              		.thumb_func
+ 353              		.type	BluePrISM_Init, %function
+ 354              	BluePrISM_Init:
+ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccy3JnXN.s 			page 14
+
+
+ 355              	.LFB3:
+  83:.\Generated_Source\PSoC4/BluePrISM.c **** {
+ 356              		.loc 1 83 0
+ 357              		.cfi_startproc
+ 358 0000 08B5     		push	{r3, lr}
+ 359              		.cfi_def_cfa_offset 8
+ 360              		.cfi_offset 3, -8
+ 361              		.cfi_offset 14, -4
+  87:.\Generated_Source\PSoC4/BluePrISM.c ****     BluePrISM_WriteSeed(BluePrISM_SEED);
+ 362              		.loc 1 87 0
+ 363 0002 FF20     		mov	r0, #255
+ 364 0004 FFF7FEFF 		bl	BluePrISM_WriteSeed
+ 365              	.LVL6:
+  88:.\Generated_Source\PSoC4/BluePrISM.c ****     BluePrISM_WritePolynomial(BluePrISM_POLYNOM);
+ 366              		.loc 1 88 0
+ 367 0008 B820     		mov	r0, #184
+ 368 000a FFF7FEFF 		bl	BluePrISM_WritePolynomial
+ 369              	.LVL7:
+  89:.\Generated_Source\PSoC4/BluePrISM.c ****     BluePrISM_WritePulse0(BluePrISM_DENSITY0);
+ 370              		.loc 1 89 0
+ 371 000e 0120     		mov	r0, #1
+ 372 0010 FFF7FEFF 		bl	BluePrISM_WritePulse0
+ 373              	.LVL8:
+  90:.\Generated_Source\PSoC4/BluePrISM.c ****     BluePrISM_WritePulse1(BluePrISM_DENSITY1);
+ 374              		.loc 1 90 0
+ 375 0014 0120     		mov	r0, #1
+ 376 0016 FFF7FEFF 		bl	BluePrISM_WritePulse1
+ 377              	.LVL9:
+  92:.\Generated_Source\PSoC4/BluePrISM.c ****     enableInterrupts = CyEnterCriticalSection();
+ 378              		.loc 1 92 0
+ 379 001a FFF7FEFF 		bl	CyEnterCriticalSection
+ 380              	.LVL10:
+  94:.\Generated_Source\PSoC4/BluePrISM.c ****     CY_SET_REG8(BluePrISM_AUX_CONTROL_PTR, 
+ 381              		.loc 1 94 0
+ 382 001e 084B     		ldr	r3, .L43
+ 383 0020 1978     		ldrb	r1, [r3]
+ 384 0022 0122     		mov	r2, #1
+ 385 0024 0A43     		orr	r2, r1
+ 386 0026 1A70     		strb	r2, [r3]
+  96:.\Generated_Source\PSoC4/BluePrISM.c ****     CyExitCriticalSection(enableInterrupts);
+ 387              		.loc 1 96 0
+ 388 0028 FFF7FEFF 		bl	CyExitCriticalSection
+ 389              	.LVL11:
+ 103:.\Generated_Source\PSoC4/BluePrISM.c ****             BluePrISM_CONTROL_REG &= (uint8)~BluePrISM_CTRL_COMPARE_TYPE0_GREATER_THAN_OR_EQUAL;
+ 390              		.loc 1 103 0
+ 391 002c 054B     		ldr	r3, .L43+4
+ 392 002e 1A78     		ldrb	r2, [r3]
+ 393 0030 0221     		mov	r1, #2
+ 394 0032 8A43     		bic	r2, r1
+ 395 0034 1A70     		strb	r2, [r3]
+ 109:.\Generated_Source\PSoC4/BluePrISM.c ****             BluePrISM_CONTROL_REG &= (uint8)~BluePrISM_CTRL_COMPARE_TYPE1_GREATER_THAN_OR_EQUAL;
+ 396              		.loc 1 109 0
+ 397 0036 1A78     		ldrb	r2, [r3]
+ 398 0038 0421     		mov	r1, #4
+ 399 003a 8A43     		bic	r2, r1
+ 400 003c 1A70     		strb	r2, [r3]
+ 112:.\Generated_Source\PSoC4/BluePrISM.c **** }
+ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccy3JnXN.s 			page 15
+
+
+ 401              		.loc 1 112 0
+ 402              		@ sp needed
+ 403 003e 08BD     		pop	{r3, pc}
+ 404              	.L44:
+ 405              		.align	2
+ 406              	.L43:
+ 407 0040 92000F40 		.word	1074725010
+ 408 0044 72000F40 		.word	1074724978
+ 409              		.cfi_endproc
+ 410              	.LFE3:
+ 411              		.size	BluePrISM_Init, .-BluePrISM_Init
+ 412              		.section	.text.BluePrISM_Start,"ax",%progbits
+ 413              		.align	2
+ 414              		.global	BluePrISM_Start
+ 415              		.code	16
+ 416              		.thumb_func
+ 417              		.type	BluePrISM_Start, %function
+ 418              	BluePrISM_Start:
+ 419              	.LFB2:
+  55:.\Generated_Source\PSoC4/BluePrISM.c **** {
+ 420              		.loc 1 55 0
+ 421              		.cfi_startproc
+ 422 0000 08B5     		push	{r3, lr}
+ 423              		.cfi_def_cfa_offset 8
+ 424              		.cfi_offset 3, -8
+ 425              		.cfi_offset 14, -4
+  57:.\Generated_Source\PSoC4/BluePrISM.c ****     if(BluePrISM_initVar == 0u)
+ 426              		.loc 1 57 0
+ 427 0002 064B     		ldr	r3, .L47
+ 428 0004 1B78     		ldrb	r3, [r3]
+ 429 0006 002B     		cmp	r3, #0
+ 430 0008 04D1     		bne	.L46
+  59:.\Generated_Source\PSoC4/BluePrISM.c ****         BluePrISM_Init();
+ 431              		.loc 1 59 0
+ 432 000a FFF7FEFF 		bl	BluePrISM_Init
+ 433              	.LVL12:
+  60:.\Generated_Source\PSoC4/BluePrISM.c ****         BluePrISM_initVar = 1u;
+ 434              		.loc 1 60 0
+ 435 000e 0122     		mov	r2, #1
+ 436 0010 024B     		ldr	r3, .L47
+ 437 0012 1A70     		strb	r2, [r3]
+ 438              	.L46:
+  62:.\Generated_Source\PSoC4/BluePrISM.c ****     BluePrISM_Enable();
+ 439              		.loc 1 62 0
+ 440 0014 FFF7FEFF 		bl	BluePrISM_Enable
+ 441              	.LVL13:
+  63:.\Generated_Source\PSoC4/BluePrISM.c **** }
+ 442              		.loc 1 63 0
+ 443              		@ sp needed
+ 444 0018 08BD     		pop	{r3, pc}
+ 445              	.L48:
+ 446 001a C046     		.align	2
+ 447              	.L47:
+ 448 001c 00000000 		.word	.LANCHOR0
+ 449              		.cfi_endproc
+ 450              	.LFE2:
+ 451              		.size	BluePrISM_Start, .-BluePrISM_Start
+ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccy3JnXN.s 			page 16
+
+
+ 452              		.global	BluePrISM_initVar
+ 453              		.bss
+ 454              		.set	.LANCHOR0,. + 0
+ 455              		.type	BluePrISM_initVar, %object
+ 456              		.size	BluePrISM_initVar, 1
+ 457              	BluePrISM_initVar:
+ 458 0000 00       		.space	1
+ 459              		.text
+ 460              	.Letext0:
+ 461              		.file 2 ".\\Generated_Source\\PSoC4\\cytypes.h"
+ 462              		.file 3 ".\\Generated_Source\\PSoC4\\CyLib.h"
+ 463              		.section	.debug_info,"",%progbits
+ 464              	.Ldebug_info0:
+ 465 0000 C9020000 		.4byte	0x2c9
+ 466 0004 0400     		.2byte	0x4
+ 467 0006 00000000 		.4byte	.Ldebug_abbrev0
+ 468 000a 04       		.byte	0x4
+ 469 000b 01       		.uleb128 0x1
+ 470 000c EB010000 		.4byte	.LASF35
+ 471 0010 01       		.byte	0x1
+ 472 0011 BD000000 		.4byte	.LASF36
+ 473 0015 04010000 		.4byte	.LASF37
+ 474 0019 00000000 		.4byte	.Ldebug_ranges0+0
+ 475 001d 00000000 		.4byte	0
+ 476 0021 00000000 		.4byte	.Ldebug_line0
+ 477 0025 02       		.uleb128 0x2
+ 478 0026 01       		.byte	0x1
+ 479 0027 06       		.byte	0x6
+ 480 0028 5F030000 		.4byte	.LASF0
+ 481 002c 02       		.uleb128 0x2
+ 482 002d 01       		.byte	0x1
+ 483 002e 08       		.byte	0x8
+ 484 002f 82000000 		.4byte	.LASF1
+ 485 0033 02       		.uleb128 0x2
+ 486 0034 02       		.byte	0x2
+ 487 0035 05       		.byte	0x5
+ 488 0036 01030000 		.4byte	.LASF2
+ 489 003a 02       		.uleb128 0x2
+ 490 003b 02       		.byte	0x2
+ 491 003c 07       		.byte	0x7
+ 492 003d 19000000 		.4byte	.LASF3
+ 493 0041 02       		.uleb128 0x2
+ 494 0042 04       		.byte	0x4
+ 495 0043 05       		.byte	0x5
+ 496 0044 3E030000 		.4byte	.LASF4
+ 497 0048 02       		.uleb128 0x2
+ 498 0049 04       		.byte	0x4
+ 499 004a 07       		.byte	0x7
+ 500 004b 95000000 		.4byte	.LASF5
+ 501 004f 02       		.uleb128 0x2
+ 502 0050 08       		.byte	0x8
+ 503 0051 05       		.byte	0x5
+ 504 0052 BD020000 		.4byte	.LASF6
+ 505 0056 02       		.uleb128 0x2
+ 506 0057 08       		.byte	0x8
+ 507 0058 07       		.byte	0x7
+ 508 0059 55000000 		.4byte	.LASF7
+ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccy3JnXN.s 			page 17
+
+
+ 509 005d 03       		.uleb128 0x3
+ 510 005e 04       		.byte	0x4
+ 511 005f 05       		.byte	0x5
+ 512 0060 696E7400 		.ascii	"int\000"
+ 513 0064 02       		.uleb128 0x2
+ 514 0065 04       		.byte	0x4
+ 515 0066 07       		.byte	0x7
+ 516 0067 B9010000 		.4byte	.LASF8
+ 517 006b 04       		.uleb128 0x4
+ 518 006c A7000000 		.4byte	.LASF12
+ 519 0070 02       		.byte	0x2
+ 520 0071 C1       		.byte	0xc1
+ 521 0072 2C000000 		.4byte	0x2c
+ 522 0076 02       		.uleb128 0x2
+ 523 0077 04       		.byte	0x4
+ 524 0078 04       		.byte	0x4
+ 525 0079 4F000000 		.4byte	.LASF9
+ 526 007d 02       		.uleb128 0x2
+ 527 007e 08       		.byte	0x8
+ 528 007f 04       		.byte	0x4
+ 529 0080 73010000 		.4byte	.LASF10
+ 530 0084 02       		.uleb128 0x2
+ 531 0085 01       		.byte	0x1
+ 532 0086 08       		.byte	0x8
+ 533 0087 47030000 		.4byte	.LASF11
+ 534 008b 05       		.uleb128 0x5
+ 535 008c 90000000 		.4byte	.LASF13
+ 536 0090 02       		.byte	0x2
+ 537 0091 6B01     		.2byte	0x16b
+ 538 0093 97000000 		.4byte	0x97
+ 539 0097 06       		.uleb128 0x6
+ 540 0098 6B000000 		.4byte	0x6b
+ 541 009c 02       		.uleb128 0x2
+ 542 009d 04       		.byte	0x4
+ 543 009e 07       		.byte	0x7
+ 544 009f A5020000 		.4byte	.LASF14
+ 545 00a3 07       		.uleb128 0x7
+ 546 00a4 F3000000 		.4byte	.LASF15
+ 547 00a8 01       		.byte	0x1
+ 548 00a9 81       		.byte	0x81
+ 549 00aa 00000000 		.4byte	.LFB4
+ 550 00ae 10000000 		.4byte	.LFE4-.LFB4
+ 551 00b2 01       		.uleb128 0x1
+ 552 00b3 9C       		.byte	0x9c
+ 553 00b4 07       		.uleb128 0x7
+ 554 00b5 AE020000 		.4byte	.LASF16
+ 555 00b9 01       		.byte	0x1
+ 556 00ba 98       		.byte	0x98
+ 557 00bb 00000000 		.4byte	.LFB5
+ 558 00bf 10000000 		.4byte	.LFE5-.LFB5
+ 559 00c3 01       		.uleb128 0x1
+ 560 00c4 9C       		.byte	0x9c
+ 561 00c5 08       		.uleb128 0x8
+ 562 00c6 2C000000 		.4byte	.LASF17
+ 563 00ca 01       		.byte	0x1
+ 564 00cb B3       		.byte	0xb3
+ 565 00cc 00000000 		.4byte	.LFB6
+ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccy3JnXN.s 			page 18
+
+
+ 566 00d0 20000000 		.4byte	.LFE6-.LFB6
+ 567 00d4 01       		.uleb128 0x1
+ 568 00d5 9C       		.byte	0x9c
+ 569 00d6 E8000000 		.4byte	0xe8
+ 570 00da 09       		.uleb128 0x9
+ 571 00db 44000000 		.4byte	.LASF19
+ 572 00df 01       		.byte	0x1
+ 573 00e0 B3       		.byte	0xb3
+ 574 00e1 6B000000 		.4byte	0x6b
+ 575 00e5 01       		.uleb128 0x1
+ 576 00e6 50       		.byte	0x50
+ 577 00e7 00       		.byte	0
+ 578 00e8 08       		.uleb128 0x8
+ 579 00e9 26030000 		.4byte	.LASF18
+ 580 00ed 01       		.byte	0x1
+ 581 00ee CF       		.byte	0xcf
+ 582 00ef 00000000 		.4byte	.LFB7
+ 583 00f3 20000000 		.4byte	.LFE7-.LFB7
+ 584 00f7 01       		.uleb128 0x1
+ 585 00f8 9C       		.byte	0x9c
+ 586 00f9 0B010000 		.4byte	0x10b
+ 587 00fd 09       		.uleb128 0x9
+ 588 00fe 85010000 		.4byte	.LASF20
+ 589 0102 01       		.byte	0x1
+ 590 0103 CF       		.byte	0xcf
+ 591 0104 6B000000 		.4byte	0x6b
+ 592 0108 01       		.uleb128 0x1
+ 593 0109 50       		.byte	0x50
+ 594 010a 00       		.byte	0
+ 595 010b 0A       		.uleb128 0xa
+ 596 010c 4C030000 		.4byte	.LASF23
+ 597 0110 01       		.byte	0x1
+ 598 0111 EC       		.byte	0xec
+ 599 0112 6B000000 		.4byte	0x6b
+ 600 0116 00000000 		.4byte	.LFB8
+ 601 011a 0C000000 		.4byte	.LFE8-.LFB8
+ 602 011e 01       		.uleb128 0x1
+ 603 011f 9C       		.byte	0x9c
+ 604 0120 0B       		.uleb128 0xb
+ 605 0121 67020000 		.4byte	.LASF21
+ 606 0125 01       		.byte	0x1
+ 607 0126 0001     		.2byte	0x100
+ 608 0128 00000000 		.4byte	.LFB9
+ 609 012c 18000000 		.4byte	.LFE9-.LFB9
+ 610 0130 01       		.uleb128 0x1
+ 611 0131 9C       		.byte	0x9c
+ 612 0132 45010000 		.4byte	0x145
+ 613 0136 0C       		.uleb128 0xc
+ 614 0137 21030000 		.4byte	.LASF22
+ 615 013b 01       		.byte	0x1
+ 616 013c 0001     		.2byte	0x100
+ 617 013e 6B000000 		.4byte	0x6b
+ 618 0142 01       		.uleb128 0x1
+ 619 0143 50       		.byte	0x50
+ 620 0144 00       		.byte	0
+ 621 0145 0D       		.uleb128 0xd
+ 622 0146 00000000 		.4byte	.LASF24
+ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccy3JnXN.s 			page 19
+
+
+ 623 014a 01       		.byte	0x1
+ 624 014b 1801     		.2byte	0x118
+ 625 014d 6B000000 		.4byte	0x6b
+ 626 0151 00000000 		.4byte	.LFB10
+ 627 0155 0C000000 		.4byte	.LFE10-.LFB10
+ 628 0159 01       		.uleb128 0x1
+ 629 015a 9C       		.byte	0x9c
+ 630 015b 0B       		.uleb128 0xb
+ 631 015c CB020000 		.4byte	.LASF25
+ 632 0160 01       		.byte	0x1
+ 633 0161 2C01     		.2byte	0x12c
+ 634 0163 00000000 		.4byte	.LFB11
+ 635 0167 0C000000 		.4byte	.LFE11-.LFB11
+ 636 016b 01       		.uleb128 0x1
+ 637 016c 9C       		.byte	0x9c
+ 638 016d 80010000 		.4byte	0x180
+ 639 0171 0C       		.uleb128 0xc
+ 640 0172 7A010000 		.4byte	.LASF26
+ 641 0176 01       		.byte	0x1
+ 642 0177 2C01     		.2byte	0x12c
+ 643 0179 6B000000 		.4byte	0x6b
+ 644 017d 01       		.uleb128 0x1
+ 645 017e 50       		.byte	0x50
+ 646 017f 00       		.byte	0
+ 647 0180 0D       		.uleb128 0xd
+ 648 0181 7B020000 		.4byte	.LASF27
+ 649 0185 01       		.byte	0x1
+ 650 0186 4201     		.2byte	0x142
+ 651 0188 6B000000 		.4byte	0x6b
+ 652 018c 00000000 		.4byte	.LFB12
+ 653 0190 0C000000 		.4byte	.LFE12-.LFB12
+ 654 0194 01       		.uleb128 0x1
+ 655 0195 9C       		.byte	0x9c
+ 656 0196 0B       		.uleb128 0xb
+ 657 0197 0B030000 		.4byte	.LASF28
+ 658 019b 01       		.byte	0x1
+ 659 019c 5601     		.2byte	0x156
+ 660 019e 00000000 		.4byte	.LFB13
+ 661 01a2 0C000000 		.4byte	.LFE13-.LFB13
+ 662 01a6 01       		.uleb128 0x1
+ 663 01a7 9C       		.byte	0x9c
+ 664 01a8 BB010000 		.4byte	0x1bb
+ 665 01ac 0C       		.uleb128 0xc
+ 666 01ad E5020000 		.4byte	.LASF29
+ 667 01b1 01       		.byte	0x1
+ 668 01b2 5601     		.2byte	0x156
+ 669 01b4 6B000000 		.4byte	0x6b
+ 670 01b8 01       		.uleb128 0x1
+ 671 01b9 50       		.byte	0x50
+ 672 01ba 00       		.byte	0
+ 673 01bb 0D       		.uleb128 0xd
+ 674 01bc 90020000 		.4byte	.LASF30
+ 675 01c0 01       		.byte	0x1
+ 676 01c1 6B01     		.2byte	0x16b
+ 677 01c3 6B000000 		.4byte	0x6b
+ 678 01c7 00000000 		.4byte	.LFB14
+ 679 01cb 0C000000 		.4byte	.LFE14-.LFB14
+ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccy3JnXN.s 			page 20
+
+
+ 680 01cf 01       		.uleb128 0x1
+ 681 01d0 9C       		.byte	0x9c
+ 682 01d1 0B       		.uleb128 0xb
+ 683 01d2 6C000000 		.4byte	.LASF31
+ 684 01d6 01       		.byte	0x1
+ 685 01d7 7F01     		.2byte	0x17f
+ 686 01d9 00000000 		.4byte	.LFB15
+ 687 01dd 0C000000 		.4byte	.LFE15-.LFB15
+ 688 01e1 01       		.uleb128 0x1
+ 689 01e2 9C       		.byte	0x9c
+ 690 01e3 F6010000 		.4byte	0x1f6
+ 691 01e7 0C       		.uleb128 0xc
+ 692 01e8 F3020000 		.4byte	.LASF32
+ 693 01ec 01       		.byte	0x1
+ 694 01ed 7F01     		.2byte	0x17f
+ 695 01ef 6B000000 		.4byte	0x6b
+ 696 01f3 01       		.uleb128 0x1
+ 697 01f4 50       		.byte	0x50
+ 698 01f5 00       		.byte	0
+ 699 01f6 08       		.uleb128 0x8
+ 700 01f7 DC010000 		.4byte	.LASF33
+ 701 01fb 01       		.byte	0x1
+ 702 01fc 52       		.byte	0x52
+ 703 01fd 00000000 		.4byte	.LFB3
+ 704 0201 48000000 		.4byte	.LFE3-.LFB3
+ 705 0205 01       		.uleb128 0x1
+ 706 0206 9C       		.byte	0x9c
+ 707 0207 7B020000 		.4byte	0x27b
+ 708 020b 0E       		.uleb128 0xe
+ 709 020c E2000000 		.4byte	.LASF38
+ 710 0210 01       		.byte	0x1
+ 711 0211 54       		.byte	0x54
+ 712 0212 6B000000 		.4byte	0x6b
+ 713 0216 00000000 		.4byte	.LLST0
+ 714 021a 0F       		.uleb128 0xf
+ 715 021b 08000000 		.4byte	.LVL6
+ 716 021f 20010000 		.4byte	0x120
+ 717 0223 2E020000 		.4byte	0x22e
+ 718 0227 10       		.uleb128 0x10
+ 719 0228 01       		.uleb128 0x1
+ 720 0229 50       		.byte	0x50
+ 721 022a 02       		.uleb128 0x2
+ 722 022b 09       		.byte	0x9
+ 723 022c FF       		.byte	0xff
+ 724 022d 00       		.byte	0
+ 725 022e 0F       		.uleb128 0xf
+ 726 022f 0E000000 		.4byte	.LVL7
+ 727 0233 5B010000 		.4byte	0x15b
+ 728 0237 42020000 		.4byte	0x242
+ 729 023b 10       		.uleb128 0x10
+ 730 023c 01       		.uleb128 0x1
+ 731 023d 50       		.byte	0x50
+ 732 023e 02       		.uleb128 0x2
+ 733 023f 09       		.byte	0x9
+ 734 0240 B8       		.byte	0xb8
+ 735 0241 00       		.byte	0
+ 736 0242 0F       		.uleb128 0xf
+ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccy3JnXN.s 			page 21
+
+
+ 737 0243 14000000 		.4byte	.LVL8
+ 738 0247 96010000 		.4byte	0x196
+ 739 024b 55020000 		.4byte	0x255
+ 740 024f 10       		.uleb128 0x10
+ 741 0250 01       		.uleb128 0x1
+ 742 0251 50       		.byte	0x50
+ 743 0252 01       		.uleb128 0x1
+ 744 0253 31       		.byte	0x31
+ 745 0254 00       		.byte	0
+ 746 0255 0F       		.uleb128 0xf
+ 747 0256 1A000000 		.4byte	.LVL9
+ 748 025a D1010000 		.4byte	0x1d1
+ 749 025e 68020000 		.4byte	0x268
+ 750 0262 10       		.uleb128 0x10
+ 751 0263 01       		.uleb128 0x1
+ 752 0264 50       		.byte	0x50
+ 753 0265 01       		.uleb128 0x1
+ 754 0266 31       		.byte	0x31
+ 755 0267 00       		.byte	0
+ 756 0268 11       		.uleb128 0x11
+ 757 0269 1E000000 		.4byte	.LVL10
+ 758 026d B4020000 		.4byte	0x2b4
+ 759 0271 11       		.uleb128 0x11
+ 760 0272 2C000000 		.4byte	.LVL11
+ 761 0276 BF020000 		.4byte	0x2bf
+ 762 027a 00       		.byte	0
+ 763 027b 08       		.uleb128 0x8
+ 764 027c AD000000 		.4byte	.LASF34
+ 765 0280 01       		.byte	0x1
+ 766 0281 36       		.byte	0x36
+ 767 0282 00000000 		.4byte	.LFB2
+ 768 0286 20000000 		.4byte	.LFE2-.LFB2
+ 769 028a 01       		.uleb128 0x1
+ 770 028b 9C       		.byte	0x9c
+ 771 028c A3020000 		.4byte	0x2a3
+ 772 0290 11       		.uleb128 0x11
+ 773 0291 0E000000 		.4byte	.LVL12
+ 774 0295 F6010000 		.4byte	0x1f6
+ 775 0299 11       		.uleb128 0x11
+ 776 029a 18000000 		.4byte	.LVL13
+ 777 029e A3000000 		.4byte	0xa3
+ 778 02a2 00       		.byte	0
+ 779 02a3 12       		.uleb128 0x12
+ 780 02a4 90010000 		.4byte	.LASF39
+ 781 02a8 01       		.byte	0x1
+ 782 02a9 1A       		.byte	0x1a
+ 783 02aa 6B000000 		.4byte	0x6b
+ 784 02ae 05       		.uleb128 0x5
+ 785 02af 03       		.byte	0x3
+ 786 02b0 00000000 		.4byte	BluePrISM_initVar
+ 787 02b4 13       		.uleb128 0x13
+ 788 02b5 A2010000 		.4byte	.LASF40
+ 789 02b9 03       		.byte	0x3
+ 790 02ba 5E       		.byte	0x5e
+ 791 02bb 6B000000 		.4byte	0x6b
+ 792 02bf 14       		.uleb128 0x14
+ 793 02c0 C6010000 		.4byte	.LASF41
+ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccy3JnXN.s 			page 22
+
+
+ 794 02c4 03       		.byte	0x3
+ 795 02c5 5F       		.byte	0x5f
+ 796 02c6 15       		.uleb128 0x15
+ 797 02c7 6B000000 		.4byte	0x6b
+ 798 02cb 00       		.byte	0
+ 799 02cc 00       		.byte	0
+ 800              		.section	.debug_abbrev,"",%progbits
+ 801              	.Ldebug_abbrev0:
+ 802 0000 01       		.uleb128 0x1
+ 803 0001 11       		.uleb128 0x11
+ 804 0002 01       		.byte	0x1
+ 805 0003 25       		.uleb128 0x25
+ 806 0004 0E       		.uleb128 0xe
+ 807 0005 13       		.uleb128 0x13
+ 808 0006 0B       		.uleb128 0xb
+ 809 0007 03       		.uleb128 0x3
+ 810 0008 0E       		.uleb128 0xe
+ 811 0009 1B       		.uleb128 0x1b
+ 812 000a 0E       		.uleb128 0xe
+ 813 000b 55       		.uleb128 0x55
+ 814 000c 17       		.uleb128 0x17
+ 815 000d 11       		.uleb128 0x11
+ 816 000e 01       		.uleb128 0x1
+ 817 000f 10       		.uleb128 0x10
+ 818 0010 17       		.uleb128 0x17
+ 819 0011 00       		.byte	0
+ 820 0012 00       		.byte	0
+ 821 0013 02       		.uleb128 0x2
+ 822 0014 24       		.uleb128 0x24
+ 823 0015 00       		.byte	0
+ 824 0016 0B       		.uleb128 0xb
+ 825 0017 0B       		.uleb128 0xb
+ 826 0018 3E       		.uleb128 0x3e
+ 827 0019 0B       		.uleb128 0xb
+ 828 001a 03       		.uleb128 0x3
+ 829 001b 0E       		.uleb128 0xe
+ 830 001c 00       		.byte	0
+ 831 001d 00       		.byte	0
+ 832 001e 03       		.uleb128 0x3
+ 833 001f 24       		.uleb128 0x24
+ 834 0020 00       		.byte	0
+ 835 0021 0B       		.uleb128 0xb
+ 836 0022 0B       		.uleb128 0xb
+ 837 0023 3E       		.uleb128 0x3e
+ 838 0024 0B       		.uleb128 0xb
+ 839 0025 03       		.uleb128 0x3
+ 840 0026 08       		.uleb128 0x8
+ 841 0027 00       		.byte	0
+ 842 0028 00       		.byte	0
+ 843 0029 04       		.uleb128 0x4
+ 844 002a 16       		.uleb128 0x16
+ 845 002b 00       		.byte	0
+ 846 002c 03       		.uleb128 0x3
+ 847 002d 0E       		.uleb128 0xe
+ 848 002e 3A       		.uleb128 0x3a
+ 849 002f 0B       		.uleb128 0xb
+ 850 0030 3B       		.uleb128 0x3b
+ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccy3JnXN.s 			page 23
+
+
+ 851 0031 0B       		.uleb128 0xb
+ 852 0032 49       		.uleb128 0x49
+ 853 0033 13       		.uleb128 0x13
+ 854 0034 00       		.byte	0
+ 855 0035 00       		.byte	0
+ 856 0036 05       		.uleb128 0x5
+ 857 0037 16       		.uleb128 0x16
+ 858 0038 00       		.byte	0
+ 859 0039 03       		.uleb128 0x3
+ 860 003a 0E       		.uleb128 0xe
+ 861 003b 3A       		.uleb128 0x3a
+ 862 003c 0B       		.uleb128 0xb
+ 863 003d 3B       		.uleb128 0x3b
+ 864 003e 05       		.uleb128 0x5
+ 865 003f 49       		.uleb128 0x49
+ 866 0040 13       		.uleb128 0x13
+ 867 0041 00       		.byte	0
+ 868 0042 00       		.byte	0
+ 869 0043 06       		.uleb128 0x6
+ 870 0044 35       		.uleb128 0x35
+ 871 0045 00       		.byte	0
+ 872 0046 49       		.uleb128 0x49
+ 873 0047 13       		.uleb128 0x13
+ 874 0048 00       		.byte	0
+ 875 0049 00       		.byte	0
+ 876 004a 07       		.uleb128 0x7
+ 877 004b 2E       		.uleb128 0x2e
+ 878 004c 00       		.byte	0
+ 879 004d 3F       		.uleb128 0x3f
+ 880 004e 19       		.uleb128 0x19
+ 881 004f 03       		.uleb128 0x3
+ 882 0050 0E       		.uleb128 0xe
+ 883 0051 3A       		.uleb128 0x3a
+ 884 0052 0B       		.uleb128 0xb
+ 885 0053 3B       		.uleb128 0x3b
+ 886 0054 0B       		.uleb128 0xb
+ 887 0055 27       		.uleb128 0x27
+ 888 0056 19       		.uleb128 0x19
+ 889 0057 11       		.uleb128 0x11
+ 890 0058 01       		.uleb128 0x1
+ 891 0059 12       		.uleb128 0x12
+ 892 005a 06       		.uleb128 0x6
+ 893 005b 40       		.uleb128 0x40
+ 894 005c 18       		.uleb128 0x18
+ 895 005d 9742     		.uleb128 0x2117
+ 896 005f 19       		.uleb128 0x19
+ 897 0060 00       		.byte	0
+ 898 0061 00       		.byte	0
+ 899 0062 08       		.uleb128 0x8
+ 900 0063 2E       		.uleb128 0x2e
+ 901 0064 01       		.byte	0x1
+ 902 0065 3F       		.uleb128 0x3f
+ 903 0066 19       		.uleb128 0x19
+ 904 0067 03       		.uleb128 0x3
+ 905 0068 0E       		.uleb128 0xe
+ 906 0069 3A       		.uleb128 0x3a
+ 907 006a 0B       		.uleb128 0xb
+ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccy3JnXN.s 			page 24
+
+
+ 908 006b 3B       		.uleb128 0x3b
+ 909 006c 0B       		.uleb128 0xb
+ 910 006d 27       		.uleb128 0x27
+ 911 006e 19       		.uleb128 0x19
+ 912 006f 11       		.uleb128 0x11
+ 913 0070 01       		.uleb128 0x1
+ 914 0071 12       		.uleb128 0x12
+ 915 0072 06       		.uleb128 0x6
+ 916 0073 40       		.uleb128 0x40
+ 917 0074 18       		.uleb128 0x18
+ 918 0075 9742     		.uleb128 0x2117
+ 919 0077 19       		.uleb128 0x19
+ 920 0078 01       		.uleb128 0x1
+ 921 0079 13       		.uleb128 0x13
+ 922 007a 00       		.byte	0
+ 923 007b 00       		.byte	0
+ 924 007c 09       		.uleb128 0x9
+ 925 007d 05       		.uleb128 0x5
+ 926 007e 00       		.byte	0
+ 927 007f 03       		.uleb128 0x3
+ 928 0080 0E       		.uleb128 0xe
+ 929 0081 3A       		.uleb128 0x3a
+ 930 0082 0B       		.uleb128 0xb
+ 931 0083 3B       		.uleb128 0x3b
+ 932 0084 0B       		.uleb128 0xb
+ 933 0085 49       		.uleb128 0x49
+ 934 0086 13       		.uleb128 0x13
+ 935 0087 02       		.uleb128 0x2
+ 936 0088 18       		.uleb128 0x18
+ 937 0089 00       		.byte	0
+ 938 008a 00       		.byte	0
+ 939 008b 0A       		.uleb128 0xa
+ 940 008c 2E       		.uleb128 0x2e
+ 941 008d 00       		.byte	0
+ 942 008e 3F       		.uleb128 0x3f
+ 943 008f 19       		.uleb128 0x19
+ 944 0090 03       		.uleb128 0x3
+ 945 0091 0E       		.uleb128 0xe
+ 946 0092 3A       		.uleb128 0x3a
+ 947 0093 0B       		.uleb128 0xb
+ 948 0094 3B       		.uleb128 0x3b
+ 949 0095 0B       		.uleb128 0xb
+ 950 0096 27       		.uleb128 0x27
+ 951 0097 19       		.uleb128 0x19
+ 952 0098 49       		.uleb128 0x49
+ 953 0099 13       		.uleb128 0x13
+ 954 009a 11       		.uleb128 0x11
+ 955 009b 01       		.uleb128 0x1
+ 956 009c 12       		.uleb128 0x12
+ 957 009d 06       		.uleb128 0x6
+ 958 009e 40       		.uleb128 0x40
+ 959 009f 18       		.uleb128 0x18
+ 960 00a0 9742     		.uleb128 0x2117
+ 961 00a2 19       		.uleb128 0x19
+ 962 00a3 00       		.byte	0
+ 963 00a4 00       		.byte	0
+ 964 00a5 0B       		.uleb128 0xb
+ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccy3JnXN.s 			page 25
+
+
+ 965 00a6 2E       		.uleb128 0x2e
+ 966 00a7 01       		.byte	0x1
+ 967 00a8 3F       		.uleb128 0x3f
+ 968 00a9 19       		.uleb128 0x19
+ 969 00aa 03       		.uleb128 0x3
+ 970 00ab 0E       		.uleb128 0xe
+ 971 00ac 3A       		.uleb128 0x3a
+ 972 00ad 0B       		.uleb128 0xb
+ 973 00ae 3B       		.uleb128 0x3b
+ 974 00af 05       		.uleb128 0x5
+ 975 00b0 27       		.uleb128 0x27
+ 976 00b1 19       		.uleb128 0x19
+ 977 00b2 11       		.uleb128 0x11
+ 978 00b3 01       		.uleb128 0x1
+ 979 00b4 12       		.uleb128 0x12
+ 980 00b5 06       		.uleb128 0x6
+ 981 00b6 40       		.uleb128 0x40
+ 982 00b7 18       		.uleb128 0x18
+ 983 00b8 9742     		.uleb128 0x2117
+ 984 00ba 19       		.uleb128 0x19
+ 985 00bb 01       		.uleb128 0x1
+ 986 00bc 13       		.uleb128 0x13
+ 987 00bd 00       		.byte	0
+ 988 00be 00       		.byte	0
+ 989 00bf 0C       		.uleb128 0xc
+ 990 00c0 05       		.uleb128 0x5
+ 991 00c1 00       		.byte	0
+ 992 00c2 03       		.uleb128 0x3
+ 993 00c3 0E       		.uleb128 0xe
+ 994 00c4 3A       		.uleb128 0x3a
+ 995 00c5 0B       		.uleb128 0xb
+ 996 00c6 3B       		.uleb128 0x3b
+ 997 00c7 05       		.uleb128 0x5
+ 998 00c8 49       		.uleb128 0x49
+ 999 00c9 13       		.uleb128 0x13
+ 1000 00ca 02       		.uleb128 0x2
+ 1001 00cb 18       		.uleb128 0x18
+ 1002 00cc 00       		.byte	0
+ 1003 00cd 00       		.byte	0
+ 1004 00ce 0D       		.uleb128 0xd
+ 1005 00cf 2E       		.uleb128 0x2e
+ 1006 00d0 00       		.byte	0
+ 1007 00d1 3F       		.uleb128 0x3f
+ 1008 00d2 19       		.uleb128 0x19
+ 1009 00d3 03       		.uleb128 0x3
+ 1010 00d4 0E       		.uleb128 0xe
+ 1011 00d5 3A       		.uleb128 0x3a
+ 1012 00d6 0B       		.uleb128 0xb
+ 1013 00d7 3B       		.uleb128 0x3b
+ 1014 00d8 05       		.uleb128 0x5
+ 1015 00d9 27       		.uleb128 0x27
+ 1016 00da 19       		.uleb128 0x19
+ 1017 00db 49       		.uleb128 0x49
+ 1018 00dc 13       		.uleb128 0x13
+ 1019 00dd 11       		.uleb128 0x11
+ 1020 00de 01       		.uleb128 0x1
+ 1021 00df 12       		.uleb128 0x12
+ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccy3JnXN.s 			page 26
+
+
+ 1022 00e0 06       		.uleb128 0x6
+ 1023 00e1 40       		.uleb128 0x40
+ 1024 00e2 18       		.uleb128 0x18
+ 1025 00e3 9742     		.uleb128 0x2117
+ 1026 00e5 19       		.uleb128 0x19
+ 1027 00e6 00       		.byte	0
+ 1028 00e7 00       		.byte	0
+ 1029 00e8 0E       		.uleb128 0xe
+ 1030 00e9 34       		.uleb128 0x34
+ 1031 00ea 00       		.byte	0
+ 1032 00eb 03       		.uleb128 0x3
+ 1033 00ec 0E       		.uleb128 0xe
+ 1034 00ed 3A       		.uleb128 0x3a
+ 1035 00ee 0B       		.uleb128 0xb
+ 1036 00ef 3B       		.uleb128 0x3b
+ 1037 00f0 0B       		.uleb128 0xb
+ 1038 00f1 49       		.uleb128 0x49
+ 1039 00f2 13       		.uleb128 0x13
+ 1040 00f3 02       		.uleb128 0x2
+ 1041 00f4 17       		.uleb128 0x17
+ 1042 00f5 00       		.byte	0
+ 1043 00f6 00       		.byte	0
+ 1044 00f7 0F       		.uleb128 0xf
+ 1045 00f8 898201   		.uleb128 0x4109
+ 1046 00fb 01       		.byte	0x1
+ 1047 00fc 11       		.uleb128 0x11
+ 1048 00fd 01       		.uleb128 0x1
+ 1049 00fe 31       		.uleb128 0x31
+ 1050 00ff 13       		.uleb128 0x13
+ 1051 0100 01       		.uleb128 0x1
+ 1052 0101 13       		.uleb128 0x13
+ 1053 0102 00       		.byte	0
+ 1054 0103 00       		.byte	0
+ 1055 0104 10       		.uleb128 0x10
+ 1056 0105 8A8201   		.uleb128 0x410a
+ 1057 0108 00       		.byte	0
+ 1058 0109 02       		.uleb128 0x2
+ 1059 010a 18       		.uleb128 0x18
+ 1060 010b 9142     		.uleb128 0x2111
+ 1061 010d 18       		.uleb128 0x18
+ 1062 010e 00       		.byte	0
+ 1063 010f 00       		.byte	0
+ 1064 0110 11       		.uleb128 0x11
+ 1065 0111 898201   		.uleb128 0x4109
+ 1066 0114 00       		.byte	0
+ 1067 0115 11       		.uleb128 0x11
+ 1068 0116 01       		.uleb128 0x1
+ 1069 0117 31       		.uleb128 0x31
+ 1070 0118 13       		.uleb128 0x13
+ 1071 0119 00       		.byte	0
+ 1072 011a 00       		.byte	0
+ 1073 011b 12       		.uleb128 0x12
+ 1074 011c 34       		.uleb128 0x34
+ 1075 011d 00       		.byte	0
+ 1076 011e 03       		.uleb128 0x3
+ 1077 011f 0E       		.uleb128 0xe
+ 1078 0120 3A       		.uleb128 0x3a
+ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccy3JnXN.s 			page 27
+
+
+ 1079 0121 0B       		.uleb128 0xb
+ 1080 0122 3B       		.uleb128 0x3b
+ 1081 0123 0B       		.uleb128 0xb
+ 1082 0124 49       		.uleb128 0x49
+ 1083 0125 13       		.uleb128 0x13
+ 1084 0126 3F       		.uleb128 0x3f
+ 1085 0127 19       		.uleb128 0x19
+ 1086 0128 02       		.uleb128 0x2
+ 1087 0129 18       		.uleb128 0x18
+ 1088 012a 00       		.byte	0
+ 1089 012b 00       		.byte	0
+ 1090 012c 13       		.uleb128 0x13
+ 1091 012d 2E       		.uleb128 0x2e
+ 1092 012e 00       		.byte	0
+ 1093 012f 3F       		.uleb128 0x3f
+ 1094 0130 19       		.uleb128 0x19
+ 1095 0131 03       		.uleb128 0x3
+ 1096 0132 0E       		.uleb128 0xe
+ 1097 0133 3A       		.uleb128 0x3a
+ 1098 0134 0B       		.uleb128 0xb
+ 1099 0135 3B       		.uleb128 0x3b
+ 1100 0136 0B       		.uleb128 0xb
+ 1101 0137 27       		.uleb128 0x27
+ 1102 0138 19       		.uleb128 0x19
+ 1103 0139 49       		.uleb128 0x49
+ 1104 013a 13       		.uleb128 0x13
+ 1105 013b 3C       		.uleb128 0x3c
+ 1106 013c 19       		.uleb128 0x19
+ 1107 013d 00       		.byte	0
+ 1108 013e 00       		.byte	0
+ 1109 013f 14       		.uleb128 0x14
+ 1110 0140 2E       		.uleb128 0x2e
+ 1111 0141 01       		.byte	0x1
+ 1112 0142 3F       		.uleb128 0x3f
+ 1113 0143 19       		.uleb128 0x19
+ 1114 0144 03       		.uleb128 0x3
+ 1115 0145 0E       		.uleb128 0xe
+ 1116 0146 3A       		.uleb128 0x3a
+ 1117 0147 0B       		.uleb128 0xb
+ 1118 0148 3B       		.uleb128 0x3b
+ 1119 0149 0B       		.uleb128 0xb
+ 1120 014a 27       		.uleb128 0x27
+ 1121 014b 19       		.uleb128 0x19
+ 1122 014c 3C       		.uleb128 0x3c
+ 1123 014d 19       		.uleb128 0x19
+ 1124 014e 00       		.byte	0
+ 1125 014f 00       		.byte	0
+ 1126 0150 15       		.uleb128 0x15
+ 1127 0151 05       		.uleb128 0x5
+ 1128 0152 00       		.byte	0
+ 1129 0153 49       		.uleb128 0x49
+ 1130 0154 13       		.uleb128 0x13
+ 1131 0155 00       		.byte	0
+ 1132 0156 00       		.byte	0
+ 1133 0157 00       		.byte	0
+ 1134              		.section	.debug_loc,"",%progbits
+ 1135              	.Ldebug_loc0:
+ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccy3JnXN.s 			page 28
+
+
+ 1136              	.LLST0:
+ 1137 0000 1E000000 		.4byte	.LVL10
+ 1138 0004 2B000000 		.4byte	.LVL11-1
+ 1139 0008 0100     		.2byte	0x1
+ 1140 000a 50       		.byte	0x50
+ 1141 000b 00000000 		.4byte	0
+ 1142 000f 00000000 		.4byte	0
+ 1143              		.section	.debug_aranges,"",%progbits
+ 1144 0000 84000000 		.4byte	0x84
+ 1145 0004 0200     		.2byte	0x2
+ 1146 0006 00000000 		.4byte	.Ldebug_info0
+ 1147 000a 04       		.byte	0x4
+ 1148 000b 00       		.byte	0
+ 1149 000c 0000     		.2byte	0
+ 1150 000e 0000     		.2byte	0
+ 1151 0010 00000000 		.4byte	.LFB4
+ 1152 0014 10000000 		.4byte	.LFE4-.LFB4
+ 1153 0018 00000000 		.4byte	.LFB5
+ 1154 001c 10000000 		.4byte	.LFE5-.LFB5
+ 1155 0020 00000000 		.4byte	.LFB6
+ 1156 0024 20000000 		.4byte	.LFE6-.LFB6
+ 1157 0028 00000000 		.4byte	.LFB7
+ 1158 002c 20000000 		.4byte	.LFE7-.LFB7
+ 1159 0030 00000000 		.4byte	.LFB8
+ 1160 0034 0C000000 		.4byte	.LFE8-.LFB8
+ 1161 0038 00000000 		.4byte	.LFB9
+ 1162 003c 18000000 		.4byte	.LFE9-.LFB9
+ 1163 0040 00000000 		.4byte	.LFB10
+ 1164 0044 0C000000 		.4byte	.LFE10-.LFB10
+ 1165 0048 00000000 		.4byte	.LFB11
+ 1166 004c 0C000000 		.4byte	.LFE11-.LFB11
+ 1167 0050 00000000 		.4byte	.LFB12
+ 1168 0054 0C000000 		.4byte	.LFE12-.LFB12
+ 1169 0058 00000000 		.4byte	.LFB13
+ 1170 005c 0C000000 		.4byte	.LFE13-.LFB13
+ 1171 0060 00000000 		.4byte	.LFB14
+ 1172 0064 0C000000 		.4byte	.LFE14-.LFB14
+ 1173 0068 00000000 		.4byte	.LFB15
+ 1174 006c 0C000000 		.4byte	.LFE15-.LFB15
+ 1175 0070 00000000 		.4byte	.LFB3
+ 1176 0074 48000000 		.4byte	.LFE3-.LFB3
+ 1177 0078 00000000 		.4byte	.LFB2
+ 1178 007c 20000000 		.4byte	.LFE2-.LFB2
+ 1179 0080 00000000 		.4byte	0
+ 1180 0084 00000000 		.4byte	0
+ 1181              		.section	.debug_ranges,"",%progbits
+ 1182              	.Ldebug_ranges0:
+ 1183 0000 00000000 		.4byte	.LFB4
+ 1184 0004 10000000 		.4byte	.LFE4
+ 1185 0008 00000000 		.4byte	.LFB5
+ 1186 000c 10000000 		.4byte	.LFE5
+ 1187 0010 00000000 		.4byte	.LFB6
+ 1188 0014 20000000 		.4byte	.LFE6
+ 1189 0018 00000000 		.4byte	.LFB7
+ 1190 001c 20000000 		.4byte	.LFE7
+ 1191 0020 00000000 		.4byte	.LFB8
+ 1192 0024 0C000000 		.4byte	.LFE8
+ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccy3JnXN.s 			page 29
+
+
+ 1193 0028 00000000 		.4byte	.LFB9
+ 1194 002c 18000000 		.4byte	.LFE9
+ 1195 0030 00000000 		.4byte	.LFB10
+ 1196 0034 0C000000 		.4byte	.LFE10
+ 1197 0038 00000000 		.4byte	.LFB11
+ 1198 003c 0C000000 		.4byte	.LFE11
+ 1199 0040 00000000 		.4byte	.LFB12
+ 1200 0044 0C000000 		.4byte	.LFE12
+ 1201 0048 00000000 		.4byte	.LFB13
+ 1202 004c 0C000000 		.4byte	.LFE13
+ 1203 0050 00000000 		.4byte	.LFB14
+ 1204 0054 0C000000 		.4byte	.LFE14
+ 1205 0058 00000000 		.4byte	.LFB15
+ 1206 005c 0C000000 		.4byte	.LFE15
+ 1207 0060 00000000 		.4byte	.LFB3
+ 1208 0064 48000000 		.4byte	.LFE3
+ 1209 0068 00000000 		.4byte	.LFB2
+ 1210 006c 20000000 		.4byte	.LFE2
+ 1211 0070 00000000 		.4byte	0
+ 1212 0074 00000000 		.4byte	0
+ 1213              		.section	.debug_line,"",%progbits
+ 1214              	.Ldebug_line0:
+ 1215 0000 65010000 		.section	.debug_str,"MS",%progbits,1
+ 1215      02005300 
+ 1215      00000201 
+ 1215      FB0E0D00 
+ 1215      01010101 
+ 1216              	.LASF24:
+ 1217 0000 426C7565 		.ascii	"BluePrISM_ReadPolynomial\000"
+ 1217      50724953 
+ 1217      4D5F5265 
+ 1217      6164506F 
+ 1217      6C796E6F 
+ 1218              	.LASF3:
+ 1219 0019 73686F72 		.ascii	"short unsigned int\000"
+ 1219      7420756E 
+ 1219      7369676E 
+ 1219      65642069 
+ 1219      6E7400
+ 1220              	.LASF17:
+ 1221 002c 426C7565 		.ascii	"BluePrISM_SetPulse0Mode\000"
+ 1221      50724953 
+ 1221      4D5F5365 
+ 1221      7450756C 
+ 1221      7365304D 
+ 1222              	.LASF19:
+ 1223 0044 70756C73 		.ascii	"pulse0Type\000"
+ 1223      65305479 
+ 1223      706500
+ 1224              	.LASF9:
+ 1225 004f 666C6F61 		.ascii	"float\000"
+ 1225      7400
+ 1226              	.LASF7:
+ 1227 0055 6C6F6E67 		.ascii	"long long unsigned int\000"
+ 1227      206C6F6E 
+ 1227      6720756E 
+ 1227      7369676E 
+ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccy3JnXN.s 			page 30
+
+
+ 1227      65642069 
+ 1228              	.LASF31:
+ 1229 006c 426C7565 		.ascii	"BluePrISM_WritePulse1\000"
+ 1229      50724953 
+ 1229      4D5F5772 
+ 1229      69746550 
+ 1229      756C7365 
+ 1230              	.LASF1:
+ 1231 0082 756E7369 		.ascii	"unsigned char\000"
+ 1231      676E6564 
+ 1231      20636861 
+ 1231      7200
+ 1232              	.LASF13:
+ 1233 0090 72656738 		.ascii	"reg8\000"
+ 1233      00
+ 1234              	.LASF5:
+ 1235 0095 6C6F6E67 		.ascii	"long unsigned int\000"
+ 1235      20756E73 
+ 1235      69676E65 
+ 1235      6420696E 
+ 1235      7400
+ 1236              	.LASF12:
+ 1237 00a7 75696E74 		.ascii	"uint8\000"
+ 1237      3800
+ 1238              	.LASF34:
+ 1239 00ad 426C7565 		.ascii	"BluePrISM_Start\000"
+ 1239      50724953 
+ 1239      4D5F5374 
+ 1239      61727400 
+ 1240              	.LASF36:
+ 1241 00bd 2E5C4765 		.ascii	".\\Generated_Source\\PSoC4\\BluePrISM.c\000"
+ 1241      6E657261 
+ 1241      7465645F 
+ 1241      536F7572 
+ 1241      63655C50 
+ 1242              	.LASF38:
+ 1243 00e2 656E6162 		.ascii	"enableInterrupts\000"
+ 1243      6C65496E 
+ 1243      74657272 
+ 1243      75707473 
+ 1243      00
+ 1244              	.LASF15:
+ 1245 00f3 426C7565 		.ascii	"BluePrISM_Enable\000"
+ 1245      50724953 
+ 1245      4D5F456E 
+ 1245      61626C65 
+ 1245      00
+ 1246              	.LASF37:
+ 1247 0104 593A5C72 		.ascii	"Y:\\repos\\PSoC-4-BLE-Experiments\\Project 003 Cust"
+ 1247      65706F73 
+ 1247      5C50536F 
+ 1247      432D342D 
+ 1247      424C452D 
+ 1248 0134 6F6D2050 		.ascii	"om Profile CapSense RGB LED\\PSoC\\CapSenseRGB\\Cap"
+ 1248      726F6669 
+ 1248      6C652043 
+ 1248      61705365 
+ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccy3JnXN.s 			page 31
+
+
+ 1248      6E736520 
+ 1249 0164 53656E73 		.ascii	"SenseRGB.cydsn\000"
+ 1249      65524742 
+ 1249      2E637964 
+ 1249      736E00
+ 1250              	.LASF10:
+ 1251 0173 646F7562 		.ascii	"double\000"
+ 1251      6C6500
+ 1252              	.LASF26:
+ 1253 017a 706F6C79 		.ascii	"polynomial\000"
+ 1253      6E6F6D69 
+ 1253      616C00
+ 1254              	.LASF20:
+ 1255 0185 70756C73 		.ascii	"pulse1Type\000"
+ 1255      65315479 
+ 1255      706500
+ 1256              	.LASF39:
+ 1257 0190 426C7565 		.ascii	"BluePrISM_initVar\000"
+ 1257      50724953 
+ 1257      4D5F696E 
+ 1257      69745661 
+ 1257      7200
+ 1258              	.LASF40:
+ 1259 01a2 4379456E 		.ascii	"CyEnterCriticalSection\000"
+ 1259      74657243 
+ 1259      72697469 
+ 1259      63616C53 
+ 1259      65637469 
+ 1260              	.LASF8:
+ 1261 01b9 756E7369 		.ascii	"unsigned int\000"
+ 1261      676E6564 
+ 1261      20696E74 
+ 1261      00
+ 1262              	.LASF41:
+ 1263 01c6 43794578 		.ascii	"CyExitCriticalSection\000"
+ 1263      69744372 
+ 1263      69746963 
+ 1263      616C5365 
+ 1263      6374696F 
+ 1264              	.LASF33:
+ 1265 01dc 426C7565 		.ascii	"BluePrISM_Init\000"
+ 1265      50724953 
+ 1265      4D5F496E 
+ 1265      697400
+ 1266              	.LASF35:
+ 1267 01eb 474E5520 		.ascii	"GNU C 4.8.4 20140526 (release) [ARM/embedded-4_8-br"
+ 1267      4320342E 
+ 1267      382E3420 
+ 1267      32303134 
+ 1267      30353236 
+ 1268 021e 616E6368 		.ascii	"anch revision 211358] -mcpu=cortex-m0 -mthumb -g -O"
+ 1268      20726576 
+ 1268      6973696F 
+ 1268      6E203231 
+ 1268      31333538 
+ 1269 0251 67202D66 		.ascii	"g -ffunction-sections\000"
+ 1269      66756E63 
+ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccy3JnXN.s 			page 32
+
+
+ 1269      74696F6E 
+ 1269      2D736563 
+ 1269      74696F6E 
+ 1270              	.LASF21:
+ 1271 0267 426C7565 		.ascii	"BluePrISM_WriteSeed\000"
+ 1271      50724953 
+ 1271      4D5F5772 
+ 1271      69746553 
+ 1271      65656400 
+ 1272              	.LASF27:
+ 1273 027b 426C7565 		.ascii	"BluePrISM_ReadPulse0\000"
+ 1273      50724953 
+ 1273      4D5F5265 
+ 1273      61645075 
+ 1273      6C736530 
+ 1274              	.LASF30:
+ 1275 0290 426C7565 		.ascii	"BluePrISM_ReadPulse1\000"
+ 1275      50724953 
+ 1275      4D5F5265 
+ 1275      61645075 
+ 1275      6C736531 
+ 1276              	.LASF14:
+ 1277 02a5 73697A65 		.ascii	"sizetype\000"
+ 1277      74797065 
+ 1277      00
+ 1278              	.LASF16:
+ 1279 02ae 426C7565 		.ascii	"BluePrISM_Stop\000"
+ 1279      50724953 
+ 1279      4D5F5374 
+ 1279      6F7000
+ 1280              	.LASF6:
+ 1281 02bd 6C6F6E67 		.ascii	"long long int\000"
+ 1281      206C6F6E 
+ 1281      6720696E 
+ 1281      7400
+ 1282              	.LASF25:
+ 1283 02cb 426C7565 		.ascii	"BluePrISM_WritePolynomial\000"
+ 1283      50724953 
+ 1283      4D5F5772 
+ 1283      69746550 
+ 1283      6F6C796E 
+ 1284              	.LASF29:
+ 1285 02e5 70756C73 		.ascii	"pulseDensity0\000"
+ 1285      6544656E 
+ 1285      73697479 
+ 1285      3000
+ 1286              	.LASF32:
+ 1287 02f3 70756C73 		.ascii	"pulseDensity1\000"
+ 1287      6544656E 
+ 1287      73697479 
+ 1287      3100
+ 1288              	.LASF2:
+ 1289 0301 73686F72 		.ascii	"short int\000"
+ 1289      7420696E 
+ 1289      7400
+ 1290              	.LASF28:
+ 1291 030b 426C7565 		.ascii	"BluePrISM_WritePulse0\000"
+ARM GAS  C:\Users\danielpi\AppData\Local\Temp\ccy3JnXN.s 			page 33
+
+
+ 1291      50724953 
+ 1291      4D5F5772 
+ 1291      69746550 
+ 1291      756C7365 
+ 1292              	.LASF22:
+ 1293 0321 73656564 		.ascii	"seed\000"
+ 1293      00
+ 1294              	.LASF18:
+ 1295 0326 426C7565 		.ascii	"BluePrISM_SetPulse1Mode\000"
+ 1295      50724953 
+ 1295      4D5F5365 
+ 1295      7450756C 
+ 1295      7365314D 
+ 1296              	.LASF4:
+ 1297 033e 6C6F6E67 		.ascii	"long int\000"
+ 1297      20696E74 
+ 1297      00
+ 1298              	.LASF11:
+ 1299 0347 63686172 		.ascii	"char\000"
+ 1299      00
+ 1300              	.LASF23:
+ 1301 034c 426C7565 		.ascii	"BluePrISM_ReadSeed\000"
+ 1301      50724953 
+ 1301      4D5F5265 
+ 1301      61645365 
+ 1301      656400
+ 1302              	.LASF0:
+ 1303 035f 7369676E 		.ascii	"signed char\000"
+ 1303      65642063 
+ 1303      68617200 
+ 1304              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 4.8.4 20140526 (release) [ARM/embedded-4_8-br

@@ -1,0 +1,93 @@
+# CapSense RGB Notes
+
+## BLE Component
+In the general tab we set a custom profile mode, witht the profile mode set to Server and the GAP role set to Peripheral.
+
+In the Profiles tab. Generic Access - Device Name, Appearance, Peripheral prefered connection parameters
+
+Capsense Service
+UUID: CAB5
+Service Type: Primary
+	Capsense Slider Characteristic
+	UUID: CAA2
+	1 x uint8 Field for the value
+	Allowed to Notify
+		Client Characteristic Configurator Descriptor
+		UUID: 2902
+		Characteristic User Descriptor
+		UUID: 2901
+		utf8s CapSense Slider
+RGB LED Service
+UUID: CBBB
+Service Type: Primary
+	RGB LED Characteristic
+	UUID: CBB1
+	4 x uint8 Array
+	Allowed to read and write
+		Characteristic User Descriptor
+		UUID: 2901
+		utf8s RGB LED Control
+
+The GAP Settings tab holds the device name and allows for the appearance to be selected from a list. The advertising packet needs to include the service id for both services. Scan response packet is not set.
+
+## CapSense Component
+General
+	Tuning method: Auto (SmartSense)
+	Threshold Mode: Automatic
+	Raw data noise filet: First order IIR 1/4
+Widget Config
+	Need to add a linear slider
+	Number of sensor elements: 5
+	API Resolution: 100 (This is the max output value that is transmitted)
+	Diplexing: No
+	Position Noise Filter: Averaging
+Scan Order
+	5 slots used with names LinearSlider0_e0__LS, Doesn't look to be changable
+	Sensitivity set to a value of 10
+Advanced
+	Not sure what is important here
+Tune Helper
+	Not enabled
+
+
+## PrISM
+Stands for Precision Illumination Signal Modulation
+Resolution: 8
+Polynomial: 0xB8
+Pulse Density: 1, Less than or equal
+
+Give both enables a 1 signal using a logic high constant
+Give both Kill and Resets a 0 signal using a logic low constant
+Connect a 1MHz clock
+Connect digitan HW High impedence pins to the pulse density outputs
+
+
+## Pins
+ 5: Capsense CMOD, 
+38: LinearSlider 0
+39: LinearSlider 1
+40: LinearSlider 2
+41: LinearSlider 3
+42: LinearSlider 4
+54: Blue
+53: Green
+43: Red
+
+## Analog
+This appears to be where the Capsense pins are configured
+
+
+## Main
+Needs to initialise all of the subsystems and to run the overall event loop.
+
+initialiseSystem
+Start the interupts off.
+
+
+## BLE Code
+Should split the code into two files, one for each BLE service. Although a lot of the BLE functionality must be contained in a single event handler (which has to then dispatch to all of the services).
+
+
+## LED Notes
+This example has the output drive pins to the LEDs set to high impedence mode by the hardware configurator. Then in the initialisation routine the mode is set to strong drive. I think this is to stop the LED blinking on when the board powers up.
+

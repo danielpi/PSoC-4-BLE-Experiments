@@ -1,0 +1,24 @@
+# CapSenseRGB
+# 2015-09-18 01:34:58Z
+
+# IO_6@[IOP=(0)][IoId=(6)] is reserved: SWDDebugEnabled
+dont_use_io iocell 0 6
+# IO_7@[IOP=(0)][IoId=(7)] is reserved: SWDDebugEnabled
+dont_use_io iocell 0 7
+# IO_0@[IOP=(6)][IoId=(0)] is reserved: KhzXtalEnabled
+dont_use_io iocell 6 0
+# IO_1@[IOP=(6)][IoId=(1)] is reserved: KhzXtalEnabled
+dont_use_io iocell 6 1
+set_io "BLUE(0)" iocell 3 7
+set_location "ClockGenBlock" m0s8clockgenblockcell -1 -1 0
+set_io "GREEN(0)" iocell 3 6
+set_io "RED(0)" iocell 2 6
+set_location "\Slider:CSD_FFB\" p4csdcell -1 -1 0
+set_io "\Slider:Cmod(0)\" iocell 4 0
+set_location "\Slider:IDAC1:cy_psoc4_idac\" p4csidac8cell -1 -1 0
+set_location "\Slider:IDAC2:cy_psoc4_idac\" p4csidac7cell -1 -1 0
+set_io "\Slider:Sns(0)\" iocell 2 1
+set_io "\Slider:Sns(1)\" iocell 2 2
+set_io "\Slider:Sns(2)\" iocell 2 3
+set_io "\Slider:Sns(3)\" iocell 2 4
+set_io "\Slider:Sns(4)\" iocell 2 5
