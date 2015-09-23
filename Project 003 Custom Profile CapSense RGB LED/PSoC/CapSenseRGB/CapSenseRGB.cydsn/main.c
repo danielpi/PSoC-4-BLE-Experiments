@@ -9,12 +9,16 @@
  *
  * ========================================
 */
-#include <project.h>
+#include <main.h>
 
 #define TRUE 	(1)
 #define FALSE 	(0)
 
 uint8 deviceConnected = FALSE;
+
+// Function Prototypes
+void initializeSystem();
+void bluetoothEventHandler(uint32 event, void * eventParam);
 
 
 int main()
@@ -58,8 +62,8 @@ void initializeSystem() {
 	
 	
 	// Init CapSense
-	CapSense_Start();
-	CapSense_InitializeAllBaselines();
+	Slider_Start();
+	Slider_InitializeAllBaselines();
 }
 
 void bluetoothEventHandler(uint32 event, void * eventParam) {
@@ -67,14 +71,14 @@ void bluetoothEventHandler(uint32 event, void * eventParam) {
     	case CYBLE_EVT_STACK_ON:
 		case CYBLE_EVT_GAP_DEVICE_DISCONNECTED:
 			// Start advertising and enter discoverable mode
-			CyBle_GappStartAdvertisment(CYBLE_ADVERTISING_FAST);
+			CyBle_GappStartAdvertisement(CYBLE_ADVERTISING_FAST);
 			break;
 			
 		case CYBLE_EVT_GAPP_ADVERTISEMENT_START_STOP:
 			// When advertising stops and we aren't connected to
 			// to a computer we want to restart advertising
 			if (CYBLE_STATE_DISCONNECTED == CyBle_GetState()) {
-				CyBle_GappStartAdvertisment(CYBLE_ADVERTISING_FAST);
+				CyBle_GappStartAdvertisement(CYBLE_ADVERTISING_FAST);
 			}
 			break;
 			

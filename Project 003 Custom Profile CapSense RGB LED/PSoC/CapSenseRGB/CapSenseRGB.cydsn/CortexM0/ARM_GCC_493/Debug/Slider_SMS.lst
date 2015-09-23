@@ -1,0 +1,3469 @@
+ARM GAS  C:\Users\ELECTR~1\AppData\Local\Temp\cc8evJ81.s 			page 1
+
+
+   1              		.cpu cortex-m0
+   2              		.fpu softvfp
+   3              		.eabi_attribute 20, 1
+   4              		.eabi_attribute 21, 1
+   5              		.eabi_attribute 23, 3
+   6              		.eabi_attribute 24, 1
+   7              		.eabi_attribute 25, 1
+   8              		.eabi_attribute 26, 1
+   9              		.eabi_attribute 30, 1
+  10              		.eabi_attribute 34, 0
+  11              		.eabi_attribute 18, 4
+  12              		.code	16
+  13              		.file	"Slider_SMS.c"
+  14              		.text
+  15              	.Ltext0:
+  16              		.cfi_sections	.debug_frame
+  17              		.section	.text.Slider_UpdateThresholds,"ax",%progbits
+  18              		.align	2
+  19              		.global	Slider_UpdateThresholds
+  20              		.code	16
+  21              		.thumb_func
+  22              		.type	Slider_UpdateThresholds, %function
+  23              	Slider_UpdateThresholds:
+  24              	.LFB36:
+  25              		.file 1 ".\\Generated_Source\\PSoC4\\Slider_SMS.c"
+   1:.\Generated_Source\PSoC4/Slider_SMS.c **** /*******************************************************************************
+   2:.\Generated_Source\PSoC4/Slider_SMS.c **** * File Name: Slider_SMS.c
+   3:.\Generated_Source\PSoC4/Slider_SMS.c **** * Version 2.20
+   4:.\Generated_Source\PSoC4/Slider_SMS.c **** *
+   5:.\Generated_Source\PSoC4/Slider_SMS.c **** * Description:
+   6:.\Generated_Source\PSoC4/Slider_SMS.c **** *  This file provides the source code of wrapper between CapSense CSD component 
+   7:.\Generated_Source\PSoC4/Slider_SMS.c **** *  and Auto Tuning library.
+   8:.\Generated_Source\PSoC4/Slider_SMS.c **** *
+   9:.\Generated_Source\PSoC4/Slider_SMS.c **** * Note:
+  10:.\Generated_Source\PSoC4/Slider_SMS.c **** *
+  11:.\Generated_Source\PSoC4/Slider_SMS.c **** ********************************************************************************
+  12:.\Generated_Source\PSoC4/Slider_SMS.c **** * Copyright 2014, Cypress Semiconductor Corporation.  All rights reserved.
+  13:.\Generated_Source\PSoC4/Slider_SMS.c **** * You may use this file only in accordance with the license, terms, conditions,
+  14:.\Generated_Source\PSoC4/Slider_SMS.c **** * disclaimers, and limitations in the end user license agreement accompanying
+  15:.\Generated_Source\PSoC4/Slider_SMS.c **** * the software package with which this file was provided.
+  16:.\Generated_Source\PSoC4/Slider_SMS.c **** *******************************************************************************/
+  17:.\Generated_Source\PSoC4/Slider_SMS.c **** 
+  18:.\Generated_Source\PSoC4/Slider_SMS.c **** #include "Slider_SMS.h"
+  19:.\Generated_Source\PSoC4/Slider_SMS.c **** #include "Slider_PVT.h"
+  20:.\Generated_Source\PSoC4/Slider_SMS.c **** 
+  21:.\Generated_Source\PSoC4/Slider_SMS.c **** #include "cytypes.h"
+  22:.\Generated_Source\PSoC4/Slider_SMS.c **** 
+  23:.\Generated_Source\PSoC4/Slider_SMS.c **** #if (Slider_TUNING_METHOD == Slider__TUNING_AUTO)
+  24:.\Generated_Source\PSoC4/Slider_SMS.c **** 
+  25:.\Generated_Source\PSoC4/Slider_SMS.c **** 
+  26:.\Generated_Source\PSoC4/Slider_SMS.c **** /*  Real Charge Divider values */
+  27:.\Generated_Source\PSoC4/Slider_SMS.c **** #if (CY_PSOC4_4100BL || CY_PSOC4_4200BL || CY_PSOC4_4100M || CY_PSOC4_4200M)
+  28:.\Generated_Source\PSoC4/Slider_SMS.c ****     /*  Dividers are not chained */
+  29:.\Generated_Source\PSoC4/Slider_SMS.c **** 	#if (CYDEV_BCLK__HFCLK__MHZ > 24u)
+  30:.\Generated_Source\PSoC4/Slider_SMS.c **** 		const uint8 prescalerTable[Slider_PRESCALERS_TBL_SIZE] = {
+  31:.\Generated_Source\PSoC4/Slider_SMS.c **** 			4u,     4u,     4u,    8u,    8u,    8u,    8u,    16u,    16u,    16u,    16u,    16u,    16u, 
+  32:.\Generated_Source\PSoC4/Slider_SMS.c **** 		};
+ARM GAS  C:\Users\ELECTR~1\AppData\Local\Temp\cc8evJ81.s 			page 2
+
+
+  33:.\Generated_Source\PSoC4/Slider_SMS.c **** 	#elif (CYDEV_BCLK__HFCLK__MHZ >12u)
+  34:.\Generated_Source\PSoC4/Slider_SMS.c **** 		const uint8 prescalerTable[Slider_PRESCALERS_TBL_SIZE] = {
+  35:.\Generated_Source\PSoC4/Slider_SMS.c **** 			2u,     2u,     2u,    4u,    4u,    4u,    4u,    8u,    8u,    8u,    8u,    8u,    8u,    8u,
+  36:.\Generated_Source\PSoC4/Slider_SMS.c **** 		};
+  37:.\Generated_Source\PSoC4/Slider_SMS.c **** 	#else   /* (CYDEV_BCLK__HFCLK__MHZ > 12u) */
+  38:.\Generated_Source\PSoC4/Slider_SMS.c **** 		const uint8 prescalerTable[Slider_PRESCALERS_TBL_SIZE] = {
+  39:.\Generated_Source\PSoC4/Slider_SMS.c **** 			1u,     1u,     1u,    2u,    2u,    2u,    2u,    4u,    4u,    4u,    4u,    4u,    4u,    4u,
+  40:.\Generated_Source\PSoC4/Slider_SMS.c **** 		};
+  41:.\Generated_Source\PSoC4/Slider_SMS.c **** 	#endif /* (CYDEV_BCLK__HFCLK__MHZ > 24u) */
+  42:.\Generated_Source\PSoC4/Slider_SMS.c **** 	
+  43:.\Generated_Source\PSoC4/Slider_SMS.c **** #elif (0u != Slider_IS_M0S8PERI_BLOCK)
+  44:.\Generated_Source\PSoC4/Slider_SMS.c ****     /*  Dividers are not chained (PSoC 4000) */
+  45:.\Generated_Source\PSoC4/Slider_SMS.c **** 	#if (CYDEV_BCLK__HFCLK__MHZ >= 12u)
+  46:.\Generated_Source\PSoC4/Slider_SMS.c **** 		const uint8 prescalerTable[Slider_PRESCALERS_TBL_SIZE] = {
+  47:.\Generated_Source\PSoC4/Slider_SMS.c **** 			1u,     1u,     1u,    2u,    2u,    2u,    2u,    4u,    4u,    4u,    4u,    4u,    4u,    4u,
+  48:.\Generated_Source\PSoC4/Slider_SMS.c **** 		};
+  49:.\Generated_Source\PSoC4/Slider_SMS.c **** 
+  50:.\Generated_Source\PSoC4/Slider_SMS.c **** 	#elif (CYDEV_BCLK__HFCLK__MHZ >= 6u)
+  51:.\Generated_Source\PSoC4/Slider_SMS.c **** 		const uint8 prescalerTable[Slider_PRESCALERS_TBL_SIZE] = {
+  52:.\Generated_Source\PSoC4/Slider_SMS.c **** 			1u,     1u,     1u,    1u,    1u,    1u,    1u,    2u,    2u,    2u,    2u,    2u,    2u,    2u,
+  53:.\Generated_Source\PSoC4/Slider_SMS.c **** 		};
+  54:.\Generated_Source\PSoC4/Slider_SMS.c **** 	#else
+  55:.\Generated_Source\PSoC4/Slider_SMS.c **** 		const uint8 prescalerTable[Slider_PRESCALERS_TBL_SIZE] = {
+  56:.\Generated_Source\PSoC4/Slider_SMS.c **** 			1u,     1u,     1u,    1u,    1u,    1u,    1u,    1u,    1u,    1u,    1u,    1u,    1u,    1u,
+  57:.\Generated_Source\PSoC4/Slider_SMS.c **** 		};
+  58:.\Generated_Source\PSoC4/Slider_SMS.c **** 	#endif /* (CYDEV_BCLK__HFCLK__MHZ > 12u) */
+  59:.\Generated_Source\PSoC4/Slider_SMS.c **** 
+  60:.\Generated_Source\PSoC4/Slider_SMS.c **** #else
+  61:.\Generated_Source\PSoC4/Slider_SMS.c ****     /*  Dividers are chained (PSoC 4100, PSoC 4200) */ 
+  62:.\Generated_Source\PSoC4/Slider_SMS.c **** 	#if (CYDEV_BCLK__HFCLK__MHZ > 24u)
+  63:.\Generated_Source\PSoC4/Slider_SMS.c **** 		const uint8 prescalerTable[Slider_PRESCALERS_TBL_SIZE] = {
+  64:.\Generated_Source\PSoC4/Slider_SMS.c **** 			2u,     2u,     2u,    4u,    4u,    4u,    4u,    8u,    8u,    8u,    8u,    8u,    8u,    8u,
+  65:.\Generated_Source\PSoC4/Slider_SMS.c **** 		};
+  66:.\Generated_Source\PSoC4/Slider_SMS.c **** 
+  67:.\Generated_Source\PSoC4/Slider_SMS.c **** 	#elif (CYDEV_BCLK__HFCLK__MHZ >12u)
+  68:.\Generated_Source\PSoC4/Slider_SMS.c **** 		const uint8 prescalerTable[Slider_PRESCALERS_TBL_SIZE] = {
+  69:.\Generated_Source\PSoC4/Slider_SMS.c **** 			1u,     1u,     1u,    2u,    2u,    2u,    2u,    4u,    4u,    4u,    4u,    4u,    4u,    4u,
+  70:.\Generated_Source\PSoC4/Slider_SMS.c **** 		};
+  71:.\Generated_Source\PSoC4/Slider_SMS.c **** 	#else   /* (CYDEV_BCLK__HFCLK__MHZ > 12u) */
+  72:.\Generated_Source\PSoC4/Slider_SMS.c **** 		const uint8 prescalerTable[Slider_PRESCALERS_TBL_SIZE] = {
+  73:.\Generated_Source\PSoC4/Slider_SMS.c **** 			1u,     1u,     1u,    1u,    1u,    1u,    1u,    2u,    2u,    2u,    2u,    2u,    2u,    2u,
+  74:.\Generated_Source\PSoC4/Slider_SMS.c **** 		};
+  75:.\Generated_Source\PSoC4/Slider_SMS.c **** 	#endif /* (CYDEV_BCLK__HFCLK__MHZ > 24u) */
+  76:.\Generated_Source\PSoC4/Slider_SMS.c **** #endif /* (CY_PSOC4_4100BL || CY_PSOC4_4200BL || CY_PSOC4_4100M || CY_PSOC4_4200M) */
+  77:.\Generated_Source\PSoC4/Slider_SMS.c **** 
+  78:.\Generated_Source\PSoC4/Slider_SMS.c **** 
+  79:.\Generated_Source\PSoC4/Slider_SMS.c **** uint8 noiseEnvelopeTbl[Slider_TOTAL_SENSOR_COUNT];
+  80:.\Generated_Source\PSoC4/Slider_SMS.c **** uint8 runningDifferenceTbl[Slider_TOTAL_SENSOR_COUNT];
+  81:.\Generated_Source\PSoC4/Slider_SMS.c **** uint8 signRegisterTbl[Slider_TOTAL_SENSOR_COUNT];
+  82:.\Generated_Source\PSoC4/Slider_SMS.c **** uint16 sampleMinTbl[Slider_TOTAL_SENSOR_COUNT];
+  83:.\Generated_Source\PSoC4/Slider_SMS.c **** uint16 sampleMaxTbl[Slider_TOTAL_SENSOR_COUNT];
+  84:.\Generated_Source\PSoC4/Slider_SMS.c **** uint16 previousSampleTbl[Slider_TOTAL_SENSOR_COUNT];
+  85:.\Generated_Source\PSoC4/Slider_SMS.c **** uint8 kValueTbl[Slider_TOTAL_SENSOR_COUNT];
+  86:.\Generated_Source\PSoC4/Slider_SMS.c **** 
+  87:.\Generated_Source\PSoC4/Slider_SMS.c **** uint8 SMS_LIB_SensorSensitivity[] = {
+  88:.\Generated_Source\PSoC4/Slider_SMS.c ****     2u, 2u, 2u, 2u, 2u, 
+  89:.\Generated_Source\PSoC4/Slider_SMS.c **** };
+ARM GAS  C:\Users\ELECTR~1\AppData\Local\Temp\cc8evJ81.s 			page 3
+
+
+  90:.\Generated_Source\PSoC4/Slider_SMS.c **** 
+  91:.\Generated_Source\PSoC4/Slider_SMS.c **** Slider_CONFIG_TYPE_P4_v2_20 Slider_config;
+  92:.\Generated_Source\PSoC4/Slider_SMS.c **** Slider_CONFIG_TYPE_POINTERS_P4_v2_20 const Slider_configPointers = {
+  93:.\Generated_Source\PSoC4/Slider_SMS.c ****     Slider_modulationIDAC,
+  94:.\Generated_Source\PSoC4/Slider_SMS.c ****     Slider_compensationIDAC,
+  95:.\Generated_Source\PSoC4/Slider_SMS.c ****      SMS_LIB_SensorSensitivity,
+  96:.\Generated_Source\PSoC4/Slider_SMS.c ****     Slider_senseClkDividerVal,
+  97:.\Generated_Source\PSoC4/Slider_SMS.c ****     Slider_sampleClkDividerVal,
+  98:.\Generated_Source\PSoC4/Slider_SMS.c ****     Slider_widgetNumber,
+  99:.\Generated_Source\PSoC4/Slider_SMS.c ****     Slider_widgetResolution,
+ 100:.\Generated_Source\PSoC4/Slider_SMS.c **** 	(const uint8  *)Slider_rawDataIndex,
+ 101:.\Generated_Source\PSoC4/Slider_SMS.c **** 	(const uint8  *)Slider_numberOfSensors,
+ 102:.\Generated_Source\PSoC4/Slider_SMS.c ****     &Slider_GetSensorRaw,
+ 103:.\Generated_Source\PSoC4/Slider_SMS.c ****     &Slider_PreScan,
+ 104:.\Generated_Source\PSoC4/Slider_SMS.c ****     &Slider_ReadSensorRaw,
+ 105:.\Generated_Source\PSoC4/Slider_SMS.c ****     &Slider_GetBitValue,
+ 106:.\Generated_Source\PSoC4/Slider_SMS.c **** 	&Slider_SetBitValue
+ 107:.\Generated_Source\PSoC4/Slider_SMS.c **** };
+ 108:.\Generated_Source\PSoC4/Slider_SMS.c **** 
+ 109:.\Generated_Source\PSoC4/Slider_SMS.c **** 
+ 110:.\Generated_Source\PSoC4/Slider_SMS.c **** /*******************************************************************************
+ 111:.\Generated_Source\PSoC4/Slider_SMS.c **** * Function Name: Slider_AutoTune
+ 112:.\Generated_Source\PSoC4/Slider_SMS.c **** ********************************************************************************
+ 113:.\Generated_Source\PSoC4/Slider_SMS.c **** *
+ 114:.\Generated_Source\PSoC4/Slider_SMS.c **** * Summary:
+ 115:.\Generated_Source\PSoC4/Slider_SMS.c **** *  Provides the tuning procedure for all sensors.
+ 116:.\Generated_Source\PSoC4/Slider_SMS.c **** *
+ 117:.\Generated_Source\PSoC4/Slider_SMS.c **** * Parameters:
+ 118:.\Generated_Source\PSoC4/Slider_SMS.c **** *  None
+ 119:.\Generated_Source\PSoC4/Slider_SMS.c **** *
+ 120:.\Generated_Source\PSoC4/Slider_SMS.c **** * Return:
+ 121:.\Generated_Source\PSoC4/Slider_SMS.c **** *  None
+ 122:.\Generated_Source\PSoC4/Slider_SMS.c **** *
+ 123:.\Generated_Source\PSoC4/Slider_SMS.c **** * Global Variables:
+ 124:.\Generated_Source\PSoC4/Slider_SMS.c **** *   Slider_config: the structure which contains configuration parameters
+ 125:.\Generated_Source\PSoC4/Slider_SMS.c **** *   Slider_senseClkDividerVal[]: used to store the Analog Switch 
+ 126:.\Generated_Source\PSoC4/Slider_SMS.c **** *   dividers for each sensor.
+ 127:.\Generated_Source\PSoC4/Slider_SMS.c **** *   Slider_senseClkDividerVal[]: used to store the 
+ 128:.\Generated_Source\PSoC4/Slider_SMS.c **** *    Analog Switch divider for all sensors.
+ 129:.\Generated_Source\PSoC4/Slider_SMS.c **** *   Slider_prescalersTuningDone - used to notify the Tuner GUI that 
+ 130:.\Generated_Source\PSoC4/Slider_SMS.c **** *   the pre-scalers tuning  is done.
+ 131:.\Generated_Source\PSoC4/Slider_SMS.c **** *
+ 132:.\Generated_Source\PSoC4/Slider_SMS.c **** * Side Effects:
+ 133:.\Generated_Source\PSoC4/Slider_SMS.c **** *  None
+ 134:.\Generated_Source\PSoC4/Slider_SMS.c **** *
+ 135:.\Generated_Source\PSoC4/Slider_SMS.c **** *******************************************************************************/
+ 136:.\Generated_Source\PSoC4/Slider_SMS.c **** void Slider_AutoTune(void)
+ 137:.\Generated_Source\PSoC4/Slider_SMS.c **** {
+ 138:.\Generated_Source\PSoC4/Slider_SMS.c **** 	uint32 curSensor;
+ 139:.\Generated_Source\PSoC4/Slider_SMS.c ****     uint32 widget;
+ 140:.\Generated_Source\PSoC4/Slider_SMS.c **** 
+ 141:.\Generated_Source\PSoC4/Slider_SMS.c **** 	Slider_config.totalScanslotsNum = Slider_TOTAL_SCANSLOT_COUNT;
+ 142:.\Generated_Source\PSoC4/Slider_SMS.c **** 	Slider_config.totalWidgetsNum = Slider_END_OF_WIDGETS_INDEX;
+ 143:.\Generated_Source\PSoC4/Slider_SMS.c **** 	Slider_config.totalSensorsNum = Slider_TOTAL_SENSOR_COUNT;
+ 144:.\Generated_Source\PSoC4/Slider_SMS.c **** 	
+ 145:.\Generated_Source\PSoC4/Slider_SMS.c **** 	Slider_config.hfclkFreq_MHz = CYDEV_BCLK__HFCLK__MHZ;
+ 146:.\Generated_Source\PSoC4/Slider_SMS.c **** 	Slider_config.sensetivitySeed = Slider_SENSETIVITY_FACTOR;
+ARM GAS  C:\Users\ELECTR~1\AppData\Local\Temp\cc8evJ81.s 			page 4
+
+
+ 147:.\Generated_Source\PSoC4/Slider_SMS.c **** 	
+ 148:.\Generated_Source\PSoC4/Slider_SMS.c ****     Slider_config.pointers = &Slider_configPointers;       
+ 149:.\Generated_Source\PSoC4/Slider_SMS.c ****     
+ 150:.\Generated_Source\PSoC4/Slider_SMS.c **** 	Slider_SetAnalogSwitchesSrcDirect();
+ 151:.\Generated_Source\PSoC4/Slider_SMS.c ****     
+ 152:.\Generated_Source\PSoC4/Slider_SMS.c ****     for(widget = 0u; widget < Slider_config.totalWidgetsNum; widget++)
+ 153:.\Generated_Source\PSoC4/Slider_SMS.c ****     {
+ 154:.\Generated_Source\PSoC4/Slider_SMS.c ****         Slider_widgetResolution[widget] = Slider_CALIBRATION_RESOLUTION;
+ 155:.\Generated_Source\PSoC4/Slider_SMS.c ****     }
+ 156:.\Generated_Source\PSoC4/Slider_SMS.c **** 	
+ 157:.\Generated_Source\PSoC4/Slider_SMS.c **** 
+ 158:.\Generated_Source\PSoC4/Slider_SMS.c **** 	for(curSensor = 0u; curSensor < Slider_TOTAL_SCANSLOT_COUNT; curSensor++)
+ 159:.\Generated_Source\PSoC4/Slider_SMS.c ****     {
+ 160:.\Generated_Source\PSoC4/Slider_SMS.c **** 		Slider_senseClkDividerVal[curSensor] = Slider_CALIBRATION_ASD;
+ 161:.\Generated_Source\PSoC4/Slider_SMS.c **** 		Slider_sampleClkDividerVal[curSensor] = Slider_CALIBRATION_MD;
+ 162:.\Generated_Source\PSoC4/Slider_SMS.c **** 	}
+ 163:.\Generated_Source\PSoC4/Slider_SMS.c ****     
+ 164:.\Generated_Source\PSoC4/Slider_SMS.c ****     Slider_DisableBaselineIDAC();
+ 165:.\Generated_Source\PSoC4/Slider_SMS.c **** 
+ 166:.\Generated_Source\PSoC4/Slider_SMS.c ****     CalibrateSensors_P4_v2_20(&Slider_config, Slider_CAL_RAW_COUNT);
+ 167:.\Generated_Source\PSoC4/Slider_SMS.c **** 
+ 168:.\Generated_Source\PSoC4/Slider_SMS.c **** 	#if(0u != Slider_TOTAL_CENTROIDS_COUNT) 
+ 169:.\Generated_Source\PSoC4/Slider_SMS.c **** 		Slider_NormalizeWidgets(Slider_END_OF_WIDGETS_INDEX, Slider_modulationIDAC);
+ 170:.\Generated_Source\PSoC4/Slider_SMS.c **** 	#endif /* (0u != Slider_TOTAL_CENTROIDS_COUNT)  */
+ 171:.\Generated_Source\PSoC4/Slider_SMS.c **** 	
+ 172:.\Generated_Source\PSoC4/Slider_SMS.c ****     TunePrescalers_P4_v2_20(&Slider_config);
+ 173:.\Generated_Source\PSoC4/Slider_SMS.c **** 	
+ 174:.\Generated_Source\PSoC4/Slider_SMS.c **** 	#if(Slider_PRS_OPTIONS != Slider__PRS_NONE)
+ 175:.\Generated_Source\PSoC4/Slider_SMS.c **** 		Slider_prescalersTuningDone = 1u;
+ 176:.\Generated_Source\PSoC4/Slider_SMS.c **** 	#endif /* (Slider_PRS_OPTIONS == Slider__PRS_NONE) */
+ 177:.\Generated_Source\PSoC4/Slider_SMS.c ****        
+ 178:.\Generated_Source\PSoC4/Slider_SMS.c ****     CalibrateSensors_P4_v2_20(&Slider_config, Slider_CAL_RAW_COUNT);
+ 179:.\Generated_Source\PSoC4/Slider_SMS.c **** 	#if(0u != Slider_TOTAL_CENTROIDS_COUNT)
+ 180:.\Generated_Source\PSoC4/Slider_SMS.c **** 		Slider_NormalizeWidgets(Slider_END_OF_WIDGETS_INDEX, Slider_modulationIDAC);
+ 181:.\Generated_Source\PSoC4/Slider_SMS.c **** 	#endif /* (0u != Slider_TOTAL_CENTROIDS_COUNT)  */
+ 182:.\Generated_Source\PSoC4/Slider_SMS.c ****     TuneSensitivity_P4_v2_20(&Slider_config);
+ 183:.\Generated_Source\PSoC4/Slider_SMS.c **** 	
+ 184:.\Generated_Source\PSoC4/Slider_SMS.c **** 	Slider_EnableBaselineIDAC(&Slider_config);
+ 185:.\Generated_Source\PSoC4/Slider_SMS.c ****     
+ 186:.\Generated_Source\PSoC4/Slider_SMS.c ****     for(curSensor = 0u; curSensor < Slider_TOTAL_SCANSLOT_COUNT; curSensor++)
+ 187:.\Generated_Source\PSoC4/Slider_SMS.c ****     {
+ 188:.\Generated_Source\PSoC4/Slider_SMS.c ****         Slider_UpdateThresholds(curSensor);
+ 189:.\Generated_Source\PSoC4/Slider_SMS.c ****     }
+ 190:.\Generated_Source\PSoC4/Slider_SMS.c **** }
+ 191:.\Generated_Source\PSoC4/Slider_SMS.c **** 
+ 192:.\Generated_Source\PSoC4/Slider_SMS.c **** 
+ 193:.\Generated_Source\PSoC4/Slider_SMS.c **** /*******************************************************************************
+ 194:.\Generated_Source\PSoC4/Slider_SMS.c **** * Function Name: Slider_UpdateThresholds
+ 195:.\Generated_Source\PSoC4/Slider_SMS.c **** ********************************************************************************
+ 196:.\Generated_Source\PSoC4/Slider_SMS.c **** *
+ 197:.\Generated_Source\PSoC4/Slider_SMS.c **** * Summary:
+ 198:.\Generated_Source\PSoC4/Slider_SMS.c **** *  The API updates the Finger Threshold, Hysteresis, Noise Threshold, and 
+ 199:.\Generated_Source\PSoC4/Slider_SMS.c **** *  Negative Noise Threshold in the AutoTuning (Smartsense) Mode.
+ 200:.\Generated_Source\PSoC4/Slider_SMS.c **** *
+ 201:.\Generated_Source\PSoC4/Slider_SMS.c **** * Parameters:
+ 202:.\Generated_Source\PSoC4/Slider_SMS.c **** *  sensor: sensor number.
+ 203:.\Generated_Source\PSoC4/Slider_SMS.c **** *
+ARM GAS  C:\Users\ELECTR~1\AppData\Local\Temp\cc8evJ81.s 			page 5
+
+
+ 204:.\Generated_Source\PSoC4/Slider_SMS.c **** * Return:
+ 205:.\Generated_Source\PSoC4/Slider_SMS.c **** *  None
+ 206:.\Generated_Source\PSoC4/Slider_SMS.c **** *
+ 207:.\Generated_Source\PSoC4/Slider_SMS.c **** * Global Variables:
+ 208:.\Generated_Source\PSoC4/Slider_SMS.c **** *  Slider_widgetNumber[] - contains widget Number for given sensor.
+ 209:.\Generated_Source\PSoC4/Slider_SMS.c **** *  0 through 7 (sensor 0 is bit 0, sensor 1 is bit 1).
+ 210:.\Generated_Source\PSoC4/Slider_SMS.c **** *  For other sensors the array element equals to 255. 
+ 211:.\Generated_Source\PSoC4/Slider_SMS.c **** *  Slider_numberOfSensors[widget] - Number of sensors in the widget.
+ 212:.\Generated_Source\PSoC4/Slider_SMS.c **** *   Slider_fingerThreshold[] - contains the level of signal for each sensor
+ 213:.\Generated_Source\PSoC4/Slider_SMS.c **** *   that determines if a finger present on the sensor.
+ 214:.\Generated_Source\PSoC4/Slider_SMS.c **** *   Slider_negativeNoiseThreshold[] - negative Noise Threshold
+ 215:.\Generated_Source\PSoC4/Slider_SMS.c **** *   Slider_hysteresis[] - the array with hysteresis values.
+ 216:.\Generated_Source\PSoC4/Slider_SMS.c **** *
+ 217:.\Generated_Source\PSoC4/Slider_SMS.c **** * Side Effects:
+ 218:.\Generated_Source\PSoC4/Slider_SMS.c **** *  None
+ 219:.\Generated_Source\PSoC4/Slider_SMS.c **** *
+ 220:.\Generated_Source\PSoC4/Slider_SMS.c **** *******************************************************************************/
+ 221:.\Generated_Source\PSoC4/Slider_SMS.c **** void Slider_UpdateThresholds(uint32 sensor)
+ 222:.\Generated_Source\PSoC4/Slider_SMS.c **** {
+  26              		.loc 1 222 0
+  27              		.cfi_startproc
+  28              	.LVL0:
+  29 0000 70B5     		push	{r4, r5, r6, lr}
+  30              		.cfi_def_cfa_offset 16
+  31              		.cfi_offset 4, -16
+  32              		.cfi_offset 5, -12
+  33              		.cfi_offset 6, -8
+  34              		.cfi_offset 14, -4
+  35 0002 82B0     		sub	sp, sp, #8
+  36              		.cfi_def_cfa_offset 24
+ 223:.\Generated_Source\PSoC4/Slider_SMS.c **** 	uint8 fingerThreshold;
+ 224:.\Generated_Source\PSoC4/Slider_SMS.c **** 	uint32 widget;
+ 225:.\Generated_Source\PSoC4/Slider_SMS.c **** 	
+ 226:.\Generated_Source\PSoC4/Slider_SMS.c **** 	widget = Slider_widgetNumber[sensor];
+  37              		.loc 1 226 0
+  38 0004 164B     		ldr	r3, .L7
+  39 0006 1C5C     		ldrb	r4, [r3, r0]
+  40              	.LVL1:
+ 227:.\Generated_Source\PSoC4/Slider_SMS.c **** 
+ 228:.\Generated_Source\PSoC4/Slider_SMS.c **** 	#if(0u != Slider_FLEXIBLE_THRESHOLDS_EN)
+ 229:.\Generated_Source\PSoC4/Slider_SMS.c **** 	    fingerThreshold = Slider_fingerThreshold[widget];
+ 230:.\Generated_Source\PSoC4/Slider_SMS.c ****         /* Update Threshold manually (flexible) */   
+ 231:.\Generated_Source\PSoC4/Slider_SMS.c **** 		Slider_noiseThreshold[widget] = (uint8)(fingerThreshold >> 1u);
+ 232:.\Generated_Source\PSoC4/Slider_SMS.c **** 		Slider_negativeNoiseThreshold[widget] = (uint8)(fingerThreshold >> 1u);
+ 233:.\Generated_Source\PSoC4/Slider_SMS.c **** 		Slider_hysteresis[widget] = (uint8)(fingerThreshold >> 3u);
+ 234:.\Generated_Source\PSoC4/Slider_SMS.c **** 	#else
+ 235:.\Generated_Source\PSoC4/Slider_SMS.c **** 		/* Calculate Finger Threshold and Noise Threshold with Smartsense (automatic) */ 	
+ 236:.\Generated_Source\PSoC4/Slider_SMS.c **** 		CalculateThresholds_P4_v2_20(&Slider_config, (uint8)sensor, Slider_sensorRaw, (uint8)widget, Slid
+  41              		.loc 1 236 0
+  42 0008 C1B2     		uxtb	r1, r0
+  43 000a 164E     		ldr	r6, .L7+4
+  44 000c 0096     		str	r6, [sp]
+  45 000e 164D     		ldr	r5, .L7+8
+  46 0010 0195     		str	r5, [sp, #4]
+  47 0012 1648     		ldr	r0, .L7+12
+  48              	.LVL2:
+  49 0014 164A     		ldr	r2, .L7+16
+ARM GAS  C:\Users\ELECTR~1\AppData\Local\Temp\cc8evJ81.s 			page 6
+
+
+  50 0016 231C     		mov	r3, r4
+  51 0018 FFF7FEFF 		bl	CalculateThresholds_P4_v2_20
+  52              	.LVL3:
+ 237:.\Generated_Source\PSoC4/Slider_SMS.c **** 		
+ 238:.\Generated_Source\PSoC4/Slider_SMS.c **** 	    fingerThreshold = Slider_fingerThreshold[widget];
+  53              		.loc 1 238 0
+  54 001c 335D     		ldrb	r3, [r6, r4]
+  55              	.LVL4:
+ 239:.\Generated_Source\PSoC4/Slider_SMS.c **** 		
+ 240:.\Generated_Source\PSoC4/Slider_SMS.c **** 	    /* Update Threshold based on calculated with Smartsense (automatic) */
+ 241:.\Generated_Source\PSoC4/Slider_SMS.c **** 		Slider_negativeNoiseThreshold[widget] = Slider_noiseThreshold[widget];
+  56              		.loc 1 241 0
+  57 001e 295D     		ldrb	r1, [r5, r4]
+  58 0020 144A     		ldr	r2, .L7+20
+  59 0022 1155     		strb	r1, [r2, r4]
+ 242:.\Generated_Source\PSoC4/Slider_SMS.c ****         
+ 243:.\Generated_Source\PSoC4/Slider_SMS.c **** 		if(fingerThreshold < Slider_THRESHOLD_1)
+  60              		.loc 1 243 0
+  61 0024 DB2B     		cmp	r3, #219
+  62 0026 03D8     		bhi	.L2
+ 244:.\Generated_Source\PSoC4/Slider_SMS.c **** 		{
+ 245:.\Generated_Source\PSoC4/Slider_SMS.c **** 			Slider_hysteresis[widget] = (uint8)(fingerThreshold >> 3u);
+  63              		.loc 1 245 0
+  64 0028 DB08     		lsr	r3, r3, #3
+  65              	.LVL5:
+  66 002a 134A     		ldr	r2, .L7+24
+  67 002c 1355     		strb	r3, [r2, r4]
+  68 002e 14E0     		b	.L1
+  69              	.LVL6:
+  70              	.L2:
+ 246:.\Generated_Source\PSoC4/Slider_SMS.c **** 		}
+ 247:.\Generated_Source\PSoC4/Slider_SMS.c **** 		else if(fingerThreshold <  Slider_THRESHOLD_2)
+  71              		.loc 1 247 0
+  72 0030 EC2B     		cmp	r3, #236
+  73 0032 03D8     		bhi	.L4
+ 248:.\Generated_Source\PSoC4/Slider_SMS.c **** 		{
+ 249:.\Generated_Source\PSoC4/Slider_SMS.c **** 			Slider_hysteresis[widget] = (uint8)(fingerThreshold >> 4u);
+  74              		.loc 1 249 0
+  75 0034 1B09     		lsr	r3, r3, #4
+  76              	.LVL7:
+  77 0036 104A     		ldr	r2, .L7+24
+  78 0038 1355     		strb	r3, [r2, r4]
+  79 003a 0EE0     		b	.L1
+  80              	.LVL8:
+  81              	.L4:
+ 250:.\Generated_Source\PSoC4/Slider_SMS.c **** 		}
+ 251:.\Generated_Source\PSoC4/Slider_SMS.c **** 		else if(fingerThreshold <  Slider_THRESHOLD_3)
+  82              		.loc 1 251 0
+  83 003c F42B     		cmp	r3, #244
+  84 003e 03D8     		bhi	.L5
+ 252:.\Generated_Source\PSoC4/Slider_SMS.c **** 		{
+ 253:.\Generated_Source\PSoC4/Slider_SMS.c **** 			Slider_hysteresis[widget] = (uint8)(fingerThreshold >> 5u);
+  85              		.loc 1 253 0
+  86 0040 5B09     		lsr	r3, r3, #5
+  87              	.LVL9:
+  88 0042 0D4A     		ldr	r2, .L7+24
+  89 0044 1355     		strb	r3, [r2, r4]
+ARM GAS  C:\Users\ELECTR~1\AppData\Local\Temp\cc8evJ81.s 			page 7
+
+
+  90 0046 08E0     		b	.L1
+  91              	.LVL10:
+  92              	.L5:
+ 254:.\Generated_Source\PSoC4/Slider_SMS.c **** 		}
+ 255:.\Generated_Source\PSoC4/Slider_SMS.c **** 		else if(fingerThreshold <  Slider_THRESHOLD_4)
+  93              		.loc 1 255 0
+  94 0048 F92B     		cmp	r3, #249
+  95 004a 03D8     		bhi	.L6
+ 256:.\Generated_Source\PSoC4/Slider_SMS.c **** 		{
+ 257:.\Generated_Source\PSoC4/Slider_SMS.c **** 			Slider_hysteresis[widget] = (uint8)(fingerThreshold >> 6u);
+  96              		.loc 1 257 0
+  97 004c 9B09     		lsr	r3, r3, #6
+  98              	.LVL11:
+  99 004e 0A4A     		ldr	r2, .L7+24
+ 100 0050 1355     		strb	r3, [r2, r4]
+ 101 0052 02E0     		b	.L1
+ 102              	.LVL12:
+ 103              	.L6:
+ 258:.\Generated_Source\PSoC4/Slider_SMS.c **** 		}
+ 259:.\Generated_Source\PSoC4/Slider_SMS.c **** 		else
+ 260:.\Generated_Source\PSoC4/Slider_SMS.c **** 		{
+ 261:.\Generated_Source\PSoC4/Slider_SMS.c **** 			Slider_hysteresis[widget] = 0u;
+ 104              		.loc 1 261 0
+ 105 0054 0022     		mov	r2, #0
+ 106 0056 084B     		ldr	r3, .L7+24
+ 107              	.LVL13:
+ 108 0058 1A55     		strb	r2, [r3, r4]
+ 109              	.L1:
+ 262:.\Generated_Source\PSoC4/Slider_SMS.c **** 		}
+ 263:.\Generated_Source\PSoC4/Slider_SMS.c **** 	#endif /* (0u != Slider_FLEXIBLE_THRESHOLDS_EN)  */
+ 264:.\Generated_Source\PSoC4/Slider_SMS.c **** }
+ 110              		.loc 1 264 0
+ 111 005a 02B0     		add	sp, sp, #8
+ 112              		@ sp needed
+ 113              	.LVL14:
+ 114              	.LVL15:
+ 115 005c 70BD     		pop	{r4, r5, r6, pc}
+ 116              	.L8:
+ 117 005e C046     		.align	2
+ 118              	.L7:
+ 119 0060 00000000 		.word	Slider_widgetNumber
+ 120 0064 00000000 		.word	Slider_fingerThreshold
+ 121 0068 00000000 		.word	Slider_noiseThreshold
+ 122 006c 00000000 		.word	Slider_config
+ 123 0070 00000000 		.word	Slider_sensorRaw
+ 124 0074 00000000 		.word	Slider_negativeNoiseThreshold
+ 125 0078 00000000 		.word	Slider_hysteresis
+ 126              		.cfi_endproc
+ 127              	.LFE36:
+ 128              		.size	Slider_UpdateThresholds, .-Slider_UpdateThresholds
+ 129              		.section	.text.Slider_SetAnalogSwitchesSrcDirect,"ax",%progbits
+ 130              		.align	2
+ 131              		.global	Slider_SetAnalogSwitchesSrcDirect
+ 132              		.code	16
+ 133              		.thumb_func
+ 134              		.type	Slider_SetAnalogSwitchesSrcDirect, %function
+ 135              	Slider_SetAnalogSwitchesSrcDirect:
+ARM GAS  C:\Users\ELECTR~1\AppData\Local\Temp\cc8evJ81.s 			page 8
+
+
+ 136              	.LFB37:
+ 265:.\Generated_Source\PSoC4/Slider_SMS.c **** 
+ 266:.\Generated_Source\PSoC4/Slider_SMS.c **** /*******************************************************************************
+ 267:.\Generated_Source\PSoC4/Slider_SMS.c **** * Function Name: Slider_SetAnalogSwitchesSrcDirect
+ 268:.\Generated_Source\PSoC4/Slider_SMS.c **** ********************************************************************************
+ 269:.\Generated_Source\PSoC4/Slider_SMS.c **** *
+ 270:.\Generated_Source\PSoC4/Slider_SMS.c **** * Summary:
+ 271:.\Generated_Source\PSoC4/Slider_SMS.c **** *  This API switches the charge clock source to prescaler. 
+ 272:.\Generated_Source\PSoC4/Slider_SMS.c **** *
+ 273:.\Generated_Source\PSoC4/Slider_SMS.c **** * Parameters:
+ 274:.\Generated_Source\PSoC4/Slider_SMS.c **** *  None
+ 275:.\Generated_Source\PSoC4/Slider_SMS.c **** *
+ 276:.\Generated_Source\PSoC4/Slider_SMS.c **** * Return:
+ 277:.\Generated_Source\PSoC4/Slider_SMS.c **** *  None
+ 278:.\Generated_Source\PSoC4/Slider_SMS.c **** *
+ 279:.\Generated_Source\PSoC4/Slider_SMS.c **** * Global Variables:
+ 280:.\Generated_Source\PSoC4/Slider_SMS.c **** *  None
+ 281:.\Generated_Source\PSoC4/Slider_SMS.c **** *
+ 282:.\Generated_Source\PSoC4/Slider_SMS.c **** * Side Effects:
+ 283:.\Generated_Source\PSoC4/Slider_SMS.c **** *  None
+ 284:.\Generated_Source\PSoC4/Slider_SMS.c **** *
+ 285:.\Generated_Source\PSoC4/Slider_SMS.c **** *******************************************************************************/
+ 286:.\Generated_Source\PSoC4/Slider_SMS.c **** void Slider_SetAnalogSwitchesSrcDirect(void)
+ 287:.\Generated_Source\PSoC4/Slider_SMS.c **** {
+ 137              		.loc 1 287 0
+ 138              		.cfi_startproc
+ 288:.\Generated_Source\PSoC4/Slider_SMS.c **** 	Slider_CSD_CFG_REG &= ~(Slider_CSD_CFG_PRS_SELECT);
+ 139              		.loc 1 288 0
+ 140 0000 024A     		ldr	r2, .L10
+ 141 0002 1368     		ldr	r3, [r2]
+ 142 0004 4021     		mov	r1, #64
+ 143 0006 8B43     		bic	r3, r1
+ 144 0008 1360     		str	r3, [r2]
+ 289:.\Generated_Source\PSoC4/Slider_SMS.c **** }
+ 145              		.loc 1 289 0
+ 146              		@ sp needed
+ 147 000a 7047     		bx	lr
+ 148              	.L11:
+ 149              		.align	2
+ 150              	.L10:
+ 151 000c 04002840 		.word	1076363268
+ 152              		.cfi_endproc
+ 153              	.LFE37:
+ 154              		.size	Slider_SetAnalogSwitchesSrcDirect, .-Slider_SetAnalogSwitchesSrcDirect
+ 155              		.section	.text.Slider_DisableBaselineIDAC,"ax",%progbits
+ 156              		.align	2
+ 157              		.global	Slider_DisableBaselineIDAC
+ 158              		.code	16
+ 159              		.thumb_func
+ 160              		.type	Slider_DisableBaselineIDAC, %function
+ 161              	Slider_DisableBaselineIDAC:
+ 162              	.LFB38:
+ 290:.\Generated_Source\PSoC4/Slider_SMS.c **** 
+ 291:.\Generated_Source\PSoC4/Slider_SMS.c **** 
+ 292:.\Generated_Source\PSoC4/Slider_SMS.c **** /*******************************************************************************
+ 293:.\Generated_Source\PSoC4/Slider_SMS.c **** * Function Name: Slider_DisableBaselineIDAC
+ 294:.\Generated_Source\PSoC4/Slider_SMS.c **** ********************************************************************************
+ARM GAS  C:\Users\ELECTR~1\AppData\Local\Temp\cc8evJ81.s 			page 9
+
+
+ 295:.\Generated_Source\PSoC4/Slider_SMS.c **** *
+ 296:.\Generated_Source\PSoC4/Slider_SMS.c **** * Summary:
+ 297:.\Generated_Source\PSoC4/Slider_SMS.c **** *  The API disables the Compensation IDAC. 
+ 298:.\Generated_Source\PSoC4/Slider_SMS.c **** *
+ 299:.\Generated_Source\PSoC4/Slider_SMS.c **** * Parameters:
+ 300:.\Generated_Source\PSoC4/Slider_SMS.c **** *  None
+ 301:.\Generated_Source\PSoC4/Slider_SMS.c **** *
+ 302:.\Generated_Source\PSoC4/Slider_SMS.c **** * Return:
+ 303:.\Generated_Source\PSoC4/Slider_SMS.c **** *  None
+ 304:.\Generated_Source\PSoC4/Slider_SMS.c **** *
+ 305:.\Generated_Source\PSoC4/Slider_SMS.c **** * Global Variables:
+ 306:.\Generated_Source\PSoC4/Slider_SMS.c **** *  None
+ 307:.\Generated_Source\PSoC4/Slider_SMS.c **** *
+ 308:.\Generated_Source\PSoC4/Slider_SMS.c **** * Side Effects:
+ 309:.\Generated_Source\PSoC4/Slider_SMS.c **** *  None
+ 310:.\Generated_Source\PSoC4/Slider_SMS.c **** *
+ 311:.\Generated_Source\PSoC4/Slider_SMS.c **** *******************************************************************************/
+ 312:.\Generated_Source\PSoC4/Slider_SMS.c **** void Slider_DisableBaselineIDAC(void)
+ 313:.\Generated_Source\PSoC4/Slider_SMS.c **** {
+ 163              		.loc 1 313 0
+ 164              		.cfi_startproc
+ 314:.\Generated_Source\PSoC4/Slider_SMS.c **** 	uint32 newRegValue;
+ 315:.\Generated_Source\PSoC4/Slider_SMS.c ****     
+ 316:.\Generated_Source\PSoC4/Slider_SMS.c ****     newRegValue = Slider_CSD_IDAC_REG;
+ 165              		.loc 1 316 0
+ 166 0000 044A     		ldr	r2, .L13
+ 167 0002 1168     		ldr	r1, [r2]
+ 168              	.LVL16:
+ 317:.\Generated_Source\PSoC4/Slider_SMS.c ****     
+ 318:.\Generated_Source\PSoC4/Slider_SMS.c ****     newRegValue &= ~(Slider_CSD_IDAC1_MODE_MASK | Slider_CSD_IDAC2_MODE_MASK);
+ 169              		.loc 1 318 0
+ 170 0004 044B     		ldr	r3, .L13+4
+ 171 0006 0B40     		and	r3, r1
+ 172              	.LVL17:
+ 319:.\Generated_Source\PSoC4/Slider_SMS.c ****     newRegValue |= Slider_CSD_IDAC1_MODE_VARIABLE;
+ 173              		.loc 1 319 0
+ 174 0008 8021     		mov	r1, #128
+ 175 000a 8900     		lsl	r1, r1, #2
+ 176 000c 0B43     		orr	r3, r1
+ 177              	.LVL18:
+ 320:.\Generated_Source\PSoC4/Slider_SMS.c ****     
+ 321:.\Generated_Source\PSoC4/Slider_SMS.c **** 	Slider_CSD_IDAC_REG = newRegValue;
+ 178              		.loc 1 321 0
+ 179 000e 1360     		str	r3, [r2]
+ 322:.\Generated_Source\PSoC4/Slider_SMS.c **** }
+ 180              		.loc 1 322 0
+ 181              		@ sp needed
+ 182 0010 7047     		bx	lr
+ 183              	.L14:
+ 184 0012 C046     		.align	2
+ 185              	.L13:
+ 186 0014 08002840 		.word	1076363272
+ 187 0018 FFFCFFFC 		.word	-50332417
+ 188              		.cfi_endproc
+ 189              	.LFE38:
+ 190              		.size	Slider_DisableBaselineIDAC, .-Slider_DisableBaselineIDAC
+ 191              		.section	.text.Slider_EnableBaselineIDAC,"ax",%progbits
+ARM GAS  C:\Users\ELECTR~1\AppData\Local\Temp\cc8evJ81.s 			page 10
+
+
+ 192              		.align	2
+ 193              		.global	Slider_EnableBaselineIDAC
+ 194              		.code	16
+ 195              		.thumb_func
+ 196              		.type	Slider_EnableBaselineIDAC, %function
+ 197              	Slider_EnableBaselineIDAC:
+ 198              	.LFB39:
+ 323:.\Generated_Source\PSoC4/Slider_SMS.c **** 
+ 324:.\Generated_Source\PSoC4/Slider_SMS.c **** 
+ 325:.\Generated_Source\PSoC4/Slider_SMS.c **** /*******************************************************************************
+ 326:.\Generated_Source\PSoC4/Slider_SMS.c **** * Function Name: Slider_EnableBaselineIDAC
+ 327:.\Generated_Source\PSoC4/Slider_SMS.c **** ********************************************************************************
+ 328:.\Generated_Source\PSoC4/Slider_SMS.c **** *
+ 329:.\Generated_Source\PSoC4/Slider_SMS.c **** * Summary:
+ 330:.\Generated_Source\PSoC4/Slider_SMS.c **** *  The API enables the Compensation IDAC. 
+ 331:.\Generated_Source\PSoC4/Slider_SMS.c **** *
+ 332:.\Generated_Source\PSoC4/Slider_SMS.c **** * Parameters:
+ 333:.\Generated_Source\PSoC4/Slider_SMS.c **** *  None
+ 334:.\Generated_Source\PSoC4/Slider_SMS.c **** *
+ 335:.\Generated_Source\PSoC4/Slider_SMS.c **** * Return:
+ 336:.\Generated_Source\PSoC4/Slider_SMS.c **** *  None
+ 337:.\Generated_Source\PSoC4/Slider_SMS.c **** *
+ 338:.\Generated_Source\PSoC4/Slider_SMS.c **** * Global Variables:
+ 339:.\Generated_Source\PSoC4/Slider_SMS.c **** *  Slider_compensationIDAC[] - used to store a 7-bit idac value for all the sensors.
+ 340:.\Generated_Source\PSoC4/Slider_SMS.c **** *
+ 341:.\Generated_Source\PSoC4/Slider_SMS.c **** * Side Effects:
+ 342:.\Generated_Source\PSoC4/Slider_SMS.c **** *  None
+ 343:.\Generated_Source\PSoC4/Slider_SMS.c **** *
+ 344:.\Generated_Source\PSoC4/Slider_SMS.c **** *******************************************************************************/
+ 345:.\Generated_Source\PSoC4/Slider_SMS.c **** void  Slider_EnableBaselineIDAC(const Slider_CONFIG_TYPE_P4_v2_20 *config)
+ 346:.\Generated_Source\PSoC4/Slider_SMS.c **** {
+ 199              		.loc 1 346 0
+ 200              		.cfi_startproc
+ 201              	.LVL19:
+ 202 0000 38B5     		push	{r3, r4, r5, lr}
+ 203              		.cfi_def_cfa_offset 16
+ 204              		.cfi_offset 3, -16
+ 205              		.cfi_offset 4, -12
+ 206              		.cfi_offset 5, -8
+ 207              		.cfi_offset 14, -4
+ 208              	.LVL20:
+ 347:.\Generated_Source\PSoC4/Slider_SMS.c ****     uint32 curSensor;
+ 348:.\Generated_Source\PSoC4/Slider_SMS.c ****     uint32 newRegValue;
+ 349:.\Generated_Source\PSoC4/Slider_SMS.c **** 
+ 350:.\Generated_Source\PSoC4/Slider_SMS.c ****     for(curSensor = 0u; curSensor < config->totalScanslotsNum; curSensor++)
+ 209              		.loc 1 350 0
+ 210 0002 0022     		mov	r2, #0
+ 211 0004 08E0     		b	.L16
+ 212              	.LVL21:
+ 213              	.L17:
+ 351:.\Generated_Source\PSoC4/Slider_SMS.c ****     {
+ 352:.\Generated_Source\PSoC4/Slider_SMS.c **** 		Slider_compensationIDAC[curSensor] = Slider_modulationIDAC[curSensor] / 2u;
+ 214              		.loc 1 352 0 discriminator 3
+ 215 0006 0D49     		ldr	r1, .L18
+ 216 0008 8B5C     		ldrb	r3, [r1, r2]
+ 217 000a 5D08     		lsr	r5, r3, #1
+ 218 000c 0C4C     		ldr	r4, .L18+4
+ARM GAS  C:\Users\ELECTR~1\AppData\Local\Temp\cc8evJ81.s 			page 11
+
+
+ 219 000e A554     		strb	r5, [r4, r2]
+ 353:.\Generated_Source\PSoC4/Slider_SMS.c **** 	    Slider_modulationIDAC[curSensor] = (Slider_modulationIDAC[curSensor] + 1u) / 2u;
+ 220              		.loc 1 353 0 discriminator 3
+ 221 0010 0133     		add	r3, r3, #1
+ 222 0012 5B08     		lsr	r3, r3, #1
+ 223 0014 8B54     		strb	r3, [r1, r2]
+ 350:.\Generated_Source\PSoC4/Slider_SMS.c ****     {
+ 224              		.loc 1 350 0 discriminator 3
+ 225 0016 0132     		add	r2, r2, #1
+ 226              	.LVL22:
+ 227              	.L16:
+ 350:.\Generated_Source\PSoC4/Slider_SMS.c ****     {
+ 228              		.loc 1 350 0 is_stmt 0 discriminator 1
+ 229 0018 0378     		ldrb	r3, [r0]
+ 230 001a 9342     		cmp	r3, r2
+ 231 001c F3D8     		bhi	.L17
+ 354:.\Generated_Source\PSoC4/Slider_SMS.c ****     }
+ 355:.\Generated_Source\PSoC4/Slider_SMS.c **** 	
+ 356:.\Generated_Source\PSoC4/Slider_SMS.c **** 	CyIntDisable(Slider_ISR_NUMBER);
+ 232              		.loc 1 356 0 is_stmt 1
+ 233 001e 1020     		mov	r0, #16
+ 234              	.LVL23:
+ 235 0020 FFF7FEFF 		bl	CyIntDisable
+ 236              	.LVL24:
+ 357:.\Generated_Source\PSoC4/Slider_SMS.c **** 	
+ 358:.\Generated_Source\PSoC4/Slider_SMS.c **** 	newRegValue = Slider_CSD_IDAC_REG;
+ 237              		.loc 1 358 0
+ 238 0024 074A     		ldr	r2, .L18+8
+ 239 0026 1168     		ldr	r1, [r2]
+ 240              	.LVL25:
+ 359:.\Generated_Source\PSoC4/Slider_SMS.c ****     newRegValue &= ~(Slider_CSD_IDAC1_MODE_MASK | Slider_CSD_IDAC2_MODE_MASK);
+ 241              		.loc 1 359 0
+ 242 0028 074B     		ldr	r3, .L18+12
+ 243 002a 0B40     		and	r3, r1
+ 244              	.LVL26:
+ 360:.\Generated_Source\PSoC4/Slider_SMS.c ****     newRegValue |= (Slider_CSD_IDAC1_MODE_VARIABLE | Slider_CSD_IDAC2_MODE_FIXED);
+ 245              		.loc 1 360 0
+ 246 002c 0749     		ldr	r1, .L18+16
+ 247 002e 0B43     		orr	r3, r1
+ 248              	.LVL27:
+ 361:.\Generated_Source\PSoC4/Slider_SMS.c ****     Slider_CSD_IDAC_REG = newRegValue;
+ 249              		.loc 1 361 0
+ 250 0030 1360     		str	r3, [r2]
+ 362:.\Generated_Source\PSoC4/Slider_SMS.c **** 	
+ 363:.\Generated_Source\PSoC4/Slider_SMS.c **** 	CyIntEnable(Slider_ISR_NUMBER);
+ 251              		.loc 1 363 0
+ 252 0032 1020     		mov	r0, #16
+ 253 0034 FFF7FEFF 		bl	CyIntEnable
+ 254              	.LVL28:
+ 364:.\Generated_Source\PSoC4/Slider_SMS.c **** }
+ 255              		.loc 1 364 0
+ 256              		@ sp needed
+ 257 0038 38BD     		pop	{r3, r4, r5, pc}
+ 258              	.L19:
+ 259 003a C046     		.align	2
+ 260              	.L18:
+ 261 003c 00000000 		.word	Slider_modulationIDAC
+ARM GAS  C:\Users\ELECTR~1\AppData\Local\Temp\cc8evJ81.s 			page 12
+
+
+ 262 0040 00000000 		.word	Slider_compensationIDAC
+ 263 0044 08002840 		.word	1076363272
+ 264 0048 FFFCFFFC 		.word	-50332417
+ 265 004c 00020001 		.word	16777728
+ 266              		.cfi_endproc
+ 267              	.LFE39:
+ 268              		.size	Slider_EnableBaselineIDAC, .-Slider_EnableBaselineIDAC
+ 269              		.section	.text.Slider_AutoTune,"ax",%progbits
+ 270              		.align	2
+ 271              		.global	Slider_AutoTune
+ 272              		.code	16
+ 273              		.thumb_func
+ 274              		.type	Slider_AutoTune, %function
+ 275              	Slider_AutoTune:
+ 276              	.LFB35:
+ 137:.\Generated_Source\PSoC4/Slider_SMS.c **** 	uint32 curSensor;
+ 277              		.loc 1 137 0
+ 278              		.cfi_startproc
+ 279 0000 70B5     		push	{r4, r5, r6, lr}
+ 280              		.cfi_def_cfa_offset 16
+ 281              		.cfi_offset 4, -16
+ 282              		.cfi_offset 5, -12
+ 283              		.cfi_offset 6, -8
+ 284              		.cfi_offset 14, -4
+ 141:.\Generated_Source\PSoC4/Slider_SMS.c **** 	Slider_config.totalWidgetsNum = Slider_END_OF_WIDGETS_INDEX;
+ 285              		.loc 1 141 0
+ 286 0002 254B     		ldr	r3, .L27
+ 287 0004 0522     		mov	r2, #5
+ 288 0006 1A70     		strb	r2, [r3]
+ 142:.\Generated_Source\PSoC4/Slider_SMS.c **** 	Slider_config.totalSensorsNum = Slider_TOTAL_SENSOR_COUNT;
+ 289              		.loc 1 142 0
+ 290 0008 0121     		mov	r1, #1
+ 291 000a 5970     		strb	r1, [r3, #1]
+ 143:.\Generated_Source\PSoC4/Slider_SMS.c **** 	
+ 292              		.loc 1 143 0
+ 293 000c 9A70     		strb	r2, [r3, #2]
+ 145:.\Generated_Source\PSoC4/Slider_SMS.c **** 	Slider_config.sensetivitySeed = Slider_SENSETIVITY_FACTOR;
+ 294              		.loc 1 145 0
+ 295 000e 2B32     		add	r2, r2, #43
+ 296 0010 DA80     		strh	r2, [r3, #6]
+ 146:.\Generated_Source\PSoC4/Slider_SMS.c **** 	
+ 297              		.loc 1 146 0
+ 298 0012 224A     		ldr	r2, .L27+4
+ 299 0014 9A80     		strh	r2, [r3, #4]
+ 148:.\Generated_Source\PSoC4/Slider_SMS.c ****     
+ 300              		.loc 1 148 0
+ 301 0016 224A     		ldr	r2, .L27+8
+ 302 0018 9A60     		str	r2, [r3, #8]
+ 150:.\Generated_Source\PSoC4/Slider_SMS.c ****     
+ 303              		.loc 1 150 0
+ 304 001a FFF7FEFF 		bl	Slider_SetAnalogSwitchesSrcDirect
+ 305              	.LVL29:
+ 152:.\Generated_Source\PSoC4/Slider_SMS.c ****     {
+ 306              		.loc 1 152 0
+ 307 001e 0023     		mov	r3, #0
+ 308 0020 04E0     		b	.L21
+ 309              	.LVL30:
+ARM GAS  C:\Users\ELECTR~1\AppData\Local\Temp\cc8evJ81.s 			page 13
+
+
+ 310              	.L22:
+ 154:.\Generated_Source\PSoC4/Slider_SMS.c ****     }
+ 311              		.loc 1 154 0 discriminator 3
+ 312 0022 9900     		lsl	r1, r3, #2
+ 313 0024 1F48     		ldr	r0, .L27+12
+ 314 0026 204A     		ldr	r2, .L27+16
+ 315 0028 8850     		str	r0, [r1, r2]
+ 152:.\Generated_Source\PSoC4/Slider_SMS.c ****     {
+ 316              		.loc 1 152 0 discriminator 3
+ 317 002a 0133     		add	r3, r3, #1
+ 318              	.LVL31:
+ 319              	.L21:
+ 152:.\Generated_Source\PSoC4/Slider_SMS.c ****     {
+ 320              		.loc 1 152 0 is_stmt 0 discriminator 1
+ 321 002c 1A4A     		ldr	r2, .L27
+ 322 002e 5278     		ldrb	r2, [r2, #1]
+ 323 0030 9A42     		cmp	r2, r3
+ 324 0032 F6D8     		bhi	.L22
+ 325 0034 0023     		mov	r3, #0
+ 326              	.LVL32:
+ 327 0036 06E0     		b	.L23
+ 328              	.LVL33:
+ 329              	.L24:
+ 160:.\Generated_Source\PSoC4/Slider_SMS.c **** 		Slider_sampleClkDividerVal[curSensor] = Slider_CALIBRATION_MD;
+ 330              		.loc 1 160 0 is_stmt 1 discriminator 3
+ 331 0038 1021     		mov	r1, #16
+ 332 003a 1C4A     		ldr	r2, .L27+20
+ 333 003c D154     		strb	r1, [r2, r3]
+ 161:.\Generated_Source\PSoC4/Slider_SMS.c **** 	}
+ 334              		.loc 1 161 0 discriminator 3
+ 335 003e 0C39     		sub	r1, r1, #12
+ 336 0040 1B4A     		ldr	r2, .L27+24
+ 337 0042 D154     		strb	r1, [r2, r3]
+ 158:.\Generated_Source\PSoC4/Slider_SMS.c ****     {
+ 338              		.loc 1 158 0 discriminator 3
+ 339 0044 0133     		add	r3, r3, #1
+ 340              	.LVL34:
+ 341              	.L23:
+ 158:.\Generated_Source\PSoC4/Slider_SMS.c ****     {
+ 342              		.loc 1 158 0 is_stmt 0 discriminator 1
+ 343 0046 042B     		cmp	r3, #4
+ 344 0048 F6D9     		bls	.L24
+ 164:.\Generated_Source\PSoC4/Slider_SMS.c **** 
+ 345              		.loc 1 164 0 is_stmt 1
+ 346 004a FFF7FEFF 		bl	Slider_DisableBaselineIDAC
+ 347              	.LVL35:
+ 166:.\Generated_Source\PSoC4/Slider_SMS.c **** 
+ 348              		.loc 1 166 0
+ 349 004e 124C     		ldr	r4, .L27
+ 350 0050 184E     		ldr	r6, .L27+28
+ 351 0052 201C     		mov	r0, r4
+ 352 0054 311C     		mov	r1, r6
+ 353 0056 FFF7FEFF 		bl	CalibrateSensors_P4_v2_20
+ 354              	.LVL36:
+ 169:.\Generated_Source\PSoC4/Slider_SMS.c **** 	#endif /* (0u != Slider_TOTAL_CENTROIDS_COUNT)  */
+ 355              		.loc 1 169 0
+ 356 005a 174D     		ldr	r5, .L27+32
+ARM GAS  C:\Users\ELECTR~1\AppData\Local\Temp\cc8evJ81.s 			page 14
+
+
+ 357 005c 0120     		mov	r0, #1
+ 358 005e 291C     		mov	r1, r5
+ 359 0060 FFF7FEFF 		bl	Slider_NormalizeWidgets
+ 360              	.LVL37:
+ 172:.\Generated_Source\PSoC4/Slider_SMS.c **** 	
+ 361              		.loc 1 172 0
+ 362 0064 201C     		mov	r0, r4
+ 363 0066 FFF7FEFF 		bl	TunePrescalers_P4_v2_20
+ 364              	.LVL38:
+ 178:.\Generated_Source\PSoC4/Slider_SMS.c **** 	#if(0u != Slider_TOTAL_CENTROIDS_COUNT)
+ 365              		.loc 1 178 0
+ 366 006a 201C     		mov	r0, r4
+ 367 006c 311C     		mov	r1, r6
+ 368 006e FFF7FEFF 		bl	CalibrateSensors_P4_v2_20
+ 369              	.LVL39:
+ 180:.\Generated_Source\PSoC4/Slider_SMS.c **** 	#endif /* (0u != Slider_TOTAL_CENTROIDS_COUNT)  */
+ 370              		.loc 1 180 0
+ 371 0072 0120     		mov	r0, #1
+ 372 0074 291C     		mov	r1, r5
+ 373 0076 FFF7FEFF 		bl	Slider_NormalizeWidgets
+ 374              	.LVL40:
+ 182:.\Generated_Source\PSoC4/Slider_SMS.c **** 	
+ 375              		.loc 1 182 0
+ 376 007a 201C     		mov	r0, r4
+ 377 007c FFF7FEFF 		bl	TuneSensitivity_P4_v2_20
+ 378              	.LVL41:
+ 184:.\Generated_Source\PSoC4/Slider_SMS.c ****     
+ 379              		.loc 1 184 0
+ 380 0080 201C     		mov	r0, r4
+ 381 0082 FFF7FEFF 		bl	Slider_EnableBaselineIDAC
+ 382              	.LVL42:
+ 186:.\Generated_Source\PSoC4/Slider_SMS.c ****     {
+ 383              		.loc 1 186 0
+ 384 0086 0024     		mov	r4, #0
+ 385 0088 03E0     		b	.L25
+ 386              	.LVL43:
+ 387              	.L26:
+ 188:.\Generated_Source\PSoC4/Slider_SMS.c ****     }
+ 388              		.loc 1 188 0 discriminator 3
+ 389 008a 201C     		mov	r0, r4
+ 390 008c FFF7FEFF 		bl	Slider_UpdateThresholds
+ 391              	.LVL44:
+ 186:.\Generated_Source\PSoC4/Slider_SMS.c ****     {
+ 392              		.loc 1 186 0 discriminator 3
+ 393 0090 0134     		add	r4, r4, #1
+ 394              	.LVL45:
+ 395              	.L25:
+ 186:.\Generated_Source\PSoC4/Slider_SMS.c ****     {
+ 396              		.loc 1 186 0 is_stmt 0 discriminator 1
+ 397 0092 042C     		cmp	r4, #4
+ 398 0094 F9D9     		bls	.L26
+ 190:.\Generated_Source\PSoC4/Slider_SMS.c **** 
+ 399              		.loc 1 190 0 is_stmt 1
+ 400              		@ sp needed
+ 401              	.LVL46:
+ 402 0096 70BD     		pop	{r4, r5, r6, pc}
+ 403              	.L28:
+ARM GAS  C:\Users\ELECTR~1\AppData\Local\Temp\cc8evJ81.s 			page 15
+
+
+ 404              		.align	2
+ 405              	.L27:
+ 406 0098 00000000 		.word	Slider_config
+ 407 009c 98090000 		.word	2456
+ 408 00a0 00000000 		.word	.LANCHOR0
+ 409 00a4 0000FF0F 		.word	268369920
+ 410 00a8 00000000 		.word	Slider_widgetResolution
+ 411 00ac 00000000 		.word	Slider_senseClkDividerVal
+ 412 00b0 00000000 		.word	Slider_sampleClkDividerVal
+ 413 00b4 9A0D0000 		.word	3482
+ 414 00b8 00000000 		.word	Slider_modulationIDAC
+ 415              		.cfi_endproc
+ 416              	.LFE35:
+ 417              		.size	Slider_AutoTune, .-Slider_AutoTune
+ 418              		.section	.text.Slider_SetSensitivity,"ax",%progbits
+ 419              		.align	2
+ 420              		.global	Slider_SetSensitivity
+ 421              		.code	16
+ 422              		.thumb_func
+ 423              		.type	Slider_SetSensitivity, %function
+ 424              	Slider_SetSensitivity:
+ 425              	.LFB40:
+ 365:.\Generated_Source\PSoC4/Slider_SMS.c **** 
+ 366:.\Generated_Source\PSoC4/Slider_SMS.c **** 
+ 367:.\Generated_Source\PSoC4/Slider_SMS.c **** /*******************************************************************************
+ 368:.\Generated_Source\PSoC4/Slider_SMS.c **** * Function Name: Slider_SetSensitivity
+ 369:.\Generated_Source\PSoC4/Slider_SMS.c **** ********************************************************************************
+ 370:.\Generated_Source\PSoC4/Slider_SMS.c **** *
+ 371:.\Generated_Source\PSoC4/Slider_SMS.c **** * Summary:
+ 372:.\Generated_Source\PSoC4/Slider_SMS.c **** *  This API sets the sensitivity value for the sensor. The sensitivity 
+ 373:.\Generated_Source\PSoC4/Slider_SMS.c **** *  value is used during the auto-tuning algorithm executed as part of the CapSense_Start API.
+ 374:.\Generated_Source\PSoC4/Slider_SMS.c **** *  This API is called by the application layer prior to calling the CapSense_Start API. 
+ 375:.\Generated_Source\PSoC4/Slider_SMS.c **** *  Calling this API after execution of CapSense_Start API has no effect. 
+ 376:.\Generated_Source\PSoC4/Slider_SMS.c **** *
+ 377:.\Generated_Source\PSoC4/Slider_SMS.c **** * Parameters: 
+ 378:.\Generated_Source\PSoC4/Slider_SMS.c **** *  sensor  Sensor index 
+ 379:.\Generated_Source\PSoC4/Slider_SMS.c **** *  data    Sensitivity of the sensor. Possible values are below
+ 380:.\Generated_Source\PSoC4/Slider_SMS.c **** *  1 - 0.1pf sensitivity
+ 381:.\Generated_Source\PSoC4/Slider_SMS.c **** *  2 - 0.2pf sensitivity
+ 382:.\Generated_Source\PSoC4/Slider_SMS.c **** *  3 - 0.3pf sensitivity
+ 383:.\Generated_Source\PSoC4/Slider_SMS.c **** *  4 - 0.4pf sensitivity
+ 384:.\Generated_Source\PSoC4/Slider_SMS.c **** *  5 - 0.5pf sensitivity
+ 385:.\Generated_Source\PSoC4/Slider_SMS.c **** *  6 - 0.6pf sensitivity
+ 386:.\Generated_Source\PSoC4/Slider_SMS.c **** *  7 - 0.7pf sensitivity
+ 387:.\Generated_Source\PSoC4/Slider_SMS.c **** *  8 - 0.8pf sensitivity
+ 388:.\Generated_Source\PSoC4/Slider_SMS.c **** *  9 - 0.9pf sensitivity
+ 389:.\Generated_Source\PSoC4/Slider_SMS.c **** *  10 - 1.0pf sensitivity
+ 390:.\Generated_Source\PSoC4/Slider_SMS.c **** *  All other values, set sensitivity to 1.0pf
+ 391:.\Generated_Source\PSoC4/Slider_SMS.c **** *
+ 392:.\Generated_Source\PSoC4/Slider_SMS.c **** *  Return Value:
+ 393:.\Generated_Source\PSoC4/Slider_SMS.c **** *   None
+ 394:.\Generated_Source\PSoC4/Slider_SMS.c **** *
+ 395:.\Generated_Source\PSoC4/Slider_SMS.c **** * Global Variables:
+ 396:.\Generated_Source\PSoC4/Slider_SMS.c **** * SMS_LIB_SensorSensitivity[] - This 8-bits array contains Sensitivity in the LSB nibble
+ 397:.\Generated_Source\PSoC4/Slider_SMS.c **** *                                and Noise Reset Counter value in the MSB nibble.      
+ 398:.\Generated_Source\PSoC4/Slider_SMS.c **** *
+ 399:.\Generated_Source\PSoC4/Slider_SMS.c **** * Side Effects: 
+ARM GAS  C:\Users\ELECTR~1\AppData\Local\Temp\cc8evJ81.s 			page 16
+
+
+ 400:.\Generated_Source\PSoC4/Slider_SMS.c **** *  None
+ 401:.\Generated_Source\PSoC4/Slider_SMS.c **** *
+ 402:.\Generated_Source\PSoC4/Slider_SMS.c **** *******************************************************************************/
+ 403:.\Generated_Source\PSoC4/Slider_SMS.c **** void Slider_SetSensitivity(uint32 sensor, uint32 value)
+ 404:.\Generated_Source\PSoC4/Slider_SMS.c **** {
+ 426              		.loc 1 404 0
+ 427              		.cfi_startproc
+ 428              	.LVL47:
+ 429 0000 10B5     		push	{r4, lr}
+ 430              		.cfi_def_cfa_offset 8
+ 431              		.cfi_offset 4, -8
+ 432              		.cfi_offset 14, -4
+ 405:.\Generated_Source\PSoC4/Slider_SMS.c **** 	if(value > 10u)
+ 433              		.loc 1 405 0
+ 434 0002 0A29     		cmp	r1, #10
+ 435 0004 00D9     		bls	.L30
+ 406:.\Generated_Source\PSoC4/Slider_SMS.c **** 	{
+ 407:.\Generated_Source\PSoC4/Slider_SMS.c **** 		value = 10u;
+ 436              		.loc 1 407 0
+ 437 0006 0A21     		mov	r1, #10
+ 438              	.LVL48:
+ 439              	.L30:
+ 408:.\Generated_Source\PSoC4/Slider_SMS.c **** 	}
+ 409:.\Generated_Source\PSoC4/Slider_SMS.c **** 	
+ 410:.\Generated_Source\PSoC4/Slider_SMS.c ****     /* Clear SensorSensitivity value in LSB nibble */
+ 411:.\Generated_Source\PSoC4/Slider_SMS.c **** 	SMS_LIB_SensorSensitivity[sensor] &= (uint8)~Slider_SENSITIVITY_MASK;
+ 440              		.loc 1 411 0
+ 441 0008 034A     		ldr	r2, .L32
+ 442 000a 135C     		ldrb	r3, [r2, r0]
+ 443 000c 0F24     		mov	r4, #15
+ 444 000e A343     		bic	r3, r4
+ 412:.\Generated_Source\PSoC4/Slider_SMS.c **** 	/* Set SensorSensitivity value in LSB nibble */
+ 413:.\Generated_Source\PSoC4/Slider_SMS.c **** 	SMS_LIB_SensorSensitivity[sensor] |= (uint8)value;
+ 445              		.loc 1 413 0
+ 446 0010 1943     		orr	r1, r3
+ 447              	.LVL49:
+ 448 0012 1154     		strb	r1, [r2, r0]
+ 414:.\Generated_Source\PSoC4/Slider_SMS.c **** }
+ 449              		.loc 1 414 0
+ 450              		@ sp needed
+ 451 0014 10BD     		pop	{r4, pc}
+ 452              	.L33:
+ 453 0016 C046     		.align	2
+ 454              	.L32:
+ 455 0018 00000000 		.word	.LANCHOR1
+ 456              		.cfi_endproc
+ 457              	.LFE40:
+ 458              		.size	Slider_SetSensitivity, .-Slider_SetSensitivity
+ 459              		.section	.text.Slider_GetSensitivityCoefficient,"ax",%progbits
+ 460              		.align	2
+ 461              		.global	Slider_GetSensitivityCoefficient
+ 462              		.code	16
+ 463              		.thumb_func
+ 464              		.type	Slider_GetSensitivityCoefficient, %function
+ 465              	Slider_GetSensitivityCoefficient:
+ 466              	.LFB41:
+ 415:.\Generated_Source\PSoC4/Slider_SMS.c **** 
+ARM GAS  C:\Users\ELECTR~1\AppData\Local\Temp\cc8evJ81.s 			page 17
+
+
+ 416:.\Generated_Source\PSoC4/Slider_SMS.c **** 
+ 417:.\Generated_Source\PSoC4/Slider_SMS.c **** /*******************************************************************************
+ 418:.\Generated_Source\PSoC4/Slider_SMS.c **** * Function Name: Slider_GetSensitivityCoefficient
+ 419:.\Generated_Source\PSoC4/Slider_SMS.c **** ********************************************************************************
+ 420:.\Generated_Source\PSoC4/Slider_SMS.c **** *
+ 421:.\Generated_Source\PSoC4/Slider_SMS.c **** * Summary:
+ 422:.\Generated_Source\PSoC4/Slider_SMS.c **** *  This API returns the K coefficient for the appropriate sensor. 
+ 423:.\Generated_Source\PSoC4/Slider_SMS.c **** *
+ 424:.\Generated_Source\PSoC4/Slider_SMS.c **** * Parameters: 
+ 425:.\Generated_Source\PSoC4/Slider_SMS.c **** *  sensor:  Sensor index 
+ 426:.\Generated_Source\PSoC4/Slider_SMS.c **** *
+ 427:.\Generated_Source\PSoC4/Slider_SMS.c **** *  Return Value:
+ 428:.\Generated_Source\PSoC4/Slider_SMS.c **** *   K - value for the appropriate sensor.
+ 429:.\Generated_Source\PSoC4/Slider_SMS.c **** *
+ 430:.\Generated_Source\PSoC4/Slider_SMS.c **** * Global Variables:
+ 431:.\Generated_Source\PSoC4/Slider_SMS.c **** *  kValueTbl[] - This 8-bits array contains the K value for each sensor.
+ 432:.\Generated_Source\PSoC4/Slider_SMS.c **** *
+ 433:.\Generated_Source\PSoC4/Slider_SMS.c **** * Side Effects: 
+ 434:.\Generated_Source\PSoC4/Slider_SMS.c **** *  None
+ 435:.\Generated_Source\PSoC4/Slider_SMS.c **** *
+ 436:.\Generated_Source\PSoC4/Slider_SMS.c **** *******************************************************************************/
+ 437:.\Generated_Source\PSoC4/Slider_SMS.c **** uint8 Slider_GetSensitivityCoefficient(uint32 sensor)
+ 438:.\Generated_Source\PSoC4/Slider_SMS.c **** {
+ 467              		.loc 1 438 0
+ 468              		.cfi_startproc
+ 469              	.LVL50:
+ 439:.\Generated_Source\PSoC4/Slider_SMS.c **** 	return (kValueTbl[sensor]);
+ 470              		.loc 1 439 0
+ 471 0000 014B     		ldr	r3, .L35
+ 472 0002 185C     		ldrb	r0, [r3, r0]
+ 473              	.LVL51:
+ 440:.\Generated_Source\PSoC4/Slider_SMS.c **** }
+ 474              		.loc 1 440 0
+ 475              		@ sp needed
+ 476 0004 7047     		bx	lr
+ 477              	.L36:
+ 478 0006 C046     		.align	2
+ 479              	.L35:
+ 480 0008 00000000 		.word	kValueTbl
+ 481              		.cfi_endproc
+ 482              	.LFE41:
+ 483              		.size	Slider_GetSensitivityCoefficient, .-Slider_GetSensitivityCoefficient
+ 484              		.section	.text.Slider_GetNoiseEnvelope,"ax",%progbits
+ 485              		.align	2
+ 486              		.global	Slider_GetNoiseEnvelope
+ 487              		.code	16
+ 488              		.thumb_func
+ 489              		.type	Slider_GetNoiseEnvelope, %function
+ 490              	Slider_GetNoiseEnvelope:
+ 491              	.LFB42:
+ 441:.\Generated_Source\PSoC4/Slider_SMS.c **** 
+ 442:.\Generated_Source\PSoC4/Slider_SMS.c **** 
+ 443:.\Generated_Source\PSoC4/Slider_SMS.c **** /*******************************************************************************
+ 444:.\Generated_Source\PSoC4/Slider_SMS.c **** * Function Name: Slider_GetNoiseEnvelope
+ 445:.\Generated_Source\PSoC4/Slider_SMS.c **** ********************************************************************************
+ 446:.\Generated_Source\PSoC4/Slider_SMS.c **** *
+ 447:.\Generated_Source\PSoC4/Slider_SMS.c **** * Summary:
+ARM GAS  C:\Users\ELECTR~1\AppData\Local\Temp\cc8evJ81.s 			page 18
+
+
+ 448:.\Generated_Source\PSoC4/Slider_SMS.c **** *  This function returns the noise value of a
+ 449:.\Generated_Source\PSoC4/Slider_SMS.c **** *  component.
+ 450:.\Generated_Source\PSoC4/Slider_SMS.c **** *
+ 451:.\Generated_Source\PSoC4/Slider_SMS.c **** * Parameters:
+ 452:.\Generated_Source\PSoC4/Slider_SMS.c **** *  sensor - Sensor number.
+ 453:.\Generated_Source\PSoC4/Slider_SMS.c **** *
+ 454:.\Generated_Source\PSoC4/Slider_SMS.c **** * Return:
+ 455:.\Generated_Source\PSoC4/Slider_SMS.c **** *  The noise envelope value of the sensor
+ 456:.\Generated_Source\PSoC4/Slider_SMS.c **** *  indicated by argument.
+ 457:.\Generated_Source\PSoC4/Slider_SMS.c **** *
+ 458:.\Generated_Source\PSoC4/Slider_SMS.c **** * Global Variables:
+ 459:.\Generated_Source\PSoC4/Slider_SMS.c **** *  baNoiseEnvelope[] - array with Noise Envelope.
+ 460:.\Generated_Source\PSoC4/Slider_SMS.c **** *
+ 461:.\Generated_Source\PSoC4/Slider_SMS.c **** * Side Effects:
+ 462:.\Generated_Source\PSoC4/Slider_SMS.c **** *  None
+ 463:.\Generated_Source\PSoC4/Slider_SMS.c **** *
+ 464:.\Generated_Source\PSoC4/Slider_SMS.c **** *******************************************************************************/
+ 465:.\Generated_Source\PSoC4/Slider_SMS.c **** uint16 Slider_GetNoiseEnvelope(uint32 sensor)
+ 466:.\Generated_Source\PSoC4/Slider_SMS.c **** {
+ 492              		.loc 1 466 0
+ 493              		.cfi_startproc
+ 494              	.LVL52:
+ 467:.\Generated_Source\PSoC4/Slider_SMS.c ****     return((uint16)((uint16)noiseEnvelopeTbl[sensor] << 1u) + 1u);
+ 495              		.loc 1 467 0
+ 496 0000 024B     		ldr	r3, .L38
+ 497 0002 185C     		ldrb	r0, [r3, r0]
+ 498              	.LVL53:
+ 499 0004 4000     		lsl	r0, r0, #1
+ 500 0006 0130     		add	r0, r0, #1
+ 468:.\Generated_Source\PSoC4/Slider_SMS.c **** }
+ 501              		.loc 1 468 0
+ 502              		@ sp needed
+ 503 0008 7047     		bx	lr
+ 504              	.L39:
+ 505 000a C046     		.align	2
+ 506              	.L38:
+ 507 000c 00000000 		.word	noiseEnvelopeTbl
+ 508              		.cfi_endproc
+ 509              	.LFE42:
+ 510              		.size	Slider_GetNoiseEnvelope, .-Slider_GetNoiseEnvelope
+ 511              		.global	__aeabi_uidiv
+ 512              		.section	.text.Slider_GetNormalizedDiffCountData,"ax",%progbits
+ 513              		.align	2
+ 514              		.global	Slider_GetNormalizedDiffCountData
+ 515              		.code	16
+ 516              		.thumb_func
+ 517              		.type	Slider_GetNormalizedDiffCountData, %function
+ 518              	Slider_GetNormalizedDiffCountData:
+ 519              	.LFB43:
+ 469:.\Generated_Source\PSoC4/Slider_SMS.c **** 
+ 470:.\Generated_Source\PSoC4/Slider_SMS.c **** 
+ 471:.\Generated_Source\PSoC4/Slider_SMS.c **** /*******************************************************************************
+ 472:.\Generated_Source\PSoC4/Slider_SMS.c **** * Function Name: Slider_GetNormalizedDiffCountData
+ 473:.\Generated_Source\PSoC4/Slider_SMS.c **** ********************************************************************************
+ 474:.\Generated_Source\PSoC4/Slider_SMS.c **** *
+ 475:.\Generated_Source\PSoC4/Slider_SMS.c **** * Summary:
+ 476:.\Generated_Source\PSoC4/Slider_SMS.c **** *  This API returns normalized difference count data.
+ARM GAS  C:\Users\ELECTR~1\AppData\Local\Temp\cc8evJ81.s 			page 19
+
+
+ 477:.\Generated_Source\PSoC4/Slider_SMS.c **** *
+ 478:.\Generated_Source\PSoC4/Slider_SMS.c **** * Parameters:
+ 479:.\Generated_Source\PSoC4/Slider_SMS.c **** *  sensor:  Sensor number.
+ 480:.\Generated_Source\PSoC4/Slider_SMS.c **** *
+ 481:.\Generated_Source\PSoC4/Slider_SMS.c **** * Return:
+ 482:.\Generated_Source\PSoC4/Slider_SMS.c **** *  This API returns a normalized count value of the sensor indicated by the 
+ 483:.\Generated_Source\PSoC4/Slider_SMS.c **** *  argument. 
+ 484:.\Generated_Source\PSoC4/Slider_SMS.c **** *
+ 485:.\Generated_Source\PSoC4/Slider_SMS.c **** * Global Variables:
+ 486:.\Generated_Source\PSoC4/Slider_SMS.c **** *  Slider_sensorSignal[] - array with difference counts for sensors
+ 487:.\Generated_Source\PSoC4/Slider_SMS.c **** * 
+ 488:.\Generated_Source\PSoC4/Slider_SMS.c **** * Side Effects:
+ 489:.\Generated_Source\PSoC4/Slider_SMS.c **** *  None
+ 490:.\Generated_Source\PSoC4/Slider_SMS.c **** *
+ 491:.\Generated_Source\PSoC4/Slider_SMS.c **** *******************************************************************************/
+ 492:.\Generated_Source\PSoC4/Slider_SMS.c **** uint16 Slider_GetNormalizedDiffCountData(uint32 sensor)
+ 493:.\Generated_Source\PSoC4/Slider_SMS.c **** {
+ 520              		.loc 1 493 0
+ 521              		.cfi_startproc
+ 522              	.LVL54:
+ 523 0000 08B5     		push	{r3, lr}
+ 524              		.cfi_def_cfa_offset 8
+ 525              		.cfi_offset 3, -8
+ 526              		.cfi_offset 14, -4
+ 527 0002 021C     		mov	r2, r0
+ 494:.\Generated_Source\PSoC4/Slider_SMS.c **** 	return (uint16)(((uint32)Slider_sensorSignal[sensor] << 7u) / kValueTbl[sensor]);
+ 528              		.loc 1 494 0
+ 529 0004 044B     		ldr	r3, .L41
+ 530 0006 1B5C     		ldrb	r3, [r3, r0]
+ 531 0008 D801     		lsl	r0, r3, #7
+ 532              	.LVL55:
+ 533 000a 044B     		ldr	r3, .L41+4
+ 534 000c 995C     		ldrb	r1, [r3, r2]
+ 535 000e FFF7FEFF 		bl	__aeabi_uidiv
+ 536              	.LVL56:
+ 537 0012 80B2     		uxth	r0, r0
+ 495:.\Generated_Source\PSoC4/Slider_SMS.c **** }
+ 538              		.loc 1 495 0
+ 539              		@ sp needed
+ 540 0014 08BD     		pop	{r3, pc}
+ 541              	.L42:
+ 542 0016 C046     		.align	2
+ 543              	.L41:
+ 544 0018 00000000 		.word	Slider_sensorSignal
+ 545 001c 00000000 		.word	kValueTbl
+ 546              		.cfi_endproc
+ 547              	.LFE43:
+ 548              		.size	Slider_GetNormalizedDiffCountData, .-Slider_GetNormalizedDiffCountData
+ 549              		.global	Slider_configPointers
+ 550              		.comm	Slider_config,12,4
+ 551              		.global	SMS_LIB_SensorSensitivity
+ 552              		.comm	kValueTbl,5,4
+ 553              		.comm	previousSampleTbl,10,4
+ 554              		.comm	sampleMaxTbl,10,4
+ 555              		.comm	sampleMinTbl,10,4
+ 556              		.comm	signRegisterTbl,5,4
+ 557              		.comm	runningDifferenceTbl,5,4
+ARM GAS  C:\Users\ELECTR~1\AppData\Local\Temp\cc8evJ81.s 			page 20
+
+
+ 558              		.comm	noiseEnvelopeTbl,5,4
+ 559              		.global	prescalerTable
+ 560              		.section	.rodata
+ 561              		.align	2
+ 562              		.set	.LANCHOR0,. + 0
+ 563              		.type	Slider_configPointers, %object
+ 564              		.size	Slider_configPointers, 56
+ 565              	Slider_configPointers:
+ 566 0000 00000000 		.word	Slider_modulationIDAC
+ 567 0004 00000000 		.word	Slider_compensationIDAC
+ 568 0008 00000000 		.word	SMS_LIB_SensorSensitivity
+ 569 000c 00000000 		.word	Slider_senseClkDividerVal
+ 570 0010 00000000 		.word	Slider_sampleClkDividerVal
+ 571 0014 00000000 		.word	Slider_widgetNumber
+ 572 0018 00000000 		.word	Slider_widgetResolution
+ 573 001c 00000000 		.word	Slider_rawDataIndex
+ 574 0020 00000000 		.word	Slider_numberOfSensors
+ 575 0024 00000000 		.word	Slider_GetSensorRaw
+ 576 0028 00000000 		.word	Slider_PreScan
+ 577 002c 00000000 		.word	Slider_ReadSensorRaw
+ 578 0030 00000000 		.word	Slider_GetBitValue
+ 579 0034 00000000 		.word	Slider_SetBitValue
+ 580              		.type	prescalerTable, %object
+ 581              		.size	prescalerTable, 16
+ 582              	prescalerTable:
+ 583 0038 04       		.byte	4
+ 584 0039 04       		.byte	4
+ 585 003a 04       		.byte	4
+ 586 003b 08       		.byte	8
+ 587 003c 08       		.byte	8
+ 588 003d 08       		.byte	8
+ 589 003e 08       		.byte	8
+ 590 003f 10       		.byte	16
+ 591 0040 10       		.byte	16
+ 592 0041 10       		.byte	16
+ 593 0042 10       		.byte	16
+ 594 0043 10       		.byte	16
+ 595 0044 10       		.byte	16
+ 596 0045 10       		.byte	16
+ 597 0046 10       		.byte	16
+ 598 0047 10       		.byte	16
+ 599              		.data
+ 600              		.align	2
+ 601              		.set	.LANCHOR1,. + 0
+ 602              		.type	SMS_LIB_SensorSensitivity, %object
+ 603              		.size	SMS_LIB_SensorSensitivity, 5
+ 604              	SMS_LIB_SensorSensitivity:
+ 605 0000 02       		.byte	2
+ 606 0001 02       		.byte	2
+ 607 0002 02       		.byte	2
+ 608 0003 02       		.byte	2
+ 609 0004 02       		.byte	2
+ 610 0005 000000   		.text
+ 611              	.Letext0:
+ 612              		.file 2 ".\\Generated_Source\\PSoC4\\cytypes.h"
+ 613              		.file 3 ".\\Generated_Source\\PSoC4\\Slider_PVT.h"
+ 614              		.file 4 ".\\Generated_Source\\PSoC4\\Slider.h"
+ARM GAS  C:\Users\ELECTR~1\AppData\Local\Temp\cc8evJ81.s 			page 21
+
+
+ 615              		.file 5 ".\\Generated_Source\\PSoC4\\Slider_CSHL.h"
+ 616              		.file 6 ".\\Generated_Source\\PSoC4\\CyLib.h"
+ 617              		.section	.debug_info,"",%progbits
+ 618              	.Ldebug_info0:
+ 619 0000 85070000 		.4byte	0x785
+ 620 0004 0400     		.2byte	0x4
+ 621 0006 00000000 		.4byte	.Ldebug_abbrev0
+ 622 000a 04       		.byte	0x4
+ 623 000b 01       		.uleb128 0x1
+ 624 000c CA030000 		.4byte	.LASF85
+ 625 0010 01       		.byte	0x1
+ 626 0011 8A060000 		.4byte	.LASF86
+ 627 0015 FF050000 		.4byte	.LASF87
+ 628 0019 00000000 		.4byte	.Ldebug_ranges0+0
+ 629 001d 00000000 		.4byte	0
+ 630 0021 00000000 		.4byte	.Ldebug_line0
+ 631 0025 02       		.uleb128 0x2
+ 632 0026 01       		.byte	0x1
+ 633 0027 06       		.byte	0x6
+ 634 0028 BE000000 		.4byte	.LASF0
+ 635 002c 02       		.uleb128 0x2
+ 636 002d 01       		.byte	0x1
+ 637 002e 08       		.byte	0x8
+ 638 002f B3040000 		.4byte	.LASF1
+ 639 0033 02       		.uleb128 0x2
+ 640 0034 02       		.byte	0x2
+ 641 0035 05       		.byte	0x5
+ 642 0036 D2040000 		.4byte	.LASF2
+ 643 003a 02       		.uleb128 0x2
+ 644 003b 02       		.byte	0x2
+ 645 003c 07       		.byte	0x7
+ 646 003d 74020000 		.4byte	.LASF3
+ 647 0041 02       		.uleb128 0x2
+ 648 0042 04       		.byte	0x4
+ 649 0043 05       		.byte	0x5
+ 650 0044 41010000 		.4byte	.LASF4
+ 651 0048 02       		.uleb128 0x2
+ 652 0049 04       		.byte	0x4
+ 653 004a 07       		.byte	0x7
+ 654 004b 2D020000 		.4byte	.LASF5
+ 655 004f 02       		.uleb128 0x2
+ 656 0050 08       		.byte	0x8
+ 657 0051 05       		.byte	0x5
+ 658 0052 B0000000 		.4byte	.LASF6
+ 659 0056 02       		.uleb128 0x2
+ 660 0057 08       		.byte	0x8
+ 661 0058 07       		.byte	0x7
+ 662 0059 81000000 		.4byte	.LASF7
+ 663 005d 03       		.uleb128 0x3
+ 664 005e 04       		.byte	0x4
+ 665 005f 05       		.byte	0x5
+ 666 0060 696E7400 		.ascii	"int\000"
+ 667 0064 02       		.uleb128 0x2
+ 668 0065 04       		.byte	0x4
+ 669 0066 07       		.byte	0x7
+ 670 0067 13020000 		.4byte	.LASF8
+ 671 006b 04       		.uleb128 0x4
+ARM GAS  C:\Users\ELECTR~1\AppData\Local\Temp\cc8evJ81.s 			page 22
+
+
+ 672 006c 57010000 		.4byte	.LASF9
+ 673 0070 02       		.byte	0x2
+ 674 0071 C1       		.byte	0xc1
+ 675 0072 2C000000 		.4byte	0x2c
+ 676 0076 04       		.uleb128 0x4
+ 677 0077 0A000000 		.4byte	.LASF10
+ 678 007b 02       		.byte	0x2
+ 679 007c C2       		.byte	0xc2
+ 680 007d 3A000000 		.4byte	0x3a
+ 681 0081 04       		.uleb128 0x4
+ 682 0082 AC010000 		.4byte	.LASF11
+ 683 0086 02       		.byte	0x2
+ 684 0087 C3       		.byte	0xc3
+ 685 0088 48000000 		.4byte	0x48
+ 686 008c 02       		.uleb128 0x2
+ 687 008d 04       		.byte	0x4
+ 688 008e 04       		.byte	0x4
+ 689 008f 58040000 		.4byte	.LASF12
+ 690 0093 02       		.uleb128 0x2
+ 691 0094 08       		.byte	0x8
+ 692 0095 04       		.byte	0x4
+ 693 0096 5D010000 		.4byte	.LASF13
+ 694 009a 02       		.uleb128 0x2
+ 695 009b 01       		.byte	0x1
+ 696 009c 08       		.byte	0x8
+ 697 009d A4050000 		.4byte	.LASF14
+ 698 00a1 05       		.uleb128 0x5
+ 699 00a2 EC020000 		.4byte	.LASF15
+ 700 00a6 02       		.byte	0x2
+ 701 00a7 6D01     		.2byte	0x16d
+ 702 00a9 AD000000 		.4byte	0xad
+ 703 00ad 06       		.uleb128 0x6
+ 704 00ae 81000000 		.4byte	0x81
+ 705 00b2 02       		.uleb128 0x2
+ 706 00b3 04       		.byte	0x4
+ 707 00b4 07       		.byte	0x7
+ 708 00b5 3A030000 		.4byte	.LASF16
+ 709 00b9 07       		.uleb128 0x7
+ 710 00ba 38       		.byte	0x38
+ 711 00bb 03       		.byte	0x3
+ 712 00bc 2F       		.byte	0x2f
+ 713 00bd 6A010000 		.4byte	0x16a
+ 714 00c1 08       		.uleb128 0x8
+ 715 00c2 87030000 		.4byte	.LASF17
+ 716 00c6 03       		.byte	0x3
+ 717 00c7 31       		.byte	0x31
+ 718 00c8 6A010000 		.4byte	0x16a
+ 719 00cc 00       		.byte	0
+ 720 00cd 08       		.uleb128 0x8
+ 721 00ce 96030000 		.4byte	.LASF18
+ 722 00d2 03       		.byte	0x3
+ 723 00d3 32       		.byte	0x32
+ 724 00d4 6A010000 		.4byte	0x16a
+ 725 00d8 04       		.byte	0x4
+ 726 00d9 08       		.uleb128 0x8
+ 727 00da 87020000 		.4byte	.LASF19
+ 728 00de 03       		.byte	0x3
+ARM GAS  C:\Users\ELECTR~1\AppData\Local\Temp\cc8evJ81.s 			page 23
+
+
+ 729 00df 33       		.byte	0x33
+ 730 00e0 6A010000 		.4byte	0x16a
+ 731 00e4 08       		.byte	0x8
+ 732 00e5 08       		.uleb128 0x8
+ 733 00e6 D2020000 		.4byte	.LASF20
+ 734 00ea 03       		.byte	0x3
+ 735 00eb 34       		.byte	0x34
+ 736 00ec 6A010000 		.4byte	0x16a
+ 737 00f0 0C       		.byte	0xc
+ 738 00f1 08       		.uleb128 0x8
+ 739 00f2 E3040000 		.4byte	.LASF21
+ 740 00f6 03       		.byte	0x3
+ 741 00f7 35       		.byte	0x35
+ 742 00f8 6A010000 		.4byte	0x16a
+ 743 00fc 10       		.byte	0x10
+ 744 00fd 08       		.uleb128 0x8
+ 745 00fe 04010000 		.4byte	.LASF22
+ 746 0102 03       		.byte	0x3
+ 747 0103 36       		.byte	0x36
+ 748 0104 70010000 		.4byte	0x170
+ 749 0108 14       		.byte	0x14
+ 750 0109 08       		.uleb128 0x8
+ 751 010a 3F020000 		.4byte	.LASF23
+ 752 010e 03       		.byte	0x3
+ 753 010f 37       		.byte	0x37
+ 754 0110 7B010000 		.4byte	0x17b
+ 755 0114 18       		.byte	0x18
+ 756 0115 08       		.uleb128 0x8
+ 757 0116 F9060000 		.4byte	.LASF24
+ 758 011a 03       		.byte	0x3
+ 759 011b 38       		.byte	0x38
+ 760 011c 70010000 		.4byte	0x170
+ 761 0120 1C       		.byte	0x1c
+ 762 0121 08       		.uleb128 0x8
+ 763 0122 DE000000 		.4byte	.LASF25
+ 764 0126 03       		.byte	0x3
+ 765 0127 39       		.byte	0x39
+ 766 0128 70010000 		.4byte	0x170
+ 767 012c 20       		.byte	0x20
+ 768 012d 08       		.uleb128 0x8
+ 769 012e 5B000000 		.4byte	.LASF26
+ 770 0132 03       		.byte	0x3
+ 771 0133 3A       		.byte	0x3a
+ 772 0134 90010000 		.4byte	0x190
+ 773 0138 24       		.byte	0x24
+ 774 0139 08       		.uleb128 0x8
+ 775 013a F4050000 		.4byte	.LASF27
+ 776 013e 03       		.byte	0x3
+ 777 013f 3B       		.byte	0x3b
+ 778 0140 A1010000 		.4byte	0x1a1
+ 779 0144 28       		.byte	0x28
+ 780 0145 08       		.uleb128 0x8
+ 781 0146 C1040000 		.4byte	.LASF28
+ 782 014a 03       		.byte	0x3
+ 783 014b 3C       		.byte	0x3c
+ 784 014c 90010000 		.4byte	0x190
+ 785 0150 2C       		.byte	0x2c
+ARM GAS  C:\Users\ELECTR~1\AppData\Local\Temp\cc8evJ81.s 			page 24
+
+
+ 786 0151 08       		.uleb128 0x8
+ 787 0152 65020000 		.4byte	.LASF29
+ 788 0156 03       		.byte	0x3
+ 789 0157 3D       		.byte	0x3d
+ 790 0158 BB010000 		.4byte	0x1bb
+ 791 015c 30       		.byte	0x30
+ 792 015d 08       		.uleb128 0x8
+ 793 015e EA060000 		.4byte	.LASF30
+ 794 0162 03       		.byte	0x3
+ 795 0163 3E       		.byte	0x3e
+ 796 0164 D6010000 		.4byte	0x1d6
+ 797 0168 34       		.byte	0x34
+ 798 0169 00       		.byte	0
+ 799 016a 09       		.uleb128 0x9
+ 800 016b 04       		.byte	0x4
+ 801 016c 6B000000 		.4byte	0x6b
+ 802 0170 09       		.uleb128 0x9
+ 803 0171 04       		.byte	0x4
+ 804 0172 76010000 		.4byte	0x176
+ 805 0176 0A       		.uleb128 0xa
+ 806 0177 6B000000 		.4byte	0x6b
+ 807 017b 09       		.uleb128 0x9
+ 808 017c 04       		.byte	0x4
+ 809 017d 81000000 		.4byte	0x81
+ 810 0181 0B       		.uleb128 0xb
+ 811 0182 76000000 		.4byte	0x76
+ 812 0186 90010000 		.4byte	0x190
+ 813 018a 0C       		.uleb128 0xc
+ 814 018b 81000000 		.4byte	0x81
+ 815 018f 00       		.byte	0
+ 816 0190 09       		.uleb128 0x9
+ 817 0191 04       		.byte	0x4
+ 818 0192 81010000 		.4byte	0x181
+ 819 0196 0D       		.uleb128 0xd
+ 820 0197 A1010000 		.4byte	0x1a1
+ 821 019b 0C       		.uleb128 0xc
+ 822 019c 81000000 		.4byte	0x81
+ 823 01a0 00       		.byte	0
+ 824 01a1 09       		.uleb128 0x9
+ 825 01a2 04       		.byte	0x4
+ 826 01a3 96010000 		.4byte	0x196
+ 827 01a7 0B       		.uleb128 0xb
+ 828 01a8 81000000 		.4byte	0x81
+ 829 01ac BB010000 		.4byte	0x1bb
+ 830 01b0 0C       		.uleb128 0xc
+ 831 01b1 70010000 		.4byte	0x170
+ 832 01b5 0C       		.uleb128 0xc
+ 833 01b6 81000000 		.4byte	0x81
+ 834 01ba 00       		.byte	0
+ 835 01bb 09       		.uleb128 0x9
+ 836 01bc 04       		.byte	0x4
+ 837 01bd A7010000 		.4byte	0x1a7
+ 838 01c1 0D       		.uleb128 0xd
+ 839 01c2 D6010000 		.4byte	0x1d6
+ 840 01c6 0C       		.uleb128 0xc
+ 841 01c7 6A010000 		.4byte	0x16a
+ 842 01cb 0C       		.uleb128 0xc
+ARM GAS  C:\Users\ELECTR~1\AppData\Local\Temp\cc8evJ81.s 			page 25
+
+
+ 843 01cc 81000000 		.4byte	0x81
+ 844 01d0 0C       		.uleb128 0xc
+ 845 01d1 81000000 		.4byte	0x81
+ 846 01d5 00       		.byte	0
+ 847 01d6 09       		.uleb128 0x9
+ 848 01d7 04       		.byte	0x4
+ 849 01d8 C1010000 		.4byte	0x1c1
+ 850 01dc 04       		.uleb128 0x4
+ 851 01dd A5030000 		.4byte	.LASF31
+ 852 01e1 03       		.byte	0x3
+ 853 01e2 3F       		.byte	0x3f
+ 854 01e3 B9000000 		.4byte	0xb9
+ 855 01e7 07       		.uleb128 0x7
+ 856 01e8 0C       		.byte	0xc
+ 857 01e9 03       		.byte	0x3
+ 858 01ea 41       		.byte	0x41
+ 859 01eb 38020000 		.4byte	0x238
+ 860 01ef 08       		.uleb128 0x8
+ 861 01f0 D8060000 		.4byte	.LASF32
+ 862 01f4 03       		.byte	0x3
+ 863 01f5 43       		.byte	0x43
+ 864 01f6 6B000000 		.4byte	0x6b
+ 865 01fa 00       		.byte	0
+ 866 01fb 08       		.uleb128 0x8
+ 867 01fc 06070000 		.4byte	.LASF33
+ 868 0200 03       		.byte	0x3
+ 869 0201 44       		.byte	0x44
+ 870 0202 6B000000 		.4byte	0x6b
+ 871 0206 01       		.byte	0x1
+ 872 0207 08       		.uleb128 0x8
+ 873 0208 EC010000 		.4byte	.LASF34
+ 874 020c 03       		.byte	0x3
+ 875 020d 45       		.byte	0x45
+ 876 020e 6B000000 		.4byte	0x6b
+ 877 0212 02       		.byte	0x2
+ 878 0213 08       		.uleb128 0x8
+ 879 0214 CB010000 		.4byte	.LASF35
+ 880 0218 03       		.byte	0x3
+ 881 0219 46       		.byte	0x46
+ 882 021a 76000000 		.4byte	0x76
+ 883 021e 04       		.byte	0x4
+ 884 021f 08       		.uleb128 0x8
+ 885 0220 2C030000 		.4byte	.LASF36
+ 886 0224 03       		.byte	0x3
+ 887 0225 47       		.byte	0x47
+ 888 0226 76000000 		.4byte	0x76
+ 889 022a 06       		.byte	0x6
+ 890 022b 08       		.uleb128 0x8
+ 891 022c 0C030000 		.4byte	.LASF37
+ 892 0230 03       		.byte	0x3
+ 893 0231 48       		.byte	0x48
+ 894 0232 38020000 		.4byte	0x238
+ 895 0236 08       		.byte	0x8
+ 896 0237 00       		.byte	0
+ 897 0238 09       		.uleb128 0x9
+ 898 0239 04       		.byte	0x4
+ 899 023a 3E020000 		.4byte	0x23e
+ARM GAS  C:\Users\ELECTR~1\AppData\Local\Temp\cc8evJ81.s 			page 26
+
+
+ 900 023e 0A       		.uleb128 0xa
+ 901 023f DC010000 		.4byte	0x1dc
+ 902 0243 04       		.uleb128 0x4
+ 903 0244 65000000 		.4byte	.LASF38
+ 904 0248 03       		.byte	0x3
+ 905 0249 49       		.byte	0x49
+ 906 024a E7010000 		.4byte	0x1e7
+ 907 024e 0E       		.uleb128 0xe
+ 908 024f B3010000 		.4byte	.LASF41
+ 909 0253 01       		.byte	0x1
+ 910 0254 DD       		.byte	0xdd
+ 911 0255 00000000 		.4byte	.LFB36
+ 912 0259 7C000000 		.4byte	.LFE36-.LFB36
+ 913 025d 01       		.uleb128 0x1
+ 914 025e 9C       		.byte	0x9c
+ 915 025f BF020000 		.4byte	0x2bf
+ 916 0263 0F       		.uleb128 0xf
+ 917 0264 B3020000 		.4byte	.LASF45
+ 918 0268 01       		.byte	0x1
+ 919 0269 DD       		.byte	0xdd
+ 920 026a 81000000 		.4byte	0x81
+ 921 026e 00000000 		.4byte	.LLST0
+ 922 0272 10       		.uleb128 0x10
+ 923 0273 33000000 		.4byte	.LASF39
+ 924 0277 01       		.byte	0x1
+ 925 0278 DF       		.byte	0xdf
+ 926 0279 6B000000 		.4byte	0x6b
+ 927 027d 21000000 		.4byte	.LLST1
+ 928 0281 10       		.uleb128 0x10
+ 929 0282 DC040000 		.4byte	.LASF40
+ 930 0286 01       		.byte	0x1
+ 931 0287 E0       		.byte	0xe0
+ 932 0288 81000000 		.4byte	0x81
+ 933 028c AB000000 		.4byte	.LLST2
+ 934 0290 11       		.uleb128 0x11
+ 935 0291 1C000000 		.4byte	.LVL3
+ 936 0295 E1060000 		.4byte	0x6e1
+ 937 0299 12       		.uleb128 0x12
+ 938 029a 01       		.uleb128 0x1
+ 939 029b 53       		.byte	0x53
+ 940 029c 02       		.uleb128 0x2
+ 941 029d 74       		.byte	0x74
+ 942 029e 00       		.sleb128 0
+ 943 029f 12       		.uleb128 0x12
+ 944 02a0 01       		.uleb128 0x1
+ 945 02a1 51       		.byte	0x51
+ 946 02a2 03       		.uleb128 0x3
+ 947 02a3 F3       		.byte	0xf3
+ 948 02a4 01       		.uleb128 0x1
+ 949 02a5 50       		.byte	0x50
+ 950 02a6 12       		.uleb128 0x12
+ 951 02a7 01       		.uleb128 0x1
+ 952 02a8 50       		.byte	0x50
+ 953 02a9 05       		.uleb128 0x5
+ 954 02aa 03       		.byte	0x3
+ 955 02ab 00000000 		.4byte	Slider_config
+ 956 02af 12       		.uleb128 0x12
+ARM GAS  C:\Users\ELECTR~1\AppData\Local\Temp\cc8evJ81.s 			page 27
+
+
+ 957 02b0 02       		.uleb128 0x2
+ 958 02b1 7D       		.byte	0x7d
+ 959 02b2 04       		.sleb128 4
+ 960 02b3 02       		.uleb128 0x2
+ 961 02b4 75       		.byte	0x75
+ 962 02b5 00       		.sleb128 0
+ 963 02b6 12       		.uleb128 0x12
+ 964 02b7 02       		.uleb128 0x2
+ 965 02b8 7D       		.byte	0x7d
+ 966 02b9 00       		.sleb128 0
+ 967 02ba 02       		.uleb128 0x2
+ 968 02bb 76       		.byte	0x76
+ 969 02bc 00       		.sleb128 0
+ 970 02bd 00       		.byte	0
+ 971 02be 00       		.byte	0
+ 972 02bf 13       		.uleb128 0x13
+ 973 02c0 11000000 		.4byte	.LASF88
+ 974 02c4 01       		.byte	0x1
+ 975 02c5 1E01     		.2byte	0x11e
+ 976 02c7 00000000 		.4byte	.LFB37
+ 977 02cb 10000000 		.4byte	.LFE37-.LFB37
+ 978 02cf 01       		.uleb128 0x1
+ 979 02d0 9C       		.byte	0x9c
+ 980 02d1 14       		.uleb128 0x14
+ 981 02d2 85010000 		.4byte	.LASF42
+ 982 02d6 01       		.byte	0x1
+ 983 02d7 3801     		.2byte	0x138
+ 984 02d9 00000000 		.4byte	.LFB38
+ 985 02dd 1C000000 		.4byte	.LFE38-.LFB38
+ 986 02e1 01       		.uleb128 0x1
+ 987 02e2 9C       		.byte	0x9c
+ 988 02e3 F8020000 		.4byte	0x2f8
+ 989 02e7 15       		.uleb128 0x15
+ 990 02e8 A0010000 		.4byte	.LASF43
+ 991 02ec 01       		.byte	0x1
+ 992 02ed 3A01     		.2byte	0x13a
+ 993 02ef 81000000 		.4byte	0x81
+ 994 02f3 BE000000 		.4byte	.LLST3
+ 995 02f7 00       		.byte	0
+ 996 02f8 14       		.uleb128 0x14
+ 997 02f9 37050000 		.4byte	.LASF44
+ 998 02fd 01       		.byte	0x1
+ 999 02fe 5901     		.2byte	0x159
+ 1000 0300 00000000 		.4byte	.LFB39
+ 1001 0304 50000000 		.4byte	.LFE39-.LFB39
+ 1002 0308 01       		.uleb128 0x1
+ 1003 0309 9C       		.byte	0x9c
+ 1004 030a 61030000 		.4byte	0x361
+ 1005 030e 16       		.uleb128 0x16
+ 1006 030f D4050000 		.4byte	.LASF46
+ 1007 0313 01       		.byte	0x1
+ 1008 0314 5901     		.2byte	0x159
+ 1009 0316 61030000 		.4byte	0x361
+ 1010 031a DC000000 		.4byte	.LLST4
+ 1011 031e 15       		.uleb128 0x15
+ 1012 031f 00000000 		.4byte	.LASF47
+ 1013 0323 01       		.byte	0x1
+ARM GAS  C:\Users\ELECTR~1\AppData\Local\Temp\cc8evJ81.s 			page 28
+
+
+ 1014 0324 5B01     		.2byte	0x15b
+ 1015 0326 81000000 		.4byte	0x81
+ 1016 032a FD000000 		.4byte	.LLST5
+ 1017 032e 15       		.uleb128 0x15
+ 1018 032f A0010000 		.4byte	.LASF43
+ 1019 0333 01       		.byte	0x1
+ 1020 0334 5C01     		.2byte	0x15c
+ 1021 0336 81000000 		.4byte	0x81
+ 1022 033a 1C010000 		.4byte	.LLST6
+ 1023 033e 17       		.uleb128 0x17
+ 1024 033f 24000000 		.4byte	.LVL24
+ 1025 0343 1C070000 		.4byte	0x71c
+ 1026 0347 51030000 		.4byte	0x351
+ 1027 034b 12       		.uleb128 0x12
+ 1028 034c 01       		.uleb128 0x1
+ 1029 034d 50       		.byte	0x50
+ 1030 034e 01       		.uleb128 0x1
+ 1031 034f 40       		.byte	0x40
+ 1032 0350 00       		.byte	0
+ 1033 0351 11       		.uleb128 0x11
+ 1034 0352 38000000 		.4byte	.LVL28
+ 1035 0356 2D070000 		.4byte	0x72d
+ 1036 035a 12       		.uleb128 0x12
+ 1037 035b 01       		.uleb128 0x1
+ 1038 035c 50       		.byte	0x50
+ 1039 035d 01       		.uleb128 0x1
+ 1040 035e 40       		.byte	0x40
+ 1041 035f 00       		.byte	0
+ 1042 0360 00       		.byte	0
+ 1043 0361 09       		.uleb128 0x9
+ 1044 0362 04       		.byte	0x4
+ 1045 0363 67030000 		.4byte	0x367
+ 1046 0367 0A       		.uleb128 0xa
+ 1047 0368 43020000 		.4byte	0x243
+ 1048 036c 0E       		.uleb128 0xe
+ 1049 036d 94050000 		.4byte	.LASF48
+ 1050 0371 01       		.byte	0x1
+ 1051 0372 88       		.byte	0x88
+ 1052 0373 00000000 		.4byte	.LFB35
+ 1053 0377 BC000000 		.4byte	.LFE35-.LFB35
+ 1054 037b 01       		.uleb128 0x1
+ 1055 037c 9C       		.byte	0x9c
+ 1056 037d 64040000 		.4byte	0x464
+ 1057 0381 10       		.uleb128 0x10
+ 1058 0382 00000000 		.4byte	.LASF47
+ 1059 0386 01       		.byte	0x1
+ 1060 0387 8A       		.byte	0x8a
+ 1061 0388 81000000 		.4byte	0x81
+ 1062 038c 3A010000 		.4byte	.LLST7
+ 1063 0390 10       		.uleb128 0x10
+ 1064 0391 DC040000 		.4byte	.LASF40
+ 1065 0395 01       		.byte	0x1
+ 1066 0396 8B       		.byte	0x8b
+ 1067 0397 81000000 		.4byte	0x81
+ 1068 039b 64010000 		.4byte	.LLST8
+ 1069 039f 18       		.uleb128 0x18
+ 1070 03a0 1E000000 		.4byte	.LVL29
+ARM GAS  C:\Users\ELECTR~1\AppData\Local\Temp\cc8evJ81.s 			page 29
+
+
+ 1071 03a4 BF020000 		.4byte	0x2bf
+ 1072 03a8 18       		.uleb128 0x18
+ 1073 03a9 4E000000 		.4byte	.LVL35
+ 1074 03ad D1020000 		.4byte	0x2d1
+ 1075 03b1 17       		.uleb128 0x17
+ 1076 03b2 5A000000 		.4byte	.LVL36
+ 1077 03b6 3E070000 		.4byte	0x73e
+ 1078 03ba CB030000 		.4byte	0x3cb
+ 1079 03be 12       		.uleb128 0x12
+ 1080 03bf 01       		.uleb128 0x1
+ 1081 03c0 51       		.byte	0x51
+ 1082 03c1 02       		.uleb128 0x2
+ 1083 03c2 76       		.byte	0x76
+ 1084 03c3 00       		.sleb128 0
+ 1085 03c4 12       		.uleb128 0x12
+ 1086 03c5 01       		.uleb128 0x1
+ 1087 03c6 50       		.byte	0x50
+ 1088 03c7 02       		.uleb128 0x2
+ 1089 03c8 74       		.byte	0x74
+ 1090 03c9 00       		.sleb128 0
+ 1091 03ca 00       		.byte	0
+ 1092 03cb 17       		.uleb128 0x17
+ 1093 03cc 64000000 		.4byte	.LVL37
+ 1094 03d0 54070000 		.4byte	0x754
+ 1095 03d4 E4030000 		.4byte	0x3e4
+ 1096 03d8 12       		.uleb128 0x12
+ 1097 03d9 01       		.uleb128 0x1
+ 1098 03da 51       		.byte	0x51
+ 1099 03db 02       		.uleb128 0x2
+ 1100 03dc 75       		.byte	0x75
+ 1101 03dd 00       		.sleb128 0
+ 1102 03de 12       		.uleb128 0x12
+ 1103 03df 01       		.uleb128 0x1
+ 1104 03e0 50       		.byte	0x50
+ 1105 03e1 01       		.uleb128 0x1
+ 1106 03e2 31       		.byte	0x31
+ 1107 03e3 00       		.byte	0
+ 1108 03e4 17       		.uleb128 0x17
+ 1109 03e5 6A000000 		.4byte	.LVL38
+ 1110 03e9 6A070000 		.4byte	0x76a
+ 1111 03ed F8030000 		.4byte	0x3f8
+ 1112 03f1 12       		.uleb128 0x12
+ 1113 03f2 01       		.uleb128 0x1
+ 1114 03f3 50       		.byte	0x50
+ 1115 03f4 02       		.uleb128 0x2
+ 1116 03f5 74       		.byte	0x74
+ 1117 03f6 00       		.sleb128 0
+ 1118 03f7 00       		.byte	0
+ 1119 03f8 17       		.uleb128 0x17
+ 1120 03f9 72000000 		.4byte	.LVL39
+ 1121 03fd 3E070000 		.4byte	0x73e
+ 1122 0401 12040000 		.4byte	0x412
+ 1123 0405 12       		.uleb128 0x12
+ 1124 0406 01       		.uleb128 0x1
+ 1125 0407 51       		.byte	0x51
+ 1126 0408 02       		.uleb128 0x2
+ 1127 0409 76       		.byte	0x76
+ARM GAS  C:\Users\ELECTR~1\AppData\Local\Temp\cc8evJ81.s 			page 30
+
+
+ 1128 040a 00       		.sleb128 0
+ 1129 040b 12       		.uleb128 0x12
+ 1130 040c 01       		.uleb128 0x1
+ 1131 040d 50       		.byte	0x50
+ 1132 040e 02       		.uleb128 0x2
+ 1133 040f 74       		.byte	0x74
+ 1134 0410 00       		.sleb128 0
+ 1135 0411 00       		.byte	0
+ 1136 0412 17       		.uleb128 0x17
+ 1137 0413 7A000000 		.4byte	.LVL40
+ 1138 0417 54070000 		.4byte	0x754
+ 1139 041b 2B040000 		.4byte	0x42b
+ 1140 041f 12       		.uleb128 0x12
+ 1141 0420 01       		.uleb128 0x1
+ 1142 0421 51       		.byte	0x51
+ 1143 0422 02       		.uleb128 0x2
+ 1144 0423 75       		.byte	0x75
+ 1145 0424 00       		.sleb128 0
+ 1146 0425 12       		.uleb128 0x12
+ 1147 0426 01       		.uleb128 0x1
+ 1148 0427 50       		.byte	0x50
+ 1149 0428 01       		.uleb128 0x1
+ 1150 0429 31       		.byte	0x31
+ 1151 042a 00       		.byte	0
+ 1152 042b 17       		.uleb128 0x17
+ 1153 042c 80000000 		.4byte	.LVL41
+ 1154 0430 7B070000 		.4byte	0x77b
+ 1155 0434 3F040000 		.4byte	0x43f
+ 1156 0438 12       		.uleb128 0x12
+ 1157 0439 01       		.uleb128 0x1
+ 1158 043a 50       		.byte	0x50
+ 1159 043b 02       		.uleb128 0x2
+ 1160 043c 74       		.byte	0x74
+ 1161 043d 00       		.sleb128 0
+ 1162 043e 00       		.byte	0
+ 1163 043f 17       		.uleb128 0x17
+ 1164 0440 86000000 		.4byte	.LVL42
+ 1165 0444 F8020000 		.4byte	0x2f8
+ 1166 0448 53040000 		.4byte	0x453
+ 1167 044c 12       		.uleb128 0x12
+ 1168 044d 01       		.uleb128 0x1
+ 1169 044e 50       		.byte	0x50
+ 1170 044f 02       		.uleb128 0x2
+ 1171 0450 74       		.byte	0x74
+ 1172 0451 00       		.sleb128 0
+ 1173 0452 00       		.byte	0
+ 1174 0453 11       		.uleb128 0x11
+ 1175 0454 90000000 		.4byte	.LVL44
+ 1176 0458 4E020000 		.4byte	0x24e
+ 1177 045c 12       		.uleb128 0x12
+ 1178 045d 01       		.uleb128 0x1
+ 1179 045e 50       		.byte	0x50
+ 1180 045f 02       		.uleb128 0x2
+ 1181 0460 74       		.byte	0x74
+ 1182 0461 00       		.sleb128 0
+ 1183 0462 00       		.byte	0
+ 1184 0463 00       		.byte	0
+ARM GAS  C:\Users\ELECTR~1\AppData\Local\Temp\cc8evJ81.s 			page 31
+
+
+ 1185 0464 14       		.uleb128 0x14
+ 1186 0465 17050000 		.4byte	.LASF49
+ 1187 0469 01       		.byte	0x1
+ 1188 046a 9301     		.2byte	0x193
+ 1189 046c 00000000 		.4byte	.LFB40
+ 1190 0470 1C000000 		.4byte	.LFE40-.LFB40
+ 1191 0474 01       		.uleb128 0x1
+ 1192 0475 9C       		.byte	0x9c
+ 1193 0476 99040000 		.4byte	0x499
+ 1194 047a 19       		.uleb128 0x19
+ 1195 047b B3020000 		.4byte	.LASF45
+ 1196 047f 01       		.byte	0x1
+ 1197 0480 9301     		.2byte	0x193
+ 1198 0482 81000000 		.4byte	0x81
+ 1199 0486 01       		.uleb128 0x1
+ 1200 0487 50       		.byte	0x50
+ 1201 0488 16       		.uleb128 0x16
+ 1202 0489 FC010000 		.4byte	.LASF50
+ 1203 048d 01       		.byte	0x1
+ 1204 048e 9301     		.2byte	0x193
+ 1205 0490 81000000 		.4byte	0x81
+ 1206 0494 83010000 		.4byte	.LLST9
+ 1207 0498 00       		.byte	0
+ 1208 0499 1A       		.uleb128 0x1a
+ 1209 049a 64010000 		.4byte	.LASF51
+ 1210 049e 01       		.byte	0x1
+ 1211 049f B501     		.2byte	0x1b5
+ 1212 04a1 6B000000 		.4byte	0x6b
+ 1213 04a5 00000000 		.4byte	.LFB41
+ 1214 04a9 0C000000 		.4byte	.LFE41-.LFB41
+ 1215 04ad 01       		.uleb128 0x1
+ 1216 04ae 9C       		.byte	0x9c
+ 1217 04af C4040000 		.4byte	0x4c4
+ 1218 04b3 16       		.uleb128 0x16
+ 1219 04b4 B3020000 		.4byte	.LASF45
+ 1220 04b8 01       		.byte	0x1
+ 1221 04b9 B501     		.2byte	0x1b5
+ 1222 04bb 81000000 		.4byte	0x81
+ 1223 04bf A1010000 		.4byte	.LLST10
+ 1224 04c3 00       		.byte	0
+ 1225 04c4 1A       		.uleb128 0x1a
+ 1226 04c5 29010000 		.4byte	.LASF52
+ 1227 04c9 01       		.byte	0x1
+ 1228 04ca D101     		.2byte	0x1d1
+ 1229 04cc 76000000 		.4byte	0x76
+ 1230 04d0 00000000 		.4byte	.LFB42
+ 1231 04d4 10000000 		.4byte	.LFE42-.LFB42
+ 1232 04d8 01       		.uleb128 0x1
+ 1233 04d9 9C       		.byte	0x9c
+ 1234 04da EF040000 		.4byte	0x4ef
+ 1235 04de 16       		.uleb128 0x16
+ 1236 04df B3020000 		.4byte	.LASF45
+ 1237 04e3 01       		.byte	0x1
+ 1238 04e4 D101     		.2byte	0x1d1
+ 1239 04e6 81000000 		.4byte	0x81
+ 1240 04ea C2010000 		.4byte	.LLST11
+ 1241 04ee 00       		.byte	0
+ARM GAS  C:\Users\ELECTR~1\AppData\Local\Temp\cc8evJ81.s 			page 32
+
+
+ 1242 04ef 1B       		.uleb128 0x1b
+ 1243 04f0 5E040000 		.4byte	.LASF53
+ 1244 04f4 01       		.byte	0x1
+ 1245 04f5 EC01     		.2byte	0x1ec
+ 1246 04f7 76000000 		.4byte	0x76
+ 1247 04fb 00000000 		.4byte	.LFB43
+ 1248 04ff 20000000 		.4byte	.LFE43-.LFB43
+ 1249 0503 01       		.uleb128 0x1
+ 1250 0504 9C       		.byte	0x9c
+ 1251 0505 1A050000 		.4byte	0x51a
+ 1252 0509 16       		.uleb128 0x16
+ 1253 050a B3020000 		.4byte	.LASF45
+ 1254 050e 01       		.byte	0x1
+ 1255 050f EC01     		.2byte	0x1ec
+ 1256 0511 81000000 		.4byte	0x81
+ 1257 0515 E3010000 		.4byte	.LLST12
+ 1258 0519 00       		.byte	0
+ 1259 051a 1C       		.uleb128 0x1c
+ 1260 051b 76000000 		.4byte	0x76
+ 1261 051f 2A050000 		.4byte	0x52a
+ 1262 0523 1D       		.uleb128 0x1d
+ 1263 0524 B2000000 		.4byte	0xb2
+ 1264 0528 04       		.byte	0x4
+ 1265 0529 00       		.byte	0
+ 1266 052a 1E       		.uleb128 0x1e
+ 1267 052b DB010000 		.4byte	.LASF54
+ 1268 052f 04       		.byte	0x4
+ 1269 0530 D403     		.2byte	0x3d4
+ 1270 0532 1A050000 		.4byte	0x51a
+ 1271 0536 1C       		.uleb128 0x1c
+ 1272 0537 6B000000 		.4byte	0x6b
+ 1273 053b 46050000 		.4byte	0x546
+ 1274 053f 1D       		.uleb128 0x1d
+ 1275 0540 B2000000 		.4byte	0xb2
+ 1276 0544 04       		.byte	0x4
+ 1277 0545 00       		.byte	0
+ 1278 0546 1E       		.uleb128 0x1e
+ 1279 0547 6C050000 		.4byte	.LASF55
+ 1280 054b 04       		.byte	0x4
+ 1281 054c DA03     		.2byte	0x3da
+ 1282 054e 36050000 		.4byte	0x536
+ 1283 0552 1E       		.uleb128 0x1e
+ 1284 0553 BA020000 		.4byte	.LASF56
+ 1285 0557 04       		.byte	0x4
+ 1286 0558 DB03     		.2byte	0x3db
+ 1287 055a 36050000 		.4byte	0x536
+ 1288 055e 1C       		.uleb128 0x1c
+ 1289 055f 81000000 		.4byte	0x81
+ 1290 0563 6E050000 		.4byte	0x56e
+ 1291 0567 1D       		.uleb128 0x1d
+ 1292 0568 B2000000 		.4byte	0xb2
+ 1293 056c 00       		.byte	0
+ 1294 056d 00       		.byte	0
+ 1295 056e 1E       		.uleb128 0x1e
+ 1296 056f 43000000 		.4byte	.LASF57
+ 1297 0573 04       		.byte	0x4
+ 1298 0574 E203     		.2byte	0x3e2
+ARM GAS  C:\Users\ELECTR~1\AppData\Local\Temp\cc8evJ81.s 			page 33
+
+
+ 1299 0576 5E050000 		.4byte	0x55e
+ 1300 057a 1E       		.uleb128 0x1e
+ 1301 057b BE060000 		.4byte	.LASF58
+ 1302 057f 04       		.byte	0x4
+ 1303 0580 E403     		.2byte	0x3e4
+ 1304 0582 36050000 		.4byte	0x536
+ 1305 0586 1E       		.uleb128 0x1e
+ 1306 0587 51050000 		.4byte	.LASF59
+ 1307 058b 04       		.byte	0x4
+ 1308 058c E503     		.2byte	0x3e5
+ 1309 058e 36050000 		.4byte	0x536
+ 1310 0592 1E       		.uleb128 0x1e
+ 1311 0593 15010000 		.4byte	.LASF60
+ 1312 0597 04       		.byte	0x4
+ 1313 0598 F503     		.2byte	0x3f5
+ 1314 059a 9E050000 		.4byte	0x59e
+ 1315 059e 0A       		.uleb128 0xa
+ 1316 059f 36050000 		.4byte	0x536
+ 1317 05a3 1E       		.uleb128 0x1e
+ 1318 05a4 CA000000 		.4byte	.LASF61
+ 1319 05a8 05       		.byte	0x5
+ 1320 05a9 2601     		.2byte	0x126
+ 1321 05ab 36050000 		.4byte	0x536
+ 1322 05af 1C       		.uleb128 0x1c
+ 1323 05b0 6B000000 		.4byte	0x6b
+ 1324 05b4 BF050000 		.4byte	0x5bf
+ 1325 05b8 1D       		.uleb128 0x1d
+ 1326 05b9 B2000000 		.4byte	0xb2
+ 1327 05bd 00       		.byte	0
+ 1328 05be 00       		.byte	0
+ 1329 05bf 1E       		.uleb128 0x1e
+ 1330 05c0 4E020000 		.4byte	.LASF62
+ 1331 05c4 05       		.byte	0x5
+ 1332 05c5 2E01     		.2byte	0x12e
+ 1333 05c7 AF050000 		.4byte	0x5af
+ 1334 05cb 1E       		.uleb128 0x1e
+ 1335 05cc BE050000 		.4byte	.LASF63
+ 1336 05d0 05       		.byte	0x5
+ 1337 05d1 2F01     		.2byte	0x12f
+ 1338 05d3 AF050000 		.4byte	0x5af
+ 1339 05d7 1E       		.uleb128 0x1e
+ 1340 05d8 F9040000 		.4byte	.LASF64
+ 1341 05dc 05       		.byte	0x5
+ 1342 05dd 3001     		.2byte	0x130
+ 1343 05df AF050000 		.4byte	0x5af
+ 1344 05e3 1E       		.uleb128 0x1e
+ 1345 05e4 75030000 		.4byte	.LASF65
+ 1346 05e8 05       		.byte	0x5
+ 1347 05e9 3101     		.2byte	0x131
+ 1348 05eb AF050000 		.4byte	0x5af
+ 1349 05ef 1E       		.uleb128 0x1e
+ 1350 05f0 9F040000 		.4byte	.LASF66
+ 1351 05f4 05       		.byte	0x5
+ 1352 05f5 3A01     		.2byte	0x13a
+ 1353 05f7 FB050000 		.4byte	0x5fb
+ 1354 05fb 0A       		.uleb128 0xa
+ 1355 05fc AF050000 		.4byte	0x5af
+ARM GAS  C:\Users\ELECTR~1\AppData\Local\Temp\cc8evJ81.s 			page 34
+
+
+ 1356 0600 1E       		.uleb128 0x1e
+ 1357 0601 15030000 		.4byte	.LASF67
+ 1358 0605 05       		.byte	0x5
+ 1359 0606 3B01     		.2byte	0x13b
+ 1360 0608 0C060000 		.4byte	0x60c
+ 1361 060c 0A       		.uleb128 0xa
+ 1362 060d AF050000 		.4byte	0x5af
+ 1363 0611 1C       		.uleb128 0x1c
+ 1364 0612 6B000000 		.4byte	0x6b
+ 1365 0616 21060000 		.4byte	0x621
+ 1366 061a 1D       		.uleb128 0x1d
+ 1367 061b B2000000 		.4byte	0xb2
+ 1368 061f 0F       		.byte	0xf
+ 1369 0620 00       		.byte	0
+ 1370 0621 1F       		.uleb128 0x1f
+ 1371 0622 90040000 		.4byte	.LASF68
+ 1372 0626 01       		.byte	0x1
+ 1373 0627 1E       		.byte	0x1e
+ 1374 0628 32060000 		.4byte	0x632
+ 1375 062c 05       		.uleb128 0x5
+ 1376 062d 03       		.byte	0x3
+ 1377 062e 00000000 		.4byte	prescalerTable
+ 1378 0632 0A       		.uleb128 0xa
+ 1379 0633 11060000 		.4byte	0x611
+ 1380 0637 1F       		.uleb128 0x1f
+ 1381 0638 02020000 		.4byte	.LASF69
+ 1382 063c 01       		.byte	0x1
+ 1383 063d 4F       		.byte	0x4f
+ 1384 063e 36050000 		.4byte	0x536
+ 1385 0642 05       		.uleb128 0x5
+ 1386 0643 03       		.byte	0x3
+ 1387 0644 00000000 		.4byte	noiseEnvelopeTbl
+ 1388 0648 1F       		.uleb128 0x1f
+ 1389 0649 A9050000 		.4byte	.LASF70
+ 1390 064d 01       		.byte	0x1
+ 1391 064e 50       		.byte	0x50
+ 1392 064f 36050000 		.4byte	0x536
+ 1393 0653 05       		.uleb128 0x5
+ 1394 0654 03       		.byte	0x3
+ 1395 0655 00000000 		.4byte	runningDifferenceTbl
+ 1396 0659 1F       		.uleb128 0x1f
+ 1397 065a 80040000 		.4byte	.LASF71
+ 1398 065e 01       		.byte	0x1
+ 1399 065f 51       		.byte	0x51
+ 1400 0660 36050000 		.4byte	0x536
+ 1401 0664 05       		.uleb128 0x5
+ 1402 0665 03       		.byte	0x3
+ 1403 0666 00000000 		.4byte	signRegisterTbl
+ 1404 066a 1F       		.uleb128 0x1f
+ 1405 066b DF020000 		.4byte	.LASF72
+ 1406 066f 01       		.byte	0x1
+ 1407 0670 52       		.byte	0x52
+ 1408 0671 1A050000 		.4byte	0x51a
+ 1409 0675 05       		.uleb128 0x5
+ 1410 0676 03       		.byte	0x3
+ 1411 0677 00000000 		.4byte	sampleMinTbl
+ 1412 067b 1F       		.uleb128 0x1f
+ARM GAS  C:\Users\ELECTR~1\AppData\Local\Temp\cc8evJ81.s 			page 35
+
+
+ 1413 067c 20020000 		.4byte	.LASF73
+ 1414 0680 01       		.byte	0x1
+ 1415 0681 53       		.byte	0x53
+ 1416 0682 1A050000 		.4byte	0x51a
+ 1417 0686 05       		.uleb128 0x5
+ 1418 0687 03       		.byte	0x3
+ 1419 0688 00000000 		.4byte	sampleMaxTbl
+ 1420 068c 1F       		.uleb128 0x1f
+ 1421 068d 82050000 		.4byte	.LASF74
+ 1422 0691 01       		.byte	0x1
+ 1423 0692 54       		.byte	0x54
+ 1424 0693 1A050000 		.4byte	0x51a
+ 1425 0697 05       		.uleb128 0x5
+ 1426 0698 03       		.byte	0x3
+ 1427 0699 00000000 		.4byte	previousSampleTbl
+ 1428 069d 1F       		.uleb128 0x1f
+ 1429 069e 2D050000 		.4byte	.LASF75
+ 1430 06a2 01       		.byte	0x1
+ 1431 06a3 55       		.byte	0x55
+ 1432 06a4 36050000 		.4byte	0x536
+ 1433 06a8 05       		.uleb128 0x5
+ 1434 06a9 03       		.byte	0x3
+ 1435 06aa 00000000 		.4byte	kValueTbl
+ 1436 06ae 1F       		.uleb128 0x1f
+ 1437 06af 5B030000 		.4byte	.LASF76
+ 1438 06b3 01       		.byte	0x1
+ 1439 06b4 57       		.byte	0x57
+ 1440 06b5 36050000 		.4byte	0x536
+ 1441 06b9 05       		.uleb128 0x5
+ 1442 06ba 03       		.byte	0x3
+ 1443 06bb 00000000 		.4byte	SMS_LIB_SensorSensitivity
+ 1444 06bf 1F       		.uleb128 0x1f
+ 1445 06c0 B0060000 		.4byte	.LASF77
+ 1446 06c4 01       		.byte	0x1
+ 1447 06c5 5B       		.byte	0x5b
+ 1448 06c6 43020000 		.4byte	0x243
+ 1449 06ca 05       		.uleb128 0x5
+ 1450 06cb 03       		.byte	0x3
+ 1451 06cc 00000000 		.4byte	Slider_config
+ 1452 06d0 1F       		.uleb128 0x1f
+ 1453 06d1 EE000000 		.4byte	.LASF78
+ 1454 06d5 01       		.byte	0x1
+ 1455 06d6 5C       		.byte	0x5c
+ 1456 06d7 3E020000 		.4byte	0x23e
+ 1457 06db 05       		.uleb128 0x5
+ 1458 06dc 03       		.byte	0x3
+ 1459 06dd 00000000 		.4byte	Slider_configPointers
+ 1460 06e1 20       		.uleb128 0x20
+ 1461 06e2 96020000 		.4byte	.LASF79
+ 1462 06e6 03       		.byte	0x3
+ 1463 06e7 79       		.byte	0x79
+ 1464 06e8 0B070000 		.4byte	0x70b
+ 1465 06ec 0C       		.uleb128 0xc
+ 1466 06ed 0B070000 		.4byte	0x70b
+ 1467 06f1 0C       		.uleb128 0xc
+ 1468 06f2 76010000 		.4byte	0x176
+ 1469 06f6 0C       		.uleb128 0xc
+ARM GAS  C:\Users\ELECTR~1\AppData\Local\Temp\cc8evJ81.s 			page 36
+
+
+ 1470 06f7 11070000 		.4byte	0x711
+ 1471 06fb 0C       		.uleb128 0xc
+ 1472 06fc 76010000 		.4byte	0x176
+ 1473 0700 0C       		.uleb128 0xc
+ 1474 0701 6A010000 		.4byte	0x16a
+ 1475 0705 0C       		.uleb128 0xc
+ 1476 0706 6A010000 		.4byte	0x16a
+ 1477 070a 00       		.byte	0
+ 1478 070b 09       		.uleb128 0x9
+ 1479 070c 04       		.byte	0x4
+ 1480 070d 43020000 		.4byte	0x243
+ 1481 0711 09       		.uleb128 0x9
+ 1482 0712 04       		.byte	0x4
+ 1483 0713 17070000 		.4byte	0x717
+ 1484 0717 0A       		.uleb128 0xa
+ 1485 0718 76000000 		.4byte	0x76
+ 1486 071c 20       		.uleb128 0x20
+ 1487 071d 4A010000 		.4byte	.LASF80
+ 1488 0721 06       		.byte	0x6
+ 1489 0722 4E       		.byte	0x4e
+ 1490 0723 2D070000 		.4byte	0x72d
+ 1491 0727 0C       		.uleb128 0xc
+ 1492 0728 6B000000 		.4byte	0x6b
+ 1493 072c 00       		.byte	0
+ 1494 072d 20       		.uleb128 0x20
+ 1495 072e ED040000 		.4byte	.LASF81
+ 1496 0732 06       		.byte	0x6
+ 1497 0733 4C       		.byte	0x4c
+ 1498 0734 3E070000 		.4byte	0x73e
+ 1499 0738 0C       		.uleb128 0xc
+ 1500 0739 6B000000 		.4byte	0x6b
+ 1501 073d 00       		.byte	0
+ 1502 073e 20       		.uleb128 0x20
+ 1503 073f F2020000 		.4byte	.LASF82
+ 1504 0743 03       		.byte	0x3
+ 1505 0744 7A       		.byte	0x7a
+ 1506 0745 54070000 		.4byte	0x754
+ 1507 0749 0C       		.uleb128 0xc
+ 1508 074a 0B070000 		.4byte	0x70b
+ 1509 074e 0C       		.uleb128 0xc
+ 1510 074f 76000000 		.4byte	0x76
+ 1511 0753 00       		.byte	0
+ 1512 0754 20       		.uleb128 0x20
+ 1513 0755 98000000 		.4byte	.LASF83
+ 1514 0759 04       		.byte	0x4
+ 1515 075a BD       		.byte	0xbd
+ 1516 075b 6A070000 		.4byte	0x76a
+ 1517 075f 0C       		.uleb128 0xc
+ 1518 0760 81000000 		.4byte	0x81
+ 1519 0764 0C       		.uleb128 0xc
+ 1520 0765 6A010000 		.4byte	0x16a
+ 1521 0769 00       		.byte	0
+ 1522 076a 20       		.uleb128 0x20
+ 1523 076b 43030000 		.4byte	.LASF84
+ 1524 076f 03       		.byte	0x3
+ 1525 0770 76       		.byte	0x76
+ 1526 0771 7B070000 		.4byte	0x77b
+ARM GAS  C:\Users\ELECTR~1\AppData\Local\Temp\cc8evJ81.s 			page 37
+
+
+ 1527 0775 0C       		.uleb128 0xc
+ 1528 0776 0B070000 		.4byte	0x70b
+ 1529 077a 00       		.byte	0
+ 1530 077b 21       		.uleb128 0x21
+ 1531 077c DB050000 		.4byte	.LASF89
+ 1532 0780 03       		.byte	0x3
+ 1533 0781 77       		.byte	0x77
+ 1534 0782 0C       		.uleb128 0xc
+ 1535 0783 0B070000 		.4byte	0x70b
+ 1536 0787 00       		.byte	0
+ 1537 0788 00       		.byte	0
+ 1538              		.section	.debug_abbrev,"",%progbits
+ 1539              	.Ldebug_abbrev0:
+ 1540 0000 01       		.uleb128 0x1
+ 1541 0001 11       		.uleb128 0x11
+ 1542 0002 01       		.byte	0x1
+ 1543 0003 25       		.uleb128 0x25
+ 1544 0004 0E       		.uleb128 0xe
+ 1545 0005 13       		.uleb128 0x13
+ 1546 0006 0B       		.uleb128 0xb
+ 1547 0007 03       		.uleb128 0x3
+ 1548 0008 0E       		.uleb128 0xe
+ 1549 0009 1B       		.uleb128 0x1b
+ 1550 000a 0E       		.uleb128 0xe
+ 1551 000b 55       		.uleb128 0x55
+ 1552 000c 17       		.uleb128 0x17
+ 1553 000d 11       		.uleb128 0x11
+ 1554 000e 01       		.uleb128 0x1
+ 1555 000f 10       		.uleb128 0x10
+ 1556 0010 17       		.uleb128 0x17
+ 1557 0011 00       		.byte	0
+ 1558 0012 00       		.byte	0
+ 1559 0013 02       		.uleb128 0x2
+ 1560 0014 24       		.uleb128 0x24
+ 1561 0015 00       		.byte	0
+ 1562 0016 0B       		.uleb128 0xb
+ 1563 0017 0B       		.uleb128 0xb
+ 1564 0018 3E       		.uleb128 0x3e
+ 1565 0019 0B       		.uleb128 0xb
+ 1566 001a 03       		.uleb128 0x3
+ 1567 001b 0E       		.uleb128 0xe
+ 1568 001c 00       		.byte	0
+ 1569 001d 00       		.byte	0
+ 1570 001e 03       		.uleb128 0x3
+ 1571 001f 24       		.uleb128 0x24
+ 1572 0020 00       		.byte	0
+ 1573 0021 0B       		.uleb128 0xb
+ 1574 0022 0B       		.uleb128 0xb
+ 1575 0023 3E       		.uleb128 0x3e
+ 1576 0024 0B       		.uleb128 0xb
+ 1577 0025 03       		.uleb128 0x3
+ 1578 0026 08       		.uleb128 0x8
+ 1579 0027 00       		.byte	0
+ 1580 0028 00       		.byte	0
+ 1581 0029 04       		.uleb128 0x4
+ 1582 002a 16       		.uleb128 0x16
+ 1583 002b 00       		.byte	0
+ARM GAS  C:\Users\ELECTR~1\AppData\Local\Temp\cc8evJ81.s 			page 38
+
+
+ 1584 002c 03       		.uleb128 0x3
+ 1585 002d 0E       		.uleb128 0xe
+ 1586 002e 3A       		.uleb128 0x3a
+ 1587 002f 0B       		.uleb128 0xb
+ 1588 0030 3B       		.uleb128 0x3b
+ 1589 0031 0B       		.uleb128 0xb
+ 1590 0032 49       		.uleb128 0x49
+ 1591 0033 13       		.uleb128 0x13
+ 1592 0034 00       		.byte	0
+ 1593 0035 00       		.byte	0
+ 1594 0036 05       		.uleb128 0x5
+ 1595 0037 16       		.uleb128 0x16
+ 1596 0038 00       		.byte	0
+ 1597 0039 03       		.uleb128 0x3
+ 1598 003a 0E       		.uleb128 0xe
+ 1599 003b 3A       		.uleb128 0x3a
+ 1600 003c 0B       		.uleb128 0xb
+ 1601 003d 3B       		.uleb128 0x3b
+ 1602 003e 05       		.uleb128 0x5
+ 1603 003f 49       		.uleb128 0x49
+ 1604 0040 13       		.uleb128 0x13
+ 1605 0041 00       		.byte	0
+ 1606 0042 00       		.byte	0
+ 1607 0043 06       		.uleb128 0x6
+ 1608 0044 35       		.uleb128 0x35
+ 1609 0045 00       		.byte	0
+ 1610 0046 49       		.uleb128 0x49
+ 1611 0047 13       		.uleb128 0x13
+ 1612 0048 00       		.byte	0
+ 1613 0049 00       		.byte	0
+ 1614 004a 07       		.uleb128 0x7
+ 1615 004b 13       		.uleb128 0x13
+ 1616 004c 01       		.byte	0x1
+ 1617 004d 0B       		.uleb128 0xb
+ 1618 004e 0B       		.uleb128 0xb
+ 1619 004f 3A       		.uleb128 0x3a
+ 1620 0050 0B       		.uleb128 0xb
+ 1621 0051 3B       		.uleb128 0x3b
+ 1622 0052 0B       		.uleb128 0xb
+ 1623 0053 01       		.uleb128 0x1
+ 1624 0054 13       		.uleb128 0x13
+ 1625 0055 00       		.byte	0
+ 1626 0056 00       		.byte	0
+ 1627 0057 08       		.uleb128 0x8
+ 1628 0058 0D       		.uleb128 0xd
+ 1629 0059 00       		.byte	0
+ 1630 005a 03       		.uleb128 0x3
+ 1631 005b 0E       		.uleb128 0xe
+ 1632 005c 3A       		.uleb128 0x3a
+ 1633 005d 0B       		.uleb128 0xb
+ 1634 005e 3B       		.uleb128 0x3b
+ 1635 005f 0B       		.uleb128 0xb
+ 1636 0060 49       		.uleb128 0x49
+ 1637 0061 13       		.uleb128 0x13
+ 1638 0062 38       		.uleb128 0x38
+ 1639 0063 0B       		.uleb128 0xb
+ 1640 0064 00       		.byte	0
+ARM GAS  C:\Users\ELECTR~1\AppData\Local\Temp\cc8evJ81.s 			page 39
+
+
+ 1641 0065 00       		.byte	0
+ 1642 0066 09       		.uleb128 0x9
+ 1643 0067 0F       		.uleb128 0xf
+ 1644 0068 00       		.byte	0
+ 1645 0069 0B       		.uleb128 0xb
+ 1646 006a 0B       		.uleb128 0xb
+ 1647 006b 49       		.uleb128 0x49
+ 1648 006c 13       		.uleb128 0x13
+ 1649 006d 00       		.byte	0
+ 1650 006e 00       		.byte	0
+ 1651 006f 0A       		.uleb128 0xa
+ 1652 0070 26       		.uleb128 0x26
+ 1653 0071 00       		.byte	0
+ 1654 0072 49       		.uleb128 0x49
+ 1655 0073 13       		.uleb128 0x13
+ 1656 0074 00       		.byte	0
+ 1657 0075 00       		.byte	0
+ 1658 0076 0B       		.uleb128 0xb
+ 1659 0077 15       		.uleb128 0x15
+ 1660 0078 01       		.byte	0x1
+ 1661 0079 27       		.uleb128 0x27
+ 1662 007a 19       		.uleb128 0x19
+ 1663 007b 49       		.uleb128 0x49
+ 1664 007c 13       		.uleb128 0x13
+ 1665 007d 01       		.uleb128 0x1
+ 1666 007e 13       		.uleb128 0x13
+ 1667 007f 00       		.byte	0
+ 1668 0080 00       		.byte	0
+ 1669 0081 0C       		.uleb128 0xc
+ 1670 0082 05       		.uleb128 0x5
+ 1671 0083 00       		.byte	0
+ 1672 0084 49       		.uleb128 0x49
+ 1673 0085 13       		.uleb128 0x13
+ 1674 0086 00       		.byte	0
+ 1675 0087 00       		.byte	0
+ 1676 0088 0D       		.uleb128 0xd
+ 1677 0089 15       		.uleb128 0x15
+ 1678 008a 01       		.byte	0x1
+ 1679 008b 27       		.uleb128 0x27
+ 1680 008c 19       		.uleb128 0x19
+ 1681 008d 01       		.uleb128 0x1
+ 1682 008e 13       		.uleb128 0x13
+ 1683 008f 00       		.byte	0
+ 1684 0090 00       		.byte	0
+ 1685 0091 0E       		.uleb128 0xe
+ 1686 0092 2E       		.uleb128 0x2e
+ 1687 0093 01       		.byte	0x1
+ 1688 0094 3F       		.uleb128 0x3f
+ 1689 0095 19       		.uleb128 0x19
+ 1690 0096 03       		.uleb128 0x3
+ 1691 0097 0E       		.uleb128 0xe
+ 1692 0098 3A       		.uleb128 0x3a
+ 1693 0099 0B       		.uleb128 0xb
+ 1694 009a 3B       		.uleb128 0x3b
+ 1695 009b 0B       		.uleb128 0xb
+ 1696 009c 27       		.uleb128 0x27
+ 1697 009d 19       		.uleb128 0x19
+ARM GAS  C:\Users\ELECTR~1\AppData\Local\Temp\cc8evJ81.s 			page 40
+
+
+ 1698 009e 11       		.uleb128 0x11
+ 1699 009f 01       		.uleb128 0x1
+ 1700 00a0 12       		.uleb128 0x12
+ 1701 00a1 06       		.uleb128 0x6
+ 1702 00a2 40       		.uleb128 0x40
+ 1703 00a3 18       		.uleb128 0x18
+ 1704 00a4 9742     		.uleb128 0x2117
+ 1705 00a6 19       		.uleb128 0x19
+ 1706 00a7 01       		.uleb128 0x1
+ 1707 00a8 13       		.uleb128 0x13
+ 1708 00a9 00       		.byte	0
+ 1709 00aa 00       		.byte	0
+ 1710 00ab 0F       		.uleb128 0xf
+ 1711 00ac 05       		.uleb128 0x5
+ 1712 00ad 00       		.byte	0
+ 1713 00ae 03       		.uleb128 0x3
+ 1714 00af 0E       		.uleb128 0xe
+ 1715 00b0 3A       		.uleb128 0x3a
+ 1716 00b1 0B       		.uleb128 0xb
+ 1717 00b2 3B       		.uleb128 0x3b
+ 1718 00b3 0B       		.uleb128 0xb
+ 1719 00b4 49       		.uleb128 0x49
+ 1720 00b5 13       		.uleb128 0x13
+ 1721 00b6 02       		.uleb128 0x2
+ 1722 00b7 17       		.uleb128 0x17
+ 1723 00b8 00       		.byte	0
+ 1724 00b9 00       		.byte	0
+ 1725 00ba 10       		.uleb128 0x10
+ 1726 00bb 34       		.uleb128 0x34
+ 1727 00bc 00       		.byte	0
+ 1728 00bd 03       		.uleb128 0x3
+ 1729 00be 0E       		.uleb128 0xe
+ 1730 00bf 3A       		.uleb128 0x3a
+ 1731 00c0 0B       		.uleb128 0xb
+ 1732 00c1 3B       		.uleb128 0x3b
+ 1733 00c2 0B       		.uleb128 0xb
+ 1734 00c3 49       		.uleb128 0x49
+ 1735 00c4 13       		.uleb128 0x13
+ 1736 00c5 02       		.uleb128 0x2
+ 1737 00c6 17       		.uleb128 0x17
+ 1738 00c7 00       		.byte	0
+ 1739 00c8 00       		.byte	0
+ 1740 00c9 11       		.uleb128 0x11
+ 1741 00ca 898201   		.uleb128 0x4109
+ 1742 00cd 01       		.byte	0x1
+ 1743 00ce 11       		.uleb128 0x11
+ 1744 00cf 01       		.uleb128 0x1
+ 1745 00d0 31       		.uleb128 0x31
+ 1746 00d1 13       		.uleb128 0x13
+ 1747 00d2 00       		.byte	0
+ 1748 00d3 00       		.byte	0
+ 1749 00d4 12       		.uleb128 0x12
+ 1750 00d5 8A8201   		.uleb128 0x410a
+ 1751 00d8 00       		.byte	0
+ 1752 00d9 02       		.uleb128 0x2
+ 1753 00da 18       		.uleb128 0x18
+ 1754 00db 9142     		.uleb128 0x2111
+ARM GAS  C:\Users\ELECTR~1\AppData\Local\Temp\cc8evJ81.s 			page 41
+
+
+ 1755 00dd 18       		.uleb128 0x18
+ 1756 00de 00       		.byte	0
+ 1757 00df 00       		.byte	0
+ 1758 00e0 13       		.uleb128 0x13
+ 1759 00e1 2E       		.uleb128 0x2e
+ 1760 00e2 00       		.byte	0
+ 1761 00e3 3F       		.uleb128 0x3f
+ 1762 00e4 19       		.uleb128 0x19
+ 1763 00e5 03       		.uleb128 0x3
+ 1764 00e6 0E       		.uleb128 0xe
+ 1765 00e7 3A       		.uleb128 0x3a
+ 1766 00e8 0B       		.uleb128 0xb
+ 1767 00e9 3B       		.uleb128 0x3b
+ 1768 00ea 05       		.uleb128 0x5
+ 1769 00eb 27       		.uleb128 0x27
+ 1770 00ec 19       		.uleb128 0x19
+ 1771 00ed 11       		.uleb128 0x11
+ 1772 00ee 01       		.uleb128 0x1
+ 1773 00ef 12       		.uleb128 0x12
+ 1774 00f0 06       		.uleb128 0x6
+ 1775 00f1 40       		.uleb128 0x40
+ 1776 00f2 18       		.uleb128 0x18
+ 1777 00f3 9742     		.uleb128 0x2117
+ 1778 00f5 19       		.uleb128 0x19
+ 1779 00f6 00       		.byte	0
+ 1780 00f7 00       		.byte	0
+ 1781 00f8 14       		.uleb128 0x14
+ 1782 00f9 2E       		.uleb128 0x2e
+ 1783 00fa 01       		.byte	0x1
+ 1784 00fb 3F       		.uleb128 0x3f
+ 1785 00fc 19       		.uleb128 0x19
+ 1786 00fd 03       		.uleb128 0x3
+ 1787 00fe 0E       		.uleb128 0xe
+ 1788 00ff 3A       		.uleb128 0x3a
+ 1789 0100 0B       		.uleb128 0xb
+ 1790 0101 3B       		.uleb128 0x3b
+ 1791 0102 05       		.uleb128 0x5
+ 1792 0103 27       		.uleb128 0x27
+ 1793 0104 19       		.uleb128 0x19
+ 1794 0105 11       		.uleb128 0x11
+ 1795 0106 01       		.uleb128 0x1
+ 1796 0107 12       		.uleb128 0x12
+ 1797 0108 06       		.uleb128 0x6
+ 1798 0109 40       		.uleb128 0x40
+ 1799 010a 18       		.uleb128 0x18
+ 1800 010b 9742     		.uleb128 0x2117
+ 1801 010d 19       		.uleb128 0x19
+ 1802 010e 01       		.uleb128 0x1
+ 1803 010f 13       		.uleb128 0x13
+ 1804 0110 00       		.byte	0
+ 1805 0111 00       		.byte	0
+ 1806 0112 15       		.uleb128 0x15
+ 1807 0113 34       		.uleb128 0x34
+ 1808 0114 00       		.byte	0
+ 1809 0115 03       		.uleb128 0x3
+ 1810 0116 0E       		.uleb128 0xe
+ 1811 0117 3A       		.uleb128 0x3a
+ARM GAS  C:\Users\ELECTR~1\AppData\Local\Temp\cc8evJ81.s 			page 42
+
+
+ 1812 0118 0B       		.uleb128 0xb
+ 1813 0119 3B       		.uleb128 0x3b
+ 1814 011a 05       		.uleb128 0x5
+ 1815 011b 49       		.uleb128 0x49
+ 1816 011c 13       		.uleb128 0x13
+ 1817 011d 02       		.uleb128 0x2
+ 1818 011e 17       		.uleb128 0x17
+ 1819 011f 00       		.byte	0
+ 1820 0120 00       		.byte	0
+ 1821 0121 16       		.uleb128 0x16
+ 1822 0122 05       		.uleb128 0x5
+ 1823 0123 00       		.byte	0
+ 1824 0124 03       		.uleb128 0x3
+ 1825 0125 0E       		.uleb128 0xe
+ 1826 0126 3A       		.uleb128 0x3a
+ 1827 0127 0B       		.uleb128 0xb
+ 1828 0128 3B       		.uleb128 0x3b
+ 1829 0129 05       		.uleb128 0x5
+ 1830 012a 49       		.uleb128 0x49
+ 1831 012b 13       		.uleb128 0x13
+ 1832 012c 02       		.uleb128 0x2
+ 1833 012d 17       		.uleb128 0x17
+ 1834 012e 00       		.byte	0
+ 1835 012f 00       		.byte	0
+ 1836 0130 17       		.uleb128 0x17
+ 1837 0131 898201   		.uleb128 0x4109
+ 1838 0134 01       		.byte	0x1
+ 1839 0135 11       		.uleb128 0x11
+ 1840 0136 01       		.uleb128 0x1
+ 1841 0137 31       		.uleb128 0x31
+ 1842 0138 13       		.uleb128 0x13
+ 1843 0139 01       		.uleb128 0x1
+ 1844 013a 13       		.uleb128 0x13
+ 1845 013b 00       		.byte	0
+ 1846 013c 00       		.byte	0
+ 1847 013d 18       		.uleb128 0x18
+ 1848 013e 898201   		.uleb128 0x4109
+ 1849 0141 00       		.byte	0
+ 1850 0142 11       		.uleb128 0x11
+ 1851 0143 01       		.uleb128 0x1
+ 1852 0144 31       		.uleb128 0x31
+ 1853 0145 13       		.uleb128 0x13
+ 1854 0146 00       		.byte	0
+ 1855 0147 00       		.byte	0
+ 1856 0148 19       		.uleb128 0x19
+ 1857 0149 05       		.uleb128 0x5
+ 1858 014a 00       		.byte	0
+ 1859 014b 03       		.uleb128 0x3
+ 1860 014c 0E       		.uleb128 0xe
+ 1861 014d 3A       		.uleb128 0x3a
+ 1862 014e 0B       		.uleb128 0xb
+ 1863 014f 3B       		.uleb128 0x3b
+ 1864 0150 05       		.uleb128 0x5
+ 1865 0151 49       		.uleb128 0x49
+ 1866 0152 13       		.uleb128 0x13
+ 1867 0153 02       		.uleb128 0x2
+ 1868 0154 18       		.uleb128 0x18
+ARM GAS  C:\Users\ELECTR~1\AppData\Local\Temp\cc8evJ81.s 			page 43
+
+
+ 1869 0155 00       		.byte	0
+ 1870 0156 00       		.byte	0
+ 1871 0157 1A       		.uleb128 0x1a
+ 1872 0158 2E       		.uleb128 0x2e
+ 1873 0159 01       		.byte	0x1
+ 1874 015a 3F       		.uleb128 0x3f
+ 1875 015b 19       		.uleb128 0x19
+ 1876 015c 03       		.uleb128 0x3
+ 1877 015d 0E       		.uleb128 0xe
+ 1878 015e 3A       		.uleb128 0x3a
+ 1879 015f 0B       		.uleb128 0xb
+ 1880 0160 3B       		.uleb128 0x3b
+ 1881 0161 05       		.uleb128 0x5
+ 1882 0162 27       		.uleb128 0x27
+ 1883 0163 19       		.uleb128 0x19
+ 1884 0164 49       		.uleb128 0x49
+ 1885 0165 13       		.uleb128 0x13
+ 1886 0166 11       		.uleb128 0x11
+ 1887 0167 01       		.uleb128 0x1
+ 1888 0168 12       		.uleb128 0x12
+ 1889 0169 06       		.uleb128 0x6
+ 1890 016a 40       		.uleb128 0x40
+ 1891 016b 18       		.uleb128 0x18
+ 1892 016c 9742     		.uleb128 0x2117
+ 1893 016e 19       		.uleb128 0x19
+ 1894 016f 01       		.uleb128 0x1
+ 1895 0170 13       		.uleb128 0x13
+ 1896 0171 00       		.byte	0
+ 1897 0172 00       		.byte	0
+ 1898 0173 1B       		.uleb128 0x1b
+ 1899 0174 2E       		.uleb128 0x2e
+ 1900 0175 01       		.byte	0x1
+ 1901 0176 3F       		.uleb128 0x3f
+ 1902 0177 19       		.uleb128 0x19
+ 1903 0178 03       		.uleb128 0x3
+ 1904 0179 0E       		.uleb128 0xe
+ 1905 017a 3A       		.uleb128 0x3a
+ 1906 017b 0B       		.uleb128 0xb
+ 1907 017c 3B       		.uleb128 0x3b
+ 1908 017d 05       		.uleb128 0x5
+ 1909 017e 27       		.uleb128 0x27
+ 1910 017f 19       		.uleb128 0x19
+ 1911 0180 49       		.uleb128 0x49
+ 1912 0181 13       		.uleb128 0x13
+ 1913 0182 11       		.uleb128 0x11
+ 1914 0183 01       		.uleb128 0x1
+ 1915 0184 12       		.uleb128 0x12
+ 1916 0185 06       		.uleb128 0x6
+ 1917 0186 40       		.uleb128 0x40
+ 1918 0187 18       		.uleb128 0x18
+ 1919 0188 9642     		.uleb128 0x2116
+ 1920 018a 19       		.uleb128 0x19
+ 1921 018b 01       		.uleb128 0x1
+ 1922 018c 13       		.uleb128 0x13
+ 1923 018d 00       		.byte	0
+ 1924 018e 00       		.byte	0
+ 1925 018f 1C       		.uleb128 0x1c
+ARM GAS  C:\Users\ELECTR~1\AppData\Local\Temp\cc8evJ81.s 			page 44
+
+
+ 1926 0190 01       		.uleb128 0x1
+ 1927 0191 01       		.byte	0x1
+ 1928 0192 49       		.uleb128 0x49
+ 1929 0193 13       		.uleb128 0x13
+ 1930 0194 01       		.uleb128 0x1
+ 1931 0195 13       		.uleb128 0x13
+ 1932 0196 00       		.byte	0
+ 1933 0197 00       		.byte	0
+ 1934 0198 1D       		.uleb128 0x1d
+ 1935 0199 21       		.uleb128 0x21
+ 1936 019a 00       		.byte	0
+ 1937 019b 49       		.uleb128 0x49
+ 1938 019c 13       		.uleb128 0x13
+ 1939 019d 2F       		.uleb128 0x2f
+ 1940 019e 0B       		.uleb128 0xb
+ 1941 019f 00       		.byte	0
+ 1942 01a0 00       		.byte	0
+ 1943 01a1 1E       		.uleb128 0x1e
+ 1944 01a2 34       		.uleb128 0x34
+ 1945 01a3 00       		.byte	0
+ 1946 01a4 03       		.uleb128 0x3
+ 1947 01a5 0E       		.uleb128 0xe
+ 1948 01a6 3A       		.uleb128 0x3a
+ 1949 01a7 0B       		.uleb128 0xb
+ 1950 01a8 3B       		.uleb128 0x3b
+ 1951 01a9 05       		.uleb128 0x5
+ 1952 01aa 49       		.uleb128 0x49
+ 1953 01ab 13       		.uleb128 0x13
+ 1954 01ac 3F       		.uleb128 0x3f
+ 1955 01ad 19       		.uleb128 0x19
+ 1956 01ae 3C       		.uleb128 0x3c
+ 1957 01af 19       		.uleb128 0x19
+ 1958 01b0 00       		.byte	0
+ 1959 01b1 00       		.byte	0
+ 1960 01b2 1F       		.uleb128 0x1f
+ 1961 01b3 34       		.uleb128 0x34
+ 1962 01b4 00       		.byte	0
+ 1963 01b5 03       		.uleb128 0x3
+ 1964 01b6 0E       		.uleb128 0xe
+ 1965 01b7 3A       		.uleb128 0x3a
+ 1966 01b8 0B       		.uleb128 0xb
+ 1967 01b9 3B       		.uleb128 0x3b
+ 1968 01ba 0B       		.uleb128 0xb
+ 1969 01bb 49       		.uleb128 0x49
+ 1970 01bc 13       		.uleb128 0x13
+ 1971 01bd 3F       		.uleb128 0x3f
+ 1972 01be 19       		.uleb128 0x19
+ 1973 01bf 02       		.uleb128 0x2
+ 1974 01c0 18       		.uleb128 0x18
+ 1975 01c1 00       		.byte	0
+ 1976 01c2 00       		.byte	0
+ 1977 01c3 20       		.uleb128 0x20
+ 1978 01c4 2E       		.uleb128 0x2e
+ 1979 01c5 01       		.byte	0x1
+ 1980 01c6 3F       		.uleb128 0x3f
+ 1981 01c7 19       		.uleb128 0x19
+ 1982 01c8 03       		.uleb128 0x3
+ARM GAS  C:\Users\ELECTR~1\AppData\Local\Temp\cc8evJ81.s 			page 45
+
+
+ 1983 01c9 0E       		.uleb128 0xe
+ 1984 01ca 3A       		.uleb128 0x3a
+ 1985 01cb 0B       		.uleb128 0xb
+ 1986 01cc 3B       		.uleb128 0x3b
+ 1987 01cd 0B       		.uleb128 0xb
+ 1988 01ce 27       		.uleb128 0x27
+ 1989 01cf 19       		.uleb128 0x19
+ 1990 01d0 3C       		.uleb128 0x3c
+ 1991 01d1 19       		.uleb128 0x19
+ 1992 01d2 01       		.uleb128 0x1
+ 1993 01d3 13       		.uleb128 0x13
+ 1994 01d4 00       		.byte	0
+ 1995 01d5 00       		.byte	0
+ 1996 01d6 21       		.uleb128 0x21
+ 1997 01d7 2E       		.uleb128 0x2e
+ 1998 01d8 01       		.byte	0x1
+ 1999 01d9 3F       		.uleb128 0x3f
+ 2000 01da 19       		.uleb128 0x19
+ 2001 01db 03       		.uleb128 0x3
+ 2002 01dc 0E       		.uleb128 0xe
+ 2003 01dd 3A       		.uleb128 0x3a
+ 2004 01de 0B       		.uleb128 0xb
+ 2005 01df 3B       		.uleb128 0x3b
+ 2006 01e0 0B       		.uleb128 0xb
+ 2007 01e1 27       		.uleb128 0x27
+ 2008 01e2 19       		.uleb128 0x19
+ 2009 01e3 3C       		.uleb128 0x3c
+ 2010 01e4 19       		.uleb128 0x19
+ 2011 01e5 00       		.byte	0
+ 2012 01e6 00       		.byte	0
+ 2013 01e7 00       		.byte	0
+ 2014              		.section	.debug_loc,"",%progbits
+ 2015              	.Ldebug_loc0:
+ 2016              	.LLST0:
+ 2017 0000 00000000 		.4byte	.LVL0
+ 2018 0004 14000000 		.4byte	.LVL2
+ 2019 0008 0100     		.2byte	0x1
+ 2020 000a 50       		.byte	0x50
+ 2021 000b 14000000 		.4byte	.LVL2
+ 2022 000f 7C000000 		.4byte	.LFE36
+ 2023 0013 0400     		.2byte	0x4
+ 2024 0015 F3       		.byte	0xf3
+ 2025 0016 01       		.uleb128 0x1
+ 2026 0017 50       		.byte	0x50
+ 2027 0018 9F       		.byte	0x9f
+ 2028 0019 00000000 		.4byte	0
+ 2029 001d 00000000 		.4byte	0
+ 2030              	.LLST1:
+ 2031 0021 1E000000 		.4byte	.LVL4
+ 2032 0025 2A000000 		.4byte	.LVL5
+ 2033 0029 0100     		.2byte	0x1
+ 2034 002b 53       		.byte	0x53
+ 2035 002c 2A000000 		.4byte	.LVL5
+ 2036 0030 30000000 		.4byte	.LVL6
+ 2037 0034 0500     		.2byte	0x5
+ 2038 0036 76       		.byte	0x76
+ 2039 0037 00       		.sleb128 0
+ARM GAS  C:\Users\ELECTR~1\AppData\Local\Temp\cc8evJ81.s 			page 46
+
+
+ 2040 0038 74       		.byte	0x74
+ 2041 0039 00       		.sleb128 0
+ 2042 003a 22       		.byte	0x22
+ 2043 003b 30000000 		.4byte	.LVL6
+ 2044 003f 36000000 		.4byte	.LVL7
+ 2045 0043 0100     		.2byte	0x1
+ 2046 0045 53       		.byte	0x53
+ 2047 0046 36000000 		.4byte	.LVL7
+ 2048 004a 3C000000 		.4byte	.LVL8
+ 2049 004e 0500     		.2byte	0x5
+ 2050 0050 76       		.byte	0x76
+ 2051 0051 00       		.sleb128 0
+ 2052 0052 74       		.byte	0x74
+ 2053 0053 00       		.sleb128 0
+ 2054 0054 22       		.byte	0x22
+ 2055 0055 3C000000 		.4byte	.LVL8
+ 2056 0059 42000000 		.4byte	.LVL9
+ 2057 005d 0100     		.2byte	0x1
+ 2058 005f 53       		.byte	0x53
+ 2059 0060 42000000 		.4byte	.LVL9
+ 2060 0064 48000000 		.4byte	.LVL10
+ 2061 0068 0500     		.2byte	0x5
+ 2062 006a 76       		.byte	0x76
+ 2063 006b 00       		.sleb128 0
+ 2064 006c 74       		.byte	0x74
+ 2065 006d 00       		.sleb128 0
+ 2066 006e 22       		.byte	0x22
+ 2067 006f 48000000 		.4byte	.LVL10
+ 2068 0073 4E000000 		.4byte	.LVL11
+ 2069 0077 0100     		.2byte	0x1
+ 2070 0079 53       		.byte	0x53
+ 2071 007a 4E000000 		.4byte	.LVL11
+ 2072 007e 54000000 		.4byte	.LVL12
+ 2073 0082 0500     		.2byte	0x5
+ 2074 0084 76       		.byte	0x76
+ 2075 0085 00       		.sleb128 0
+ 2076 0086 74       		.byte	0x74
+ 2077 0087 00       		.sleb128 0
+ 2078 0088 22       		.byte	0x22
+ 2079 0089 54000000 		.4byte	.LVL12
+ 2080 008d 58000000 		.4byte	.LVL13
+ 2081 0091 0100     		.2byte	0x1
+ 2082 0093 53       		.byte	0x53
+ 2083 0094 58000000 		.4byte	.LVL13
+ 2084 0098 5C000000 		.4byte	.LVL14
+ 2085 009c 0500     		.2byte	0x5
+ 2086 009e 76       		.byte	0x76
+ 2087 009f 00       		.sleb128 0
+ 2088 00a0 74       		.byte	0x74
+ 2089 00a1 00       		.sleb128 0
+ 2090 00a2 22       		.byte	0x22
+ 2091 00a3 00000000 		.4byte	0
+ 2092 00a7 00000000 		.4byte	0
+ 2093              	.LLST2:
+ 2094 00ab 08000000 		.4byte	.LVL1
+ 2095 00af 5C000000 		.4byte	.LVL14
+ 2096 00b3 0100     		.2byte	0x1
+ARM GAS  C:\Users\ELECTR~1\AppData\Local\Temp\cc8evJ81.s 			page 47
+
+
+ 2097 00b5 54       		.byte	0x54
+ 2098 00b6 00000000 		.4byte	0
+ 2099 00ba 00000000 		.4byte	0
+ 2100              	.LLST3:
+ 2101 00be 04000000 		.4byte	.LVL16
+ 2102 00c2 08000000 		.4byte	.LVL17
+ 2103 00c6 0100     		.2byte	0x1
+ 2104 00c8 51       		.byte	0x51
+ 2105 00c9 08000000 		.4byte	.LVL17
+ 2106 00cd 1C000000 		.4byte	.LFE38
+ 2107 00d1 0100     		.2byte	0x1
+ 2108 00d3 53       		.byte	0x53
+ 2109 00d4 00000000 		.4byte	0
+ 2110 00d8 00000000 		.4byte	0
+ 2111              	.LLST4:
+ 2112 00dc 00000000 		.4byte	.LVL19
+ 2113 00e0 20000000 		.4byte	.LVL23
+ 2114 00e4 0100     		.2byte	0x1
+ 2115 00e6 50       		.byte	0x50
+ 2116 00e7 20000000 		.4byte	.LVL23
+ 2117 00eb 50000000 		.4byte	.LFE39
+ 2118 00ef 0400     		.2byte	0x4
+ 2119 00f1 F3       		.byte	0xf3
+ 2120 00f2 01       		.uleb128 0x1
+ 2121 00f3 50       		.byte	0x50
+ 2122 00f4 9F       		.byte	0x9f
+ 2123 00f5 00000000 		.4byte	0
+ 2124 00f9 00000000 		.4byte	0
+ 2125              	.LLST5:
+ 2126 00fd 02000000 		.4byte	.LVL20
+ 2127 0101 06000000 		.4byte	.LVL21
+ 2128 0105 0200     		.2byte	0x2
+ 2129 0107 30       		.byte	0x30
+ 2130 0108 9F       		.byte	0x9f
+ 2131 0109 06000000 		.4byte	.LVL21
+ 2132 010d 23000000 		.4byte	.LVL24-1
+ 2133 0111 0100     		.2byte	0x1
+ 2134 0113 52       		.byte	0x52
+ 2135 0114 00000000 		.4byte	0
+ 2136 0118 00000000 		.4byte	0
+ 2137              	.LLST6:
+ 2138 011c 28000000 		.4byte	.LVL25
+ 2139 0120 2C000000 		.4byte	.LVL26
+ 2140 0124 0100     		.2byte	0x1
+ 2141 0126 51       		.byte	0x51
+ 2142 0127 2C000000 		.4byte	.LVL26
+ 2143 012b 37000000 		.4byte	.LVL28-1
+ 2144 012f 0100     		.2byte	0x1
+ 2145 0131 53       		.byte	0x53
+ 2146 0132 00000000 		.4byte	0
+ 2147 0136 00000000 		.4byte	0
+ 2148              	.LLST7:
+ 2149 013a 38000000 		.4byte	.LVL33
+ 2150 013e 4D000000 		.4byte	.LVL35-1
+ 2151 0142 0100     		.2byte	0x1
+ 2152 0144 53       		.byte	0x53
+ 2153 0145 86000000 		.4byte	.LVL42
+ARM GAS  C:\Users\ELECTR~1\AppData\Local\Temp\cc8evJ81.s 			page 48
+
+
+ 2154 0149 8A000000 		.4byte	.LVL43
+ 2155 014d 0200     		.2byte	0x2
+ 2156 014f 30       		.byte	0x30
+ 2157 0150 9F       		.byte	0x9f
+ 2158 0151 8A000000 		.4byte	.LVL43
+ 2159 0155 96000000 		.4byte	.LVL46
+ 2160 0159 0100     		.2byte	0x1
+ 2161 015b 54       		.byte	0x54
+ 2162 015c 00000000 		.4byte	0
+ 2163 0160 00000000 		.4byte	0
+ 2164              	.LLST8:
+ 2165 0164 1E000000 		.4byte	.LVL29
+ 2166 0168 22000000 		.4byte	.LVL30
+ 2167 016c 0200     		.2byte	0x2
+ 2168 016e 30       		.byte	0x30
+ 2169 016f 9F       		.byte	0x9f
+ 2170 0170 22000000 		.4byte	.LVL30
+ 2171 0174 36000000 		.4byte	.LVL32
+ 2172 0178 0100     		.2byte	0x1
+ 2173 017a 53       		.byte	0x53
+ 2174 017b 00000000 		.4byte	0
+ 2175 017f 00000000 		.4byte	0
+ 2176              	.LLST9:
+ 2177 0183 00000000 		.4byte	.LVL47
+ 2178 0187 08000000 		.4byte	.LVL48
+ 2179 018b 0100     		.2byte	0x1
+ 2180 018d 51       		.byte	0x51
+ 2181 018e 08000000 		.4byte	.LVL48
+ 2182 0192 12000000 		.4byte	.LVL49
+ 2183 0196 0100     		.2byte	0x1
+ 2184 0198 51       		.byte	0x51
+ 2185 0199 00000000 		.4byte	0
+ 2186 019d 00000000 		.4byte	0
+ 2187              	.LLST10:
+ 2188 01a1 00000000 		.4byte	.LVL50
+ 2189 01a5 04000000 		.4byte	.LVL51
+ 2190 01a9 0100     		.2byte	0x1
+ 2191 01ab 50       		.byte	0x50
+ 2192 01ac 04000000 		.4byte	.LVL51
+ 2193 01b0 0C000000 		.4byte	.LFE41
+ 2194 01b4 0400     		.2byte	0x4
+ 2195 01b6 F3       		.byte	0xf3
+ 2196 01b7 01       		.uleb128 0x1
+ 2197 01b8 50       		.byte	0x50
+ 2198 01b9 9F       		.byte	0x9f
+ 2199 01ba 00000000 		.4byte	0
+ 2200 01be 00000000 		.4byte	0
+ 2201              	.LLST11:
+ 2202 01c2 00000000 		.4byte	.LVL52
+ 2203 01c6 04000000 		.4byte	.LVL53
+ 2204 01ca 0100     		.2byte	0x1
+ 2205 01cc 50       		.byte	0x50
+ 2206 01cd 04000000 		.4byte	.LVL53
+ 2207 01d1 10000000 		.4byte	.LFE42
+ 2208 01d5 0400     		.2byte	0x4
+ 2209 01d7 F3       		.byte	0xf3
+ 2210 01d8 01       		.uleb128 0x1
+ARM GAS  C:\Users\ELECTR~1\AppData\Local\Temp\cc8evJ81.s 			page 49
+
+
+ 2211 01d9 50       		.byte	0x50
+ 2212 01da 9F       		.byte	0x9f
+ 2213 01db 00000000 		.4byte	0
+ 2214 01df 00000000 		.4byte	0
+ 2215              	.LLST12:
+ 2216 01e3 00000000 		.4byte	.LVL54
+ 2217 01e7 0A000000 		.4byte	.LVL55
+ 2218 01eb 0100     		.2byte	0x1
+ 2219 01ed 50       		.byte	0x50
+ 2220 01ee 0A000000 		.4byte	.LVL55
+ 2221 01f2 11000000 		.4byte	.LVL56-1
+ 2222 01f6 0100     		.2byte	0x1
+ 2223 01f8 52       		.byte	0x52
+ 2224 01f9 11000000 		.4byte	.LVL56-1
+ 2225 01fd 20000000 		.4byte	.LFE43
+ 2226 0201 0400     		.2byte	0x4
+ 2227 0203 F3       		.byte	0xf3
+ 2228 0204 01       		.uleb128 0x1
+ 2229 0205 50       		.byte	0x50
+ 2230 0206 9F       		.byte	0x9f
+ 2231 0207 00000000 		.4byte	0
+ 2232 020b 00000000 		.4byte	0
+ 2233              		.section	.debug_aranges,"",%progbits
+ 2234 0000 5C000000 		.4byte	0x5c
+ 2235 0004 0200     		.2byte	0x2
+ 2236 0006 00000000 		.4byte	.Ldebug_info0
+ 2237 000a 04       		.byte	0x4
+ 2238 000b 00       		.byte	0
+ 2239 000c 0000     		.2byte	0
+ 2240 000e 0000     		.2byte	0
+ 2241 0010 00000000 		.4byte	.LFB36
+ 2242 0014 7C000000 		.4byte	.LFE36-.LFB36
+ 2243 0018 00000000 		.4byte	.LFB37
+ 2244 001c 10000000 		.4byte	.LFE37-.LFB37
+ 2245 0020 00000000 		.4byte	.LFB38
+ 2246 0024 1C000000 		.4byte	.LFE38-.LFB38
+ 2247 0028 00000000 		.4byte	.LFB39
+ 2248 002c 50000000 		.4byte	.LFE39-.LFB39
+ 2249 0030 00000000 		.4byte	.LFB35
+ 2250 0034 BC000000 		.4byte	.LFE35-.LFB35
+ 2251 0038 00000000 		.4byte	.LFB40
+ 2252 003c 1C000000 		.4byte	.LFE40-.LFB40
+ 2253 0040 00000000 		.4byte	.LFB41
+ 2254 0044 0C000000 		.4byte	.LFE41-.LFB41
+ 2255 0048 00000000 		.4byte	.LFB42
+ 2256 004c 10000000 		.4byte	.LFE42-.LFB42
+ 2257 0050 00000000 		.4byte	.LFB43
+ 2258 0054 20000000 		.4byte	.LFE43-.LFB43
+ 2259 0058 00000000 		.4byte	0
+ 2260 005c 00000000 		.4byte	0
+ 2261              		.section	.debug_ranges,"",%progbits
+ 2262              	.Ldebug_ranges0:
+ 2263 0000 00000000 		.4byte	.LFB36
+ 2264 0004 7C000000 		.4byte	.LFE36
+ 2265 0008 00000000 		.4byte	.LFB37
+ 2266 000c 10000000 		.4byte	.LFE37
+ 2267 0010 00000000 		.4byte	.LFB38
+ARM GAS  C:\Users\ELECTR~1\AppData\Local\Temp\cc8evJ81.s 			page 50
+
+
+ 2268 0014 1C000000 		.4byte	.LFE38
+ 2269 0018 00000000 		.4byte	.LFB39
+ 2270 001c 50000000 		.4byte	.LFE39
+ 2271 0020 00000000 		.4byte	.LFB35
+ 2272 0024 BC000000 		.4byte	.LFE35
+ 2273 0028 00000000 		.4byte	.LFB40
+ 2274 002c 1C000000 		.4byte	.LFE40
+ 2275 0030 00000000 		.4byte	.LFB41
+ 2276 0034 0C000000 		.4byte	.LFE41
+ 2277 0038 00000000 		.4byte	.LFB42
+ 2278 003c 10000000 		.4byte	.LFE42
+ 2279 0040 00000000 		.4byte	.LFB43
+ 2280 0044 20000000 		.4byte	.LFE43
+ 2281 0048 00000000 		.4byte	0
+ 2282 004c 00000000 		.4byte	0
+ 2283              		.section	.debug_line,"",%progbits
+ 2284              	.Ldebug_line0:
+ 2285 0000 A0010000 		.section	.debug_str,"MS",%progbits,1
+ 2285      02008100 
+ 2285      00000201 
+ 2285      FB0E0D00 
+ 2285      01010101 
+ 2286              	.LASF47:
+ 2287 0000 63757253 		.ascii	"curSensor\000"
+ 2287      656E736F 
+ 2287      7200
+ 2288              	.LASF10:
+ 2289 000a 75696E74 		.ascii	"uint16\000"
+ 2289      313600
+ 2290              	.LASF88:
+ 2291 0011 536C6964 		.ascii	"Slider_SetAnalogSwitchesSrcDirect\000"
+ 2291      65725F53 
+ 2291      6574416E 
+ 2291      616C6F67 
+ 2291      53776974 
+ 2292              	.LASF39:
+ 2293 0033 66696E67 		.ascii	"fingerThreshold\000"
+ 2293      65725468 
+ 2293      72657368 
+ 2293      6F6C6400 
+ 2294              	.LASF57:
+ 2295 0043 536C6964 		.ascii	"Slider_widgetResolution\000"
+ 2295      65725F77 
+ 2295      69646765 
+ 2295      74526573 
+ 2295      6F6C7574 
+ 2296              	.LASF26:
+ 2297 005b 70747247 		.ascii	"ptrGetRaw\000"
+ 2297      65745261 
+ 2297      7700
+ 2298              	.LASF38:
+ 2299 0065 536C6964 		.ascii	"Slider_CONFIG_TYPE_P4_v2_20\000"
+ 2299      65725F43 
+ 2299      4F4E4649 
+ 2299      475F5459 
+ 2299      50455F50 
+ 2300              	.LASF7:
+ARM GAS  C:\Users\ELECTR~1\AppData\Local\Temp\cc8evJ81.s 			page 51
+
+
+ 2301 0081 6C6F6E67 		.ascii	"long long unsigned int\000"
+ 2301      206C6F6E 
+ 2301      6720756E 
+ 2301      7369676E 
+ 2301      65642069 
+ 2302              	.LASF83:
+ 2303 0098 536C6964 		.ascii	"Slider_NormalizeWidgets\000"
+ 2303      65725F4E 
+ 2303      6F726D61 
+ 2303      6C697A65 
+ 2303      57696467 
+ 2304              	.LASF6:
+ 2305 00b0 6C6F6E67 		.ascii	"long long int\000"
+ 2305      206C6F6E 
+ 2305      6720696E 
+ 2305      7400
+ 2306              	.LASF0:
+ 2307 00be 7369676E 		.ascii	"signed char\000"
+ 2307      65642063 
+ 2307      68617200 
+ 2308              	.LASF61:
+ 2309 00ca 536C6964 		.ascii	"Slider_sensorSignal\000"
+ 2309      65725F73 
+ 2309      656E736F 
+ 2309      72536967 
+ 2309      6E616C00 
+ 2310              	.LASF25:
+ 2311 00de 6E756D62 		.ascii	"numberOfSensors\000"
+ 2311      65724F66 
+ 2311      53656E73 
+ 2311      6F727300 
+ 2312              	.LASF78:
+ 2313 00ee 536C6964 		.ascii	"Slider_configPointers\000"
+ 2313      65725F63 
+ 2313      6F6E6669 
+ 2313      67506F69 
+ 2313      6E746572 
+ 2314              	.LASF22:
+ 2315 0104 77696467 		.ascii	"widgetNubmersTbl\000"
+ 2315      65744E75 
+ 2315      626D6572 
+ 2315      7354626C 
+ 2315      00
+ 2316              	.LASF60:
+ 2317 0115 536C6964 		.ascii	"Slider_widgetNumber\000"
+ 2317      65725F77 
+ 2317      69646765 
+ 2317      744E756D 
+ 2317      62657200 
+ 2318              	.LASF52:
+ 2319 0129 536C6964 		.ascii	"Slider_GetNoiseEnvelope\000"
+ 2319      65725F47 
+ 2319      65744E6F 
+ 2319      69736545 
+ 2319      6E76656C 
+ 2320              	.LASF4:
+ 2321 0141 6C6F6E67 		.ascii	"long int\000"
+ARM GAS  C:\Users\ELECTR~1\AppData\Local\Temp\cc8evJ81.s 			page 52
+
+
+ 2321      20696E74 
+ 2321      00
+ 2322              	.LASF80:
+ 2323 014a 4379496E 		.ascii	"CyIntDisable\000"
+ 2323      74446973 
+ 2323      61626C65 
+ 2323      00
+ 2324              	.LASF9:
+ 2325 0157 75696E74 		.ascii	"uint8\000"
+ 2325      3800
+ 2326              	.LASF13:
+ 2327 015d 646F7562 		.ascii	"double\000"
+ 2327      6C6500
+ 2328              	.LASF51:
+ 2329 0164 536C6964 		.ascii	"Slider_GetSensitivityCoefficient\000"
+ 2329      65725F47 
+ 2329      65745365 
+ 2329      6E736974 
+ 2329      69766974 
+ 2330              	.LASF42:
+ 2331 0185 536C6964 		.ascii	"Slider_DisableBaselineIDAC\000"
+ 2331      65725F44 
+ 2331      69736162 
+ 2331      6C654261 
+ 2331      73656C69 
+ 2332              	.LASF43:
+ 2333 01a0 6E657752 		.ascii	"newRegValue\000"
+ 2333      65675661 
+ 2333      6C756500 
+ 2334              	.LASF11:
+ 2335 01ac 75696E74 		.ascii	"uint32\000"
+ 2335      333200
+ 2336              	.LASF41:
+ 2337 01b3 536C6964 		.ascii	"Slider_UpdateThresholds\000"
+ 2337      65725F55 
+ 2337      70646174 
+ 2337      65546872 
+ 2337      6573686F 
+ 2338              	.LASF35:
+ 2339 01cb 73656E73 		.ascii	"sensetivitySeed\000"
+ 2339      65746976 
+ 2339      69747953 
+ 2339      65656400 
+ 2340              	.LASF54:
+ 2341 01db 536C6964 		.ascii	"Slider_sensorRaw\000"
+ 2341      65725F73 
+ 2341      656E736F 
+ 2341      72526177 
+ 2341      00
+ 2342              	.LASF34:
+ 2343 01ec 746F7461 		.ascii	"totalSensorsNum\000"
+ 2343      6C53656E 
+ 2343      736F7273 
+ 2343      4E756D00 
+ 2344              	.LASF50:
+ 2345 01fc 76616C75 		.ascii	"value\000"
+ 2345      6500
+ARM GAS  C:\Users\ELECTR~1\AppData\Local\Temp\cc8evJ81.s 			page 53
+
+
+ 2346              	.LASF69:
+ 2347 0202 6E6F6973 		.ascii	"noiseEnvelopeTbl\000"
+ 2347      65456E76 
+ 2347      656C6F70 
+ 2347      6554626C 
+ 2347      00
+ 2348              	.LASF8:
+ 2349 0213 756E7369 		.ascii	"unsigned int\000"
+ 2349      676E6564 
+ 2349      20696E74 
+ 2349      00
+ 2350              	.LASF73:
+ 2351 0220 73616D70 		.ascii	"sampleMaxTbl\000"
+ 2351      6C654D61 
+ 2351      7854626C 
+ 2351      00
+ 2352              	.LASF5:
+ 2353 022d 6C6F6E67 		.ascii	"long unsigned int\000"
+ 2353      20756E73 
+ 2353      69676E65 
+ 2353      6420696E 
+ 2353      7400
+ 2354              	.LASF23:
+ 2355 023f 7265736F 		.ascii	"resolutionsTbl\000"
+ 2355      6C757469 
+ 2355      6F6E7354 
+ 2355      626C00
+ 2356              	.LASF62:
+ 2357 024e 536C6964 		.ascii	"Slider_fingerThreshold\000"
+ 2357      65725F66 
+ 2357      696E6765 
+ 2357      72546872 
+ 2357      6573686F 
+ 2358              	.LASF29:
+ 2359 0265 70747247 		.ascii	"ptrGetBitValue\000"
+ 2359      65744269 
+ 2359      7456616C 
+ 2359      756500
+ 2360              	.LASF3:
+ 2361 0274 73686F72 		.ascii	"short unsigned int\000"
+ 2361      7420756E 
+ 2361      7369676E 
+ 2361      65642069 
+ 2361      6E7400
+ 2362              	.LASF19:
+ 2363 0287 73656E73 		.ascii	"sensetivityTbl\000"
+ 2363      65746976 
+ 2363      69747954 
+ 2363      626C00
+ 2364              	.LASF79:
+ 2365 0296 43616C63 		.ascii	"CalculateThresholds_P4_v2_20\000"
+ 2365      756C6174 
+ 2365      65546872 
+ 2365      6573686F 
+ 2365      6C64735F 
+ 2366              	.LASF45:
+ 2367 02b3 73656E73 		.ascii	"sensor\000"
+ARM GAS  C:\Users\ELECTR~1\AppData\Local\Temp\cc8evJ81.s 			page 54
+
+
+ 2367      6F7200
+ 2368              	.LASF56:
+ 2369 02ba 536C6964 		.ascii	"Slider_compensationIDAC\000"
+ 2369      65725F63 
+ 2369      6F6D7065 
+ 2369      6E736174 
+ 2369      696F6E49 
+ 2370              	.LASF20:
+ 2371 02d2 63686172 		.ascii	"chargeDivTbl\000"
+ 2371      67654469 
+ 2371      7654626C 
+ 2371      00
+ 2372              	.LASF72:
+ 2373 02df 73616D70 		.ascii	"sampleMinTbl\000"
+ 2373      6C654D69 
+ 2373      6E54626C 
+ 2373      00
+ 2374              	.LASF15:
+ 2375 02ec 72656733 		.ascii	"reg32\000"
+ 2375      3200
+ 2376              	.LASF82:
+ 2377 02f2 43616C69 		.ascii	"CalibrateSensors_P4_v2_20\000"
+ 2377      62726174 
+ 2377      6553656E 
+ 2377      736F7273 
+ 2377      5F50345F 
+ 2378              	.LASF37:
+ 2379 030c 706F696E 		.ascii	"pointers\000"
+ 2379      74657273 
+ 2379      00
+ 2380              	.LASF67:
+ 2381 0315 536C6964 		.ascii	"Slider_numberOfSensors\000"
+ 2381      65725F6E 
+ 2381      756D6265 
+ 2381      724F6653 
+ 2381      656E736F 
+ 2382              	.LASF36:
+ 2383 032c 6866636C 		.ascii	"hfclkFreq_MHz\000"
+ 2383      6B467265 
+ 2383      715F4D48 
+ 2383      7A00
+ 2384              	.LASF16:
+ 2385 033a 73697A65 		.ascii	"sizetype\000"
+ 2385      74797065 
+ 2385      00
+ 2386              	.LASF84:
+ 2387 0343 54756E65 		.ascii	"TunePrescalers_P4_v2_20\000"
+ 2387      50726573 
+ 2387      63616C65 
+ 2387      72735F50 
+ 2387      345F7632 
+ 2388              	.LASF76:
+ 2389 035b 534D535F 		.ascii	"SMS_LIB_SensorSensitivity\000"
+ 2389      4C49425F 
+ 2389      53656E73 
+ 2389      6F725365 
+ 2389      6E736974 
+ARM GAS  C:\Users\ELECTR~1\AppData\Local\Temp\cc8evJ81.s 			page 55
+
+
+ 2390              	.LASF65:
+ 2391 0375 536C6964 		.ascii	"Slider_hysteresis\000"
+ 2391      65725F68 
+ 2391      79737465 
+ 2391      72657369 
+ 2391      7300
+ 2392              	.LASF17:
+ 2393 0387 69646163 		.ascii	"idac1LevelsTbl\000"
+ 2393      314C6576 
+ 2393      656C7354 
+ 2393      626C00
+ 2394              	.LASF18:
+ 2395 0396 69646163 		.ascii	"idac2LevelsTbl\000"
+ 2395      324C6576 
+ 2395      656C7354 
+ 2395      626C00
+ 2396              	.LASF31:
+ 2397 03a5 536C6964 		.ascii	"Slider_CONFIG_TYPE_POINTERS_P4_v2_20\000"
+ 2397      65725F43 
+ 2397      4F4E4649 
+ 2397      475F5459 
+ 2397      50455F50 
+ 2398              	.LASF85:
+ 2399 03ca 474E5520 		.ascii	"GNU C 4.9.3 20150303 (release) [ARM/embedded-4_9-br"
+ 2399      4320342E 
+ 2399      392E3320 
+ 2399      32303135 
+ 2399      30333033 
+ 2400 03fd 616E6368 		.ascii	"anch revision 221220] -mcpu=cortex-m0 -mthumb -g -O"
+ 2400      20726576 
+ 2400      6973696F 
+ 2400      6E203232 
+ 2400      31323230 
+ 2401 0430 67202D66 		.ascii	"g -ffunction-sections -ffat-lto-objects\000"
+ 2401      66756E63 
+ 2401      74696F6E 
+ 2401      2D736563 
+ 2401      74696F6E 
+ 2402              	.LASF12:
+ 2403 0458 666C6F61 		.ascii	"float\000"
+ 2403      7400
+ 2404              	.LASF53:
+ 2405 045e 536C6964 		.ascii	"Slider_GetNormalizedDiffCountData\000"
+ 2405      65725F47 
+ 2405      65744E6F 
+ 2405      726D616C 
+ 2405      697A6564 
+ 2406              	.LASF71:
+ 2407 0480 7369676E 		.ascii	"signRegisterTbl\000"
+ 2407      52656769 
+ 2407      73746572 
+ 2407      54626C00 
+ 2408              	.LASF68:
+ 2409 0490 70726573 		.ascii	"prescalerTable\000"
+ 2409      63616C65 
+ 2409      72546162 
+ 2409      6C6500
+ARM GAS  C:\Users\ELECTR~1\AppData\Local\Temp\cc8evJ81.s 			page 56
+
+
+ 2410              	.LASF66:
+ 2411 049f 536C6964 		.ascii	"Slider_rawDataIndex\000"
+ 2411      65725F72 
+ 2411      61774461 
+ 2411      7461496E 
+ 2411      64657800 
+ 2412              	.LASF1:
+ 2413 04b3 756E7369 		.ascii	"unsigned char\000"
+ 2413      676E6564 
+ 2413      20636861 
+ 2413      7200
+ 2414              	.LASF28:
+ 2415 04c1 70747252 		.ascii	"ptrReadSensorRaw\000"
+ 2415      65616453 
+ 2415      656E736F 
+ 2415      72526177 
+ 2415      00
+ 2416              	.LASF2:
+ 2417 04d2 73686F72 		.ascii	"short int\000"
+ 2417      7420696E 
+ 2417      7400
+ 2418              	.LASF40:
+ 2419 04dc 77696467 		.ascii	"widget\000"
+ 2419      657400
+ 2420              	.LASF21:
+ 2421 04e3 6D6F6444 		.ascii	"modDivTbl\000"
+ 2421      69765462 
+ 2421      6C00
+ 2422              	.LASF81:
+ 2423 04ed 4379496E 		.ascii	"CyIntEnable\000"
+ 2423      74456E61 
+ 2423      626C6500 
+ 2424              	.LASF64:
+ 2425 04f9 536C6964 		.ascii	"Slider_negativeNoiseThreshold\000"
+ 2425      65725F6E 
+ 2425      65676174 
+ 2425      6976654E 
+ 2425      6F697365 
+ 2426              	.LASF49:
+ 2427 0517 536C6964 		.ascii	"Slider_SetSensitivity\000"
+ 2427      65725F53 
+ 2427      65745365 
+ 2427      6E736974 
+ 2427      69766974 
+ 2428              	.LASF75:
+ 2429 052d 6B56616C 		.ascii	"kValueTbl\000"
+ 2429      75655462 
+ 2429      6C00
+ 2430              	.LASF44:
+ 2431 0537 536C6964 		.ascii	"Slider_EnableBaselineIDAC\000"
+ 2431      65725F45 
+ 2431      6E61626C 
+ 2431      65426173 
+ 2431      656C696E 
+ 2432              	.LASF59:
+ 2433 0551 536C6964 		.ascii	"Slider_sampleClkDividerVal\000"
+ 2433      65725F73 
+ARM GAS  C:\Users\ELECTR~1\AppData\Local\Temp\cc8evJ81.s 			page 57
+
+
+ 2433      616D706C 
+ 2433      65436C6B 
+ 2433      44697669 
+ 2434              	.LASF55:
+ 2435 056c 536C6964 		.ascii	"Slider_modulationIDAC\000"
+ 2435      65725F6D 
+ 2435      6F64756C 
+ 2435      6174696F 
+ 2435      6E494441 
+ 2436              	.LASF74:
+ 2437 0582 70726576 		.ascii	"previousSampleTbl\000"
+ 2437      696F7573 
+ 2437      53616D70 
+ 2437      6C655462 
+ 2437      6C00
+ 2438              	.LASF48:
+ 2439 0594 536C6964 		.ascii	"Slider_AutoTune\000"
+ 2439      65725F41 
+ 2439      75746F54 
+ 2439      756E6500 
+ 2440              	.LASF14:
+ 2441 05a4 63686172 		.ascii	"char\000"
+ 2441      00
+ 2442              	.LASF70:
+ 2443 05a9 72756E6E 		.ascii	"runningDifferenceTbl\000"
+ 2443      696E6744 
+ 2443      69666665 
+ 2443      72656E63 
+ 2443      6554626C 
+ 2444              	.LASF63:
+ 2445 05be 536C6964 		.ascii	"Slider_noiseThreshold\000"
+ 2445      65725F6E 
+ 2445      6F697365 
+ 2445      54687265 
+ 2445      73686F6C 
+ 2446              	.LASF46:
+ 2447 05d4 636F6E66 		.ascii	"config\000"
+ 2447      696700
+ 2448              	.LASF89:
+ 2449 05db 54756E65 		.ascii	"TuneSensitivity_P4_v2_20\000"
+ 2449      53656E73 
+ 2449      69746976 
+ 2449      6974795F 
+ 2449      50345F76 
+ 2450              	.LASF27:
+ 2451 05f4 70747250 		.ascii	"ptrPreScan\000"
+ 2451      72655363 
+ 2451      616E00
+ 2452              	.LASF87:
+ 2453 05ff 433A5C55 		.ascii	"C:\\Users\\Electronic\\Documents\\GitHub\\PSoC-4-BL"
+ 2453      73657273 
+ 2453      5C456C65 
+ 2453      6374726F 
+ 2453      6E69635C 
+ 2454 062d 452D4578 		.ascii	"E-Experiments\\Project 003 Custom Profile CapSense "
+ 2454      70657269 
+ 2454      6D656E74 
+ARM GAS  C:\Users\ELECTR~1\AppData\Local\Temp\cc8evJ81.s 			page 58
+
+
+ 2454      735C5072 
+ 2454      6F6A6563 
+ 2455 065f 52474220 		.ascii	"RGB LED\\PSoC\\CapSenseRGB\\CapSenseRGB.cydsn\000"
+ 2455      4C45445C 
+ 2455      50536F43 
+ 2455      5C436170 
+ 2455      53656E73 
+ 2456              	.LASF86:
+ 2457 068a 2E5C4765 		.ascii	".\\Generated_Source\\PSoC4\\Slider_SMS.c\000"
+ 2457      6E657261 
+ 2457      7465645F 
+ 2457      536F7572 
+ 2457      63655C50 
+ 2458              	.LASF77:
+ 2459 06b0 536C6964 		.ascii	"Slider_config\000"
+ 2459      65725F63 
+ 2459      6F6E6669 
+ 2459      6700
+ 2460              	.LASF58:
+ 2461 06be 536C6964 		.ascii	"Slider_senseClkDividerVal\000"
+ 2461      65725F73 
+ 2461      656E7365 
+ 2461      436C6B44 
+ 2461      69766964 
+ 2462              	.LASF32:
+ 2463 06d8 746F7461 		.ascii	"totalScanslotsNum\000"
+ 2463      6C536361 
+ 2463      6E736C6F 
+ 2463      74734E75 
+ 2463      6D00
+ 2464              	.LASF30:
+ 2465 06ea 70747253 		.ascii	"ptrSetBitValue\000"
+ 2465      65744269 
+ 2465      7456616C 
+ 2465      756500
+ 2466              	.LASF24:
+ 2467 06f9 72617744 		.ascii	"rawDataIndex\000"
+ 2467      61746149 
+ 2467      6E646578 
+ 2467      00
+ 2468              	.LASF33:
+ 2469 0706 746F7461 		.ascii	"totalWidgetsNum\000"
+ 2469      6C576964 
+ 2469      67657473 
+ 2469      4E756D00 
+ 2470              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 4.9.3 20150303 (release) [ARM/embedded-4_9-br

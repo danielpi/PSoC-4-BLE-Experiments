@@ -2,7 +2,7 @@
 --	Conversion of CapSenseRGB.v to vh2:
 --
 --	Cypress Semiconductor - WARP Version 6.3 IR 41
---	Fri Sep 18 11:34:57 2015
+--	Wed Sep 23 10:03:28 2015
 --
 
 USE cypress.cypress.all;
@@ -573,6 +573,7 @@ Net_16D <= ((not \BluePrISM:reset_reg\ and not \BluePrISM:cl1\ and \BluePrISM:ce
 		sio_obuf=>"00000000",
 		sio_refsel=>"00000000",
 		sio_vtrip=>"00000000",
+		sio_vohsel=>"",
 		slew_rate=>"0",
 		spanning=>'0',
 		sw_only=>'0',
@@ -650,6 +651,7 @@ Net_16D <= ((not \BluePrISM:reset_reg\ and not \BluePrISM:cl1\ and \BluePrISM:ce
 		sio_obuf=>"00000000",
 		sio_refsel=>"00000000",
 		sio_vtrip=>"00000000",
+		sio_vohsel=>"",
 		slew_rate=>"00000",
 		spanning=>'1',
 		sw_only=>'0',
@@ -750,6 +752,7 @@ RED:cy_psoc3_pins_v1_10
 		sio_obuf=>"00000000",
 		sio_refsel=>"00000000",
 		sio_vtrip=>"00000000",
+		sio_vohsel=>"",
 		slew_rate=>"0",
 		spanning=>'0',
 		sw_only=>'0',
@@ -819,6 +822,7 @@ GREEN:cy_psoc3_pins_v1_10
 		sio_obuf=>"00000000",
 		sio_refsel=>"00000000",
 		sio_vtrip=>"00000000",
+		sio_vohsel=>"",
 		slew_rate=>"0",
 		spanning=>'0',
 		sw_only=>'0',
@@ -888,6 +892,7 @@ BLUE:cy_psoc3_pins_v1_10
 		sio_obuf=>"00000000",
 		sio_refsel=>"00000000",
 		sio_vtrip=>"00000000",
+		sio_vohsel=>"",
 		slew_rate=>"0",
 		spanning=>'0',
 		sw_only=>'0',

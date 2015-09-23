@@ -6,8 +6,8 @@
     <Toolchain Name="ARM GCC Generic" Selected="True">
       <Tool Name="prebuild" Command="" Options="" />
       <Tool Name="assembler" Command="arm-none-eabi-as.exe" Options="-mcpu=cortex-m0 -mthumb -I. -IGenerated_Source\PSoC4 -alh=${OutputDir}/${CompileFile}.lst -g -W" />
-      <Tool Name="compiler" Command="arm-none-eabi-gcc.exe" Options="-mcpu=cortex-m0 -mthumb -Wno-main -I. -IGenerated_Source\PSoC4 -Wa,-alh=${OutputDir}/${CompileFile}.lst -g -D DEBUG -Wall -ffunction-sections -Og" />
-      <Tool Name="linker" Command="arm-none-eabi-gcc.exe" Options="-mcpu=cortex-m0 -mthumb -g -ffunction-sections -Og -Wl,-Map,${OutputDir}/${ProjectShortName}.map -T Generated_Source\PSoC4\cm0gcc.ld -specs=nano.specs -Wl,--gc-sections" />
+      <Tool Name="compiler" Command="arm-none-eabi-gcc.exe" Options="-mcpu=cortex-m0 -mthumb -Wno-main -I. -IGenerated_Source\PSoC4 -Wa,-alh=${OutputDir}/${CompileFile}.lst -g -D DEBUG -Wall -ffunction-sections -Og -ffat-lto-objects" />
+      <Tool Name="linker" Command="arm-none-eabi-gcc.exe" Options="-mcpu=cortex-m0 -mthumb -g -ffunction-sections -Og -L Generated_Source\PSoC4 -Wl,-Map,${OutputDir}/${ProjectShortName}.map -T Generated_Source\PSoC4\cm0gcc.ld -specs=nano.specs -Wl,--gc-sections" />
       <Tool Name="postbuild" Command="" Options="" />
     </Toolchain>
     <Toolchain Name="ARM MDK Generic" Selected="False">
@@ -25,7 +25,7 @@
       <Tool Name="postbuild" Command="" Options="" />
     </Toolchain>
   </Toolchains>
-  <Project Name="CapSenseRGB" Path="Y:\repos\PSoC-4-BLE-Experiments\Project 003 Custom Profile CapSense RGB LED\PSoC\CapSenseRGB\CapSenseRGB.cydsn" Version="5.10" Type="Normal">
+  <Project Name="CapSenseRGB" Path="C:\Users\Electronic\Documents\GitHub\PSoC-4-BLE-Experiments\Project 003 Custom Profile CapSense RGB LED\PSoC\CapSenseRGB\CapSenseRGB.cydsn" Version="5.10" Type="Normal">
     <CMSIS_SVD_File>CapSenseRGB.svd</CMSIS_SVD_File>
     <Datasheet />
     <LinkerFiles>
@@ -34,13 +34,14 @@
       <LinkerFile Toolchain="ARM IAR Generic">.\Generated_Source\PSoC4\Cm0Iar.icf</LinkerFile>
     </LinkerFiles>
     <Folders>
-      <Folder BuildType="BUILD" Path="Y:\repos\PSoC-4-BLE-Experiments\Project 003 Custom Profile CapSense RGB LED\PSoC\CapSenseRGB\CapSenseRGB.cydsn">
-        <Files Root="Y:\repos\PSoC-4-BLE-Experiments\Project 003 Custom Profile CapSense RGB LED\PSoC\CapSenseRGB\CapSenseRGB.cydsn">
+      <Folder BuildType="BUILD" Path="C:\Users\Electronic\Documents\GitHub\PSoC-4-BLE-Experiments\Project 003 Custom Profile CapSense RGB LED\PSoC\CapSenseRGB\CapSenseRGB.cydsn">
+        <Files Root="C:\Users\Electronic\Documents\GitHub\PSoC-4-BLE-Experiments\Project 003 Custom Profile CapSense RGB LED\PSoC\CapSenseRGB\CapSenseRGB.cydsn">
           <File BuildType="BUILD" Toolchain="">.\main.c</File>
+          <File BuildType="BUILD" Toolchain="">.\main.h</File>
         </Files>
       </Folder>
-      <Folder BuildType="STRICT" Path="Y:\repos\PSoC-4-BLE-Experiments\Project 003 Custom Profile CapSense RGB LED\PSoC\CapSenseRGB\CapSenseRGB.cydsn\Generated_Source\PSoC4">
-        <Files Root="Y:\repos\PSoC-4-BLE-Experiments\Project 003 Custom Profile CapSense RGB LED\PSoC\CapSenseRGB\CapSenseRGB.cydsn">
+      <Folder BuildType="STRICT" Path="C:\Users\Electronic\Documents\GitHub\PSoC-4-BLE-Experiments\Project 003 Custom Profile CapSense RGB LED\PSoC\CapSenseRGB\CapSenseRGB.cydsn\Generated_Source\PSoC4">
+        <Files Root="C:\Users\Electronic\Documents\GitHub\PSoC-4-BLE-Experiments\Project 003 Custom Profile CapSense RGB LED\PSoC\CapSenseRGB\CapSenseRGB.cydsn">
           <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC4\cyfitter_cfg.h</File>
           <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC4\cyfitter_cfg.c</File>
           <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC4\cymetadata.c</File>
@@ -131,77 +132,77 @@
           <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC4\Slider_SenseClk.h</File>
         </Files>
       </Folder>
-      <Folder BuildType="STRICT" Path="Y:\repos\PSoC-4-BLE-Experiments\Project 003 Custom Profile CapSense RGB LED\PSoC\CapSenseRGB\CapSenseRGB.cydsn\Export\ARM_GCC_Generic\BLE_v2_10">
-        <Files Root="Y:\repos\PSoC-4-BLE-Experiments\Project 003 Custom Profile CapSense RGB LED\PSoC\CapSenseRGB\CapSenseRGB.cydsn">
+      <Folder BuildType="STRICT" Path="C:\Users\Electronic\Documents\GitHub\PSoC-4-BLE-Experiments\Project 003 Custom Profile CapSense RGB LED\PSoC\CapSenseRGB\CapSenseRGB.cydsn\Export\ARM_GCC_Generic\BLE_v2_10">
+        <Files Root="C:\Users\Electronic\Documents\GitHub\PSoC-4-BLE-Experiments\Project 003 Custom Profile CapSense RGB LED\PSoC\CapSenseRGB\CapSenseRGB.cydsn">
           <File BuildType="BUILD" Toolchain="ARM GCC Generic">.\Export\ARM_GCC_Generic\BLE_v2_10\gccCyBLEStack_BLE_SOC_PERIPHERAL.a</File>
         </Files>
       </Folder>
-      <Folder BuildType="STRICT" Path="Y:\repos\PSoC-4-BLE-Experiments\Project 003 Custom Profile CapSense RGB LED\PSoC\CapSenseRGB\CapSenseRGB.cydsn\Export\ARM_GCC_Generic\CapSense_CSD_P4_v2_20">
-        <Files Root="Y:\repos\PSoC-4-BLE-Experiments\Project 003 Custom Profile CapSense RGB LED\PSoC\CapSenseRGB\CapSenseRGB.cydsn">
+      <Folder BuildType="STRICT" Path="C:\Users\Electronic\Documents\GitHub\PSoC-4-BLE-Experiments\Project 003 Custom Profile CapSense RGB LED\PSoC\CapSenseRGB\CapSenseRGB.cydsn\Export\ARM_GCC_Generic\CapSense_CSD_P4_v2_20">
+        <Files Root="C:\Users\Electronic\Documents\GitHub\PSoC-4-BLE-Experiments\Project 003 Custom Profile CapSense RGB LED\PSoC\CapSenseRGB\CapSenseRGB.cydsn">
           <File BuildType="BUILD" Toolchain="ARM GCC Generic">.\Export\ARM_GCC_Generic\CapSense_CSD_P4_v2_20\CapsenseP4Library_GCC.a</File>
         </Files>
       </Folder>
-      <Folder BuildType="STRICT" Path="Y:\repos\PSoC-4-BLE-Experiments\Project 003 Custom Profile CapSense RGB LED\PSoC\CapSenseRGB\CapSenseRGB.cydsn\Export\ARM_GCC_Generic">
-        <Files Root="Y:\repos\PSoC-4-BLE-Experiments\Project 003 Custom Profile CapSense RGB LED\PSoC\CapSenseRGB\CapSenseRGB.cydsn">
+      <Folder BuildType="STRICT" Path="C:\Users\Electronic\Documents\GitHub\PSoC-4-BLE-Experiments\Project 003 Custom Profile CapSense RGB LED\PSoC\CapSenseRGB\CapSenseRGB.cydsn\Export\ARM_GCC_Generic">
+        <Files Root="C:\Users\Electronic\Documents\GitHub\PSoC-4-BLE-Experiments\Project 003 Custom Profile CapSense RGB LED\PSoC\CapSenseRGB\CapSenseRGB.cydsn">
           <File BuildType="BUILD" Toolchain="ARM GCC Generic">.\Export\ARM_GCC_Generic\CyComponentLibrary.a</File>
         </Files>
       </Folder>
-      <Folder BuildType="STRICT" Path="Y:\repos\PSoC-4-BLE-Experiments\Project 003 Custom Profile CapSense RGB LED\PSoC\CapSenseRGB\CapSenseRGB.cydsn\Export\ARM_MDK_Generic\BLE_v2_10">
-        <Files Root="Y:\repos\PSoC-4-BLE-Experiments\Project 003 Custom Profile CapSense RGB LED\PSoC\CapSenseRGB\CapSenseRGB.cydsn">
+      <Folder BuildType="STRICT" Path="C:\Users\Electronic\Documents\GitHub\PSoC-4-BLE-Experiments\Project 003 Custom Profile CapSense RGB LED\PSoC\CapSenseRGB\CapSenseRGB.cydsn\Export\ARM_MDK_Generic\BLE_v2_10">
+        <Files Root="C:\Users\Electronic\Documents\GitHub\PSoC-4-BLE-Experiments\Project 003 Custom Profile CapSense RGB LED\PSoC\CapSenseRGB\CapSenseRGB.cydsn">
           <File BuildType="BUILD" Toolchain="ARM MDK Generic">.\Export\ARM_MDK_Generic\BLE_v2_10\mdkCyBLEStack_BLE_SOC_PERIPHERAL.a</File>
         </Files>
       </Folder>
-      <Folder BuildType="STRICT" Path="Y:\repos\PSoC-4-BLE-Experiments\Project 003 Custom Profile CapSense RGB LED\PSoC\CapSenseRGB\CapSenseRGB.cydsn\Export\ARM_MDK_Generic\CapSense_CSD_P4_v2_20">
-        <Files Root="Y:\repos\PSoC-4-BLE-Experiments\Project 003 Custom Profile CapSense RGB LED\PSoC\CapSenseRGB\CapSenseRGB.cydsn">
+      <Folder BuildType="STRICT" Path="C:\Users\Electronic\Documents\GitHub\PSoC-4-BLE-Experiments\Project 003 Custom Profile CapSense RGB LED\PSoC\CapSenseRGB\CapSenseRGB.cydsn\Export\ARM_MDK_Generic\CapSense_CSD_P4_v2_20">
+        <Files Root="C:\Users\Electronic\Documents\GitHub\PSoC-4-BLE-Experiments\Project 003 Custom Profile CapSense RGB LED\PSoC\CapSenseRGB\CapSenseRGB.cydsn">
           <File BuildType="BUILD" Toolchain="ARM MDK Generic">.\Export\ARM_MDK_Generic\CapSense_CSD_P4_v2_20\CapsenseP4Library_MDK.a</File>
         </Files>
       </Folder>
-      <Folder BuildType="STRICT" Path="Y:\repos\PSoC-4-BLE-Experiments\Project 003 Custom Profile CapSense RGB LED\PSoC\CapSenseRGB\CapSenseRGB.cydsn\Export\ARM_MDK_Generic">
-        <Files Root="Y:\repos\PSoC-4-BLE-Experiments\Project 003 Custom Profile CapSense RGB LED\PSoC\CapSenseRGB\CapSenseRGB.cydsn">
+      <Folder BuildType="STRICT" Path="C:\Users\Electronic\Documents\GitHub\PSoC-4-BLE-Experiments\Project 003 Custom Profile CapSense RGB LED\PSoC\CapSenseRGB\CapSenseRGB.cydsn\Export\ARM_MDK_Generic">
+        <Files Root="C:\Users\Electronic\Documents\GitHub\PSoC-4-BLE-Experiments\Project 003 Custom Profile CapSense RGB LED\PSoC\CapSenseRGB\CapSenseRGB.cydsn">
           <File BuildType="BUILD" Toolchain="ARM MDK Generic">.\Export\ARM_MDK_Generic\CyComponentLibrary.a</File>
         </Files>
       </Folder>
-      <Folder BuildType="STRICT" Path="Y:\repos\PSoC-4-BLE-Experiments\Project 003 Custom Profile CapSense RGB LED\PSoC\CapSenseRGB\CapSenseRGB.cydsn\Export\ARM_IAR_Generic\BLE_v2_10">
-        <Files Root="Y:\repos\PSoC-4-BLE-Experiments\Project 003 Custom Profile CapSense RGB LED\PSoC\CapSenseRGB\CapSenseRGB.cydsn">
+      <Folder BuildType="STRICT" Path="C:\Users\Electronic\Documents\GitHub\PSoC-4-BLE-Experiments\Project 003 Custom Profile CapSense RGB LED\PSoC\CapSenseRGB\CapSenseRGB.cydsn\Export\ARM_IAR_Generic\BLE_v2_10">
+        <Files Root="C:\Users\Electronic\Documents\GitHub\PSoC-4-BLE-Experiments\Project 003 Custom Profile CapSense RGB LED\PSoC\CapSenseRGB\CapSenseRGB.cydsn">
           <File BuildType="BUILD" Toolchain="ARM IAR Generic">.\Export\ARM_IAR_Generic\BLE_v2_10\mdkCyBLEStack_BLE_SOC_PERIPHERAL.a</File>
         </Files>
       </Folder>
-      <Folder BuildType="STRICT" Path="Y:\repos\PSoC-4-BLE-Experiments\Project 003 Custom Profile CapSense RGB LED\PSoC\CapSenseRGB\CapSenseRGB.cydsn\Export\ARM_IAR_Generic\CapSense_CSD_P4_v2_20">
-        <Files Root="Y:\repos\PSoC-4-BLE-Experiments\Project 003 Custom Profile CapSense RGB LED\PSoC\CapSenseRGB\CapSenseRGB.cydsn">
+      <Folder BuildType="STRICT" Path="C:\Users\Electronic\Documents\GitHub\PSoC-4-BLE-Experiments\Project 003 Custom Profile CapSense RGB LED\PSoC\CapSenseRGB\CapSenseRGB.cydsn\Export\ARM_IAR_Generic\CapSense_CSD_P4_v2_20">
+        <Files Root="C:\Users\Electronic\Documents\GitHub\PSoC-4-BLE-Experiments\Project 003 Custom Profile CapSense RGB LED\PSoC\CapSenseRGB\CapSenseRGB.cydsn">
           <File BuildType="BUILD" Toolchain="ARM IAR Generic">.\Export\ARM_IAR_Generic\CapSense_CSD_P4_v2_20\CapsenseP4Library_IAR.a</File>
         </Files>
       </Folder>
-      <Folder BuildType="STRICT" Path="Y:\repos\PSoC-4-BLE-Experiments\Project 003 Custom Profile CapSense RGB LED\PSoC\CapSenseRGB\CapSenseRGB.cydsn\Export\ARM_IAR_Generic">
-        <Files Root="Y:\repos\PSoC-4-BLE-Experiments\Project 003 Custom Profile CapSense RGB LED\PSoC\CapSenseRGB\CapSenseRGB.cydsn">
+      <Folder BuildType="STRICT" Path="C:\Users\Electronic\Documents\GitHub\PSoC-4-BLE-Experiments\Project 003 Custom Profile CapSense RGB LED\PSoC\CapSenseRGB\CapSenseRGB.cydsn\Export\ARM_IAR_Generic">
+        <Files Root="C:\Users\Electronic\Documents\GitHub\PSoC-4-BLE-Experiments\Project 003 Custom Profile CapSense RGB LED\PSoC\CapSenseRGB\CapSenseRGB.cydsn">
           <File BuildType="BUILD" Toolchain="ARM IAR Generic">.\Export\ARM_IAR_Generic\CyComponentLibrary.a</File>
         </Files>
       </Folder>
       <Folder BuildType="EXCLUDE" Path=".\codegentemp">
-        <Files Root="Y:\repos\PSoC-4-BLE-Experiments\Project 003 Custom Profile CapSense RGB LED\PSoC\CapSenseRGB\CapSenseRGB.cydsn" />
+        <Files Root="C:\Users\Electronic\Documents\GitHub\PSoC-4-BLE-Experiments\Project 003 Custom Profile CapSense RGB LED\PSoC\CapSenseRGB\CapSenseRGB.cydsn" />
       </Folder>
       <Folder BuildType="EXCLUDE" Path=".\ARM_GCC_441">
-        <Files Root="Y:\repos\PSoC-4-BLE-Experiments\Project 003 Custom Profile CapSense RGB LED\PSoC\CapSenseRGB\CapSenseRGB.cydsn" />
+        <Files Root="C:\Users\Electronic\Documents\GitHub\PSoC-4-BLE-Experiments\Project 003 Custom Profile CapSense RGB LED\PSoC\CapSenseRGB\CapSenseRGB.cydsn" />
       </Folder>
       <Folder BuildType="EXCLUDE" Path=".\ARM_GCC_473">
-        <Files Root="Y:\repos\PSoC-4-BLE-Experiments\Project 003 Custom Profile CapSense RGB LED\PSoC\CapSenseRGB\CapSenseRGB.cydsn" />
+        <Files Root="C:\Users\Electronic\Documents\GitHub\PSoC-4-BLE-Experiments\Project 003 Custom Profile CapSense RGB LED\PSoC\CapSenseRGB\CapSenseRGB.cydsn" />
       </Folder>
       <Folder BuildType="EXCLUDE" Path=".\DP8051_Keil_952">
-        <Files Root="Y:\repos\PSoC-4-BLE-Experiments\Project 003 Custom Profile CapSense RGB LED\PSoC\CapSenseRGB\CapSenseRGB.cydsn" />
+        <Files Root="C:\Users\Electronic\Documents\GitHub\PSoC-4-BLE-Experiments\Project 003 Custom Profile CapSense RGB LED\PSoC\CapSenseRGB\CapSenseRGB.cydsn" />
       </Folder>
       <Folder BuildType="EXCLUDE" Path=".\DP8051">
-        <Files Root="Y:\repos\PSoC-4-BLE-Experiments\Project 003 Custom Profile CapSense RGB LED\PSoC\CapSenseRGB\CapSenseRGB.cydsn" />
+        <Files Root="C:\Users\Electronic\Documents\GitHub\PSoC-4-BLE-Experiments\Project 003 Custom Profile CapSense RGB LED\PSoC\CapSenseRGB\CapSenseRGB.cydsn" />
       </Folder>
       <Folder BuildType="EXCLUDE" Path=".\CortexM0">
-        <Files Root="Y:\repos\PSoC-4-BLE-Experiments\Project 003 Custom Profile CapSense RGB LED\PSoC\CapSenseRGB\CapSenseRGB.cydsn" />
+        <Files Root="C:\Users\Electronic\Documents\GitHub\PSoC-4-BLE-Experiments\Project 003 Custom Profile CapSense RGB LED\PSoC\CapSenseRGB\CapSenseRGB.cydsn" />
       </Folder>
       <Folder BuildType="EXCLUDE" Path=".\CortexM3">
-        <Files Root="Y:\repos\PSoC-4-BLE-Experiments\Project 003 Custom Profile CapSense RGB LED\PSoC\CapSenseRGB\CapSenseRGB.cydsn" />
+        <Files Root="C:\Users\Electronic\Documents\GitHub\PSoC-4-BLE-Experiments\Project 003 Custom Profile CapSense RGB LED\PSoC\CapSenseRGB\CapSenseRGB.cydsn" />
       </Folder>
       <Folder BuildType="EXCLUDE" Path=".\Generated_Source\PSoC3">
-        <Files Root="Y:\repos\PSoC-4-BLE-Experiments\Project 003 Custom Profile CapSense RGB LED\PSoC\CapSenseRGB\CapSenseRGB.cydsn" />
+        <Files Root="C:\Users\Electronic\Documents\GitHub\PSoC-4-BLE-Experiments\Project 003 Custom Profile CapSense RGB LED\PSoC\CapSenseRGB\CapSenseRGB.cydsn" />
       </Folder>
       <Folder BuildType="EXCLUDE" Path=".\Generated_Source\PSoC5">
-        <Files Root="Y:\repos\PSoC-4-BLE-Experiments\Project 003 Custom Profile CapSense RGB LED\PSoC\CapSenseRGB\CapSenseRGB.cydsn" />
+        <Files Root="C:\Users\Electronic\Documents\GitHub\PSoC-4-BLE-Experiments\Project 003 Custom Profile CapSense RGB LED\PSoC\CapSenseRGB\CapSenseRGB.cydsn" />
       </Folder>
     </Folders>
   </Project>
