@@ -13,7 +13,7 @@
 <v>Output</v>
 </TreeKeys>
 <TreeStates>
-<CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="CapSenseRGB\CapSenseRGB\Source Files\main.c">
+<CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="CapSenseRGB\CapSenseRGB\Generated_Source\PSoC4\Slider\Slider.h">
 <ExpandedNodeIds>
 <v>CapSenseRGB</v>
 <v>CapSenseRGB\CapSenseRGB</v>
@@ -23,6 +23,7 @@
 <v>CapSenseRGB\CapSenseRGB\Source Files</v>
 <v>CapSenseRGB\CapSenseRGB\Source Files\main.c</v>
 <v>CapSenseRGB\CapSenseRGB\Generated_Source</v>
+<v>CapSenseRGB\CapSenseRGB\Generated_Source\PSoC4</v>
 <v>CapSenseRGB\CapSenseRGB\Generated_Source\PSoC4\BLE</v>
 <v>CapSenseRGB\CapSenseRGB\Generated_Source\PSoC4\BLE\BLE.c</v>
 <v>CapSenseRGB\CapSenseRGB\Generated_Source\PSoC4\BLE\BLE.h</v>
@@ -130,15 +131,40 @@
 <v>CapSenseRGB\CapSenseRGB\Generated_Source\PSoC4\project.h</v>
 </ExpandedNodeIds>
 <VisibleNodeIds>
-<v>CapSenseRGB</v>
-<v>CapSenseRGB\CapSenseRGB</v>
-<v>CapSenseRGB\CapSenseRGB\TopDesign</v>
-<v>CapSenseRGB\CapSenseRGB\CapSenseRGB.cydwr</v>
-<v>CapSenseRGB\CapSenseRGB\Header Files</v>
-<v>CapSenseRGB\CapSenseRGB\Source Files</v>
-<v>CapSenseRGB\CapSenseRGB\Source Files\main.c</v>
-<v>CapSenseRGB\CapSenseRGB\Generated_Source</v>
-<v>CapSenseRGB\CapSenseRGB\Generated_Source\PSoC4</v>
+<v>CapSenseRGB\CapSenseRGB\Generated_Source\PSoC4\GREEN\GREEN_aliases.h</v>
+<v>CapSenseRGB\CapSenseRGB\Generated_Source\PSoC4\PRS_CLK</v>
+<v>CapSenseRGB\CapSenseRGB\Generated_Source\PSoC4\PRS_CLK\PRS_CLK.c</v>
+<v>CapSenseRGB\CapSenseRGB\Generated_Source\PSoC4\PRS_CLK\PRS_CLK.h</v>
+<v>CapSenseRGB\CapSenseRGB\Generated_Source\PSoC4\RED</v>
+<v>CapSenseRGB\CapSenseRGB\Generated_Source\PSoC4\RED\RED.c</v>
+<v>CapSenseRGB\CapSenseRGB\Generated_Source\PSoC4\RED\RED.h</v>
+<v>CapSenseRGB\CapSenseRGB\Generated_Source\PSoC4\RED\RED_aliases.h</v>
+<v>CapSenseRGB\CapSenseRGB\Generated_Source\PSoC4\RedGreenPrISM</v>
+<v>CapSenseRGB\CapSenseRGB\Generated_Source\PSoC4\RedGreenPrISM\RedGreenPrISM.c</v>
+<v>CapSenseRGB\CapSenseRGB\Generated_Source\PSoC4\RedGreenPrISM\RedGreenPrISM.h</v>
+<v>CapSenseRGB\CapSenseRGB\Generated_Source\PSoC4\RedGreenPrISM\RedGreenPrISM_PM.c</v>
+<v>CapSenseRGB\CapSenseRGB\Generated_Source\PSoC4\Slider</v>
+<v>CapSenseRGB\CapSenseRGB\Generated_Source\PSoC4\Slider\Slider.c</v>
+<v>CapSenseRGB\CapSenseRGB\Generated_Source\PSoC4\Slider\Slider.h</v>
+<v>CapSenseRGB\CapSenseRGB\Generated_Source\PSoC4\Slider\Slider_CSHL.c</v>
+<v>CapSenseRGB\CapSenseRGB\Generated_Source\PSoC4\Slider\Slider_CSHL.h</v>
+<v>CapSenseRGB\CapSenseRGB\Generated_Source\PSoC4\Slider\Slider_INT.c</v>
+<v>CapSenseRGB\CapSenseRGB\Generated_Source\PSoC4\Slider\Slider_IP.h</v>
+<v>CapSenseRGB\CapSenseRGB\Generated_Source\PSoC4\Slider\Slider_PM.c</v>
+<v>CapSenseRGB\CapSenseRGB\Generated_Source\PSoC4\Slider\Slider_PVT.h</v>
+<v>CapSenseRGB\CapSenseRGB\Generated_Source\PSoC4\Slider\Slider_SMS.c</v>
+<v>CapSenseRGB\CapSenseRGB\Generated_Source\PSoC4\Slider\Slider_SMS.h</v>
+<v>CapSenseRGB\CapSenseRGB\Generated_Source\PSoC4\Slider\Slider_TunerHelper.c</v>
+<v>CapSenseRGB\CapSenseRGB\Generated_Source\PSoC4\Slider\Slider_TunerHelper.h</v>
+<v>CapSenseRGB\CapSenseRGB\Generated_Source\PSoC4\Slider_SampleClk</v>
+<v>CapSenseRGB\CapSenseRGB\Generated_Source\PSoC4\Slider_SampleClk\Slider_SampleClk.c</v>
+<v>CapSenseRGB\CapSenseRGB\Generated_Source\PSoC4\Slider_SampleClk\Slider_SampleClk.h</v>
+<v>CapSenseRGB\CapSenseRGB\Generated_Source\PSoC4\Slider_SenseClk</v>
+<v>CapSenseRGB\CapSenseRGB\Generated_Source\PSoC4\Slider_SenseClk\Slider_SenseClk.c</v>
+<v>CapSenseRGB\CapSenseRGB\Generated_Source\PSoC4\Slider_SenseClk\Slider_SenseClk.h</v>
+<v>CapSenseRGB\CapSenseRGB\Generated_Source\PSoC4\Slider_Sns</v>
+<v>CapSenseRGB\CapSenseRGB\Generated_Source\PSoC4\Slider_Sns\Slider_Sns_aliases.h</v>
+<v>CapSenseRGB\CapSenseRGB\Generated_Source\PSoC4\cydevice_trm.h</v>
 </VisibleNodeIds>
 </CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237>
 <CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="">
@@ -236,6 +262,8 @@
 <v>CapSenseRGB\CapSenseRGB\CortexM0\ARM_GCC_484\Debug\Listing Files\RedGreenPrISM.lst</v>
 <v>CapSenseRGB\CapSenseRGB\CortexM0\ARM_GCC_484\Debug\Listing Files\RedGreenPrISM_PM.lst</v>
 <v>CapSenseRGB\CapSenseRGB\CortexM0\ARM_GCC_484\Debug\Listing Files\Slider.lst</v>
+<v>CapSenseRGB\CapSenseRGB\CortexM0\ARM_GCC_484\Debug\Listing Files\Slider_CSHL.lst</v>
+<v>CapSenseRGB\CapSenseRGB\CortexM0\ARM_GCC_484\Debug\Listing Files\Slider_INT.lst</v>
 </VisibleNodeIds>
 </CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237>
 </TreeStates>
@@ -284,6 +312,8 @@
 <OpenDocs>
 <name v=".\CapSenseRGB.cydsn\TopDesign\TopDesign.cysch" />
 <name v=".\CapSenseRGB.cydsn\CapSenseRGB.cydwr" />
+<name v=".\CapSenseRGB.cydsn\main.c" />
+<name v=".\CapSenseRGB.cydsn\main.h" />
 </OpenDocs>
 <config v="" />
 <AutoUpdate v="true" />
