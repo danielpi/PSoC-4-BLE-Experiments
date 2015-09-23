@@ -17,7 +17,7 @@
 uint8 deviceConnected = FALSE;
 
 // Function Prototypes
-void initializeSystem();
+void initializeSystem(); 
 void bluetoothEventHandler(uint32 event, void * eventParam);
 
 
@@ -80,7 +80,7 @@ void bluetoothEventHandler(uint32 event, void * eventParam) {
 			if (CYBLE_STATE_DISCONNECTED == CyBle_GetState()) {
 				CyBle_GappStartAdvertisement(CYBLE_ADVERTISING_FAST);
 			}
-			break;
+			break; 
 			
 		case CYBLE_EVT_GATT_CONNECT_IND:
 			// This flag is used to keep track of the current state

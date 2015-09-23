@@ -347,6 +347,7 @@
 <OpenDocs>
 <name v=".\CapSenseRGB.cydsn\main.c" />
 <name v=".\CapSenseRGB.cydsn\TopDesign\TopDesign.cysch" />
+<name v=".\CapSenseRGB.cydsn\main.h" />
 </OpenDocs>
 <config v="" />
 <AutoUpdate v="true" />
