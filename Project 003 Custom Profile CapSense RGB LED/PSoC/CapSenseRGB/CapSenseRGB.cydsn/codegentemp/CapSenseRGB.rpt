@@ -1,13 +1,21 @@
+<<<<<<< HEAD
 Loading plugins phase: Elapsed time ==> 0s.218ms
+=======
+Loading plugins phase: Elapsed time ==> 0s.156ms
+>>>>>>> origin/master
 Initializing data phase: Elapsed time ==> 0s.000ms
 <CYPRESSTAG name="CyDsfit arguments...">
-cydsfit arguments: -.fdsnotice -.fdswarpdepfile=warp_dependencies.txt -.fdselabdepfile=elab_dependencies.txt -.fdsbldfile=generated_files.txt -p Y:\repos\PSoC-4-BLE-Experiments\Project 003 Custom Profile CapSense RGB LED\PSoC\CapSenseRGB\CapSenseRGB.cydsn\CapSenseRGB.cyprj -d CY8C4247LQI-BL483 -s Y:\repos\PSoC-4-BLE-Experiments\Project 003 Custom Profile CapSense RGB LED\PSoC\CapSenseRGB\CapSenseRGB.cydsn\Generated_Source\PSoC4 -- -yv2 -q10 -ygs -o2 -v3 -.fftcfgtype=LE</CYPRESSTAG>
+cydsfit arguments: -.fdsnotice -.fdswarpdepfile=warp_dependencies.txt -.fdselabdepfile=elab_dependencies.txt -.fdsbldfile=generated_files.txt -p C:\Users\Electronic\Documents\GitHub\PSoC-4-BLE-Experiments\Project 003 Custom Profile CapSense RGB LED\PSoC\CapSenseRGB\CapSenseRGB.cydsn\CapSenseRGB.cyprj -d CY8C4247LQI-BL483 -s C:\Users\Electronic\Documents\GitHub\PSoC-4-BLE-Experiments\Project 003 Custom Profile CapSense RGB LED\PSoC\CapSenseRGB\CapSenseRGB.cydsn\Generated_Source\PSoC4 -- -yv2 -q10 -ygs -o2 -v3 -.fftcfgtype=LE</CYPRESSTAG>
 <CYPRESSTAG name="Design elaboration results...">
 </CYPRESSTAG>
+<<<<<<< HEAD
 Elaboration phase: Elapsed time ==> 1s.921ms
+=======
+Elaboration phase: Elapsed time ==> 1s.328ms
+>>>>>>> origin/master
 <CYPRESSTAG name="HDL generation results...">
 </CYPRESSTAG>
-HDL generation phase: Elapsed time ==> 0s.062ms
+HDL generation phase: Elapsed time ==> 0s.031ms
 <CYPRESSTAG name="Synthesis results...">
 
      | | | | | | |
@@ -25,23 +33,35 @@ HDL generation phase: Elapsed time ==> 0s.062ms
 ======================================================================
 Compiling:  CapSenseRGB.v
 Program  :   C:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\warp\bin/warp.exe
+<<<<<<< HEAD
 Options  :    -yv2 -q10 -ygs -o2 -v3 -.fftcfgtype=LE -ya -.fftprj=Y:\repos\PSoC-4-BLE-Experiments\Project 003 Custom Profile CapSense RGB LED\PSoC\CapSenseRGB\CapSenseRGB.cydsn\CapSenseRGB.cyprj -dcpsoc3 CapSenseRGB.v -verilog
+=======
+Options  :    -yv2 -q10 -ygs -o2 -v3 -.fftcfgtype=LE -ya -.fftprj=C:\Users\Electronic\Documents\GitHub\PSoC-4-BLE-Experiments\Project 003 Custom Profile CapSense RGB LED\PSoC\CapSenseRGB\CapSenseRGB.cydsn\CapSenseRGB.cyprj -dcpsoc3 CapSenseRGB.v -verilog
+>>>>>>> origin/master
 ======================================================================
 
 ======================================================================
 Compiling:  CapSenseRGB.v
 Program  :   C:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\warp\bin/warp.exe
+<<<<<<< HEAD
 Options  :    -yv2 -q10 -ygs -o2 -v3 -.fftcfgtype=LE -ya -.fftprj=Y:\repos\PSoC-4-BLE-Experiments\Project 003 Custom Profile CapSense RGB LED\PSoC\CapSenseRGB\CapSenseRGB.cydsn\CapSenseRGB.cyprj -dcpsoc3 CapSenseRGB.v -verilog
+=======
+Options  :    -yv2 -q10 -ygs -o2 -v3 -.fftcfgtype=LE -ya -.fftprj=C:\Users\Electronic\Documents\GitHub\PSoC-4-BLE-Experiments\Project 003 Custom Profile CapSense RGB LED\PSoC\CapSenseRGB\CapSenseRGB.cydsn\CapSenseRGB.cyprj -dcpsoc3 CapSenseRGB.v -verilog
+>>>>>>> origin/master
 ======================================================================
 
 ======================================================================
 Compiling:  CapSenseRGB.v
 Program  :   vlogfe
-Options  :    -yv2 -q10 -ygs -o2 -v3 -.fftcfgtype=LE -ya -.fftprj=Y:\repos\PSoC-4-BLE-Experiments\Project 003 Custom Profile CapSense RGB LED\PSoC\CapSenseRGB\CapSenseRGB.cydsn\CapSenseRGB.cyprj -dcpsoc3 -verilog CapSenseRGB.v
+Options  :    -yv2 -q10 -ygs -o2 -v3 -.fftcfgtype=LE -ya -.fftprj=C:\Users\Electronic\Documents\GitHub\PSoC-4-BLE-Experiments\Project 003 Custom Profile CapSense RGB LED\PSoC\CapSenseRGB\CapSenseRGB.cydsn\CapSenseRGB.cyprj -dcpsoc3 -verilog CapSenseRGB.v
 ======================================================================
 
 vlogfe V6.3 IR 41:  Verilog parser
+<<<<<<< HEAD
 Fri Sep 25 15:57:28 2015
+=======
+Wed Sep 23 10:03:27 2015
+>>>>>>> origin/master
 
 
 ======================================================================
@@ -51,7 +71,11 @@ Options  :    -yv2 -q10 CapSenseRGB.v
 ======================================================================
 
 vpp V6.3 IR 41:  Verilog Pre-Processor
+<<<<<<< HEAD
 Fri Sep 25 15:57:28 2015
+=======
+Wed Sep 23 10:03:27 2015
+>>>>>>> origin/master
 
 Flattening file 'C:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\psoc\content\cyprimitives\CyPrimitives.cylib\or_v1_0\or_v1_0.v'
 Flattening file 'C:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\psoc\content\cyprimitives\CyPrimitives.cylib\cy_constant_v1_0\cy_constant_v1_0.v'
@@ -85,11 +109,15 @@ vlogfe:  No errors.
 ======================================================================
 Compiling:  CapSenseRGB.v
 Program  :   tovif
-Options  :    -yv2 -q10 -ygs -o2 -v3 -.fftcfgtype=LE -ya -.fftprj=Y:\repos\PSoC-4-BLE-Experiments\Project 003 Custom Profile CapSense RGB LED\PSoC\CapSenseRGB\CapSenseRGB.cydsn\CapSenseRGB.cyprj -dcpsoc3 -verilog CapSenseRGB.v
+Options  :    -yv2 -q10 -ygs -o2 -v3 -.fftcfgtype=LE -ya -.fftprj=C:\Users\Electronic\Documents\GitHub\PSoC-4-BLE-Experiments\Project 003 Custom Profile CapSense RGB LED\PSoC\CapSenseRGB\CapSenseRGB.cydsn\CapSenseRGB.cyprj -dcpsoc3 -verilog CapSenseRGB.v
 ======================================================================
 
 tovif V6.3 IR 41:  High-level synthesis
+<<<<<<< HEAD
 Fri Sep 25 15:57:28 2015
+=======
+Wed Sep 23 10:03:27 2015
+>>>>>>> origin/master
 
 Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\warp\lib\common\std.vhd'.
 Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\warp\lib\common\cypress.vhd'.
@@ -100,9 +128,15 @@ Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\warp\lib\c
 Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\warp\lib\common\stdlogic\mod_cnst.vif'.
 Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\warp\lib\common\stdlogic\mod_mthv.vif'.
 Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\warp\lib\common\stdlogic\mod_genv.vif'.
+<<<<<<< HEAD
 Linking 'Y:\repos\PSoC-4-BLE-Experiments\Project 003 Custom Profile CapSense RGB LED\PSoC\CapSenseRGB\CapSenseRGB.cydsn\codegentemp\CapSenseRGB.ctl'.
 Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\psoc\content\cyprimitives\CyPrimitives.cylib\or_v1_0\or_v1_0.v'.
 Linking 'Y:\repos\PSoC-4-BLE-Experiments\Project 003 Custom Profile CapSense RGB LED\PSoC\CapSenseRGB\CapSenseRGB.cydsn\codegentemp\CapSenseRGB.v'.
+=======
+Linking 'C:\Users\Electronic\Documents\GitHub\PSoC-4-BLE-Experiments\Project 003 Custom Profile CapSense RGB LED\PSoC\CapSenseRGB\CapSenseRGB.cydsn\codegentemp\CapSenseRGB.ctl'.
+Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\psoc\content\cyprimitives\CyPrimitives.cylib\or_v1_0\or_v1_0.v'.
+Linking 'C:\Users\Electronic\Documents\GitHub\PSoC-4-BLE-Experiments\Project 003 Custom Profile CapSense RGB LED\PSoC\CapSenseRGB\CapSenseRGB.cydsn\codegentemp\CapSenseRGB.v'.
+>>>>>>> origin/master
 Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\psoc\content\cyprimitives\CyPrimitives.cylib\cy_constant_v1_0\cy_constant_v1_0.v'.
 Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\psoc\content\cycomponentlibrary\CyComponentLibrary.cylib\PrISM_v2_20\PrISM_v2_20.v'.
 Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\warp\lib\common\cypress.v'.
@@ -118,11 +152,15 @@ tovif:  No errors.
 ======================================================================
 Compiling:  CapSenseRGB.v
 Program  :   topld
-Options  :    -yv2 -q10 -ygs -o2 -v3 -.fftcfgtype=LE -ya -.fftprj=Y:\repos\PSoC-4-BLE-Experiments\Project 003 Custom Profile CapSense RGB LED\PSoC\CapSenseRGB\CapSenseRGB.cydsn\CapSenseRGB.cyprj -dcpsoc3 -verilog CapSenseRGB.v
+Options  :    -yv2 -q10 -ygs -o2 -v3 -.fftcfgtype=LE -ya -.fftprj=C:\Users\Electronic\Documents\GitHub\PSoC-4-BLE-Experiments\Project 003 Custom Profile CapSense RGB LED\PSoC\CapSenseRGB\CapSenseRGB.cydsn\CapSenseRGB.cyprj -dcpsoc3 -verilog CapSenseRGB.v
 ======================================================================
 
 topld V6.3 IR 41:  Synthesis and optimization
+<<<<<<< HEAD
 Fri Sep 25 15:57:28 2015
+=======
+Wed Sep 23 10:03:28 2015
+>>>>>>> origin/master
 
 Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\warp\lib\common\std.vhd'.
 Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\warp\lib\common\cypress.vhd'.
@@ -133,9 +171,15 @@ Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\warp\lib\c
 Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\warp\lib\common\stdlogic\mod_cnst.vif'.
 Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\warp\lib\common\stdlogic\mod_mthv.vif'.
 Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\warp\lib\common\stdlogic\mod_genv.vif'.
+<<<<<<< HEAD
 Linking 'Y:\repos\PSoC-4-BLE-Experiments\Project 003 Custom Profile CapSense RGB LED\PSoC\CapSenseRGB\CapSenseRGB.cydsn\codegentemp\CapSenseRGB.ctl'.
 Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\psoc\content\cyprimitives\CyPrimitives.cylib\or_v1_0\or_v1_0.v'.
 Linking 'Y:\repos\PSoC-4-BLE-Experiments\Project 003 Custom Profile CapSense RGB LED\PSoC\CapSenseRGB\CapSenseRGB.cydsn\codegentemp\CapSenseRGB.v'.
+=======
+Linking 'C:\Users\Electronic\Documents\GitHub\PSoC-4-BLE-Experiments\Project 003 Custom Profile CapSense RGB LED\PSoC\CapSenseRGB\CapSenseRGB.cydsn\codegentemp\CapSenseRGB.ctl'.
+Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\psoc\content\cyprimitives\CyPrimitives.cylib\or_v1_0\or_v1_0.v'.
+Linking 'C:\Users\Electronic\Documents\GitHub\PSoC-4-BLE-Experiments\Project 003 Custom Profile CapSense RGB LED\PSoC\CapSenseRGB\CapSenseRGB.cydsn\codegentemp\CapSenseRGB.v'.
+>>>>>>> origin/master
 Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\psoc\content\cyprimitives\CyPrimitives.cylib\cy_constant_v1_0\cy_constant_v1_0.v'.
 Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\psoc\content\cycomponentlibrary\CyComponentLibrary.cylib\PrISM_v2_20\PrISM_v2_20.v'.
 Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\warp\lib\common\cypress.v'.
@@ -310,6 +354,7 @@ topld:  No errors.
 
 CYPRESS_DIR    : C:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\warp
 Warp Program   : C:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\warp\bin/warp.exe
+<<<<<<< HEAD
 Warp Arguments : -yv2 -q10 -ygs -o2 -v3 -.fftcfgtype=LE -ya "-.fftprj=Y:\repos\PSoC-4-BLE-Experiments\Project 003 Custom Profile CapSense RGB LED\PSoC\CapSenseRGB\CapSenseRGB.cydsn\CapSenseRGB.cyprj" -dcpsoc3 CapSenseRGB.v -verilog
 </CYPRESSTAG>
 Warp synthesis phase: Elapsed time ==> 0s.671ms
@@ -317,6 +362,15 @@ Warp synthesis phase: Elapsed time ==> 0s.671ms
 <CYPRESSTAG name="Fitter startup details...">
 cyp3fit: V3.3.0.410, Family: PSoC3, Started at: Friday, 25 September 2015 15:57:29
 Options: -yv2 -q10 -ygs -o2 -v3 -.fftcfgtype=LE -ya -.fftprj=Y:\repos\PSoC-4-BLE-Experiments\Project 003 Custom Profile CapSense RGB LED\PSoC\CapSenseRGB\CapSenseRGB.cydsn\CapSenseRGB.cyprj -d CY8C4247LQI-BL483 CapSenseRGB.v -verilog
+=======
+Warp Arguments : -yv2 -q10 -ygs -o2 -v3 -.fftcfgtype=LE -ya "-.fftprj=C:\Users\Electronic\Documents\GitHub\PSoC-4-BLE-Experiments\Project 003 Custom Profile CapSense RGB LED\PSoC\CapSenseRGB\CapSenseRGB.cydsn\CapSenseRGB.cyprj" -dcpsoc3 CapSenseRGB.v -verilog
+</CYPRESSTAG>
+Warp synthesis phase: Elapsed time ==> 0s.625ms
+<CYPRESSTAG name="Fitter results...">
+<CYPRESSTAG name="Fitter startup details...">
+cyp3fit: V3.3.0.410, Family: PSoC3, Started at: Wednesday, 23 September 2015 10:03:28
+Options: -yv2 -q10 -ygs -o2 -v3 -.fftcfgtype=LE -ya -.fftprj=C:\Users\Electronic\Documents\GitHub\PSoC-4-BLE-Experiments\Project 003 Custom Profile CapSense RGB LED\PSoC\CapSenseRGB\CapSenseRGB.cydsn\CapSenseRGB.cyprj -d CY8C4247LQI-BL483 CapSenseRGB.v -verilog
+>>>>>>> origin/master
 </CYPRESSTAG>
 <CYPRESSTAG name="Design parsing">
 Design parsing phase: Elapsed time ==> 0s.015ms
@@ -1005,6 +1059,7 @@ DAC                           :      :      :      :
   7-bit IDAC                  :    1 :    0 :    1 : 100.00 %
   8-bit IDAC                  :    1 :    0 :    1 : 100.00 %
 </CYPRESSTAG>
+<<<<<<< HEAD
 Technology Mapping: Elapsed time ==> 0s.046ms
 Tech mapping phase: Elapsed time ==> 0s.062ms
 </CYPRESSTAG>
@@ -1017,8 +1072,22 @@ Analog Placement phase: Elapsed time ==> 0s.328ms
 <CYPRESSTAG name="Analog Routing">
 <CYPRESSTAG name="Analog Routing">
 Route success=True, Iterations=1 Elapsed=0.0025116 secs
+=======
+Technology Mapping: Elapsed time ==> 0s.062ms
+Tech mapping phase: Elapsed time ==> 0s.078ms
 </CYPRESSTAG>
-Analog Routing phase: Elapsed time ==> 0s.000ms
+<CYPRESSTAG name="Analog Placement">
+<CYPRESSTAG name="Analog Placement">
+Elapsed time ==> 0.1080013s
+</CYPRESSTAG>
+Analog Placement phase: Elapsed time ==> 0s.249ms
+</CYPRESSTAG>
+<CYPRESSTAG name="Analog Routing">
+<CYPRESSTAG name="Analog Routing">
+Route success=True, Iterations=1 Elapsed=0.0266371 secs
+>>>>>>> origin/master
+</CYPRESSTAG>
+Analog Routing phase: Elapsed time ==> 0s.031ms
 </CYPRESSTAG>
 <CYPRESSTAG name="Analog Code Generation">
 ============ Analog Final Answer Routes ============
@@ -1073,7 +1142,11 @@ Map of item to net {
 }
 Mux Info {
 }
+<<<<<<< HEAD
 Analog Code Generation phase: Elapsed time ==> 0s.078ms
+=======
+Analog Code Generation phase: Elapsed time ==> 0s.015ms
+>>>>>>> origin/master
 </CYPRESSTAG>
 <CYPRESSTAG name="Digital Placement">
 <CYPRESSTAG name="Detailed placement messages">
@@ -1108,7 +1181,7 @@ PLD Packing: Elapsed time ==> 0s.000ms
 Initial Partitioning Summary not displayed at this verbose level.</CYPRESSTAG>
 <CYPRESSTAG name="Final Partitioning Summary">
 Final Partitioning Summary not displayed at this verbose level.</CYPRESSTAG>
-Partitioning: Elapsed time ==> 0s.015ms
+Partitioning: Elapsed time ==> 0s.000ms
 </CYPRESSTAG>
 <CYPRESSTAG name="Simulated Annealing">
 Annealing: Elapsed time ==> 0s.000ms
@@ -1882,6 +1955,7 @@ Port | Pin | Fixed |      Type |       Drive Mode |             Name | Connectio
 </CYPRESSTAG>
 </CYPRESSTAG>
 Digital component placer commit/Report: Elapsed time ==> 0s.000ms
+<<<<<<< HEAD
 Digital Placement phase: Elapsed time ==> 0s.609ms
 </CYPRESSTAG>
 <CYPRESSTAG name="Digital Routing">
@@ -1890,12 +1964,23 @@ Digital Routing phase: Elapsed time ==> 0s.640ms
 </CYPRESSTAG>
 <CYPRESSTAG name="Bitstream and API generation">
 Bitstream and API generation phase: Elapsed time ==> 0s.374ms
+=======
+Digital Placement phase: Elapsed time ==> 0s.406ms
+</CYPRESSTAG>
+<CYPRESSTAG name="Digital Routing">
+Routing successful.
+Digital Routing phase: Elapsed time ==> 0s.437ms
+</CYPRESSTAG>
+<CYPRESSTAG name="Bitstream and API generation">
+Bitstream and API generation phase: Elapsed time ==> 0s.218ms
+>>>>>>> origin/master
 </CYPRESSTAG>
 <CYPRESSTAG name="Bitstream verification">
-Bitstream verification phase: Elapsed time ==> 0s.031ms
+Bitstream verification phase: Elapsed time ==> 0s.015ms
 </CYPRESSTAG>
 <CYPRESSTAG name="Static timing analysis">
 Timing report is in CapSenseRGB_timing.html.
+<<<<<<< HEAD
 Static timing analysis phase: Elapsed time ==> 0s.249ms
 </CYPRESSTAG>
 <CYPRESSTAG name="Data reporting">
@@ -1910,3 +1995,19 @@ Fitter phase: Elapsed time ==> 2s.874ms
 API generation phase: Elapsed time ==> 2s.046ms
 Dependency generation phase: Elapsed time ==> 0s.015ms
 Cleanup phase: Elapsed time ==> 0s.031ms
+=======
+Static timing analysis phase: Elapsed time ==> 0s.171ms
+</CYPRESSTAG>
+<CYPRESSTAG name="Data reporting">
+Data reporting phase: Elapsed time ==> 0s.093ms
+</CYPRESSTAG>
+<CYPRESSTAG name="Database update...">
+Design database save phase: Elapsed time ==> 0s.140ms
+</CYPRESSTAG>
+cydsfit: Elapsed time ==> 1s.890ms
+</CYPRESSTAG>
+Fitter phase: Elapsed time ==> 1s.921ms
+API generation phase: Elapsed time ==> 1s.546ms
+Dependency generation phase: Elapsed time ==> 0s.015ms
+Cleanup phase: Elapsed time ==> 0s.000ms
+>>>>>>> origin/master

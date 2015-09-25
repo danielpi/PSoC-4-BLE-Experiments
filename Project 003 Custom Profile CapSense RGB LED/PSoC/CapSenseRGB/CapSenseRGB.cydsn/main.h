@@ -1,3 +1,6 @@
+
+#include <project.h>
+
 /* ========================================
  *
  * Copyright YOUR COMPANY, THE YEAR
@@ -13,6 +16,3 @@
 void initializeSystem(void);
 void bluetoothEventHandler(uint32 event, void * eventParam);
 void UpdateRGBled(void)
-
-
-/* [] END OF FILE */

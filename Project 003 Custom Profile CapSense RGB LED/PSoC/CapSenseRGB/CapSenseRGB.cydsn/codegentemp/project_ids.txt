@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 Y:\repos\PSoC-4-BLE-Experiments\BatteryMonitor\BatteryMonitorWorkspace\BatteryMonitor01.cydsn\BatteryMonitor01.cyprj|01a197ef-3fce-4e3f-90d2-5a7c07d1387b
 C:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\psoc\content\default\CyAnnotationLibrary\CyAnnotationLibrary.cylib\CyAnnotationLibrary.cyprj|9934cbc2-97ca-4dec-b27c-d5de237ff55a
 C:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\psoc\content\cycomponentlibraryupdates\CyComponentLibraryUpdates.cylib\CyComponentLibraryUpdates.cyprj|599f8e85-3e57-41aa-818b-4bdbc05f5354
@@ -5,3 +6,10 @@ C:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\psoc\content\cycomp
 C:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\psoc\content\cyprimitives\CyPrimitives.cylib\CyPrimitives.cyprj|8f1f0302-a5e6-427d-b9cf-e7ec09442bd0
 Y:\repos\PSoC-4-BLE-Experiments\Project 003 Custom Profile CapSense RGB LED\PSoC\CapSenseRGB\CapSenseRGB.cydsn\CapSenseRGB.cyprj|788edfd7-258b-49bc-ad95-18180a4a3fba
 Y:\repos\PSoC-4-BLE\100_Projects_in_100_Days\Day003_Custom_Profile_CapSense_RGB_LED\Custom Profile\Custom Profile.cydsn\Custom Profile.cyprj|9b27554a-f858-4685-a47b-daad52b68fa6
+=======
+C:\Users\Electronic\Documents\GitHub\PSoC-4-BLE-Experiments\Project 003 Custom Profile CapSense RGB LED\PSoC\CapSenseRGB\CapSenseRGB.cydsn\CapSenseRGB.cyprj|e06191ae-1835-40c0-aea6-d780f3ec8c4f
+C:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\psoc\content\default\CyAnnotationLibrary\CyAnnotationLibrary.cylib\CyAnnotationLibrary.cyprj|d6310ead-94fa-44fc-9bdc-12848ab8527f
+C:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\psoc\content\cycomponentlibraryupdates\CyComponentLibraryUpdates.cylib\CyComponentLibraryUpdates.cyprj|9a141a52-f956-4299-b058-afe334ed18b6
+C:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\psoc\content\cycomponentlibrary\CyComponentLibrary.cylib\CyComponentLibrary.cyprj|86f47ec1-8be9-4d36-a76c-52120ad5d361
+C:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\psoc\content\cyprimitives\CyPrimitives.cylib\CyPrimitives.cyprj|eaf08e8c-9dc3-4a6c-8bc1-2e066ea285d8
+>>>>>>> origin/master

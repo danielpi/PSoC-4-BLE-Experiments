@@ -1,5 +1,9 @@
 # CapSenseRGB
+<<<<<<< HEAD
 # 2015-09-25 05:57:29Z
+=======
+# 2015-09-23 00:03:28Z
+>>>>>>> origin/master
 
 # IO_6@[IOP=(0)][IoId=(6)] is reserved: SWDDebugEnabled
 dont_use_io iocell 0 6

@@ -1,5 +1,10 @@
+<<<<<<< HEAD
 -- Project:   Y:\repos\PSoC-4-BLE-Experiments\Project 003 Custom Profile CapSense RGB LED\PSoC\CapSenseRGB\CapSenseRGB.cydsn\CapSenseRGB.cyprj
 -- Generated: 09/25/2015 15:57:31
+=======
+-- Project:   C:\Users\Electronic\Documents\GitHub\PSoC-4-BLE-Experiments\Project 003 Custom Profile CapSense RGB LED\PSoC\CapSenseRGB\CapSenseRGB.cydsn\CapSenseRGB.cyprj
+-- Generated: 09/23/2015 10:03:29
+>>>>>>> origin/master
 -- PSoC Creator  3.3
 
 ENTITY CapSenseRGB IS
