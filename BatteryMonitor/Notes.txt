@@ -1,0 +1,9 @@
+Battery monitor BLE device
+
+Need to be able to measure an analogue voltage. Differential mode. Could be a 12V measurement, could be a 500Vdc measurement. Most likely a 48Vdc measurement to start with (e.g., 4 batteries in series).
+
+Needs to get power from somewhere. Could just start by running off a coin cell though. 
+
+Needs to communicate the data via BLE. Could just be a broadcast at a slow rate with a high rate when connected. Or could be broadcast at a reasonable rate only. Maybe it broadcasts when an event happens (high rate of change of battery voltage). 
+
+Would be good to be able to have some datalogging functionality.

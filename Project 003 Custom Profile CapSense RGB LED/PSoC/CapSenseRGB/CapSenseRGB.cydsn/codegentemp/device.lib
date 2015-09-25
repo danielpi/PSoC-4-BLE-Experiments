@@ -1457,8 +1457,9 @@
         pin (interrupt) { direction : output; }
     }
     
-    cell (p4ctbmblockcell) {
-        pin (interrupt) { direction : output; }
+    cell (p4passblockcell) {
+        pin (interrupt_ctbs) { direction : output; }
+        pin (interrupt_uabs) { direction : output; }
     }
     
     cell (p4abufcell) {
@@ -1505,6 +1506,38 @@
                 intrinsic_fall : 1.0;
             }
         }
+    }
+
+    cell (p4usbcell) {
+        pin (dp) { direction: inout; }
+        pin (dm) { direction: inout; }
+        pin (vbus_valid) { direction: input; }
+        pin (vbus_det) { direction: output; }
+        pin (interrupt_lo) { direction: output; }
+        pin (interrupt_med) { direction: output; }
+        pin (interrupt_hi) { direction: output; }
+        pin (usb_sof) { direction: output; }
+        pin (dma_burstend_0) { direction: input; }
+        pin (dma_burstend_1) { direction: input; }
+        pin (dma_burstend_2) { direction: input; }
+        pin (dma_burstend_3) { direction: input; }
+        pin (dma_burstend_4) { direction: input; }
+        pin (dma_burstend_5) { direction: input; }
+        pin (dma_burstend_6) { direction: input; }
+        pin (dma_burstend_7) { direction: input; }
+        pin (dma_req_0) { direction: output; }
+        pin (dma_req_1) { direction: output; }
+        pin (dma_req_2) { direction: output; }
+        pin (dma_req_3) { direction: output; }
+        pin (dma_req_4) { direction: output; }
+        pin (dma_req_5) { direction: output; }
+        pin (dma_req_6) { direction: output; }
+        pin (dma_req_7) { direction: output; }
+        pin (sof) { direction : output; }
+        pin (ep0) { direction : output; }
+        pin (ep8_1) { direction : output; }
+        pin (reset) { direction : output; }
+        pin (arb) { direction : output; }
     }
 
 /*}*/

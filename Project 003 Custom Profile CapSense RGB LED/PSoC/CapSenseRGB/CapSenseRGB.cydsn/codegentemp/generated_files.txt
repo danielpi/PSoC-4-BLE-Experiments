@@ -70,6 +70,8 @@
   <file name="Y:\repos\PSoC-4-BLE-Experiments\Project 003 Custom Profile CapSense RGB LED\PSoC\CapSenseRGB\CapSenseRGB.cydsn\codegentemp\Slider_Sns_aliases.h" value="NONE;Slider_Sns" />
   <file name="Y:\repos\PSoC-4-BLE-Experiments\Project 003 Custom Profile CapSense RGB LED\PSoC\CapSenseRGB\CapSenseRGB.cydsn\codegentemp\Slider_SenseClk.c" value="ARM_C_FILE;Slider_SenseClk" />
   <file name="Y:\repos\PSoC-4-BLE-Experiments\Project 003 Custom Profile CapSense RGB LED\PSoC\CapSenseRGB\CapSenseRGB.cydsn\codegentemp\Slider_SenseClk.h" value="NONE;Slider_SenseClk" />
+  <file name="Y:\repos\PSoC-4-BLE-Experiments\Project 003 Custom Profile CapSense RGB LED\PSoC\CapSenseRGB\CapSenseRGB.cydsn\codegentemp\cycodeshareimport.ld" value="NONE;" />
+  <file name="Y:\repos\PSoC-4-BLE-Experiments\Project 003 Custom Profile CapSense RGB LED\PSoC\CapSenseRGB\CapSenseRGB.cydsn\codegentemp\cycodeshareimport.scat" value="NONE;" />
   <file name="Y:\repos\PSoC-4-BLE-Experiments\Project 003 Custom Profile CapSense RGB LED\PSoC\CapSenseRGB\CapSenseRGB.cydsn\codegentemp\cm0gcc.ld" value="NONE;cy_boot" />
   <file name="Y:\repos\PSoC-4-BLE-Experiments\Project 003 Custom Profile CapSense RGB LED\PSoC\CapSenseRGB\CapSenseRGB.cydsn\codegentemp\Cm0RealView.scat" value="NONE;cy_boot" />
   <file name="Y:\repos\PSoC-4-BLE-Experiments\Project 003 Custom Profile CapSense RGB LED\PSoC\CapSenseRGB\CapSenseRGB.cydsn\codegentemp\Cm0Start.c" value="ARM_C_FILE;cy_boot" />
