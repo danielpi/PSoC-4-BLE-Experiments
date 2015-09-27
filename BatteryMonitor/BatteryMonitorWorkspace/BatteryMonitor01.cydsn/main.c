@@ -10,9 +10,98 @@
  * ========================================
 */
 #include <project.h>
+/* ADC SAR sequencer component header to access Vref value */
+#include <ADC_SAR_SEQ.h>
+
+// Macros and Definitions
+#define RED_INDEX						(0)
+#define GREEN_INDEX						(1)
+#define BLUE_INDEX						(2)
+#define INTENSITY_INDEX					(3)
+
+#define TRUE							(1)
+#define FALSE							(0)
+#define ZERO							(0)
+
+#define RGB_LED_MAX_VAL					(255)
+#define RGB_LED_OFF						(255)
+#define RGB_LED_ON						(0)
+
+#define RGB_LED_SERVICE_INDEX           (0x01)
+#define RGB_LED_CHAR_INDEX              (0x00)
+#define RGB_LED_CHAR_HANDLE				(0x0013)
+#define RGB_CHAR_DATA_LEN				(4)
+
+#define BLE_STATE_ADVERTISING			(0x01)
+#define BLE_STATE_CONNECTED				(0x02)
+#define BLE_STATE_DISCONNECTED			(0x00)
+
+#define PASSIVE_LED_STATUS				(0xFF)
+
+#define LED_ADV_BLINK_PERIOD			(40000)
+#define LED_CONN_ON_PERIOD				(145000)
+
+#define MTU_XCHANGE_DATA_LEN			(0x0020)
+
+// ADC defines
+#define CH0_N               (0x00u)
+#define TEMP_CH             (0x01u)
+#define DELAY_1SEC          (1000u)
+
+/* Get actual Vref. value from ADC SAR sequencer */
+#define ADC_VREF_VALUE_V    ((float)ADC_SAR_Seq_DEFAULT_VREF_MV_VALUE/1000.0)
+
+volatile uint32 dataReady = 0u;
+volatile int16 result[ADC_SAR_Seq_TOTAL_CHANNELS_NUM];
+volatile uint32 timer_delay = 0u;
 
 // Function Prototypes
 static void initializeSystem(void);
+void CustomEventHandler(uint32 event, void * eventParam);
+void UpdateRGBled(void);
+
+// Global Variables
+CYBLE_GATT_HANDLE_VALUE_PAIR_T rgbHandle;	
+uint8 RGBledData[RGB_CHAR_DATA_LEN];
+uint8 deviceConnected = FALSE;
+
+
+CY_ISR(ADC_SAR_Seq_ISR_LOC) {
+    uint32 intr_status;
+    uint32 range_status;
+
+    /* Read interrupt status registers */
+    intr_status = ADC_SAR_Seq_SAR_INTR_MASKED_REG;
+    /* Check for End of Scan interrupt */
+    if((intr_status & ADC_SAR_Seq_EOS_MASK) != 0u)
+    {
+        /* Read range detect status */
+        range_status = ADC_SAR_Seq_SAR_RANGE_INTR_MASKED_REG;
+        /* Verify that the conversion result met the condition Low_Limit <= Result < High_Limit  */
+        if((range_status & (uint32)(1ul << CH0_N)) != 0u) 
+        {
+            /* Read conversion result */
+            result[CH0_N] = ADC_SAR_Seq_GetResult16(CH0_N);
+            /* Set PWM compare from channel0 */
+            //PWM_WriteCompare(result[CH0_N]);
+        }    
+
+        /* Clear range detect status */
+        ADC_SAR_Seq_SAR_RANGE_INTR_REG = range_status;
+        dataReady |= ADC_SAR_Seq_EOS_MASK;
+    }    
+
+    /* Check for Injection End of Conversion */
+    if((intr_status & ADC_SAR_Seq_INJ_EOC_MASK) != 0u)
+    {
+        result[TEMP_CH] = ADC_SAR_Seq_GetResult16(TEMP_CH);
+        dataReady |= ADC_SAR_Seq_INJ_EOC_MASK;
+    }    
+
+    /* Clear handled interrupt */
+    ADC_SAR_Seq_SAR_INTR_REG = intr_status;
+}
+
 
 
 void initializeSystem(void) {
@@ -33,6 +122,12 @@ void initializeSystem(void) {
 	RED_SetDriveMode(RED_DM_STRONG);
 	GREEN_SetDriveMode(GREEN_DM_STRONG);
 	BLUE_SetDriveMode(BLUE_DM_STRONG);
+    
+    // Start the ADC
+    ADC_SAR_Seq_Start();
+    ADC_SAR_Seq_StartConvert();
+    // Enable an interupt for when the ADC has data
+    ADC_SAR_Seq_IRQ_StartEx(ADC_SAR_Seq_ISR_LOC);
 }
 
 void CustomEventHandler(uint32 event, void * eventParam)
@@ -77,7 +172,7 @@ void CustomEventHandler(uint32 event, void * eventParam)
             RGBledData[GREEN_INDEX] = 0;
             RGBledData[BLUE_INDEX] = 0;
             RGBledData[INTENSITY_INDEX] = 0;
-			//UpdateRGBled();
+			UpdateRGBled();
 
 			break;
         
@@ -112,46 +207,61 @@ void CustomEventHandler(uint32 event, void * eventParam)
                 
                 /* Update the PrISM components and the attribute for RGB LED read 
                  * characteristics */
-                //UpdateRGBled();
-            }
-
-            
-            /* This condition checks whether the CCCD descriptor for CapSense
-             * slider characteristic has been written to. This tells us whether
-             * the notifications for CapSense slider have been enabled/disabled.
-             */
-            if(wrReqParam->handleValPair.attrHandle == cyBle_customs[CAPSENSE_SERVICE_INDEX].\
-				customServiceInfo[CAPSENSE_SLIDER_CHAR_INDEX].customServiceCharDescriptors[CAPSENSE_SLIDER_CCC_INDEX])
-            {
-                sendCapSenseSliderNotifications = wrReqParam->handleValPair.value.val[CCC_DATA_INDEX];
-				
-				/* Set flag to allow CCCD to be updated for next read operation */
-				updateNotificationCCCAttribute = TRUE;
+                UpdateRGBled();
             }
 
 			
 			/* ADD_CODE to send the response to the write request received. */
 			CyBle_GattsWriteRsp(cyBle_connHandle);
-			
 			break;
 
         default:
-
        	 	break;
     }
 }
 
+
+// Handle Interrupt Service Routine. Source - ADC SAR Seq.
+
+
+void UpdateRGBled(void)
+{
+	/* Local variables to calculate the color components from RGB received data*/
+	uint8 debug_red;
+	uint8 debug_green;
+	uint8 debug_blue;
+	uint8 intensity_divide_value = RGBledData[INTENSITY_INDEX];
+	
+	debug_red = (uint8)(((uint16)RGBledData[RED_INDEX] * intensity_divide_value) / 255);
+	debug_green = (uint8)(((uint16)RGBledData[GREEN_INDEX] * intensity_divide_value) / 255);
+	debug_blue = (uint8)(((uint16)RGBledData[BLUE_INDEX] * intensity_divide_value) / 255);
+	
+	/* Update the density value of the PrISM module for color control*/
+	PrISM_1_WritePulse0(RGB_LED_MAX_VAL - debug_red);
+    PrISM_1_WritePulse1(RGB_LED_MAX_VAL - debug_green);
+    PrISM_2_WritePulse0(RGB_LED_MAX_VAL - debug_blue);
+	
+	/* Update RGB control handle with new values */
+	rgbHandle.attrHandle = RGB_LED_CHAR_HANDLE;
+	rgbHandle.value.val = RGBledData;
+	rgbHandle.value.len = RGB_CHAR_DATA_LEN;
+	rgbHandle.value.actualLen = RGB_CHAR_DATA_LEN;
+	
+	/* Send updated RGB control handle as attribute for read by central device */
+	CyBle_GattsWriteAttributeValue(&rgbHandle, FALSE, &cyBle_connHandle, FALSE);  
+}
 
 int main()
 {
     
     /* Place your initialization/startup code here (e.g. MyInst_Start()) */
 
-    initializeSystem()
+    initializeSystem();
     
     for(;;)
     {
         /* Place your application code here. */
+        CyBle_ProcessEvents();
     }
 }
 
