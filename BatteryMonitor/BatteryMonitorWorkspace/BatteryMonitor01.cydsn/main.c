@@ -43,6 +43,9 @@
 
 #define MTU_XCHANGE_DATA_LEN			(0x0020)
 
+#define VOLTAGE_MEASUREMENT_CHAR_HANDLE		(0x000E)
+#define VOLTAGE_MEASUREMENT_CHAR_DATA_LEN	(2)
+
 // ADC defines
 #define CH0_N               (0x00u)
 #define TEMP_CH             (0x01u)
@@ -52,7 +55,8 @@
 #define ADC_VREF_VALUE_V    ((float)ADC_SAR_Seq_DEFAULT_VREF_MV_VALUE/1000.0)
 
 volatile uint32 dataReady = 0u;
-volatile int16 result[ADC_SAR_Seq_TOTAL_CHANNELS_NUM];
+volatile int16 result;
+volatile int16 elapsed;
 volatile uint32 timer_delay = 0u;
 
 // Function Prototypes
@@ -69,7 +73,9 @@ uint8 deviceConnected = FALSE;
 CY_ISR(ADC_SAR_Seq_ISR_LOC) {
     uint32 intr_status;
     uint32 range_status;
-
+    uint16 value;
+    
+    TP0_Write(1u);
     /* Read interrupt status registers */
     intr_status = ADC_SAR_Seq_SAR_INTR_MASKED_REG;
     /* Check for End of Scan interrupt */
@@ -78,28 +84,21 @@ CY_ISR(ADC_SAR_Seq_ISR_LOC) {
         /* Read range detect status */
         range_status = ADC_SAR_Seq_SAR_RANGE_INTR_MASKED_REG;
         /* Verify that the conversion result met the condition Low_Limit <= Result < High_Limit  */
-        if((range_status & (uint32)(1ul << CH0_N)) != 0u) 
-        {
+        //if((range_status & (uint32)(1ul << CH0_N)) != 0u) {
             /* Read conversion result */
-            result[CH0_N] = ADC_SAR_Seq_GetResult16(CH0_N);
+            result = ADC_SAR_Seq_GetResult16(CH0_N);
+            //SendVoltageMeasurementNotification(ADC_SAR_Seq_GetResult16(CH0_N));
             /* Set PWM compare from channel0 */
             //PWM_WriteCompare(result[CH0_N]);
-        }    
-
+        //}    
         /* Clear range detect status */
         ADC_SAR_Seq_SAR_RANGE_INTR_REG = range_status;
         dataReady |= ADC_SAR_Seq_EOS_MASK;
     }    
 
-    /* Check for Injection End of Conversion */
-    if((intr_status & ADC_SAR_Seq_INJ_EOC_MASK) != 0u)
-    {
-        result[TEMP_CH] = ADC_SAR_Seq_GetResult16(TEMP_CH);
-        dataReady |= ADC_SAR_Seq_INJ_EOC_MASK;
-    }    
-
     /* Clear handled interrupt */
     ADC_SAR_Seq_SAR_INTR_REG = intr_status;
+    TP0_Write(0u);
 }
 
 
@@ -126,8 +125,11 @@ void initializeSystem(void) {
     // Start the ADC
     ADC_SAR_Seq_Start();
     ADC_SAR_Seq_StartConvert();
+    ADC_SAR_Seq_IRQ_Enable();
     // Enable an interupt for when the ADC has data
     ADC_SAR_Seq_IRQ_StartEx(ADC_SAR_Seq_ISR_LOC);
+    
+    elapsed = 0;
 }
 
 void CustomEventHandler(uint32 event, void * eventParam)
@@ -208,13 +210,18 @@ void CustomEventHandler(uint32 event, void * eventParam)
                 /* Update the PrISM components and the attribute for RGB LED read 
                  * characteristics */
                 UpdateRGBled();
+                SendVoltageMeasurementNotification(result);
             }
 
 			
 			/* ADD_CODE to send the response to the write request received. */
 			CyBle_GattsWriteRsp(cyBle_connHandle);
 			break;
-
+        case CYBLE_EVT_GATTS_READ_CHAR_VAL_ACCESS_REQ:
+            // Is this in response to a read request?
+            
+            break;
+            
         default:
        	 	break;
     }
@@ -251,6 +258,18 @@ void UpdateRGBled(void)
 	CyBle_GattsWriteAttributeValue(&rgbHandle, FALSE, &cyBle_connHandle, FALSE);  
 }
 
+void SendVoltageMeasurementNotification(int16 voltageData) {
+	CYBLE_GATTS_HANDLE_VALUE_NTF_T		VoltageMeasurementNotificationHandle;	
+	
+	VoltageMeasurementNotificationHandle.attrHandle = VOLTAGE_MEASUREMENT_CHAR_HANDLE;				
+	VoltageMeasurementNotificationHandle.value.val = &voltageData;
+	VoltageMeasurementNotificationHandle.value.len = VOLTAGE_MEASUREMENT_CHAR_DATA_LEN;
+	
+	/* Send notifications. */
+	CyBle_GattsNotification(cyBle_connHandle, &VoltageMeasurementNotificationHandle);
+}
+
+
 int main()
 {
     
@@ -258,10 +277,12 @@ int main()
 
     initializeSystem();
     
-    for(;;)
-    {
+    for(;;) {
+        elapsed = elapsed + 1;
+        TP1_Write(1u);
         /* Place your application code here. */
         CyBle_ProcessEvents();
+        TP1_Write(0u);
     }
 }
 

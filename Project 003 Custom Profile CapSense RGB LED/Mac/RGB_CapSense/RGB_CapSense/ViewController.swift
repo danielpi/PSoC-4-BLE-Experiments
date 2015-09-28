@@ -29,7 +29,7 @@ class ViewController: NSViewController {
     
     let capSenseSliderCharacteristicUUID = CBUUID(string: "0xCAA2")
     let rgbLEDCharacteristicUUID = CBUUID(string: "0xCBB1")
-    let eiVoltageMeasurementCharacteristic = CBUUID(string: "0x0000000000001000800000805f9b34fb")
+    //let eiVoltageMeasurementCharacteristic = CBUUID(string: "0x0000000000001000800000805f9b34fb")
     
     var bleManager = CBCentralManager(delegate: nil, queue: nil, options: nil)
     var connectedDevice: CBPeripheral?

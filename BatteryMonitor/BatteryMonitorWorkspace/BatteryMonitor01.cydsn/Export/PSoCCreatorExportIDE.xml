@@ -127,6 +127,12 @@
           <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC4\CyLFClk.c</File>
           <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC4\CyLFClk.h</File>
           <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC4\project.h</File>
+          <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC4\TP0.c</File>
+          <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC4\TP0.h</File>
+          <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC4\TP0_aliases.h</File>
+          <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC4\TP1.c</File>
+          <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC4\TP1.h</File>
+          <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC4\TP1_aliases.h</File>
         </Files>
       </Folder>
       <Folder BuildType="STRICT" Path="Y:\repos\PSoC-4-BLE-Experiments\BatteryMonitor\BatteryMonitorWorkspace\BatteryMonitor01.cydsn\Export\ARM_GCC_Generic\BLE_v2_20">
