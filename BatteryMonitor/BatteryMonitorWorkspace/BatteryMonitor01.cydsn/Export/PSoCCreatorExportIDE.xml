@@ -133,6 +133,12 @@
           <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC4\TP1.c</File>
           <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC4\TP1.h</File>
           <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC4\TP1_aliases.h</File>
+          <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC4\Opamp_POS.c</File>
+          <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC4\Opamp_POS.h</File>
+          <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC4\Opamp_POS_PM.c</File>
+          <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC4\Opamp_NEG.c</File>
+          <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC4\Opamp_NEG.h</File>
+          <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC4\Opamp_NEG_PM.c</File>
         </Files>
       </Folder>
       <Folder BuildType="STRICT" Path="Y:\repos\PSoC-4-BLE-Experiments\BatteryMonitor\BatteryMonitorWorkspace\BatteryMonitor01.cydsn\Export\ARM_GCC_Generic\BLE_v2_20">

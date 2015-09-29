@@ -15,6 +15,7 @@ class ViewController: NSViewController {
     @IBOutlet weak var slider: NSSlider!
     @IBOutlet weak var colorWell: NSColorWell!
     @IBOutlet weak var voltageLabel: NSTextField!
+    @IBOutlet weak var rawADCLabel: NSTextField!
 
     
     @IBOutlet weak var connectButton: NSButton!
@@ -25,10 +26,12 @@ class ViewController: NSViewController {
     let capSenseServiceUUID = CBUUID(string: "0xCAB5")
     let rgbServiceUUID = CBUUID(string: "0xCBBB")
     let voltageMeasurementServiceUUID = CBUUID(string: "C8DAB479-738F-43CA-8368-0EBBB42D0D08")
+    let rawADCServiceUUID = CBUUID(string: "D71000F6-4392-42D8-9BB0-CDDC0BA59141")
     
     let capSenseSliderCharacteristicUUID = CBUUID(string: "0xCAA2")
     let rgbLEDCharacteristicUUID = CBUUID(string: "0xCBB1")
     let voltageMeasurementCharacteristic = CBUUID(string: "9E5686A7-8308-4F80-845D-BE211D1F0E9F")
+    let rawADCCharacteristic = CBUUID(string: "6B10091C-E262-46BF-A578-8BD2ACD1C1EF")
     
     var bleManager = CBCentralManager(delegate: nil, queue: nil, options: nil)
     var connectedDevice: CBPeripheral?
@@ -44,7 +47,7 @@ class ViewController: NSViewController {
         deviceTable.registerNib(nib!, forIdentifier: "DeviceCellView")
         
         bleManager.delegate = self
-        bleManager.scanForPeripheralsWithServices([capSenseServiceUUID, rgbServiceUUID, voltageMeasurementServiceUUID], options: nil)
+        bleManager.scanForPeripheralsWithServices([rawADCServiceUUID, rgbServiceUUID, voltageMeasurementServiceUUID], options: nil)
     }
 
     override var representedObject: AnyObject? {
@@ -225,6 +228,9 @@ extension ViewController: CBPeripheralDelegate {
                 case voltageMeasurementCharacteristic:
                     service.peripheral.setNotifyValue(true, forCharacteristic: characteristic)
                     service.peripheral.readValueForCharacteristic(characteristic)
+                case rawADCCharacteristic:
+                    service.peripheral.setNotifyValue(true, forCharacteristic: characteristic)
+                    service.peripheral.readValueForCharacteristic(characteristic)
                 default:
                     print("No sure what to do with this characteristic \(characteristic)")
                 }
@@ -233,6 +239,7 @@ extension ViewController: CBPeripheralDelegate {
     }
     
     func peripheral(peripheral: CBPeripheral, didUpdateValueForCharacteristic characteristic: CBCharacteristic, error: NSError?) {
+        print("Value for Characterisic \(characteristic.UUID)")
         switch characteristic.UUID {
         case capSenseSliderCharacteristicUUID:
             if let data = characteristic.value {
@@ -244,11 +251,20 @@ extension ViewController: CBPeripheralDelegate {
             }
         case voltageMeasurementCharacteristic:
             if let data = characteristic.value {
-                var out: NSInteger = 0
-                data.getBytes(&out, length: sizeof(NSInteger))
-                voltageLabel.integerValue = out
+                var out: Float = 0
+                data.getBytes(&out, length: 4)
+                voltageLabel.floatValue = out
             } else {
-                voltageLabel.integerValue = 0
+                voltageLabel.stringValue = "NA"
+            }
+        case rawADCCharacteristic:
+            if let data = characteristic.value {
+                print("\(data)")
+                var out: Int16 = 0
+                data.getBytes(&out, length: sizeof(NSInteger))
+                rawADCLabel.integerValue = Int(out)
+            } else {
+                rawADCLabel.stringValue = "NA"
             }
         default:
             print("Not sure what to do with the notification from \(characteristic.UUID)")

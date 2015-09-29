@@ -12,6 +12,7 @@
 #include <project.h>
 /* ADC SAR sequencer component header to access Vref value */
 #include <ADC_SAR_SEQ.h>
+#include <BLE_custom.h>
 
 // Macros and Definitions
 #define RED_INDEX						(0)
@@ -27,9 +28,9 @@
 #define RGB_LED_OFF						(255)
 #define RGB_LED_ON						(0)
 
-#define RGB_LED_SERVICE_INDEX           (0x01)
+#define RGB_LED_SERVICE_INDEX           (0x02)
 #define RGB_LED_CHAR_INDEX              (0x00)
-#define RGB_LED_CHAR_HANDLE				(0x0013)
+#define RGB_LED_CHAR_HANDLE				(0x0018u)
 #define RGB_CHAR_DATA_LEN				(4)
 
 #define BLE_STATE_ADVERTISING			(0x01)
@@ -43,8 +44,8 @@
 
 #define MTU_XCHANGE_DATA_LEN			(0x0020)
 
-#define VOLTAGE_MEASUREMENT_CHAR_HANDLE		(0x000E)
-#define VOLTAGE_MEASUREMENT_CHAR_DATA_LEN	(2)
+#define VOLTAGE_MEASUREMENT_CHAR_HANDLE (0x0013)
+#define RAW_ADC_CHAR_HANDLE             (0x000E)
 
 // ADC defines
 #define CH0_N               (0x00u)
@@ -55,7 +56,8 @@
 #define ADC_VREF_VALUE_V    ((float)ADC_SAR_Seq_DEFAULT_VREF_MV_VALUE/1000.0)
 
 volatile uint32 dataReady = 0u;
-volatile int16 result;
+volatile int16 rawADCValue;
+volatile float32 voltageReading;
 volatile int16 elapsed;
 volatile uint32 timer_delay = 0u;
 
@@ -63,6 +65,8 @@ volatile uint32 timer_delay = 0u;
 static void initializeSystem(void);
 void CustomEventHandler(uint32 event, void * eventParam);
 void UpdateRGBled(void);
+void SendVoltageMeasurementNotification(float32 voltageData);
+void SendRawADCNotification(int16 rawADC);
 
 // Global Variables
 CYBLE_GATT_HANDLE_VALUE_PAIR_T rgbHandle;	
@@ -73,7 +77,6 @@ uint8 deviceConnected = FALSE;
 CY_ISR(ADC_SAR_Seq_ISR_LOC) {
     uint32 intr_status;
     uint32 range_status;
-    uint16 value;
     
     TP0_Write(1u);
     /* Read interrupt status registers */
@@ -86,7 +89,8 @@ CY_ISR(ADC_SAR_Seq_ISR_LOC) {
         /* Verify that the conversion result met the condition Low_Limit <= Result < High_Limit  */
         //if((range_status & (uint32)(1ul << CH0_N)) != 0u) {
             /* Read conversion result */
-            result = ADC_SAR_Seq_GetResult16(CH0_N);
+            rawADCValue = ADC_SAR_Seq_GetResult16(CH0_N);
+            //voltageReading = 28.4971707317073 * ((float)rawADCValue/0x7FF);
             //SendVoltageMeasurementNotification(ADC_SAR_Seq_GetResult16(CH0_N));
             /* Set PWM compare from channel0 */
             //PWM_WriteCompare(result[CH0_N]);
@@ -108,6 +112,9 @@ void initializeSystem(void) {
     
     PrISM_1_Start();
     PrISM_2_Start();
+    
+    Opamp_POS_Start();
+    Opamp_NEG_Start();
     
     // Start the Bluetooth Stack
     CyBle_Start(CustomEventHandler);	
@@ -197,8 +204,10 @@ void CustomEventHandler(uint32 event, void * eventParam)
             /* ADD_CODE to extract the attribute handle for the RGB LED 
              * characteristic from the custom service data structure.
              */
-            if(wrReqParam->handleValPair.attrHandle == cyBle_customs[RGB_LED_SERVICE_INDEX].\
-								customServiceInfo[RGB_LED_CHAR_INDEX].customServiceCharHandle)
+            //if(wrReqParam->handleValPair.attrHandle == cyBle_customs[RGB_LED_SERVICE_INDEX].\
+			//					customServiceInfo[RGB_LED_CHAR_INDEX].customServiceCharHandle)
+            if(wrReqParam->handleValPair.attrHandle == cyBle_customs[CYBLE_RGB_LED_SERVICE_SERVICE_INDEX].\
+								customServiceInfo[CYBLE_RGB_LED_SERVICE_RGB_LED_CHARACTERISTIC_CHAR_INDEX].customServiceCharHandle)
             {
                 /* ADD_CODE to extract the value of the attribute from 
                  * the handle-value pair database. */
@@ -210,7 +219,7 @@ void CustomEventHandler(uint32 event, void * eventParam)
                 /* Update the PrISM components and the attribute for RGB LED read 
                  * characteristics */
                 UpdateRGBled();
-                SendVoltageMeasurementNotification(result);
+                //SendVoltageMeasurementNotification(voltageReading);
             }
 
 			
@@ -249,7 +258,7 @@ void UpdateRGBled(void)
     PrISM_2_WritePulse0(RGB_LED_MAX_VAL - debug_blue);
 	
 	/* Update RGB control handle with new values */
-	rgbHandle.attrHandle = RGB_LED_CHAR_HANDLE;
+	rgbHandle.attrHandle = CYBLE_RGB_LED_SERVICE_RGB_LED_CHARACTERISTIC_CHAR_HANDLE;
 	rgbHandle.value.val = RGBledData;
 	rgbHandle.value.len = RGB_CHAR_DATA_LEN;
 	rgbHandle.value.actualLen = RGB_CHAR_DATA_LEN;
@@ -258,17 +267,26 @@ void UpdateRGBled(void)
 	CyBle_GattsWriteAttributeValue(&rgbHandle, FALSE, &cyBle_connHandle, FALSE);  
 }
 
-void SendVoltageMeasurementNotification(int16 voltageData) {
+void SendVoltageMeasurementNotification(float32 voltageData) {
 	CYBLE_GATTS_HANDLE_VALUE_NTF_T		VoltageMeasurementNotificationHandle;	
 	
-	VoltageMeasurementNotificationHandle.attrHandle = VOLTAGE_MEASUREMENT_CHAR_HANDLE;				
+	VoltageMeasurementNotificationHandle.attrHandle = CYBLE_VOLTAGE_MEASUREMENT_SERVICE_VOLTAGE_MEASUREMENT_CHARACTERISTIC_CHAR_HANDLE;				
 	VoltageMeasurementNotificationHandle.value.val = &voltageData;
-	VoltageMeasurementNotificationHandle.value.len = VOLTAGE_MEASUREMENT_CHAR_DATA_LEN;
+	VoltageMeasurementNotificationHandle.value.len = 4;
 	
 	/* Send notifications. */
 	CyBle_GattsNotification(cyBle_connHandle, &VoltageMeasurementNotificationHandle);
 }
 
+void SendRawADCNotification(int16 rawADC) {
+    CYBLE_GATTS_HANDLE_VALUE_NTF_T  RawADCNotificationHandle;
+    
+    RawADCNotificationHandle.attrHandle = CYBLE_RAW_ADC_SERVICE_RAW_ADC_CHARACTERISTIC_CHAR_HANDLE;
+    RawADCNotificationHandle.value.val = &rawADC;
+    RawADCNotificationHandle.value.len = 2u;
+    
+    CyBle_GattsNotification(cyBle_connHandle, &RawADCNotificationHandle);
+}
 
 int main()
 {
@@ -283,6 +301,14 @@ int main()
         /* Place your application code here. */
         CyBle_ProcessEvents();
         TP1_Write(0u);
+        
+        if (elapsed == 0) {
+            //voltageReading = 29.6907207207207 * ((float)rawADCValue/0x7FFF);
+            //voltageReading = 0.0009 * (float)rawADCValue + 0.4238;
+            voltageReading = 0.0005892 * (float)rawADCValue + 0.28026;
+            SendVoltageMeasurementNotification(voltageReading);
+            SendRawADCNotification(rawADCValue);
+        }
     }
 }
 
