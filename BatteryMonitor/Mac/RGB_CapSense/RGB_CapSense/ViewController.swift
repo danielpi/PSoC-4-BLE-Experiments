@@ -239,6 +239,26 @@ extension ViewController: CBPeripheralDelegate {
     }
     
     func peripheral(peripheral: CBPeripheral, didUpdateValueForCharacteristic characteristic: CBCharacteristic, error: NSError?) {
+        
+        struct MultimeterFormater {
+            static let formatter: NSNumberFormatter = {
+                let formatter = NSNumberFormatter()
+                formatter.maximumIntegerDigits = 2
+                formatter.minimumIntegerDigits = 1
+                formatter.maximumFractionDigits = 2
+                formatter.minimumFractionDigits = 2
+                return formatter
+            }()
+        }
+        
+        struct IntegerFormatter {
+            static let formatter: NSNumberFormatter = {
+                let formatter = NSNumberFormatter()
+                formatter.hasThousandSeparators = false
+                return formatter
+            }()
+        }
+        
         print("Value for Characterisic \(characteristic.UUID)")
         switch characteristic.UUID {
         case capSenseSliderCharacteristicUUID:
@@ -253,7 +273,7 @@ extension ViewController: CBPeripheralDelegate {
             if let data = characteristic.value {
                 var out: Float = 0
                 data.getBytes(&out, length: 4)
-                voltageLabel.floatValue = out
+                voltageLabel.stringValue = MultimeterFormater.formatter.stringFromNumber(out)!
             } else {
                 voltageLabel.stringValue = "NA"
             }
@@ -262,7 +282,7 @@ extension ViewController: CBPeripheralDelegate {
                 print("\(data)")
                 var out: Int16 = 0
                 data.getBytes(&out, length: sizeof(NSInteger))
-                rawADCLabel.integerValue = Int(out)
+                rawADCLabel.stringValue = IntegerFormatter.formatter.stringFromNumber(Int(out))!
             } else {
                 rawADCLabel.stringValue = "NA"
             }

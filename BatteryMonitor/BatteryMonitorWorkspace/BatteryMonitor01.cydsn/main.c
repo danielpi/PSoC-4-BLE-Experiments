@@ -305,7 +305,8 @@ int main()
         if (elapsed == 0) {
             //voltageReading = 29.6907207207207 * ((float)rawADCValue/0x7FFF);
             //voltageReading = 0.0009 * (float)rawADCValue + 0.4238;
-            voltageReading = 0.0005892 * (float)rawADCValue + 0.28026;
+            //voltageReading = 0.0005892 * (float)rawADCValue + 0.28026;
+            voltageReading = 0.0005892 * (float)rawADCValue + 0.18026;
             SendVoltageMeasurementNotification(voltageReading);
             SendRawADCNotification(rawADCValue);
         }
