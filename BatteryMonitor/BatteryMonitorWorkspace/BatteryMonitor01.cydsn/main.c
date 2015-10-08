@@ -56,7 +56,7 @@
 #define ADC_VREF_VALUE_V    ((float)ADC_SAR_Seq_DEFAULT_VREF_MV_VALUE/1000.0)
 
 volatile uint32 dataReady = 0u;
-volatile int16 rawADCValue;
+volatile uint16 rawADCValue;
 volatile float32 voltageReading;
 volatile int16 elapsed;
 volatile uint32 timer_delay = 0u;
@@ -66,7 +66,7 @@ static void initializeSystem(void);
 void CustomEventHandler(uint32 event, void * eventParam);
 void UpdateRGBled(void);
 void SendVoltageMeasurementNotification(float32 voltageData);
-void SendRawADCNotification(int16 rawADC);
+void SendRawADCNotification(uint16 rawADC);
 
 // Global Variables
 CYBLE_GATT_HANDLE_VALUE_PAIR_T rgbHandle;	
@@ -105,6 +105,8 @@ CY_ISR(ADC_SAR_Seq_ISR_LOC) {
     TP0_Write(0u);
 }
 
+// Once a second or so I'd like to change the data in the advertising packet so that it contains the 
+// up to date voltage reading. CyBle_GapUpdateAdvData()
 
 
 void initializeSystem(void) {
@@ -113,8 +115,7 @@ void initializeSystem(void) {
     PrISM_1_Start();
     PrISM_2_Start();
     
-    Opamp_POS_Start();
-    Opamp_NEG_Start();
+    Opamp_1_Start();
     
     // Start the Bluetooth Stack
     CyBle_Start(CustomEventHandler);	
@@ -278,7 +279,7 @@ void SendVoltageMeasurementNotification(float32 voltageData) {
 	CyBle_GattsNotification(cyBle_connHandle, &VoltageMeasurementNotificationHandle);
 }
 
-void SendRawADCNotification(int16 rawADC) {
+void SendRawADCNotification(uint16 rawADC) {
     CYBLE_GATTS_HANDLE_VALUE_NTF_T  RawADCNotificationHandle;
     
     RawADCNotificationHandle.attrHandle = CYBLE_RAW_ADC_SERVICE_RAW_ADC_CHARACTERISTIC_CHAR_HANDLE;
@@ -292,7 +293,16 @@ int main()
 {
     
     /* Place your initialization/startup code here (e.g. MyInst_Start()) */
-
+    float resistor_divider_multiplier;
+    float adc_multiplier;
+    float fudge_multiplier;
+    uint16 offset;
+    
+    offset = 402;
+    resistor_divider_multiplier = ((220000 + 18000) / 18000);
+    adc_multiplier = 2.048 / 65536;
+    fudge_multiplier = 1.02534275031159;
+    
     initializeSystem();
     
     for(;;) {
@@ -306,7 +316,7 @@ int main()
             //voltageReading = 29.6907207207207 * ((float)rawADCValue/0x7FFF);
             //voltageReading = 0.0009 * (float)rawADCValue + 0.4238;
             //voltageReading = 0.0005892 * (float)rawADCValue + 0.28026;
-            voltageReading = 0.0005892 * (float)rawADCValue + 0.18026;
+            voltageReading = fudge_multiplier * resistor_divider_multiplier * adc_multiplier * (float)(rawADCValue - offset);
             SendVoltageMeasurementNotification(voltageReading);
             SendRawADCNotification(rawADCValue);
         }

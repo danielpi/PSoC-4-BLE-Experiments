@@ -1,7 +1,7 @@
-Y:\repos\PSoC-4-BLE-Experiments\BatteryMonitor\BatteryMonitorWorkspace\BatteryMonitor01.cydsn\BatteryMonitor01.cyprj|af94d6e4-8585-43e7-9a90-40ed010bf1ee
-C:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\psoc\content\default\CyAnnotationLibrary\CyAnnotationLibrary.cylib\CyAnnotationLibrary.cyprj|8d8edd17-f590-4851-9b2c-d6f9759e1cdb
-C:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\psoc\content\cycomponentlibraryupdates\CyComponentLibraryUpdates.cylib\CyComponentLibraryUpdates.cyprj|dee2b93e-9d77-4a0e-9002-d3bc73355c54
-C:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\psoc\content\cycomponentlibrary\CyComponentLibrary.cylib\CyComponentLibrary.cyprj|52c6f238-5c0e-4cfa-8248-bb3943d186c7
-C:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\psoc\content\cyprimitives\CyPrimitives.cylib\CyPrimitives.cyprj|6cb42c74-d779-44f7-a2fd-491412b29720
-Y:\repos\PSoC-4-BLE-Experiments\Project 003 Custom Profile CapSense RGB LED\PSoC\CapSenseRGB\CapSenseRGB.cydsn\CapSenseRGB.cyprj|ffd8b8eb-af1f-4e19-827a-12e60a86f330
-Y:\repos\PSoC-4-BLE\100_Projects_in_100_Days\Day003_Custom_Profile_CapSense_RGB_LED\Custom Profile\Custom Profile.cydsn\Custom Profile.cyprj|c760938c-efdb-4f49-8b26-06e96b345cc4
+Y:\repos\PSoC-4-BLE-Experiments\BatteryMonitor\BatteryMonitorWorkspace\BatteryMonitor01.cydsn\BatteryMonitor01.cyprj|6e9c96f5-1f7d-485f-b52d-eb93579ae43f
+C:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\psoc\content\default\CyAnnotationLibrary\CyAnnotationLibrary.cylib\CyAnnotationLibrary.cyprj|240a5db6-445d-4614-9e85-76c7faffb816
+C:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\psoc\content\cycomponentlibraryupdates\CyComponentLibraryUpdates.cylib\CyComponentLibraryUpdates.cyprj|edb6c4d1-54a3-402f-b422-e3df25dd8dcf
+C:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\psoc\content\cycomponentlibrary\CyComponentLibrary.cylib\CyComponentLibrary.cyprj|175cc354-c6f5-4550-ad88-c8c71c86979b
+C:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\psoc\content\cyprimitives\CyPrimitives.cylib\CyPrimitives.cyprj|8fd01dbc-d8ea-4321-850c-78ff62c328c0
+Y:\repos\PSoC-4-BLE-Experiments\Project 003 Custom Profile CapSense RGB LED\PSoC\CapSenseRGB\CapSenseRGB.cydsn\CapSenseRGB.cyprj|41ffe682-592d-4f8c-b0cf-f72d7fbdcace
+Y:\repos\PSoC-4-BLE\100_Projects_in_100_Days\Day003_Custom_Profile_CapSense_RGB_LED\Custom Profile\Custom Profile.cydsn\Custom Profile.cyprj|df00684b-53cd-4be4-a04b-98fd141d0e15

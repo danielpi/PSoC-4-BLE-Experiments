@@ -16,6 +16,7 @@ class ViewController: NSViewController {
     @IBOutlet weak var colorWell: NSColorWell!
     @IBOutlet weak var voltageLabel: NSTextField!
     @IBOutlet weak var rawADCLabel: NSTextField!
+    @IBOutlet weak var scanButton: NSButton!
 
     
     @IBOutlet weak var connectButton: NSButton!
@@ -83,6 +84,9 @@ class ViewController: NSViewController {
                 bleManager.connectPeripheral(selected, options: nil)
             }
         }
+    }
+    @IBAction func scanForPeripherals(sender: AnyObject) {
+        bleManager.scanForPeripheralsWithServices([rawADCServiceUUID, rgbServiceUUID, voltageMeasurementServiceUUID], options: nil)
     }
 }
 
@@ -280,9 +284,9 @@ extension ViewController: CBPeripheralDelegate {
         case rawADCCharacteristic:
             if let data = characteristic.value {
                 print("\(data)")
-                var out: Int16 = 0
+                var out: UInt16 = 0
                 data.getBytes(&out, length: sizeof(NSInteger))
-                rawADCLabel.stringValue = IntegerFormatter.formatter.stringFromNumber(Int(out))!
+                rawADCLabel.stringValue = IntegerFormatter.formatter.stringFromNumber(UInt(out))!
             } else {
                 rawADCLabel.stringValue = "NA"
             }
