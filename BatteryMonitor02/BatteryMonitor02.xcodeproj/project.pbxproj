@@ -1,0 +1,366 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1EE676726C8E1B2A8360726C /* libPods-BatteryMonitor02.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D371AFFE08A8BA6D1A9CCD14 /* libPods-BatteryMonitor02.a */; };
+		E6B251A51BCDD03D00539EA0 /* GraphTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6B251A41BCDD03D00539EA0 /* GraphTheme.swift */; };
+		E6B2A0291BC74E73001A2F7B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6B2A0281BC74E73001A2F7B /* AppDelegate.swift */; };
+		E6B2A02B1BC74E73001A2F7B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6B2A02A1BC74E73001A2F7B /* ViewController.swift */; };
+		E6B2A02D1BC74E73001A2F7B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E6B2A02C1BC74E73001A2F7B /* Assets.xcassets */; };
+		E6B2A0301BC74E73001A2F7B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E6B2A02E1BC74E73001A2F7B /* Main.storyboard */; };
+		E6FB3D2D1BC7703C00D84574 /* DeviceCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6FB3D2B1BC7703C00D84574 /* DeviceCellView.swift */; };
+		E6FB3D2E1BC7703C00D84574 /* DeviceCellView.xib in Resources */ = {isa = PBXBuildFile; fileRef = E6FB3D2C1BC7703C00D84574 /* DeviceCellView.xib */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		3DACAEE54239516A52E07EB3 /* Pods-BatteryMonitor02.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BatteryMonitor02.release.xcconfig"; path = "Pods/Target Support Files/Pods-BatteryMonitor02/Pods-BatteryMonitor02.release.xcconfig"; sourceTree = "<group>"; };
+		8FB9338CA352107A530D76BB /* Pods-BatteryMonitor02.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BatteryMonitor02.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BatteryMonitor02/Pods-BatteryMonitor02.debug.xcconfig"; sourceTree = "<group>"; };
+		D371AFFE08A8BA6D1A9CCD14 /* libPods-BatteryMonitor02.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-BatteryMonitor02.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		E6B251A41BCDD03D00539EA0 /* GraphTheme.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GraphTheme.swift; sourceTree = "<group>"; };
+		E6B2A0251BC74E73001A2F7B /* BatteryMonitor02.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BatteryMonitor02.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		E6B2A0281BC74E73001A2F7B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		E6B2A02A1BC74E73001A2F7B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		E6B2A02C1BC74E73001A2F7B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		E6B2A02F1BC74E73001A2F7B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		E6B2A0311BC74E73001A2F7B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E6FB3D2B1BC7703C00D84574 /* DeviceCellView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeviceCellView.swift; sourceTree = "<group>"; };
+		E6FB3D2C1BC7703C00D84574 /* DeviceCellView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DeviceCellView.xib; sourceTree = "<group>"; };
+		E6FB3D3D1BC7757F00D84574 /* BatteryMonitor02-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "BatteryMonitor02-Bridging-Header.h"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		E6B2A0221BC74E73001A2F7B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1EE676726C8E1B2A8360726C /* libPods-BatteryMonitor02.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		35AB925875F479A839324C5A /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				8FB9338CA352107A530D76BB /* Pods-BatteryMonitor02.debug.xcconfig */,
+				3DACAEE54239516A52E07EB3 /* Pods-BatteryMonitor02.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		6D774D1D14256153FB29C18D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D371AFFE08A8BA6D1A9CCD14 /* libPods-BatteryMonitor02.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E6B2A01C1BC74E73001A2F7B = {
+			isa = PBXGroup;
+			children = (
+				E6B2A0271BC74E73001A2F7B /* BatteryMonitor02 */,
+				E6B2A0261BC74E73001A2F7B /* Products */,
+				35AB925875F479A839324C5A /* Pods */,
+				6D774D1D14256153FB29C18D /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		E6B2A0261BC74E73001A2F7B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				E6B2A0251BC74E73001A2F7B /* BatteryMonitor02.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		E6B2A0271BC74E73001A2F7B /* BatteryMonitor02 */ = {
+			isa = PBXGroup;
+			children = (
+				E6B2A0281BC74E73001A2F7B /* AppDelegate.swift */,
+				E6B2A02A1BC74E73001A2F7B /* ViewController.swift */,
+				E6B251A41BCDD03D00539EA0 /* GraphTheme.swift */,
+				E6FB3D3D1BC7757F00D84574 /* BatteryMonitor02-Bridging-Header.h */,
+				E6B2A0311BC74E73001A2F7B /* Info.plist */,
+				E6FB3D2F1BC7704700D84574 /* UI */,
+			);
+			path = BatteryMonitor02;
+			sourceTree = "<group>";
+		};
+		E6FB3D2F1BC7704700D84574 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				E6B2A02C1BC74E73001A2F7B /* Assets.xcassets */,
+				E6B2A02E1BC74E73001A2F7B /* Main.storyboard */,
+				E6FB3D2B1BC7703C00D84574 /* DeviceCellView.swift */,
+				E6FB3D2C1BC7703C00D84574 /* DeviceCellView.xib */,
+			);
+			name = UI;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		E6B2A0241BC74E73001A2F7B /* BatteryMonitor02 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E6B2A0341BC74E73001A2F7B /* Build configuration list for PBXNativeTarget "BatteryMonitor02" */;
+			buildPhases = (
+				40D69DFE9BEAD48803C3596B /* Check Pods Manifest.lock */,
+				E6B2A0211BC74E73001A2F7B /* Sources */,
+				E6B2A0221BC74E73001A2F7B /* Frameworks */,
+				E6B2A0231BC74E73001A2F7B /* Resources */,
+				A5ECA42EF1FEE410998F5245 /* Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = BatteryMonitor02;
+			productName = BatteryMonitor02;
+			productReference = E6B2A0251BC74E73001A2F7B /* BatteryMonitor02.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		E6B2A01D1BC74E73001A2F7B /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0710;
+				LastUpgradeCheck = 0710;
+				ORGANIZATIONNAME = "Daniel Pink";
+				TargetAttributes = {
+					E6B2A0241BC74E73001A2F7B = {
+						CreatedOnToolsVersion = 7.1;
+					};
+				};
+			};
+			buildConfigurationList = E6B2A0201BC74E73001A2F7B /* Build configuration list for PBXProject "BatteryMonitor02" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = E6B2A01C1BC74E73001A2F7B;
+			productRefGroup = E6B2A0261BC74E73001A2F7B /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				E6B2A0241BC74E73001A2F7B /* BatteryMonitor02 */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		E6B2A0231BC74E73001A2F7B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E6FB3D2E1BC7703C00D84574 /* DeviceCellView.xib in Resources */,
+				E6B2A02D1BC74E73001A2F7B /* Assets.xcassets in Resources */,
+				E6B2A0301BC74E73001A2F7B /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		40D69DFE9BEAD48803C3596B /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		A5ECA42EF1FEE410998F5245 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BatteryMonitor02/Pods-BatteryMonitor02-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		E6B2A0211BC74E73001A2F7B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E6B251A51BCDD03D00539EA0 /* GraphTheme.swift in Sources */,
+				E6FB3D2D1BC7703C00D84574 /* DeviceCellView.swift in Sources */,
+				E6B2A02B1BC74E73001A2F7B /* ViewController.swift in Sources */,
+				E6B2A0291BC74E73001A2F7B /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		E6B2A02E1BC74E73001A2F7B /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E6B2A02F1BC74E73001A2F7B /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		E6B2A0321BC74E73001A2F7B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		E6B2A0331BC74E73001A2F7B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		E6B2A0351BC74E73001A2F7B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8FB9338CA352107A530D76BB /* Pods-BatteryMonitor02.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = BatteryMonitor02/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = au.com.electronicinnovations.BatteryMonitor02;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "BatteryMonitor02/BatteryMonitor02-Bridging-Header.h";
+			};
+			name = Debug;
+		};
+		E6B2A0361BC74E73001A2F7B /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3DACAEE54239516A52E07EB3 /* Pods-BatteryMonitor02.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = BatteryMonitor02/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = au.com.electronicinnovations.BatteryMonitor02;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "BatteryMonitor02/BatteryMonitor02-Bridging-Header.h";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		E6B2A0201BC74E73001A2F7B /* Build configuration list for PBXProject "BatteryMonitor02" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E6B2A0321BC74E73001A2F7B /* Debug */,
+				E6B2A0331BC74E73001A2F7B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E6B2A0341BC74E73001A2F7B /* Build configuration list for PBXNativeTarget "BatteryMonitor02" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E6B2A0351BC74E73001A2F7B /* Debug */,
+				E6B2A0361BC74E73001A2F7B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = E6B2A01D1BC74E73001A2F7B /* Project object */;
+}
