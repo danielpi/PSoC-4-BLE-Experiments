@@ -64,7 +64,7 @@ class ViewController: NSViewController {
         
         graph.addPlot(plot)
         
-        graph.paddingLeft = 30
+        graph.paddingLeft = 60
         graph.paddingTop = 30
         graph.paddingRight = 30
         graph.paddingBottom = 30
@@ -75,6 +75,10 @@ class ViewController: NSViewController {
         plotSpace.scaleToFitPlots([plot])
         plotSpace.xRange = CPTPlotRange(location: 0, length: 10)
         plotSpace.yRange = CPTPlotRange(location: 0, length: 20)
+        
+        // This stops you from scrolling off into ranges that can't have values.
+        plotSpace.globalXRange = CPTPlotRange(location: 0, length: 64000)
+        plotSpace.globalYRange = CPTPlotRange(location: 0, length: 30)
         
         self.graphView.hostedGraph = graph
     }

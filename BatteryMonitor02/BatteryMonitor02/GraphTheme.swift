@@ -26,6 +26,19 @@ class GraphTheme: CPTTheme {
     
     //let orderedColors = [blueColor, redColor, greenColor, orangeColor]
     
+    var majorGridLineStyle: CPTLineStyle {
+        let lineStyle = CPTMutableLineStyle()
+        lineStyle.lineColor = CPTColor(genericGray: 0.25)
+        lineStyle.lineWidth = 0.2
+        return lineStyle
+    }
+    var minorGridLineStyle: CPTLineStyle {
+        let lineStyle = CPTMutableLineStyle()
+        lineStyle.lineColor = CPTColor(genericGray: 0.125)
+        lineStyle.lineWidth = 0.1
+        return lineStyle
+    }
+    
     override func applyThemeToBackground(graph: CPTGraph?) {
         if let g = graph {
             g.fill = CPTFill(color: backgroundColor)
@@ -61,9 +74,9 @@ class GraphTheme: CPTTheme {
             minorTickBlackTextStyle.color = CPTColor.blackColor()
             minorTickBlackTextStyle.fontSize = 12.0
             
-            let x = axSet.axes![0]
-            x.labelingPolicy = .FixedInterval
-            x.majorIntervalLength = 100
+            let x = axSet.axes![0] as! CPTXYAxis
+            x.labelingPolicy = .Automatic
+            //x.majorIntervalLength = 100
             x.tickDirection = .None
             x.minorTicksPerInterval = 4
             x.majorTickLineStyle = majorLineStyle
@@ -74,10 +87,15 @@ class GraphTheme: CPTTheme {
             x.labelTextStyle = blackTextStyle
             x.minorTickLabelTextStyle = blackTextStyle
             x.titleTextStyle = blackTextStyle
+            x.majorGridLineStyle = majorGridLineStyle
+            x.minorGridLineStyle = minorGridLineStyle
+            x.orthogonalPosition = 0.0 // Draws the x axis and labels at y = 0
+            x.axisConstraints = CPTConstraints(lowerOffset: 1) // Fixes the axis (with labels) to the bottom of the plot
             
-            let y = axSet.axes![1]
-            y.labelingPolicy = .FixedInterval
-            y.majorIntervalLength = 5
+            
+            let y = axSet.axes![1] as! CPTXYAxis
+            y.labelingPolicy = .Automatic
+            //y.majorIntervalLength = 5
             y.tickDirection = .None
             y.minorTicksPerInterval = 1
             y.majorTickLineStyle = majorLineStyle
@@ -88,6 +106,10 @@ class GraphTheme: CPTTheme {
             y.labelTextStyle = blackTextStyle
             y.minorTickLabelTextStyle = blackTextStyle
             y.titleTextStyle = blackTextStyle
+            y.majorGridLineStyle = majorGridLineStyle
+            y.minorGridLineStyle = minorGridLineStyle
+            y.orthogonalPosition = 0.0
+            y.axisConstraints = CPTConstraints(lowerOffset: 1) // Fixes the axis (with labels) to the left of the plot
         }
     }
 }
