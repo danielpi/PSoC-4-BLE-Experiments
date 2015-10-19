@@ -272,7 +272,22 @@ extension ViewController: CBPeripheralDelegate {
                 //plotSpace.scaleToFitPlots([graph.plotAtIndex(0)!])
                 
                 // If you want a view that tracks the latest 20 values use the following.
-                plotSpace.xRange = CPTPlotRange(location: self.data.count - 200, length: 200)
+                
+                // Look at the current range
+                let currentXRange = plotSpace.xRange
+                let currentYRange = plotSpace.yRange
+                
+                let currentXLength = currentXRange.length
+                let currentYLength = currentYRange.length
+                
+                if Int(self.data.count) > Int(currentXRange.location.intValue + currentXRange.length.intValue) {
+                    
+                    plotSpace.xRange = CPTPlotRange(location: self.data.count - currentXRange.length.integerValue, length: currentXRange.length)
+                }
+                // If the most recent data is in that range then leave it as is
+                // If the most recent data is out of sight then adjust things
+                
+                
                 plotSpace.yRange = CPTPlotRange(location: 0, length: max * 1.1)
                 
             } else {

@@ -57,6 +57,8 @@
 
 volatile uint32 dataReady = 0u;
 volatile uint16 rawADCValue;
+volatile uint8 rawADCValuesIndex = 0;
+volatile uint16 rawADCValues[16];
 volatile float32 voltageReading;
 volatile int16 elapsed;
 volatile uint32 timer_delay = 0u;
@@ -90,6 +92,9 @@ CY_ISR(ADC_SAR_Seq_ISR_LOC) {
         //if((range_status & (uint32)(1ul << CH0_N)) != 0u) {
             /* Read conversion result */
             rawADCValue = ADC_SAR_Seq_GetResult16(CH0_N);
+            
+            rawADCValuesIndex++;
+            rawADCValues[rawADCValuesIndex & 15] = rawADCValue;
             //voltageReading = 28.4971707317073 * ((float)rawADCValue/0x7FF);
             //SendVoltageMeasurementNotification(ADC_SAR_Seq_GetResult16(CH0_N));
             /* Set PWM compare from channel0 */
@@ -136,6 +141,9 @@ void initializeSystem(void) {
     ADC_SAR_Seq_IRQ_Enable();
     // Enable an interupt for when the ADC has data
     ADC_SAR_Seq_IRQ_StartEx(ADC_SAR_Seq_ISR_LOC);
+    
+    // Start the Timer for the ADC
+    ADC_Timer_Start();
     
     elapsed = 0;
 }
@@ -298,6 +306,9 @@ int main()
     float fudge_multiplier;
     uint16 offset;
     
+    uint32 value;
+    int i;
+    
     offset = 402;
     resistor_divider_multiplier = ((220000 + 18000) / 18000);
     adc_multiplier = 2.048 / 65536;
@@ -316,7 +327,13 @@ int main()
             //voltageReading = 29.6907207207207 * ((float)rawADCValue/0x7FFF);
             //voltageReading = 0.0009 * (float)rawADCValue + 0.4238;
             //voltageReading = 0.0005892 * (float)rawADCValue + 0.28026;
-            voltageReading = fudge_multiplier * resistor_divider_multiplier * adc_multiplier * (float)(rawADCValue - offset);
+            
+            value = 0;
+            for (i = 0; i < 16; i++) {
+                value += rawADCValues[i];
+            }
+            value = value / 16;
+            voltageReading = fudge_multiplier * resistor_divider_multiplier * adc_multiplier * (float)(value - offset);
             SendVoltageMeasurementNotification(voltageReading);
             SendRawADCNotification(rawADCValue);
         }

@@ -1,4 +1,4 @@
---------------- Rebuild Started: 10/09/2015 09:55:45 Project: CapSenseRGB, Configuration: ARM GCC 4.9-2015-q1-update Release ---------------
+--------------- Rebuild Started: 10/19/2015 11:03:21 Project: CapSenseRGB, Configuration: ARM GCC 4.9-2015-q1-update Release ---------------
 Deleting file ".\CapSenseRGB.cycdx"
 Deleting file ".\CapSenseRGB.svd"
 Deleting file ".\CapSenseRGB.rpt"
@@ -44,4 +44,4 @@ In file included from .\main.c:14:0:
  }
  ^
 The command 'arm-none-eabi-gcc.exe' failed with exit code '1'.
---------------- Rebuild Failed: 10/09/2015 09:56:02 ---------------
+--------------- Rebuild Failed: 10/19/2015 11:03:43 ---------------

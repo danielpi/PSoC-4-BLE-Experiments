@@ -6,7 +6,7 @@
 
 #Build Date:         Aug 18 2015 10:30:14
 
-#File Generated:     Oct 9 2015 09:55:54
+#File Generated:     Oct 19 2015 11:03:35
 
 #Purpose:            
 
@@ -119,7 +119,7 @@ Clock: Slider_SenseClk(FFB) | Frequency: N/A       | Target:   0.2 MHz
 ======================================================================
                      End of Clock Summary
 ######################################################################
-D2088: Phase 7, elapsed time : 0.1 (sec)
+D2088: Phase 7, elapsed time : 0.0 (sec)
 
 Final Design Statistics
     Number of Combinational MCs 	:	1

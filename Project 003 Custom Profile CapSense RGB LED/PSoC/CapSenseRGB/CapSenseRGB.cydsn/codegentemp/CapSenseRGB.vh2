@@ -2,7 +2,7 @@
 --	Conversion of CapSenseRGB.v to vh2:
 --
 --	Cypress Semiconductor - WARP Version 6.3 IR 41
---	Fri Oct 09 09:55:53 2015
+--	Mon Oct 19 11:03:34 2015
 --
 
 USE cypress.cypress.all;
