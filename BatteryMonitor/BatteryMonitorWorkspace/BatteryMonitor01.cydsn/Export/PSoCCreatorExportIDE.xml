@@ -37,7 +37,9 @@
       <Folder BuildType="BUILD" Path="Y:\repos\PSoC-4-BLE-Experiments\BatteryMonitor\BatteryMonitorWorkspace\BatteryMonitor01.cydsn">
         <Files Root="Y:\repos\PSoC-4-BLE-Experiments\BatteryMonitor\BatteryMonitorWorkspace\BatteryMonitor01.cydsn">
           <File BuildType="BUILD" Toolchain="">.\main.c</File>
+          <File BuildType="BUILD" Toolchain="">.\debug.c</File>
           <File BuildType="BUILD" Toolchain="">.\cyapicallbacks.h</File>
+          <File BuildType="BUILD" Toolchain="">.\common.h</File>
         </Files>
       </Folder>
       <Folder BuildType="STRICT" Path="Y:\repos\PSoC-4-BLE-Experiments\BatteryMonitor\BatteryMonitorWorkspace\BatteryMonitor01.cydsn\Generated_Source\PSoC4">
@@ -147,6 +149,27 @@
           <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC4\TP4_aliases.h</File>
           <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC4\ADC_Timer_Clock.c</File>
           <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC4\ADC_Timer_Clock.h</File>
+          <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC4\UART.c</File>
+          <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC4\UART.h</File>
+          <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC4\UART_SPI_UART.h</File>
+          <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC4\UART_SPI_UART.c</File>
+          <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC4\UART_SPI_UART_INT.c</File>
+          <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC4\UART_PM.c</File>
+          <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC4\UART_UART.c</File>
+          <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC4\UART_BOOT.c</File>
+          <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC4\UART_UART_BOOT.c</File>
+          <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC4\UART_PINS.h</File>
+          <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC4\UART_SPI_UART_PVT.h</File>
+          <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC4\UART_PVT.h</File>
+          <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC4\UART_BOOT.h</File>
+          <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC4\UART_SCBCLK.c</File>
+          <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC4\UART_SCBCLK.h</File>
+          <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC4\UART_tx.c</File>
+          <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC4\UART_tx.h</File>
+          <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC4\UART_tx_aliases.h</File>
+          <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC4\UART_rx.c</File>
+          <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC4\UART_rx.h</File>
+          <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC4\UART_rx_aliases.h</File>
         </Files>
       </Folder>
       <Folder BuildType="STRICT" Path="Y:\repos\PSoC-4-BLE-Experiments\BatteryMonitor\BatteryMonitorWorkspace\BatteryMonitor01.cydsn\Export\ARM_GCC_Generic\BLE_v2_20">

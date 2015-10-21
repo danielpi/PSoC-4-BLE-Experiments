@@ -86,7 +86,11 @@ class ViewController: NSViewController {
         }
     }
     @IBAction func scanForPeripherals(sender: AnyObject) {
-        bleManager.scanForPeripheralsWithServices([rawADCServiceUUID, rgbServiceUUID, voltageMeasurementServiceUUID], options: nil)
+        //bleManager.scanForPeripheralsWithServices([rawADCServiceUUID, rgbServiceUUID, voltageMeasurementServiceUUID], options: nil)
+        bleManager.scanForPeripheralsWithServices([], options: nil)
+        
+        self.setName("Hello", forPeripheral: connectedDevice!)
+        print("Changing the name of \(connectedDevice!) to Hello")
     }
 }
 
@@ -197,6 +201,22 @@ extension ViewController: CBPeripheralDelegate {
                     for characteristic in characteristics {
                         if characteristic.UUID == rgbLEDCharacteristicUUID {
                             peripheral.writeValue(data, forCharacteristic: characteristic, type: .WithoutResponse)
+                        }
+                    }
+                }
+            }
+        }
+    }
+    
+    func setName(name: String, forPeripheral peripheral: CBPeripheral) {
+        let data = name.dataUsingEncoding(NSUTF8StringEncoding)
+        
+        if let services = peripheral.services {
+            for service in services {
+                if let characteristics = service.characteristics {
+                    for characteristic in characteristics {
+                        if characteristic.UUID == 0x2A00 {
+                            peripheral.writeValue(data!, forCharacteristic: characteristic, type: .WithoutResponse)
                         }
                     }
                 }

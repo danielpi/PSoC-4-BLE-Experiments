@@ -10,6 +10,7 @@
  * ========================================
 */
 #include <project.h>
+#include <common.h>
 /* ADC SAR sequencer component header to access Vref value */
 #include <ADC_SAR_SEQ.h>
 #include <BLE_custom.h>
@@ -117,6 +118,10 @@ CY_ISR(ADC_SAR_Seq_ISR_LOC) {
 void initializeSystem(void) {
     CyGlobalIntEnable;
     
+    UART_Start(); 
+    //fputc(45,STDOUT_HANDLE);
+    //printf("PSoC 4 Started");
+    
     PrISM_1_Start();
     PrISM_2_Start();
     
@@ -203,7 +208,6 @@ void CustomEventHandler(uint32 event, void * eventParam)
              */
             wrReqParam = (CYBLE_GATTS_WRITE_REQ_PARAM_T *) eventParam;
             
-
             /* This condition checks whether the RGB LED characteristic was
              * written to by matching the attribute handle.
              * If the attribute handle matches, then the value written to the 
@@ -230,7 +234,17 @@ void CustomEventHandler(uint32 event, void * eventParam)
                 UpdateRGBled();
                 //SendVoltageMeasurementNotification(voltageReading);
             }
-
+            if(wrReqParam->handleValPair.attrHandle == 0x2A00) {
+                RGBledData[RED_INDEX] = 0;
+                RGBledData[GREEN_INDEX] = 0;
+                RGBledData[BLUE_INDEX] = 0;
+                RGBledData[INTENSITY_INDEX] = 0;
+                
+                /* Update the PrISM components and the attribute for RGB LED read 
+                 * characteristics */
+                UpdateRGBled();
+            }
+            //printf("%d",wrReqParam->handleValPair.attrHandle);
 			
 			/* ADD_CODE to send the response to the write request received. */
 			CyBle_GattsWriteRsp(cyBle_connHandle);
@@ -299,8 +313,8 @@ void SendRawADCNotification(uint16 rawADC) {
 
 int main()
 {
-    
     /* Place your initialization/startup code here (e.g. MyInst_Start()) */
+    //printf("Restarted\n");
     float resistor_divider_multiplier;
     float adc_multiplier;
     float fudge_multiplier;
@@ -318,6 +332,8 @@ int main()
     
     for(;;) {
         elapsed = elapsed + 1;
+        UART_tx_Write(elapsed);
+        //printf("%d\n", elapsed);
         TP1_Write(1u);
         /* Place your application code here. */
         CyBle_ProcessEvents();
@@ -336,6 +352,7 @@ int main()
             voltageReading = fudge_multiplier * resistor_divider_multiplier * adc_multiplier * (float)(value - offset);
             SendVoltageMeasurementNotification(voltageReading);
             SendRawADCNotification(rawADCValue);
+            //printf("Voltage: %f\n", voltageReading);
         }
     }
 }
