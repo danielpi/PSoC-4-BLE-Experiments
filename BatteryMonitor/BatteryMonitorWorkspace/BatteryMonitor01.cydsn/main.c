@@ -10,7 +10,7 @@
  * ========================================
 */
 #include <project.h>
-#include <common.h>
+#include <iprintf.h>
 /* ADC SAR sequencer component header to access Vref value */
 #include <ADC_SAR_SEQ.h>
 #include <BLE_custom.h>
@@ -119,8 +119,6 @@ void initializeSystem(void) {
     CyGlobalIntEnable;
     
     UART_Start(); 
-    //fputc(45,STDOUT_HANDLE);
-    //printf("PSoC 4 Started");
     
     PrISM_1_Start();
     PrISM_2_Start();
@@ -332,8 +330,16 @@ int main()
     
     for(;;) {
         elapsed = elapsed + 1;
-        UART_tx_Write(elapsed);
-        //printf("%d\n", elapsed);
+        UART_UartPutChar(72u);//H
+        UART_UartPutChar(101u);//e
+        UART_UartPutChar(108u);//l
+        UART_UartPutChar(108u);//l
+        UART_UartPutChar(111u);//o
+        iprintf(", World! %d", elapsed);
+        UART_UartPutChar(13u);//CR
+        UART_UartPutChar(10u);//LF
+        
+        
         TP1_Write(1u);
         /* Place your application code here. */
         CyBle_ProcessEvents();

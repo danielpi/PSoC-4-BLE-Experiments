@@ -1,0 +1,6 @@
+--------------- Clean Started: 10/21/2015 11:10:47 Project: CapSenseRGB, Configuration: ARM GCC 4.9-2015-q1-update Release ---------------
+Deleting file ".\CapSenseRGB.cycdx"
+Deleting file ".\CapSenseRGB.svd"
+Deleting file ".\CapSenseRGB.rpt"
+Deleting file ".\CapSenseRGB_timing.html"
+--------------- Clean Succeeded: 10/21/2015 11:10:48 ---------------
